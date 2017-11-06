@@ -39,8 +39,9 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification10#IdentificationTypeOrExtendedIdentificationTypeRule
- * GenericIdentification10.IdentificationTypeOrExtendedIdentificationTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification10#mmIdentificationTypeOrExtendedIdentificationTypeRule
+ * GenericIdentification10.mmIdentificationTypeOrExtendedIdentificationTypeRule}
+ * </li>
  * </ul>
  * </li>
  * <li>
@@ -48,14 +49,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification10#Identification
- * GenericIdentification10.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification10#mmIdentification
+ * GenericIdentification10.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification10#IdentificationType
- * GenericIdentification10.IdentificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification10#mmIdentificationType
+ * GenericIdentification10.mmIdentificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification10#ExtendedIdentificationType
- * GenericIdentification10.ExtendedIdentificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification10#mmExtendedIdentificationType
+ * GenericIdentification10.mmExtendedIdentificationType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +65,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,6 +89,7 @@ import java.util.function.Supplier;
 public class GenericIdentification10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Name or number assigned by an entity to enable recognition of that
 	 * entity, eg, account identifier.
@@ -101,8 +103,8 @@ public class GenericIdentification10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -125,27 +127,28 @@ public class GenericIdentification10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification81#Identification
-	 * GenericIdentification81.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification81#mmIdentification
+	 * GenericIdentification81.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification81.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification81.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PersonIdentificationType1Code identificationType;
 	/**
 	 * Specifies the nature of the identification.
 	 * <p>
@@ -179,20 +182,21 @@ public class GenericIdentification10 {
 	 * definition} = "Specifies the nature of the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification10.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> GenericIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationType";
 			definition = "Specifies the nature of the identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedIdentificationType;
 	/**
 	 * Specifies the nature of the identification.
 	 * <p>
@@ -226,17 +230,17 @@ public class GenericIdentification10 {
 	 * definition} = "Specifies the nature of the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedIdentificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification10.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> GenericIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedIdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedIdentificationType";
 			definition = "Specifies the nature of the identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
@@ -250,11 +254,11 @@ public class GenericIdentification10 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification10#IdentificationType
-	 * GenericIdentification10.IdentificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification10#mmIdentificationType
+	 * GenericIdentification10.mmIdentificationType}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification10#ExtendedIdentificationType
-	 * GenericIdentification10.ExtendedIdentificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification10#mmExtendedIdentificationType
+	 * GenericIdentification10.mmExtendedIdentificationType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -274,23 +278,23 @@ public class GenericIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor IdentificationTypeOrExtendedIdentificationTypeRule = new MMXor() {
+	public static final MMXor mmIdentificationTypeOrExtendedIdentificationTypeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationTypeOrExtendedIdentificationTypeRule";
 			definition = "Either IdentificationType or ExtendedIdentificationType must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.IdentificationType, com.tools20022.repository.msg.GenericIdentification10.ExtendedIdentificationType);
 			messageComponent_lazy = () -> GenericIdentification10.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.mmIdentificationType, com.tools20022.repository.msg.GenericIdentification10.mmExtendedIdentificationType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.Identification, com.tools20022.repository.msg.GenericIdentification10.IdentificationType,
-						com.tools20022.repository.msg.GenericIdentification10.ExtendedIdentificationType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.mmIdentification, com.tools20022.repository.msg.GenericIdentification10.mmIdentificationType,
+						com.tools20022.repository.msg.GenericIdentification10.mmExtendedIdentificationType);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -302,9 +306,33 @@ public class GenericIdentification10 {
 				name = "GenericIdentification10";
 				definition = "Information related to the identification of an individual person.";
 				nextVersions_lazy = () -> Arrays.asList(GenericIdentification81.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.IdentificationTypeOrExtendedIdentificationTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.mmIdentificationTypeOrExtendedIdentificationTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public PersonIdentificationType1Code getIdentificationType() {
+		return identificationType;
+	}
+
+	public void setIdentificationType(PersonIdentificationType1Code identificationType) {
+		this.identificationType = identificationType;
+	}
+
+	public Extended350Code getExtendedIdentificationType() {
+		return extendedIdentificationType;
+	}
+
+	public void setExtendedIdentificationType(Extended350Code extendedIdentificationType) {
+		this.extendedIdentificationType = extendedIdentificationType;
 	}
 }

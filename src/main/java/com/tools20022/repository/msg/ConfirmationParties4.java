@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Parties used for acting parties that apply either to the whole message or to
@@ -33,40 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#Investor
- * ConfirmationParties4.Investor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#Buyer
- * ConfirmationParties4.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#Borrower
- * ConfirmationParties4.Borrower}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#Seller
- * ConfirmationParties4.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#Lender
- * ConfirmationParties4.Lender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#BrokerOfCredit
- * ConfirmationParties4.BrokerOfCredit}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmInvestor
+ * ConfirmationParties4.mmInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmBuyer
+ * ConfirmationParties4.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#IntroducingFirm
- * ConfirmationParties4.IntroducingFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmBorrower
+ * ConfirmationParties4.mmBorrower}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmSeller
+ * ConfirmationParties4.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmLender
+ * ConfirmationParties4.mmLender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#StepInFirm
- * ConfirmationParties4.StepInFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmBrokerOfCredit
+ * ConfirmationParties4.mmBrokerOfCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#StepOutFirm
- * ConfirmationParties4.StepOutFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmIntroducingFirm
+ * ConfirmationParties4.mmIntroducingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#ClearingFirm
- * ConfirmationParties4.ClearingFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmStepInFirm
+ * ConfirmationParties4.mmStepInFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#ExecutingBroker
- * ConfirmationParties4.ExecutingBroker}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmStepOutFirm
+ * ConfirmationParties4.mmStepOutFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#AffirmingParty
- * ConfirmationParties4.AffirmingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmClearingFirm
+ * ConfirmationParties4.mmClearingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#TradeBeneficiaryParty
- * ConfirmationParties4.TradeBeneficiaryParty}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmExecutingBroker
+ * ConfirmationParties4.mmExecutingBroker}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmAffirmingParty
+ * ConfirmationParties4.mmAffirmingParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmTradeBeneficiaryParty
+ * ConfirmationParties4.mmTradeBeneficiaryParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -77,18 +80,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#ConfirmationParties
- * SecuritiesTradeConfirmationStatusAdviceV01.ConfirmationParties}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmConfirmationParties
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmConfirmationParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#ConfirmationParties
- * SecuritiesTradeConfirmationStatusAdviceV02.ConfirmationParties}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmConfirmationParties
+ * SecuritiesTradeConfirmationStatusAdviceV02.mmConfirmationParties}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ConfirmationParties4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount79> investor;
 	/**
 	 * Party that identifies the underlying investor.
 	 * <p>
@@ -117,8 +121,8 @@ public class ConfirmationParties4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,19 +141,20 @@ public class ConfirmationParties4 {
 	 * definition} = "Party that identifies the underlying investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Investor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ConfirmationParties4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Invstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Party that identifies the underlying investor.";
 			minOccurs = 0;
-			complexType_lazy = () -> PartyIdentificationAndAccount79.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount79.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails2 buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -183,20 +188,21 @@ public class ConfirmationParties4 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Buyer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBuyer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails2 borrower;
 	/**
 	 * Party that has applied, met specific requirements, and received a
 	 * monetary or securities loan from a lender. The party initiating the
@@ -237,20 +243,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Borrower = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBorrower = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> Borrower.mmObject();
 			componentContext_lazy = () -> ConfirmationParties4.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Borrower.mmObject();
 			isDerived = false;
 			xmlTag = "Brrwr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrower";
 			definition = "Party that has applied, met specific requirements, and received a monetary or securities loan from a lender. The party initiating the request signs a promissory note agreeing to pay the lien holder back during a specified timeframe for the entire loan amount plus any additional fees. The borrower is legally responsible for repayment of the loan and is subject to any penalties for not repaying the loan back based on the lending terms agreed upon.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails2 seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -284,20 +291,21 @@ public class ConfirmationParties4 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Seller = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSeller = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> SellerRole.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails2 lender;
 	/**
 	 * A private, public or institutional entity which makes funds available to
 	 * others to borrow.
@@ -333,20 +341,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Lender = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLender = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> Lender.mmObject();
 			componentContext_lazy = () -> ConfirmationParties4.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Lender.mmObject();
 			isDerived = false;
 			xmlTag = "Lndr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lender";
 			definition = "A private, public or institutional entity which makes funds available to others to borrow.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails3 brokerOfCredit;
 	/**
 	 * Brokerage firm which is the commissioned broker in a multi-broker trade.
 	 * <p>
@@ -381,20 +390,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BrokerOfCredit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBrokerOfCredit = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> Broker.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "BrkrOfCdt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerOfCredit";
 			definition = "Brokerage firm which is the commissioned broker in a multi-broker trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails3 introducingFirm;
 	/**
 	 * Broker or other intermediary with the closest association with the
 	 * investor.
@@ -431,20 +441,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntroducingFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntroducingFirm = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> IntroducingFirm.mmObject();
 			componentContext_lazy = () -> ConfirmationParties4.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.IntroducingFirm.mmObject();
 			isDerived = false;
 			xmlTag = "IntrdcgFirm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntroducingFirm";
 			definition = "Broker or other intermediary with the closest association with the investor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails1 stepInFirm;
 	/**
 	 * Brokerage firm assigned to take credit on the trade from the step-out
 	 * brokerage firm.
@@ -480,20 +491,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StepInFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStepInFirm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> StepInBroker.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "StepInFirm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepInFirm";
 			definition = "Brokerage firm assigned to take credit on the trade from the step-out brokerage firm.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails1.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails1 stepOutFirm;
 	/**
 	 * Brokerage firm that executes an order, but gives other firms credit and
 	 * some of the commission for the trade.
@@ -530,20 +542,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StepOutFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStepOutFirm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> StepOutBroker.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "StepOutFirm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepOutFirm";
 			definition = "Brokerage firm that executes an order, but gives other firms credit and some of the commission for the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails1.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails6 clearingFirm;
 	/**
 	 * Party, also know as take up broker, that settles security transactions
 	 * from another broker for a fee.
@@ -580,20 +593,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingFirm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> ClearingBroker.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "ClrFirm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingFirm";
 			definition = "Party, also know as take up broker, that settles security transactions from another broker for a fee.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails6.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails6 executingBroker;
 	/**
 	 * Party responsible for executing an order (for example, an executing or
 	 * give-up broker). Usually a commission is charged to the client for
@@ -631,20 +645,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExecutingBroker = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExecutingBroker = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> ExecutingBrokerRole.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgBrkr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBroker";
 			definition = "Party responsible for executing an order (for example, an executing or give-up broker).  Usually a commission is charged to the client for executing an order.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails6.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails3 affirmingParty;
 	/**
 	 * Party (buyer or seller) that positively affirms the details of a
 	 * previously agreed security trade confirmation.
@@ -681,20 +696,21 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AffirmingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAffirmingParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> AffirmingPartyRole.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "AffrmgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmingParty";
 			definition = "Party (buyer or seller) that positively affirms the details of a previously agreed security trade confirmation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
 		}
 	};
+	protected ConfirmationPartyDetails3 tradeBeneficiaryParty;
 	/**
 	 * Party involved in a legal proceeding, agreement, or other transaction.
 	 * <p>
@@ -730,38 +746,142 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeBeneficiaryParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeBeneficiaryParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
+			componentContext_lazy = () -> ConfirmationParties4.mmObject();
 			isDerived = false;
 			xmlTag = "TradBnfcryPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeBeneficiaryParty";
 			definition = "Party involved  in a legal proceeding, agreement, or other transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ConfirmationPartyDetails3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.Investor, com.tools20022.repository.msg.ConfirmationParties4.Buyer, com.tools20022.repository.msg.ConfirmationParties4.Borrower,
-						com.tools20022.repository.msg.ConfirmationParties4.Seller, com.tools20022.repository.msg.ConfirmationParties4.Lender, com.tools20022.repository.msg.ConfirmationParties4.BrokerOfCredit,
-						com.tools20022.repository.msg.ConfirmationParties4.IntroducingFirm, com.tools20022.repository.msg.ConfirmationParties4.StepInFirm, com.tools20022.repository.msg.ConfirmationParties4.StepOutFirm,
-						com.tools20022.repository.msg.ConfirmationParties4.ClearingFirm, com.tools20022.repository.msg.ConfirmationParties4.ExecutingBroker, com.tools20022.repository.msg.ConfirmationParties4.AffirmingParty,
-						com.tools20022.repository.msg.ConfirmationParties4.TradeBeneficiaryParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmInvestor, com.tools20022.repository.msg.ConfirmationParties4.mmBuyer,
+						com.tools20022.repository.msg.ConfirmationParties4.mmBorrower, com.tools20022.repository.msg.ConfirmationParties4.mmSeller, com.tools20022.repository.msg.ConfirmationParties4.mmLender,
+						com.tools20022.repository.msg.ConfirmationParties4.mmBrokerOfCredit, com.tools20022.repository.msg.ConfirmationParties4.mmIntroducingFirm, com.tools20022.repository.msg.ConfirmationParties4.mmStepInFirm,
+						com.tools20022.repository.msg.ConfirmationParties4.mmStepOutFirm, com.tools20022.repository.msg.ConfirmationParties4.mmClearingFirm, com.tools20022.repository.msg.ConfirmationParties4.mmExecutingBroker,
+						com.tools20022.repository.msg.ConfirmationParties4.mmAffirmingParty, com.tools20022.repository.msg.ConfirmationParties4.mmTradeBeneficiaryParty);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmConfirmationParties,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmConfirmationParties);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.ConfirmationParties,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.ConfirmationParties);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationParties4";
 				definition = "Parties used for acting parties that apply either to the whole message or to individual sides.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PartyIdentificationAndAccount79> getInvestor() {
+		return investor;
+	}
+
+	public void setInvestor(List<com.tools20022.repository.msg.PartyIdentificationAndAccount79> investor) {
+		this.investor = investor;
+	}
+
+	public ConfirmationPartyDetails2 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(com.tools20022.repository.msg.ConfirmationPartyDetails2 buyer) {
+		this.buyer = buyer;
+	}
+
+	public ConfirmationPartyDetails2 getBorrower() {
+		return borrower;
+	}
+
+	public void setBorrower(com.tools20022.repository.msg.ConfirmationPartyDetails2 borrower) {
+		this.borrower = borrower;
+	}
+
+	public ConfirmationPartyDetails2 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(com.tools20022.repository.msg.ConfirmationPartyDetails2 seller) {
+		this.seller = seller;
+	}
+
+	public ConfirmationPartyDetails2 getLender() {
+		return lender;
+	}
+
+	public void setLender(com.tools20022.repository.msg.ConfirmationPartyDetails2 lender) {
+		this.lender = lender;
+	}
+
+	public ConfirmationPartyDetails3 getBrokerOfCredit() {
+		return brokerOfCredit;
+	}
+
+	public void setBrokerOfCredit(com.tools20022.repository.msg.ConfirmationPartyDetails3 brokerOfCredit) {
+		this.brokerOfCredit = brokerOfCredit;
+	}
+
+	public ConfirmationPartyDetails3 getIntroducingFirm() {
+		return introducingFirm;
+	}
+
+	public void setIntroducingFirm(com.tools20022.repository.msg.ConfirmationPartyDetails3 introducingFirm) {
+		this.introducingFirm = introducingFirm;
+	}
+
+	public ConfirmationPartyDetails1 getStepInFirm() {
+		return stepInFirm;
+	}
+
+	public void setStepInFirm(com.tools20022.repository.msg.ConfirmationPartyDetails1 stepInFirm) {
+		this.stepInFirm = stepInFirm;
+	}
+
+	public ConfirmationPartyDetails1 getStepOutFirm() {
+		return stepOutFirm;
+	}
+
+	public void setStepOutFirm(com.tools20022.repository.msg.ConfirmationPartyDetails1 stepOutFirm) {
+		this.stepOutFirm = stepOutFirm;
+	}
+
+	public ConfirmationPartyDetails6 getClearingFirm() {
+		return clearingFirm;
+	}
+
+	public void setClearingFirm(com.tools20022.repository.msg.ConfirmationPartyDetails6 clearingFirm) {
+		this.clearingFirm = clearingFirm;
+	}
+
+	public ConfirmationPartyDetails6 getExecutingBroker() {
+		return executingBroker;
+	}
+
+	public void setExecutingBroker(com.tools20022.repository.msg.ConfirmationPartyDetails6 executingBroker) {
+		this.executingBroker = executingBroker;
+	}
+
+	public ConfirmationPartyDetails3 getAffirmingParty() {
+		return affirmingParty;
+	}
+
+	public void setAffirmingParty(com.tools20022.repository.msg.ConfirmationPartyDetails3 affirmingParty) {
+		this.affirmingParty = affirmingParty;
+	}
+
+	public ConfirmationPartyDetails3 getTradeBeneficiaryParty() {
+		return tradeBeneficiaryParty;
+	}
+
+	public void setTradeBeneficiaryParty(com.tools20022.repository.msg.ConfirmationPartyDetails3 tradeBeneficiaryParty) {
+		this.tradeBeneficiaryParty = tradeBeneficiaryParty;
 	}
 }

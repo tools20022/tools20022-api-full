@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria1#QueryName
- * CollateralValueCriteria1.QueryName}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria1#mmQueryName
+ * CollateralValueCriteria1.mmQueryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria1#SearchCriteria
- * CollateralValueCriteria1.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria1#mmSearchCriteria
+ * CollateralValueCriteria1.mmSearchCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria1#ReturnCriteria
- * CollateralValueCriteria1.ReturnCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria1#mmReturnCriteria
+ * CollateralValueCriteria1.mmReturnCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralValueCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text queryName;
 	/**
 	 * Name of the query defined by the search criteria and return criteria.
 	 * <p>
@@ -93,7 +94,7 @@ public class CollateralValueCriteria1 {
 	 * "Name of the query defined by the search criteria and return criteria. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValueCriteria1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class CollateralValueCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Name of the query defined by the search criteria and return criteria. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CollateralValueSearchCriteria1 searchCriteria;
 	/**
 	 * Defines the criteria to be used to extract the account information.
 	 * <p>
@@ -134,7 +136,7 @@ public class CollateralValueCriteria1 {
 	 * "Defines the criteria to be used to extract the account information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueCriteria1.mmObject();
 			isDerived = false;
@@ -142,12 +144,13 @@ public class CollateralValueCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to be used to extract the account information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 		}
 	};
+	protected CashAccountReturnCriteria2 returnCriteria;
 	/**
 	 * Defines the expected account report.
 	 * <p>
@@ -175,7 +178,7 @@ public class CollateralValueCriteria1 {
 	 * definition} = "Defines the expected account report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueCriteria1.mmObject();
 			isDerived = false;
@@ -183,24 +186,48 @@ public class CollateralValueCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the expected account report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccountReturnCriteria2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueCriteria1.QueryName, com.tools20022.repository.msg.CollateralValueCriteria1.SearchCriteria,
-						com.tools20022.repository.msg.CollateralValueCriteria1.ReturnCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueCriteria1.mmQueryName, com.tools20022.repository.msg.CollateralValueCriteria1.mmSearchCriteria,
+						com.tools20022.repository.msg.CollateralValueCriteria1.mmReturnCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueCriteria1";
 				definition = "Defines the criteria which are used to search for an account and to report on the account. A name may be given to the new query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQueryName() {
+		return queryName;
+	}
+
+	public void setQueryName(Max35Text queryName) {
+		this.queryName = queryName;
+	}
+
+	public CollateralValueSearchCriteria1 getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(com.tools20022.repository.msg.CollateralValueSearchCriteria1 searchCriteria) {
+		this.searchCriteria = searchCriteria;
+	}
+
+	public CashAccountReturnCriteria2 getReturnCriteria() {
+		return returnCriteria;
+	}
+
+	public void setReturnCriteria(com.tools20022.repository.msg.CashAccountReturnCriteria2 returnCriteria) {
+		this.returnCriteria = returnCriteria;
 	}
 }

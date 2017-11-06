@@ -36,21 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation2#Value
- * YieldCalculation2.Value}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation2#mmValue
+ * YieldCalculation2.mmValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.YieldCalculation2#CalculationType
- * YieldCalculation2.CalculationType}</li>
+ * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmCalculationType
+ * YieldCalculation2.mmCalculationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.YieldCalculation2#RedemptionPrice
- * YieldCalculation2.RedemptionPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation2#ValueDate
- * YieldCalculation2.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation2#ValuePeriod
- * YieldCalculation2.ValuePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmRedemptionPrice
+ * YieldCalculation2.mmRedemptionPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation2#mmValueDate
+ * YieldCalculation2.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.YieldCalculation2#CalculationDate
- * YieldCalculation2.CalculationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmValuePeriod
+ * YieldCalculation2.mmValuePeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmCalculationDate
+ * YieldCalculation2.mmCalculationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class YieldCalculation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate value;
 	/**
 	 * Result of the yield calculation.
 	 * <p>
@@ -87,8 +89,8 @@ public class YieldCalculation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#Value
-	 * YieldCalculation.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmValue
+	 * YieldCalculation.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +109,21 @@ public class YieldCalculation2 {
 	 * definition} = "Result of the yield calculation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmValue;
 			componentContext_lazy = () -> YieldCalculation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.Value;
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Result of the yield calculation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CalculationType1Code calculationType;
 	/**
 	 * Specifies the type of calculation.
 	 * <p>
@@ -134,8 +137,8 @@ public class YieldCalculation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#CalculationType
-	 * YieldCalculation.CalculationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmCalculationType
+	 * YieldCalculation.mmCalculationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +157,21 @@ public class YieldCalculation2 {
 	 * definition} = "Specifies the type of calculation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmCalculationType;
 			componentContext_lazy = () -> YieldCalculation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.CalculationType;
 			isDerived = false;
 			xmlTag = "ClctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationType";
 			definition = "Specifies the type of calculation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CalculationType1Code.mmObject();
 		}
 	};
+	protected Price4 redemptionPrice;
 	/**
 	 * Price to which the yield has been calculated.
 	 * <p>
@@ -179,8 +183,8 @@ public class YieldCalculation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#RedemptionPrice
-	 * YieldCalculation.RedemptionPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmRedemptionPrice
+	 * YieldCalculation.mmRedemptionPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -199,20 +203,21 @@ public class YieldCalculation2 {
 	 * definition} = "Price to which the yield has been calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmRedemptionPrice;
 			componentContext_lazy = () -> YieldCalculation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.RedemptionPrice;
 			isDerived = false;
 			xmlTag = "RedPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPrice";
 			definition = "Price to which the yield has been calculated.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Date/time on which the calculation is based, for example, valuation on
 	 * October 1 (price date) based on price of September 19 ( value date).
@@ -226,8 +231,8 @@ public class YieldCalculation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#ValueDate
-	 * YieldCalculation.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmValueDate
+	 * YieldCalculation.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -248,20 +253,21 @@ public class YieldCalculation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmValueDate;
 			componentContext_lazy = () -> YieldCalculation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time on which the calculation is based, for example, valuation on October 1 (price date) based on price of September 19 ( value date).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DateTimePeriodChoice valuePeriod;
 	/**
 	 * Period on which the calculation is based.
 	 * <p>
@@ -275,8 +281,8 @@ public class YieldCalculation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#ValuePeriod
-	 * YieldCalculation.ValuePeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmValuePeriod
+	 * YieldCalculation.mmValuePeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,20 +301,21 @@ public class YieldCalculation2 {
 	 * definition} = "Period on which the calculation is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuePeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmValuePeriod;
 			componentContext_lazy = () -> YieldCalculation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.ValuePeriod;
 			isDerived = false;
 			xmlTag = "ValPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuePeriod";
 			definition = "Period on which the calculation is based.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	protected ISODate calculationDate;
 	/**
 	 * Included as needed to clarify yield irregularities associated with date,
 	 * e.g. when it falls on a non-business day.
@@ -322,8 +329,8 @@ public class YieldCalculation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#YieldCalculationDate
-	 * YieldCalculation.YieldCalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmYieldCalculationDate
+	 * YieldCalculation.mmYieldCalculationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -344,17 +351,17 @@ public class YieldCalculation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmYieldCalculationDate;
 			componentContext_lazy = () -> YieldCalculation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.YieldCalculationDate;
 			isDerived = false;
 			xmlTag = "ClctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Included as needed to clarify yield irregularities associated with date, e.g. when it falls on a non-business day.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -362,16 +369,64 @@ public class YieldCalculation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation2.Value, com.tools20022.repository.msg.YieldCalculation2.CalculationType,
-						com.tools20022.repository.msg.YieldCalculation2.RedemptionPrice, com.tools20022.repository.msg.YieldCalculation2.ValueDate, com.tools20022.repository.msg.YieldCalculation2.ValuePeriod,
-						com.tools20022.repository.msg.YieldCalculation2.CalculationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation2.mmValue, com.tools20022.repository.msg.YieldCalculation2.mmCalculationType,
+						com.tools20022.repository.msg.YieldCalculation2.mmRedemptionPrice, com.tools20022.repository.msg.YieldCalculation2.mmValueDate, com.tools20022.repository.msg.YieldCalculation2.mmValuePeriod,
+						com.tools20022.repository.msg.YieldCalculation2.mmCalculationDate);
 				trace_lazy = () -> YieldCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "YieldCalculation2";
 				definition = "Return provided by a financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getValue() {
+		return value;
+	}
+
+	public void setValue(PercentageRate value) {
+		this.value = value;
+	}
+
+	public CalculationType1Code getCalculationType() {
+		return calculationType;
+	}
+
+	public void setCalculationType(CalculationType1Code calculationType) {
+		this.calculationType = calculationType;
+	}
+
+	public Price4 getRedemptionPrice() {
+		return redemptionPrice;
+	}
+
+	public void setRedemptionPrice(com.tools20022.repository.msg.Price4 redemptionPrice) {
+		this.redemptionPrice = redemptionPrice;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public DateTimePeriodChoice getValuePeriod() {
+		return valuePeriod;
+	}
+
+	public void setValuePeriod(DateTimePeriodChoice valuePeriod) {
+		this.valuePeriod = valuePeriod;
+	}
+
+	public ISODate getCalculationDate() {
+		return calculationDate;
+	}
+
+	public void setCalculationDate(ISODate calculationDate) {
+		this.calculationDate = calculationDate;
 	}
 }

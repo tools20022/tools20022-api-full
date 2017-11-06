@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestorDetails1#DateTimeStamp
- * RequestorDetails1.DateTimeStamp}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestorDetails1#Requestor
- * RequestorDetails1.Requestor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestorDetails1#mmDateTimeStamp
+ * RequestorDetails1.mmDateTimeStamp}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestorDetails1#mmRequestor
+ * RequestorDetails1.mmRequestor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestorDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime dateTimeStamp;
 	/**
 	 * Date and time at which the request was created.
 	 * <p>
@@ -70,8 +71,8 @@ public class RequestorDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#Time
-	 * SystemEventInformation.Time}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
+	 * SystemEventInformation.mmTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -90,20 +91,21 @@ public class RequestorDetails1 {
 	 * definition} = "Date and time at which the request was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTimeStamp = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
 			componentContext_lazy = () -> RequestorDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.Time;
 			isDerived = false;
 			xmlTag = "DtTmStmp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTimeStamp";
 			definition = "Date and time at which the request was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected AnyBICIdentifier requestor;
 	/**
 	 * Identification of the requester.
 	 * <p>
@@ -132,7 +134,7 @@ public class RequestorDetails1 {
 	 * definition} = "Identification of the requester."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Requestor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestor = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestorDetails1.mmObject();
 			isDerived = false;
@@ -140,8 +142,8 @@ public class RequestorDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requestor";
 			definition = "Identification of the requester.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
@@ -149,13 +151,29 @@ public class RequestorDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestorDetails1.DateTimeStamp, com.tools20022.repository.msg.RequestorDetails1.Requestor);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestorDetails1.mmDateTimeStamp, com.tools20022.repository.msg.RequestorDetails1.mmRequestor);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestorDetails1";
 				definition = "Details of the financial institution sending the request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getDateTimeStamp() {
+		return dateTimeStamp;
+	}
+
+	public void setDateTimeStamp(ISODateTime dateTimeStamp) {
+		this.dateTimeStamp = dateTimeStamp;
+	}
+
+	public AnyBICIdentifier getRequestor() {
+		return requestor;
+	}
+
+	public void setRequestor(AnyBICIdentifier requestor) {
+		this.requestor = requestor;
 	}
 }

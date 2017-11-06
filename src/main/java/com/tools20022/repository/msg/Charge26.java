@@ -34,9 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Charge26#Type Charge26.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge26#ChargeApplied
- * Charge26.ChargeApplied}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge26#mmType
+ * Charge26.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge26#mmChargeApplied
+ * Charge26.mmChargeApplied}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Charge26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChargeType4Choice type;
 	/**
 	 * Type of charge.
 	 * <p>
@@ -73,8 +75,8 @@ public class Charge26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Charge26
@@ -92,21 +94,22 @@ public class Charge26 {
 	 * definition} = "Type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> Charge26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of charge.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ChargeType4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ChargeType4Choice.mmObject();
 		}
 	};
+	protected AmountOrRate3Choice chargeApplied;
 	/**
 	 * Charge amount or charge rate applied.
 	 * <p>
@@ -118,8 +121,8 @@ public class Charge26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Charge26
@@ -137,28 +140,28 @@ public class Charge26 {
 	 * definition} = "Charge amount or charge rate applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargeApplied = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargeApplied = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Charge26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ChrgApld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeApplied";
 			definition = "Charge amount or charge rate applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountOrRate3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountOrRate3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge26.Type, com.tools20022.repository.msg.Charge26.ChargeApplied);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge26.mmType, com.tools20022.repository.msg.Charge26.mmChargeApplied);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Charge26";
 				definition = "Choice of formats for the type of charge.";
@@ -166,5 +169,21 @@ public class Charge26 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChargeType4Choice getType() {
+		return type;
+	}
+
+	public void setType(ChargeType4Choice type) {
+		this.type = type;
+	}
+
+	public AmountOrRate3Choice getChargeApplied() {
+		return chargeApplied;
+	}
+
+	public void setChargeApplied(AmountOrRate3Choice chargeApplied) {
+		this.chargeApplied = chargeApplied;
 	}
 }

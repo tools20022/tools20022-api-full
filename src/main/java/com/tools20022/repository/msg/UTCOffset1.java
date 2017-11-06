@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UTCOffset1#Sign
- * UTCOffset1.Sign}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UTCOffset1#NumberOfHours
- * UTCOffset1.NumberOfHours}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UTCOffset1#mmSign
+ * UTCOffset1.mmSign}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UTCOffset1#mmNumberOfHours
+ * UTCOffset1.mmNumberOfHours}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#UTCOffset
- * ActivityReportSetUpRequestV02.UTCOffset}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#mmUTCOffset
+ * ActivityReportSetUpRequestV02.mmUTCOffset}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UTCOffset1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PlusOrMinusIndicator sign;
 	/**
 	 * Indicates whether the offset is before or after 00:00 hour UTC.
 	 * <p>
@@ -83,8 +84,8 @@ public class UTCOffset1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UTCOffset#Sign
-	 * UTCOffset.Sign}</li>
+	 * {@linkplain com.tools20022.repository.entity.UTCOffset#mmSign
+	 * UTCOffset.mmSign}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UTCOffset1
@@ -103,20 +104,21 @@ public class UTCOffset1 {
 	 * "Indicates whether the offset is before or after 00:00 hour UTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sign = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UTCOffset.mmSign;
 			componentContext_lazy = () -> UTCOffset1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UTCOffset.Sign;
 			isDerived = false;
 			xmlTag = "Sgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Indicates whether the offset is before or after 00:00 hour UTC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	protected ISOTime numberOfHours;
 	/**
 	 * Offset of the reporting time, in hours, before or after 00:00 hour UTC.
 	 * <p>
@@ -129,8 +131,8 @@ public class UTCOffset1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UTCOffset#NumberOfHours
-	 * UTCOffset.NumberOfHours}</li>
+	 * {@linkplain com.tools20022.repository.entity.UTCOffset#mmNumberOfHours
+	 * UTCOffset.mmNumberOfHours}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UTCOffset1
@@ -150,17 +152,17 @@ public class UTCOffset1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfHours = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfHours = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UTCOffset.mmNumberOfHours;
 			componentContext_lazy = () -> UTCOffset1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UTCOffset.NumberOfHours;
 			isDerived = false;
 			xmlTag = "NbOfHrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfHours";
 			definition = "Offset of the reporting time, in hours,  before or after 00:00 hour UTC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -168,15 +170,31 @@ public class UTCOffset1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UTCOffset1.Sign, com.tools20022.repository.msg.UTCOffset1.NumberOfHours);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UTCOffset1.mmSign, com.tools20022.repository.msg.UTCOffset1.mmNumberOfHours);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.mmUTCOffset);
 				trace_lazy = () -> UTCOffset.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.UTCOffset);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UTCOffset1";
 				definition = "Specifies the parameters to calculate the local reporting time.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PlusOrMinusIndicator getSign() {
+		return sign;
+	}
+
+	public void setSign(PlusOrMinusIndicator sign) {
+		this.sign = sign;
+	}
+
+	public ISOTime getNumberOfHours() {
+		return numberOfHours;
+	}
+
+	public void setNumberOfHours(ISOTime numberOfHours) {
+		this.numberOfHours = numberOfHours;
 	}
 }

@@ -30,26 +30,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#CardholderDisplay
- * UserInterfaceCode.CardholderDisplay}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmCardholderDisplay
+ * UserInterfaceCode.mmCardholderDisplay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#CardholderReceipt
- * UserInterfaceCode.CardholderReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmCardholderReceipt
+ * UserInterfaceCode.mmCardholderReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#MerchantDisplay
- * UserInterfaceCode.MerchantDisplay}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmMerchantDisplay
+ * UserInterfaceCode.mmMerchantDisplay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#MerchantReceipt
- * UserInterfaceCode.MerchantReceipt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterfaceCode#Acquirer
- * UserInterfaceCode.Acquirer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterfaceCode#Issuer
- * UserInterfaceCode.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterfaceCode#Agent
- * UserInterfaceCode.Agent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmMerchantReceipt
+ * UserInterfaceCode.mmMerchantReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#OtherCardholderInterface
- * UserInterfaceCode.OtherCardholderInterface}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmAcquirer
+ * UserInterfaceCode.mmAcquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmIssuer
+ * UserInterfaceCode.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmAgent
+ * UserInterfaceCode.mmAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode#mmOtherCardholderInterface
+ * UserInterfaceCode.mmOtherCardholderInterface}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -70,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -112,7 +113,7 @@ public class UserInterfaceCode {
 	 * definition} = "Cardholder display or interface."</li>
 	 * </ul>
 	 */
-	public static final MMCode CardholderDisplay = new MMCode() {
+	public static final MMCode mmCardholderDisplay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CardholderDisplay";
@@ -142,7 +143,7 @@ public class UserInterfaceCode {
 	 * definition} = "Cardholder receipt."</li>
 	 * </ul>
 	 */
-	public static final MMCode CardholderReceipt = new MMCode() {
+	public static final MMCode mmCardholderReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CardholderReceipt";
@@ -172,7 +173,7 @@ public class UserInterfaceCode {
 	 * definition} = "Merchant display or interface."</li>
 	 * </ul>
 	 */
-	public static final MMCode MerchantDisplay = new MMCode() {
+	public static final MMCode mmMerchantDisplay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MerchantDisplay";
@@ -202,7 +203,7 @@ public class UserInterfaceCode {
 	 * definition} = "Merchant receipt."</li>
 	 * </ul>
 	 */
-	public static final MMCode MerchantReceipt = new MMCode() {
+	public static final MMCode mmMerchantReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MerchantReceipt";
@@ -232,7 +233,7 @@ public class UserInterfaceCode {
 	 * definition} = "Acquirer."</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -262,7 +263,7 @@ public class UserInterfaceCode {
 	 * definition} = "Issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode Issuer = new MMCode() {
+	public static final MMCode mmIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
@@ -292,7 +293,7 @@ public class UserInterfaceCode {
 	 * definition} = "Agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode Agent = new MMCode() {
+	public static final MMCode mmAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
@@ -325,7 +326,7 @@ public class UserInterfaceCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OtherCardholderInterface = new MMCode() {
+	public static final MMCode mmOtherCardholderInterface = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCardholderInterface";
@@ -338,14 +339,14 @@ public class UserInterfaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CDSP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UserInterfaceCode";
 				definition = "Type of user interface to display or print information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterfaceCode.CardholderDisplay, com.tools20022.repository.codeset.UserInterfaceCode.CardholderReceipt,
-						com.tools20022.repository.codeset.UserInterfaceCode.MerchantDisplay, com.tools20022.repository.codeset.UserInterfaceCode.MerchantReceipt, com.tools20022.repository.codeset.UserInterfaceCode.Acquirer,
-						com.tools20022.repository.codeset.UserInterfaceCode.Issuer, com.tools20022.repository.codeset.UserInterfaceCode.Agent, com.tools20022.repository.codeset.UserInterfaceCode.OtherCardholderInterface);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterfaceCode.mmCardholderDisplay, com.tools20022.repository.codeset.UserInterfaceCode.mmCardholderReceipt,
+						com.tools20022.repository.codeset.UserInterfaceCode.mmMerchantDisplay, com.tools20022.repository.codeset.UserInterfaceCode.mmMerchantReceipt, com.tools20022.repository.codeset.UserInterfaceCode.mmAcquirer,
+						com.tools20022.repository.codeset.UserInterfaceCode.mmIssuer, com.tools20022.repository.codeset.UserInterfaceCode.mmAgent, com.tools20022.repository.codeset.UserInterfaceCode.mmOtherCardholderInterface);
 				derivation_lazy = () -> Arrays.asList(UserInterface2Code.mmObject(), UserInterface1Code.mmObject(), UserInterface4Code.mmObject(), UserInterface3Code.mmObject(), UserInterface5Code.mmObject());
 			}
 		});

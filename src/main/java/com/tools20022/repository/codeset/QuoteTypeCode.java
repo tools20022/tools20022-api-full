@@ -30,15 +30,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#Indicative
- * QuoteTypeCode.Indicative}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#Tradeable
- * QuoteTypeCode.Tradeable}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#mmIndicative
+ * QuoteTypeCode.mmIndicative}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#mmTradeable
+ * QuoteTypeCode.mmTradeable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteTypeCode#RestrictedTradeable
- * QuoteTypeCode.RestrictedTradeable}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#Counter
- * QuoteTypeCode.Counter}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteTypeCode#mmRestrictedTradeable
+ * QuoteTypeCode.mmRestrictedTradeable}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#mmCounter
+ * QuoteTypeCode.mmCounter}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -100,7 +100,7 @@ public class QuoteTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Indicative = new MMCode() {
+	public static final MMCode mmIndicative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
@@ -134,7 +134,7 @@ public class QuoteTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Tradeable = new MMCode() {
+	public static final MMCode mmTradeable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tradeable";
@@ -170,7 +170,7 @@ public class QuoteTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RestrictedTradeable = new MMCode() {
+	public static final MMCode mmRestrictedTradeable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedTradeable";
@@ -200,7 +200,7 @@ public class QuoteTypeCode {
 	 * definition} = "Indicates the type of quote is a counter quote."</li>
 	 * </ul>
 	 */
-	public static final MMCode Counter = new MMCode() {
+	public static final MMCode mmCounter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
@@ -213,13 +213,13 @@ public class QuoteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INDI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuoteTypeCode";
 				definition = "Identifies the type of quote. Can be either an indicative, a tradeable or a restricted tradeable quote.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteTypeCode.Indicative, com.tools20022.repository.codeset.QuoteTypeCode.Tradeable, com.tools20022.repository.codeset.QuoteTypeCode.RestrictedTradeable,
-						com.tools20022.repository.codeset.QuoteTypeCode.Counter);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteTypeCode.mmIndicative, com.tools20022.repository.codeset.QuoteTypeCode.mmTradeable,
+						com.tools20022.repository.codeset.QuoteTypeCode.mmRestrictedTradeable, com.tools20022.repository.codeset.QuoteTypeCode.mmCounter);
 				derivation_lazy = () -> Arrays.asList(QuoteType1Code.mmObject());
 			}
 		});

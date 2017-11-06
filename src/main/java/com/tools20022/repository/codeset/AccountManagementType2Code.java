@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#AccountOpening
- * AccountManagementType2Code.AccountOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#mmAccountOpening
+ * AccountManagementType2Code.mmAccountOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#AccountModification
- * AccountManagementType2Code.AccountModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#mmAccountModification
+ * AccountManagementType2Code.mmAccountModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#GetAccountDetails
- * AccountManagementType2Code.GetAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#mmGetAccountDetails
+ * AccountManagementType2Code.mmGetAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 * name} = "AccountOpening"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountOpening = new MMCode() {
+	public static final MMCode mmAccountOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
@@ -111,7 +111,7 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 * name} = "AccountModification"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountModification = new MMCode() {
+	public static final MMCode mmAccountModification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
@@ -134,7 +134,7 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 * name} = "GetAccountDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode GetAccountDetails = new MMCode() {
+	public static final MMCode mmGetAccountDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GetAccountDetails";
@@ -145,13 +145,13 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementType2Code";
 				definition = "Refer to an account management instruction ie, either an account opening instruction or an account modification instruction or a get account details message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType2Code.AccountOpening, com.tools20022.repository.codeset.AccountManagementType2Code.AccountModification,
-						com.tools20022.repository.codeset.AccountManagementType2Code.GetAccountDetails);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType2Code.mmAccountOpening, com.tools20022.repository.codeset.AccountManagementType2Code.mmAccountModification,
+						com.tools20022.repository.codeset.AccountManagementType2Code.mmGetAccountDetails);
 				trace_lazy = () -> AccountManagementTypeCode.mmObject();
 			}
 		});

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code#Received
- * ProcessedStatus2Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code#mmReceived
+ * ProcessedStatus2Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code#Completed
- * ProcessedStatus2Code.Completed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code#mmCompleted
+ * ProcessedStatus2Code.mmCompleted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class ProcessedStatus2Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -104,7 +104,7 @@ public class ProcessedStatus2Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Completed = new MMCode() {
+	public static final MMCode mmCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
@@ -115,12 +115,12 @@ public class ProcessedStatus2Code extends CorporateActionProcessedStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus2Code";
 				definition = "Specifies the processing status of a cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus2Code.Received, com.tools20022.repository.codeset.ProcessedStatus2Code.Completed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus2Code.mmReceived, com.tools20022.repository.codeset.ProcessedStatus2Code.mmCompleted);
 				trace_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
 			}
 		});

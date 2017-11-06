@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType4Code#TransferFee
- * ChargeType4Code.TransferFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType4Code#mmTransferFee
+ * ChargeType4Code.mmTransferFee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +77,7 @@ public class ChargeType4Code extends ChargeTypeCode {
 	 * name} = "TransferFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferFee = new MMCode() {
+	public static final MMCode mmTransferFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferFee";
@@ -88,12 +88,12 @@ public class ChargeType4Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRAN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType4Code";
 				definition = "Type of service for which a charge is asked or paid..";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType4Code.TransferFee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType4Code.mmTransferFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

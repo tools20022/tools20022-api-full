@@ -33,270 +33,275 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ClearstreamBankLuxemburg
- * PartyIssuerCode.ClearstreamBankLuxemburg}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmClearstreamBankLuxemburg
+ * PartyIssuerCode.mmClearstreamBankLuxemburg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#CajaDeValores
- * PartyIssuerCode.CajaDeValores}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmCajaDeValores
+ * PartyIssuerCode.mmCajaDeValores}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#AustraclearLtd
- * PartyIssuerCode.AustraclearLtd}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmAustraclearLtd
+ * PartyIssuerCode.mmAustraclearLtd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#AustralianBankStateBranch
- * PartyIssuerCode.AustralianBankStateBranch}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmAustralianBankStateBranch
+ * PartyIssuerCode.mmAustralianBankStateBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ClearingHouseElectronicSettlementSystems
- * PartyIssuerCode.ClearingHouseElectronicSettlementSystems}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmClearingHouseElectronicSettlementSystems
+ * PartyIssuerCode.mmClearingHouseElectronicSettlementSystems}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#AustrianBankLeitzahl
- * PartyIssuerCode.AustrianBankLeitzahl}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmAustrianBankLeitzahl
+ * PartyIssuerCode.mmAustrianBankLeitzahl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#OesterreichischeKontrollbank
- * PartyIssuerCode.OesterreichischeKontrollbank}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmOesterreichischeKontrollbank
+ * PartyIssuerCode.mmOesterreichischeKontrollbank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#CaisseInterprofessionelleDepotsVirementsTitres
- * PartyIssuerCode.CaisseInterprofessionelleDepotsVirementsTitres}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#Euroclear
- * PartyIssuerCode.Euroclear}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmCaisseInterprofessionelleDepotsVirementsTitres
+ * PartyIssuerCode.mmCaisseInterprofessionelleDepotsVirementsTitres}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#BanqueNationaleDeBelgique
- * PartyIssuerCode.BanqueNationaleDeBelgique}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmEuroclear
+ * PartyIssuerCode.mmEuroclear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#CamaraLiquidacaoCustodia
- * PartyIssuerCode.CamaraLiquidacaoCustodia}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmBanqueNationaleDeBelgique
+ * PartyIssuerCode.mmBanqueNationaleDeBelgique}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#CanadianDepositorySecuritiesLtd
- * PartyIssuerCode.CanadianDepositorySecuritiesLtd}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmCamaraLiquidacaoCustodia
+ * PartyIssuerCode.mmCamaraLiquidacaoCustodia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#CanadianPaymentsAssociation
- * PartyIssuerCode.CanadianPaymentsAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmCanadianDepositorySecuritiesLtd
+ * PartyIssuerCode.mmCanadianDepositorySecuritiesLtd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#CentralSecuritiesDepositoryDepositoCentralValores
- * PartyIssuerCode.CentralSecuritiesDepositoryDepositoCentralValores}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmCanadianPaymentsAssociation
+ * PartyIssuerCode.mmCanadianPaymentsAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ShanghaiSecuritiesCentralClearingRegistrationCompany
- * PartyIssuerCode.ShanghaiSecuritiesCentralClearingRegistrationCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmCentralSecuritiesDepositoryDepositoCentralValores
+ * PartyIssuerCode.mmCentralSecuritiesDepositoryDepositoCentralValores}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ShenzhenSecuritiesClearingCompany
- * PartyIssuerCode.ShenzhenSecuritiesClearingCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmShanghaiSecuritiesCentralClearingRegistrationCompany
+ * PartyIssuerCode.mmShanghaiSecuritiesCentralClearingRegistrationCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ColombiaCentralDepositorySystem
- * PartyIssuerCode.ColombiaCentralDepositorySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmShenzhenSecuritiesClearingCompany
+ * PartyIssuerCode.mmShenzhenSecuritiesClearingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#DenmarkVaerdipapircentralen
- * PartyIssuerCode.DenmarkVaerdipapircentralen}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmColombiaCentralDepositorySystem
+ * PartyIssuerCode.mmColombiaCentralDepositorySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#FinnishCentralSecuritiesDepositoryLtd
- * PartyIssuerCode.FinnishCentralSecuritiesDepositoryLtd}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#FranceRIB
- * PartyIssuerCode.FranceRIB}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#SICOVAM
- * PartyIssuerCode.SICOVAM}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmDenmarkVaerdipapircentralen
+ * PartyIssuerCode.mmDenmarkVaerdipapircentralen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#PragueStockExchange
- * PartyIssuerCode.PragueStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmFinnishCentralSecuritiesDepositoryLtd
+ * PartyIssuerCode.mmFinnishCentralSecuritiesDepositoryLtd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#BundesausichtsamtWertpapierhandel
- * PartyIssuerCode.BundesausichtsamtWertpapierhandel}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmFranceRIB
+ * PartyIssuerCode.mmFranceRIB}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmSICOVAM
+ * PartyIssuerCode.mmSICOVAM}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#DeutscheBoerseAGDeutscheTerminborse
- * PartyIssuerCode.DeutscheBoerseAGDeutscheTerminborse}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmPragueStockExchange
+ * PartyIssuerCode.mmPragueStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#DeutscheBoerseAGFrankfurterWertpapierborse
- * PartyIssuerCode.DeutscheBoerseAGFrankfurterWertpapierborse}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmBundesausichtsamtWertpapierhandel
+ * PartyIssuerCode.mmBundesausichtsamtWertpapierhandel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#DeutscheBoerseAGXETRA
- * PartyIssuerCode.DeutscheBoerseAGXETRA}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmDeutscheBoerseAGDeutscheTerminborse
+ * PartyIssuerCode.mmDeutscheBoerseAGDeutscheTerminborse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#DeutscheBorseClearingAG
- * PartyIssuerCode.DeutscheBorseClearingAG}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmDeutscheBoerseAGFrankfurterWertpapierborse
+ * PartyIssuerCode.mmDeutscheBoerseAGFrankfurterWertpapierborse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#DeutscheBundesbank
- * PartyIssuerCode.DeutscheBundesbank}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmDeutscheBoerseAGXETRA
+ * PartyIssuerCode.mmDeutscheBoerseAGXETRA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#GermanBankleitzahl
- * PartyIssuerCode.GermanBankleitzahl}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmDeutscheBorseClearingAG
+ * PartyIssuerCode.mmDeutscheBorseClearingAG}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ZentralerKreditausschuss
- * PartyIssuerCode.ZentralerKreditausschuss}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmDeutscheBundesbank
+ * PartyIssuerCode.mmDeutscheBundesbank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#HongKongCentralClearingSecuritiesSettlementSystem
- * PartyIssuerCode.HongKongCentralClearingSecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmGermanBankleitzahl
+ * PartyIssuerCode.mmGermanBankleitzahl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#HongKongNationalClearing
- * PartyIssuerCode.HongKongNationalClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmZentralerKreditausschuss
+ * PartyIssuerCode.mmZentralerKreditausschuss}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#IndianNationalSecuritiesDepository
- * PartyIssuerCode.IndianNationalSecuritiesDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmHongKongCentralClearingSecuritiesSettlementSystem
+ * PartyIssuerCode.mmHongKongCentralClearingSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#IndonesianSecuritiesCentralDepository
- * PartyIssuerCode.IndonesianSecuritiesCentralDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmHongKongNationalClearing
+ * PartyIssuerCode.mmHongKongNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#IrishNationalClearing
- * PartyIssuerCode.IrishNationalClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmIndianNationalSecuritiesDepository
+ * PartyIssuerCode.mmIndianNationalSecuritiesDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#TelAvivStockExchange
- * PartyIssuerCode.TelAvivStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmIndonesianSecuritiesCentralDepository
+ * PartyIssuerCode.mmIndonesianSecuritiesCentralDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ItalianDomesticIdentification
- * PartyIssuerCode.ItalianDomesticIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmIrishNationalClearing
+ * PartyIssuerCode.mmIrishNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#MonteTitoli
- * PartyIssuerCode.MonteTitoli}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmTelAvivStockExchange
+ * PartyIssuerCode.mmTelAvivStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#JapanSecuritiesClearingCorporation
- * PartyIssuerCode.JapanSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmItalianDomesticIdentification
+ * PartyIssuerCode.mmItalianDomesticIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#JapanSecuritiesDepositoryCenter
- * PartyIssuerCode.JapanSecuritiesDepositoryCenter}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmMonteTitoli
+ * PartyIssuerCode.mmMonteTitoli}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#KoreanSecuritiesDepository
- * PartyIssuerCode.KoreanSecuritiesDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmJapanSecuritiesClearingCorporation
+ * PartyIssuerCode.mmJapanSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#MalaysianCentralDepository
- * PartyIssuerCode.MalaysianCentralDepository}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#IndevalSA
- * PartyIssuerCode.IndevalSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmJapanSecuritiesDepositoryCenter
+ * PartyIssuerCode.mmJapanSecuritiesDepositoryCenter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#AmsterdamseEffectenbeurs
- * PartyIssuerCode.AmsterdamseEffectenbeurs}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#NECIGEF
- * PartyIssuerCode.NECIGEF}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmKoreanSecuritiesDepository
+ * PartyIssuerCode.mmKoreanSecuritiesDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#NewZealandNationalClearing
- * PartyIssuerCode.NewZealandNationalClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmMalaysianCentralDepository
+ * PartyIssuerCode.mmMalaysianCentralDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#NewZealandStockExchange
- * PartyIssuerCode.NewZealandStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmIndevalSA
+ * PartyIssuerCode.mmIndevalSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#Verdipapirsentralen
- * PartyIssuerCode.Verdipapirsentralen}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmAmsterdamseEffectenbeurs
+ * PartyIssuerCode.mmAmsterdamseEffectenbeurs}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmNECIGEF
+ * PartyIssuerCode.mmNECIGEF}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#PhilippineCentralDepository
- * PartyIssuerCode.PhilippineCentralDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmNewZealandNationalClearing
+ * PartyIssuerCode.mmNewZealandNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#PolandNationalDepositorySecurities
- * PartyIssuerCode.PolandNationalDepositorySecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmNewZealandStockExchange
+ * PartyIssuerCode.mmNewZealandStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#CentralValoresMobiliaros
- * PartyIssuerCode.CentralValoresMobiliaros}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmVerdipapirsentralen
+ * PartyIssuerCode.mmVerdipapirsentralen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#PortugueseNationalClearing
- * PartyIssuerCode.PortugueseNationalClearing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#INTERBOLSA
- * PartyIssuerCode.INTERBOLSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmPhilippineCentralDepository
+ * PartyIssuerCode.mmPhilippineCentralDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#RussianCentralBankIdentification
- * PartyIssuerCode.RussianCentralBankIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmPolandNationalDepositorySecurities
+ * PartyIssuerCode.mmPolandNationalDepositorySecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#SingaporeCentralDepositoryLtd
- * PartyIssuerCode.SingaporeCentralDepositoryLtd}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmCentralValoresMobiliaros
+ * PartyIssuerCode.mmCentralValoresMobiliaros}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#SingaporeInternationalMonetaryExchange
- * PartyIssuerCode.SingaporeInternationalMonetaryExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmPortugueseNationalClearing
+ * PartyIssuerCode.mmPortugueseNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#BratislavaStockExchange
- * PartyIssuerCode.BratislavaStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmINTERBOLSA
+ * PartyIssuerCode.mmINTERBOLSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#SouthAfricanNationalClearing
- * PartyIssuerCode.SouthAfricanNationalClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmRussianCentralBankIdentification
+ * PartyIssuerCode.mmRussianCentralBankIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#StrateClearingSettlementLtd
- * PartyIssuerCode.StrateClearingSettlementLtd}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmSingaporeCentralDepositoryLtd
+ * PartyIssuerCode.mmSingaporeCentralDepositoryLtd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#BancoEspana
- * PartyIssuerCode.BancoEspana}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmSingaporeInternationalMonetaryExchange
+ * PartyIssuerCode.mmSingaporeInternationalMonetaryExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ServicioCompensacionLiquidacionValores
- * PartyIssuerCode.ServicioCompensacionLiquidacionValores}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmBratislavaStockExchange
+ * PartyIssuerCode.mmBratislavaStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#SpanishDomesticInterbanking
- * PartyIssuerCode.SpanishDomesticInterbanking}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmSouthAfricanNationalClearing
+ * PartyIssuerCode.mmSouthAfricanNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#Vardepapperscentralen
- * PartyIssuerCode.Vardepapperscentralen}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmStrateClearingSettlementLtd
+ * PartyIssuerCode.mmStrateClearingSettlementLtd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#SISSEGAIntersettle
- * PartyIssuerCode.SISSEGAIntersettle}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmBancoEspana
+ * PartyIssuerCode.mmBancoEspana}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#SwissClearingCode
- * PartyIssuerCode.SwissClearingCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmServicioCompensacionLiquidacionValores
+ * PartyIssuerCode.mmServicioCompensacionLiquidacionValores}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ThailandSecuritiesDepositoryCompany
- * PartyIssuerCode.ThailandSecuritiesDepositoryCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmSpanishDomesticInterbanking
+ * PartyIssuerCode.mmSpanishDomesticInterbanking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#TaiwanSecuritiesCentralDepository
- * PartyIssuerCode.TaiwanSecuritiesCentralDepository}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#Takasbank
- * PartyIssuerCode.Takasbank}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmVardepapperscentralen
+ * PartyIssuerCode.mmVardepapperscentralen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#UKDomesticSort
- * PartyIssuerCode.UKDomesticSort}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmSISSEGAIntersettle
+ * PartyIssuerCode.mmSISSEGAIntersettle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#BankOfEnglandCMO
- * PartyIssuerCode.BankOfEnglandCMO}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#CrestCo
- * PartyIssuerCode.CrestCo}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmSwissClearingCode
+ * PartyIssuerCode.mmSwissClearingCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#FinancialServicesAuthority
- * PartyIssuerCode.FinancialServicesAuthority}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmThailandSecuritiesDepositoryCompany
+ * PartyIssuerCode.mmThailandSecuritiesDepositoryCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#LondonClearingHouse
- * PartyIssuerCode.LondonClearingHouse}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmTaiwanSecuritiesCentralDepository
+ * PartyIssuerCode.mmTaiwanSecuritiesCentralDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#InternationalSecuritiesMarketAssociation
- * PartyIssuerCode.InternationalSecuritiesMarketAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmTakasbank
+ * PartyIssuerCode.mmTakasbank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#LondonStockExchange
- * PartyIssuerCode.LondonStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmUKDomesticSort
+ * PartyIssuerCode.mmUKDomesticSort}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#AmericanStockExchange
- * PartyIssuerCode.AmericanStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmBankOfEnglandCMO
+ * PartyIssuerCode.mmBankOfEnglandCMO}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmCrestCo
+ * PartyIssuerCode.mmCrestCo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#DepositoryTrustCompany
- * PartyIssuerCode.DepositoryTrustCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmFinancialServicesAuthority
+ * PartyIssuerCode.mmFinancialServicesAuthority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#EmergingMarketsClearingCorporation
- * PartyIssuerCode.EmergingMarketsClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmLondonClearingHouse
+ * PartyIssuerCode.mmLondonClearingHouse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#FedwireRoutingNumber
- * PartyIssuerCode.FedwireRoutingNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmInternationalSecuritiesMarketAssociation
+ * PartyIssuerCode.mmInternationalSecuritiesMarketAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#GovernmentSecuritiesClearingCorporation
- * PartyIssuerCode.GovernmentSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmLondonStockExchange
+ * PartyIssuerCode.mmLondonStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#InternationalSecuritiesClearingCorporation
- * PartyIssuerCode.InternationalSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmAmericanStockExchange
+ * PartyIssuerCode.mmAmericanStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#MortgageBackedSecuritiesClearingCorporation
- * PartyIssuerCode.MortgageBackedSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmDepositoryTrustCompany
+ * PartyIssuerCode.mmDepositoryTrustCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#NationalAssociationSecuritiesDealers
- * PartyIssuerCode.NationalAssociationSecuritiesDealers}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#NASDAQ
- * PartyIssuerCode.NASDAQ}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmEmergingMarketsClearingCorporation
+ * PartyIssuerCode.mmEmergingMarketsClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#NationalSecuritiesClearingCorporation
- * PartyIssuerCode.NationalSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmFedwireRoutingNumber
+ * PartyIssuerCode.mmFedwireRoutingNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#NewYorkClearingHouse
- * PartyIssuerCode.NewYorkClearingHouse}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmGovernmentSecuritiesClearingCorporation
+ * PartyIssuerCode.mmGovernmentSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#NewYorkStockExchange
- * PartyIssuerCode.NewYorkStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmInternationalSecuritiesClearingCorporation
+ * PartyIssuerCode.mmInternationalSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#OptionsClearingCorporation
- * PartyIssuerCode.OptionsClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmMortgageBackedSecuritiesClearingCorporation
+ * PartyIssuerCode.mmMortgageBackedSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#ParticipantTrustCompany
- * PartyIssuerCode.ParticipantTrustCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmNationalAssociationSecuritiesDealers
+ * PartyIssuerCode.mmNationalAssociationSecuritiesDealers}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmNASDAQ
+ * PartyIssuerCode.mmNASDAQ}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmNationalSecuritiesClearingCorporation
+ * PartyIssuerCode.mmNationalSecuritiesClearingCorporation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmNewYorkClearingHouse
+ * PartyIssuerCode.mmNewYorkClearingHouse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmNewYorkStockExchange
+ * PartyIssuerCode.mmNewYorkStockExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmOptionsClearingCorporation
+ * PartyIssuerCode.mmOptionsClearingCorporation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode#mmParticipantTrustCompany
+ * PartyIssuerCode.mmParticipantTrustCompany}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -332,7 +337,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ClearstreamBankLuxemburg"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClearstreamBankLuxemburg = new MMCode() {
+	public static final MMCode mmClearstreamBankLuxemburg = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearstreamBankLuxemburg";
@@ -355,7 +360,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "CajaDeValores"</li>
 	 * </ul>
 	 */
-	public static final MMCode CajaDeValores = new MMCode() {
+	public static final MMCode mmCajaDeValores = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CajaDeValores";
@@ -378,7 +383,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "AustraclearLtd"</li>
 	 * </ul>
 	 */
-	public static final MMCode AustraclearLtd = new MMCode() {
+	public static final MMCode mmAustraclearLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustraclearLtd";
@@ -401,7 +406,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "AustralianBankStateBranch"</li>
 	 * </ul>
 	 */
-	public static final MMCode AustralianBankStateBranch = new MMCode() {
+	public static final MMCode mmAustralianBankStateBranch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianBankStateBranch";
@@ -424,7 +429,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ClearingHouseElectronicSettlementSystems"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClearingHouseElectronicSettlementSystems = new MMCode() {
+	public static final MMCode mmClearingHouseElectronicSettlementSystems = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingHouseElectronicSettlementSystems";
@@ -447,7 +452,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "AustrianBankLeitzahl"</li>
 	 * </ul>
 	 */
-	public static final MMCode AustrianBankLeitzahl = new MMCode() {
+	public static final MMCode mmAustrianBankLeitzahl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustrianBankLeitzahl";
@@ -470,7 +475,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "OesterreichischeKontrollbank"</li>
 	 * </ul>
 	 */
-	public static final MMCode OesterreichischeKontrollbank = new MMCode() {
+	public static final MMCode mmOesterreichischeKontrollbank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OesterreichischeKontrollbank";
@@ -493,7 +498,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "CaisseInterprofessionelleDepotsVirementsTitres"</li>
 	 * </ul>
 	 */
-	public static final MMCode CaisseInterprofessionelleDepotsVirementsTitres = new MMCode() {
+	public static final MMCode mmCaisseInterprofessionelleDepotsVirementsTitres = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaisseInterprofessionelleDepotsVirementsTitres";
@@ -516,7 +521,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "Euroclear"</li>
 	 * </ul>
 	 */
-	public static final MMCode Euroclear = new MMCode() {
+	public static final MMCode mmEuroclear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Euroclear";
@@ -539,7 +544,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "BanqueNationaleDeBelgique"</li>
 	 * </ul>
 	 */
-	public static final MMCode BanqueNationaleDeBelgique = new MMCode() {
+	public static final MMCode mmBanqueNationaleDeBelgique = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BanqueNationaleDeBelgique";
@@ -562,7 +567,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "CamaraLiquidacaoCustodia"</li>
 	 * </ul>
 	 */
-	public static final MMCode CamaraLiquidacaoCustodia = new MMCode() {
+	public static final MMCode mmCamaraLiquidacaoCustodia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CamaraLiquidacaoCustodia";
@@ -585,7 +590,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "CanadianDepositorySecuritiesLtd"</li>
 	 * </ul>
 	 */
-	public static final MMCode CanadianDepositorySecuritiesLtd = new MMCode() {
+	public static final MMCode mmCanadianDepositorySecuritiesLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanadianDepositorySecuritiesLtd";
@@ -608,7 +613,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "CanadianPaymentsAssociation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CanadianPaymentsAssociation = new MMCode() {
+	public static final MMCode mmCanadianPaymentsAssociation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanadianPaymentsAssociation";
@@ -631,7 +636,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "CentralSecuritiesDepositoryDepositoCentralValores"</li>
 	 * </ul>
 	 */
-	public static final MMCode CentralSecuritiesDepositoryDepositoCentralValores = new MMCode() {
+	public static final MMCode mmCentralSecuritiesDepositoryDepositoCentralValores = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepositoryDepositoCentralValores";
@@ -654,7 +659,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ShanghaiSecuritiesCentralClearingRegistrationCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShanghaiSecuritiesCentralClearingRegistrationCompany = new MMCode() {
+	public static final MMCode mmShanghaiSecuritiesCentralClearingRegistrationCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShanghaiSecuritiesCentralClearingRegistrationCompany";
@@ -677,7 +682,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ShenzhenSecuritiesClearingCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShenzhenSecuritiesClearingCompany = new MMCode() {
+	public static final MMCode mmShenzhenSecuritiesClearingCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShenzhenSecuritiesClearingCompany";
@@ -700,7 +705,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ColombiaCentralDepositorySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode ColombiaCentralDepositorySystem = new MMCode() {
+	public static final MMCode mmColombiaCentralDepositorySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ColombiaCentralDepositorySystem";
@@ -723,7 +728,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "DenmarkVaerdipapircentralen"</li>
 	 * </ul>
 	 */
-	public static final MMCode DenmarkVaerdipapircentralen = new MMCode() {
+	public static final MMCode mmDenmarkVaerdipapircentralen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenmarkVaerdipapircentralen";
@@ -746,7 +751,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "FinnishCentralSecuritiesDepositoryLtd"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinnishCentralSecuritiesDepositoryLtd = new MMCode() {
+	public static final MMCode mmFinnishCentralSecuritiesDepositoryLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinnishCentralSecuritiesDepositoryLtd";
@@ -769,7 +774,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "FranceRIB"</li>
 	 * </ul>
 	 */
-	public static final MMCode FranceRIB = new MMCode() {
+	public static final MMCode mmFranceRIB = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FranceRIB";
@@ -792,7 +797,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "SICOVAM"</li>
 	 * </ul>
 	 */
-	public static final MMCode SICOVAM = new MMCode() {
+	public static final MMCode mmSICOVAM = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SICOVAM";
@@ -815,7 +820,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "PragueStockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode PragueStockExchange = new MMCode() {
+	public static final MMCode mmPragueStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PragueStockExchange";
@@ -838,7 +843,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "BundesausichtsamtWertpapierhandel"</li>
 	 * </ul>
 	 */
-	public static final MMCode BundesausichtsamtWertpapierhandel = new MMCode() {
+	public static final MMCode mmBundesausichtsamtWertpapierhandel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BundesausichtsamtWertpapierhandel";
@@ -861,7 +866,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "DeutscheBoerseAGDeutscheTerminborse"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBoerseAGDeutscheTerminborse = new MMCode() {
+	public static final MMCode mmDeutscheBoerseAGDeutscheTerminborse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGDeutscheTerminborse";
@@ -884,7 +889,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "DeutscheBoerseAGFrankfurterWertpapierborse"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBoerseAGFrankfurterWertpapierborse = new MMCode() {
+	public static final MMCode mmDeutscheBoerseAGFrankfurterWertpapierborse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGFrankfurterWertpapierborse";
@@ -907,7 +912,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "DeutscheBoerseAGXETRA"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBoerseAGXETRA = new MMCode() {
+	public static final MMCode mmDeutscheBoerseAGXETRA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGXETRA";
@@ -930,7 +935,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "DeutscheBorseClearingAG"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBorseClearingAG = new MMCode() {
+	public static final MMCode mmDeutscheBorseClearingAG = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBorseClearingAG";
@@ -953,7 +958,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "DeutscheBundesbank"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBundesbank = new MMCode() {
+	public static final MMCode mmDeutscheBundesbank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBundesbank";
@@ -976,7 +981,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "GermanBankleitzahl"</li>
 	 * </ul>
 	 */
-	public static final MMCode GermanBankleitzahl = new MMCode() {
+	public static final MMCode mmGermanBankleitzahl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanBankleitzahl";
@@ -999,7 +1004,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ZentralerKreditausschuss"</li>
 	 * </ul>
 	 */
-	public static final MMCode ZentralerKreditausschuss = new MMCode() {
+	public static final MMCode mmZentralerKreditausschuss = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZentralerKreditausschuss";
@@ -1022,7 +1027,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "HongKongCentralClearingSecuritiesSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode HongKongCentralClearingSecuritiesSettlementSystem = new MMCode() {
+	public static final MMCode mmHongKongCentralClearingSecuritiesSettlementSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HongKongCentralClearingSecuritiesSettlementSystem";
@@ -1045,7 +1050,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "HongKongNationalClearing"</li>
 	 * </ul>
 	 */
-	public static final MMCode HongKongNationalClearing = new MMCode() {
+	public static final MMCode mmHongKongNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HongKongNationalClearing";
@@ -1068,7 +1073,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "IndianNationalSecuritiesDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode IndianNationalSecuritiesDepository = new MMCode() {
+	public static final MMCode mmIndianNationalSecuritiesDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndianNationalSecuritiesDepository";
@@ -1091,7 +1096,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "IndonesianSecuritiesCentralDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode IndonesianSecuritiesCentralDepository = new MMCode() {
+	public static final MMCode mmIndonesianSecuritiesCentralDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndonesianSecuritiesCentralDepository";
@@ -1114,7 +1119,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "IrishNationalClearing"</li>
 	 * </ul>
 	 */
-	public static final MMCode IrishNationalClearing = new MMCode() {
+	public static final MMCode mmIrishNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IrishNationalClearing";
@@ -1137,7 +1142,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "TelAvivStockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode TelAvivStockExchange = new MMCode() {
+	public static final MMCode mmTelAvivStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TelAvivStockExchange";
@@ -1160,7 +1165,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ItalianDomesticIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode ItalianDomesticIdentification = new MMCode() {
+	public static final MMCode mmItalianDomesticIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItalianDomesticIdentification";
@@ -1183,7 +1188,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "MonteTitoli"</li>
 	 * </ul>
 	 */
-	public static final MMCode MonteTitoli = new MMCode() {
+	public static final MMCode mmMonteTitoli = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonteTitoli";
@@ -1206,7 +1211,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "JapanSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode JapanSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmJapanSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JapanSecuritiesClearingCorporation";
@@ -1229,7 +1234,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "JapanSecuritiesDepositoryCenter"</li>
 	 * </ul>
 	 */
-	public static final MMCode JapanSecuritiesDepositoryCenter = new MMCode() {
+	public static final MMCode mmJapanSecuritiesDepositoryCenter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JapanSecuritiesDepositoryCenter";
@@ -1252,7 +1257,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "KoreanSecuritiesDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode KoreanSecuritiesDepository = new MMCode() {
+	public static final MMCode mmKoreanSecuritiesDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KoreanSecuritiesDepository";
@@ -1275,7 +1280,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "MalaysianCentralDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode MalaysianCentralDepository = new MMCode() {
+	public static final MMCode mmMalaysianCentralDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MalaysianCentralDepository";
@@ -1298,7 +1303,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "IndevalSA"</li>
 	 * </ul>
 	 */
-	public static final MMCode IndevalSA = new MMCode() {
+	public static final MMCode mmIndevalSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndevalSA";
@@ -1321,7 +1326,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "AmsterdamseEffectenbeurs"</li>
 	 * </ul>
 	 */
-	public static final MMCode AmsterdamseEffectenbeurs = new MMCode() {
+	public static final MMCode mmAmsterdamseEffectenbeurs = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmsterdamseEffectenbeurs";
@@ -1344,7 +1349,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "NECIGEF"</li>
 	 * </ul>
 	 */
-	public static final MMCode NECIGEF = new MMCode() {
+	public static final MMCode mmNECIGEF = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NECIGEF";
@@ -1367,7 +1372,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "NewZealandNationalClearing"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewZealandNationalClearing = new MMCode() {
+	public static final MMCode mmNewZealandNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealandNationalClearing";
@@ -1390,7 +1395,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "NewZealandStockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewZealandStockExchange = new MMCode() {
+	public static final MMCode mmNewZealandStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealandStockExchange";
@@ -1413,7 +1418,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "Verdipapirsentralen"</li>
 	 * </ul>
 	 */
-	public static final MMCode Verdipapirsentralen = new MMCode() {
+	public static final MMCode mmVerdipapirsentralen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Verdipapirsentralen";
@@ -1436,7 +1441,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "PhilippineCentralDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhilippineCentralDepository = new MMCode() {
+	public static final MMCode mmPhilippineCentralDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhilippineCentralDepository";
@@ -1459,7 +1464,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "PolandNationalDepositorySecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode PolandNationalDepositorySecurities = new MMCode() {
+	public static final MMCode mmPolandNationalDepositorySecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PolandNationalDepositorySecurities";
@@ -1482,7 +1487,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "CentralValoresMobiliaros"</li>
 	 * </ul>
 	 */
-	public static final MMCode CentralValoresMobiliaros = new MMCode() {
+	public static final MMCode mmCentralValoresMobiliaros = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralValoresMobiliaros";
@@ -1505,7 +1510,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "PortugueseNationalClearing"</li>
 	 * </ul>
 	 */
-	public static final MMCode PortugueseNationalClearing = new MMCode() {
+	public static final MMCode mmPortugueseNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortugueseNationalClearing";
@@ -1528,7 +1533,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "INTERBOLSA"</li>
 	 * </ul>
 	 */
-	public static final MMCode INTERBOLSA = new MMCode() {
+	public static final MMCode mmINTERBOLSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "INTERBOLSA";
@@ -1551,7 +1556,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "RussianCentralBankIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode RussianCentralBankIdentification = new MMCode() {
+	public static final MMCode mmRussianCentralBankIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RussianCentralBankIdentification";
@@ -1574,7 +1579,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "SingaporeCentralDepositoryLtd"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingaporeCentralDepositoryLtd = new MMCode() {
+	public static final MMCode mmSingaporeCentralDepositoryLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingaporeCentralDepositoryLtd";
@@ -1597,7 +1602,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "SingaporeInternationalMonetaryExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingaporeInternationalMonetaryExchange = new MMCode() {
+	public static final MMCode mmSingaporeInternationalMonetaryExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingaporeInternationalMonetaryExchange";
@@ -1620,7 +1625,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "BratislavaStockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode BratislavaStockExchange = new MMCode() {
+	public static final MMCode mmBratislavaStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BratislavaStockExchange";
@@ -1643,7 +1648,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "SouthAfricanNationalClearing"</li>
 	 * </ul>
 	 */
-	public static final MMCode SouthAfricanNationalClearing = new MMCode() {
+	public static final MMCode mmSouthAfricanNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SouthAfricanNationalClearing";
@@ -1666,7 +1671,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "StrateClearingSettlementLtd"</li>
 	 * </ul>
 	 */
-	public static final MMCode StrateClearingSettlementLtd = new MMCode() {
+	public static final MMCode mmStrateClearingSettlementLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrateClearingSettlementLtd";
@@ -1689,7 +1694,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "BancoEspana"</li>
 	 * </ul>
 	 */
-	public static final MMCode BancoEspana = new MMCode() {
+	public static final MMCode mmBancoEspana = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BancoEspana";
@@ -1712,7 +1717,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ServicioCompensacionLiquidacionValores"</li>
 	 * </ul>
 	 */
-	public static final MMCode ServicioCompensacionLiquidacionValores = new MMCode() {
+	public static final MMCode mmServicioCompensacionLiquidacionValores = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServicioCompensacionLiquidacionValores";
@@ -1735,7 +1740,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "SpanishDomesticInterbanking"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpanishDomesticInterbanking = new MMCode() {
+	public static final MMCode mmSpanishDomesticInterbanking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpanishDomesticInterbanking";
@@ -1758,7 +1763,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "Vardepapperscentralen"</li>
 	 * </ul>
 	 */
-	public static final MMCode Vardepapperscentralen = new MMCode() {
+	public static final MMCode mmVardepapperscentralen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vardepapperscentralen";
@@ -1781,7 +1786,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "SISSEGAIntersettle"</li>
 	 * </ul>
 	 */
-	public static final MMCode SISSEGAIntersettle = new MMCode() {
+	public static final MMCode mmSISSEGAIntersettle = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SISSEGAIntersettle";
@@ -1804,7 +1809,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "SwissClearingCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwissClearingCode = new MMCode() {
+	public static final MMCode mmSwissClearingCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwissClearingCode";
@@ -1827,7 +1832,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ThailandSecuritiesDepositoryCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode ThailandSecuritiesDepositoryCompany = new MMCode() {
+	public static final MMCode mmThailandSecuritiesDepositoryCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThailandSecuritiesDepositoryCompany";
@@ -1850,7 +1855,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "TaiwanSecuritiesCentralDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaiwanSecuritiesCentralDepository = new MMCode() {
+	public static final MMCode mmTaiwanSecuritiesCentralDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaiwanSecuritiesCentralDepository";
@@ -1873,7 +1878,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "Takasbank"</li>
 	 * </ul>
 	 */
-	public static final MMCode Takasbank = new MMCode() {
+	public static final MMCode mmTakasbank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Takasbank";
@@ -1896,7 +1901,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "UKDomesticSort"</li>
 	 * </ul>
 	 */
-	public static final MMCode UKDomesticSort = new MMCode() {
+	public static final MMCode mmUKDomesticSort = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKDomesticSort";
@@ -1919,7 +1924,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "BankOfEnglandCMO"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankOfEnglandCMO = new MMCode() {
+	public static final MMCode mmBankOfEnglandCMO = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfEnglandCMO";
@@ -1942,7 +1947,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "CrestCo"</li>
 	 * </ul>
 	 */
-	public static final MMCode CrestCo = new MMCode() {
+	public static final MMCode mmCrestCo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrestCo";
@@ -1965,7 +1970,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "FinancialServicesAuthority"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialServicesAuthority = new MMCode() {
+	public static final MMCode mmFinancialServicesAuthority = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialServicesAuthority";
@@ -1988,7 +1993,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "LondonClearingHouse"</li>
 	 * </ul>
 	 */
-	public static final MMCode LondonClearingHouse = new MMCode() {
+	public static final MMCode mmLondonClearingHouse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LondonClearingHouse";
@@ -2011,7 +2016,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "InternationalSecuritiesMarketAssociation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InternationalSecuritiesMarketAssociation = new MMCode() {
+	public static final MMCode mmInternationalSecuritiesMarketAssociation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalSecuritiesMarketAssociation";
@@ -2034,7 +2039,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "LondonStockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode LondonStockExchange = new MMCode() {
+	public static final MMCode mmLondonStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LondonStockExchange";
@@ -2057,7 +2062,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "AmericanStockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode AmericanStockExchange = new MMCode() {
+	public static final MMCode mmAmericanStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmericanStockExchange";
@@ -2080,7 +2085,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "DepositoryTrustCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode DepositoryTrustCompany = new MMCode() {
+	public static final MMCode mmDepositoryTrustCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryTrustCompany";
@@ -2103,7 +2108,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "EmergingMarketsClearingCorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmergingMarketsClearingCorporation = new MMCode() {
+	public static final MMCode mmEmergingMarketsClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmergingMarketsClearingCorporation";
@@ -2126,7 +2131,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "FedwireRoutingNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode FedwireRoutingNumber = new MMCode() {
+	public static final MMCode mmFedwireRoutingNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedwireRoutingNumber";
@@ -2149,7 +2154,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "GovernmentSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmGovernmentSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentSecuritiesClearingCorporation";
@@ -2172,7 +2177,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "InternationalSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InternationalSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmInternationalSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalSecuritiesClearingCorporation";
@@ -2195,7 +2200,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "MortgageBackedSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode MortgageBackedSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmMortgageBackedSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgageBackedSecuritiesClearingCorporation";
@@ -2218,7 +2223,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "NationalAssociationSecuritiesDealers"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalAssociationSecuritiesDealers = new MMCode() {
+	public static final MMCode mmNationalAssociationSecuritiesDealers = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalAssociationSecuritiesDealers";
@@ -2241,7 +2246,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "NASDAQ"</li>
 	 * </ul>
 	 */
-	public static final MMCode NASDAQ = new MMCode() {
+	public static final MMCode mmNASDAQ = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NASDAQ";
@@ -2264,7 +2269,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "NationalSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmNationalSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalSecuritiesClearingCorporation";
@@ -2287,7 +2292,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "NewYorkClearingHouse"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewYorkClearingHouse = new MMCode() {
+	public static final MMCode mmNewYorkClearingHouse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkClearingHouse";
@@ -2310,7 +2315,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "NewYorkStockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewYorkStockExchange = new MMCode() {
+	public static final MMCode mmNewYorkStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkStockExchange";
@@ -2333,7 +2338,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "OptionsClearingCorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionsClearingCorporation = new MMCode() {
+	public static final MMCode mmOptionsClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionsClearingCorporation";
@@ -2356,7 +2361,7 @@ public class PartyIssuerCode extends IssuerCode {
 	 * name} = "ParticipantTrustCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode ParticipantTrustCompany = new MMCode() {
+	public static final MMCode mmParticipantTrustCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantTrustCompany";
@@ -2367,52 +2372,54 @@ public class PartyIssuerCode extends IssuerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CEDE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIssuerCode";
 				definition = "Identifies the institution having originated a party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyIssuerCode.ClearstreamBankLuxemburg, com.tools20022.repository.codeset.PartyIssuerCode.CajaDeValores,
-						com.tools20022.repository.codeset.PartyIssuerCode.AustraclearLtd, com.tools20022.repository.codeset.PartyIssuerCode.AustralianBankStateBranch,
-						com.tools20022.repository.codeset.PartyIssuerCode.ClearingHouseElectronicSettlementSystems, com.tools20022.repository.codeset.PartyIssuerCode.AustrianBankLeitzahl,
-						com.tools20022.repository.codeset.PartyIssuerCode.OesterreichischeKontrollbank, com.tools20022.repository.codeset.PartyIssuerCode.CaisseInterprofessionelleDepotsVirementsTitres,
-						com.tools20022.repository.codeset.PartyIssuerCode.Euroclear, com.tools20022.repository.codeset.PartyIssuerCode.BanqueNationaleDeBelgique, com.tools20022.repository.codeset.PartyIssuerCode.CamaraLiquidacaoCustodia,
-						com.tools20022.repository.codeset.PartyIssuerCode.CanadianDepositorySecuritiesLtd, com.tools20022.repository.codeset.PartyIssuerCode.CanadianPaymentsAssociation,
-						com.tools20022.repository.codeset.PartyIssuerCode.CentralSecuritiesDepositoryDepositoCentralValores, com.tools20022.repository.codeset.PartyIssuerCode.ShanghaiSecuritiesCentralClearingRegistrationCompany,
-						com.tools20022.repository.codeset.PartyIssuerCode.ShenzhenSecuritiesClearingCompany, com.tools20022.repository.codeset.PartyIssuerCode.ColombiaCentralDepositorySystem,
-						com.tools20022.repository.codeset.PartyIssuerCode.DenmarkVaerdipapircentralen, com.tools20022.repository.codeset.PartyIssuerCode.FinnishCentralSecuritiesDepositoryLtd,
-						com.tools20022.repository.codeset.PartyIssuerCode.FranceRIB, com.tools20022.repository.codeset.PartyIssuerCode.SICOVAM, com.tools20022.repository.codeset.PartyIssuerCode.PragueStockExchange,
-						com.tools20022.repository.codeset.PartyIssuerCode.BundesausichtsamtWertpapierhandel, com.tools20022.repository.codeset.PartyIssuerCode.DeutscheBoerseAGDeutscheTerminborse,
-						com.tools20022.repository.codeset.PartyIssuerCode.DeutscheBoerseAGFrankfurterWertpapierborse, com.tools20022.repository.codeset.PartyIssuerCode.DeutscheBoerseAGXETRA,
-						com.tools20022.repository.codeset.PartyIssuerCode.DeutscheBorseClearingAG, com.tools20022.repository.codeset.PartyIssuerCode.DeutscheBundesbank, com.tools20022.repository.codeset.PartyIssuerCode.GermanBankleitzahl,
-						com.tools20022.repository.codeset.PartyIssuerCode.ZentralerKreditausschuss, com.tools20022.repository.codeset.PartyIssuerCode.HongKongCentralClearingSecuritiesSettlementSystem,
-						com.tools20022.repository.codeset.PartyIssuerCode.HongKongNationalClearing, com.tools20022.repository.codeset.PartyIssuerCode.IndianNationalSecuritiesDepository,
-						com.tools20022.repository.codeset.PartyIssuerCode.IndonesianSecuritiesCentralDepository, com.tools20022.repository.codeset.PartyIssuerCode.IrishNationalClearing,
-						com.tools20022.repository.codeset.PartyIssuerCode.TelAvivStockExchange, com.tools20022.repository.codeset.PartyIssuerCode.ItalianDomesticIdentification, com.tools20022.repository.codeset.PartyIssuerCode.MonteTitoli,
-						com.tools20022.repository.codeset.PartyIssuerCode.JapanSecuritiesClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.JapanSecuritiesDepositoryCenter,
-						com.tools20022.repository.codeset.PartyIssuerCode.KoreanSecuritiesDepository, com.tools20022.repository.codeset.PartyIssuerCode.MalaysianCentralDepository,
-						com.tools20022.repository.codeset.PartyIssuerCode.IndevalSA, com.tools20022.repository.codeset.PartyIssuerCode.AmsterdamseEffectenbeurs, com.tools20022.repository.codeset.PartyIssuerCode.NECIGEF,
-						com.tools20022.repository.codeset.PartyIssuerCode.NewZealandNationalClearing, com.tools20022.repository.codeset.PartyIssuerCode.NewZealandStockExchange,
-						com.tools20022.repository.codeset.PartyIssuerCode.Verdipapirsentralen, com.tools20022.repository.codeset.PartyIssuerCode.PhilippineCentralDepository,
-						com.tools20022.repository.codeset.PartyIssuerCode.PolandNationalDepositorySecurities, com.tools20022.repository.codeset.PartyIssuerCode.CentralValoresMobiliaros,
-						com.tools20022.repository.codeset.PartyIssuerCode.PortugueseNationalClearing, com.tools20022.repository.codeset.PartyIssuerCode.INTERBOLSA,
-						com.tools20022.repository.codeset.PartyIssuerCode.RussianCentralBankIdentification, com.tools20022.repository.codeset.PartyIssuerCode.SingaporeCentralDepositoryLtd,
-						com.tools20022.repository.codeset.PartyIssuerCode.SingaporeInternationalMonetaryExchange, com.tools20022.repository.codeset.PartyIssuerCode.BratislavaStockExchange,
-						com.tools20022.repository.codeset.PartyIssuerCode.SouthAfricanNationalClearing, com.tools20022.repository.codeset.PartyIssuerCode.StrateClearingSettlementLtd,
-						com.tools20022.repository.codeset.PartyIssuerCode.BancoEspana, com.tools20022.repository.codeset.PartyIssuerCode.ServicioCompensacionLiquidacionValores,
-						com.tools20022.repository.codeset.PartyIssuerCode.SpanishDomesticInterbanking, com.tools20022.repository.codeset.PartyIssuerCode.Vardepapperscentralen,
-						com.tools20022.repository.codeset.PartyIssuerCode.SISSEGAIntersettle, com.tools20022.repository.codeset.PartyIssuerCode.SwissClearingCode,
-						com.tools20022.repository.codeset.PartyIssuerCode.ThailandSecuritiesDepositoryCompany, com.tools20022.repository.codeset.PartyIssuerCode.TaiwanSecuritiesCentralDepository,
-						com.tools20022.repository.codeset.PartyIssuerCode.Takasbank, com.tools20022.repository.codeset.PartyIssuerCode.UKDomesticSort, com.tools20022.repository.codeset.PartyIssuerCode.BankOfEnglandCMO,
-						com.tools20022.repository.codeset.PartyIssuerCode.CrestCo, com.tools20022.repository.codeset.PartyIssuerCode.FinancialServicesAuthority, com.tools20022.repository.codeset.PartyIssuerCode.LondonClearingHouse,
-						com.tools20022.repository.codeset.PartyIssuerCode.InternationalSecuritiesMarketAssociation, com.tools20022.repository.codeset.PartyIssuerCode.LondonStockExchange,
-						com.tools20022.repository.codeset.PartyIssuerCode.AmericanStockExchange, com.tools20022.repository.codeset.PartyIssuerCode.DepositoryTrustCompany,
-						com.tools20022.repository.codeset.PartyIssuerCode.EmergingMarketsClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.FedwireRoutingNumber,
-						com.tools20022.repository.codeset.PartyIssuerCode.GovernmentSecuritiesClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.InternationalSecuritiesClearingCorporation,
-						com.tools20022.repository.codeset.PartyIssuerCode.MortgageBackedSecuritiesClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.NationalAssociationSecuritiesDealers,
-						com.tools20022.repository.codeset.PartyIssuerCode.NASDAQ, com.tools20022.repository.codeset.PartyIssuerCode.NationalSecuritiesClearingCorporation,
-						com.tools20022.repository.codeset.PartyIssuerCode.NewYorkClearingHouse, com.tools20022.repository.codeset.PartyIssuerCode.NewYorkStockExchange,
-						com.tools20022.repository.codeset.PartyIssuerCode.OptionsClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.ParticipantTrustCompany);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyIssuerCode.mmClearstreamBankLuxemburg, com.tools20022.repository.codeset.PartyIssuerCode.mmCajaDeValores,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmAustraclearLtd, com.tools20022.repository.codeset.PartyIssuerCode.mmAustralianBankStateBranch,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmClearingHouseElectronicSettlementSystems, com.tools20022.repository.codeset.PartyIssuerCode.mmAustrianBankLeitzahl,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmOesterreichischeKontrollbank, com.tools20022.repository.codeset.PartyIssuerCode.mmCaisseInterprofessionelleDepotsVirementsTitres,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmEuroclear, com.tools20022.repository.codeset.PartyIssuerCode.mmBanqueNationaleDeBelgique,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmCamaraLiquidacaoCustodia, com.tools20022.repository.codeset.PartyIssuerCode.mmCanadianDepositorySecuritiesLtd,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmCanadianPaymentsAssociation, com.tools20022.repository.codeset.PartyIssuerCode.mmCentralSecuritiesDepositoryDepositoCentralValores,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmShanghaiSecuritiesCentralClearingRegistrationCompany, com.tools20022.repository.codeset.PartyIssuerCode.mmShenzhenSecuritiesClearingCompany,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmColombiaCentralDepositorySystem, com.tools20022.repository.codeset.PartyIssuerCode.mmDenmarkVaerdipapircentralen,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmFinnishCentralSecuritiesDepositoryLtd, com.tools20022.repository.codeset.PartyIssuerCode.mmFranceRIB, com.tools20022.repository.codeset.PartyIssuerCode.mmSICOVAM,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmPragueStockExchange, com.tools20022.repository.codeset.PartyIssuerCode.mmBundesausichtsamtWertpapierhandel,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmDeutscheBoerseAGDeutscheTerminborse, com.tools20022.repository.codeset.PartyIssuerCode.mmDeutscheBoerseAGFrankfurterWertpapierborse,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmDeutscheBoerseAGXETRA, com.tools20022.repository.codeset.PartyIssuerCode.mmDeutscheBorseClearingAG,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmDeutscheBundesbank, com.tools20022.repository.codeset.PartyIssuerCode.mmGermanBankleitzahl,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmZentralerKreditausschuss, com.tools20022.repository.codeset.PartyIssuerCode.mmHongKongCentralClearingSecuritiesSettlementSystem,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmHongKongNationalClearing, com.tools20022.repository.codeset.PartyIssuerCode.mmIndianNationalSecuritiesDepository,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmIndonesianSecuritiesCentralDepository, com.tools20022.repository.codeset.PartyIssuerCode.mmIrishNationalClearing,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmTelAvivStockExchange, com.tools20022.repository.codeset.PartyIssuerCode.mmItalianDomesticIdentification,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmMonteTitoli, com.tools20022.repository.codeset.PartyIssuerCode.mmJapanSecuritiesClearingCorporation,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmJapanSecuritiesDepositoryCenter, com.tools20022.repository.codeset.PartyIssuerCode.mmKoreanSecuritiesDepository,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmMalaysianCentralDepository, com.tools20022.repository.codeset.PartyIssuerCode.mmIndevalSA,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmAmsterdamseEffectenbeurs, com.tools20022.repository.codeset.PartyIssuerCode.mmNECIGEF,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmNewZealandNationalClearing, com.tools20022.repository.codeset.PartyIssuerCode.mmNewZealandStockExchange,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmVerdipapirsentralen, com.tools20022.repository.codeset.PartyIssuerCode.mmPhilippineCentralDepository,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmPolandNationalDepositorySecurities, com.tools20022.repository.codeset.PartyIssuerCode.mmCentralValoresMobiliaros,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmPortugueseNationalClearing, com.tools20022.repository.codeset.PartyIssuerCode.mmINTERBOLSA,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmRussianCentralBankIdentification, com.tools20022.repository.codeset.PartyIssuerCode.mmSingaporeCentralDepositoryLtd,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmSingaporeInternationalMonetaryExchange, com.tools20022.repository.codeset.PartyIssuerCode.mmBratislavaStockExchange,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmSouthAfricanNationalClearing, com.tools20022.repository.codeset.PartyIssuerCode.mmStrateClearingSettlementLtd,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmBancoEspana, com.tools20022.repository.codeset.PartyIssuerCode.mmServicioCompensacionLiquidacionValores,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmSpanishDomesticInterbanking, com.tools20022.repository.codeset.PartyIssuerCode.mmVardepapperscentralen,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmSISSEGAIntersettle, com.tools20022.repository.codeset.PartyIssuerCode.mmSwissClearingCode,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmThailandSecuritiesDepositoryCompany, com.tools20022.repository.codeset.PartyIssuerCode.mmTaiwanSecuritiesCentralDepository,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmTakasbank, com.tools20022.repository.codeset.PartyIssuerCode.mmUKDomesticSort, com.tools20022.repository.codeset.PartyIssuerCode.mmBankOfEnglandCMO,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmCrestCo, com.tools20022.repository.codeset.PartyIssuerCode.mmFinancialServicesAuthority, com.tools20022.repository.codeset.PartyIssuerCode.mmLondonClearingHouse,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmInternationalSecuritiesMarketAssociation, com.tools20022.repository.codeset.PartyIssuerCode.mmLondonStockExchange,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmAmericanStockExchange, com.tools20022.repository.codeset.PartyIssuerCode.mmDepositoryTrustCompany,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmEmergingMarketsClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.mmFedwireRoutingNumber,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmGovernmentSecuritiesClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.mmInternationalSecuritiesClearingCorporation,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmMortgageBackedSecuritiesClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.mmNationalAssociationSecuritiesDealers,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmNASDAQ, com.tools20022.repository.codeset.PartyIssuerCode.mmNationalSecuritiesClearingCorporation,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmNewYorkClearingHouse, com.tools20022.repository.codeset.PartyIssuerCode.mmNewYorkStockExchange,
+						com.tools20022.repository.codeset.PartyIssuerCode.mmOptionsClearingCorporation, com.tools20022.repository.codeset.PartyIssuerCode.mmParticipantTrustCompany);
 				trace_lazy = () -> IssuerCode.mmObject();
 			}
 		});

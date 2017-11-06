@@ -31,6 +31,6 @@ public class DeriveMMMessageAssociationEnd_memberType implements Function<MMMess
 	 */
 	@Override
 	public MMRepositoryType apply(MMMessageAssociationEnd mmBean) {
-		throw new RuntimeException("Not implemented!");
+		return mmBean.getXmlMemberType();
 	}
 }

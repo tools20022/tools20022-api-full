@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Participant profile participant information.
@@ -36,30 +37,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#ProfileDeletionDate
- * ParticipantInformation1.ProfileDeletionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#mmProfileDeletionDate
+ * ParticipantInformation1.mmProfileDeletionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#BankBranch
- * ParticipantInformation1.BankBranch}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#mmBankBranch
+ * ParticipantInformation1.mmBankBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#TerminalIdentification
- * ParticipantInformation1.TerminalIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#mmTerminalIdentification
+ * ParticipantInformation1.mmTerminalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#Restrictions
- * ParticipantInformation1.Restrictions}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#mmRestrictions
+ * ParticipantInformation1.mmRestrictions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#ExternalPaymentSystemInformation
- * ParticipantInformation1.ExternalPaymentSystemInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#mmExternalPaymentSystemInformation
+ * ParticipantInformation1.mmExternalPaymentSystemInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#Migration
- * ParticipantInformation1.Migration}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantInformation1#mmMigration
+ * ParticipantInformation1.mmMigration}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ParticipantInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime profileDeletionDate;
 	/**
 	 * Date the profile was deleted.
 	 * <p>
@@ -100,7 +102,7 @@ public class ParticipantInformation1 {
 	 * definition} = "Date the profile was deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProfileDeletionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProfileDeletionDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -108,11 +110,12 @@ public class ParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileDeletionDate";
 			definition = "Date the profile was deleted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CentralisedAndAuthorisedBranchIdentification1Choice bankBranch;
 	/**
 	 * National BIC identifiers for authorised and central branches.
 	 * <p>
@@ -141,7 +144,7 @@ public class ParticipantInformation1 {
 	 * "National BIC identifiers for authorised and central branches."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BankBranch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBankBranch = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -149,12 +152,13 @@ public class ParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankBranch";
 			definition = "National BIC identifiers for authorised and central branches.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 		}
 	};
+	protected Max35Text terminalIdentification;
 	/**
 	 * CBRF identification of the terminal.
 	 * <p>
@@ -182,7 +186,7 @@ public class ParticipantInformation1 {
 	 * definition} = "CBRF identification of the terminal. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TerminalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTerminalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -190,11 +194,12 @@ public class ParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalIdentification";
 			definition = "CBRF identification of the terminal. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> restrictions;
 	/**
 	 * Intraday restrictions details.
 	 * <p>
@@ -222,7 +227,7 @@ public class ParticipantInformation1 {
 	 * definition} = "Intraday restrictions details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Restrictions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -234,6 +239,7 @@ public class ParticipantInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ExternalPaymentSystemDetails1 externalPaymentSystemInformation;
 	/**
 	 * External payment system details.
 	 * <p>
@@ -261,7 +267,7 @@ public class ParticipantInformation1 {
 	 * definition} = "External payment system details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExternalPaymentSystemInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExternalPaymentSystemInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -269,12 +275,13 @@ public class ParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalPaymentSystemInformation";
 			definition = "External payment system details.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ExternalPaymentSystemDetails1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ExternalPaymentSystemDetails1.mmObject();
 		}
 	};
+	protected SystemMigration1 migration;
 	/**
 	 * Information related for participant migration process.
 	 * <p>
@@ -301,7 +308,7 @@ public class ParticipantInformation1 {
 	 * definition} = "Information related for participant migration process. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Migration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMigration = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -309,25 +316,73 @@ public class ParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Migration";
 			definition = "Information related for participant migration process. ";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemMigration1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantInformation1.ProfileDeletionDate, com.tools20022.repository.msg.ParticipantInformation1.BankBranch,
-						com.tools20022.repository.msg.ParticipantInformation1.TerminalIdentification, com.tools20022.repository.msg.ParticipantInformation1.Restrictions,
-						com.tools20022.repository.msg.ParticipantInformation1.ExternalPaymentSystemInformation, com.tools20022.repository.msg.ParticipantInformation1.Migration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantInformation1.mmProfileDeletionDate, com.tools20022.repository.msg.ParticipantInformation1.mmBankBranch,
+						com.tools20022.repository.msg.ParticipantInformation1.mmTerminalIdentification, com.tools20022.repository.msg.ParticipantInformation1.mmRestrictions,
+						com.tools20022.repository.msg.ParticipantInformation1.mmExternalPaymentSystemInformation, com.tools20022.repository.msg.ParticipantInformation1.mmMigration);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantInformation1";
 				definition = "Participant profile participant information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getProfileDeletionDate() {
+		return profileDeletionDate;
+	}
+
+	public void setProfileDeletionDate(ISODateTime profileDeletionDate) {
+		this.profileDeletionDate = profileDeletionDate;
+	}
+
+	public CentralisedAndAuthorisedBranchIdentification1Choice getBankBranch() {
+		return bankBranch;
+	}
+
+	public void setBankBranch(CentralisedAndAuthorisedBranchIdentification1Choice bankBranch) {
+		this.bankBranch = bankBranch;
+	}
+
+	public Max35Text getTerminalIdentification() {
+		return terminalIdentification;
+	}
+
+	public void setTerminalIdentification(Max35Text terminalIdentification) {
+		this.terminalIdentification = terminalIdentification;
+	}
+
+	public List<Max35Text> getRestrictions() {
+		return restrictions;
+	}
+
+	public void setRestrictions(List<Max35Text> restrictions) {
+		this.restrictions = restrictions;
+	}
+
+	public ExternalPaymentSystemDetails1 getExternalPaymentSystemInformation() {
+		return externalPaymentSystemInformation;
+	}
+
+	public void setExternalPaymentSystemInformation(com.tools20022.repository.msg.ExternalPaymentSystemDetails1 externalPaymentSystemInformation) {
+		this.externalPaymentSystemInformation = externalPaymentSystemInformation;
+	}
+
+	public SystemMigration1 getMigration() {
+		return migration;
+	}
+
+	public void setMigration(com.tools20022.repository.msg.SystemMigration1 migration) {
+		this.migration = migration;
 	}
 }

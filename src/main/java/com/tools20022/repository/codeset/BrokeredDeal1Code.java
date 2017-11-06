@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BrokeredDeal1Code#BilateralTransaction
- * BrokeredDeal1Code.BilateralTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.BrokeredDeal1Code#mmBilateralTransaction
+ * BrokeredDeal1Code.mmBilateralTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BrokeredDeal1Code#BrokeredTransaction
- * BrokeredDeal1Code.BrokeredTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.BrokeredDeal1Code#mmBrokeredTransaction
+ * BrokeredDeal1Code.mmBrokeredTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class BrokeredDeal1Code extends BrokeredDealCode {
 	 * name} = "BilateralTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode BilateralTransaction = new MMCode() {
+	public static final MMCode mmBilateralTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralTransaction";
@@ -101,7 +101,7 @@ public class BrokeredDeal1Code extends BrokeredDealCode {
 	 * name} = "BrokeredTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokeredTransaction = new MMCode() {
+	public static final MMCode mmBrokeredTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokeredTransaction";
@@ -112,11 +112,11 @@ public class BrokeredDeal1Code extends BrokeredDealCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BrokeredDeal1Code";
 				definition = "Specifies whether the transaction is arranged via a third party broker or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BrokeredDeal1Code.BilateralTransaction, com.tools20022.repository.codeset.BrokeredDeal1Code.BrokeredTransaction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BrokeredDeal1Code.mmBilateralTransaction, com.tools20022.repository.codeset.BrokeredDeal1Code.mmBrokeredTransaction);
 				trace_lazy = () -> BrokeredDealCode.mmObject();
 			}
 		});

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.entity.InsuranceCertificate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the details relative to the submission of the insurance data set.
@@ -37,26 +38,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission3#Submitter
- * RequiredSubmission3.Submitter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#MatchIssuer
- * RequiredSubmission3.MatchIssuer}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#mmSubmitter
+ * RequiredSubmission3.mmSubmitter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#MatchIssueDate
- * RequiredSubmission3.MatchIssueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#mmMatchIssuer
+ * RequiredSubmission3.mmMatchIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#MatchTransport
- * RequiredSubmission3.MatchTransport}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#mmMatchIssueDate
+ * RequiredSubmission3.mmMatchIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#MatchAmount
- * RequiredSubmission3.MatchAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#mmMatchTransport
+ * RequiredSubmission3.mmMatchTransport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#ClausesRequired
- * RequiredSubmission3.ClausesRequired}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#mmMatchAmount
+ * RequiredSubmission3.mmMatchAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#MatchAssuredParty
- * RequiredSubmission3.MatchAssuredParty}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#mmClausesRequired
+ * RequiredSubmission3.mmClausesRequired}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#mmMatchAssuredParty
+ * RequiredSubmission3.mmMatchAssuredParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequiredSubmission3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.BICIdentification1> submitter;
 	/**
 	 * Specifies with party(ies) is authorised to submit the data set as part of
 	 * the transaction.
@@ -116,20 +119,21 @@ public class RequiredSubmission3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Submitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
+			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Specifies with party(ies) is authorised to submit the data set as part of the transaction.";
 			minOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	protected PartyIdentification27 matchIssuer;
 	/**
 	 * Specifies if the issuer must be matched as part of the validation of the
 	 * data set.
@@ -142,8 +146,8 @@ public class RequiredSubmission3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,21 +168,22 @@ public class RequiredSubmission3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MatchIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMatchIssuer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "MtchIssr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIssuer";
 			definition = "Specifies if the issuer must be matched as part of the validation of the data set.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification27.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification27.mmObject();
 		}
 	};
+	protected YesNoIndicator matchIssueDate;
 	/**
 	 * Specifies if the issue date must be matched as part of the validation of
 	 * the data set.
@@ -210,7 +215,7 @@ public class RequiredSubmission3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchIssueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
@@ -218,11 +223,12 @@ public class RequiredSubmission3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIssueDate";
 			definition = "Specifies if the issue date must be matched as part of the validation of the data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator matchTransport;
 	/**
 	 * Specifies if the transport information must be matched as part of the
 	 * validation of the data set.
@@ -237,8 +243,8 @@ public class RequiredSubmission3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Transport
-	 * Document.Transport}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmTransport
+	 * Document.mmTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,20 +265,21 @@ public class RequiredSubmission3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchTransport = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchTransport = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmTransport;
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Transport;
 			isDerived = false;
 			xmlTag = "MtchTrnsprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchTransport";
 			definition = "Specifies if the transport information must be matched as part of the validation of the data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator matchAmount;
 	/**
 	 * Specifies if the insured amount must be matched as part of the validation
 	 * of the data set.
@@ -304,7 +311,7 @@ public class RequiredSubmission3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
@@ -312,11 +319,12 @@ public class RequiredSubmission3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchAmount";
 			definition = "Specifies if the insured amount must be matched as part of the validation of the data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<InsuranceClauses1Code> clausesRequired;
 	/**
 	 * Specifies which clauses are required in the insurance data set.
 	 * <p>
@@ -330,8 +338,8 @@ public class RequiredSubmission3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate#InsuranceClauses
-	 * InsuranceCertificate.InsuranceClauses}</li>
+	 * {@linkplain com.tools20022.repository.entity.InsuranceCertificate#mmInsuranceClauses
+	 * InsuranceCertificate.mmInsuranceClauses}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -351,10 +359,10 @@ public class RequiredSubmission3 {
 	 * "Specifies which clauses are required in the insurance data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClausesRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClausesRequired = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceClauses;
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.InsuranceClauses;
 			isDerived = false;
 			xmlTag = "ClausesReqrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,6 +372,7 @@ public class RequiredSubmission3 {
 			simpleType_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
 	};
+	protected AssuredType1Code matchAssuredParty;
 	/**
 	 * Specifies if the assured (insured) party must be matched as part of the
 	 * validation of the data set.
@@ -395,7 +404,7 @@ public class RequiredSubmission3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchAssuredParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchAssuredParty = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
@@ -403,8 +412,8 @@ public class RequiredSubmission3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchAssuredParty";
 			definition = "Specifies if the assured (insured) party must be matched as part of the validation of the data set.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssuredType1Code.mmObject();
 		}
 	};
@@ -412,16 +421,72 @@ public class RequiredSubmission3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission3.Submitter, com.tools20022.repository.msg.RequiredSubmission3.MatchIssuer,
-						com.tools20022.repository.msg.RequiredSubmission3.MatchIssueDate, com.tools20022.repository.msg.RequiredSubmission3.MatchTransport, com.tools20022.repository.msg.RequiredSubmission3.MatchAmount,
-						com.tools20022.repository.msg.RequiredSubmission3.ClausesRequired, com.tools20022.repository.msg.RequiredSubmission3.MatchAssuredParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission3.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission3.mmMatchIssuer,
+						com.tools20022.repository.msg.RequiredSubmission3.mmMatchIssueDate, com.tools20022.repository.msg.RequiredSubmission3.mmMatchTransport, com.tools20022.repository.msg.RequiredSubmission3.mmMatchAmount,
+						com.tools20022.repository.msg.RequiredSubmission3.mmClausesRequired, com.tools20022.repository.msg.RequiredSubmission3.mmMatchAssuredParty);
 				trace_lazy = () -> InsuranceCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequiredSubmission3";
 				definition = "Specifies the details relative to the submission of the insurance data set.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BICIdentification1> getSubmitter() {
+		return submitter;
+	}
+
+	public void setSubmitter(List<com.tools20022.repository.msg.BICIdentification1> submitter) {
+		this.submitter = submitter;
+	}
+
+	public PartyIdentification27 getMatchIssuer() {
+		return matchIssuer;
+	}
+
+	public void setMatchIssuer(com.tools20022.repository.msg.PartyIdentification27 matchIssuer) {
+		this.matchIssuer = matchIssuer;
+	}
+
+	public YesNoIndicator getMatchIssueDate() {
+		return matchIssueDate;
+	}
+
+	public void setMatchIssueDate(YesNoIndicator matchIssueDate) {
+		this.matchIssueDate = matchIssueDate;
+	}
+
+	public YesNoIndicator getMatchTransport() {
+		return matchTransport;
+	}
+
+	public void setMatchTransport(YesNoIndicator matchTransport) {
+		this.matchTransport = matchTransport;
+	}
+
+	public YesNoIndicator getMatchAmount() {
+		return matchAmount;
+	}
+
+	public void setMatchAmount(YesNoIndicator matchAmount) {
+		this.matchAmount = matchAmount;
+	}
+
+	public List<InsuranceClauses1Code> getClausesRequired() {
+		return clausesRequired;
+	}
+
+	public void setClausesRequired(List<InsuranceClauses1Code> clausesRequired) {
+		this.clausesRequired = clausesRequired;
+	}
+
+	public AssuredType1Code getMatchAssuredParty() {
+		return matchAssuredParty;
+	}
+
+	public void setMatchAssuredParty(AssuredType1Code matchAssuredParty) {
+		this.matchAssuredParty = matchAssuredParty;
 	}
 }

@@ -33,43 +33,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfPriceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Bid
- * TypeOfPrice5Code.Bid}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Offer
- * TypeOfPrice5Code.Offer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmBid
+ * TypeOfPrice5Code.mmBid}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmOffer
+ * TypeOfPrice5Code.mmOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#NetAssetValue
- * TypeOfPrice5Code.NetAssetValue}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Creation
- * TypeOfPrice5Code.Creation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmNetAssetValue
+ * TypeOfPrice5Code.mmNetAssetValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Cancellation
- * TypeOfPrice5Code.Cancellation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Interim
- * TypeOfPrice5Code.Interim}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Swing
- * TypeOfPrice5Code.Swing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Other
- * TypeOfPrice5Code.Other}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Mid
- * TypeOfPrice5Code.Mid}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmCreation
+ * TypeOfPrice5Code.mmCreation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Reinvestment
- * TypeOfPrice5Code.Reinvestment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Switch
- * TypeOfPrice5Code.Switch}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Market
- * TypeOfPrice5Code.Market}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmCancellation
+ * TypeOfPrice5Code.mmCancellation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmInterim
+ * TypeOfPrice5Code.mmInterim}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmSwing
+ * TypeOfPrice5Code.mmSwing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmOther
+ * TypeOfPrice5Code.mmOther}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmMid
+ * TypeOfPrice5Code.mmMid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#Indicative
- * TypeOfPrice5Code.Indicative}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmReinvestment
+ * TypeOfPrice5Code.mmReinvestment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmSwitch
+ * TypeOfPrice5Code.mmSwitch}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmMarket
+ * TypeOfPrice5Code.mmMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code#mmIndicative
+ * TypeOfPrice5Code.mmIndicative}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +106,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Bid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bid = new MMCode() {
+	public static final MMCode mmBid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
@@ -128,7 +129,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Offer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Offer = new MMCode() {
+	public static final MMCode mmOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
@@ -151,7 +152,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "NetAssetValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetAssetValue = new MMCode() {
+	public static final MMCode mmNetAssetValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
@@ -174,7 +175,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Creation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Creation = new MMCode() {
+	public static final MMCode mmCreation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creation";
@@ -197,7 +198,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
@@ -220,7 +221,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
@@ -243,7 +244,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Swing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swing = new MMCode() {
+	public static final MMCode mmSwing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swing";
@@ -266,7 +267,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -289,7 +290,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Mid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mid = new MMCode() {
+	public static final MMCode mmMid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mid";
@@ -312,7 +313,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Reinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reinvestment = new MMCode() {
+	public static final MMCode mmReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
@@ -335,7 +336,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Switch"</li>
 	 * </ul>
 	 */
-	public static final MMCode Switch = new MMCode() {
+	public static final MMCode mmSwitch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
@@ -358,7 +359,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Market"</li>
 	 * </ul>
 	 */
-	public static final MMCode Market = new MMCode() {
+	public static final MMCode mmMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
@@ -381,7 +382,7 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	 * name} = "Indicative"</li>
 	 * </ul>
 	 */
-	public static final MMCode Indicative = new MMCode() {
+	public static final MMCode mmIndicative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
@@ -392,16 +393,16 @@ public class TypeOfPrice5Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice5Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice5Code.Bid, com.tools20022.repository.codeset.TypeOfPrice5Code.Offer, com.tools20022.repository.codeset.TypeOfPrice5Code.NetAssetValue,
-						com.tools20022.repository.codeset.TypeOfPrice5Code.Creation, com.tools20022.repository.codeset.TypeOfPrice5Code.Cancellation, com.tools20022.repository.codeset.TypeOfPrice5Code.Interim,
-						com.tools20022.repository.codeset.TypeOfPrice5Code.Swing, com.tools20022.repository.codeset.TypeOfPrice5Code.Other, com.tools20022.repository.codeset.TypeOfPrice5Code.Mid,
-						com.tools20022.repository.codeset.TypeOfPrice5Code.Reinvestment, com.tools20022.repository.codeset.TypeOfPrice5Code.Switch, com.tools20022.repository.codeset.TypeOfPrice5Code.Market,
-						com.tools20022.repository.codeset.TypeOfPrice5Code.Indicative);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice5Code.mmBid, com.tools20022.repository.codeset.TypeOfPrice5Code.mmOffer, com.tools20022.repository.codeset.TypeOfPrice5Code.mmNetAssetValue,
+						com.tools20022.repository.codeset.TypeOfPrice5Code.mmCreation, com.tools20022.repository.codeset.TypeOfPrice5Code.mmCancellation, com.tools20022.repository.codeset.TypeOfPrice5Code.mmInterim,
+						com.tools20022.repository.codeset.TypeOfPrice5Code.mmSwing, com.tools20022.repository.codeset.TypeOfPrice5Code.mmOther, com.tools20022.repository.codeset.TypeOfPrice5Code.mmMid,
+						com.tools20022.repository.codeset.TypeOfPrice5Code.mmReinvestment, com.tools20022.repository.codeset.TypeOfPrice5Code.mmSwitch, com.tools20022.repository.codeset.TypeOfPrice5Code.mmMarket,
+						com.tools20022.repository.codeset.TypeOfPrice5Code.mmIndicative);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

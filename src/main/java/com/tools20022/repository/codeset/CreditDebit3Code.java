@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmountDirectionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CreditDebit3Code#Credit
- * CreditDebit3Code.Credit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CreditDebit3Code#Debit
- * CreditDebit3Code.Debit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CreditDebit3Code#mmCredit
+ * CreditDebit3Code.mmCredit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CreditDebit3Code#mmDebit
+ * CreditDebit3Code.mmDebit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class CreditDebit3Code extends AmountDirectionCode {
 	 * name} = "Credit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Credit = new MMCode() {
+	public static final MMCode mmCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
@@ -102,7 +102,7 @@ public class CreditDebit3Code extends AmountDirectionCode {
 	 * name} = "Debit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Debit = new MMCode() {
+	public static final MMCode mmDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debit";
@@ -113,12 +113,12 @@ public class CreditDebit3Code extends AmountDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRDT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditDebit3Code";
 				definition = "Specifies if an operation is an increase or a decrease.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CreditDebit3Code.Credit, com.tools20022.repository.codeset.CreditDebit3Code.Debit);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CreditDebit3Code.mmCredit, com.tools20022.repository.codeset.CreditDebit3Code.mmDebit);
 				trace_lazy = () -> AmountDirectionCode.mmObject();
 			}
 		});

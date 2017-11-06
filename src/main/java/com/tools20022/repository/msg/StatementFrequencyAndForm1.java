@@ -38,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndForm1#Frequency
- * StatementFrequencyAndForm1.Frequency}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndForm1#mmFrequency
+ * StatementFrequencyAndForm1.mmFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndForm1#CommunicationMethod
- * StatementFrequencyAndForm1.CommunicationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndForm1#mmCommunicationMethod
+ * StatementFrequencyAndForm1.mmCommunicationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndForm1#DeliveryAddress
- * StatementFrequencyAndForm1.DeliveryAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndForm1#mmDeliveryAddress
+ * StatementFrequencyAndForm1.mmDeliveryAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndForm1#Format
- * StatementFrequencyAndForm1.Format}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndForm1#mmFormat
+ * StatementFrequencyAndForm1.mmFormat}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementFrequencyAndForm1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Frequency7Code frequency;
 	/**
 	 * Specifies the frequency for sending statements.
 	 * <p>
@@ -86,8 +87,8 @@ public class StatementFrequencyAndForm1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReportingService#StatementFrequency
-	 * ReportingService.StatementFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReportingService#mmStatementFrequency
+	 * ReportingService.mmStatementFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class StatementFrequencyAndForm1 {
 	 * definition} = "Specifies the frequency for sending statements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> StatementFrequencyAndForm1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.StatementFrequency;
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Specifies the frequency for sending statements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Frequency7Code.mmObject();
 		}
 	};
+	protected CommunicationMethod2Choice communicationMethod;
 	/**
 	 * Specifies the communication method for statements.
 	 * <p>
@@ -133,8 +135,8 @@ public class StatementFrequencyAndForm1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReportingService#ReportingChannel
-	 * ReportingService.ReportingChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReportingService#mmReportingChannel
+	 * ReportingService.mmReportingChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,20 +155,21 @@ public class StatementFrequencyAndForm1 {
 	 * definition} = "Specifies the communication method for statements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommunicationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommunicationMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmReportingChannel;
 			componentContext_lazy = () -> StatementFrequencyAndForm1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.ReportingChannel;
 			isDerived = false;
 			xmlTag = "ComMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationMethod";
 			definition = "Specifies the communication method for statements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CommunicationMethod2Choice.mmObject();
 		}
 	};
+	protected Max350Text deliveryAddress;
 	/**
 	 * Specifies the delivery address for statements.
 	 * <p>
@@ -199,20 +202,21 @@ public class StatementFrequencyAndForm1 {
 	 * definition} = "Specifies the delivery address for statements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveryAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveryAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementFrequencyAndForm1.mmObject();
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
+			componentContext_lazy = () -> StatementFrequencyAndForm1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAddress";
 			definition = "Specifies the delivery address for statements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected CommunicationFormat1Choice format;
 	/**
 	 * Specifies the format for statements.
 	 * <p>
@@ -241,7 +245,7 @@ public class StatementFrequencyAndForm1 {
 	 * definition} = "Specifies the format for statements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Format = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementFrequencyAndForm1.mmObject();
 			isDerived = false;
@@ -249,8 +253,8 @@ public class StatementFrequencyAndForm1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Specifies the format for statements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CommunicationFormat1Choice.mmObject();
 		}
 	};
@@ -258,15 +262,47 @@ public class StatementFrequencyAndForm1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementFrequencyAndForm1.Frequency, com.tools20022.repository.msg.StatementFrequencyAndForm1.CommunicationMethod,
-						com.tools20022.repository.msg.StatementFrequencyAndForm1.DeliveryAddress, com.tools20022.repository.msg.StatementFrequencyAndForm1.Format);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementFrequencyAndForm1.mmFrequency, com.tools20022.repository.msg.StatementFrequencyAndForm1.mmCommunicationMethod,
+						com.tools20022.repository.msg.StatementFrequencyAndForm1.mmDeliveryAddress, com.tools20022.repository.msg.StatementFrequencyAndForm1.mmFormat);
 				trace_lazy = () -> ReportingService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementFrequencyAndForm1";
 				definition = "Specifies a frequency, format and delivery address for statements.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Frequency7Code getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency7Code frequency) {
+		this.frequency = frequency;
+	}
+
+	public CommunicationMethod2Choice getCommunicationMethod() {
+		return communicationMethod;
+	}
+
+	public void setCommunicationMethod(CommunicationMethod2Choice communicationMethod) {
+		this.communicationMethod = communicationMethod;
+	}
+
+	public Max350Text getDeliveryAddress() {
+		return deliveryAddress;
+	}
+
+	public void setDeliveryAddress(Max350Text deliveryAddress) {
+		this.deliveryAddress = deliveryAddress;
+	}
+
+	public CommunicationFormat1Choice getFormat() {
+		return format;
+	}
+
+	public void setFormat(CommunicationFormat1Choice format) {
+		this.format = format;
 	}
 }

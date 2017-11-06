@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.References20;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -71,27 +72,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#MessageIdentification
- * TransferOutCancellationRequestV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#mmMessageIdentification
+ * TransferOutCancellationRequestV07.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#References
- * TransferOutCancellationRequestV07.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#mmReferences
+ * TransferOutCancellationRequestV07.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#Cancellation
- * TransferOutCancellationRequestV07.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#mmCancellation
+ * TransferOutCancellationRequestV07.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#MarketPracticeVersion
- * TransferOutCancellationRequestV07.MarketPracticeVersion}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#mmMarketPracticeVersion
+ * TransferOutCancellationRequestV07.mmMarketPracticeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#CopyDetails
- * TransferOutCancellationRequestV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#mmCopyDetails
+ * TransferOutCancellationRequestV07.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#identifier
- * TransferOutCancellationRequestV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.002.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOutCancellationRequestV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -138,22 +138,23 @@ public class TransferOutCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#MessageIdentification
-	 * TransferOutCancellationRequestV06.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#mmMessageIdentification
+	 * TransferOutCancellationRequestV06.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.MessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<References20> references;
 	/**
 	 * Reference to the transaction identifier issued by the counterparty.
 	 * Building block may also be used to reference a previous transaction, or
@@ -181,21 +182,22 @@ public class TransferOutCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#References
-	 * TransferOutCancellationRequestV06.References}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#mmReferences
+	 * TransferOutCancellationRequestV06.mmReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock References = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.References;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.mmReferences;
 			minOccurs = 0;
 			complexType_lazy = () -> References20.mmObject();
 		}
 	};
+	protected List<Cancellation12Choice> cancellation;
 	/**
 	 * Choice between cancellation by reference or by transfer details.
 	 * <p>
@@ -221,21 +223,22 @@ public class TransferOutCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#Cancellation
-	 * TransferOutCancellationRequestV06.Cancellation}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#mmCancellation
+	 * TransferOutCancellationRequestV06.mmCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Cancellation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Cxl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Choice between cancellation by reference or by transfer details.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.Cancellation;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.mmCancellation;
 			minOccurs = 1;
 			complexType_lazy = () -> Cancellation12Choice.mmObject();
 		}
 	};
+	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
 	 * Identifies the market practice to which the message conforms.
 	 * <p>
@@ -261,22 +264,23 @@ public class TransferOutCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#MarketPracticeVersion
-	 * TransferOutCancellationRequestV06.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#mmMarketPracticeVersion
+	 * TransferOutCancellationRequestV06.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.MarketPracticeVersion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.mmMarketPracticeVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 	};
+	protected CopyInformation4 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -302,47 +306,20 @@ public class TransferOutCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#CopyDetails
-	 * TransferOutCancellationRequestV06.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#mmCopyDetails
+	 * TransferOutCancellationRequestV06.mmCopyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.CopyDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.mmCopyDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation4.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "002";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -357,12 +334,59 @@ public class TransferOutCancellationRequestV07 {
 				rootElement = "Document";
 				xmlTag = "TrfOutCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.MessageIdentification, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.References,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.Cancellation, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.MarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.CopyDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmReferences, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmCancellation,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmCopyDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "002";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public List<References20> getReferences() {
+		return references;
+	}
+
+	public void setReferences(List<References20> references) {
+		this.references = references;
+	}
+
+	public List<Cancellation12Choice> getCancellation() {
+		return cancellation;
+	}
+
+	public void setCancellation(List<Cancellation12Choice> cancellation) {
+		this.cancellation = cancellation;
+	}
+
+	public MarketPracticeVersion1 getMarketPracticeVersion() {
+		return marketPracticeVersion;
+	}
+
+	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+		this.marketPracticeVersion = marketPracticeVersion;
+	}
+
+	public CopyInformation4 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation4 copyDetails) {
+		this.copyDetails = copyDetails;
 	}
 }

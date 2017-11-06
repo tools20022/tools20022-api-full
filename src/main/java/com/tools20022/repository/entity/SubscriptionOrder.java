@@ -32,89 +32,89 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder2#IndividualOrderDetails
- * SubscriptionBulkOrder2.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction1#BulkOrderDetails
- * SubscriptionBulkOrderInstruction1.BulkOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5#StaffClientBreakdown
- * SubscriptionOrder5.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#IndividualOrderDetails
- * SubscriptionBulkOrder3.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2#BulkOrderDetails
- * SubscriptionBulkOrderInstruction2.BulkOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5#StaffClientBreakdown
- * SubscriptionExecution5.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7#StaffClientBreakdown
- * SubscriptionOrder7.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#IndividualOrderDetails
- * SubscriptionBulkOrder4.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2#IndividualOrderDetails
- * SubscriptionMultipleOrder2.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#MultipleOrderDetails
- * SubscriptionMultipleOrderInstruction1.MultipleOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6#StaffClientBreakdown
- * SubscriptionOrder6.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#IndividualOrderDetails
- * SubscriptionMultipleOrder3.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2#MultipleOrderDetails
- * SubscriptionMultipleOrderInstruction2.MultipleOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#StaffClientBreakdown
- * SubscriptionExecution6.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionOrder8#StaffClientBreakdown
- * SubscriptionOrder8.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#IndividualOrderDetails
- * SubscriptionMultipleOrder4.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice#SubscriptionDetails
- * SubscriptionOrRedemptionOrSwitchOrderDataChoice.SubscriptionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder5#IndividualOrderDetails
- * SubscriptionMultipleOrder5.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#IndividualOrderDetails
- * SubscriptionBulkOrder5.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6#IndividualOrderDetails
- * SubscriptionMultipleOrder6.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#StaffClientBreakdown
- * SubscriptionExecution13.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#StaffClientBreakdown
- * SubscriptionExecution12.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#StaffClientBreakdown
- * SubscriptionOrder15.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#StaffClientBreakdown
- * SubscriptionOrder14.StaffClientBreakdown}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.SwitchSubscriptionLeg
  * SwitchSubscriptionLeg}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder2#mmIndividualOrderDetails
+ * SubscriptionBulkOrder2.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction1#mmBulkOrderDetails
+ * SubscriptionBulkOrderInstruction1.mmBulkOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5#mmStaffClientBreakdown
+ * SubscriptionOrder5.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#mmIndividualOrderDetails
+ * SubscriptionBulkOrder3.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2#mmBulkOrderDetails
+ * SubscriptionBulkOrderInstruction2.mmBulkOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5#mmStaffClientBreakdown
+ * SubscriptionExecution5.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7#mmStaffClientBreakdown
+ * SubscriptionOrder7.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#mmIndividualOrderDetails
+ * SubscriptionBulkOrder4.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2#mmIndividualOrderDetails
+ * SubscriptionMultipleOrder2.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#mmMultipleOrderDetails
+ * SubscriptionMultipleOrderInstruction1.mmMultipleOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6#mmStaffClientBreakdown
+ * SubscriptionOrder6.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#mmIndividualOrderDetails
+ * SubscriptionMultipleOrder3.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2#mmMultipleOrderDetails
+ * SubscriptionMultipleOrderInstruction2.mmMultipleOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmStaffClientBreakdown
+ * SubscriptionExecution6.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionOrder8#mmStaffClientBreakdown
+ * SubscriptionOrder8.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#mmIndividualOrderDetails
+ * SubscriptionMultipleOrder4.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice#mmSubscriptionDetails
+ * SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSubscriptionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder5#mmIndividualOrderDetails
+ * SubscriptionMultipleOrder5.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#mmIndividualOrderDetails
+ * SubscriptionBulkOrder5.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6#mmIndividualOrderDetails
+ * SubscriptionMultipleOrder6.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmStaffClientBreakdown
+ * SubscriptionExecution13.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#mmStaffClientBreakdown
+ * SubscriptionExecution12.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#mmStaffClientBreakdown
+ * SubscriptionOrder15.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#mmStaffClientBreakdown
+ * SubscriptionOrder14.mmStaffClientBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -182,8 +182,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -202,22 +202,22 @@ public class SubscriptionOrder extends InvestmentFundOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionOrder";
 				definition = "Order to invest the investor's principal in an investment fund.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionBulkOrder2.IndividualOrderDetails, com.tools20022.repository.msg.SubscriptionBulkOrderInstruction1.BulkOrderDetails,
-						com.tools20022.repository.msg.SubscriptionOrder5.StaffClientBreakdown, com.tools20022.repository.msg.SubscriptionBulkOrder3.IndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.BulkOrderDetails, com.tools20022.repository.msg.SubscriptionExecution5.StaffClientBreakdown,
-						com.tools20022.repository.msg.SubscriptionOrder7.StaffClientBreakdown, com.tools20022.repository.msg.SubscriptionBulkOrder4.IndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder2.IndividualOrderDetails, com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.MultipleOrderDetails,
-						com.tools20022.repository.msg.SubscriptionOrder6.StaffClientBreakdown, com.tools20022.repository.msg.SubscriptionMultipleOrder3.IndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.MultipleOrderDetails, com.tools20022.repository.msg.SubscriptionExecution6.StaffClientBreakdown,
-						com.tools20022.repository.msg.SubscriptionOrder8.StaffClientBreakdown, com.tools20022.repository.msg.SubscriptionMultipleOrder4.IndividualOrderDetails,
-						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.SubscriptionDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder5.IndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrder5.IndividualOrderDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder6.IndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionExecution13.StaffClientBreakdown, com.tools20022.repository.msg.SubscriptionExecution12.StaffClientBreakdown,
-						com.tools20022.repository.msg.SubscriptionOrder15.StaffClientBreakdown, com.tools20022.repository.msg.SubscriptionOrder14.StaffClientBreakdown);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionBulkOrder2.mmIndividualOrderDetails, com.tools20022.repository.msg.SubscriptionBulkOrderInstruction1.mmBulkOrderDetails,
+						com.tools20022.repository.msg.SubscriptionOrder5.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.mmBulkOrderDetails, com.tools20022.repository.msg.SubscriptionExecution5.mmStaffClientBreakdown,
+						com.tools20022.repository.msg.SubscriptionOrder7.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionBulkOrder4.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmIndividualOrderDetails, com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.mmMultipleOrderDetails,
+						com.tools20022.repository.msg.SubscriptionOrder6.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmMultipleOrderDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmStaffClientBreakdown,
+						com.tools20022.repository.msg.SubscriptionOrder8.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmIndividualOrderDetails,
+						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSubscriptionDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder5.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.SubscriptionBulkOrder5.mmIndividualOrderDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.SubscriptionExecution13.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionExecution12.mmStaffClientBreakdown,
+						com.tools20022.repository.msg.SubscriptionOrder15.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionOrder14.mmStaffClientBreakdown);
 				subType_lazy = () -> Arrays.asList(SwitchSubscriptionLeg.mmObject());
 				superType_lazy = () -> InvestmentFundOrder.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(SubscriptionOrder3.mmObject(), SubscriptionBulkOrder2.mmObject(), SubscriptionBulkOrderInstruction1.mmObject(), SubscriptionOrder5.mmObject(),

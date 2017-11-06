@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.msg.DisabledStatusReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of formats for a disabled status reason.
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DisabledStatusReason1Choice#NoSpecifiedReason
- * DisabledStatusReason1Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.DisabledStatusReason1Choice#mmNoSpecifiedReason
+ * DisabledStatusReason1Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DisabledStatusReason1Choice#Reason
- * DisabledStatusReason1Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.DisabledStatusReason1Choice#mmReason
+ * DisabledStatusReason1Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DisabledStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * There is no reason available or to report for the disabled account
 	 * status.
@@ -103,18 +105,18 @@ public class DisabledStatusReason1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingStatusReason1Choice#NoSpecifiedReason
-	 * PendingStatusReason1Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingStatusReason1Choice#mmNoSpecifiedReason
+	 * PendingStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#NoSpecifiedReason
-	 * EnabledStatusReason1Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#mmNoSpecifiedReason
+	 * EnabledStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisabledStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -122,13 +124,14 @@ public class DisabledStatusReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "There is no reason available or to report for the disabled account status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.NoSpecifiedReason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatusReason1Choice.NoSpecifiedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatusReason1Choice.mmNoSpecifiedReason);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<DisabledStatusReason1> reason;
 	/**
 	 * Reason for the disabled account status.
 	 * <p>
@@ -157,18 +160,18 @@ public class DisabledStatusReason1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingStatusReason1Choice#Reason
-	 * PendingStatusReason1Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingStatusReason1Choice#mmReason
+	 * PendingStatusReason1Choice.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#Reason
-	 * EnabledStatusReason1Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#mmReason
+	 * EnabledStatusReason1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DisabledStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -176,26 +179,42 @@ public class DisabledStatusReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the disabled account status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.Reason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatusReason1Choice.Reason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatusReason1Choice.mmReason);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.mmReason;
 			minOccurs = 1;
-			type_lazy = () -> DisabledStatusReason1.mmObject();
 			isComposite = true;
+			type_lazy = () -> DisabledStatusReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisabledStatusReason1Choice.NoSpecifiedReason, com.tools20022.repository.choice.DisabledStatusReason1Choice.Reason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisabledStatusReason1Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.DisabledStatusReason1Choice.mmReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DisabledStatusReason1Choice";
 				definition = "Choice of formats for a disabled status reason.";
-				previousVersion_lazy = () -> EnabledStatusReason1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PendingStatusReason1Choice.mmObject());
+				previousVersion_lazy = () -> EnabledStatusReason1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<DisabledStatusReason1> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<DisabledStatusReason1> reason) {
+		this.reason = reason;
 	}
 }

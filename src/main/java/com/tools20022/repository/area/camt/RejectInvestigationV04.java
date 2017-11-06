@@ -31,6 +31,7 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -89,24 +90,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#Assignment
- * RejectInvestigationV04.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#mmAssignment
+ * RejectInvestigationV04.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#Case
- * RejectInvestigationV04.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#mmCase
+ * RejectInvestigationV04.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#Justification
- * RejectInvestigationV04.Justification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#mmJustification
+ * RejectInvestigationV04.mmJustification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#SupplementaryData
- * RejectInvestigationV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#mmSupplementaryData
+ * RejectInvestigationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#identifier
- * RejectInvestigationV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.031.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,6 +125,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectInvestigationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment3 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -152,17 +152,18 @@ public class RejectInvestigationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 	};
+	protected Case3 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -184,17 +185,18 @@ public class RejectInvestigationV04 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected InvestigationRejectionJustification1 justification;
 	/**
 	 * Specifies the reason for the rejection of an investigation.
 	 * <p>
@@ -219,17 +221,18 @@ public class RejectInvestigationV04 {
 	 * "Specifies the reason for the rejection of an investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Justification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Justification";
 			definition = "Specifies the reason for the rejection of an investigation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestigationRejectionJustification1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -256,7 +259,7 @@ public class RejectInvestigationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,33 +267,6 @@ public class RejectInvestigationV04 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "031"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "031";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -306,11 +282,50 @@ public class RejectInvestigationV04 {
 				rootElement = "Document";
 				xmlTag = "RjctInvstgtn";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectInvestigationV04.Assignment, com.tools20022.repository.area.camt.RejectInvestigationV04.Case,
-						com.tools20022.repository.area.camt.RejectInvestigationV04.Justification, com.tools20022.repository.area.camt.RejectInvestigationV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.RejectInvestigationV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectInvestigationV04.mmAssignment, com.tools20022.repository.area.camt.RejectInvestigationV04.mmCase,
+						com.tools20022.repository.area.camt.RejectInvestigationV04.mmJustification, com.tools20022.repository.area.camt.RejectInvestigationV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "031";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment3 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment3 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case3 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case3 case_) {
+		this.case_ = case_;
+	}
+
+	public InvestigationRejectionJustification1 getJustification() {
+		return justification;
+	}
+
+	public void setJustification(InvestigationRejectionJustification1 justification) {
+		this.justification = justification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

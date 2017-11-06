@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#CDC
- * IdentificationType2Code.CDC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#mmCDC
+ * IdentificationType2Code.mmCDC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#CFETS
- * IdentificationType2Code.CFETS}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#mmCFETS
+ * IdentificationType2Code.mmCFETS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#RICCode
- * IdentificationType2Code.RICCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#mmRICCode
+ * IdentificationType2Code.mmRICCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#UserDefined
- * IdentificationType2Code.UserDefined}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#mmUserDefined
+ * IdentificationType2Code.mmUserDefined}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 * name} = "CDC"</li>
 	 * </ul>
 	 */
-	public static final MMCode CDC = new MMCode() {
+	public static final MMCode mmCDC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CDC";
@@ -104,7 +104,7 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 * name} = "CFETS"</li>
 	 * </ul>
 	 */
-	public static final MMCode CFETS = new MMCode() {
+	public static final MMCode mmCFETS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETS";
@@ -127,7 +127,7 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 * name} = "RICCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode RICCode = new MMCode() {
+	public static final MMCode mmRICCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RICCode";
@@ -150,7 +150,7 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 * name} = "UserDefined"</li>
 	 * </ul>
 	 */
-	public static final MMCode UserDefined = new MMCode() {
+	public static final MMCode mmUserDefined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
@@ -161,12 +161,12 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationType2Code";
 				definition = "Indicates the source of the leg identification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationType2Code.CDC, com.tools20022.repository.codeset.IdentificationType2Code.CFETS,
-						com.tools20022.repository.codeset.IdentificationType2Code.RICCode, com.tools20022.repository.codeset.IdentificationType2Code.UserDefined);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationType2Code.mmCDC, com.tools20022.repository.codeset.IdentificationType2Code.mmCFETS,
+						com.tools20022.repository.codeset.IdentificationType2Code.mmRICCode, com.tools20022.repository.codeset.IdentificationType2Code.mmUserDefined);
 				trace_lazy = () -> IdentificationTypeCode.mmObject();
 			}
 		});

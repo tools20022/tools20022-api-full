@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Account;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Statement information of an account.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMAccountStatement1#AccountIdentifier
- * ATMAccountStatement1.AccountIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMAccountStatement1#mmAccountIdentifier
+ * ATMAccountStatement1.mmAccountIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMAccountStatement1#AccountName
- * ATMAccountStatement1.AccountName}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMAccountStatement1#mmAccountName
+ * ATMAccountStatement1.mmAccountName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMAccountStatement1#AccountStatement
- * ATMAccountStatement1.AccountStatement}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMAccountStatement1#mmAccountStatement
+ * ATMAccountStatement1.mmAccountStatement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMAccountStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification31Choice accountIdentifier;
 	/**
 	 * Unique identifier of the account, as assigned by the account servicer.
 	 * <p>
@@ -85,8 +87,8 @@ public class ATMAccountStatement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,21 +108,22 @@ public class ATMAccountStatement1 {
 	 * "Unique identifier of the account, as assigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentifier = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentifier";
 			definition = "Unique identifier of the account, as assigned by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification31Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification31Choice.mmObject();
 		}
 	};
+	protected Max70Text accountName;
 	/**
 	 * Name of the account, as assigned by the account servicing institution, in
 	 * agreement with the account owner in order to provide an additional means
@@ -139,8 +142,8 @@ public class ATMAccountStatement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,20 +164,21 @@ public class ATMAccountStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "AcctNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountName";
 			definition = "Name of the account, as assigned by the account servicing institution, in agreement with the account owner in order to provide an additional means of identification of the account.\r\nUsage: The account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMAccountStatement2> accountStatement;
 	/**
 	 * Statement information.
 	 * <p>
@@ -186,8 +190,8 @@ public class ATMAccountStatement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Entry Account.Entry}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmEntry
+	 * Account.mmEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,34 +210,58 @@ public class ATMAccountStatement1 {
 	 * definition} = "Statement information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountStatement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountStatement = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmEntry;
 			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Entry;
 			isDerived = false;
 			xmlTag = "AcctStmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatement";
 			definition = "Statement information.";
 			minOccurs = 0;
-			type_lazy = () -> ATMAccountStatement2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMAccountStatement1.AccountIdentifier, com.tools20022.repository.msg.ATMAccountStatement1.AccountName,
-						com.tools20022.repository.msg.ATMAccountStatement1.AccountStatement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMAccountStatement1.mmAccountIdentifier, com.tools20022.repository.msg.ATMAccountStatement1.mmAccountName,
+						com.tools20022.repository.msg.ATMAccountStatement1.mmAccountStatement);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMAccountStatement1";
 				definition = "Statement information of an account.";
-				nextVersions_lazy = () -> Arrays.asList(ATMAccountStatement2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMAccountStatement2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification31Choice getAccountIdentifier() {
+		return accountIdentifier;
+	}
+
+	public void setAccountIdentifier(AccountIdentification31Choice accountIdentifier) {
+		this.accountIdentifier = accountIdentifier;
+	}
+
+	public Max70Text getAccountName() {
+		return accountName;
+	}
+
+	public void setAccountName(Max70Text accountName) {
+		this.accountName = accountName;
+	}
+
+	public List<ATMAccountStatement2> getAccountStatement() {
+		return accountStatement;
+	}
+
+	public void setAccountStatement(List<com.tools20022.repository.msg.ATMAccountStatement2> accountStatement) {
+		this.accountStatement = accountStatement;
 	}
 }

@@ -30,260 +30,262 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ClearstreamBankLuxemburg
- * IssuerCode.ClearstreamBankLuxemburg}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#CajaDeValores
- * IssuerCode.CajaDeValores}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#AustraclearLtd
- * IssuerCode.AustraclearLtd}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmClearstreamBankLuxemburg
+ * IssuerCode.mmClearstreamBankLuxemburg}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmCajaDeValores
+ * IssuerCode.mmCajaDeValores}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#AustralianBankStateBranch
- * IssuerCode.AustralianBankStateBranch}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmAustraclearLtd
+ * IssuerCode.mmAustraclearLtd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ClearingHouseElectronicSettlementSystems
- * IssuerCode.ClearingHouseElectronicSettlementSystems}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmAustralianBankStateBranch
+ * IssuerCode.mmAustralianBankStateBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#AustrianBankLeitzahl
- * IssuerCode.AustrianBankLeitzahl}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmClearingHouseElectronicSettlementSystems
+ * IssuerCode.mmClearingHouseElectronicSettlementSystems}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#OesterreichischeKontrollbank
- * IssuerCode.OesterreichischeKontrollbank}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmAustrianBankLeitzahl
+ * IssuerCode.mmAustrianBankLeitzahl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#CaisseInterprofessionelleDepotsVirementsTitres
- * IssuerCode.CaisseInterprofessionelleDepotsVirementsTitres}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#Euroclear
- * IssuerCode.Euroclear}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmOesterreichischeKontrollbank
+ * IssuerCode.mmOesterreichischeKontrollbank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#BanqueNationaleDeBelgique
- * IssuerCode.BanqueNationaleDeBelgique}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmCaisseInterprofessionelleDepotsVirementsTitres
+ * IssuerCode.mmCaisseInterprofessionelleDepotsVirementsTitres}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmEuroclear
+ * IssuerCode.mmEuroclear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#CamaraLiquidacaoCustodia
- * IssuerCode.CamaraLiquidacaoCustodia}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmBanqueNationaleDeBelgique
+ * IssuerCode.mmBanqueNationaleDeBelgique}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#CanadianDepositorySecuritiesLtd
- * IssuerCode.CanadianDepositorySecuritiesLtd}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmCamaraLiquidacaoCustodia
+ * IssuerCode.mmCamaraLiquidacaoCustodia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#CanadianPaymentsAssociation
- * IssuerCode.CanadianPaymentsAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmCanadianDepositorySecuritiesLtd
+ * IssuerCode.mmCanadianDepositorySecuritiesLtd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#CentralSecuritiesDepositoryDepositoCentralValores
- * IssuerCode.CentralSecuritiesDepositoryDepositoCentralValores}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmCanadianPaymentsAssociation
+ * IssuerCode.mmCanadianPaymentsAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ShanghaiSecuritiesCentralClearingRegistrationCompany
- * IssuerCode.ShanghaiSecuritiesCentralClearingRegistrationCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmCentralSecuritiesDepositoryDepositoCentralValores
+ * IssuerCode.mmCentralSecuritiesDepositoryDepositoCentralValores}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ShenzhenSecuritiesClearingCompany
- * IssuerCode.ShenzhenSecuritiesClearingCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmShanghaiSecuritiesCentralClearingRegistrationCompany
+ * IssuerCode.mmShanghaiSecuritiesCentralClearingRegistrationCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ColombiaCentralDepositorySystem
- * IssuerCode.ColombiaCentralDepositorySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmShenzhenSecuritiesClearingCompany
+ * IssuerCode.mmShenzhenSecuritiesClearingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#DenmarkVaerdipapircentralen
- * IssuerCode.DenmarkVaerdipapircentralen}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmColombiaCentralDepositorySystem
+ * IssuerCode.mmColombiaCentralDepositorySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#FinnishCentralSecuritiesDepositoryLtd
- * IssuerCode.FinnishCentralSecuritiesDepositoryLtd}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#FranceRIB
- * IssuerCode.FranceRIB}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#SICOVAM
- * IssuerCode.SICOVAM}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmDenmarkVaerdipapircentralen
+ * IssuerCode.mmDenmarkVaerdipapircentralen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#PragueStockExchange
- * IssuerCode.PragueStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmFinnishCentralSecuritiesDepositoryLtd
+ * IssuerCode.mmFinnishCentralSecuritiesDepositoryLtd}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmFranceRIB
+ * IssuerCode.mmFranceRIB}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmSICOVAM
+ * IssuerCode.mmSICOVAM}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#BundesausichtsamtWertpapierhandel
- * IssuerCode.BundesausichtsamtWertpapierhandel}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmPragueStockExchange
+ * IssuerCode.mmPragueStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#DeutscheBoerseAGDeutscheTerminborse
- * IssuerCode.DeutscheBoerseAGDeutscheTerminborse}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmBundesausichtsamtWertpapierhandel
+ * IssuerCode.mmBundesausichtsamtWertpapierhandel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#DeutscheBoerseAGFrankfurterWertpapierborse
- * IssuerCode.DeutscheBoerseAGFrankfurterWertpapierborse}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmDeutscheBoerseAGDeutscheTerminborse
+ * IssuerCode.mmDeutscheBoerseAGDeutscheTerminborse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#DeutscheBoerseAGXETRA
- * IssuerCode.DeutscheBoerseAGXETRA}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmDeutscheBoerseAGFrankfurterWertpapierborse
+ * IssuerCode.mmDeutscheBoerseAGFrankfurterWertpapierborse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#DeutscheBorseClearingAG
- * IssuerCode.DeutscheBorseClearingAG}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmDeutscheBoerseAGXETRA
+ * IssuerCode.mmDeutscheBoerseAGXETRA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#DeutscheBundesbank
- * IssuerCode.DeutscheBundesbank}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmDeutscheBorseClearingAG
+ * IssuerCode.mmDeutscheBorseClearingAG}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#GermanBankleitzahl
- * IssuerCode.GermanBankleitzahl}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmDeutscheBundesbank
+ * IssuerCode.mmDeutscheBundesbank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ZentralerKreditausschuss
- * IssuerCode.ZentralerKreditausschuss}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmGermanBankleitzahl
+ * IssuerCode.mmGermanBankleitzahl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#HongKongCentralClearingSecuritiesSettlementSystem
- * IssuerCode.HongKongCentralClearingSecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmZentralerKreditausschuss
+ * IssuerCode.mmZentralerKreditausschuss}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#HongKongNationalClearing
- * IssuerCode.HongKongNationalClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmHongKongCentralClearingSecuritiesSettlementSystem
+ * IssuerCode.mmHongKongCentralClearingSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#IndianNationalSecuritiesDepository
- * IssuerCode.IndianNationalSecuritiesDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmHongKongNationalClearing
+ * IssuerCode.mmHongKongNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#IndonesianSecuritiesCentralDepository
- * IssuerCode.IndonesianSecuritiesCentralDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmIndianNationalSecuritiesDepository
+ * IssuerCode.mmIndianNationalSecuritiesDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#IrishNationalClearing
- * IssuerCode.IrishNationalClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmIndonesianSecuritiesCentralDepository
+ * IssuerCode.mmIndonesianSecuritiesCentralDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#TelAvivStockExchange
- * IssuerCode.TelAvivStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmIrishNationalClearing
+ * IssuerCode.mmIrishNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ItalianDomesticIdentification
- * IssuerCode.ItalianDomesticIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#MonteTitoli
- * IssuerCode.MonteTitoli}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmTelAvivStockExchange
+ * IssuerCode.mmTelAvivStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#JapanSecuritiesClearingCorporation
- * IssuerCode.JapanSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmItalianDomesticIdentification
+ * IssuerCode.mmItalianDomesticIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmMonteTitoli
+ * IssuerCode.mmMonteTitoli}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#JapanSecuritiesDepositoryCenter
- * IssuerCode.JapanSecuritiesDepositoryCenter}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmJapanSecuritiesClearingCorporation
+ * IssuerCode.mmJapanSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#KoreanSecuritiesDepository
- * IssuerCode.KoreanSecuritiesDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmJapanSecuritiesDepositoryCenter
+ * IssuerCode.mmJapanSecuritiesDepositoryCenter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#MalaysianCentralDepository
- * IssuerCode.MalaysianCentralDepository}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#IndevalSA
- * IssuerCode.IndevalSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmKoreanSecuritiesDepository
+ * IssuerCode.mmKoreanSecuritiesDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#AmsterdamseEffectenbeurs
- * IssuerCode.AmsterdamseEffectenbeurs}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#NECIGEF
- * IssuerCode.NECIGEF}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmMalaysianCentralDepository
+ * IssuerCode.mmMalaysianCentralDepository}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmIndevalSA
+ * IssuerCode.mmIndevalSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#NewZealandNationalClearing
- * IssuerCode.NewZealandNationalClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmAmsterdamseEffectenbeurs
+ * IssuerCode.mmAmsterdamseEffectenbeurs}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmNECIGEF
+ * IssuerCode.mmNECIGEF}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#NewZealandStockExchange
- * IssuerCode.NewZealandStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmNewZealandNationalClearing
+ * IssuerCode.mmNewZealandNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#Verdipapirsentralen
- * IssuerCode.Verdipapirsentralen}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmNewZealandStockExchange
+ * IssuerCode.mmNewZealandStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#PhilippineCentralDepository
- * IssuerCode.PhilippineCentralDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmVerdipapirsentralen
+ * IssuerCode.mmVerdipapirsentralen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#PolandNationalDepositorySecurities
- * IssuerCode.PolandNationalDepositorySecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmPhilippineCentralDepository
+ * IssuerCode.mmPhilippineCentralDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#CentralValoresMobiliaros
- * IssuerCode.CentralValoresMobiliaros}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmPolandNationalDepositorySecurities
+ * IssuerCode.mmPolandNationalDepositorySecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#PortugueseNationalClearing
- * IssuerCode.PortugueseNationalClearing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#INTERBOLSA
- * IssuerCode.INTERBOLSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmCentralValoresMobiliaros
+ * IssuerCode.mmCentralValoresMobiliaros}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#RussianCentralBankIdentification
- * IssuerCode.RussianCentralBankIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmPortugueseNationalClearing
+ * IssuerCode.mmPortugueseNationalClearing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmINTERBOLSA
+ * IssuerCode.mmINTERBOLSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#SingaporeCentralDepositoryLtd
- * IssuerCode.SingaporeCentralDepositoryLtd}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmRussianCentralBankIdentification
+ * IssuerCode.mmRussianCentralBankIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#SingaporeInternationalMonetaryExchange
- * IssuerCode.SingaporeInternationalMonetaryExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmSingaporeCentralDepositoryLtd
+ * IssuerCode.mmSingaporeCentralDepositoryLtd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#BratislavaStockExchange
- * IssuerCode.BratislavaStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmSingaporeInternationalMonetaryExchange
+ * IssuerCode.mmSingaporeInternationalMonetaryExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#SouthAfricanNationalClearing
- * IssuerCode.SouthAfricanNationalClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmBratislavaStockExchange
+ * IssuerCode.mmBratislavaStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#StrateClearingSettlementLtd
- * IssuerCode.StrateClearingSettlementLtd}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#BancoEspana
- * IssuerCode.BancoEspana}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmSouthAfricanNationalClearing
+ * IssuerCode.mmSouthAfricanNationalClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ServicioCompensacionLiquidacionValores
- * IssuerCode.ServicioCompensacionLiquidacionValores}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmStrateClearingSettlementLtd
+ * IssuerCode.mmStrateClearingSettlementLtd}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmBancoEspana
+ * IssuerCode.mmBancoEspana}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#SpanishDomesticInterbanking
- * IssuerCode.SpanishDomesticInterbanking}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmServicioCompensacionLiquidacionValores
+ * IssuerCode.mmServicioCompensacionLiquidacionValores}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#Vardepapperscentralen
- * IssuerCode.Vardepapperscentralen}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmSpanishDomesticInterbanking
+ * IssuerCode.mmSpanishDomesticInterbanking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#SISSEGAIntersettle
- * IssuerCode.SISSEGAIntersettle}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmVardepapperscentralen
+ * IssuerCode.mmVardepapperscentralen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#SwissClearingCode
- * IssuerCode.SwissClearingCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmSISSEGAIntersettle
+ * IssuerCode.mmSISSEGAIntersettle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ThailandSecuritiesDepositoryCompany
- * IssuerCode.ThailandSecuritiesDepositoryCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmSwissClearingCode
+ * IssuerCode.mmSwissClearingCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#TaiwanSecuritiesCentralDepository
- * IssuerCode.TaiwanSecuritiesCentralDepository}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#Takasbank
- * IssuerCode.Takasbank}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#UKDomesticSort
- * IssuerCode.UKDomesticSort}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmThailandSecuritiesDepositoryCompany
+ * IssuerCode.mmThailandSecuritiesDepositoryCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#BankOfEnglandCMO
- * IssuerCode.BankOfEnglandCMO}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#CrestCo
- * IssuerCode.CrestCo}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmTaiwanSecuritiesCentralDepository
+ * IssuerCode.mmTaiwanSecuritiesCentralDepository}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmTakasbank
+ * IssuerCode.mmTakasbank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#FinancialServicesAuthority
- * IssuerCode.FinancialServicesAuthority}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmUKDomesticSort
+ * IssuerCode.mmUKDomesticSort}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#LondonClearingHouse
- * IssuerCode.LondonClearingHouse}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmBankOfEnglandCMO
+ * IssuerCode.mmBankOfEnglandCMO}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmCrestCo
+ * IssuerCode.mmCrestCo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#InternationalSecuritiesMarketAssociation
- * IssuerCode.InternationalSecuritiesMarketAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmFinancialServicesAuthority
+ * IssuerCode.mmFinancialServicesAuthority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#LondonStockExchange
- * IssuerCode.LondonStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmLondonClearingHouse
+ * IssuerCode.mmLondonClearingHouse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#AmericanStockExchange
- * IssuerCode.AmericanStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmInternationalSecuritiesMarketAssociation
+ * IssuerCode.mmInternationalSecuritiesMarketAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#DepositoryTrustCompany
- * IssuerCode.DepositoryTrustCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmLondonStockExchange
+ * IssuerCode.mmLondonStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#EmergingMarketsClearingCorporation
- * IssuerCode.EmergingMarketsClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmAmericanStockExchange
+ * IssuerCode.mmAmericanStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#FedwireRoutingNumber
- * IssuerCode.FedwireRoutingNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmDepositoryTrustCompany
+ * IssuerCode.mmDepositoryTrustCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#GovernmentSecuritiesClearingCorporation
- * IssuerCode.GovernmentSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmEmergingMarketsClearingCorporation
+ * IssuerCode.mmEmergingMarketsClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#InternationalSecuritiesClearingCorporation
- * IssuerCode.InternationalSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmFedwireRoutingNumber
+ * IssuerCode.mmFedwireRoutingNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#MortgageBackedSecuritiesClearingCorporation
- * IssuerCode.MortgageBackedSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmGovernmentSecuritiesClearingCorporation
+ * IssuerCode.mmGovernmentSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#NationalAssociationSecuritiesDealers
- * IssuerCode.NationalAssociationSecuritiesDealers}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#NASDAQ
- * IssuerCode.NASDAQ}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmInternationalSecuritiesClearingCorporation
+ * IssuerCode.mmInternationalSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#NationalSecuritiesClearingCorporation
- * IssuerCode.NationalSecuritiesClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmMortgageBackedSecuritiesClearingCorporation
+ * IssuerCode.mmMortgageBackedSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#NewYorkClearingHouse
- * IssuerCode.NewYorkClearingHouse}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmNationalAssociationSecuritiesDealers
+ * IssuerCode.mmNationalAssociationSecuritiesDealers}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmNASDAQ
+ * IssuerCode.mmNASDAQ}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#NewYorkStockExchange
- * IssuerCode.NewYorkStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmNationalSecuritiesClearingCorporation
+ * IssuerCode.mmNationalSecuritiesClearingCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#OptionsClearingCorporation
- * IssuerCode.OptionsClearingCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmNewYorkClearingHouse
+ * IssuerCode.mmNewYorkClearingHouse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerCode#ParticipantTrustCompany
- * IssuerCode.ParticipantTrustCompany}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#XClear
- * IssuerCode.XClear}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmNewYorkStockExchange
+ * IssuerCode.mmNewYorkStockExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmOptionsClearingCorporation
+ * IssuerCode.mmOptionsClearingCorporation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerCode#mmParticipantTrustCompany
+ * IssuerCode.mmParticipantTrustCompany}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IssuerCode#mmXClear
+ * IssuerCode.mmXClear}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -296,8 +298,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -340,7 +342,7 @@ public class IssuerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ClearstreamBankLuxemburg = new MMCode() {
+	public static final MMCode mmClearstreamBankLuxemburg = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearstreamBankLuxemburg";
@@ -369,7 +371,7 @@ public class IssuerCode {
 	 * definition} = "Caja de Valores S.A."</li>
 	 * </ul>
 	 */
-	public static final MMCode CajaDeValores = new MMCode() {
+	public static final MMCode mmCajaDeValores = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CajaDeValores";
@@ -398,7 +400,7 @@ public class IssuerCode {
 	 * definition} = "Austraclear Limited."</li>
 	 * </ul>
 	 */
-	public static final MMCode AustraclearLtd = new MMCode() {
+	public static final MMCode mmAustraclearLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustraclearLtd";
@@ -427,7 +429,7 @@ public class IssuerCode {
 	 * definition} = "Australian Bank State Branch Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode AustralianBankStateBranch = new MMCode() {
+	public static final MMCode mmAustralianBankStateBranch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianBankStateBranch";
@@ -456,7 +458,7 @@ public class IssuerCode {
 	 * definition} = "Clearing House Electronic Settlements Systems."</li>
 	 * </ul>
 	 */
-	public static final MMCode ClearingHouseElectronicSettlementSystems = new MMCode() {
+	public static final MMCode mmClearingHouseElectronicSettlementSystems = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingHouseElectronicSettlementSystems";
@@ -485,7 +487,7 @@ public class IssuerCode {
 	 * definition} = "Austrian Bankleitzahl."</li>
 	 * </ul>
 	 */
-	public static final MMCode AustrianBankLeitzahl = new MMCode() {
+	public static final MMCode mmAustrianBankLeitzahl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustrianBankLeitzahl";
@@ -514,7 +516,7 @@ public class IssuerCode {
 	 * definition} = "OKB - Oesterreichische Kontrollbank AG."</li>
 	 * </ul>
 	 */
-	public static final MMCode OesterreichischeKontrollbank = new MMCode() {
+	public static final MMCode mmOesterreichischeKontrollbank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OesterreichischeKontrollbank";
@@ -545,7 +547,7 @@ public class IssuerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CaisseInterprofessionelleDepotsVirementsTitres = new MMCode() {
+	public static final MMCode mmCaisseInterprofessionelleDepotsVirementsTitres = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaisseInterprofessionelleDepotsVirementsTitres";
@@ -574,7 +576,7 @@ public class IssuerCode {
 	 * definition} = "Euroclear."</li>
 	 * </ul>
 	 */
-	public static final MMCode Euroclear = new MMCode() {
+	public static final MMCode mmEuroclear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Euroclear";
@@ -603,7 +605,7 @@ public class IssuerCode {
 	 * definition} = "Banque Nationale de Belgique."</li>
 	 * </ul>
 	 */
-	public static final MMCode BanqueNationaleDeBelgique = new MMCode() {
+	public static final MMCode mmBanqueNationaleDeBelgique = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BanqueNationaleDeBelgique";
@@ -632,7 +634,7 @@ public class IssuerCode {
 	 * definition} = "CLC - Camara de Liquidacao e Custodia S.A. (Brazil)."</li>
 	 * </ul>
 	 */
-	public static final MMCode CamaraLiquidacaoCustodia = new MMCode() {
+	public static final MMCode mmCamaraLiquidacaoCustodia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CamaraLiquidacaoCustodia";
@@ -661,7 +663,7 @@ public class IssuerCode {
 	 * definition} = "CDS - Canadian Depository for Securities Limited."</li>
 	 * </ul>
 	 */
-	public static final MMCode CanadianDepositorySecuritiesLtd = new MMCode() {
+	public static final MMCode mmCanadianDepositorySecuritiesLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanadianDepositorySecuritiesLtd";
@@ -690,7 +692,7 @@ public class IssuerCode {
 	 * definition} = "Canadian Payments Association Payment Routing Number."</li>
 	 * </ul>
 	 */
-	public static final MMCode CanadianPaymentsAssociation = new MMCode() {
+	public static final MMCode mmCanadianPaymentsAssociation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanadianPaymentsAssociation";
@@ -720,7 +722,7 @@ public class IssuerCode {
 	 * "Chile Central Securities Depository Deposito Central de Valores."</li>
 	 * </ul>
 	 */
-	public static final MMCode CentralSecuritiesDepositoryDepositoCentralValores = new MMCode() {
+	public static final MMCode mmCentralSecuritiesDepositoryDepositoCentralValores = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepositoryDepositoCentralValores";
@@ -750,7 +752,7 @@ public class IssuerCode {
 	 * "Shanghai Securities Central Clearing &amp; Registration Company."</li>
 	 * </ul>
 	 */
-	public static final MMCode ShanghaiSecuritiesCentralClearingRegistrationCompany = new MMCode() {
+	public static final MMCode mmShanghaiSecuritiesCentralClearingRegistrationCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShanghaiSecuritiesCentralClearingRegistrationCompany";
@@ -779,7 +781,7 @@ public class IssuerCode {
 	 * definition} = "Shenzhen Securities Clearing Company."</li>
 	 * </ul>
 	 */
-	public static final MMCode ShenzhenSecuritiesClearingCompany = new MMCode() {
+	public static final MMCode mmShenzhenSecuritiesClearingCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShenzhenSecuritiesClearingCompany";
@@ -808,7 +810,7 @@ public class IssuerCode {
 	 * definition} = "Colombia Central Depository System."</li>
 	 * </ul>
 	 */
-	public static final MMCode ColombiaCentralDepositorySystem = new MMCode() {
+	public static final MMCode mmColombiaCentralDepositorySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ColombiaCentralDepositorySystem";
@@ -837,7 +839,7 @@ public class IssuerCode {
 	 * definition} = "Denmark Vaerdipapircentralen."</li>
 	 * </ul>
 	 */
-	public static final MMCode DenmarkVaerdipapircentralen = new MMCode() {
+	public static final MMCode mmDenmarkVaerdipapircentralen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenmarkVaerdipapircentralen";
@@ -866,7 +868,7 @@ public class IssuerCode {
 	 * definition} = "Finnish Central Securities Depository Limited."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinnishCentralSecuritiesDepositoryLtd = new MMCode() {
+	public static final MMCode mmFinnishCentralSecuritiesDepositoryLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinnishCentralSecuritiesDepositoryLtd";
@@ -895,7 +897,7 @@ public class IssuerCode {
 	 * definition} = "French R.I.B."</li>
 	 * </ul>
 	 */
-	public static final MMCode FranceRIB = new MMCode() {
+	public static final MMCode mmFranceRIB = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FranceRIB";
@@ -927,7 +929,7 @@ public class IssuerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SICOVAM = new MMCode() {
+	public static final MMCode mmSICOVAM = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SICOVAM";
@@ -956,7 +958,7 @@ public class IssuerCode {
 	 * definition} = "The Prague Stock Exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode PragueStockExchange = new MMCode() {
+	public static final MMCode mmPragueStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PragueStockExchange";
@@ -985,7 +987,7 @@ public class IssuerCode {
 	 * definition} = "Bundesausichtsamt fur den Wertpapierhandel."</li>
 	 * </ul>
 	 */
-	public static final MMCode BundesausichtsamtWertpapierhandel = new MMCode() {
+	public static final MMCode mmBundesausichtsamtWertpapierhandel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BundesausichtsamtWertpapierhandel";
@@ -1014,7 +1016,7 @@ public class IssuerCode {
 	 * definition} = "Deutsche Boerse AG: Deutsche Terminborse."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBoerseAGDeutscheTerminborse = new MMCode() {
+	public static final MMCode mmDeutscheBoerseAGDeutscheTerminborse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGDeutscheTerminborse";
@@ -1043,7 +1045,7 @@ public class IssuerCode {
 	 * definition} = "Deutsche Boerse AG: Frankfurter Wertpapierborse."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBoerseAGFrankfurterWertpapierborse = new MMCode() {
+	public static final MMCode mmDeutscheBoerseAGFrankfurterWertpapierborse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGFrankfurterWertpapierborse";
@@ -1072,7 +1074,7 @@ public class IssuerCode {
 	 * definition} = "Deutsche Boerse AG: XETRA (exchange electronic trading)."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBoerseAGXETRA = new MMCode() {
+	public static final MMCode mmDeutscheBoerseAGXETRA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGXETRA";
@@ -1101,7 +1103,7 @@ public class IssuerCode {
 	 * definition} = "Deutsche Borse Clearing AG."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBorseClearingAG = new MMCode() {
+	public static final MMCode mmDeutscheBorseClearingAG = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBorseClearingAG";
@@ -1130,7 +1132,7 @@ public class IssuerCode {
 	 * definition} = "Deutsche Bundesbank."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeutscheBundesbank = new MMCode() {
+	public static final MMCode mmDeutscheBundesbank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBundesbank";
@@ -1159,7 +1161,7 @@ public class IssuerCode {
 	 * definition} = "German Bankleitzahl."</li>
 	 * </ul>
 	 */
-	public static final MMCode GermanBankleitzahl = new MMCode() {
+	public static final MMCode mmGermanBankleitzahl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanBankleitzahl";
@@ -1188,7 +1190,7 @@ public class IssuerCode {
 	 * definition} = "Zentraler Kreditausschuss."</li>
 	 * </ul>
 	 */
-	public static final MMCode ZentralerKreditausschuss = new MMCode() {
+	public static final MMCode mmZentralerKreditausschuss = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZentralerKreditausschuss";
@@ -1218,7 +1220,7 @@ public class IssuerCode {
 	 * "Hong KongCentral Clearing and Securities Settlement System."</li>
 	 * </ul>
 	 */
-	public static final MMCode HongKongCentralClearingSecuritiesSettlementSystem = new MMCode() {
+	public static final MMCode mmHongKongCentralClearingSecuritiesSettlementSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HongKongCentralClearingSecuritiesSettlementSystem";
@@ -1247,7 +1249,7 @@ public class IssuerCode {
 	 * definition} = "Hong Kong National Clearing System."</li>
 	 * </ul>
 	 */
-	public static final MMCode HongKongNationalClearing = new MMCode() {
+	public static final MMCode mmHongKongNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HongKongNationalClearing";
@@ -1276,7 +1278,7 @@ public class IssuerCode {
 	 * definition} = "India National Securities Depositary."</li>
 	 * </ul>
 	 */
-	public static final MMCode IndianNationalSecuritiesDepository = new MMCode() {
+	public static final MMCode mmIndianNationalSecuritiesDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndianNationalSecuritiesDepository";
@@ -1305,7 +1307,7 @@ public class IssuerCode {
 	 * definition} = "Indonesian Securities Central Depository."</li>
 	 * </ul>
 	 */
-	public static final MMCode IndonesianSecuritiesCentralDepository = new MMCode() {
+	public static final MMCode mmIndonesianSecuritiesCentralDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndonesianSecuritiesCentralDepository";
@@ -1334,7 +1336,7 @@ public class IssuerCode {
 	 * definition} = "Irish National Clearing Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode IrishNationalClearing = new MMCode() {
+	public static final MMCode mmIrishNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IrishNationalClearing";
@@ -1363,7 +1365,7 @@ public class IssuerCode {
 	 * definition} = "Israel Tel Aviv Stock Exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode TelAvivStockExchange = new MMCode() {
+	public static final MMCode mmTelAvivStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TelAvivStockExchange";
@@ -1392,7 +1394,7 @@ public class IssuerCode {
 	 * definition} = "Italian Domestic Identification Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode ItalianDomesticIdentification = new MMCode() {
+	public static final MMCode mmItalianDomesticIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItalianDomesticIdentification";
@@ -1421,7 +1423,7 @@ public class IssuerCode {
 	 * definition} = "Italy - Monte Titoli."</li>
 	 * </ul>
 	 */
-	public static final MMCode MonteTitoli = new MMCode() {
+	public static final MMCode mmMonteTitoli = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonteTitoli";
@@ -1450,7 +1452,7 @@ public class IssuerCode {
 	 * definition} = "Japan Securities Clearing Corporation."</li>
 	 * </ul>
 	 */
-	public static final MMCode JapanSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmJapanSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JapanSecuritiesClearingCorporation";
@@ -1479,7 +1481,7 @@ public class IssuerCode {
 	 * definition} = "Japan Securities Depository Center."</li>
 	 * </ul>
 	 */
-	public static final MMCode JapanSecuritiesDepositoryCenter = new MMCode() {
+	public static final MMCode mmJapanSecuritiesDepositoryCenter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JapanSecuritiesDepositoryCenter";
@@ -1508,7 +1510,7 @@ public class IssuerCode {
 	 * definition} = "Korea Securities Depository."</li>
 	 * </ul>
 	 */
-	public static final MMCode KoreanSecuritiesDepository = new MMCode() {
+	public static final MMCode mmKoreanSecuritiesDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KoreanSecuritiesDepository";
@@ -1537,7 +1539,7 @@ public class IssuerCode {
 	 * definition} = "Malaysian Central Depositary."</li>
 	 * </ul>
 	 */
-	public static final MMCode MalaysianCentralDepository = new MMCode() {
+	public static final MMCode mmMalaysianCentralDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MalaysianCentralDepository";
@@ -1566,7 +1568,7 @@ public class IssuerCode {
 	 * definition} = "Mexico S.D. Indeval, S.A. de C.V."</li>
 	 * </ul>
 	 */
-	public static final MMCode IndevalSA = new MMCode() {
+	public static final MMCode mmIndevalSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndevalSA";
@@ -1595,7 +1597,7 @@ public class IssuerCode {
 	 * definition} = "Amsterdamse Effectenbeurs."</li>
 	 * </ul>
 	 */
-	public static final MMCode AmsterdamseEffectenbeurs = new MMCode() {
+	public static final MMCode mmAmsterdamseEffectenbeurs = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmsterdamseEffectenbeurs";
@@ -1625,7 +1627,7 @@ public class IssuerCode {
 	 * "Nederlands Centraal Instituut voor Giraal Effectenverkeer."</li>
 	 * </ul>
 	 */
-	public static final MMCode NECIGEF = new MMCode() {
+	public static final MMCode mmNECIGEF = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NECIGEF";
@@ -1654,7 +1656,7 @@ public class IssuerCode {
 	 * definition} = "New Zealand National Clearing Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode NewZealandNationalClearing = new MMCode() {
+	public static final MMCode mmNewZealandNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealandNationalClearing";
@@ -1683,7 +1685,7 @@ public class IssuerCode {
 	 * definition} = "New Zealand Stock Exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode NewZealandStockExchange = new MMCode() {
+	public static final MMCode mmNewZealandStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealandStockExchange";
@@ -1712,7 +1714,7 @@ public class IssuerCode {
 	 * definition} = "Norway Verdipapirsentralen."</li>
 	 * </ul>
 	 */
-	public static final MMCode Verdipapirsentralen = new MMCode() {
+	public static final MMCode mmVerdipapirsentralen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Verdipapirsentralen";
@@ -1741,7 +1743,7 @@ public class IssuerCode {
 	 * definition} = "Philippine Central Depositary."</li>
 	 * </ul>
 	 */
-	public static final MMCode PhilippineCentralDepository = new MMCode() {
+	public static final MMCode mmPhilippineCentralDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhilippineCentralDepository";
@@ -1770,7 +1772,7 @@ public class IssuerCode {
 	 * definition} = "Poland National Depository for Securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode PolandNationalDepositorySecurities = new MMCode() {
+	public static final MMCode mmPolandNationalDepositorySecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PolandNationalDepositorySecurities";
@@ -1799,7 +1801,7 @@ public class IssuerCode {
 	 * definition} = "Portugal Central de Valores de Mobiliaros."</li>
 	 * </ul>
 	 */
-	public static final MMCode CentralValoresMobiliaros = new MMCode() {
+	public static final MMCode mmCentralValoresMobiliaros = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralValoresMobiliaros";
@@ -1828,7 +1830,7 @@ public class IssuerCode {
 	 * definition} = "Portuguese National Clearing Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode PortugueseNationalClearing = new MMCode() {
+	public static final MMCode mmPortugueseNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortugueseNationalClearing";
@@ -1858,7 +1860,7 @@ public class IssuerCode {
 	 * "Associacao para a Prestacao de Servicios as Bolsas de Valores."</li>
 	 * </ul>
 	 */
-	public static final MMCode INTERBOLSA = new MMCode() {
+	public static final MMCode mmINTERBOLSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "INTERBOLSA";
@@ -1887,7 +1889,7 @@ public class IssuerCode {
 	 * definition} = "Russian Central Bank Identification Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode RussianCentralBankIdentification = new MMCode() {
+	public static final MMCode mmRussianCentralBankIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RussianCentralBankIdentification";
@@ -1916,7 +1918,7 @@ public class IssuerCode {
 	 * definition} = "Central Depository Pte Ltd."</li>
 	 * </ul>
 	 */
-	public static final MMCode SingaporeCentralDepositoryLtd = new MMCode() {
+	public static final MMCode mmSingaporeCentralDepositoryLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingaporeCentralDepositoryLtd";
@@ -1945,7 +1947,7 @@ public class IssuerCode {
 	 * definition} = "Singapore International Monetary Exchange Limited."</li>
 	 * </ul>
 	 */
-	public static final MMCode SingaporeInternationalMonetaryExchange = new MMCode() {
+	public static final MMCode mmSingaporeInternationalMonetaryExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingaporeInternationalMonetaryExchange";
@@ -1974,7 +1976,7 @@ public class IssuerCode {
 	 * definition} = "The Bratislava Stock Exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode BratislavaStockExchange = new MMCode() {
+	public static final MMCode mmBratislavaStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BratislavaStockExchange";
@@ -2003,7 +2005,7 @@ public class IssuerCode {
 	 * definition} = "South African National Clearing Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode SouthAfricanNationalClearing = new MMCode() {
+	public static final MMCode mmSouthAfricanNationalClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SouthAfricanNationalClearing";
@@ -2032,7 +2034,7 @@ public class IssuerCode {
 	 * definition} = "Strate Clearing and Settlement (Proprietary) Limited."</li>
 	 * </ul>
 	 */
-	public static final MMCode StrateClearingSettlementLtd = new MMCode() {
+	public static final MMCode mmStrateClearingSettlementLtd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrateClearingSettlementLtd";
@@ -2061,7 +2063,7 @@ public class IssuerCode {
 	 * definition} = "Banco de Espana."</li>
 	 * </ul>
 	 */
-	public static final MMCode BancoEspana = new MMCode() {
+	public static final MMCode mmBancoEspana = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BancoEspana";
@@ -2090,7 +2092,7 @@ public class IssuerCode {
 	 * definition} = "Servicio de Compensacion y Liquidacion de Valores."</li>
 	 * </ul>
 	 */
-	public static final MMCode ServicioCompensacionLiquidacionValores = new MMCode() {
+	public static final MMCode mmServicioCompensacionLiquidacionValores = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServicioCompensacionLiquidacionValores";
@@ -2119,7 +2121,7 @@ public class IssuerCode {
 	 * definition} = "Spanish Domestic Interbanking Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpanishDomesticInterbanking = new MMCode() {
+	public static final MMCode mmSpanishDomesticInterbanking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpanishDomesticInterbanking";
@@ -2148,7 +2150,7 @@ public class IssuerCode {
 	 * definition} = "Sweden Vardepapperscentralen."</li>
 	 * </ul>
 	 */
-	public static final MMCode Vardepapperscentralen = new MMCode() {
+	public static final MMCode mmVardepapperscentralen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vardepapperscentralen";
@@ -2177,7 +2179,7 @@ public class IssuerCode {
 	 * definition} = "SIS - SEGA/Intersettle."</li>
 	 * </ul>
 	 */
-	public static final MMCode SISSEGAIntersettle = new MMCode() {
+	public static final MMCode mmSISSEGAIntersettle = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SISSEGAIntersettle";
@@ -2206,7 +2208,7 @@ public class IssuerCode {
 	 * definition} = "Swiss Clearing System."</li>
 	 * </ul>
 	 */
-	public static final MMCode SwissClearingCode = new MMCode() {
+	public static final MMCode mmSwissClearingCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwissClearingCode";
@@ -2235,7 +2237,7 @@ public class IssuerCode {
 	 * definition} = "Thailand Securities Depository Company Limited."</li>
 	 * </ul>
 	 */
-	public static final MMCode ThailandSecuritiesDepositoryCompany = new MMCode() {
+	public static final MMCode mmThailandSecuritiesDepositoryCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThailandSecuritiesDepositoryCompany";
@@ -2264,7 +2266,7 @@ public class IssuerCode {
 	 * definition} = "Taiwan Securities Central Depository Co Limited."</li>
 	 * </ul>
 	 */
-	public static final MMCode TaiwanSecuritiesCentralDepository = new MMCode() {
+	public static final MMCode mmTaiwanSecuritiesCentralDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaiwanSecuritiesCentralDepository";
@@ -2293,7 +2295,7 @@ public class IssuerCode {
 	 * definition} = "Turkey Takasbank."</li>
 	 * </ul>
 	 */
-	public static final MMCode Takasbank = new MMCode() {
+	public static final MMCode mmTakasbank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Takasbank";
@@ -2322,7 +2324,7 @@ public class IssuerCode {
 	 * definition} = "UK Domestic Sort Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode UKDomesticSort = new MMCode() {
+	public static final MMCode mmUKDomesticSort = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKDomesticSort";
@@ -2351,7 +2353,7 @@ public class IssuerCode {
 	 * definition} = "Bank of England (Central Moneymarkets Office)."</li>
 	 * </ul>
 	 */
-	public static final MMCode BankOfEnglandCMO = new MMCode() {
+	public static final MMCode mmBankOfEnglandCMO = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfEnglandCMO";
@@ -2384,7 +2386,7 @@ public class IssuerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CrestCo = new MMCode() {
+	public static final MMCode mmCrestCo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrestCo";
@@ -2413,7 +2415,7 @@ public class IssuerCode {
 	 * definition} = "UK Financial Services Authority."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialServicesAuthority = new MMCode() {
+	public static final MMCode mmFinancialServicesAuthority = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialServicesAuthority";
@@ -2442,7 +2444,7 @@ public class IssuerCode {
 	 * definition} = "The London Clearing House."</li>
 	 * </ul>
 	 */
-	public static final MMCode LondonClearingHouse = new MMCode() {
+	public static final MMCode mmLondonClearingHouse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LondonClearingHouse";
@@ -2471,7 +2473,7 @@ public class IssuerCode {
 	 * definition} = "UK - International Securities Market Association."</li>
 	 * </ul>
 	 */
-	public static final MMCode InternationalSecuritiesMarketAssociation = new MMCode() {
+	public static final MMCode mmInternationalSecuritiesMarketAssociation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalSecuritiesMarketAssociation";
@@ -2500,7 +2502,7 @@ public class IssuerCode {
 	 * definition} = "London Stock Exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode LondonStockExchange = new MMCode() {
+	public static final MMCode mmLondonStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LondonStockExchange";
@@ -2529,7 +2531,7 @@ public class IssuerCode {
 	 * definition} = "American Stock Exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode AmericanStockExchange = new MMCode() {
+	public static final MMCode mmAmericanStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmericanStockExchange";
@@ -2558,7 +2560,7 @@ public class IssuerCode {
 	 * definition} = "Depository Trust Company."</li>
 	 * </ul>
 	 */
-	public static final MMCode DepositoryTrustCompany = new MMCode() {
+	public static final MMCode mmDepositoryTrustCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryTrustCompany";
@@ -2587,7 +2589,7 @@ public class IssuerCode {
 	 * definition} = "USA Emerging Markets Clearing Corporation."</li>
 	 * </ul>
 	 */
-	public static final MMCode EmergingMarketsClearingCorporation = new MMCode() {
+	public static final MMCode mmEmergingMarketsClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmergingMarketsClearingCorporation";
@@ -2616,7 +2618,7 @@ public class IssuerCode {
 	 * definition} = "Fedwire Routing Number."</li>
 	 * </ul>
 	 */
-	public static final MMCode FedwireRoutingNumber = new MMCode() {
+	public static final MMCode mmFedwireRoutingNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedwireRoutingNumber";
@@ -2648,7 +2650,7 @@ public class IssuerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmGovernmentSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentSecuritiesClearingCorporation";
@@ -2677,7 +2679,7 @@ public class IssuerCode {
 	 * definition} = "International Securities Clearing Corporation."</li>
 	 * </ul>
 	 */
-	public static final MMCode InternationalSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmInternationalSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalSecuritiesClearingCorporation";
@@ -2706,7 +2708,7 @@ public class IssuerCode {
 	 * definition} = "Mortgage Backed Securities Clearing Corporation."</li>
 	 * </ul>
 	 */
-	public static final MMCode MortgageBackedSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmMortgageBackedSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgageBackedSecuritiesClearingCorporation";
@@ -2735,7 +2737,7 @@ public class IssuerCode {
 	 * definition} = "National Association Securities Dealers."</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalAssociationSecuritiesDealers = new MMCode() {
+	public static final MMCode mmNationalAssociationSecuritiesDealers = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalAssociationSecuritiesDealers";
@@ -2767,7 +2769,7 @@ public class IssuerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NASDAQ = new MMCode() {
+	public static final MMCode mmNASDAQ = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NASDAQ";
@@ -2796,7 +2798,7 @@ public class IssuerCode {
 	 * definition} = "National Securities Clearing Corporation."</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalSecuritiesClearingCorporation = new MMCode() {
+	public static final MMCode mmNationalSecuritiesClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalSecuritiesClearingCorporation";
@@ -2825,7 +2827,7 @@ public class IssuerCode {
 	 * definition} = "New York Clearing House."</li>
 	 * </ul>
 	 */
-	public static final MMCode NewYorkClearingHouse = new MMCode() {
+	public static final MMCode mmNewYorkClearingHouse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkClearingHouse";
@@ -2854,7 +2856,7 @@ public class IssuerCode {
 	 * definition} = "New York Stock Exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode NewYorkStockExchange = new MMCode() {
+	public static final MMCode mmNewYorkStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkStockExchange";
@@ -2883,7 +2885,7 @@ public class IssuerCode {
 	 * definition} = "Options Clearing Corporation."</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionsClearingCorporation = new MMCode() {
+	public static final MMCode mmOptionsClearingCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionsClearingCorporation";
@@ -2912,7 +2914,7 @@ public class IssuerCode {
 	 * definition} = "Participant Trust Company."</li>
 	 * </ul>
 	 */
-	public static final MMCode ParticipantTrustCompany = new MMCode() {
+	public static final MMCode mmParticipantTrustCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantTrustCompany";
@@ -2944,7 +2946,7 @@ public class IssuerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode XClear = new MMCode() {
+	public static final MMCode mmXClear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "XClear";
@@ -2957,50 +2959,50 @@ public class IssuerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CEDE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerCode";
 				definition = "Identifies the institution issuing a proprietary code.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerCode.ClearstreamBankLuxemburg, com.tools20022.repository.codeset.IssuerCode.CajaDeValores, com.tools20022.repository.codeset.IssuerCode.AustraclearLtd,
-						com.tools20022.repository.codeset.IssuerCode.AustralianBankStateBranch, com.tools20022.repository.codeset.IssuerCode.ClearingHouseElectronicSettlementSystems,
-						com.tools20022.repository.codeset.IssuerCode.AustrianBankLeitzahl, com.tools20022.repository.codeset.IssuerCode.OesterreichischeKontrollbank,
-						com.tools20022.repository.codeset.IssuerCode.CaisseInterprofessionelleDepotsVirementsTitres, com.tools20022.repository.codeset.IssuerCode.Euroclear,
-						com.tools20022.repository.codeset.IssuerCode.BanqueNationaleDeBelgique, com.tools20022.repository.codeset.IssuerCode.CamaraLiquidacaoCustodia,
-						com.tools20022.repository.codeset.IssuerCode.CanadianDepositorySecuritiesLtd, com.tools20022.repository.codeset.IssuerCode.CanadianPaymentsAssociation,
-						com.tools20022.repository.codeset.IssuerCode.CentralSecuritiesDepositoryDepositoCentralValores, com.tools20022.repository.codeset.IssuerCode.ShanghaiSecuritiesCentralClearingRegistrationCompany,
-						com.tools20022.repository.codeset.IssuerCode.ShenzhenSecuritiesClearingCompany, com.tools20022.repository.codeset.IssuerCode.ColombiaCentralDepositorySystem,
-						com.tools20022.repository.codeset.IssuerCode.DenmarkVaerdipapircentralen, com.tools20022.repository.codeset.IssuerCode.FinnishCentralSecuritiesDepositoryLtd, com.tools20022.repository.codeset.IssuerCode.FranceRIB,
-						com.tools20022.repository.codeset.IssuerCode.SICOVAM, com.tools20022.repository.codeset.IssuerCode.PragueStockExchange, com.tools20022.repository.codeset.IssuerCode.BundesausichtsamtWertpapierhandel,
-						com.tools20022.repository.codeset.IssuerCode.DeutscheBoerseAGDeutscheTerminborse, com.tools20022.repository.codeset.IssuerCode.DeutscheBoerseAGFrankfurterWertpapierborse,
-						com.tools20022.repository.codeset.IssuerCode.DeutscheBoerseAGXETRA, com.tools20022.repository.codeset.IssuerCode.DeutscheBorseClearingAG, com.tools20022.repository.codeset.IssuerCode.DeutscheBundesbank,
-						com.tools20022.repository.codeset.IssuerCode.GermanBankleitzahl, com.tools20022.repository.codeset.IssuerCode.ZentralerKreditausschuss,
-						com.tools20022.repository.codeset.IssuerCode.HongKongCentralClearingSecuritiesSettlementSystem, com.tools20022.repository.codeset.IssuerCode.HongKongNationalClearing,
-						com.tools20022.repository.codeset.IssuerCode.IndianNationalSecuritiesDepository, com.tools20022.repository.codeset.IssuerCode.IndonesianSecuritiesCentralDepository,
-						com.tools20022.repository.codeset.IssuerCode.IrishNationalClearing, com.tools20022.repository.codeset.IssuerCode.TelAvivStockExchange, com.tools20022.repository.codeset.IssuerCode.ItalianDomesticIdentification,
-						com.tools20022.repository.codeset.IssuerCode.MonteTitoli, com.tools20022.repository.codeset.IssuerCode.JapanSecuritiesClearingCorporation,
-						com.tools20022.repository.codeset.IssuerCode.JapanSecuritiesDepositoryCenter, com.tools20022.repository.codeset.IssuerCode.KoreanSecuritiesDepository,
-						com.tools20022.repository.codeset.IssuerCode.MalaysianCentralDepository, com.tools20022.repository.codeset.IssuerCode.IndevalSA, com.tools20022.repository.codeset.IssuerCode.AmsterdamseEffectenbeurs,
-						com.tools20022.repository.codeset.IssuerCode.NECIGEF, com.tools20022.repository.codeset.IssuerCode.NewZealandNationalClearing, com.tools20022.repository.codeset.IssuerCode.NewZealandStockExchange,
-						com.tools20022.repository.codeset.IssuerCode.Verdipapirsentralen, com.tools20022.repository.codeset.IssuerCode.PhilippineCentralDepository,
-						com.tools20022.repository.codeset.IssuerCode.PolandNationalDepositorySecurities, com.tools20022.repository.codeset.IssuerCode.CentralValoresMobiliaros,
-						com.tools20022.repository.codeset.IssuerCode.PortugueseNationalClearing, com.tools20022.repository.codeset.IssuerCode.INTERBOLSA, com.tools20022.repository.codeset.IssuerCode.RussianCentralBankIdentification,
-						com.tools20022.repository.codeset.IssuerCode.SingaporeCentralDepositoryLtd, com.tools20022.repository.codeset.IssuerCode.SingaporeInternationalMonetaryExchange,
-						com.tools20022.repository.codeset.IssuerCode.BratislavaStockExchange, com.tools20022.repository.codeset.IssuerCode.SouthAfricanNationalClearing,
-						com.tools20022.repository.codeset.IssuerCode.StrateClearingSettlementLtd, com.tools20022.repository.codeset.IssuerCode.BancoEspana,
-						com.tools20022.repository.codeset.IssuerCode.ServicioCompensacionLiquidacionValores, com.tools20022.repository.codeset.IssuerCode.SpanishDomesticInterbanking,
-						com.tools20022.repository.codeset.IssuerCode.Vardepapperscentralen, com.tools20022.repository.codeset.IssuerCode.SISSEGAIntersettle, com.tools20022.repository.codeset.IssuerCode.SwissClearingCode,
-						com.tools20022.repository.codeset.IssuerCode.ThailandSecuritiesDepositoryCompany, com.tools20022.repository.codeset.IssuerCode.TaiwanSecuritiesCentralDepository,
-						com.tools20022.repository.codeset.IssuerCode.Takasbank, com.tools20022.repository.codeset.IssuerCode.UKDomesticSort, com.tools20022.repository.codeset.IssuerCode.BankOfEnglandCMO,
-						com.tools20022.repository.codeset.IssuerCode.CrestCo, com.tools20022.repository.codeset.IssuerCode.FinancialServicesAuthority, com.tools20022.repository.codeset.IssuerCode.LondonClearingHouse,
-						com.tools20022.repository.codeset.IssuerCode.InternationalSecuritiesMarketAssociation, com.tools20022.repository.codeset.IssuerCode.LondonStockExchange,
-						com.tools20022.repository.codeset.IssuerCode.AmericanStockExchange, com.tools20022.repository.codeset.IssuerCode.DepositoryTrustCompany,
-						com.tools20022.repository.codeset.IssuerCode.EmergingMarketsClearingCorporation, com.tools20022.repository.codeset.IssuerCode.FedwireRoutingNumber,
-						com.tools20022.repository.codeset.IssuerCode.GovernmentSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.InternationalSecuritiesClearingCorporation,
-						com.tools20022.repository.codeset.IssuerCode.MortgageBackedSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.NationalAssociationSecuritiesDealers,
-						com.tools20022.repository.codeset.IssuerCode.NASDAQ, com.tools20022.repository.codeset.IssuerCode.NationalSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.NewYorkClearingHouse,
-						com.tools20022.repository.codeset.IssuerCode.NewYorkStockExchange, com.tools20022.repository.codeset.IssuerCode.OptionsClearingCorporation, com.tools20022.repository.codeset.IssuerCode.ParticipantTrustCompany,
-						com.tools20022.repository.codeset.IssuerCode.XClear);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerCode.mmClearstreamBankLuxemburg, com.tools20022.repository.codeset.IssuerCode.mmCajaDeValores,
+						com.tools20022.repository.codeset.IssuerCode.mmAustraclearLtd, com.tools20022.repository.codeset.IssuerCode.mmAustralianBankStateBranch,
+						com.tools20022.repository.codeset.IssuerCode.mmClearingHouseElectronicSettlementSystems, com.tools20022.repository.codeset.IssuerCode.mmAustrianBankLeitzahl,
+						com.tools20022.repository.codeset.IssuerCode.mmOesterreichischeKontrollbank, com.tools20022.repository.codeset.IssuerCode.mmCaisseInterprofessionelleDepotsVirementsTitres,
+						com.tools20022.repository.codeset.IssuerCode.mmEuroclear, com.tools20022.repository.codeset.IssuerCode.mmBanqueNationaleDeBelgique, com.tools20022.repository.codeset.IssuerCode.mmCamaraLiquidacaoCustodia,
+						com.tools20022.repository.codeset.IssuerCode.mmCanadianDepositorySecuritiesLtd, com.tools20022.repository.codeset.IssuerCode.mmCanadianPaymentsAssociation,
+						com.tools20022.repository.codeset.IssuerCode.mmCentralSecuritiesDepositoryDepositoCentralValores, com.tools20022.repository.codeset.IssuerCode.mmShanghaiSecuritiesCentralClearingRegistrationCompany,
+						com.tools20022.repository.codeset.IssuerCode.mmShenzhenSecuritiesClearingCompany, com.tools20022.repository.codeset.IssuerCode.mmColombiaCentralDepositorySystem,
+						com.tools20022.repository.codeset.IssuerCode.mmDenmarkVaerdipapircentralen, com.tools20022.repository.codeset.IssuerCode.mmFinnishCentralSecuritiesDepositoryLtd,
+						com.tools20022.repository.codeset.IssuerCode.mmFranceRIB, com.tools20022.repository.codeset.IssuerCode.mmSICOVAM, com.tools20022.repository.codeset.IssuerCode.mmPragueStockExchange,
+						com.tools20022.repository.codeset.IssuerCode.mmBundesausichtsamtWertpapierhandel, com.tools20022.repository.codeset.IssuerCode.mmDeutscheBoerseAGDeutscheTerminborse,
+						com.tools20022.repository.codeset.IssuerCode.mmDeutscheBoerseAGFrankfurterWertpapierborse, com.tools20022.repository.codeset.IssuerCode.mmDeutscheBoerseAGXETRA,
+						com.tools20022.repository.codeset.IssuerCode.mmDeutscheBorseClearingAG, com.tools20022.repository.codeset.IssuerCode.mmDeutscheBundesbank, com.tools20022.repository.codeset.IssuerCode.mmGermanBankleitzahl,
+						com.tools20022.repository.codeset.IssuerCode.mmZentralerKreditausschuss, com.tools20022.repository.codeset.IssuerCode.mmHongKongCentralClearingSecuritiesSettlementSystem,
+						com.tools20022.repository.codeset.IssuerCode.mmHongKongNationalClearing, com.tools20022.repository.codeset.IssuerCode.mmIndianNationalSecuritiesDepository,
+						com.tools20022.repository.codeset.IssuerCode.mmIndonesianSecuritiesCentralDepository, com.tools20022.repository.codeset.IssuerCode.mmIrishNationalClearing,
+						com.tools20022.repository.codeset.IssuerCode.mmTelAvivStockExchange, com.tools20022.repository.codeset.IssuerCode.mmItalianDomesticIdentification, com.tools20022.repository.codeset.IssuerCode.mmMonteTitoli,
+						com.tools20022.repository.codeset.IssuerCode.mmJapanSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmJapanSecuritiesDepositoryCenter,
+						com.tools20022.repository.codeset.IssuerCode.mmKoreanSecuritiesDepository, com.tools20022.repository.codeset.IssuerCode.mmMalaysianCentralDepository, com.tools20022.repository.codeset.IssuerCode.mmIndevalSA,
+						com.tools20022.repository.codeset.IssuerCode.mmAmsterdamseEffectenbeurs, com.tools20022.repository.codeset.IssuerCode.mmNECIGEF, com.tools20022.repository.codeset.IssuerCode.mmNewZealandNationalClearing,
+						com.tools20022.repository.codeset.IssuerCode.mmNewZealandStockExchange, com.tools20022.repository.codeset.IssuerCode.mmVerdipapirsentralen, com.tools20022.repository.codeset.IssuerCode.mmPhilippineCentralDepository,
+						com.tools20022.repository.codeset.IssuerCode.mmPolandNationalDepositorySecurities, com.tools20022.repository.codeset.IssuerCode.mmCentralValoresMobiliaros,
+						com.tools20022.repository.codeset.IssuerCode.mmPortugueseNationalClearing, com.tools20022.repository.codeset.IssuerCode.mmINTERBOLSA, com.tools20022.repository.codeset.IssuerCode.mmRussianCentralBankIdentification,
+						com.tools20022.repository.codeset.IssuerCode.mmSingaporeCentralDepositoryLtd, com.tools20022.repository.codeset.IssuerCode.mmSingaporeInternationalMonetaryExchange,
+						com.tools20022.repository.codeset.IssuerCode.mmBratislavaStockExchange, com.tools20022.repository.codeset.IssuerCode.mmSouthAfricanNationalClearing,
+						com.tools20022.repository.codeset.IssuerCode.mmStrateClearingSettlementLtd, com.tools20022.repository.codeset.IssuerCode.mmBancoEspana,
+						com.tools20022.repository.codeset.IssuerCode.mmServicioCompensacionLiquidacionValores, com.tools20022.repository.codeset.IssuerCode.mmSpanishDomesticInterbanking,
+						com.tools20022.repository.codeset.IssuerCode.mmVardepapperscentralen, com.tools20022.repository.codeset.IssuerCode.mmSISSEGAIntersettle, com.tools20022.repository.codeset.IssuerCode.mmSwissClearingCode,
+						com.tools20022.repository.codeset.IssuerCode.mmThailandSecuritiesDepositoryCompany, com.tools20022.repository.codeset.IssuerCode.mmTaiwanSecuritiesCentralDepository,
+						com.tools20022.repository.codeset.IssuerCode.mmTakasbank, com.tools20022.repository.codeset.IssuerCode.mmUKDomesticSort, com.tools20022.repository.codeset.IssuerCode.mmBankOfEnglandCMO,
+						com.tools20022.repository.codeset.IssuerCode.mmCrestCo, com.tools20022.repository.codeset.IssuerCode.mmFinancialServicesAuthority, com.tools20022.repository.codeset.IssuerCode.mmLondonClearingHouse,
+						com.tools20022.repository.codeset.IssuerCode.mmInternationalSecuritiesMarketAssociation, com.tools20022.repository.codeset.IssuerCode.mmLondonStockExchange,
+						com.tools20022.repository.codeset.IssuerCode.mmAmericanStockExchange, com.tools20022.repository.codeset.IssuerCode.mmDepositoryTrustCompany,
+						com.tools20022.repository.codeset.IssuerCode.mmEmergingMarketsClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmFedwireRoutingNumber,
+						com.tools20022.repository.codeset.IssuerCode.mmGovernmentSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmInternationalSecuritiesClearingCorporation,
+						com.tools20022.repository.codeset.IssuerCode.mmMortgageBackedSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmNationalAssociationSecuritiesDealers,
+						com.tools20022.repository.codeset.IssuerCode.mmNASDAQ, com.tools20022.repository.codeset.IssuerCode.mmNationalSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmNewYorkClearingHouse,
+						com.tools20022.repository.codeset.IssuerCode.mmNewYorkStockExchange, com.tools20022.repository.codeset.IssuerCode.mmOptionsClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmParticipantTrustCompany,
+						com.tools20022.repository.codeset.IssuerCode.mmXClear);
 				derivation_lazy = () -> Arrays.asList(PartyIssuerCode.mmObject());
 			}
 		});

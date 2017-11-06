@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialSettlementV2Code#PartialSettlement
- * PartialSettlementV2Code.PartialSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialSettlementV2Code#mmPartialSettlement
+ * PartialSettlementV2Code.mmPartialSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialSettlementV2Code#PartiallyConfirmed
- * PartialSettlementV2Code.PartiallyConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialSettlementV2Code#mmPartiallyConfirmed
+ * PartialSettlementV2Code.mmPartiallyConfirmed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class PartialSettlementV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartialSettlement = new MMCode() {
+	public static final MMCode mmPartialSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlement";
@@ -125,7 +125,7 @@ public class PartialSettlementV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyConfirmed = new MMCode() {
+	public static final MMCode mmPartiallyConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartiallyConfirmed";
@@ -138,12 +138,12 @@ public class PartialSettlementV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PAIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartialSettlementV2Code";
 				definition = "Information about partial settlement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialSettlementV2Code.PartialSettlement, com.tools20022.repository.codeset.PartialSettlementV2Code.PartiallyConfirmed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialSettlementV2Code.mmPartialSettlement, com.tools20022.repository.codeset.PartialSettlementV2Code.mmPartiallyConfirmed);
 				derivation_lazy = () -> Arrays.asList(PartialSettlement2Code.mmObject());
 			}
 		});

@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification58#Identification
- * GenericIdentification58.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification58#Type
- * GenericIdentification58.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification58#mmIdentification
+ * GenericIdentification58.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification58#mmType
+ * GenericIdentification58.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericIdentification58 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Name or number assigned by an entity to enable recognition of that
 	 * entity.
@@ -86,8 +87,8 @@ public class GenericIdentification58 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,33 +111,34 @@ public class GenericIdentification58 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification80#Identification
-	 * GenericIdentification80.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification80#mmIdentification
+	 * GenericIdentification80.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification21#Identification
-	 * GenericIdentification21.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification21#mmIdentification
+	 * GenericIdentification21.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification58.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification21.Identification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification80.Identification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification80.mmIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification21.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GenericIdentification40 type;
 	/**
 	 * Proprietary information, often a code, issued by the data source scheme
 	 * issuer.
@@ -175,47 +177,63 @@ public class GenericIdentification58 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification80#Type
-	 * GenericIdentification80.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification80#mmType
+	 * GenericIdentification80.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification21#Type
-	 * GenericIdentification21.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification21#mmType
+	 * GenericIdentification21.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification58.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> GenericIdentification58.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Proprietary information, often a code, issued by the data source scheme issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification21.Type;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification80.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification80.mmType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification21.mmType;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification40.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification40.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification58.Identification, com.tools20022.repository.msg.GenericIdentification58.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification58.mmIdentification, com.tools20022.repository.msg.GenericIdentification58.mmType);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification58";
 				definition = "Identification expressed as a proprietary type and narrative description.";
-				previousVersion_lazy = () -> GenericIdentification21.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(GenericIdentification80.mmObject());
+				previousVersion_lazy = () -> GenericIdentification21.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public GenericIdentification40 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.GenericIdentification40 type) {
+		this.type = type;
 	}
 }

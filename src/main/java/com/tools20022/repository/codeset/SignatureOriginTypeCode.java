@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#Contract
- * SignatureOriginTypeCode.Contract}</li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#mmContract
+ * SignatureOriginTypeCode.mmContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#Technical
- * SignatureOriginTypeCode.Technical}</li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#mmTechnical
+ * SignatureOriginTypeCode.mmTechnical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#Value
- * SignatureOriginTypeCode.Value}</li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#mmValue
+ * SignatureOriginTypeCode.mmValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#Bank
- * SignatureOriginTypeCode.Bank}</li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#mmBank
+ * SignatureOriginTypeCode.mmBank}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +90,7 @@ public class SignatureOriginTypeCode {
 	 * "Signature is provided for the contract validation of the file."</li>
 	 * </ul>
 	 */
-	public static final MMCode Contract = new MMCode() {
+	public static final MMCode mmContract = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contract";
@@ -121,7 +121,7 @@ public class SignatureOriginTypeCode {
 	 * "Signature is provided for the technical validation of the file."</li>
 	 * </ul>
 	 */
-	public static final MMCode Technical = new MMCode() {
+	public static final MMCode mmTechnical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Technical";
@@ -152,7 +152,7 @@ public class SignatureOriginTypeCode {
 	 * "Signature is provided for the value validation of the file."</li>
 	 * </ul>
 	 */
-	public static final MMCode Value = new MMCode() {
+	public static final MMCode mmValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
@@ -183,7 +183,7 @@ public class SignatureOriginTypeCode {
 	 * "Signature is provided for the bank validation of the file."</li>
 	 * </ul>
 	 */
-	public static final MMCode Bank = new MMCode() {
+	public static final MMCode mmBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bank";
@@ -196,12 +196,12 @@ public class SignatureOriginTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SignatureOriginTypeCode";
 				definition = "Specifies the origin of the signature.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureOriginTypeCode.Contract, com.tools20022.repository.codeset.SignatureOriginTypeCode.Technical,
-						com.tools20022.repository.codeset.SignatureOriginTypeCode.Value, com.tools20022.repository.codeset.SignatureOriginTypeCode.Bank);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureOriginTypeCode.mmContract, com.tools20022.repository.codeset.SignatureOriginTypeCode.mmTechnical,
+						com.tools20022.repository.codeset.SignatureOriginTypeCode.mmValue, com.tools20022.repository.codeset.SignatureOriginTypeCode.mmBank);
 				derivation_lazy = () -> Arrays.asList(SignatureOriginType1Code.mmObject());
 			}
 		});

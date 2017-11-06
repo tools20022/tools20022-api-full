@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstrumentSubStructureType1Choice#Code
- * InstrumentSubStructureType1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.InstrumentSubStructureType1Choice#mmCode
+ * InstrumentSubStructureType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstrumentSubStructureType1Choice#Proprietary
- * InstrumentSubStructureType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.InstrumentSubStructureType1Choice#mmProprietary
+ * InstrumentSubStructureType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstrumentSubStructureType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InstrumentSubStructureType1Code code;
 	/**
 	 * Instrument sub-structure type expressed as an ISO 20022 code.
 	 * <p>
@@ -76,8 +77,8 @@ public class InstrumentSubStructureType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#FinancialInstrumentSubStructure
-	 * Asset.FinancialInstrumentSubStructure}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmFinancialInstrumentSubStructure
+	 * Asset.mmFinancialInstrumentSubStructure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class InstrumentSubStructureType1Choice {
 	 * "Instrument sub-structure type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmFinancialInstrumentSubStructure;
 			componentContext_lazy = () -> InstrumentSubStructureType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.FinancialInstrumentSubStructure;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Instrument sub-structure type expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InstrumentSubStructureType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification40 proprietary;
 	/**
 	 * Instrument sub-structure type expressed as a proprietary code.
 	 * <p>
@@ -123,8 +125,8 @@ public class InstrumentSubStructureType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#FinancialInstrumentSubStructure
-	 * Asset.FinancialInstrumentSubStructure}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmFinancialInstrumentSubStructure
+	 * Asset.mmFinancialInstrumentSubStructure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,33 +146,49 @@ public class InstrumentSubStructureType1Choice {
 	 * "Instrument sub-structure type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmFinancialInstrumentSubStructure;
 			componentContext_lazy = () -> InstrumentSubStructureType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.FinancialInstrumentSubStructure;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Instrument sub-structure type expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification40.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification40.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstrumentSubStructureType1Choice.Code, com.tools20022.repository.choice.InstrumentSubStructureType1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstrumentSubStructureType1Choice.mmCode, com.tools20022.repository.choice.InstrumentSubStructureType1Choice.mmProprietary);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstrumentSubStructureType1Choice";
 				definition = "Choice of format for a instrument sub-structure type";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InstrumentSubStructureType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(InstrumentSubStructureType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification40 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification40 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

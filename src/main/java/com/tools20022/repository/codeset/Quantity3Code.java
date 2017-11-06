@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Quantity3Code#AllSecurities
- * Quantity3Code.AllSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.Quantity3Code#mmAllSecurities
+ * Quantity3Code.mmAllSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Quantity3Code#UnknownQuantity
- * Quantity3Code.UnknownQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.Quantity3Code#mmUnknownQuantity
+ * Quantity3Code.mmUnknownQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class Quantity3Code extends QuantityCode {
 	 * name} = "AllSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllSecurities = new MMCode() {
+	public static final MMCode mmAllSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllSecurities";
@@ -110,7 +110,7 @@ public class Quantity3Code extends QuantityCode {
 	 * name} = "UnknownQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownQuantity = new MMCode() {
+	public static final MMCode mmUnknownQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownQuantity";
@@ -121,13 +121,13 @@ public class Quantity3Code extends QuantityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("QALL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Quantity3Code";
 				definition = "Specifies quantity of a financial instrument";
 				nextVersions_lazy = () -> Arrays.asList(Quantity4Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Quantity3Code.AllSecurities, com.tools20022.repository.codeset.Quantity3Code.UnknownQuantity);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Quantity3Code.mmAllSecurities, com.tools20022.repository.codeset.Quantity3Code.mmUnknownQuantity);
 				trace_lazy = () -> QuantityCode.mmObject();
 			}
 		});

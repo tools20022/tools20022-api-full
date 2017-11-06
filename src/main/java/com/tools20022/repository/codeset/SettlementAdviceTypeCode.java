@@ -30,29 +30,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#UndertakingIssuance
- * SettlementAdviceTypeCode.UndertakingIssuance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#mmUndertakingIssuance
+ * SettlementAdviceTypeCode.mmUndertakingIssuance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#PaymentClaim
- * SettlementAdviceTypeCode.PaymentClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#mmPaymentClaim
+ * SettlementAdviceTypeCode.mmPaymentClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#UndertakingAmendment
- * SettlementAdviceTypeCode.UndertakingAmendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#mmUndertakingAmendment
+ * SettlementAdviceTypeCode.mmUndertakingAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#Termination
- * SettlementAdviceTypeCode.Termination}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#mmTermination
+ * SettlementAdviceTypeCode.mmTermination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#ManualChargesBooking
- * SettlementAdviceTypeCode.ManualChargesBooking}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#mmManualChargesBooking
+ * SettlementAdviceTypeCode.mmManualChargesBooking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#AutomaticChargesBooking
- * SettlementAdviceTypeCode.AutomaticChargesBooking}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#mmAutomaticChargesBooking
+ * SettlementAdviceTypeCode.mmAutomaticChargesBooking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#Refund
- * SettlementAdviceTypeCode.Refund}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#mmRefund
+ * SettlementAdviceTypeCode.mmRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#CorrespondentBankCharges
- * SettlementAdviceTypeCode.CorrespondentBankCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode#mmCorrespondentBankCharges
+ * SettlementAdviceTypeCode.mmCorrespondentBankCharges}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -107,7 +107,7 @@ public class SettlementAdviceTypeCode {
 	 * definition} = "Settlement advice related to an undertaking issuance."</li>
 	 * </ul>
 	 */
-	public static final MMCode UndertakingIssuance = new MMCode() {
+	public static final MMCode mmUndertakingIssuance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuance";
@@ -137,7 +137,7 @@ public class SettlementAdviceTypeCode {
 	 * definition} = "Settlement advice related to a claim for payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentClaim = new MMCode() {
+	public static final MMCode mmPaymentClaim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentClaim";
@@ -167,7 +167,7 @@ public class SettlementAdviceTypeCode {
 	 * definition} = "Settlement advice related to an undertaking amendment."</li>
 	 * </ul>
 	 */
-	public static final MMCode UndertakingAmendment = new MMCode() {
+	public static final MMCode mmUndertakingAmendment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendment";
@@ -197,7 +197,7 @@ public class SettlementAdviceTypeCode {
 	 * definition} = "Settlement advice related to an undertaking termination."</li>
 	 * </ul>
 	 */
-	public static final MMCode Termination = new MMCode() {
+	public static final MMCode mmTermination = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
@@ -228,7 +228,7 @@ public class SettlementAdviceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ManualChargesBooking = new MMCode() {
+	public static final MMCode mmManualChargesBooking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualChargesBooking";
@@ -259,7 +259,7 @@ public class SettlementAdviceTypeCode {
 	 * "Settlement advice related to an automatic booking of charges."</li>
 	 * </ul>
 	 */
-	public static final MMCode AutomaticChargesBooking = new MMCode() {
+	public static final MMCode mmAutomaticChargesBooking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticChargesBooking";
@@ -289,7 +289,7 @@ public class SettlementAdviceTypeCode {
 	 * definition} = "Settlement advice related to a refund. "</li>
 	 * </ul>
 	 */
-	public static final MMCode Refund = new MMCode() {
+	public static final MMCode mmRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refund";
@@ -320,7 +320,7 @@ public class SettlementAdviceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CorrespondentBankCharges = new MMCode() {
+	public static final MMCode mmCorrespondentBankCharges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankCharges";
@@ -333,15 +333,15 @@ public class SettlementAdviceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISSU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementAdviceTypeCode";
 				definition = "Specifies the type of settlement advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementAdviceTypeCode.UndertakingIssuance, com.tools20022.repository.codeset.SettlementAdviceTypeCode.PaymentClaim,
-						com.tools20022.repository.codeset.SettlementAdviceTypeCode.UndertakingAmendment, com.tools20022.repository.codeset.SettlementAdviceTypeCode.Termination,
-						com.tools20022.repository.codeset.SettlementAdviceTypeCode.ManualChargesBooking, com.tools20022.repository.codeset.SettlementAdviceTypeCode.AutomaticChargesBooking,
-						com.tools20022.repository.codeset.SettlementAdviceTypeCode.Refund, com.tools20022.repository.codeset.SettlementAdviceTypeCode.CorrespondentBankCharges);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementAdviceTypeCode.mmUndertakingIssuance, com.tools20022.repository.codeset.SettlementAdviceTypeCode.mmPaymentClaim,
+						com.tools20022.repository.codeset.SettlementAdviceTypeCode.mmUndertakingAmendment, com.tools20022.repository.codeset.SettlementAdviceTypeCode.mmTermination,
+						com.tools20022.repository.codeset.SettlementAdviceTypeCode.mmManualChargesBooking, com.tools20022.repository.codeset.SettlementAdviceTypeCode.mmAutomaticChargesBooking,
+						com.tools20022.repository.codeset.SettlementAdviceTypeCode.mmRefund, com.tools20022.repository.codeset.SettlementAdviceTypeCode.mmCorrespondentBankCharges);
 				derivation_lazy = () -> Arrays.asList(SettlementAdviceType1Code.mmObject());
 			}
 		});

@@ -42,17 +42,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5#AmountPriceType
- * AmountPricePerFinancialInstrumentQuantity5.AmountPriceType}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5#mmAmountPriceType
+ * AmountPricePerFinancialInstrumentQuantity5.mmAmountPriceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5#PriceValue
- * AmountPricePerFinancialInstrumentQuantity5.PriceValue}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5#mmPriceValue
+ * AmountPricePerFinancialInstrumentQuantity5.mmPriceValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5#FinancialInstrumentQuantity
- * AmountPricePerFinancialInstrumentQuantity5.FinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5#mmFinancialInstrumentQuantity
+ * AmountPricePerFinancialInstrumentQuantity5.mmFinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5#PriceFixingDate
- * AmountPricePerFinancialInstrumentQuantity5.PriceFixingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5#mmPriceFixingDate
+ * AmountPricePerFinancialInstrumentQuantity5.mmPriceFixingDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,8 +61,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,6 +79,7 @@ import java.util.function.Supplier;
 public class AmountPricePerFinancialInstrumentQuantity5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YieldedOrValueType1Choice amountPriceType;
 	/**
 	 * Type of amount price.
 	 * <p>
@@ -92,8 +93,8 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#TypeOfAmount
-	 * SecuritiesPricing.TypeOfAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfAmount
+	 * SecuritiesPricing.mmTypeOfAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +113,21 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * definition} = "Type of amount price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfAmount;
 			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.TypeOfAmount;
 			isDerived = false;
 			xmlTag = "AmtPricTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPriceType";
 			definition = "Type of amount price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> YieldedOrValueType1Choice.mmObject();
 		}
 	};
+	protected PriceRateOrAmountChoice priceValue;
 	/**
 	 * Value given to a price.
 	 * <p>
@@ -139,8 +141,8 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +161,21 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * definition} = "Value given to a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "PricVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Value given to a price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice financialInstrumentQuantity;
 	/**
 	 * Quantity of financial instrument.
 	 * <p>
@@ -185,8 +188,8 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,21 +208,22 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * definition} = "Quantity of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "FinInstrmQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
 			definition = "Quantity of financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected ISODate priceFixingDate;
 	/**
 	 * Date at which the actual price for a financial instrument is fixed.
 	 * <p>
@@ -232,8 +236,8 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Date
-	 * SecuritiesPricing.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDate
+	 * SecuritiesPricing.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,17 +257,17 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * "Date at which the actual price for a financial instrument is fixed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceFixingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmDate;
 			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Date;
 			isDerived = false;
 			xmlTag = "PricFxgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceFixingDate";
 			definition = "Date at which the actual price for a financial instrument is fixed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -271,10 +275,10 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.AmountPriceType, com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.PriceValue,
-						com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.FinancialInstrumentQuantity, com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.PriceFixingDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmAmountPriceType, com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmPriceValue,
+						com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmFinancialInstrumentQuantity, com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmPriceFixingDate);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -288,5 +292,37 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YieldedOrValueType1Choice getAmountPriceType() {
+		return amountPriceType;
+	}
+
+	public void setAmountPriceType(YieldedOrValueType1Choice amountPriceType) {
+		this.amountPriceType = amountPriceType;
+	}
+
+	public PriceRateOrAmountChoice getPriceValue() {
+		return priceValue;
+	}
+
+	public void setPriceValue(PriceRateOrAmountChoice priceValue) {
+		this.priceValue = priceValue;
+	}
+
+	public FinancialInstrumentQuantity1Choice getFinancialInstrumentQuantity() {
+		return financialInstrumentQuantity;
+	}
+
+	public void setFinancialInstrumentQuantity(FinancialInstrumentQuantity1Choice financialInstrumentQuantity) {
+		this.financialInstrumentQuantity = financialInstrumentQuantity;
+	}
+
+	public ISODate getPriceFixingDate() {
+		return priceFixingDate;
+	}
+
+	public void setPriceFixingDate(ISODate priceFixingDate) {
+		this.priceFixingDate = priceFixingDate;
 	}
 }

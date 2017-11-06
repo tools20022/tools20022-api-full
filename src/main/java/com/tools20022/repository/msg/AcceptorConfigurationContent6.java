@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Content of the acceptor configuration.
@@ -35,29 +36,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#ReplaceConfiguration
- * AcceptorConfigurationContent6.ReplaceConfiguration}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmReplaceConfiguration
+ * AcceptorConfigurationContent6.mmReplaceConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#TMSProtocolParameters
- * AcceptorConfigurationContent6.TMSProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmTMSProtocolParameters
+ * AcceptorConfigurationContent6.mmTMSProtocolParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#AcquirerProtocolParameters
- * AcceptorConfigurationContent6.AcquirerProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent6.mmAcquirerProtocolParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#MerchantParameters
- * AcceptorConfigurationContent6.MerchantParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmMerchantParameters
+ * AcceptorConfigurationContent6.mmMerchantParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#TerminalParameters
- * AcceptorConfigurationContent6.TerminalParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmTerminalParameters
+ * AcceptorConfigurationContent6.mmTerminalParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#ApplicationParameters
- * AcceptorConfigurationContent6.ApplicationParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmApplicationParameters
+ * AcceptorConfigurationContent6.mmApplicationParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#HostCommunicationParameters
- * AcceptorConfigurationContent6.HostCommunicationParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmHostCommunicationParameters
+ * AcceptorConfigurationContent6.mmHostCommunicationParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#SecurityParameters
- * AcceptorConfigurationContent6.SecurityParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmSecurityParameters
+ * AcceptorConfigurationContent6.mmSecurityParameters}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorConfigurationContent6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator replaceConfiguration;
 	/**
 	 * True if the whole configuration related to the terminal manager has to be
 	 * replaced by the configuration included in the message content.
@@ -117,11 +119,11 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#ReplaceConfiguration
-	 * AcceptorConfigurationContent5.ReplaceConfiguration}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmReplaceConfiguration
+	 * AcceptorConfigurationContent5.mmReplaceConfiguration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReplaceConfiguration = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReplaceConfiguration = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
 			isDerived = false;
@@ -129,12 +131,13 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplaceConfiguration";
 			definition = "True if the whole configuration related to the terminal manager has to be replaced by the configuration included in the message content.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.ReplaceConfiguration;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.mmReplaceConfiguration;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TMSProtocolParameters2> tMSProtocolParameters;
 	/**
 	 * Configuration parameters of the TMS protocol between a POI and a terminal
 	 * manager.
@@ -165,11 +168,11 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#TMSProtocolParameters
-	 * AcceptorConfigurationContent5.TMSProtocolParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmTMSProtocolParameters
+	 * AcceptorConfigurationContent5.mmTMSProtocolParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TMSProtocolParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTMSProtocolParameters = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
 			isDerived = false;
@@ -177,12 +180,13 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolParameters";
 			definition = "Configuration parameters of the TMS protocol between a POI and a terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.TMSProtocolParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.mmTMSProtocolParameters;
 			minOccurs = 0;
-			type_lazy = () -> TMSProtocolParameters2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AcquirerProtocolParameters10> acquirerProtocolParameters;
 	/**
 	 * Acceptor parameters dedicated to an acquirer protocol.
 	 * <p>
@@ -216,25 +220,26 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#AcquirerProtocolParameters
-	 * AcceptorConfigurationContent5.AcquirerProtocolParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmAcquirerProtocolParameters
+	 * AcceptorConfigurationContent5.mmAcquirerProtocolParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcquirerProtocolParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcquirerProtocolParameters = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
+			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrrPrtcolParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerProtocolParameters";
 			definition = "Acceptor parameters dedicated to an acquirer protocol.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.AcquirerProtocolParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.mmAcquirerProtocolParameters;
 			minOccurs = 0;
-			type_lazy = () -> AcquirerProtocolParameters10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.MerchantConfigurationParameters3> merchantParameters;
 	/**
 	 * Acceptor parameters dedicated to the merchant.
 	 * <p>
@@ -264,11 +269,11 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#MerchantParameters
-	 * AcceptorConfigurationContent5.MerchantParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmMerchantParameters
+	 * AcceptorConfigurationContent5.mmMerchantParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MerchantParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMerchantParameters = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
 			isDerived = false;
@@ -276,11 +281,12 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
 			definition = "Acceptor parameters dedicated to the merchant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.MerchantParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.mmMerchantParameters;
 			minOccurs = 0;
-			complexType_lazy = () -> MerchantConfigurationParameters3.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PaymentTerminalParameters4> terminalParameters;
 	/**
 	 * Manufacturer configuration parameters of the point of interaction.
 	 * <p>
@@ -311,11 +317,11 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#TerminalParameters
-	 * AcceptorConfigurationContent5.TerminalParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmTerminalParameters
+	 * AcceptorConfigurationContent5.mmTerminalParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TerminalParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTerminalParameters = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
 			isDerived = false;
@@ -323,11 +329,12 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalParameters";
 			definition = "Manufacturer configuration parameters of the point of interaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.TerminalParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.mmTerminalParameters;
 			minOccurs = 0;
-			complexType_lazy = () -> PaymentTerminalParameters4.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ApplicationParameters6> applicationParameters;
 	/**
 	 * Acceptor parameters dedicated to a payment application of the point of
 	 * interaction.
@@ -340,8 +347,8 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ApplicationParameters
-	 * AcceptorConfiguration.ApplicationParameters}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationParameters
+	 * AcceptorConfiguration.mmApplicationParameters}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -363,25 +370,26 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#ApplicationParameters
-	 * AcceptorConfigurationContent5.ApplicationParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmApplicationParameters
+	 * AcceptorConfigurationContent5.mmApplicationParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ApplicationParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmApplicationParameters = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationParameters;
 			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.ApplicationParameters;
 			isDerived = false;
 			xmlTag = "ApplParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
 			definition = "Acceptor parameters dedicated to a payment application of the point of interaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.ApplicationParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.mmApplicationParameters;
 			minOccurs = 0;
-			type_lazy = () -> ApplicationParameters6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ApplicationParameters6.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.HostCommunicationParameter4> hostCommunicationParameters;
 	/**
 	 * Acceptor parameters dedicated to the communication with an acquirer host
 	 * or a terminal manager host.
@@ -395,8 +403,8 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#TerminalManagementSystem
-	 * AcceptorConfiguration.TerminalManagementSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTerminalManagementSystem
+	 * AcceptorConfiguration.mmTerminalManagementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -418,25 +426,26 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#HostCommunicationParameters
-	 * AcceptorConfigurationContent5.HostCommunicationParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmHostCommunicationParameters
+	 * AcceptorConfigurationContent5.mmHostCommunicationParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd HostCommunicationParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHostCommunicationParameters = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmTerminalManagementSystem;
 			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.TerminalManagementSystem;
 			isDerived = false;
 			xmlTag = "HstComParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCommunicationParameters";
 			definition = "Acceptor parameters dedicated to the communication with an acquirer host or a terminal manager host.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.HostCommunicationParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.mmHostCommunicationParameters;
 			minOccurs = 0;
-			type_lazy = () -> HostCommunicationParameter4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityParameters6> securityParameters;
 	/**
 	 * Point of interaction parameters related to the security of software
 	 * application and application protocol.
@@ -469,11 +478,11 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#SecurityParameters
-	 * AcceptorConfigurationContent5.SecurityParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmSecurityParameters
+	 * AcceptorConfigurationContent5.mmSecurityParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityParameters = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcceptorConfigurationContent6.mmObject();
 			isDerived = false;
@@ -481,21 +490,21 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityParameters";
 			definition = "Point of interaction parameters related to the security of software application and application protocol.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.SecurityParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent5.mmSecurityParameters;
 			minOccurs = 0;
-			complexType_lazy = () -> SecurityParameters6.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityParameters6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent6.ReplaceConfiguration, com.tools20022.repository.msg.AcceptorConfigurationContent6.TMSProtocolParameters,
-						com.tools20022.repository.msg.AcceptorConfigurationContent6.AcquirerProtocolParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.MerchantParameters,
-						com.tools20022.repository.msg.AcceptorConfigurationContent6.TerminalParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.ApplicationParameters,
-						com.tools20022.repository.msg.AcceptorConfigurationContent6.HostCommunicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.SecurityParameters);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent6.mmReplaceConfiguration, com.tools20022.repository.msg.AcceptorConfigurationContent6.mmTMSProtocolParameters,
+						com.tools20022.repository.msg.AcceptorConfigurationContent6.mmAcquirerProtocolParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.mmMerchantParameters,
+						com.tools20022.repository.msg.AcceptorConfigurationContent6.mmTerminalParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.mmApplicationParameters,
+						com.tools20022.repository.msg.AcceptorConfigurationContent6.mmHostCommunicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.mmSecurityParameters);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationContent6";
 				definition = "Content of the acceptor configuration.";
@@ -503,5 +512,69 @@ public class AcceptorConfigurationContent6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getReplaceConfiguration() {
+		return replaceConfiguration;
+	}
+
+	public void setReplaceConfiguration(TrueFalseIndicator replaceConfiguration) {
+		this.replaceConfiguration = replaceConfiguration;
+	}
+
+	public List<TMSProtocolParameters2> getTMSProtocolParameters() {
+		return tMSProtocolParameters;
+	}
+
+	public void setTMSProtocolParameters(List<com.tools20022.repository.msg.TMSProtocolParameters2> tMSProtocolParameters) {
+		this.tMSProtocolParameters = tMSProtocolParameters;
+	}
+
+	public List<AcquirerProtocolParameters10> getAcquirerProtocolParameters() {
+		return acquirerProtocolParameters;
+	}
+
+	public void setAcquirerProtocolParameters(List<com.tools20022.repository.msg.AcquirerProtocolParameters10> acquirerProtocolParameters) {
+		this.acquirerProtocolParameters = acquirerProtocolParameters;
+	}
+
+	public List<MerchantConfigurationParameters3> getMerchantParameters() {
+		return merchantParameters;
+	}
+
+	public void setMerchantParameters(List<com.tools20022.repository.msg.MerchantConfigurationParameters3> merchantParameters) {
+		this.merchantParameters = merchantParameters;
+	}
+
+	public List<PaymentTerminalParameters4> getTerminalParameters() {
+		return terminalParameters;
+	}
+
+	public void setTerminalParameters(List<com.tools20022.repository.msg.PaymentTerminalParameters4> terminalParameters) {
+		this.terminalParameters = terminalParameters;
+	}
+
+	public List<ApplicationParameters6> getApplicationParameters() {
+		return applicationParameters;
+	}
+
+	public void setApplicationParameters(List<com.tools20022.repository.msg.ApplicationParameters6> applicationParameters) {
+		this.applicationParameters = applicationParameters;
+	}
+
+	public List<HostCommunicationParameter4> getHostCommunicationParameters() {
+		return hostCommunicationParameters;
+	}
+
+	public void setHostCommunicationParameters(List<com.tools20022.repository.msg.HostCommunicationParameter4> hostCommunicationParameters) {
+		this.hostCommunicationParameters = hostCommunicationParameters;
+	}
+
+	public List<SecurityParameters6> getSecurityParameters() {
+		return securityParameters;
+	}
+
+	public void setSecurityParameters(List<com.tools20022.repository.msg.SecurityParameters6> securityParameters) {
+		this.securityParameters = securityParameters;
 	}
 }

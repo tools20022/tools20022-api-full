@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.EventType1Choice#Code
- * EventType1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.EventType1Choice#mmCode
+ * EventType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventType1Choice#Proprietary
- * EventType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.EventType1Choice#mmProprietary
+ * EventType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EventType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalSystemEventType1Code code;
 	/**
 	 * Type of the event, in a coded form as published in an external list.
 	 * <p>
@@ -87,7 +88,7 @@ public class EventType1Choice {
 	 * "Type of the event, in a coded form as published in an external list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EventType1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class EventType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of the event, in a coded form as published in an external list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalSystemEventType1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Type of the event, in a free text form.
 	 * <p>
@@ -127,7 +129,7 @@ public class EventType1Choice {
 	 * definition} = "Type of the event, in a free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EventType1Choice.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class EventType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of the event, in a free text form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class EventType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EventType1Choice.Code, com.tools20022.repository.choice.EventType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EventType1Choice.mmCode, com.tools20022.repository.choice.EventType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventType1Choice";
 				definition = "Type of the event.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalSystemEventType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalSystemEventType1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

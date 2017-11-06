@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.VotingCondition;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * List of the different methods that can be used to vote.
@@ -39,14 +40,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteMethods2#VoteThroughNetwork
- * VoteMethods2.VoteThroughNetwork}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#VoteByMail
- * VoteMethods2.VoteByMail}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#ElectronicVote
- * VoteMethods2.ElectronicVote}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#VoteByTelephone
- * VoteMethods2.VoteByTelephone}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteMethods2#mmVoteThroughNetwork
+ * VoteMethods2.mmVoteThroughNetwork}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#mmVoteByMail
+ * VoteMethods2.mmVoteByMail}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#mmElectronicVote
+ * VoteMethods2.mmElectronicVote}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#mmVoteByTelephone
+ * VoteMethods2.mmVoteByTelephone}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VoteMethods2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AnyBICIdentifier> voteThroughNetwork;
 	/**
 	 * Network address through which a voting party can cast its vote via a
 	 * structured message.
@@ -84,8 +86,8 @@ public class VoteMethods2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VotingCondition#VoteLocation
-	 * VotingCondition.VoteLocation}</li>
+	 * {@linkplain com.tools20022.repository.entity.VotingCondition#mmVoteLocation
+	 * VotingCondition.mmVoteLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +107,21 @@ public class VoteMethods2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteThroughNetwork = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteThroughNetwork = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmVoteLocation;
 			componentContext_lazy = () -> VoteMethods2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.VoteLocation;
 			isDerived = false;
 			xmlTag = "VoteThrghNtwk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteThroughNetwork";
 			definition = "Network address through which a voting party can cast its vote via a structured message.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PostalAddress1> voteByMail;
 	/**
 	 * Specifies the address where voting ballot can be sent.
 	 * <p>
@@ -149,21 +152,22 @@ public class VoteMethods2 {
 	 * definition} = "Specifies the address where voting ballot can be sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VoteByMail = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVoteByMail = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> VoteMethods2.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> VoteMethods2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteByMail";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteByMail";
 			definition = "Specifies the address where voting ballot can be sent.";
-			minOccurs = 0;
 			maxOccurs = 5;
-			type_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CommunicationAddress4> electronicVote;
 	/**
 	 * Electronic address, e-mail or website, where a security holder can vote.
 	 * <p>
@@ -196,21 +200,22 @@ public class VoteMethods2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ElectronicVote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmElectronicVote = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> VoteMethods2.mmObject();
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
+			componentContext_lazy = () -> VoteMethods2.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncVote";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicVote";
 			definition = "Electronic address, e-mail or website, where a security holder can vote.";
-			minOccurs = 0;
 			maxOccurs = 5;
-			type_lazy = () -> CommunicationAddress4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
 		}
 	};
+	protected List<Max35Text> voteByTelephone;
 	/**
 	 * Telephone number providing access to an automated voting system.
 	 * <p>
@@ -242,17 +247,17 @@ public class VoteMethods2 {
 	 * "Telephone number providing access to an automated voting system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteByTelephone = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteByTelephone = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> VoteMethods2.mmObject();
 			businessComponentTrace_lazy = () -> PhoneAddress.mmObject();
+			componentContext_lazy = () -> VoteMethods2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteByTel";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteByTelephone";
 			definition = "Telephone number providing access to an automated voting system.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -260,15 +265,47 @@ public class VoteMethods2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteMethods2.VoteThroughNetwork, com.tools20022.repository.msg.VoteMethods2.VoteByMail, com.tools20022.repository.msg.VoteMethods2.ElectronicVote,
-						com.tools20022.repository.msg.VoteMethods2.VoteByTelephone);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteMethods2.mmVoteThroughNetwork, com.tools20022.repository.msg.VoteMethods2.mmVoteByMail,
+						com.tools20022.repository.msg.VoteMethods2.mmElectronicVote, com.tools20022.repository.msg.VoteMethods2.mmVoteByTelephone);
 				trace_lazy = () -> VotingCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VoteMethods2";
 				definition = "List of the different methods that can be used to vote.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AnyBICIdentifier> getVoteThroughNetwork() {
+		return voteThroughNetwork;
+	}
+
+	public void setVoteThroughNetwork(List<AnyBICIdentifier> voteThroughNetwork) {
+		this.voteThroughNetwork = voteThroughNetwork;
+	}
+
+	public List<PostalAddress1> getVoteByMail() {
+		return voteByMail;
+	}
+
+	public void setVoteByMail(List<com.tools20022.repository.msg.PostalAddress1> voteByMail) {
+		this.voteByMail = voteByMail;
+	}
+
+	public List<CommunicationAddress4> getElectronicVote() {
+		return electronicVote;
+	}
+
+	public void setElectronicVote(List<com.tools20022.repository.msg.CommunicationAddress4> electronicVote) {
+		this.electronicVote = electronicVote;
+	}
+
+	public List<Max35Text> getVoteByTelephone() {
+		return voteByTelephone;
+	}
+
+	public void setVoteByTelephone(List<Max35Text> voteByTelephone) {
+		this.voteByTelephone = voteByTelephone;
 	}
 }

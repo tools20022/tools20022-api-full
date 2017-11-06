@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.OrderStatusAndReason3;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -81,11 +82,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#OrderDetailsOrIndividualOrderDetailsRule
- * OrderInstructionStatusReportV02.OrderDetailsOrIndividualOrderDetailsRule}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmOrderDetailsOrIndividualOrderDetailsRule
+ * OrderInstructionStatusReportV02.mmOrderDetailsOrIndividualOrderDetailsRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#RelatedReferenceOrOtherReferenceRule
- * OrderInstructionStatusReportV02.RelatedReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmRelatedReferenceOrOtherReferenceRule
+ * OrderInstructionStatusReportV02.mmRelatedReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -95,27 +96,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#OtherReference
- * OrderInstructionStatusReportV02.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmOtherReference
+ * OrderInstructionStatusReportV02.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#RelatedReference
- * OrderInstructionStatusReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmRelatedReference
+ * OrderInstructionStatusReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#MasterReference
- * OrderInstructionStatusReportV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmMasterReference
+ * OrderInstructionStatusReportV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#OrderDetailsReport
- * OrderInstructionStatusReportV02.OrderDetailsReport}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmOrderDetailsReport
+ * OrderInstructionStatusReportV02.mmOrderDetailsReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#IndividualOrderDetailsReport
- * OrderInstructionStatusReportV02.IndividualOrderDetailsReport}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmIndividualOrderDetailsReport
+ * OrderInstructionStatusReportV02.mmIndividualOrderDetailsReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#identifier
- * OrderInstructionStatusReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.016.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -152,11 +151,11 @@ public class OrderInstructionStatusReportV02 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#OrderDetailsReport
-	 * OrderInstructionStatusReportV02.OrderDetailsReport}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmOrderDetailsReport
+	 * OrderInstructionStatusReportV02.mmOrderDetailsReport}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#IndividualOrderDetailsReport
-	 * OrderInstructionStatusReportV02.IndividualOrderDetailsReport}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmIndividualOrderDetailsReport
+	 * OrderInstructionStatusReportV02.mmIndividualOrderDetailsReport}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -176,14 +175,14 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor OrderDetailsOrIndividualOrderDetailsRule = new MMXor() {
+	public static final MMXor mmOrderDetailsOrIndividualOrderDetailsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetailsOrIndividualOrderDetailsRule";
 			definition = "If OrderDetailsReport is present, then no occurrence of IndividualOrderDetailsReport is allowed. If OrderDetailsReport is not present, then at least one occurrence of IndividualOrderDetailsReport must be present.";
 			messageDefinition_lazy = () -> OrderInstructionStatusReportV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.OrderDetailsReport,
-					com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.IndividualOrderDetailsReport);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOrderDetailsReport,
+					com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmIndividualOrderDetailsReport);
 		}
 	};
 	/**
@@ -197,11 +196,11 @@ public class OrderInstructionStatusReportV02 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#OtherReference
-	 * OrderInstructionStatusReportV02.OtherReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmOtherReference
+	 * OrderInstructionStatusReportV02.mmOtherReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#RelatedReference
-	 * OrderInstructionStatusReportV02.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmRelatedReference
+	 * OrderInstructionStatusReportV02.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -221,15 +220,17 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor RelatedReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor mmRelatedReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "At least one occurrence of either RelatedReference or OtherReference must be present, but not both.";
 			messageDefinition_lazy = () -> OrderInstructionStatusReportV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.OtherReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.RelatedReference);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOtherReference,
+					com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmRelatedReference);
 		}
 	};
+	protected List<AdditionalReference3> otherReference;
 	/**
 	 * Reference to a linked message sent in a proprietary way or reference of a
 	 * system.
@@ -256,17 +257,18 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked message sent in a proprietary way or reference of a system.";
-			minOccurs = 1;
 			maxOccurs = 2;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -291,17 +293,18 @@ public class OrderInstructionStatusReportV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 1;
 			maxOccurs = 2;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 masterReference;
 	/**
 	 * Reference to a multiple order or bulk order that represents the common
 	 * reference of several individual orders.
@@ -328,17 +331,18 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference to a multiple order or bulk order that represents the common reference of several individual orders.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected OrderStatusAndReason3 orderDetailsReport;
 	/**
 	 * Status report details of a bulk or multiple or switch order that was
 	 * previously received.
@@ -365,17 +369,18 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OrderDetailsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOrderDetailsReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrdrDtlsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetailsReport";
 			definition = "Status report details of a bulk or multiple or switch order that was previously received.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OrderStatusAndReason3.mmObject();
 		}
 	};
+	protected List<IndividualOrderStatusAndReason1> individualOrderDetailsReport;
 	/**
 	 * Status report details of the individual orders of a bulk or multiple
 	 * order that was previously received.
@@ -402,7 +407,7 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IndividualOrderDetailsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIndividualOrderDetailsReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IndvOrdrDtlsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -410,33 +415,6 @@ public class OrderInstructionStatusReportV02 {
 			definition = "Status report details of the individual orders of a bulk or multiple order that was previously received.";
 			minOccurs = 1;
 			complexType_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "016"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "016";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -448,18 +426,65 @@ public class OrderInstructionStatusReportV02 {
 				definition = "Scope\r\nThe OrderInstructionStatusReport is sent by an executing party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message reports the status of an order from the time the executing party receives the order until the order is executed.\r\nUsage\r\nThe OrderInstructionStatusReport message is sent by an executing party to the instructing party to report on the status of a subscription, redemption or a switch order.\r\nThe message can be used to report one of the following:\r\n- a received status, or\r\n- an accepted status, or\r\n- a sent to next party status, or\r\n- an already executed status, or\r\n- a cancelled status, or\r\n- a conditionally accepted status, or\r\n- a rejected status, or\r\n- a suspended status, or\r\n- an in-repair status (at the individual order level only), or\r\n- repaired conditions (at the individual order level only).\r\nFor subscription and redemption orders, the OrderInstructionStatusReport message covers both bulk and multiple categories of orders, and this message may provide the status either at the bulk or at the individual level.\r\nFor a switch order, this message provides the status of the whole order, ie, it is not possible to accept one leg and to reject the other leg, the entire switch order has to be rejected. In order to identify which leg within the switch is causing a problem, the redemption or subscription leg identification is used.";
 				nextVersions_lazy = () -> Arrays.asList(OrderInstructionStatusReportV03.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.OrderDetailsOrIndividualOrderDetailsRule,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.RelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOrderDetailsOrIndividualOrderDetailsRule,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmRelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "setr.016.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
 				xmlName = "setr.016.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.OtherReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.RelatedReference,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.MasterReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.OrderDetailsReport,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.IndividualOrderDetailsReport);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOtherReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmRelatedReference,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmMasterReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOrderDetailsReport,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmIndividualOrderDetailsReport);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "016";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AdditionalReference3> getOtherReference() {
+		return otherReference;
+	}
+
+	public void setOtherReference(List<AdditionalReference3> otherReference) {
+		this.otherReference = otherReference;
+	}
+
+	public List<AdditionalReference3> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public AdditionalReference3 getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(AdditionalReference3 masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public OrderStatusAndReason3 getOrderDetailsReport() {
+		return orderDetailsReport;
+	}
+
+	public void setOrderDetailsReport(OrderStatusAndReason3 orderDetailsReport) {
+		this.orderDetailsReport = orderDetailsReport;
+	}
+
+	public List<IndividualOrderStatusAndReason1> getIndividualOrderDetailsReport() {
+		return individualOrderDetailsReport;
+	}
+
+	public void setIndividualOrderDetailsReport(List<IndividualOrderStatusAndReason1> individualOrderDetailsReport) {
+		this.individualOrderDetailsReport = individualOrderDetailsReport;
 	}
 }

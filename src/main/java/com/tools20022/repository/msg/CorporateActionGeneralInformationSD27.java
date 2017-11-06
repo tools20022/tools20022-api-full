@@ -38,27 +38,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#PlaceAndName
- * CorporateActionGeneralInformationSD27.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#mmPlaceAndName
+ * CorporateActionGeneralInformationSD27.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#EventGroup
- * CorporateActionGeneralInformationSD27.EventGroup}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#mmEventGroup
+ * CorporateActionGeneralInformationSD27.mmEventGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#EventType
- * CorporateActionGeneralInformationSD27.EventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#mmEventType
+ * CorporateActionGeneralInformationSD27.mmEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#SubEventType
- * CorporateActionGeneralInformationSD27.SubEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#mmSubEventType
+ * CorporateActionGeneralInformationSD27.mmSubEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#RedemptionIdentification
- * CorporateActionGeneralInformationSD27.RedemptionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD27#mmRedemptionIdentification
+ * CorporateActionGeneralInformationSD27.mmRedemptionIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionGeneralInformationSD27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -106,11 +107,11 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#PlaceAndName
-	 * CorporateActionGeneralInformationSD25.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#mmPlaceAndName
+	 * CorporateActionGeneralInformationSD25.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
@@ -118,12 +119,13 @@ public class CorporateActionGeneralInformationSD27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.PlaceAndName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.mmPlaceAndName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected EventGroup2Code eventGroup;
 	/**
 	 * DTC processing domain/ category for event types.
 	 * <p>
@@ -153,11 +155,11 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#EventGroup
-	 * CorporateActionGeneralInformationSD25.EventGroup}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#mmEventGroup
+	 * CorporateActionGeneralInformationSD25.mmEventGroup}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventGroup = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
@@ -165,12 +167,13 @@ public class CorporateActionGeneralInformationSD27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventGroup";
 			definition = "DTC processing domain/ category for event types.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.EventGroup;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.mmEventGroup;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EventGroup2Code.mmObject();
 		}
 	};
+	protected ExtendedEventType4Code eventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action event type name. Used in place for the events that cannot be
@@ -206,11 +209,11 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#EventType
-	 * CorporateActionGeneralInformationSD25.EventType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#mmEventType
+	 * CorporateActionGeneralInformationSD25.mmEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
@@ -218,12 +221,13 @@ public class CorporateActionGeneralInformationSD27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.EventType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.mmEventType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType4Code.mmObject();
 		}
 	};
+	protected DTCCSubEventType5Code subEventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action sub event type name further defines the event type.
@@ -256,11 +260,11 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#SubEventType
-	 * CorporateActionGeneralInformationSD25.SubEventType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#mmSubEventType
+	 * CorporateActionGeneralInformationSD25.mmSubEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
@@ -268,12 +272,13 @@ public class CorporateActionGeneralInformationSD27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.SubEventType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.mmSubEventType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType5Code.mmObject();
 		}
 	};
+	protected Max10NumericText redemptionIdentification;
 	/**
 	 * Unique number systemically assigned to all Lottery and Non-Lottery events
 	 * announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/
@@ -307,11 +312,11 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#RedemptionIdentification
-	 * CorporateActionGeneralInformationSD25.RedemptionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25#mmRedemptionIdentification
+	 * CorporateActionGeneralInformationSD25.mmRedemptionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
@@ -319,9 +324,9 @@ public class CorporateActionGeneralInformationSD27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionIdentification";
 			definition = "Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.RedemptionIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD25.mmRedemptionIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
 		}
 	};
@@ -329,10 +334,10 @@ public class CorporateActionGeneralInformationSD27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.PlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.EventGroup,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.EventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.SubEventType,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.RedemptionIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmEventGroup,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmSubEventType,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmRedemptionIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD27";
 				definition = "Provides additional information regarding corporate action general information details.";
@@ -340,5 +345,45 @@ public class CorporateActionGeneralInformationSD27 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public EventGroup2Code getEventGroup() {
+		return eventGroup;
+	}
+
+	public void setEventGroup(EventGroup2Code eventGroup) {
+		this.eventGroup = eventGroup;
+	}
+
+	public ExtendedEventType4Code getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(ExtendedEventType4Code eventType) {
+		this.eventType = eventType;
+	}
+
+	public DTCCSubEventType5Code getSubEventType() {
+		return subEventType;
+	}
+
+	public void setSubEventType(DTCCSubEventType5Code subEventType) {
+		this.subEventType = subEventType;
+	}
+
+	public Max10NumericText getRedemptionIdentification() {
+		return redemptionIdentification;
+	}
+
+	public void setRedemptionIdentification(Max10NumericText redemptionIdentification) {
+		this.redemptionIdentification = redemptionIdentification;
 	}
 }

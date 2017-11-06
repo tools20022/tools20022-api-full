@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.InRepairStatus2;
 import com.tools20022.repository.msg.InRepairStatusReason4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of formats for the reason for an in repair status.
@@ -37,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InRepairStatusReason4Choice#NoSpecifiedReason
- * InRepairStatusReason4Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.InRepairStatusReason4Choice#mmNoSpecifiedReason
+ * InRepairStatusReason4Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InRepairStatusReason4Choice#ReasonDetails
- * InRepairStatusReason4Choice.ReasonDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.InRepairStatusReason4Choice#mmReasonDetails
+ * InRepairStatusReason4Choice.mmReasonDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InRepairStatusReason4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * No reason available or to report for the in repair status.
 	 * <p>
@@ -80,8 +82,8 @@ public class InRepairStatusReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,25 +104,26 @@ public class InRepairStatusReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#NoSpecifiedReason
-	 * ConditionallyAcceptedStatus3Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#mmNoSpecifiedReason
+	 * ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> InRepairStatusReason4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "No reason available or to report for the in repair status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.NoSpecifiedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<InRepairStatusReason4> reasonDetails;
 	/**
 	 * Reason for the in repair status, expressed as a code.
 	 * <p>
@@ -132,8 +135,8 @@ public class InRepairStatusReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConditionallyAcceptedStatus
-	 * SecuritiesOrderStatus.ConditionallyAcceptedStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConditionallyAcceptedStatus
+	 * SecuritiesOrderStatus.mmConditionallyAcceptedStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,33 +156,33 @@ public class InRepairStatusReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#ReasonDetails
-	 * ConditionallyAcceptedStatus3Choice.ReasonDetails}</li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#mmReasonDetails
+	 * ConditionallyAcceptedStatus3Choice.mmReasonDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReasonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> InRepairStatusReason4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.ConditionallyAcceptedStatus;
 			isDerived = false;
 			xmlTag = "RsnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonDetails";
 			definition = "Reason for the in repair status, expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.ReasonDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmReasonDetails;
 			maxOccurs = 5;
-			type_lazy = () -> InRepairStatusReason4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InRepairStatusReason4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatusReason4Choice.NoSpecifiedReason, com.tools20022.repository.choice.InRepairStatusReason4Choice.ReasonDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatusReason4Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.InRepairStatusReason4Choice.mmReasonDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatusReason4Choice";
 				definition = "Choice of formats for the reason for an in repair status.";
@@ -187,5 +190,21 @@ public class InRepairStatusReason4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<InRepairStatusReason4> getReasonDetails() {
+		return reasonDetails;
+	}
+
+	public void setReasonDetails(List<InRepairStatusReason4> reasonDetails) {
+		this.reasonDetails = reasonDetails;
 	}
 }

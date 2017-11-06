@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.UnderlyingTransaction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a transaction.
@@ -35,26 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#Type
- * UnderlyingTradeTransaction1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmType
+ * UnderlyingTradeTransaction1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#Identification
- * UnderlyingTradeTransaction1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmIdentification
+ * UnderlyingTradeTransaction1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#TransactionDate
- * UnderlyingTradeTransaction1.TransactionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmTransactionDate
+ * UnderlyingTradeTransaction1.mmTransactionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#TenderClosingDate
- * UnderlyingTradeTransaction1.TenderClosingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmTenderClosingDate
+ * UnderlyingTradeTransaction1.mmTenderClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#TransactionAmount
- * UnderlyingTradeTransaction1.TransactionAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmTransactionAmount
+ * UnderlyingTradeTransaction1.mmTransactionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#ContractAmountPercentage
- * UnderlyingTradeTransaction1.ContractAmountPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmContractAmountPercentage
+ * UnderlyingTradeTransaction1.mmContractAmountPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#AdditionalInformation
- * UnderlyingTradeTransaction1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmAdditionalInformation
+ * UnderlyingTradeTransaction1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnderlyingTradeTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnderlyingTradeTransactionType1Choice type;
 	/**
 	 * Type of underlying transaction such as a tender, order, contract.
 	 * <p>
@@ -91,8 +93,8 @@ public class UnderlyingTradeTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#Type
-	 * UnderlyingTransaction.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmType
+	 * UnderlyingTransaction.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +114,21 @@ public class UnderlyingTradeTransaction1 {
 	 * "Type of underlying transaction such as a tender, order, contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmType;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of underlying transaction such as a tender, order, contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTradeTransactionType1Choice.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Identification of the underlying transaction.
 	 * <p>
@@ -138,8 +141,8 @@ public class UnderlyingTradeTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#Identification
-	 * UnderlyingTransaction.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmIdentification
+	 * UnderlyingTransaction.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,20 +161,21 @@ public class UnderlyingTradeTransaction1 {
 	 * definition} = "Identification of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmIdentification;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the underlying transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate transactionDate;
 	/**
 	 * Date the underlying transaction was issued or awarded.
 	 * <p>
@@ -184,8 +188,8 @@ public class UnderlyingTradeTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#IssueDate
-	 * UnderlyingTransaction.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmIssueDate
+	 * UnderlyingTransaction.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,20 +208,21 @@ public class UnderlyingTradeTransaction1 {
 	 * definition} = "Date the underlying transaction was issued or awarded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmIssueDate;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.IssueDate;
 			isDerived = false;
 			xmlTag = "TxDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDate";
 			definition = "Date the underlying transaction was issued or awarded.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate tenderClosingDate;
 	/**
 	 * Date the tender closes.
 	 * <p>
@@ -230,8 +235,8 @@ public class UnderlyingTradeTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#TenderClosingDate
-	 * UnderlyingTransaction.TenderClosingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmTenderClosingDate
+	 * UnderlyingTransaction.mmTenderClosingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,20 +255,21 @@ public class UnderlyingTradeTransaction1 {
 	 * definition} = "Date the tender closes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TenderClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTenderClosingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmTenderClosingDate;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.TenderClosingDate;
 			isDerived = false;
 			xmlTag = "TndrClsgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderClosingDate";
 			definition = "Date the tender closes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount transactionAmount;
 	/**
 	 * Amount of the underlying transaction.
 	 * <p>
@@ -277,8 +283,8 @@ public class UnderlyingTradeTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#TotalAmount
-	 * UnderlyingTransaction.TotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmTotalAmount
+	 * UnderlyingTransaction.mmTotalAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -297,20 +303,21 @@ public class UnderlyingTradeTransaction1 {
 	 * definition} = "Amount of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmTotalAmount;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.TotalAmount;
 			isDerived = false;
 			xmlTag = "TxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAmount";
 			definition = "Amount of the underlying transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate contractAmountPercentage;
 	/**
 	 * Percentage of the underlying contract covered by the undertaking.
 	 * <p>
@@ -324,8 +331,8 @@ public class UnderlyingTradeTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#ContractAmountPercentage
-	 * UnderlyingTransaction.ContractAmountPercentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmContractAmountPercentage
+	 * UnderlyingTransaction.mmContractAmountPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -345,20 +352,21 @@ public class UnderlyingTradeTransaction1 {
 	 * "Percentage of the underlying contract covered by the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractAmountPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractAmountPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmContractAmountPercentage;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.ContractAmountPercentage;
 			isDerived = false;
 			xmlTag = "CtrctAmtPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractAmountPercentage";
 			definition = "Percentage of the underlying contract covered by the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the underlying transaction.
 	 * <p>
@@ -387,7 +395,7 @@ public class UnderlyingTradeTransaction1 {
 	 * "Additional information related to the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
@@ -395,8 +403,8 @@ public class UnderlyingTradeTransaction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the underlying transaction.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -404,17 +412,73 @@ public class UnderlyingTradeTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.Type, com.tools20022.repository.msg.UnderlyingTradeTransaction1.Identification,
-						com.tools20022.repository.msg.UnderlyingTradeTransaction1.TransactionDate, com.tools20022.repository.msg.UnderlyingTradeTransaction1.TenderClosingDate,
-						com.tools20022.repository.msg.UnderlyingTradeTransaction1.TransactionAmount, com.tools20022.repository.msg.UnderlyingTradeTransaction1.ContractAmountPercentage,
-						com.tools20022.repository.msg.UnderlyingTradeTransaction1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmType, com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmIdentification,
+						com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTransactionDate, com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTenderClosingDate,
+						com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTransactionAmount, com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmContractAmountPercentage,
+						com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmAdditionalInformation);
 				trace_lazy = () -> UnderlyingTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTradeTransaction1";
 				definition = "Information about a transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnderlyingTradeTransactionType1Choice getType() {
+		return type;
+	}
+
+	public void setType(UnderlyingTradeTransactionType1Choice type) {
+		this.type = type;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODate getTransactionDate() {
+		return transactionDate;
+	}
+
+	public void setTransactionDate(ISODate transactionDate) {
+		this.transactionDate = transactionDate;
+	}
+
+	public ISODate getTenderClosingDate() {
+		return tenderClosingDate;
+	}
+
+	public void setTenderClosingDate(ISODate tenderClosingDate) {
+		this.tenderClosingDate = tenderClosingDate;
+	}
+
+	public ActiveCurrencyAndAmount getTransactionAmount() {
+		return transactionAmount;
+	}
+
+	public void setTransactionAmount(ActiveCurrencyAndAmount transactionAmount) {
+		this.transactionAmount = transactionAmount;
+	}
+
+	public PercentageRate getContractAmountPercentage() {
+		return contractAmountPercentage;
+	}
+
+	public void setContractAmountPercentage(PercentageRate contractAmountPercentage) {
+		this.contractAmountPercentage = contractAmountPercentage;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

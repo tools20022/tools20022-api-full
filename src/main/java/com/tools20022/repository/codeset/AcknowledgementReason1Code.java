@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason1Code#AccountServicerDeadlineMissed
- * AcknowledgementReason1Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason1Code#mmAccountServicerDeadlineMissed
+ * AcknowledgementReason1Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason1Code#MarketPracticeRuleDiscrepency
- * AcknowledgementReason1Code.MarketPracticeRuleDiscrepency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason1Code#mmMarketPracticeRuleDiscrepency
+ * AcknowledgementReason1Code.mmMarketPracticeRuleDiscrepency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class AcknowledgementReason1Code extends AcknowledgementReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -105,7 +105,7 @@ public class AcknowledgementReason1Code extends AcknowledgementReasonCode {
 	 * name} = "MarketPracticeRuleDiscrepency"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketPracticeRuleDiscrepency = new MMCode() {
+	public static final MMCode mmMarketPracticeRuleDiscrepency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeRuleDiscrepency";
@@ -116,12 +116,12 @@ public class AcknowledgementReason1Code extends AcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason1Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason1Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason1Code.MarketPracticeRuleDiscrepency);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason1Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason1Code.mmMarketPracticeRuleDiscrepency);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
 			}
 		});

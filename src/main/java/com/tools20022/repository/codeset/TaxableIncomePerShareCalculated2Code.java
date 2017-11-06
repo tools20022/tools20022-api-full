@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code#FundCalculates
- * TaxableIncomePerShareCalculated2Code.FundCalculates}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code#mmFundCalculates
+ * TaxableIncomePerShareCalculated2Code.mmFundCalculates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code#FundDoesNotCalculate
- * TaxableIncomePerShareCalculated2Code.FundDoesNotCalculate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code#mmFundDoesNotCalculate
+ * TaxableIncomePerShareCalculated2Code.mmFundDoesNotCalculate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code#FundCalculatesUnknown
- * TaxableIncomePerShareCalculated2Code.FundCalculatesUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code#mmFundCalculatesUnknown
+ * TaxableIncomePerShareCalculated2Code.mmFundCalculatesUnknown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class TaxableIncomePerShareCalculated2Code extends TaxableIncomePerShareC
 	 * name} = "FundCalculates"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundCalculates = new MMCode() {
+	public static final MMCode mmFundCalculates = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCalculates";
@@ -108,7 +108,7 @@ public class TaxableIncomePerShareCalculated2Code extends TaxableIncomePerShareC
 	 * name} = "FundDoesNotCalculate"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundDoesNotCalculate = new MMCode() {
+	public static final MMCode mmFundDoesNotCalculate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDoesNotCalculate";
@@ -131,7 +131,7 @@ public class TaxableIncomePerShareCalculated2Code extends TaxableIncomePerShareC
 	 * name} = "FundCalculatesUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundCalculatesUnknown = new MMCode() {
+	public static final MMCode mmFundCalculatesUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCalculatesUnknown";
@@ -142,13 +142,13 @@ public class TaxableIncomePerShareCalculated2Code extends TaxableIncomePerShareC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TSIY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxableIncomePerShareCalculated2Code";
 				definition = "Specifies whether the fund calculates a taxable interest per share (TIS).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code.FundCalculates, com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code.FundDoesNotCalculate,
-						com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code.FundCalculatesUnknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code.mmFundCalculates, com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code.mmFundDoesNotCalculate,
+						com.tools20022.repository.codeset.TaxableIncomePerShareCalculated2Code.mmFundCalculatesUnknown);
 				trace_lazy = () -> TaxableIncomePerShareCalculatedCode.mmObject();
 			}
 		});

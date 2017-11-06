@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#BilateralTrade
- * TradingMethodType1Code.BilateralTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmBilateralTrade
+ * TradingMethodType1Code.mmBilateralTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#CentralizedPriceBidding
- * TradingMethodType1Code.CentralizedPriceBidding}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmCentralizedPriceBidding
+ * TradingMethodType1Code.mmCentralizedPriceBidding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#ContinuousMatching
- * TradingMethodType1Code.ContinuousMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmContinuousMatching
+ * TradingMethodType1Code.mmContinuousMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#LimitOrder
- * TradingMethodType1Code.LimitOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmLimitOrder
+ * TradingMethodType1Code.mmLimitOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#NegotiationTrade
- * TradingMethodType1Code.NegotiationTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmNegotiationTrade
+ * TradingMethodType1Code.mmNegotiationTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#OneClickTrade
- * TradingMethodType1Code.OneClickTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmOneClickTrade
+ * TradingMethodType1Code.mmOneClickTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#QuotationAuction
- * TradingMethodType1Code.QuotationAuction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmQuotationAuction
+ * TradingMethodType1Code.mmQuotationAuction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#TenderingAuction
- * TradingMethodType1Code.TenderingAuction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmTenderingAuction
+ * TradingMethodType1Code.mmTenderingAuction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#AnonymousClick
- * TradingMethodType1Code.AnonymousClick}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodType1Code#mmAnonymousClick
+ * TradingMethodType1Code.mmAnonymousClick}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "BilateralTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode BilateralTrade = new MMCode() {
+	public static final MMCode mmBilateralTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralTrade";
@@ -119,7 +119,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "CentralizedPriceBidding"</li>
 	 * </ul>
 	 */
-	public static final MMCode CentralizedPriceBidding = new MMCode() {
+	public static final MMCode mmCentralizedPriceBidding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralizedPriceBidding";
@@ -142,7 +142,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "ContinuousMatching"</li>
 	 * </ul>
 	 */
-	public static final MMCode ContinuousMatching = new MMCode() {
+	public static final MMCode mmContinuousMatching = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContinuousMatching";
@@ -165,7 +165,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "LimitOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode LimitOrder = new MMCode() {
+	public static final MMCode mmLimitOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrder";
@@ -188,7 +188,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "NegotiationTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode NegotiationTrade = new MMCode() {
+	public static final MMCode mmNegotiationTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiationTrade";
@@ -211,7 +211,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "OneClickTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode OneClickTrade = new MMCode() {
+	public static final MMCode mmOneClickTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneClickTrade";
@@ -234,7 +234,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "QuotationAuction"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuotationAuction = new MMCode() {
+	public static final MMCode mmQuotationAuction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationAuction";
@@ -257,7 +257,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "TenderingAuction"</li>
 	 * </ul>
 	 */
-	public static final MMCode TenderingAuction = new MMCode() {
+	public static final MMCode mmTenderingAuction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderingAuction";
@@ -280,7 +280,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 * name} = "AnonymousClick"</li>
 	 * </ul>
 	 */
-	public static final MMCode AnonymousClick = new MMCode() {
+	public static final MMCode mmAnonymousClick = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnonymousClick";
@@ -291,15 +291,15 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingMethodType1Code";
 				definition = "Identifies the type of trading method.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingMethodType1Code.BilateralTrade, com.tools20022.repository.codeset.TradingMethodType1Code.CentralizedPriceBidding,
-						com.tools20022.repository.codeset.TradingMethodType1Code.ContinuousMatching, com.tools20022.repository.codeset.TradingMethodType1Code.LimitOrder,
-						com.tools20022.repository.codeset.TradingMethodType1Code.NegotiationTrade, com.tools20022.repository.codeset.TradingMethodType1Code.OneClickTrade,
-						com.tools20022.repository.codeset.TradingMethodType1Code.QuotationAuction, com.tools20022.repository.codeset.TradingMethodType1Code.TenderingAuction,
-						com.tools20022.repository.codeset.TradingMethodType1Code.AnonymousClick);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingMethodType1Code.mmBilateralTrade, com.tools20022.repository.codeset.TradingMethodType1Code.mmCentralizedPriceBidding,
+						com.tools20022.repository.codeset.TradingMethodType1Code.mmContinuousMatching, com.tools20022.repository.codeset.TradingMethodType1Code.mmLimitOrder,
+						com.tools20022.repository.codeset.TradingMethodType1Code.mmNegotiationTrade, com.tools20022.repository.codeset.TradingMethodType1Code.mmOneClickTrade,
+						com.tools20022.repository.codeset.TradingMethodType1Code.mmQuotationAuction, com.tools20022.repository.codeset.TradingMethodType1Code.mmTenderingAuction,
+						com.tools20022.repository.codeset.TradingMethodType1Code.mmAnonymousClick);
 				trace_lazy = () -> TradingMethodTypeCode.mmObject();
 			}
 		});

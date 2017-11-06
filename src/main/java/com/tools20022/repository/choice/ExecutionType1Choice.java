@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ExecutionType1Choice#Time
- * ExecutionType1Choice.Time}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ExecutionType1Choice#Event
- * ExecutionType1Choice.Event}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ExecutionType1Choice#mmTime
+ * ExecutionType1Choice.mmTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ExecutionType1Choice#mmEvent
+ * ExecutionType1Choice.mmEvent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExecutionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISOTime time;
 	/**
 	 * Execution type is executed based on an time trigger.
 	 * <p>
@@ -85,7 +87,7 @@ public class ExecutionType1Choice {
 	 * definition} = "Execution type is executed based on an time trigger."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Time = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ExecutionType1Choice.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class ExecutionType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Time";
 			definition = "Execution type is executed based on an time trigger.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected EventType1Choice event;
 	/**
 	 * Execution type is executed based on an event driven trigger.
 	 * <p>
@@ -125,7 +128,7 @@ public class ExecutionType1Choice {
 	 * "Execution type is executed based on an event driven trigger."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Event = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ExecutionType1Choice.mmObject();
 			isDerived = false;
@@ -133,23 +136,39 @@ public class ExecutionType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Execution type is executed based on an event driven trigger.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> EventType1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.EventType1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutionType1Choice.Time, com.tools20022.repository.choice.ExecutionType1Choice.Event);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutionType1Choice.mmTime, com.tools20022.repository.choice.ExecutionType1Choice.mmEvent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExecutionType1Choice";
 				definition = "Defines the type of execution to be performed in the request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISOTime getTime() {
+		return time;
+	}
+
+	public void setTime(ISOTime time) {
+		this.time = time;
+	}
+
+	public EventType1Choice getEvent() {
+		return event;
+	}
+
+	public void setEvent(com.tools20022.repository.choice.EventType1Choice event) {
+		this.event = event;
 	}
 }

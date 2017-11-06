@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountQuery1#QueryType
- * AccountQuery1.QueryType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountQuery1#AccountCriteria
- * AccountQuery1.AccountCriteria}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountQuery1#mmQueryType
+ * AccountQuery1.mmQueryType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountQuery1#mmAccountCriteria
+ * AccountQuery1.mmAccountCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountQuery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QueryType2Code queryType;
 	/**
 	 * Specifies the type of matching items to be returned in the response to
 	 * the query.
@@ -88,7 +90,7 @@ public class AccountQuery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountQuery1.mmObject();
 			isDerived = false;
@@ -96,11 +98,12 @@ public class AccountQuery1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	protected AccountCriteria1Choice accountCriteria;
 	/**
 	 * Defines the account query criteria.
 	 * <p>
@@ -127,7 +130,7 @@ public class AccountQuery1 {
 	 * definition} = "Defines the account query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountQuery1.mmObject();
 			isDerived = false;
@@ -135,23 +138,39 @@ public class AccountQuery1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCriteria";
 			definition = "Defines the account query criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountCriteria1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountCriteria1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountQuery1.QueryType, com.tools20022.repository.msg.AccountQuery1.AccountCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountQuery1.mmQueryType, com.tools20022.repository.msg.AccountQuery1.mmAccountCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountQuery1";
 				definition = "Specification of the query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QueryType2Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(QueryType2Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public AccountCriteria1Choice getAccountCriteria() {
+		return accountCriteria;
+	}
+
+	public void setAccountCriteria(AccountCriteria1Choice accountCriteria) {
+		this.accountCriteria = accountCriteria;
 	}
 }

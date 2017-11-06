@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatusReason2Choice#Code
- * PendingStatusReason2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatusReason2Choice#mmCode
+ * PendingStatusReason2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatusReason2Choice#Proprietary
- * PendingStatusReason2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatusReason2Choice#mmProprietary
+ * PendingStatusReason2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingStatusReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingStatusReason1Code code;
 	/**
 	 * Reason for the pending account status expressed as a code.
 	 * <p>
@@ -105,21 +106,21 @@ public class PendingStatusReason2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingOpeningStatusReason2Choice#Code
-	 * PendingOpeningStatusReason2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingOpeningStatusReason2Choice#mmCode
+	 * PendingOpeningStatusReason2Choice.mmCode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AcceptedStatusReason1Choice#Code
-	 * AcceptedStatusReason1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.AcceptedStatusReason1Choice#mmCode
+	 * AcceptedStatusReason1Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.DisabledStatusReason2Choice#Code
-	 * DisabledStatusReason2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.DisabledStatusReason2Choice#mmCode
+	 * DisabledStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PendingStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -127,13 +128,14 @@ public class PendingStatusReason2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the pending account status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason2Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingOpeningStatusReason2Choice.Code, com.tools20022.repository.choice.AcceptedStatusReason1Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingOpeningStatusReason2Choice.mmCode, com.tools20022.repository.choice.AcceptedStatusReason1Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PendingStatusReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification36 proprietary;
 	/**
 	 * Reason for the pending account status expressed as a proprietary code.
 	 * <p>
@@ -164,21 +166,21 @@ public class PendingStatusReason2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingOpeningStatusReason2Choice#Proprietary
-	 * PendingOpeningStatusReason2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingOpeningStatusReason2Choice#mmProprietary
+	 * PendingOpeningStatusReason2Choice.mmProprietary}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AcceptedStatusReason1Choice#Proprietary
-	 * AcceptedStatusReason1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.AcceptedStatusReason1Choice#mmProprietary
+	 * AcceptedStatusReason1Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.DisabledStatusReason2Choice#Proprietary
-	 * DisabledStatusReason2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.DisabledStatusReason2Choice#mmProprietary
+	 * DisabledStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PendingStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -186,27 +188,43 @@ public class PendingStatusReason2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the pending account status expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason2Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingOpeningStatusReason2Choice.Proprietary, com.tools20022.repository.choice.AcceptedStatusReason1Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingOpeningStatusReason2Choice.mmProprietary, com.tools20022.repository.choice.AcceptedStatusReason1Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason2Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification36.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatusReason2Choice.Code, com.tools20022.repository.choice.PendingStatusReason2Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatusReason2Choice.mmCode, com.tools20022.repository.choice.PendingStatusReason2Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingStatusReason2Choice";
 				definition = "Choice of formats for pending reason code.";
-				previousVersion_lazy = () -> DisabledStatusReason2Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PendingOpeningStatusReason2Choice.mmObject(), AcceptedStatusReason1Choice.mmObject());
+				previousVersion_lazy = () -> DisabledStatusReason2Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingStatusReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(PendingStatusReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification36 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification36 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemRestriction1#ValidFrom
- * SystemRestriction1.ValidFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemRestriction1#ValidTo
- * SystemRestriction1.ValidTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemRestriction1#Type
- * SystemRestriction1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemRestriction1#mmValidFrom
+ * SystemRestriction1.mmValidFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemRestriction1#mmValidTo
+ * SystemRestriction1.mmValidTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemRestriction1#mmType
+ * SystemRestriction1.mmType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemRestriction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime validFrom;
 	/**
 	 * Specifies the date from which the restriction is valid.
 	 * <p>
@@ -86,7 +87,7 @@ public class SystemRestriction1 {
 	 * definition} = "Specifies the date from which the restriction is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemRestriction1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class SystemRestriction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Specifies the date from which the restriction is valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime validTo;
 	/**
 	 * Specifies the date until which the restriction is valid.
 	 * <p>
@@ -126,7 +128,7 @@ public class SystemRestriction1 {
 	 * definition} = "Specifies the date until which the restriction is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemRestriction1.mmObject();
 			isDerived = false;
@@ -134,11 +136,12 @@ public class SystemRestriction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTo";
 			definition = "Specifies the date until which the restriction is valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text type;
 	/**
 	 * Specifies the identification of a restriction.
 	 * <p>
@@ -166,7 +169,7 @@ public class SystemRestriction1 {
 	 * definition} = "Specifies the identification of a restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemRestriction1.mmObject();
 			isDerived = false;
@@ -174,8 +177,8 @@ public class SystemRestriction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the identification of a restriction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -183,13 +186,37 @@ public class SystemRestriction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemRestriction1.ValidFrom, com.tools20022.repository.msg.SystemRestriction1.ValidTo, com.tools20022.repository.msg.SystemRestriction1.Type);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemRestriction1.mmValidFrom, com.tools20022.repository.msg.SystemRestriction1.mmValidTo, com.tools20022.repository.msg.SystemRestriction1.mmType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemRestriction1";
 				definition = "Provides information on the system restriction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getValidFrom() {
+		return validFrom;
+	}
+
+	public void setValidFrom(ISODateTime validFrom) {
+		this.validFrom = validFrom;
+	}
+
+	public ISODateTime getValidTo() {
+		return validTo;
+	}
+
+	public void setValidTo(ISODateTime validTo) {
+		this.validTo = validTo;
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies rates related to a corporate action option.
@@ -37,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#ProposedRate
- * CorporateActionRate73.ProposedRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#mmProposedRate
+ * CorporateActionRate73.mmProposedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#OversubscriptionRate
- * CorporateActionRate73.OversubscriptionRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#mmOversubscriptionRate
+ * CorporateActionRate73.mmOversubscriptionRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#RequestedWithholdingTaxRate
- * CorporateActionRate73.RequestedWithholdingTaxRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#mmRequestedWithholdingTaxRate
+ * CorporateActionRate73.mmRequestedWithholdingTaxRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#RequestedSecondLevelTaxRate
- * CorporateActionRate73.RequestedSecondLevelTaxRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#mmRequestedSecondLevelTaxRate
+ * CorporateActionRate73.mmRequestedSecondLevelTaxRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionRate73 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate proposedRate;
 	/**
 	 * Rate proposed in a remarketing of variable rate notes.
 	 * <p>
@@ -84,8 +86,8 @@ public class CorporateActionRate73 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#ProposedRate
-	 * BiddingConditions.ProposedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmProposedRate
+	 * BiddingConditions.mmProposedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +106,21 @@ public class CorporateActionRate73 {
 	 * definition} = "Rate proposed in a remarketing of variable rate notes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProposedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProposedRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmProposedRate;
 			componentContext_lazy = () -> CorporateActionRate73.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.ProposedRate;
 			isDerived = false;
 			xmlTag = "PropsdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedRate";
 			definition = "Rate proposed in a remarketing of variable rate notes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RateAndAmountFormat43Choice oversubscriptionRate;
 	/**
 	 * Rate of allowed over-subscription.
 	 * <p>
@@ -131,8 +134,8 @@ public class CorporateActionRate73 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#OversubscriptionRate
-	 * BiddingConditions.OversubscriptionRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmOversubscriptionRate
+	 * BiddingConditions.mmOversubscriptionRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,20 +154,21 @@ public class CorporateActionRate73 {
 	 * definition} = "Rate of allowed over-subscription."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OversubscriptionRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOversubscriptionRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmOversubscriptionRate;
 			componentContext_lazy = () -> CorporateActionRate73.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.OversubscriptionRate;
 			isDerived = false;
 			xmlTag = "OvrsbcptRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OversubscriptionRate";
 			definition = "Rate of allowed over-subscription.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	protected List<RateAndAmountFormat45Choice> requestedWithholdingTaxRate;
 	/**
 	 * Requested tax rate that will be withheld by the tax authorities of the
 	 * jurisdiction of the issuer, for which a relief at source and/or reclaim
@@ -180,8 +184,8 @@ public class CorporateActionRate73 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#RequestedTaxationRate
-	 * TaxVoucher.RequestedTaxationRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmRequestedTaxationRate
+	 * TaxVoucher.mmRequestedTaxationRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,10 +206,10 @@ public class CorporateActionRate73 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedWithholdingTaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedWithholdingTaxRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmRequestedTaxationRate;
 			componentContext_lazy = () -> CorporateActionRate73.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.RequestedTaxationRate;
 			isDerived = false;
 			xmlTag = "ReqdWhldgTaxRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,6 +219,7 @@ public class CorporateActionRate73 {
 			complexType_lazy = () -> RateAndAmountFormat45Choice.mmObject();
 		}
 	};
+	protected List<RateAndAmountFormat45Choice> requestedSecondLevelTaxRate;
 	/**
 	 * Requested rate at which the income will be withheld by the jurisdiction
 	 * other than the jurisdiction of the issuer’s country of tax incorporation,
@@ -229,7 +234,7 @@ public class CorporateActionRate73 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,33 +255,65 @@ public class CorporateActionRate73 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedSecondLevelTaxRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedSecondLevelTaxRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionRate73.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "ReqdScndLvlTaxRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSecondLevelTaxRate";
 			definition = "Requested rate at which the income will be withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. ";
 			minOccurs = 0;
-			type_lazy = () -> RateAndAmountFormat45Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat45Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate73.ProposedRate, com.tools20022.repository.msg.CorporateActionRate73.OversubscriptionRate,
-						com.tools20022.repository.msg.CorporateActionRate73.RequestedWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate73.RequestedSecondLevelTaxRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate73.mmProposedRate, com.tools20022.repository.msg.CorporateActionRate73.mmOversubscriptionRate,
+						com.tools20022.repository.msg.CorporateActionRate73.mmRequestedWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate73.mmRequestedSecondLevelTaxRate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate73";
 				definition = "Specifies rates related to a corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getProposedRate() {
+		return proposedRate;
+	}
+
+	public void setProposedRate(PercentageRate proposedRate) {
+		this.proposedRate = proposedRate;
+	}
+
+	public RateAndAmountFormat43Choice getOversubscriptionRate() {
+		return oversubscriptionRate;
+	}
+
+	public void setOversubscriptionRate(RateAndAmountFormat43Choice oversubscriptionRate) {
+		this.oversubscriptionRate = oversubscriptionRate;
+	}
+
+	public List<RateAndAmountFormat45Choice> getRequestedWithholdingTaxRate() {
+		return requestedWithholdingTaxRate;
+	}
+
+	public void setRequestedWithholdingTaxRate(List<RateAndAmountFormat45Choice> requestedWithholdingTaxRate) {
+		this.requestedWithholdingTaxRate = requestedWithholdingTaxRate;
+	}
+
+	public List<RateAndAmountFormat45Choice> getRequestedSecondLevelTaxRate() {
+		return requestedSecondLevelTaxRate;
+	}
+
+	public void setRequestedSecondLevelTaxRate(List<RateAndAmountFormat45Choice> requestedSecondLevelTaxRate) {
+		this.requestedSecondLevelTaxRate = requestedSecondLevelTaxRate;
 	}
 }

@@ -60,21 +60,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03#Header
- * AcceptorCancellationAdviceV03.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03#mmHeader
+ * AcceptorCancellationAdviceV03.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03#CancellationAdvice
- * AcceptorCancellationAdviceV03.CancellationAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03#mmCancellationAdvice
+ * AcceptorCancellationAdviceV03.mmCancellationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03#SecurityTrailer
- * AcceptorCancellationAdviceV03.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03#mmSecurityTrailer
+ * AcceptorCancellationAdviceV03.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03#identifier
- * AcceptorCancellationAdviceV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.007.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorCancellationAdviceV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header8 header;
 	/**
 	 * Cancellation advice message management information.
 	 * <p>
@@ -126,30 +125,31 @@ public class AcceptorCancellationAdviceV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04#Header
-	 * AcceptorCancellationAdviceV04.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04#mmHeader
+	 * AcceptorCancellationAdviceV04.mmHeader}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02#Header
-	 * AcceptorCancellationAdviceV02.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02#mmHeader
+	 * AcceptorCancellationAdviceV02.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Cancellation advice message management information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.Header;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04.Header);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04.mmHeader);
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.mmHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header8.mmObject();
 		}
 	};
+	protected AcceptorCancellationAdvice3 cancellationAdvice;
 	/**
 	 * Information related to the cancellation advice.
 	 * <p>
@@ -175,30 +175,31 @@ public class AcceptorCancellationAdviceV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04#CancellationAdvice
-	 * AcceptorCancellationAdviceV04.CancellationAdvice}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04#mmCancellationAdvice
+	 * AcceptorCancellationAdviceV04.mmCancellationAdvice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02#CancellationAdvice
-	 * AcceptorCancellationAdviceV02.CancellationAdvice}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02#mmCancellationAdvice
+	 * AcceptorCancellationAdviceV02.mmCancellationAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationAdvice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAdvice";
 			definition = "Information related to the cancellation advice.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.CancellationAdvice;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04.CancellationAdvice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04.mmCancellationAdvice);
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.mmCancellationAdvice;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCancellationAdvice3.mmObject();
 		}
 	};
+	protected ContentInformationType8 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -224,55 +225,28 @@ public class AcceptorCancellationAdviceV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04#SecurityTrailer
-	 * AcceptorCancellationAdviceV04.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04#mmSecurityTrailer
+	 * AcceptorCancellationAdviceV04.mmSecurityTrailer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02#SecurityTrailer
-	 * AcceptorCancellationAdviceV02.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02#mmSecurityTrailer
+	 * AcceptorCancellationAdviceV02.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.SecurityTrailer;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04.SecurityTrailer);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV04.mmSecurityTrailer);
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.mmSecurityTrailer;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType8.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "007";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -282,17 +256,48 @@ public class AcceptorCancellationAdviceV03 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationAdviceV03";
 				definition = "The AcceptorCancellationAdvice message is sent by an acceptor (or its agent) to notify the acquirer (or its agent) of the cancellation of a successfully completed transaction. The transaction has been completed without financial transfer, or the acceptor is aware that the transaction was not cleared by the acquirer.";
-				previousVersion_lazy = () -> AcceptorCancellationAdviceV02.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdviceV04.mmObject());
+				previousVersion_lazy = () -> AcceptorCancellationAdviceV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject(), CAPEAcceptortoAcquirerMaintenance20132014.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCxlAdvc";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03.Header, com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03.CancellationAdvice,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03.mmHeader, com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03.mmCancellationAdvice,
+						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV03.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "007";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header8 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header8 header) {
+		this.header = header;
+	}
+
+	public AcceptorCancellationAdvice3 getCancellationAdvice() {
+		return cancellationAdvice;
+	}
+
+	public void setCancellationAdvice(AcceptorCancellationAdvice3 cancellationAdvice) {
+		this.cancellationAdvice = cancellationAdvice;
+	}
+
+	public ContentInformationType8 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType8 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

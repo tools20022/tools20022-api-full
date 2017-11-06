@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountOpeningType1Choice#Code
- * AccountOpeningType1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountOpeningType1Choice#mmCode
+ * AccountOpeningType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountOpeningType1Choice#Proprietary
- * AccountOpeningType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountOpeningType1Choice#mmProprietary
+ * AccountOpeningType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountOpeningType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountOpeningType1Code code;
 	/**
 	 * Type of account opening instruction expressed as a code.
 	 * <p>
@@ -87,7 +88,7 @@ public class AccountOpeningType1Choice {
 	 * definition} = "Type of account opening instruction expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountOpeningType1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class AccountOpeningType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of account opening instruction expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountOpeningType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Type of account opening instruction expressed as a proprietary code.
 	 * <p>
@@ -129,7 +131,7 @@ public class AccountOpeningType1Choice {
 	 * "Type of account opening instruction expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountOpeningType1Choice.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class AccountOpeningType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of account opening instruction expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class AccountOpeningType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOpeningType1Choice.Code, com.tools20022.repository.choice.AccountOpeningType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOpeningType1Choice.mmCode, com.tools20022.repository.choice.AccountOpeningType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningType1Choice";
 				definition = "Choice of formats for the account opening type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountOpeningType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(AccountOpeningType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

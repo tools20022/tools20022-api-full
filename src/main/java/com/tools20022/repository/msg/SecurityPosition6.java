@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the securities for which the meeting is organised.
@@ -34,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityPosition6#Identification
- * SecurityPosition6.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition6#Position
- * SecurityPosition6.Position}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityPosition6#mmIdentification
+ * SecurityPosition6.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition6#mmPosition
+ * SecurityPosition6.mmPosition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,33 +49,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#Security
- * MeetingNotificationV03.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#mmSecurity
+ * MeetingNotificationV03.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#Security
- * MeetingNotificationV04.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmSecurity
+ * MeetingNotificationV04.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03#Security
- * MeetingCancellationV03.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03#mmSecurity
+ * MeetingCancellationV03.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#Security
- * MeetingCancellationV04.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#mmSecurity
+ * MeetingCancellationV04.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#Security
- * MeetingEntitlementNotificationV03.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmSecurity
+ * MeetingEntitlementNotificationV03.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#Security
- * MeetingResultDisseminationV03.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#mmSecurity
+ * MeetingResultDisseminationV03.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#Security
- * MeetingResultDisseminationV04.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmSecurity
+ * MeetingResultDisseminationV04.mmSecurity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityPosition6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification11 identification;
 	/**
 	 * Identification of a security, as assigned under a formal or proprietary
 	 * identification scheme.
@@ -110,8 +112,8 @@ public class SecurityPosition6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -134,27 +136,28 @@ public class SecurityPosition6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityPosition8#FinancialInstrumentIdentification
-	 * SecurityPosition8.FinancialInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityPosition8#mmFinancialInstrumentIdentification
+	 * SecurityPosition8.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecurityPosition6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security, as assigned under a formal or proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition8.FinancialInstrumentIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition8.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification11.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.EligiblePosition3> position;
 	/**
 	 * Amount of securities that are eligible for the vote.
 	 * <p>
@@ -187,39 +190,40 @@ public class SecurityPosition6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition8#Position
-	 * SecurityPosition8.Position}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityPosition8#mmPosition
+	 * SecurityPosition8.mmPosition}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Position = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityPosition6.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> SecurityPosition6.mmObject();
 			isDerived = false;
 			xmlTag = "Pos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Amount of securities that are eligible for the vote.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition8.Position);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition8.mmPosition);
 			maxOccurs = 1000;
-			type_lazy = () -> EligiblePosition3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition6.Identification, com.tools20022.repository.msg.SecurityPosition6.Position);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition6.mmIdentification, com.tools20022.repository.msg.SecurityPosition6.mmPosition);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV03.mmSecurity, com.tools20022.repository.area.seev.MeetingNotificationV04.mmSecurity,
+						com.tools20022.repository.area.seev.MeetingCancellationV03.mmSecurity, com.tools20022.repository.area.seev.MeetingCancellationV04.mmSecurity,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmSecurity, com.tools20022.repository.area.seev.MeetingResultDisseminationV03.mmSecurity,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmSecurity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV03.Security, com.tools20022.repository.area.seev.MeetingNotificationV04.Security,
-						com.tools20022.repository.area.seev.MeetingCancellationV03.Security, com.tools20022.repository.area.seev.MeetingCancellationV04.Security,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.Security, com.tools20022.repository.area.seev.MeetingResultDisseminationV03.Security,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.Security);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityPosition6";
 				definition = "Identifies the securities for which the meeting is organised.";
@@ -227,5 +231,21 @@ public class SecurityPosition6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification11 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
+		this.identification = identification;
+	}
+
+	public List<EligiblePosition3> getPosition() {
+		return position;
+	}
+
+	public void setPosition(List<com.tools20022.repository.msg.EligiblePosition3> position) {
+		this.position = position;
 	}
 }

@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2#Identification
- * IssuerAgent2.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2#Role
- * IssuerAgent2.Role}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2#mmIdentification
+ * IssuerAgent2.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2#mmRole
+ * IssuerAgent2.mmRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05#IssuerAgent
- * MeetingNotificationV05.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05#mmIssuerAgent
+ * MeetingNotificationV05.mmIssuerAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IssuerAgent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification40Choice identification;
 	/**
 	 * Identifies issuer agent.
 	 * <p>
@@ -86,8 +87,8 @@ public class IssuerAgent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,26 +107,27 @@ public class IssuerAgent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IssuerAgent1#Identification
-	 * IssuerAgent1.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.IssuerAgent1#mmIdentification
+	 * IssuerAgent1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> IssuerAgent2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies issuer agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IssuerAgent1.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IssuerAgent1.mmIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification40Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification40Choice.mmObject();
 		}
 	};
+	protected AgentRole1Code role;
 	/**
 	 * Specifies the role of the issuer agent.
 	 * <p>
@@ -139,8 +141,8 @@ public class IssuerAgent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#AgentRole
-	 * CorporateActionAgent.AgentRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#mmAgentRole
+	 * CorporateActionAgent.mmAgentRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,22 +161,22 @@ public class IssuerAgent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IssuerAgent1#Role
-	 * IssuerAgent1.Role}</li>
+	 * {@linkplain com.tools20022.repository.msg.IssuerAgent1#mmRole
+	 * IssuerAgent1.mmRole}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Role = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.mmAgentRole;
 			componentContext_lazy = () -> IssuerAgent2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.AgentRole;
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Specifies the role of the issuer agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IssuerAgent1.Role;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IssuerAgent1.mmRole;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AgentRole1Code.mmObject();
 		}
 	};
@@ -182,10 +184,10 @@ public class IssuerAgent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent2.Identification, com.tools20022.repository.msg.IssuerAgent2.Role);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent2.mmIdentification, com.tools20022.repository.msg.IssuerAgent2.mmRole);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV05.mmIssuerAgent);
 				trace_lazy = () -> CorporateActionAgent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV05.IssuerAgent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerAgent2";
 				definition = "Specifies the role of the issuer agent.";
@@ -193,5 +195,21 @@ public class IssuerAgent2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification40Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification40Choice identification) {
+		this.identification = identification;
+	}
+
+	public AgentRole1Code getRole() {
+		return role;
+	}
+
+	public void setRole(AgentRole1Code role) {
+		this.role = role;
 	}
 }

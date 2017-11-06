@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus1#QuoteStatus
- * QuoteStatus1.QuoteStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus1#RejectionReason
- * QuoteStatus1.RejectionReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus1#mmQuoteStatus
+ * QuoteStatus1.mmQuoteStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus1#mmRejectionReason
+ * QuoteStatus1.mmRejectionReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuoteStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuoteStatus1Code quoteStatus;
 	/**
 	 * Provides information related to the status of a quote.
 	 * <p>
@@ -85,7 +86,7 @@ public class QuoteStatus1 {
 	 * definition} = "Provides information related to the status of a quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuoteStatus1.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class QuoteStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteStatus";
 			definition = "Provides information related to the status of a quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> QuoteStatus1Code.mmObject();
 		}
 	};
+	protected RejectionReason3Code rejectionReason;
 	/**
 	 * Provides information related to the rejection of the quote.
 	 * <p>
@@ -126,7 +128,7 @@ public class QuoteStatus1 {
 	 * "Provides information related to the rejection of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuoteStatus1.mmObject();
 			isDerived = false;
@@ -134,8 +136,8 @@ public class QuoteStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Provides information related to the rejection of the quote.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReason3Code.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class QuoteStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteStatus1.QuoteStatus, com.tools20022.repository.msg.QuoteStatus1.RejectionReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteStatus1.mmQuoteStatus, com.tools20022.repository.msg.QuoteStatus1.mmRejectionReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteStatus1";
 				definition = "Identifies the status of a quote and the rejection reason if required.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuoteStatus1Code getQuoteStatus() {
+		return quoteStatus;
+	}
+
+	public void setQuoteStatus(QuoteStatus1Code quoteStatus) {
+		this.quoteStatus = quoteStatus;
+	}
+
+	public RejectionReason3Code getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(RejectionReason3Code rejectionReason) {
+		this.rejectionReason = rejectionReason;
 	}
 }

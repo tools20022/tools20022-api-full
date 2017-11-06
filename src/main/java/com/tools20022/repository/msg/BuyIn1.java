@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn1#WarningIndicator
- * BuyIn1.WarningIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn1#ExpectedBuyInDate
- * BuyIn1.ExpectedBuyInDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn1#mmWarningIndicator
+ * BuyIn1.mmWarningIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn1#mmExpectedBuyInDate
+ * BuyIn1.mmExpectedBuyInDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BuyIn1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator warningIndicator;
 	/**
 	 * Indicates whether the message is a warning only or a notification.
 	 * <p>
@@ -98,13 +99,13 @@ public class BuyIn1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#WarningIndicator
-	 * BuyIn4.WarningIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#mmWarningIndicator
+	 * BuyIn4.mmWarningIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WarningIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWarningIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn1.mmObject();
 			isDerived = false;
@@ -112,12 +113,13 @@ public class BuyIn1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarningIndicator";
 			definition = "Indicates whether the message is a warning only or a notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.WarningIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.mmWarningIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected DateFormat15Choice expectedBuyInDate;
 	/**
 	 * Provides the date at which the buy will occur.
 	 * <p>
@@ -131,8 +133,8 @@ public class BuyIn1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#BuyinDate
-	 * BuyIn.BuyinDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmBuyinDate
+	 * BuyIn.mmBuyinDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn1
@@ -151,24 +153,24 @@ public class BuyIn1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#ExpectedBuyInDate
-	 * BuyIn4.ExpectedBuyInDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#mmExpectedBuyInDate
+	 * BuyIn4.mmExpectedBuyInDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedBuyInDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedBuyInDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmBuyinDate;
 			componentContext_lazy = () -> BuyIn1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.BuyinDate;
 			isDerived = false;
 			xmlTag = "XpctdBuyInDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedBuyInDate";
 			definition = "Provides the date at which the buy will occur.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.ExpectedBuyInDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.mmExpectedBuyInDate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
 		}
 	};
@@ -176,9 +178,9 @@ public class BuyIn1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn1.WarningIndicator, com.tools20022.repository.msg.BuyIn1.ExpectedBuyInDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn1.mmWarningIndicator, com.tools20022.repository.msg.BuyIn1.mmExpectedBuyInDate);
 				trace_lazy = () -> BuyIn.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BuyIn1";
 				definition = "Specifies elements related to the notification (or warn) sent by the central counterparty to the clearing member in the context of the buy in process.";
@@ -186,5 +188,21 @@ public class BuyIn1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getWarningIndicator() {
+		return warningIndicator;
+	}
+
+	public void setWarningIndicator(YesNoIndicator warningIndicator) {
+		this.warningIndicator = warningIndicator;
+	}
+
+	public DateFormat15Choice getExpectedBuyInDate() {
+		return expectedBuyInDate;
+	}
+
+	public void setExpectedBuyInDate(DateFormat15Choice expectedBuyInDate) {
+		this.expectedBuyInDate = expectedBuyInDate;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -80,21 +81,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV05#GroupHeader
- * MandateCancellationRequestV05.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV05#mmGroupHeader
+ * MandateCancellationRequestV05.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV05#UnderlyingCancellationDetails
- * MandateCancellationRequestV05.UnderlyingCancellationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV05#mmUnderlyingCancellationDetails
+ * MandateCancellationRequestV05.mmUnderlyingCancellationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV05#SupplementaryData
- * MandateCancellationRequestV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV05#mmSupplementaryData
+ * MandateCancellationRequestV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV05#identifier
- * MandateCancellationRequestV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.011.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateCancellationRequestV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader47 groupHeader;
 	/**
 	 * Set of characteristics to identify the message and parties playing a role
 	 * in the cancellation of the mandate, but which are not part of the
@@ -141,22 +141,23 @@ public class MandateCancellationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV04#GroupHeader
-	 * MandateCancellationRequestV04.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV04#mmGroupHeader
+	 * MandateCancellationRequestV04.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the cancellation of the mandate, but which are not part of the mandate.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateCancellationRequestV04.GroupHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateCancellationRequestV04.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 	};
+	protected List<MandateCancellation5> underlyingCancellationDetails;
 	/**
 	 * Set of elements used to provide details on the cancellation request.
 	 * <p>
@@ -182,21 +183,22 @@ public class MandateCancellationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV04#UnderlyingCancellationDetails
-	 * MandateCancellationRequestV04.UnderlyingCancellationDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV04#mmUnderlyingCancellationDetails
+	 * MandateCancellationRequestV04.mmUnderlyingCancellationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingCancellationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingCancellationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygCxlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingCancellationDetails";
 			definition = "Set of elements used to provide details on the cancellation request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateCancellationRequestV04.UnderlyingCancellationDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateCancellationRequestV04.mmUnderlyingCancellationDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> MandateCancellation5.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -224,46 +226,19 @@ public class MandateCancellationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV04#SupplementaryData
-	 * MandateCancellationRequestV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV04#mmSupplementaryData
+	 * MandateCancellationRequestV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateCancellationRequestV04.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateCancellationRequestV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "011";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -278,11 +253,42 @@ public class MandateCancellationRequestV05 {
 				rootElement = "Document";
 				xmlTag = "MndtCxlReq";
 				businessArea_lazy = () -> PaymentsInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCancellationRequestV05.GroupHeader, com.tools20022.repository.area.pain.MandateCancellationRequestV05.UnderlyingCancellationDetails,
-						com.tools20022.repository.area.pain.MandateCancellationRequestV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.MandateCancellationRequestV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCancellationRequestV05.mmGroupHeader,
+						com.tools20022.repository.area.pain.MandateCancellationRequestV05.mmUnderlyingCancellationDetails, com.tools20022.repository.area.pain.MandateCancellationRequestV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "011";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader47 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader47 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<MandateCancellation5> getUnderlyingCancellationDetails() {
+		return underlyingCancellationDetails;
+	}
+
+	public void setUnderlyingCancellationDetails(List<MandateCancellation5> underlyingCancellationDetails) {
+		this.underlyingCancellationDetails = underlyingCancellationDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

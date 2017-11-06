@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdditionalRightThreshold1Choice#AdditionalRightThreshold
- * AdditionalRightThreshold1Choice.AdditionalRightThreshold}</li>
+ * {@linkplain com.tools20022.repository.choice.AdditionalRightThreshold1Choice#mmAdditionalRightThreshold
+ * AdditionalRightThreshold1Choice.mmAdditionalRightThreshold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdditionalRightThreshold1Choice#AdditionalRightThresholdPercentage
- * AdditionalRightThreshold1Choice.AdditionalRightThresholdPercentage}</li>
+ * {@linkplain com.tools20022.repository.choice.AdditionalRightThreshold1Choice#mmAdditionalRightThresholdPercentage
+ * AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalRightThreshold1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text additionalRightThreshold;
 	/**
 	 * Additional right granted to specify the minimum stake in share capital or
 	 * cash value or number of security holders required to table resolutions.
@@ -76,8 +77,8 @@ public class AdditionalRightThreshold1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AdditionalRight#AdditionalRightThreshold
-	 * AdditionalRight.AdditionalRightThreshold}</li>
+	 * {@linkplain com.tools20022.repository.entity.AdditionalRight#mmAdditionalRightThreshold
+	 * AdditionalRight.mmAdditionalRightThreshold}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class AdditionalRightThreshold1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRightThreshold = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRightThreshold = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThreshold;
 			componentContext_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.AdditionalRightThreshold;
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightThreshold";
 			definition = "Additional right granted to specify the minimum stake in share capital or cash value or number of security holders required to table resolutions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PercentageRate additionalRightThresholdPercentage;
 	/**
 	 * Additional right granted to specify the minimum stake in share capital or
 	 * cash value or number of security holders required to table resolutions.
@@ -127,8 +129,8 @@ public class AdditionalRightThreshold1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AdditionalRight#AdditionalRightThresholdPercentage
-	 * AdditionalRight.AdditionalRightThresholdPercentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.AdditionalRight#mmAdditionalRightThresholdPercentage
+	 * AdditionalRight.mmAdditionalRightThresholdPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,17 +151,17 @@ public class AdditionalRightThreshold1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRightThresholdPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRightThresholdPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThresholdPercentage;
 			componentContext_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.AdditionalRightThresholdPercentage;
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshldPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightThresholdPercentage";
 			definition = "Additional right granted to specify the minimum stake in share capital or cash value or number of security holders required to table resolutions. This minimum is expressed as a percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -167,15 +169,31 @@ public class AdditionalRightThreshold1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalRightThreshold1Choice.AdditionalRightThreshold,
-						com.tools20022.repository.choice.AdditionalRightThreshold1Choice.AdditionalRightThresholdPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmAdditionalRightThreshold,
+						com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage);
 				trace_lazy = () -> AdditionalRight.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRightThreshold1Choice";
 				definition = "Choice of additional right threshold.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAdditionalRightThreshold() {
+		return additionalRightThreshold;
+	}
+
+	public void setAdditionalRightThreshold(Max35Text additionalRightThreshold) {
+		this.additionalRightThreshold = additionalRightThreshold;
+	}
+
+	public PercentageRate getAdditionalRightThresholdPercentage() {
+		return additionalRightThresholdPercentage;
+	}
+
+	public void setAdditionalRightThresholdPercentage(PercentageRate additionalRightThresholdPercentage) {
+		this.additionalRightThresholdPercentage = additionalRightThresholdPercentage;
 	}
 }

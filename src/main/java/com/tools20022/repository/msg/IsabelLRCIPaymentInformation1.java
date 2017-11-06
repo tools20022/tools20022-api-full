@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelLRCIPaymentInformation1#ImageHash
- * IsabelLRCIPaymentInformation1.ImageHash}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelLRCIPaymentInformation1#mmImageHash
+ * IsabelLRCIPaymentInformation1.mmImageHash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelLRCIPaymentInformation1#PaymentHash
- * IsabelLRCIPaymentInformation1.PaymentHash}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelLRCIPaymentInformation1#mmPaymentHash
+ * IsabelLRCIPaymentInformation1.mmPaymentHash}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelLRCIPaymentInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max50Binary imageHash;
 	/**
 	 * Arbitrary block of data defined as a fixed-size bit string, the
 	 * (cryptographic) hash value, which allows the detection of an accidental
@@ -92,7 +93,7 @@ public class IsabelLRCIPaymentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ImageHash = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmImageHash = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelLRCIPaymentInformation1.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class IsabelLRCIPaymentInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImageHash";
 			definition = "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, which allows the detection of an accidental or intentional change to the  visual representation of a particular payment file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();
 		}
 	};
+	protected Max50Binary paymentHash;
 	/**
 	 * Arbitrary block of data defined as a fixed-size bit string, the
 	 * (cryptographic) hash value, which allows the detection of an accidental
@@ -136,7 +138,7 @@ public class IsabelLRCIPaymentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentHash = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentHash = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelLRCIPaymentInformation1.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class IsabelLRCIPaymentInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentHash";
 			definition = "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, which allows the detection of an accidental or intentional change to a particular payment file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();
 		}
 	};
@@ -153,13 +155,29 @@ public class IsabelLRCIPaymentInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.ImageHash, com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.PaymentHash);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmImageHash, com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmPaymentHash);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelLRCIPaymentInformation1";
 				definition = "Specifies a record holding the LRCI required data related to a payment file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max50Binary getImageHash() {
+		return imageHash;
+	}
+
+	public void setImageHash(Max50Binary imageHash) {
+		this.imageHash = imageHash;
+	}
+
+	public Max50Binary getPaymentHash() {
+		return paymentHash;
+	}
+
+	public void setPaymentHash(Max50Binary paymentHash) {
+		this.paymentHash = paymentHash;
 	}
 }

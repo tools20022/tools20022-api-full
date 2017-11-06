@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max140Binary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to the request of a key download from an ATM.
@@ -34,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#Environment
- * ATMKeyDownloadRequest2.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#mmEnvironment
+ * ATMKeyDownloadRequest2.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#CommandResult
- * ATMKeyDownloadRequest2.CommandResult}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#mmCommandResult
+ * ATMKeyDownloadRequest2.mmCommandResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#CommandContext
- * ATMKeyDownloadRequest2.CommandContext}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#mmCommandContext
+ * ATMKeyDownloadRequest2.mmCommandContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#ATMSecurityContext
- * ATMKeyDownloadRequest2.ATMSecurityContext}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#mmATMSecurityContext
+ * ATMKeyDownloadRequest2.mmATMSecurityContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#ATMSecurityParameters
- * ATMKeyDownloadRequest2.ATMSecurityParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#mmATMSecurityParameters
+ * ATMKeyDownloadRequest2.mmATMSecurityParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#HostChallenge
- * ATMKeyDownloadRequest2.HostChallenge}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest2#mmHostChallenge
+ * ATMKeyDownloadRequest2.mmHostChallenge}</li>
  * </ul>
  * </li>
  * <li>
@@ -58,15 +59,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02#ATMKeyDownloadRequest
- * ATMKeyDownloadRequestV02.ATMKeyDownloadRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02#mmATMKeyDownloadRequest
+ * ATMKeyDownloadRequestV02.mmATMKeyDownloadRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMKeyDownloadRequest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment15 environment;
 	/**
 	 * Environment of the key download.
 	 * <p>
@@ -107,7 +109,7 @@ public class ATMKeyDownloadRequest2 {
 	 * definition} = "Environment of the key download."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMKeyDownloadRequest2.mmObject();
 			isDerived = false;
@@ -115,12 +117,13 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the key download.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment15.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment15.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMCommand2> commandResult;
 	/**
 	 * Result of a maintenance command performed by the ATM.
 	 * <p>
@@ -147,7 +150,7 @@ public class ATMKeyDownloadRequest2 {
 	 * definition} = "Result of a maintenance command performed by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommandResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommandResult = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMKeyDownloadRequest2.mmObject();
 			isDerived = false;
@@ -156,10 +159,11 @@ public class ATMKeyDownloadRequest2 {
 			name = "CommandResult";
 			definition = "Result of a maintenance command performed by the ATM.";
 			minOccurs = 0;
-			type_lazy = () -> ATMCommand2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommand2.mmObject();
 		}
 	};
+	protected ATMCommand3 commandContext;
 	/**
 	 * Security command in progress inside which the key download is requested.
 	 * <p>
@@ -188,7 +192,7 @@ public class ATMKeyDownloadRequest2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommandContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommandContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMKeyDownloadRequest2.mmObject();
 			isDerived = false;
@@ -196,12 +200,13 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandContext";
 			definition = "Security command in progress inside which the key download is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCommand3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommand3.mmObject();
 		}
 	};
+	protected ATMSecurityContext2 aTMSecurityContext;
 	/**
 	 * Context of the ATM for the key download.
 	 * <p>
@@ -228,7 +233,7 @@ public class ATMKeyDownloadRequest2 {
 	 * definition} = "Context of the ATM for the key download."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ATMSecurityContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmATMSecurityContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMKeyDownloadRequest2.mmObject();
 			isDerived = false;
@@ -236,12 +241,13 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMSecurityContext";
 			definition = "Context of the ATM for the key download.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMSecurityContext2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext2.mmObject();
 		}
 	};
+	protected SecurityParameters4 aTMSecurityParameters;
 	/**
 	 * Security parameters of the ATM for the initiated key download.
 	 * <p>
@@ -269,7 +275,7 @@ public class ATMKeyDownloadRequest2 {
 	 * "Security parameters of the ATM for the initiated key download."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ATMSecurityParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmATMSecurityParameters = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMKeyDownloadRequest2.mmObject();
 			isDerived = false;
@@ -277,12 +283,13 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMSecurityParameters";
 			definition = "Security parameters of the ATM for the initiated key download.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityParameters4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 		}
 	};
+	protected Max140Binary hostChallenge;
 	/**
 	 * Random value from the host provided during a previous exchange.
 	 * <p>
@@ -312,7 +319,7 @@ public class ATMKeyDownloadRequest2 {
 	 * "Random value from the host provided during a previous exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMKeyDownloadRequest2.mmObject();
 			isDerived = false;
@@ -320,8 +327,8 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostChallenge";
 			definition = "Random value from the host provided during a previous exchange.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
@@ -329,16 +336,64 @@ public class ATMKeyDownloadRequest2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMKeyDownloadRequest2.Environment, com.tools20022.repository.msg.ATMKeyDownloadRequest2.CommandResult,
-						com.tools20022.repository.msg.ATMKeyDownloadRequest2.CommandContext, com.tools20022.repository.msg.ATMKeyDownloadRequest2.ATMSecurityContext,
-						com.tools20022.repository.msg.ATMKeyDownloadRequest2.ATMSecurityParameters, com.tools20022.repository.msg.ATMKeyDownloadRequest2.HostChallenge);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02.ATMKeyDownloadRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMKeyDownloadRequest2.mmEnvironment, com.tools20022.repository.msg.ATMKeyDownloadRequest2.mmCommandResult,
+						com.tools20022.repository.msg.ATMKeyDownloadRequest2.mmCommandContext, com.tools20022.repository.msg.ATMKeyDownloadRequest2.mmATMSecurityContext,
+						com.tools20022.repository.msg.ATMKeyDownloadRequest2.mmATMSecurityParameters, com.tools20022.repository.msg.ATMKeyDownloadRequest2.mmHostChallenge);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02.mmATMKeyDownloadRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMKeyDownloadRequest2";
 				definition = "Information related to the request of a key download from an ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment15 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment15 environment) {
+		this.environment = environment;
+	}
+
+	public List<ATMCommand2> getCommandResult() {
+		return commandResult;
+	}
+
+	public void setCommandResult(List<com.tools20022.repository.msg.ATMCommand2> commandResult) {
+		this.commandResult = commandResult;
+	}
+
+	public ATMCommand3 getCommandContext() {
+		return commandContext;
+	}
+
+	public void setCommandContext(com.tools20022.repository.msg.ATMCommand3 commandContext) {
+		this.commandContext = commandContext;
+	}
+
+	public ATMSecurityContext2 getATMSecurityContext() {
+		return aTMSecurityContext;
+	}
+
+	public void setATMSecurityContext(com.tools20022.repository.msg.ATMSecurityContext2 aTMSecurityContext) {
+		this.aTMSecurityContext = aTMSecurityContext;
+	}
+
+	public SecurityParameters4 getATMSecurityParameters() {
+		return aTMSecurityParameters;
+	}
+
+	public void setATMSecurityParameters(com.tools20022.repository.msg.SecurityParameters4 aTMSecurityParameters) {
+		this.aTMSecurityParameters = aTMSecurityParameters;
+	}
+
+	public Max140Binary getHostChallenge() {
+		return hostChallenge;
+	}
+
+	public void setHostChallenge(Max140Binary hostChallenge) {
+		this.hostChallenge = hostChallenge;
 	}
 }

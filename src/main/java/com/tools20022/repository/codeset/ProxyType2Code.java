@@ -32,21 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ProxyTypeCode ProxyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProxyType2Code#Chairman
- * ProxyType2Code.Chairman}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProxyType2Code#mmChairman
+ * ProxyType2Code.mmChairman}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProxyType2Code#Discretionary
- * ProxyType2Code.Discretionary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProxyType2Code#mmDiscretionary
+ * ProxyType2Code.mmDiscretionary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProxyType2Code#SecurityHolder
- * ProxyType2Code.SecurityHolder}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProxyType2Code#mmSecurityHolder
+ * ProxyType2Code.mmSecurityHolder}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class ProxyType2Code extends ProxyTypeCode {
 	 * name} = "Chairman"</li>
 	 * </ul>
 	 */
-	public static final MMCode Chairman = new MMCode() {
+	public static final MMCode mmChairman = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Chairman";
@@ -105,7 +105,7 @@ public class ProxyType2Code extends ProxyTypeCode {
 	 * name} = "Discretionary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discretionary = new MMCode() {
+	public static final MMCode mmDiscretionary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discretionary";
@@ -128,7 +128,7 @@ public class ProxyType2Code extends ProxyTypeCode {
 	 * name} = "SecurityHolder"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityHolder = new MMCode() {
+	public static final MMCode mmSecurityHolder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityHolder";
@@ -139,12 +139,13 @@ public class ProxyType2Code extends ProxyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CHRM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProxyType2Code";
 				definition = "Specifies the type of proxy person.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProxyType2Code.Chairman, com.tools20022.repository.codeset.ProxyType2Code.Discretionary, com.tools20022.repository.codeset.ProxyType2Code.SecurityHolder);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProxyType2Code.mmChairman, com.tools20022.repository.codeset.ProxyType2Code.mmDiscretionary,
+						com.tools20022.repository.codeset.ProxyType2Code.mmSecurityHolder);
 				trace_lazy = () -> ProxyTypeCode.mmObject();
 			}
 		});

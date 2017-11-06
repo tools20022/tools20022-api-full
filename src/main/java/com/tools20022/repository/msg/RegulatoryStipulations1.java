@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.RegulatoryReport;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies regulatory stipulations that financial institutions must be
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryStipulations1#Country
- * RegulatoryStipulations1.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryStipulations1#mmCountry
+ * RegulatoryStipulations1.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryStipulations1#Stipulations
- * RegulatoryStipulations1.Stipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryStipulations1#mmStipulations
+ * RegulatoryStipulations1.mmStipulations}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,21 +52,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#RegulatoryStipulations
- * SecuritiesTradeConfirmationV01.RegulatoryStipulations}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#mmRegulatoryStipulations
+ * SecuritiesTradeConfirmationV01.mmRegulatoryStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#RegulatoryStipulations
- * SecuritiesTradeConfirmationV02.RegulatoryStipulations}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#mmRegulatoryStipulations
+ * SecuritiesTradeConfirmationV02.mmRegulatoryStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03#RegulatoryStipulations
- * SecuritiesTradeConfirmationV03.RegulatoryStipulations}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03#mmRegulatoryStipulations
+ * SecuritiesTradeConfirmationV03.mmRegulatoryStipulations}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegulatoryStipulations1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Nation with its own government, occupying a particular territory.
 	 * <p>
@@ -109,7 +111,7 @@ public class RegulatoryStipulations1 {
 	 * "Nation with its own government, occupying a particular territory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RegulatoryStipulations1.mmObject();
 			isDerived = false;
@@ -117,11 +119,12 @@ public class RegulatoryStipulations1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Nation with its own government, occupying a particular territory.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected List<Max350Text> stipulations;
 	/**
 	 * Specifies regulatory stipulations that financial institutions must be
 	 * compliant with in the country, region, and/or where they conduct
@@ -153,7 +156,7 @@ public class RegulatoryStipulations1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Stipulations = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStipulations = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RegulatoryStipulations1.mmObject();
 			isDerived = false;
@@ -169,16 +172,32 @@ public class RegulatoryStipulations1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryStipulations1.Country, com.tools20022.repository.msg.RegulatoryStipulations1.Stipulations);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryStipulations1.mmCountry, com.tools20022.repository.msg.RegulatoryStipulations1.mmStipulations);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmRegulatoryStipulations,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmRegulatoryStipulations, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmRegulatoryStipulations);
 				trace_lazy = () -> RegulatoryReport.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.RegulatoryStipulations,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.RegulatoryStipulations, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.RegulatoryStipulations);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryStipulations1";
 				definition = "Specifies regulatory stipulations that financial institutions must be compliant with in the country, region, and/or area they conduct business.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public List<Max350Text> getStipulations() {
+		return stipulations;
+	}
+
+	public void setStipulations(List<Max350Text> stipulations) {
+		this.stipulations = stipulations;
 	}
 }

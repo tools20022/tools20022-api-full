@@ -69,21 +69,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#Assignment
- * DebitAuthorisationResponseV02.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#mmAssignment
+ * DebitAuthorisationResponseV02.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#Case
- * DebitAuthorisationResponseV02.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#mmCase
+ * DebitAuthorisationResponseV02.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#Confirmation
- * DebitAuthorisationResponseV02.Confirmation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#mmConfirmation
+ * DebitAuthorisationResponseV02.mmConfirmation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#identifier
- * DebitAuthorisationResponseV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.036.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebitAuthorisationResponseV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment2 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -137,17 +136,18 @@ public class DebitAuthorisationResponseV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 	};
+	protected Case2 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -169,17 +169,18 @@ public class DebitAuthorisationResponseV02 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
 		}
 	};
+	protected DebitAuthorisationConfirmation2 confirmation;
 	/**
 	 * Indicates if the debit authorisation is granted or not.
 	 * <p>
@@ -203,42 +204,15 @@ public class DebitAuthorisationResponseV02 {
 	 * definition} = "Indicates if the debit authorisation is granted or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Confirmation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmConfirmation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Conf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "Indicates if the debit authorisation is granted or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DebitAuthorisationConfirmation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "036"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "036";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -248,17 +222,48 @@ public class DebitAuthorisationResponseV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisationResponseV02";
 				definition = "Scope\r\nThe Debit Authorisation Response message is sent by an account owner to its account servicing institution. This message is used to approve or reject a debit authorisation request.\r\nUsage\r\nThe Debit Authorisation Response message is used to reply to a Debit Authorisation Request message.\r\nThe Debit Authorisation Response message covers one and only one payment instruction at a time. If an account owner needs to reply to several Debit Authorisation Request messages, then multiple Debit Authorisation Response messages must be sent.\r\nThe Debit Authorisation Response message indicates whether the account owner agrees with the request by means of a code. It also allows further details to be given about the debit authorisation, such as acceptable amount and value date for the debit.\r\nThe Debit Authorisation Response message must be used exclusively between the account owner and the account servicing institution. It must not be used in place of a Resolution Of Investigation message between subsequent agents.";
-				previousVersion_lazy = () -> DebitAuthorisationResponse.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(DebitAuthorisationResponseV03.mmObject());
+				previousVersion_lazy = () -> DebitAuthorisationResponse.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "DbtAuthstnRspn";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.Assignment, com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.Case,
-						com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.Confirmation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.mmCase,
+						com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.mmConfirmation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "036";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment2 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment2 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case2 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case2 case_) {
+		this.case_ = case_;
+	}
+
+	public DebitAuthorisationConfirmation2 getConfirmation() {
+		return confirmation;
+	}
+
+	public void setConfirmation(DebitAuthorisationConfirmation2 confirmation) {
+		this.confirmation = confirmation;
 	}
 }

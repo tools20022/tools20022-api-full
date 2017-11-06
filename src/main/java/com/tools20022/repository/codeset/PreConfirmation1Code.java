@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreConfirmation1Code#PreConfirmCash
- * PreConfirmation1Code.PreConfirmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreConfirmation1Code#mmPreConfirmCash
+ * PreConfirmation1Code.mmPreConfirmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreConfirmation1Code#PreConfirmSecurities
- * PreConfirmation1Code.PreConfirmSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreConfirmation1Code#mmPreConfirmSecurities
+ * PreConfirmation1Code.mmPreConfirmSecurities}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class PreConfirmation1Code extends PreConfirmationCode {
 	 * name} = "PreConfirmCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreConfirmCash = new MMCode() {
+	public static final MMCode mmPreConfirmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmCash";
@@ -105,7 +105,7 @@ public class PreConfirmation1Code extends PreConfirmationCode {
 	 * name} = "PreConfirmSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreConfirmSecurities = new MMCode() {
+	public static final MMCode mmPreConfirmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmSecurities";
@@ -116,12 +116,12 @@ public class PreConfirmation1Code extends PreConfirmationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRCA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PreConfirmation1Code";
 				definition = "Specifies if there is a pre-confirmation of cash or securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreConfirmation1Code.PreConfirmCash, com.tools20022.repository.codeset.PreConfirmation1Code.PreConfirmSecurities);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreConfirmation1Code.mmPreConfirmCash, com.tools20022.repository.codeset.PreConfirmation1Code.mmPreConfirmSecurities);
 				trace_lazy = () -> PreConfirmationCode.mmObject();
 			}
 		});

@@ -35,35 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#PlaceAndName
- * TaxSD1.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#ForeignTaxCreditAmount
- * TaxSD1.ForeignTaxCreditAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#ForeignTaxCreditRate
- * TaxSD1.ForeignTaxCreditRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#ForeignSourceAmount
- * TaxSD1.ForeignSourceAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#ForeignSourceRate
- * TaxSD1.ForeignSourceRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#TaxAdvantageType
- * TaxSD1.TaxAdvantageType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#TaxAdvantageAmount
- * TaxSD1.TaxAdvantageAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#TaxAdvantageRate
- * TaxSD1.TaxAdvantageRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#SundryOrOtherRate
- * TaxSD1.SundryOrOtherRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#TaxDeferredRate
- * TaxSD1.TaxDeferredRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#TaxFreeRate
- * TaxSD1.TaxFreeRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmPlaceAndName
+ * TaxSD1.mmPlaceAndName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxSD1#mmForeignTaxCreditAmount
+ * TaxSD1.mmForeignTaxCreditAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmForeignTaxCreditRate
+ * TaxSD1.mmForeignTaxCreditRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmForeignSourceAmount
+ * TaxSD1.mmForeignSourceAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmForeignSourceRate
+ * TaxSD1.mmForeignSourceRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmTaxAdvantageType
+ * TaxSD1.mmTaxAdvantageType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmTaxAdvantageAmount
+ * TaxSD1.mmTaxAdvantageAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmTaxAdvantageRate
+ * TaxSD1.mmTaxAdvantageRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmSundryOrOtherRate
+ * TaxSD1.mmSundryOrOtherRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmTaxDeferredRate
+ * TaxSD1.mmTaxDeferredRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxSD1#mmTaxFreeRate
+ * TaxSD1.mmTaxFreeRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -108,7 +110,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -116,11 +118,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAndAmount foreignTaxCreditAmount;
 	/**
 	 * Amount of foreign tax credit per security.
 	 * <p>
@@ -148,7 +151,7 @@ public class TaxSD1 {
 	 * definition} = "Amount of foreign tax credit per security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignTaxCreditAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignTaxCreditAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -156,11 +159,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxCreditAmount";
 			definition = "Amount of foreign tax credit per security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate foreignTaxCreditRate;
 	/**
 	 * Percent of foreign tax credit per security .<br>
 	 * <p>
@@ -188,7 +192,7 @@ public class TaxSD1 {
 	 * definition} = "Percent of foreign tax credit per security\n.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignTaxCreditRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignTaxCreditRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -196,11 +200,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxCreditRate";
 			definition = "Percent of foreign tax credit per security\n.\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAndAmount foreignSourceAmount;
 	/**
 	 * Amount of the dividend that is being paid out of income earned in a
 	 * foreign jurisdiction.
@@ -231,7 +236,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignSourceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignSourceAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -239,11 +244,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignSourceAmount";
 			definition = "Amount of the dividend that is being paid out of income earned in a foreign jurisdiction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate foreignSourceRate;
 	/**
 	 * Percentage of the dividend that is being paid out of income earned in a
 	 * foreign jurisdiction.
@@ -274,7 +280,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignSourceRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignSourceRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -282,11 +288,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignSourceRate";
 			definition = "Percentage of the dividend that is being paid out of income earned in a foreign jurisdiction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected TaxAdvantageType1Code taxAdvantageType;
 	/**
 	 * Form of tax advantage on the dividend.
 	 * <p>
@@ -314,7 +321,7 @@ public class TaxSD1 {
 	 * definition} = "Form of tax advantage on the dividend."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxAdvantageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxAdvantageType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -322,11 +329,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAdvantageType";
 			definition = "Form of tax advantage on the dividend.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TaxAdvantageType1Code.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAndAmount taxAdvantageAmount;
 	/**
 	 * Amount of the tax advantage on the dividend.
 	 * <p>
@@ -354,7 +362,7 @@ public class TaxSD1 {
 	 * definition} = "Amount of the tax advantage on the dividend."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxAdvantageAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxAdvantageAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -362,11 +370,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAdvantageAmount";
 			definition = "Amount of the tax advantage on the dividend.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate taxAdvantageRate;
 	/**
 	 * Percent of the tax advantage on the dividend.
 	 * <p>
@@ -394,7 +403,7 @@ public class TaxSD1 {
 	 * definition} = "Percent of the tax advantage on the dividend."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxAdvantageRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxAdvantageRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -402,11 +411,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAdvantageRate";
 			definition = "Percent of the tax advantage on the dividend.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate sundryOrOtherRate;
 	/**
 	 * Percentage of the amount of money related to taxable income that cannot
 	 * be categorised.
@@ -437,7 +447,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SundryOrOtherRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSundryOrOtherRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -445,11 +455,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SundryOrOtherRate";
 			definition = "Percentage of the amount of money related to taxable income that cannot be categorised.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate taxDeferredRate;
 	/**
 	 * Percentage of the amount of income eligible for deferred taxation.
 	 * <p>
@@ -478,7 +489,7 @@ public class TaxSD1 {
 	 * "Percentage of the amount of income eligible for deferred taxation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxDeferredRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxDeferredRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -486,11 +497,12 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeferredRate";
 			definition = "Percentage of the amount of income eligible for deferred taxation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate taxFreeRate;
 	/**
 	 * Percentage of the amount of money that has not been subject to taxation.
 	 * <p>
@@ -520,7 +532,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxFreeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxFreeRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
@@ -528,8 +540,8 @@ public class TaxSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxFreeRate";
 			definition = "Percentage of the amount of money that has not been subject to taxation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -537,16 +549,104 @@ public class TaxSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxSD1.PlaceAndName, com.tools20022.repository.msg.TaxSD1.ForeignTaxCreditAmount, com.tools20022.repository.msg.TaxSD1.ForeignTaxCreditRate,
-						com.tools20022.repository.msg.TaxSD1.ForeignSourceAmount, com.tools20022.repository.msg.TaxSD1.ForeignSourceRate, com.tools20022.repository.msg.TaxSD1.TaxAdvantageType,
-						com.tools20022.repository.msg.TaxSD1.TaxAdvantageAmount, com.tools20022.repository.msg.TaxSD1.TaxAdvantageRate, com.tools20022.repository.msg.TaxSD1.SundryOrOtherRate,
-						com.tools20022.repository.msg.TaxSD1.TaxDeferredRate, com.tools20022.repository.msg.TaxSD1.TaxFreeRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxSD1.mmPlaceAndName, com.tools20022.repository.msg.TaxSD1.mmForeignTaxCreditAmount, com.tools20022.repository.msg.TaxSD1.mmForeignTaxCreditRate,
+						com.tools20022.repository.msg.TaxSD1.mmForeignSourceAmount, com.tools20022.repository.msg.TaxSD1.mmForeignSourceRate, com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageType,
+						com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageAmount, com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageRate, com.tools20022.repository.msg.TaxSD1.mmSundryOrOtherRate,
+						com.tools20022.repository.msg.TaxSD1.mmTaxDeferredRate, com.tools20022.repository.msg.TaxSD1.mmTaxFreeRate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxSD1";
 				definition = "Provides extra tax details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public RestrictedFINActiveCurrencyAndAmount getForeignTaxCreditAmount() {
+		return foreignTaxCreditAmount;
+	}
+
+	public void setForeignTaxCreditAmount(RestrictedFINActiveCurrencyAndAmount foreignTaxCreditAmount) {
+		this.foreignTaxCreditAmount = foreignTaxCreditAmount;
+	}
+
+	public PercentageRate getForeignTaxCreditRate() {
+		return foreignTaxCreditRate;
+	}
+
+	public void setForeignTaxCreditRate(PercentageRate foreignTaxCreditRate) {
+		this.foreignTaxCreditRate = foreignTaxCreditRate;
+	}
+
+	public RestrictedFINActiveCurrencyAndAmount getForeignSourceAmount() {
+		return foreignSourceAmount;
+	}
+
+	public void setForeignSourceAmount(RestrictedFINActiveCurrencyAndAmount foreignSourceAmount) {
+		this.foreignSourceAmount = foreignSourceAmount;
+	}
+
+	public PercentageRate getForeignSourceRate() {
+		return foreignSourceRate;
+	}
+
+	public void setForeignSourceRate(PercentageRate foreignSourceRate) {
+		this.foreignSourceRate = foreignSourceRate;
+	}
+
+	public TaxAdvantageType1Code getTaxAdvantageType() {
+		return taxAdvantageType;
+	}
+
+	public void setTaxAdvantageType(TaxAdvantageType1Code taxAdvantageType) {
+		this.taxAdvantageType = taxAdvantageType;
+	}
+
+	public RestrictedFINActiveCurrencyAndAmount getTaxAdvantageAmount() {
+		return taxAdvantageAmount;
+	}
+
+	public void setTaxAdvantageAmount(RestrictedFINActiveCurrencyAndAmount taxAdvantageAmount) {
+		this.taxAdvantageAmount = taxAdvantageAmount;
+	}
+
+	public PercentageRate getTaxAdvantageRate() {
+		return taxAdvantageRate;
+	}
+
+	public void setTaxAdvantageRate(PercentageRate taxAdvantageRate) {
+		this.taxAdvantageRate = taxAdvantageRate;
+	}
+
+	public PercentageRate getSundryOrOtherRate() {
+		return sundryOrOtherRate;
+	}
+
+	public void setSundryOrOtherRate(PercentageRate sundryOrOtherRate) {
+		this.sundryOrOtherRate = sundryOrOtherRate;
+	}
+
+	public PercentageRate getTaxDeferredRate() {
+		return taxDeferredRate;
+	}
+
+	public void setTaxDeferredRate(PercentageRate taxDeferredRate) {
+		this.taxDeferredRate = taxDeferredRate;
+	}
+
+	public PercentageRate getTaxFreeRate() {
+		return taxFreeRate;
+	}
+
+	public void setTaxFreeRate(PercentageRate taxFreeRate) {
+		this.taxFreeRate = taxFreeRate;
 	}
 }

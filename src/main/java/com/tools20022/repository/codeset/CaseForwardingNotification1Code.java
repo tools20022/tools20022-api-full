@@ -36,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#FurtherInvestigation
- * CaseForwardingNotification1Code.FurtherInvestigation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#mmFurtherInvestigation
+ * CaseForwardingNotification1Code.mmFurtherInvestigation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#RequestToCancel
- * CaseForwardingNotification1Code.RequestToCancel}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#mmRequestToCancel
+ * CaseForwardingNotification1Code.mmRequestToCancel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#RequestToModify
- * CaseForwardingNotification1Code.RequestToModify}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#mmRequestToModify
+ * CaseForwardingNotification1Code.mmRequestToModify}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#RequestDebitAuthorisation
- * CaseForwardingNotification1Code.RequestDebitAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#mmRequestDebitAuthorisation
+ * CaseForwardingNotification1Code.mmRequestDebitAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#SentAdditionalInformation
- * CaseForwardingNotification1Code.SentAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseForwardingNotification1Code#mmSentAdditionalInformation
+ * CaseForwardingNotification1Code.mmSentAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class CaseForwardingNotification1Code extends CaseForwardingNotificationC
 	 * name} = "FurtherInvestigation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FurtherInvestigation = new MMCode() {
+	public static final MMCode mmFurtherInvestigation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FurtherInvestigation";
@@ -117,7 +117,7 @@ public class CaseForwardingNotification1Code extends CaseForwardingNotificationC
 	 * name} = "RequestToCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestToCancel = new MMCode() {
+	public static final MMCode mmRequestToCancel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestToCancel";
@@ -140,7 +140,7 @@ public class CaseForwardingNotification1Code extends CaseForwardingNotificationC
 	 * name} = "RequestToModify"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestToModify = new MMCode() {
+	public static final MMCode mmRequestToModify = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestToModify";
@@ -163,7 +163,7 @@ public class CaseForwardingNotification1Code extends CaseForwardingNotificationC
 	 * name} = "RequestDebitAuthorisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestDebitAuthorisation = new MMCode() {
+	public static final MMCode mmRequestDebitAuthorisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDebitAuthorisation";
@@ -186,7 +186,7 @@ public class CaseForwardingNotification1Code extends CaseForwardingNotificationC
 	 * name} = "SentAdditionalInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentAdditionalInformation = new MMCode() {
+	public static final MMCode mmSentAdditionalInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentAdditionalInformation";
@@ -197,14 +197,14 @@ public class CaseForwardingNotification1Code extends CaseForwardingNotificationC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FTHI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CaseForwardingNotification1Code";
 				definition = "Specifies the action requested when forwarding a case. Assignees taking the decision to cancel or modify to further case assignees must communicate this decision to their case assigners.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseForwardingNotification1Code.FurtherInvestigation, com.tools20022.repository.codeset.CaseForwardingNotification1Code.RequestToCancel,
-						com.tools20022.repository.codeset.CaseForwardingNotification1Code.RequestToModify, com.tools20022.repository.codeset.CaseForwardingNotification1Code.RequestDebitAuthorisation,
-						com.tools20022.repository.codeset.CaseForwardingNotification1Code.SentAdditionalInformation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseForwardingNotification1Code.mmFurtherInvestigation, com.tools20022.repository.codeset.CaseForwardingNotification1Code.mmRequestToCancel,
+						com.tools20022.repository.codeset.CaseForwardingNotification1Code.mmRequestToModify, com.tools20022.repository.codeset.CaseForwardingNotification1Code.mmRequestDebitAuthorisation,
+						com.tools20022.repository.codeset.CaseForwardingNotification1Code.mmSentAdditionalInformation);
 				trace_lazy = () -> CaseForwardingNotificationCode.mmObject();
 			}
 		});

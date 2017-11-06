@@ -30,23 +30,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#ICC
- * AuthenticationEntityCode.ICC}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#mmICC
+ * AuthenticationEntityCode.mmICC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#AuthorisedAgent
- * AuthenticationEntityCode.AuthorisedAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#mmAuthorisedAgent
+ * AuthenticationEntityCode.mmAuthorisedAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#Merchant
- * AuthenticationEntityCode.Merchant}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#mmMerchant
+ * AuthenticationEntityCode.mmMerchant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#Acquirer
- * AuthenticationEntityCode.Acquirer}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#mmAcquirer
+ * AuthenticationEntityCode.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#Issuer
- * AuthenticationEntityCode.Issuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#mmIssuer
+ * AuthenticationEntityCode.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#Terminal
- * AuthenticationEntityCode.Terminal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#mmTerminal
+ * AuthenticationEntityCode.mmTerminal}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -61,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -107,7 +107,7 @@ public class AuthenticationEntityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ICC = new MMCode() {
+	public static final MMCode mmICC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ICC";
@@ -137,7 +137,7 @@ public class AuthenticationEntityCode {
 	 * definition} = "Authorisation agent of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode AuthorisedAgent = new MMCode() {
+	public static final MMCode mmAuthorisedAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AuthorisedAgent";
@@ -168,7 +168,7 @@ public class AuthenticationEntityCode {
 	 * "Merchant (for example signature verification by the attendant)."</li>
 	 * </ul>
 	 */
-	public static final MMCode Merchant = new MMCode() {
+	public static final MMCode mmMerchant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Merchant";
@@ -198,7 +198,7 @@ public class AuthenticationEntityCode {
 	 * definition} = "Acquirer of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -228,7 +228,7 @@ public class AuthenticationEntityCode {
 	 * definition} = "Card issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode Issuer = new MMCode() {
+	public static final MMCode mmIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
@@ -258,7 +258,7 @@ public class AuthenticationEntityCode {
 	 * definition} = "Secure application in the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMCode Terminal = new MMCode() {
+	public static final MMCode mmTerminal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Terminal";
@@ -271,14 +271,14 @@ public class AuthenticationEntityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ICCD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationEntityCode";
 				definition = "Entity or object in charge of verifying the cardholder authenticity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationEntityCode.ICC, com.tools20022.repository.codeset.AuthenticationEntityCode.AuthorisedAgent,
-						com.tools20022.repository.codeset.AuthenticationEntityCode.Merchant, com.tools20022.repository.codeset.AuthenticationEntityCode.Acquirer, com.tools20022.repository.codeset.AuthenticationEntityCode.Issuer,
-						com.tools20022.repository.codeset.AuthenticationEntityCode.Terminal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationEntityCode.mmICC, com.tools20022.repository.codeset.AuthenticationEntityCode.mmAuthorisedAgent,
+						com.tools20022.repository.codeset.AuthenticationEntityCode.mmMerchant, com.tools20022.repository.codeset.AuthenticationEntityCode.mmAcquirer, com.tools20022.repository.codeset.AuthenticationEntityCode.mmIssuer,
+						com.tools20022.repository.codeset.AuthenticationEntityCode.mmTerminal);
 				derivation_lazy = () -> Arrays.asList(AuthenticationEntity1Code.mmObject(), AuthenticationEntity2Code.mmObject());
 			}
 		});

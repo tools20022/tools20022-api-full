@@ -41,20 +41,20 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreAllocation1#AllocationIdentification
- * PreAllocation1.AllocationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmAllocationIdentification
+ * PreAllocation1.mmAllocationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreAllocation1#IndividualAllocationIdentification
- * PreAllocation1.IndividualAllocationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmIndividualAllocationIdentification
+ * PreAllocation1.mmIndividualAllocationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreAllocation1#AllocatedQuantity
- * PreAllocation1.AllocatedQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmAllocatedQuantity
+ * PreAllocation1.mmAllocatedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreAllocation1#AllocatedSettlementCurrency
- * PreAllocation1.AllocatedSettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmAllocatedSettlementCurrency
+ * PreAllocation1.mmAllocatedSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreAllocation1#AllocationAccountDetails
- * PreAllocation1.AllocationAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmAllocationAccountDetails
+ * PreAllocation1.mmAllocationAccountDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +62,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,6 +78,7 @@ import java.util.function.Supplier;
 public class PreAllocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text allocationIdentification;
 	/**
 	 * Used to assign an identifier to the block of preallocations.
 	 * <p>
@@ -110,20 +111,21 @@ public class PreAllocation1 {
 	 * "Used to assign an identifier to the block of preallocations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllocationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllocationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PreAllocation1.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationIdentification";
 			definition = "Used to assign an identifier to the block of preallocations.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text individualAllocationIdentification;
 	/**
 	 * A unique identification for each allocation instance.
 	 * <p>
@@ -155,20 +157,21 @@ public class PreAllocation1 {
 	 * definition} = "A unique identification for each allocation instance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IndividualAllocationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndividualAllocationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PreAllocation1.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "IndvAllcnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualAllocationIdentification";
 			definition = "A unique identification for each allocation instance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice allocatedQuantity;
 	/**
 	 * Quantity of a specific security allocated from a block trade, based upon
 	 * the distribution of the trade to different accounts.
@@ -183,8 +186,8 @@ public class PreAllocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Allocation#AllocatedQuantity
-	 * Allocation.AllocatedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Allocation#mmAllocatedQuantity
+	 * Allocation.mmAllocatedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,20 +207,21 @@ public class PreAllocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllocatedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllocatedQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmAllocatedQuantity;
 			componentContext_lazy = () -> PreAllocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.AllocatedQuantity;
 			isDerived = false;
 			xmlTag = "AllctdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocatedQuantity";
 			definition = "Quantity of a specific security allocated from a block trade, based upon the distribution of the trade to different accounts.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected CurrencyCode allocatedSettlementCurrency;
 	/**
 	 * Currency to be used for settlement of the settlement amount.
 	 * <p>
@@ -230,8 +234,8 @@ public class PreAllocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Allocation#SettlementCurrency
-	 * Allocation.SettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Allocation#mmSettlementCurrency
+	 * Allocation.mmSettlementCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,20 +254,21 @@ public class PreAllocation1 {
 	 * "Currency to be used for settlement of the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllocatedSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllocatedSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmSettlementCurrency;
 			componentContext_lazy = () -> PreAllocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.SettlementCurrency;
 			isDerived = false;
 			xmlTag = "AllctdSttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocatedSettlementCurrency";
 			definition = "Currency to be used for settlement of the settlement amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected SecuritiesAccount2 allocationAccountDetails;
 	/**
 	 * Account to or from which an allocation must be made.
 	 * <p>
@@ -275,8 +280,8 @@ public class PreAllocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Allocation#AllocationAccount
-	 * Allocation.AllocationAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Allocation#mmAllocationAccount
+	 * Allocation.mmAllocationAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -294,29 +299,29 @@ public class PreAllocation1 {
 	 * definition} = "Account to or from which an allocation must be made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AllocationAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAllocationAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmAllocationAccount;
 			componentContext_lazy = () -> PreAllocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.AllocationAccount;
 			isDerived = false;
 			xmlTag = "AllcnAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationAccountDetails";
 			definition = "Account to or from which an allocation must be made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreAllocation1.AllocationIdentification, com.tools20022.repository.msg.PreAllocation1.IndividualAllocationIdentification,
-						com.tools20022.repository.msg.PreAllocation1.AllocatedQuantity, com.tools20022.repository.msg.PreAllocation1.AllocatedSettlementCurrency, com.tools20022.repository.msg.PreAllocation1.AllocationAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreAllocation1.mmAllocationIdentification, com.tools20022.repository.msg.PreAllocation1.mmIndividualAllocationIdentification,
+						com.tools20022.repository.msg.PreAllocation1.mmAllocatedQuantity, com.tools20022.repository.msg.PreAllocation1.mmAllocatedSettlementCurrency, com.tools20022.repository.msg.PreAllocation1.mmAllocationAccountDetails);
 				trace_lazy = () -> Allocation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -330,5 +335,45 @@ public class PreAllocation1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAllocationIdentification() {
+		return allocationIdentification;
+	}
+
+	public void setAllocationIdentification(Max35Text allocationIdentification) {
+		this.allocationIdentification = allocationIdentification;
+	}
+
+	public Max35Text getIndividualAllocationIdentification() {
+		return individualAllocationIdentification;
+	}
+
+	public void setIndividualAllocationIdentification(Max35Text individualAllocationIdentification) {
+		this.individualAllocationIdentification = individualAllocationIdentification;
+	}
+
+	public FinancialInstrumentQuantityChoice getAllocatedQuantity() {
+		return allocatedQuantity;
+	}
+
+	public void setAllocatedQuantity(FinancialInstrumentQuantityChoice allocatedQuantity) {
+		this.allocatedQuantity = allocatedQuantity;
+	}
+
+	public CurrencyCode getAllocatedSettlementCurrency() {
+		return allocatedSettlementCurrency;
+	}
+
+	public void setAllocatedSettlementCurrency(CurrencyCode allocatedSettlementCurrency) {
+		this.allocatedSettlementCurrency = allocatedSettlementCurrency;
+	}
+
+	public SecuritiesAccount2 getAllocationAccountDetails() {
+		return allocationAccountDetails;
+	}
+
+	public void setAllocationAccountDetails(com.tools20022.repository.msg.SecuritiesAccount2 allocationAccountDetails) {
+		this.allocationAccountDetails = allocationAccountDetails;
 	}
 }

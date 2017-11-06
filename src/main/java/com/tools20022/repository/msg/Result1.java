@@ -33,19 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Result1#DueToPartyA
- * Result1.DueToPartyA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Result1#DueToPartyB
- * Result1.DueToPartyB}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Result1#AdditionalInformation
- * Result1.AdditionalInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Result1#mmDueToPartyA
+ * Result1.mmDueToPartyA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Result1#mmDueToPartyB
+ * Result1.mmDueToPartyB}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Result1#mmAdditionalInformation
+ * Result1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Result1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount dueToPartyA;
 	/**
 	 * Amount payable by party B to party A.
 	 * <p>
@@ -86,7 +88,7 @@ public class Result1 {
 	 * definition} = "Amount payable by party B to party A."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DueToPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDueToPartyA = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Result1.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class Result1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueToPartyA";
 			definition = "Amount payable by party B to party A.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount dueToPartyB;
 	/**
 	 * Amount payable by party A to party B.
 	 * <p>
@@ -126,7 +129,7 @@ public class Result1 {
 	 * definition} = "Amount payable by party A to party B."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DueToPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDueToPartyB = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Result1.mmObject();
 			isDerived = false;
@@ -134,11 +137,12 @@ public class Result1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueToPartyB";
 			definition = "Amount payable by party A to party B.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max210Text additionalInformation;
 	/**
 	 * Provides additional information related to the collateral that may be
 	 * requested.
@@ -168,7 +172,7 @@ public class Result1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Result1.mmObject();
 			isDerived = false;
@@ -176,8 +180,8 @@ public class Result1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information related to the collateral that may be requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -185,13 +189,37 @@ public class Result1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Result1.DueToPartyA, com.tools20022.repository.msg.Result1.DueToPartyB, com.tools20022.repository.msg.Result1.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Result1.mmDueToPartyA, com.tools20022.repository.msg.Result1.mmDueToPartyB, com.tools20022.repository.msg.Result1.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Result1";
 				definition = "Summation of the call amounts either due to A or due to B.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getDueToPartyA() {
+		return dueToPartyA;
+	}
+
+	public void setDueToPartyA(ActiveCurrencyAndAmount dueToPartyA) {
+		this.dueToPartyA = dueToPartyA;
+	}
+
+	public ActiveCurrencyAndAmount getDueToPartyB() {
+		return dueToPartyB;
+	}
+
+	public void setDueToPartyB(ActiveCurrencyAndAmount dueToPartyB) {
+		this.dueToPartyB = dueToPartyB;
+	}
+
+	public Max210Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max210Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

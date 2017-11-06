@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code#CancelledByHub
- * CancelledStatusReason2Code.CancelledByHub}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code#mmCancelledByHub
+ * CancelledStatusReason2Code.mmCancelledByHub}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code#CancelledByInstructingParty
- * CancelledStatusReason2Code.CancelledByInstructingParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code#mmCancelledByInstructingParty
+ * CancelledStatusReason2Code.mmCancelledByInstructingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code#EndOfLife
- * CancelledStatusReason2Code.EndOfLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code#mmEndOfLife
+ * CancelledStatusReason2Code.mmEndOfLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code#CancelledByOther
- * CancelledStatusReason2Code.CancelledByOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason2Code#mmCancelledByOther
+ * CancelledStatusReason2Code.mmCancelledByOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class CancelledStatusReason2Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledByHub"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByHub = new MMCode() {
+	public static final MMCode mmCancelledByHub = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByHub";
@@ -113,7 +113,7 @@ public class CancelledStatusReason2Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledByInstructingParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByInstructingParty = new MMCode() {
+	public static final MMCode mmCancelledByInstructingParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByInstructingParty";
@@ -136,7 +136,7 @@ public class CancelledStatusReason2Code extends CancelledStatusReasonCode {
 	 * name} = "EndOfLife"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfLife = new MMCode() {
+	public static final MMCode mmEndOfLife = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfLife";
@@ -159,7 +159,7 @@ public class CancelledStatusReason2Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledByOther"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByOther = new MMCode() {
+	public static final MMCode mmCancelledByOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByOther";
@@ -170,13 +170,13 @@ public class CancelledStatusReason2Code extends CancelledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason2Code";
 				definition = "Specifies the underlying reason for cancellation of the associated transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason2Code.CancelledByHub, com.tools20022.repository.codeset.CancelledStatusReason2Code.CancelledByInstructingParty,
-						com.tools20022.repository.codeset.CancelledStatusReason2Code.EndOfLife, com.tools20022.repository.codeset.CancelledStatusReason2Code.CancelledByOther);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason2Code.mmCancelledByHub, com.tools20022.repository.codeset.CancelledStatusReason2Code.mmCancelledByInstructingParty,
+						com.tools20022.repository.codeset.CancelledStatusReason2Code.mmEndOfLife, com.tools20022.repository.codeset.CancelledStatusReason2Code.mmCancelledByOther);
 				trace_lazy = () -> CancelledStatusReasonCode.mmObject();
 			}
 		});

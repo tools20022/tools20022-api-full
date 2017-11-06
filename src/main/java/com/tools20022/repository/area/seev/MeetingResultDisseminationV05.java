@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -63,33 +64,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#Amendment
- * MeetingResultDisseminationV05.Amendment}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmAmendment
+ * MeetingResultDisseminationV05.mmAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#MeetingReference
- * MeetingResultDisseminationV05.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmMeetingReference
+ * MeetingResultDisseminationV05.mmMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#Security
- * MeetingResultDisseminationV05.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmSecurity
+ * MeetingResultDisseminationV05.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#VoteResult
- * MeetingResultDisseminationV05.VoteResult}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmVoteResult
+ * MeetingResultDisseminationV05.mmVoteResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#Participation
- * MeetingResultDisseminationV05.Participation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmParticipation
+ * MeetingResultDisseminationV05.mmParticipation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#AdditionalInformation
- * MeetingResultDisseminationV05.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmAdditionalInformation
+ * MeetingResultDisseminationV05.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#SupplementaryData
- * MeetingResultDisseminationV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmSupplementaryData
+ * MeetingResultDisseminationV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#identifier
- * MeetingResultDisseminationV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.008.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,6 +108,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingResultDisseminationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected AmendInformation3 amendment;
 	/**
 	 * Information specific to an amendment.
 	 * <p>
@@ -133,22 +133,23 @@ public class MeetingResultDisseminationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#Amendment
-	 * MeetingResultDisseminationV04.Amendment}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmAmendment
+	 * MeetingResultDisseminationV04.mmAmendment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Amendment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAmendment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Amdmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			definition = "Information specific to an amendment.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.Amendment;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmAmendment;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AmendInformation3.mmObject();
 		}
 	};
+	protected MeetingReference7 meetingReference;
 	/**
 	 * Series of elements which allow to identify a meeting.
 	 * <p>
@@ -173,22 +174,23 @@ public class MeetingResultDisseminationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#MeetingReference
-	 * MeetingResultDisseminationV04.MeetingReference}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmMeetingReference
+	 * MeetingResultDisseminationV04.mmMeetingReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.MeetingReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmMeetingReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference7.mmObject();
 		}
 	};
+	protected List<SecurityPosition8> security;
 	/**
 	 * Identifies the securities for which the meeting is organised.
 	 * <p>
@@ -214,22 +216,23 @@ public class MeetingResultDisseminationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#Security
-	 * MeetingResultDisseminationV04.Security}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmSecurity
+	 * MeetingResultDisseminationV04.mmSecurity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Security = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Scty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Identifies the securities for which the meeting is organised.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.Security;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmSecurity;
 			maxOccurs = 200;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityPosition8.mmObject();
 		}
 	};
+	protected List<Vote7> voteResult;
 	/**
 	 * Results per resolution.
 	 * <p>
@@ -252,22 +255,23 @@ public class MeetingResultDisseminationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#VoteResult
-	 * MeetingResultDisseminationV04.VoteResult}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmVoteResult
+	 * MeetingResultDisseminationV04.mmVoteResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock VoteResult = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmVoteResult = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "VoteRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteResult";
 			definition = "Results per resolution.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.VoteResult;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmVoteResult;
 			maxOccurs = 1000;
+			minOccurs = 1;
 			complexType_lazy = () -> Vote7.mmObject();
 		}
 	};
+	protected Participation4 participation;
 	/**
 	 * Information about the participation to the voting process.
 	 * <p>
@@ -292,22 +296,23 @@ public class MeetingResultDisseminationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#Participation
-	 * MeetingResultDisseminationV04.Participation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmParticipation
+	 * MeetingResultDisseminationV04.mmParticipation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Participation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmParticipation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Prtcptn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Participation";
 			definition = "Information about the participation to the voting process.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.Participation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmParticipation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Participation4.mmObject();
 		}
 	};
+	protected CommunicationAddress4 additionalInformation;
 	/**
 	 * Information on where additional information can be received.
 	 * <p>
@@ -333,22 +338,23 @@ public class MeetingResultDisseminationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#AdditionalInformation
-	 * MeetingResultDisseminationV04.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmAdditionalInformation
+	 * MeetingResultDisseminationV04.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Information on where additional information can be received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.AdditionalInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CommunicationAddress4.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -375,7 +381,7 @@ public class MeetingResultDisseminationV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,33 +389,6 @@ public class MeetingResultDisseminationV05 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "008";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -424,13 +403,76 @@ public class MeetingResultDisseminationV05 {
 				rootElement = "Document";
 				xmlTag = "MtgRsltDssmntn";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV05.Amendment, com.tools20022.repository.area.seev.MeetingResultDisseminationV05.MeetingReference,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.Security, com.tools20022.repository.area.seev.MeetingResultDisseminationV05.VoteResult,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.Participation, com.tools20022.repository.area.seev.MeetingResultDisseminationV05.AdditionalInformation,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingResultDisseminationV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmAmendment, com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmMeetingReference,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmSecurity, com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmVoteResult,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmParticipation, com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "008";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmendInformation3 getAmendment() {
+		return amendment;
+	}
+
+	public void setAmendment(AmendInformation3 amendment) {
+		this.amendment = amendment;
+	}
+
+	public MeetingReference7 getMeetingReference() {
+		return meetingReference;
+	}
+
+	public void setMeetingReference(MeetingReference7 meetingReference) {
+		this.meetingReference = meetingReference;
+	}
+
+	public List<SecurityPosition8> getSecurity() {
+		return security;
+	}
+
+	public void setSecurity(List<SecurityPosition8> security) {
+		this.security = security;
+	}
+
+	public List<Vote7> getVoteResult() {
+		return voteResult;
+	}
+
+	public void setVoteResult(List<Vote7> voteResult) {
+		this.voteResult = voteResult;
+	}
+
+	public Participation4 getParticipation() {
+		return participation;
+	}
+
+	public void setParticipation(Participation4 participation) {
+		this.participation = participation;
+	}
+
+	public CommunicationAddress4 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(CommunicationAddress4 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

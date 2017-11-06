@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EnabledStatusReason1#Code
- * EnabledStatusReason1.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EnabledStatusReason1#mmCode
+ * EnabledStatusReason1.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EnabledStatusReason1#AdditionalInformation
- * EnabledStatusReason1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.EnabledStatusReason1#mmAdditionalInformation
+ * EnabledStatusReason1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EnabledStatusReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EnabledStatusReason2Choice code;
 	/**
 	 * Reason for the enabled account status.
 	 * <p>
@@ -107,34 +108,37 @@ public class EnabledStatusReason1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ProformaStatusReason1#Code
-	 * ProformaStatusReason1.Code}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DisabledStatusReason1#Code
-	 * DisabledStatusReason1.Code}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1#Code
-	 * AccountStatusUpdateInstructionReason1.Code}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProformaStatusReason1#mmCode
+	 * ProformaStatusReason1.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DisabledStatusReason1#mmCode
+	 * DisabledStatusReason1.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1#mmCode
+	 * AccountStatusUpdateInstructionReason1.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EnabledStatusReason1.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> EnabledStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the enabled account status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProformaStatusReason1.Code, com.tools20022.repository.msg.DisabledStatusReason1.Code,
-					com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProformaStatusReason1.mmCode, com.tools20022.repository.msg.DisabledStatusReason1.mmCode,
+					com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1.mmCode);
 			maxOccurs = 1;
-			type_lazy = () -> EnabledStatusReason2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> EnabledStatusReason2Choice.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the reason for the enabled account status.
 	 * <p>
@@ -166,19 +170,19 @@ public class EnabledStatusReason1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProformaStatusReason1#AdditionalInformation
-	 * ProformaStatusReason1.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProformaStatusReason1#mmAdditionalInformation
+	 * ProformaStatusReason1.mmAdditionalInformation}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DisabledStatusReason1#AdditionalInformation
-	 * DisabledStatusReason1.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.DisabledStatusReason1#mmAdditionalInformation
+	 * DisabledStatusReason1.mmAdditionalInformation}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1#AdditionalInformation
-	 * AccountStatusUpdateInstructionReason1.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1#mmAdditionalInformation
+	 * AccountStatusUpdateInstructionReason1.mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EnabledStatusReason1.mmObject();
 			isDerived = false;
@@ -186,10 +190,10 @@ public class EnabledStatusReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the reason for the enabled account status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProformaStatusReason1.AdditionalInformation, com.tools20022.repository.msg.DisabledStatusReason1.AdditionalInformation,
-					com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1.AdditionalInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProformaStatusReason1.mmAdditionalInformation, com.tools20022.repository.msg.DisabledStatusReason1.mmAdditionalInformation,
+					com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1.mmAdditionalInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -197,9 +201,9 @@ public class EnabledStatusReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnabledStatusReason1.Code, com.tools20022.repository.msg.EnabledStatusReason1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnabledStatusReason1.mmCode, com.tools20022.repository.msg.EnabledStatusReason1.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EnabledStatusReason1";
 				definition = "Reason for an enabled status.";
@@ -207,5 +211,21 @@ public class EnabledStatusReason1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EnabledStatusReason2Choice getCode() {
+		return code;
+	}
+
+	public void setCode(EnabledStatusReason2Choice code) {
+		this.code = code;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

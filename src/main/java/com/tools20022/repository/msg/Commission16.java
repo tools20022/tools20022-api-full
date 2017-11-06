@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.CommissionType2Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.Commission;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,21 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Commission16#Type
- * Commission16.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission16#Commission
- * Commission16.Commission}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission16#mmType
+ * Commission16.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission16#mmCommission
+ * Commission16.mmCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Commission16#RecipientIdentification
- * Commission16.RecipientIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission16#CalculationDate
- * Commission16.CalculationDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission16#TotalCommission
- * Commission16.TotalCommission}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission16#TotalVATAmount
- * Commission16.TotalVATAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission16#VATRate
- * Commission16.VATRate}</li>
+ * {@linkplain com.tools20022.repository.msg.Commission16#mmRecipientIdentification
+ * Commission16.mmRecipientIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission16#mmCalculationDate
+ * Commission16.mmCalculationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission16#mmTotalCommission
+ * Commission16.mmTotalCommission}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission16#mmTotalVATAmount
+ * Commission16.mmTotalVATAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission16#mmVATRate
+ * Commission16.mmVATRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Commission16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CommissionType2Choice type;
 	/**
 	 * Specification of the commission type.
 	 * <p>
@@ -87,8 +89,8 @@ public class Commission16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommissionType
-	 * Commission.CommissionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionType
+	 * Commission.mmCommissionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,21 +108,22 @@ public class Commission16 {
 	 * definition} = "Specification of the commission type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
 			componentContext_lazy = () -> Commission16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommissionType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specification of the commission type.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CommissionType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CommissionType2Choice.mmObject();
 		}
 	};
+	protected AmountOrRate2Choice commission;
 	/**
 	 * Amount of money due to a party as compensation for a service.
 	 * <p>
@@ -153,20 +156,21 @@ public class Commission16 {
 	 * "Amount of money due to a party as compensation for a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Commission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> Commission16.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			xmlTag = "Comssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Amount of money due to a party as compensation for a service.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AmountOrRate2Choice.mmObject();
 		}
 	};
+	protected PartyIdentification54 recipientIdentification;
 	/**
 	 * Information related to an identification, eg, party identification or
 	 * account identification.
@@ -179,8 +183,8 @@ public class Commission16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,21 +204,22 @@ public class Commission16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RecipientIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecipientIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Commission16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Information related to an identification, eg, party identification or account identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification54.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification54.mmObject();
 		}
 	};
+	protected ISODate calculationDate;
 	/**
 	 * Date at which an operation is triggered to calculate, for instance, a
 	 * commission, fee, asset values, etc.
@@ -228,8 +233,8 @@ public class Commission16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CalculationDate
-	 * Commission.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCalculationDate
+	 * Commission.mmCalculationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,20 +254,21 @@ public class Commission16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCalculationDate;
 			componentContext_lazy = () -> Commission16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CalculationDate;
 			isDerived = false;
 			xmlTag = "ClctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Date at which an operation is triggered to calculate, for instance, a commission, fee, asset values, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected AmountAndDirection29 totalCommission;
 	/**
 	 * Total value of the commissions for a specific trade.
 	 * <p>
@@ -276,8 +282,8 @@ public class Commission16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,20 +301,21 @@ public class Commission16 {
 	 * definition} = "Total value of the commissions for a specific trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalCommission = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Commission16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "TtlComssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCommission";
 			definition = "Total value of the commissions for a specific trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection29.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalVATAmount;
 	/**
 	 * Amount that results of the calculation of VAT on net fees, according to
 	 * the transaction current tariffs.
@@ -339,7 +346,7 @@ public class Commission16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalVATAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalVATAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Commission16.mmObject();
 			isDerived = false;
@@ -347,11 +354,12 @@ public class Commission16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalVATAmount";
 			definition = "Amount that results of the calculation of VAT on net fees, according to the transaction current tariffs.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected BaseOneRate vATRate;
 	/**
 	 * Specifies the VAT rate.
 	 * <p>
@@ -364,7 +372,7 @@ public class Commission16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -382,17 +390,17 @@ public class Commission16 {
 	 * definition} = "Specifies the VAT rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VATRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVATRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> Commission16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "VATRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VATRate";
 			definition = "Specifies the VAT rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
@@ -400,16 +408,72 @@ public class Commission16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission16.Type, com.tools20022.repository.msg.Commission16.Commission, com.tools20022.repository.msg.Commission16.RecipientIdentification,
-						com.tools20022.repository.msg.Commission16.CalculationDate, com.tools20022.repository.msg.Commission16.TotalCommission, com.tools20022.repository.msg.Commission16.TotalVATAmount,
-						com.tools20022.repository.msg.Commission16.VATRate);
-				trace_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission16.mmType, com.tools20022.repository.msg.Commission16.mmCommission, com.tools20022.repository.msg.Commission16.mmRecipientIdentification,
+						com.tools20022.repository.msg.Commission16.mmCalculationDate, com.tools20022.repository.msg.Commission16.mmTotalCommission, com.tools20022.repository.msg.Commission16.mmTotalVATAmount,
+						com.tools20022.repository.msg.Commission16.mmVATRate);
+				trace_lazy = () -> Commission.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Commission16";
 				definition = "Amount of money due to a party as compensation for a service.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CommissionType2Choice getType() {
+		return type;
+	}
+
+	public void setType(CommissionType2Choice type) {
+		this.type = type;
+	}
+
+	public AmountOrRate2Choice getCommission() {
+		return commission;
+	}
+
+	public void setCommission(AmountOrRate2Choice commission) {
+		this.commission = commission;
+	}
+
+	public PartyIdentification54 getRecipientIdentification() {
+		return recipientIdentification;
+	}
+
+	public void setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification54 recipientIdentification) {
+		this.recipientIdentification = recipientIdentification;
+	}
+
+	public ISODate getCalculationDate() {
+		return calculationDate;
+	}
+
+	public void setCalculationDate(ISODate calculationDate) {
+		this.calculationDate = calculationDate;
+	}
+
+	public AmountAndDirection29 getTotalCommission() {
+		return totalCommission;
+	}
+
+	public void setTotalCommission(com.tools20022.repository.msg.AmountAndDirection29 totalCommission) {
+		this.totalCommission = totalCommission;
+	}
+
+	public ActiveCurrencyAndAmount getTotalVATAmount() {
+		return totalVATAmount;
+	}
+
+	public void setTotalVATAmount(ActiveCurrencyAndAmount totalVATAmount) {
+		this.totalVATAmount = totalVATAmount;
+	}
+
+	public BaseOneRate getVATRate() {
+		return vATRate;
+	}
+
+	public void setVATRate(BaseOneRate vATRate) {
+		this.vATRate = vATRate;
 	}
 }

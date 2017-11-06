@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.DebitAuthorisationConfirmation;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -70,21 +71,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#Assignment
- * DebitAuthorisationResponse.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#mmAssignment
+ * DebitAuthorisationResponse.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#Case
- * DebitAuthorisationResponse.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#mmCase
+ * DebitAuthorisationResponse.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#Confirmation
- * DebitAuthorisationResponse.Confirmation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#mmConfirmation
+ * DebitAuthorisationResponse.mmConfirmation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#identifier
- * DebitAuthorisationResponse.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.036.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebitAuthorisationResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment assignment;
 	/**
 	 * Identifies an assignment.
 	 * <p>
@@ -130,17 +130,18 @@ public class DebitAuthorisationResponse {
 	 * definition} = "Identifies an assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies an assignment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies a case.
 	 * <p>
@@ -162,17 +163,18 @@ public class DebitAuthorisationResponse {
 	 * definition} = "Identifies a case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies a case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected DebitAuthorisationConfirmation confirmation;
 	/**
 	 * Indicates if the debit authorisation is granted or not.
 	 * <p>
@@ -196,42 +198,15 @@ public class DebitAuthorisationResponse {
 	 * definition} = "Indicates if the debit authorisation is granted or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Confirmation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmConfirmation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Conf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "Indicates if the debit authorisation is granted or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DebitAuthorisationConfirmation.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "036"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "036";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -247,11 +222,42 @@ public class DebitAuthorisationResponse {
 				xmlTag = "camt.036.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.036.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationResponse.Assignment, com.tools20022.repository.area.camt.DebitAuthorisationResponse.Case,
-						com.tools20022.repository.area.camt.DebitAuthorisationResponse.Confirmation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationResponse.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationResponse.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationResponse.mmCase,
+						com.tools20022.repository.area.camt.DebitAuthorisationResponse.mmConfirmation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "036";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
+	}
+
+	public DebitAuthorisationConfirmation getConfirmation() {
+		return confirmation;
+	}
+
+	public void setConfirmation(DebitAuthorisationConfirmation confirmation) {
+		this.confirmation = confirmation;
 	}
 }

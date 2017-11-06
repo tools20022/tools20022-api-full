@@ -29,15 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ModificationCode#Addition
- * ModificationCode.Addition}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ModificationCode#Deletion
- * ModificationCode.Deletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ModificationCode#Modification
- * ModificationCode.Modification}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ModificationCode#NoChange
- * ModificationCode.NoChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ModificationCode#mmAddition
+ * ModificationCode.mmAddition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ModificationCode#mmDeletion
+ * ModificationCode.mmDeletion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ModificationCode#mmModification
+ * ModificationCode.mmModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ModificationCode#mmNoChange
+ * ModificationCode.mmNoChange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +96,7 @@ public class ModificationCode {
 	 * definition} = "Specifies that the item is added."</li>
 	 * </ul>
 	 */
-	public static final MMCode Addition = new MMCode() {
+	public static final MMCode mmAddition = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Addition";
@@ -123,7 +126,7 @@ public class ModificationCode {
 	 * definition} = "Specifies that the item is deleted."</li>
 	 * </ul>
 	 */
-	public static final MMCode Deletion = new MMCode() {
+	public static final MMCode mmDeletion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deletion";
@@ -153,7 +156,7 @@ public class ModificationCode {
 	 * definition} = "Specifies that the item is modified."</li>
 	 * </ul>
 	 */
-	public static final MMCode Modification = new MMCode() {
+	public static final MMCode mmModification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
@@ -183,7 +186,7 @@ public class ModificationCode {
 	 * definition} = "Specifies that the item is not changed."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoChange = new MMCode() {
+	public static final MMCode mmNoChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoChange";
@@ -196,13 +199,13 @@ public class ModificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADDD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationCode";
 				definition = "Specifies if an item is added, modified, deleted or unchanged.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ModificationCode.Addition, com.tools20022.repository.codeset.ModificationCode.Deletion, com.tools20022.repository.codeset.ModificationCode.Modification,
-						com.tools20022.repository.codeset.ModificationCode.NoChange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ModificationCode.mmAddition, com.tools20022.repository.codeset.ModificationCode.mmDeletion,
+						com.tools20022.repository.codeset.ModificationCode.mmModification, com.tools20022.repository.codeset.ModificationCode.mmNoChange);
 				derivation_lazy = () -> Arrays.asList(Modification1Code.mmObject());
 			}
 		});

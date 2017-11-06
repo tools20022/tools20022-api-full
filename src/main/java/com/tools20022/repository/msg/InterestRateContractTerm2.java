@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InterestRateContractTerm2#Unit
- * InterestRateContractTerm2.Unit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm2#Value
- * InterestRateContractTerm2.Value}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm2#mmUnit
+ * InterestRateContractTerm2.mmUnit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm2#mmValue
+ * InterestRateContractTerm2.mmValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InterestRateContractTerm2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateBasis1Code unit;
 	/**
 	 * Unit for the rate basis.
 	 * <p>
@@ -78,8 +80,8 @@ public class InterestRateContractTerm2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#CalculationFrequency
-	 * InterestCalculation.CalculationFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmCalculationFrequency
+	 * InterestCalculation.mmCalculationFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,25 +101,26 @@ public class InterestRateContractTerm2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm1#Unit
-	 * InterestRateContractTerm1.Unit}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm1#mmUnit
+	 * InterestRateContractTerm1.mmUnit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmCalculationFrequency;
 			componentContext_lazy = () -> InterestRateContractTerm2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.CalculationFrequency;
 			isDerived = false;
 			xmlTag = "Unit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Unit for the rate basis.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm1.Unit;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm1.mmUnit;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateBasis1Code.mmObject();
 		}
 	};
+	protected Max3Number value;
 	/**
 	 * Value of the contract term in number of units.
 	 * <p>
@@ -130,8 +133,8 @@ public class InterestRateContractTerm2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Index#IndexRateMultiplier
-	 * Index.IndexRateMultiplier}</li>
+	 * {@linkplain com.tools20022.repository.entity.Index#mmIndexRateMultiplier
+	 * Index.mmIndexRateMultiplier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,22 +154,22 @@ public class InterestRateContractTerm2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm1#Value
-	 * InterestRateContractTerm1.Value}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm1#mmValue
+	 * InterestRateContractTerm1.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexRateMultiplier;
 			componentContext_lazy = () -> InterestRateContractTerm2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.IndexRateMultiplier;
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the contract term in number of units.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm1.Value;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm1.mmValue;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3Number.mmObject();
 		}
 	};
@@ -174,9 +177,9 @@ public class InterestRateContractTerm2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestRateContractTerm2.Unit, com.tools20022.repository.msg.InterestRateContractTerm2.Value);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestRateContractTerm2.mmUnit, com.tools20022.repository.msg.InterestRateContractTerm2.mmValue);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestRateContractTerm2";
 				definition = "Describes how interest rates are reported.";
@@ -184,5 +187,21 @@ public class InterestRateContractTerm2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateBasis1Code getUnit() {
+		return unit;
+	}
+
+	public void setUnit(RateBasis1Code unit) {
+		this.unit = unit;
+	}
+
+	public Max3Number getValue() {
+		return value;
+	}
+
+	public void setValue(Max3Number value) {
+		this.value = value;
 	}
 }

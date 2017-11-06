@@ -35,13 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCompensation1#Depository
- * SecuritiesCompensation1.Depository}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCompensation1#mmDepository
+ * SecuritiesCompensation1.mmDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCompensation1#SettlementAmount
- * SecuritiesCompensation1.SettlementAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCompensation1#Fees
- * SecuritiesCompensation1.Fees}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCompensation1#mmSettlementAmount
+ * SecuritiesCompensation1.mmSettlementAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCompensation1#mmFees
+ * SecuritiesCompensation1.mmFees}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesCompensation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification34Choice depository;
 	/**
 	 * Place where settlement of the securities takes place.
 	 * <p>
@@ -79,8 +80,8 @@ public class SecuritiesCompensation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +100,22 @@ public class SecuritiesCompensation1 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Depository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SecuritiesCompensation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dpstry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "Place where settlement of the securities takes place.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification34Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification34Choice.mmObject();
 		}
 	};
+	protected AmountAndDirection20 settlementAmount;
 	/**
 	 * Provides the total amount of money to be settled.
 	 * <p>
@@ -125,8 +127,8 @@ public class SecuritiesCompensation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Amount
-	 * SecuritiesQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,21 +147,22 @@ public class SecuritiesCompensation1 {
 	 * definition} = "Provides the total amount of money to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> SecuritiesCompensation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Amount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Provides the total amount of money to be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	protected AmountAndDirection20 fees;
 	/**
 	 * Amount of money related to the fees for the securities compensation.
 	 * <p>
@@ -171,7 +174,7 @@ public class SecuritiesCompensation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#Fees BuyIn.Fees}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmFees BuyIn.mmFees}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,34 +194,58 @@ public class SecuritiesCompensation1 {
 	 * "Amount of money related to the fees for the securities compensation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Fees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmFees;
 			componentContext_lazy = () -> SecuritiesCompensation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.Fees;
 			isDerived = false;
 			xmlTag = "Fees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			definition = "Amount of money related to the fees for the securities compensation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCompensation1.Depository, com.tools20022.repository.msg.SecuritiesCompensation1.SettlementAmount,
-						com.tools20022.repository.msg.SecuritiesCompensation1.Fees);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCompensation1.mmDepository, com.tools20022.repository.msg.SecuritiesCompensation1.mmSettlementAmount,
+						com.tools20022.repository.msg.SecuritiesCompensation1.mmFees);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCompensation1";
 				definition = "Provides details about the securities compensation such as the depository and the total settlement amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification34Choice getDepository() {
+		return depository;
+	}
+
+	public void setDepository(PartyIdentification34Choice depository) {
+		this.depository = depository;
+	}
+
+	public AmountAndDirection20 getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public AmountAndDirection20 getFees() {
+		return fees;
+	}
+
+	public void setFees(com.tools20022.repository.msg.AmountAndDirection20 fees) {
+		this.fees = fees;
 	}
 }

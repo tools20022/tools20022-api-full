@@ -36,13 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyDesignation1#CurrencyDesignation
- * CurrencyDesignation1.CurrencyDesignation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyDesignation1#Location
- * CurrencyDesignation1.Location}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyDesignation1#mmCurrencyDesignation
+ * CurrencyDesignation1.mmCurrencyDesignation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyDesignation1#AdditionalInformation
- * CurrencyDesignation1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyDesignation1#mmLocation
+ * CurrencyDesignation1.mmLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyDesignation1#mmAdditionalInformation
+ * CurrencyDesignation1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyDesignation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyDesignation1Code currencyDesignation;
 	/**
 	 * Specifies whether the currency is settled offshore or onshore.
 	 * <p>
@@ -95,7 +97,7 @@ public class CurrencyDesignation1 {
 	 * "Specifies whether the currency is settled offshore or onshore."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyDesignation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
 			isDerived = false;
@@ -103,11 +105,12 @@ public class CurrencyDesignation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyDesignation";
 			definition = "Specifies whether the currency is settled offshore or onshore.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyDesignation1Code.mmObject();
 		}
 	};
+	protected CountryCode location;
 	/**
 	 * Offshore location of the currency.
 	 * <p>
@@ -135,7 +138,7 @@ public class CurrencyDesignation1 {
 	 * definition} = "Offshore location of the currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Location = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
 			isDerived = false;
@@ -143,11 +146,12 @@ public class CurrencyDesignation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Offshore location of the currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the off-shore currency.
 	 * <p>
@@ -175,7 +179,7 @@ public class CurrencyDesignation1 {
 	 * definition} = "Additional information about the off-shore currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
 			isDerived = false;
@@ -183,8 +187,8 @@ public class CurrencyDesignation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the off-shore currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -192,15 +196,39 @@ public class CurrencyDesignation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDesignation1.CurrencyDesignation, com.tools20022.repository.msg.CurrencyDesignation1.Location,
-						com.tools20022.repository.msg.CurrencyDesignation1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDesignation1.mmCurrencyDesignation, com.tools20022.repository.msg.CurrencyDesignation1.mmLocation,
+						com.tools20022.repository.msg.CurrencyDesignation1.mmAdditionalInformation);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDesignation1";
 				definition = "Information about the designation of a currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyDesignation1Code getCurrencyDesignation() {
+		return currencyDesignation;
+	}
+
+	public void setCurrencyDesignation(CurrencyDesignation1Code currencyDesignation) {
+		this.currencyDesignation = currencyDesignation;
+	}
+
+	public CountryCode getLocation() {
+		return location;
+	}
+
+	public void setLocation(CountryCode location) {
+		this.location = location;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

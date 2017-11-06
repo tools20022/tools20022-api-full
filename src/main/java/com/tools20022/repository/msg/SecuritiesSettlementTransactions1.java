@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the transactions in the report.
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions1#AccountOwner
- * SecuritiesSettlementTransactions1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions1#mmAccountOwner
+ * SecuritiesSettlementTransactions1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions1#SafekeepingAccount
- * SecuritiesSettlementTransactions1.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions1#mmSafekeepingAccount
+ * SecuritiesSettlementTransactions1.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions1#StatusAndReason
- * SecuritiesSettlementTransactions1.StatusAndReason}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions1#mmStatusAndReason
+ * SecuritiesSettlementTransactions1.mmStatusAndReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions1#Transaction
- * SecuritiesSettlementTransactions1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions1#mmTransaction
+ * SecuritiesSettlementTransactions1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementTransactions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemPartyIdentification5 accountOwner;
 	/**
 	 * Party that owns the account.
 	 * <p>
@@ -94,7 +96,7 @@ public class SecuritiesSettlementTransactions1 {
 	 * definition} = "Party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
 			isDerived = false;
@@ -102,12 +104,13 @@ public class SecuritiesSettlementTransactions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected SecuritiesAccount13 safekeepingAccount;
 	/**
 	 * Account where financial instruments are maintained.
 	 * <p>
@@ -134,7 +137,7 @@ public class SecuritiesSettlementTransactions1 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
 			isDerived = false;
@@ -142,12 +145,13 @@ public class SecuritiesSettlementTransactions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected StatusAndReason15 statusAndReason;
 	/**
 	 * Status and status reason of the transaction.
 	 * <p>
@@ -174,7 +178,7 @@ public class SecuritiesSettlementTransactions1 {
 	 * definition} = "Status and status reason of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
 			isDerived = false;
@@ -182,12 +186,13 @@ public class SecuritiesSettlementTransactions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> StatusAndReason15.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Transaction25> transaction;
 	/**
 	 * Identifies the individual transaction.
 	 * <p>
@@ -214,7 +219,7 @@ public class SecuritiesSettlementTransactions1 {
 	 * definition} = "Identifies the individual transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
 			isDerived = false;
@@ -223,23 +228,55 @@ public class SecuritiesSettlementTransactions1 {
 			name = "Transaction";
 			definition = "Identifies the individual transaction.";
 			minOccurs = 1;
-			type_lazy = () -> Transaction25.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactions1.AccountOwner, com.tools20022.repository.msg.SecuritiesSettlementTransactions1.SafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactions1.StatusAndReason, com.tools20022.repository.msg.SecuritiesSettlementTransactions1.Transaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmAccountOwner, com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmSafekeepingAccount,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmStatusAndReason, com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmTransaction);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesSettlementTransactions1";
 				definition = "Provides the transactions in the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemPartyIdentification5 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount13 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public StatusAndReason15 getStatusAndReason() {
+		return statusAndReason;
+	}
+
+	public void setStatusAndReason(com.tools20022.repository.msg.StatusAndReason15 statusAndReason) {
+		this.statusAndReason = statusAndReason;
+	}
+
+	public List<Transaction25> getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(List<com.tools20022.repository.msg.Transaction25> transaction) {
+		this.transaction = transaction;
 	}
 }

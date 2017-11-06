@@ -35,25 +35,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#Identification
- * IsabelFile1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#Originator
- * IsabelFile1.Originator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#Size
- * IsabelFile1.Size}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#Format
- * IsabelFile1.Format}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#FormatVersion
- * IsabelFile1.FormatVersion}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#RecordLength
- * IsabelFile1.RecordLength}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#mmIdentification
+ * IsabelFile1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#mmOriginator
+ * IsabelFile1.mmOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#mmSize
+ * IsabelFile1.mmSize}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#mmFormat
+ * IsabelFile1.mmFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#mmFormatVersion
+ * IsabelFile1.mmFormatVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile1#mmRecordLength
+ * IsabelFile1.mmRecordLength}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelFile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max14AlphaNumericText identification;
 	/**
 	 * Unique identification of the file.
 	 * <p>
@@ -94,7 +95,7 @@ public class IsabelFile1 {
 	 * definition} = "Unique identification of the file.\t"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class IsabelFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the file.\t";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
 		}
 	};
+	protected Max14AlphaNumericText originator;
 	/**
 	 * Unique identification of the originator of the file.
 	 * <p>
@@ -134,7 +136,7 @@ public class IsabelFile1 {
 	 * definition} = "Unique identification of the originator of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Originator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class IsabelFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Unique identification of the originator of the file.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
 		}
 	};
+	protected Number size;
 	/**
 	 * Size of the file.
 	 * <p>
@@ -173,7 +176,7 @@ public class IsabelFile1 {
 	 * definition} = "Size of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Size = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSize = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
@@ -181,11 +184,12 @@ public class IsabelFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Size";
 			definition = "Size of the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max16Text format;
 	/**
 	 * Format of the file.
 	 * <p>
@@ -212,7 +216,7 @@ public class IsabelFile1 {
 	 * definition} = "Format of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Format = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
@@ -220,11 +224,12 @@ public class IsabelFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Format of the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max16Text formatVersion;
 	/**
 	 * Version of the format of the file.
 	 * <p>
@@ -251,7 +256,7 @@ public class IsabelFile1 {
 	 * definition} = "Version of the format of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FormatVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormatVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
@@ -259,11 +264,12 @@ public class IsabelFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatVersion";
 			definition = "Version of the format of the file.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max4NumericText recordLength;
 	/**
 	 * Length of the individual records in the file.
 	 * <p>
@@ -291,7 +297,7 @@ public class IsabelFile1 {
 	 * definition} = "Length of the individual records in the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecordLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecordLength = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
@@ -299,8 +305,8 @@ public class IsabelFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordLength";
 			definition = "Length of the individual records in the file.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4NumericText.mmObject();
 		}
 	};
@@ -308,14 +314,62 @@ public class IsabelFile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelFile1.Identification, com.tools20022.repository.msg.IsabelFile1.Originator, com.tools20022.repository.msg.IsabelFile1.Size,
-						com.tools20022.repository.msg.IsabelFile1.Format, com.tools20022.repository.msg.IsabelFile1.FormatVersion, com.tools20022.repository.msg.IsabelFile1.RecordLength);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelFile1.mmIdentification, com.tools20022.repository.msg.IsabelFile1.mmOriginator, com.tools20022.repository.msg.IsabelFile1.mmSize,
+						com.tools20022.repository.msg.IsabelFile1.mmFormat, com.tools20022.repository.msg.IsabelFile1.mmFormatVersion, com.tools20022.repository.msg.IsabelFile1.mmRecordLength);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelFile1";
 				definition = "Specifies the parameters for an Isabel payment file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max14AlphaNumericText getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max14AlphaNumericText identification) {
+		this.identification = identification;
+	}
+
+	public Max14AlphaNumericText getOriginator() {
+		return originator;
+	}
+
+	public void setOriginator(Max14AlphaNumericText originator) {
+		this.originator = originator;
+	}
+
+	public Number getSize() {
+		return size;
+	}
+
+	public void setSize(Number size) {
+		this.size = size;
+	}
+
+	public Max16Text getFormat() {
+		return format;
+	}
+
+	public void setFormat(Max16Text format) {
+		this.format = format;
+	}
+
+	public Max16Text getFormatVersion() {
+		return formatVersion;
+	}
+
+	public void setFormatVersion(Max16Text formatVersion) {
+		this.formatVersion = formatVersion;
+	}
+
+	public Max4NumericText getRecordLength() {
+		return recordLength;
+	}
+
+	public void setRecordLength(Max4NumericText recordLength) {
+		this.recordLength = recordLength;
 	}
 }

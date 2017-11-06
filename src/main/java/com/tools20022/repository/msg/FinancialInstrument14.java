@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument14#Identification
- * FinancialInstrument14.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument14#mmIdentification
+ * FinancialInstrument14.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument14#InstrumentDescription
- * FinancialInstrument14.InstrumentDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument14#mmInstrumentDescription
+ * FinancialInstrument14.mmInstrumentDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument14#UnderlyingInstrumentIdentification
- * FinancialInstrument14.UnderlyingInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument14#mmUnderlyingInstrumentIdentification
+ * FinancialInstrument14.mmUnderlyingInstrumentIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification5Choice identification;
 	/**
 	 * Identifies the financial instrument using a choice of either ISIN, local
 	 * code, or a description of the instrument. ISIN is the preferred format.
@@ -77,8 +78,8 @@ public class FinancialInstrument14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +100,22 @@ public class FinancialInstrument14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using a choice of either ISIN,  local code, or a description of the instrument. ISIN is the preferred format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecurityIdentification5Choice.mmObject();
 		}
 	};
+	protected SecurityInstrumentDescription1 instrumentDescription;
 	/**
 	 * Provides the ability to describe the instrument through a description and
 	 * main characteristics.
@@ -148,21 +150,22 @@ public class FinancialInstrument14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentDescription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentDescription = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrument14.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> FinancialInstrument14.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmDesc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentDescription";
 			definition = "Provides the ability to describe the instrument through a description and main characteristics. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityInstrumentDescription1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription1.mmObject();
 		}
 	};
+	protected SecurityIdentification5Choice underlyingInstrumentIdentification;
 	/**
 	 * Provides details of the underlying financial instrument for which the
 	 * transaction report is being sent. If there is more than one underlying
@@ -178,8 +181,8 @@ public class FinancialInstrument14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,34 +203,58 @@ public class FinancialInstrument14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "UndrlygInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingInstrumentIdentification";
 			definition = "Provides details of the underlying financial instrument for which the transaction report is being sent. If there is more than one underlying financial instrument then it is the dominant/ultimate instrument that should be identified here.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SecurityIdentification5Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument14.Identification, com.tools20022.repository.msg.FinancialInstrument14.InstrumentDescription,
-						com.tools20022.repository.msg.FinancialInstrument14.UnderlyingInstrumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument14.mmIdentification, com.tools20022.repository.msg.FinancialInstrument14.mmInstrumentDescription,
+						com.tools20022.repository.msg.FinancialInstrument14.mmUnderlyingInstrumentIdentification);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument14";
 				definition = "Identifies the financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification5Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(SecurityIdentification5Choice identification) {
+		this.identification = identification;
+	}
+
+	public SecurityInstrumentDescription1 getInstrumentDescription() {
+		return instrumentDescription;
+	}
+
+	public void setInstrumentDescription(com.tools20022.repository.msg.SecurityInstrumentDescription1 instrumentDescription) {
+		this.instrumentDescription = instrumentDescription;
+	}
+
+	public SecurityIdentification5Choice getUnderlyingInstrumentIdentification() {
+		return underlyingInstrumentIdentification;
+	}
+
+	public void setUnderlyingInstrumentIdentification(SecurityIdentification5Choice underlyingInstrumentIdentification) {
+		this.underlyingInstrumentIdentification = underlyingInstrumentIdentification;
 	}
 }

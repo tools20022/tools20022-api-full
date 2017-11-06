@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemMember2#SystemIdentification
- * SystemMember2.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemMember2#mmSystemIdentification
+ * SystemMember2.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemMember2#MemberIdentification
- * SystemMember2.MemberIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemMember2#mmMemberIdentification
+ * SystemMember2.mmMemberIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemMember2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemIdentification2Choice systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -98,20 +99,21 @@ public class SystemMember2 {
 	 * definition} = "Identification of a particular cash clearing system. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemMember2.mmObject();
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
+			componentContext_lazy = () -> SystemMember2.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
 		}
 	};
+	protected MemberIdentification2Choice memberIdentification;
 	/**
 	 * Unique and unambiguous identification of a member within a system,
 	 * assigned using the member identification scheme of the system.
@@ -147,17 +149,17 @@ public class SystemMember2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemMember2.mmObject();
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
+			componentContext_lazy = () -> SystemMember2.mmObject();
 			isDerived = false;
 			xmlTag = "MmbId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
 		}
 	};
@@ -165,14 +167,30 @@ public class SystemMember2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMember2.SystemIdentification, com.tools20022.repository.msg.SystemMember2.MemberIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMember2.mmSystemIdentification, com.tools20022.repository.msg.SystemMember2.mmMemberIdentification);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemMember2";
 				definition = "Provides details about a system and about a member of a system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemIdentification2Choice getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(SystemIdentification2Choice systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public MemberIdentification2Choice getMemberIdentification() {
+		return memberIdentification;
+	}
+
+	public void setMemberIdentification(MemberIdentification2Choice memberIdentification) {
+		this.memberIdentification = memberIdentification;
 	}
 }

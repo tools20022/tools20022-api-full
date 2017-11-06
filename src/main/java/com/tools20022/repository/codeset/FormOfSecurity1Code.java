@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * FormOfSecurityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FormOfSecurity1Code#Bearer
- * FormOfSecurity1Code.Bearer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FormOfSecurity1Code#Registered
- * FormOfSecurity1Code.Registered}</li>
+ * {@linkplain com.tools20022.repository.codeset.FormOfSecurity1Code#mmBearer
+ * FormOfSecurity1Code.mmBearer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FormOfSecurity1Code#mmRegistered
+ * FormOfSecurity1Code.mmRegistered}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +81,7 @@ public class FormOfSecurity1Code extends FormOfSecurityCode {
 	 * name} = "Bearer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bearer = new MMCode() {
+	public static final MMCode mmBearer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bearer";
@@ -103,7 +104,7 @@ public class FormOfSecurity1Code extends FormOfSecurityCode {
 	 * name} = "Registered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Registered = new MMCode() {
+	public static final MMCode mmRegistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
@@ -114,12 +115,12 @@ public class FormOfSecurity1Code extends FormOfSecurityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEAR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FormOfSecurity1Code";
 				definition = "Form of a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FormOfSecurity1Code.Bearer, com.tools20022.repository.codeset.FormOfSecurity1Code.Registered);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FormOfSecurity1Code.mmBearer, com.tools20022.repository.codeset.FormOfSecurity1Code.mmRegistered);
 				trace_lazy = () -> FormOfSecurityCode.mmObject();
 			}
 		});

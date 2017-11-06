@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
+import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,31 +33,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals5#Amount
- * TransactionTotals5.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals5#Number
- * TransactionTotals5.Number}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals5#mmAmount
+ * TransactionTotals5.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals5#mmNumber
+ * TransactionTotals5.mmNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals5#ChargeBackAmount
- * TransactionTotals5.ChargeBackAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals5#mmChargeBackAmount
+ * TransactionTotals5.mmChargeBackAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals5#ChargeBackNumber
- * TransactionTotals5.ChargeBackNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals5#mmChargeBackNumber
+ * TransactionTotals5.mmChargeBackNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals5#ReversalAmount
- * TransactionTotals5.ReversalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals5#mmReversalAmount
+ * TransactionTotals5.mmReversalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals5#ReversalNumber
- * TransactionTotals5.ReversalNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals5#FeeAmounts
- * TransactionTotals5.FeeAmounts}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals5#mmReversalNumber
+ * TransactionTotals5.mmReversalNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals5#mmFeeAmounts
+ * TransactionTotals5.mmFeeAmounts}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionTotals5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmount amount;
 	/**
 	 * Cumulative amount of all financial transactions.
 	 * <p>
@@ -102,7 +105,7 @@ public class TransactionTotals5 {
 	 * definition} = "Cumulative amount of all financial transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
@@ -110,11 +113,12 @@ public class TransactionTotals5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cumulative amount of all financial transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Number number;
 	/**
 	 * Number of all financial transactions.
 	 * <p>
@@ -142,7 +146,7 @@ public class TransactionTotals5 {
 	 * definition} = "Number of all financial transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
@@ -150,11 +154,12 @@ public class TransactionTotals5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number of all financial transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.Number.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount chargeBackAmount;
 	/**
 	 * Cumulative amount of all chargeback transactions exclusive of any fees.
 	 * <p>
@@ -185,7 +190,7 @@ public class TransactionTotals5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargeBackAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargeBackAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
@@ -193,11 +198,12 @@ public class TransactionTotals5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBackAmount";
 			definition = "Cumulative amount of all chargeback transactions exclusive of any fees.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Number chargeBackNumber;
 	/**
 	 * Total number of chargeback transactions.
 	 * <p>
@@ -225,7 +231,7 @@ public class TransactionTotals5 {
 	 * definition} = "Total number of chargeback transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargeBackNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargeBackNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
@@ -233,11 +239,12 @@ public class TransactionTotals5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBackNumber";
 			definition = "Total number of chargeback transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.Number.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount reversalAmount;
 	/**
 	 * Cumulative amount of all reversal transactions exclusive of any fees.
 	 * <p>
@@ -267,7 +274,7 @@ public class TransactionTotals5 {
 	 * "Cumulative amount of all reversal transactions exclusive of any fees."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReversalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReversalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
@@ -275,11 +282,12 @@ public class TransactionTotals5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalAmount";
 			definition = "Cumulative amount of all reversal transactions exclusive of any fees.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Number reversalNumber;
 	/**
 	 * Total number of reversal transactions.
 	 * <p>
@@ -307,7 +315,7 @@ public class TransactionTotals5 {
 	 * definition} = "Total number of reversal transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReversalNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReversalNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
@@ -315,11 +323,12 @@ public class TransactionTotals5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalNumber";
 			definition = "Total number of reversal transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.Number.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount feeAmounts;
 	/**
 	 * Sum amount of all fees.
 	 * <p>
@@ -348,7 +357,7 @@ public class TransactionTotals5 {
 	 * definition} = "Sum amount of all fees."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FeeAmounts = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFeeAmounts = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
@@ -356,8 +365,8 @@ public class TransactionTotals5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeAmounts";
 			definition = "Sum amount of all fees.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -365,10 +374,10 @@ public class TransactionTotals5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals5.Amount, com.tools20022.repository.msg.TransactionTotals5.Number, com.tools20022.repository.msg.TransactionTotals5.ChargeBackAmount,
-						com.tools20022.repository.msg.TransactionTotals5.ChargeBackNumber, com.tools20022.repository.msg.TransactionTotals5.ReversalAmount, com.tools20022.repository.msg.TransactionTotals5.ReversalNumber,
-						com.tools20022.repository.msg.TransactionTotals5.FeeAmounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals5.mmAmount, com.tools20022.repository.msg.TransactionTotals5.mmNumber,
+						com.tools20022.repository.msg.TransactionTotals5.mmChargeBackAmount, com.tools20022.repository.msg.TransactionTotals5.mmChargeBackNumber, com.tools20022.repository.msg.TransactionTotals5.mmReversalAmount,
+						com.tools20022.repository.msg.TransactionTotals5.mmReversalNumber, com.tools20022.repository.msg.TransactionTotals5.mmFeeAmounts);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals5";
 				definition = "Total of credit or debit transactions";
@@ -376,5 +385,61 @@ public class TransactionTotals5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public Number getNumber() {
+		return number;
+	}
+
+	public void setNumber(Number number) {
+		this.number = number;
+	}
+
+	public ImpliedCurrencyAndAmount getChargeBackAmount() {
+		return chargeBackAmount;
+	}
+
+	public void setChargeBackAmount(ImpliedCurrencyAndAmount chargeBackAmount) {
+		this.chargeBackAmount = chargeBackAmount;
+	}
+
+	public Number getChargeBackNumber() {
+		return chargeBackNumber;
+	}
+
+	public void setChargeBackNumber(Number chargeBackNumber) {
+		this.chargeBackNumber = chargeBackNumber;
+	}
+
+	public ImpliedCurrencyAndAmount getReversalAmount() {
+		return reversalAmount;
+	}
+
+	public void setReversalAmount(ImpliedCurrencyAndAmount reversalAmount) {
+		this.reversalAmount = reversalAmount;
+	}
+
+	public Number getReversalNumber() {
+		return reversalNumber;
+	}
+
+	public void setReversalNumber(Number reversalNumber) {
+		this.reversalNumber = reversalNumber;
+	}
+
+	public ImpliedCurrencyAndAmount getFeeAmounts() {
+		return feeAmounts;
+	}
+
+	public void setFeeAmounts(ImpliedCurrencyAndAmount feeAmounts) {
+		this.feeAmounts = feeAmounts;
 	}
 }

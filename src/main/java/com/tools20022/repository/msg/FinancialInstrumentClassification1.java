@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentClassification1#ClassificationType
- * FinancialInstrumentClassification1.ClassificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentClassification1#mmClassificationType
+ * FinancialInstrumentClassification1.mmClassificationType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentClassification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityClassificationType1Choice classificationType;
 	/**
 	 * Classification type of the financial instrument, as per the ISO
 	 * Classification of Financial Instrument (CFI) codification, eg, common
@@ -99,17 +100,17 @@ public class FinancialInstrumentClassification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentClassification1.mmObject();
 			businessComponentTrace_lazy = () -> AssetClassification.mmObject();
+			componentContext_lazy = () -> FinancialInstrumentClassification1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, eg, common share with voting rights, fully paid, or registered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityClassificationType1Choice.mmObject();
 		}
 	};
@@ -117,14 +118,22 @@ public class FinancialInstrumentClassification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentClassification1.ClassificationType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentClassification1.mmClassificationType);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentClassification1";
 				definition = "The classification type of the financial instrument, eg, common share with voting right, fully paid and registered etc.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityClassificationType1Choice getClassificationType() {
+		return classificationType;
+	}
+
+	public void setClassificationType(SecurityClassificationType1Choice classificationType) {
+		this.classificationType = classificationType;
 	}
 }

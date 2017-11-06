@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType28Code#RenewableEnergy
- * AssetClassSubProductType28Code.RenewableEnergy}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType28Code#mmRenewableEnergy
+ * AssetClassSubProductType28Code.mmRenewableEnergy}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassSubProductType28Code extends AssetClassSubProductTypeCode
 	 * name} = "RenewableEnergy"</li>
 	 * </ul>
 	 */
-	public static final MMCode RenewableEnergy = new MMCode() {
+	public static final MMCode mmRenewableEnergy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenewableEnergy";
@@ -83,11 +83,11 @@ public class AssetClassSubProductType28Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType28Code";
 				definition = "Defines the sub-product of type Renewable Energy.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType28Code.RenewableEnergy);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType28Code.mmRenewableEnergy);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -70,21 +71,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05#GroupHeader
- * FinancialInstitutionCreditTransferV05.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05#mmGroupHeader
+ * FinancialInstitutionCreditTransferV05.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05#CreditTransferTransactionInformation
- * FinancialInstitutionCreditTransferV05.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05#mmCreditTransferTransactionInformation
+ * FinancialInstitutionCreditTransferV05.mmCreditTransferTransactionInformation}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05#SupplementaryData
- * FinancialInstitutionCreditTransferV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05#mmSupplementaryData
+ * FinancialInstitutionCreditTransferV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05#identifier
- * FinancialInstitutionCreditTransferV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.009.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,6 +112,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstitutionCreditTransferV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader49 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -139,30 +140,31 @@ public class FinancialInstitutionCreditTransferV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06#GroupHeader
-	 * FinancialInstitutionCreditTransferV06.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06#mmGroupHeader
+	 * FinancialInstitutionCreditTransferV06.mmGroupHeader}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04#GroupHeader
-	 * FinancialInstitutionCreditTransferV04.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04#mmGroupHeader
+	 * FinancialInstitutionCreditTransferV04.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04.GroupHeader;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06.GroupHeader);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06.mmGroupHeader);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader49.mmObject();
 		}
 	};
+	protected List<CreditTransferTransaction17> creditTransferTransactionInformation;
 	/**
 	 * Set of elements providing information specific to the individual credit
 	 * transfer(s).
@@ -191,31 +193,32 @@ public class FinancialInstitutionCreditTransferV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06#CreditTransferTransactionInformation
+	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06#mmCreditTransferTransactionInformation
 	 * FinancialInstitutionCreditTransferV06.
-	 * CreditTransferTransactionInformation}</li>
+	 * mmCreditTransferTransactionInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04#CreditTransferTransactionInformation
+	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04#mmCreditTransferTransactionInformation
 	 * FinancialInstitutionCreditTransferV04.
-	 * CreditTransferTransactionInformation}</li>
+	 * mmCreditTransferTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CreditTransferTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCreditTransferTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CdtTrfTxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferTransactionInformation";
 			definition = "Set of elements providing information specific to the individual credit transfer(s).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04.CreditTransferTransactionInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06.CreditTransferTransactionInformation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06.mmCreditTransferTransactionInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04.mmCreditTransferTransactionInformation;
 			minOccurs = 1;
 			complexType_lazy = () -> CreditTransferTransaction17.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -244,54 +247,27 @@ public class FinancialInstitutionCreditTransferV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06#SupplementaryData
-	 * FinancialInstitutionCreditTransferV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06#mmSupplementaryData
+	 * FinancialInstitutionCreditTransferV06.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04#SupplementaryData
-	 * FinancialInstitutionCreditTransferV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04#mmSupplementaryData
+	 * FinancialInstitutionCreditTransferV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "009";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -301,17 +277,48 @@ public class FinancialInstitutionCreditTransferV05 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitutionCreditTransferV05";
 				definition = "Scope\r\nThe FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.\r\nIt is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.\r\nUsage\r\nThe FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.\r\nThe FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.\r\nThe FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.";
-				previousVersion_lazy = () -> FinancialInstitutionCreditTransferV04.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV06.mmObject());
+				previousVersion_lazy = () -> FinancialInstitutionCreditTransferV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "FICdtTrf";
 				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.GroupHeader,
-						com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.CreditTransferTransactionInformation, com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.mmCreditTransferTransactionInformation, com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "009";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader49 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader49 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<CreditTransferTransaction17> getCreditTransferTransactionInformation() {
+		return creditTransferTransactionInformation;
+	}
+
+	public void setCreditTransferTransactionInformation(List<CreditTransferTransaction17> creditTransferTransactionInformation) {
+		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

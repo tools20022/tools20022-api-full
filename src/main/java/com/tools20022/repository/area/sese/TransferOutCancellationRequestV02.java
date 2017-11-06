@@ -62,9 +62,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#CancellationByReferenceOrByTransferOutDetailsRule
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmCancellationByReferenceOrByTransferOutDetailsRule
  * TransferOutCancellationRequestV02.
- * CancellationByReferenceOrByTransferOutDetailsRule}</li>
+ * mmCancellationByReferenceOrByTransferOutDetailsRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -74,33 +74,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#MessageIdentification
- * TransferOutCancellationRequestV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmMessageIdentification
+ * TransferOutCancellationRequestV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#PreviousReference
- * TransferOutCancellationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmPreviousReference
+ * TransferOutCancellationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#PoolReference
- * TransferOutCancellationRequestV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmPoolReference
+ * TransferOutCancellationRequestV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#RelatedReference
- * TransferOutCancellationRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmRelatedReference
+ * TransferOutCancellationRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#CancellationByReference
- * TransferOutCancellationRequestV02.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmCancellationByReference
+ * TransferOutCancellationRequestV02.mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#CancellationByTransferOutDetails
- * TransferOutCancellationRequestV02.CancellationByTransferOutDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmCancellationByTransferOutDetails
+ * TransferOutCancellationRequestV02.mmCancellationByTransferOutDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#CopyDetails
- * TransferOutCancellationRequestV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmCopyDetails
+ * TransferOutCancellationRequestV02.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#identifier
- * TransferOutCancellationRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.002.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -139,11 +137,11 @@ public class TransferOutCancellationRequestV02 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#CancellationByReference
-	 * TransferOutCancellationRequestV02.CancellationByReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmCancellationByReference
+	 * TransferOutCancellationRequestV02.mmCancellationByReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#CancellationByTransferOutDetails
-	 * TransferOutCancellationRequestV02.CancellationByTransferOutDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmCancellationByTransferOutDetails
+	 * TransferOutCancellationRequestV02.mmCancellationByTransferOutDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -163,16 +161,17 @@ public class TransferOutCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CancellationByReferenceOrByTransferOutDetailsRule = new MMXor() {
+	public static final MMXor mmCancellationByReferenceOrByTransferOutDetailsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByTransferOutDetailsRule";
 			definition = "Either CancellationByReference or CancellationByTransferOutDetails may be present, but not both.";
 			messageDefinition_lazy = () -> TransferOutCancellationRequestV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.CancellationByReference,
-					com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.CancellationByTransferOutDetails);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCancellationByReference,
+					com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCancellationByTransferOutDetails);
 		}
 	};
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -199,17 +198,18 @@ public class TransferOutCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -233,17 +233,18 @@ public class TransferOutCancellationRequestV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -267,17 +268,18 @@ public class TransferOutCancellationRequestV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -302,17 +304,18 @@ public class TransferOutCancellationRequestV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected TransferReference1 cancellationByReference;
 	/**
 	 * Reference of the transfer to be cancelled.
 	 * <p>
@@ -336,17 +339,18 @@ public class TransferOutCancellationRequestV02 {
 	 * definition} = "Reference of the transfer to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReference";
 			definition = "Reference of the transfer to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransferReference1.mmObject();
 		}
 	};
+	protected TransferOut5 cancellationByTransferOutDetails;
 	/**
 	 * The transfer out request message to cancel.
 	 * <p>
@@ -369,17 +373,18 @@ public class TransferOutCancellationRequestV02 {
 	 * definition} = "The transfer out request message to cancel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByTransferOutDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByTransferOutDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByTrfOutDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByTransferOutDetails";
 			definition = "The transfer out request message to cancel.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransferOut5.mmObject();
 		}
 	};
+	protected CopyInformation2 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -404,42 +409,15 @@ public class TransferOutCancellationRequestV02 {
 	 * "Information provided when the message is a copy of a previous message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "002";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -449,20 +427,83 @@ public class TransferOutCancellationRequestV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferOutCancellationRequestV02";
 				definition = "Scope\r\nAn instructing party, eg, an investment manager or its authorised representative, sends the TransferOutCancellationRequest message to the executing party, eg, a transfer agent, to request the cancellation of a previously sent TransferOutInstruction.\r\nUsage\r\nThe TransferOutCancellationRequest message is used to request cancellation of a previously sent TransferOutInstruction. There are two ways to specify the transfer cancellation request. Either:\r\n- the transfer reference of the original transfer is quoted, or,\r\n- all the details of the original transfer (this includes TransferReference) are quoted but this is not recommended.\r\nThe message identification of the TransferOutInstruction message in which the original transfer was conveyed may also be quoted in PreviousReference. It is also possible to request the cancellation of a TransferOutInstruction message by quoting its message identification in PreviousReference.";
-				previousVersion_lazy = () -> TransferOutCancellationInstruction.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransferOutCancellationRequestV03.mmObject());
+				previousVersion_lazy = () -> TransferOutCancellationInstruction.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.CancellationByReferenceOrByTransferOutDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCancellationByReferenceOrByTransferOutDetailsRule);
 				rootElement = "Document";
 				xmlTag = "TrfOutCxlReqV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.PreviousReference, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.RelatedReference, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.CancellationByReference,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.CancellationByTransferOutDetails, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.CopyDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmRelatedReference, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCancellationByReference,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCancellationByTransferOutDetails, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCopyDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "002";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference2 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public TransferReference1 getCancellationByReference() {
+		return cancellationByReference;
+	}
+
+	public void setCancellationByReference(TransferReference1 cancellationByReference) {
+		this.cancellationByReference = cancellationByReference;
+	}
+
+	public TransferOut5 getCancellationByTransferOutDetails() {
+		return cancellationByTransferOutDetails;
+	}
+
+	public void setCancellationByTransferOutDetails(TransferOut5 cancellationByTransferOutDetails) {
+		this.cancellationByTransferOutDetails = cancellationByTransferOutDetails;
+	}
+
+	public CopyInformation2 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation2 copyDetails) {
+		this.copyDetails = copyDetails;
 	}
 }

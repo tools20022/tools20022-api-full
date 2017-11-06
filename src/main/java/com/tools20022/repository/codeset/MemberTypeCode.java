@@ -31,16 +31,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#Direct
- * MemberTypeCode.Direct}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#Indirect
- * MemberTypeCode.Indirect}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#Remote
- * MemberTypeCode.Remote}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#EURO1
- * MemberTypeCode.EURO1}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#STEP1
- * MemberTypeCode.STEP1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#mmDirect
+ * MemberTypeCode.mmDirect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#mmIndirect
+ * MemberTypeCode.mmIndirect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#mmRemote
+ * MemberTypeCode.mmRemote}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#mmEURO1
+ * MemberTypeCode.mmEURO1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberTypeCode#mmSTEP1
+ * MemberTypeCode.mmSTEP1}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -101,7 +101,7 @@ public class MemberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Direct = new MMCode() {
+	public static final MMCode mmDirect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
@@ -135,7 +135,7 @@ public class MemberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Indirect = new MMCode() {
+	public static final MMCode mmIndirect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indirect";
@@ -168,7 +168,7 @@ public class MemberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Remote = new MMCode() {
+	public static final MMCode mmRemote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Remote";
@@ -201,7 +201,7 @@ public class MemberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EURO1 = new MMCode() {
+	public static final MMCode mmEURO1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EURO1";
@@ -234,7 +234,7 @@ public class MemberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode STEP1 = new MMCode() {
+	public static final MMCode mmSTEP1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "STEP1";
@@ -247,13 +247,13 @@ public class MemberTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DRCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MemberTypeCode";
 				definition = "Specifies the nature of the membership of a party in a system. A system may recognise different types of membership, with different related rights and obligations.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberTypeCode.Direct, com.tools20022.repository.codeset.MemberTypeCode.Indirect, com.tools20022.repository.codeset.MemberTypeCode.Remote,
-						com.tools20022.repository.codeset.MemberTypeCode.EURO1, com.tools20022.repository.codeset.MemberTypeCode.STEP1);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberTypeCode.mmDirect, com.tools20022.repository.codeset.MemberTypeCode.mmIndirect, com.tools20022.repository.codeset.MemberTypeCode.mmRemote,
+						com.tools20022.repository.codeset.MemberTypeCode.mmEURO1, com.tools20022.repository.codeset.MemberTypeCode.mmSTEP1);
 				derivation_lazy = () -> Arrays.asList(MemberType1Code.mmObject());
 			}
 		});

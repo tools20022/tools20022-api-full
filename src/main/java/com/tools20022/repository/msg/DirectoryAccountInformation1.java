@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryAccountInformation1#Account
- * DirectoryAccountInformation1.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryAccountInformation1#mmAccount
+ * DirectoryAccountInformation1.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryAccountInformation1#AccountRestrictions
- * DirectoryAccountInformation1.AccountRestrictions}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryAccountInformation1#mmAccountRestrictions
+ * DirectoryAccountInformation1.mmAccountRestrictions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DirectoryAccountInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount25 account;
 	/**
 	 * Account identification.
 	 * <p>
@@ -83,7 +84,7 @@ public class DirectoryAccountInformation1 {
 	 * definition} = "Account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryAccountInformation1.mmObject();
 			isDerived = false;
@@ -91,12 +92,13 @@ public class DirectoryAccountInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	protected AccountRestrictions1 accountRestrictions;
 	/**
 	 * Restrictions on the account.
 	 * <p>
@@ -123,7 +125,7 @@ public class DirectoryAccountInformation1 {
 	 * definition} = "Restrictions on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountRestrictions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountRestrictions = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryAccountInformation1.mmObject();
 			isDerived = false;
@@ -131,23 +133,39 @@ public class DirectoryAccountInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountRestrictions";
 			definition = "Restrictions on the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountRestrictions1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryAccountInformation1.Account, com.tools20022.repository.msg.DirectoryAccountInformation1.AccountRestrictions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryAccountInformation1.mmAccount, com.tools20022.repository.msg.DirectoryAccountInformation1.mmAccountRestrictions);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryAccountInformation1";
 				definition = "Information about account from National BIC directory.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount25 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = account;
+	}
+
+	public AccountRestrictions1 getAccountRestrictions() {
+		return accountRestrictions;
+	}
+
+	public void setAccountRestrictions(com.tools20022.repository.msg.AccountRestrictions1 accountRestrictions) {
+		this.accountRestrictions = accountRestrictions;
 	}
 }

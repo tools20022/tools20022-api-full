@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice#EventStatus
- * CorporateActionProcessingStatus1Choice.EventStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice#mmEventStatus
+ * CorporateActionProcessingStatus1Choice.mmEventStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice#ForInformationOnlyIndicator
- * CorporateActionProcessingStatus1Choice.ForInformationOnlyIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice#mmForInformationOnlyIndicator
+ * CorporateActionProcessingStatus1Choice.mmForInformationOnlyIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,28 +51,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#CancellationAdviceGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmCancellationAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
- * CancellationAdviceGeneralInformation}</li>
+ * mmCancellationAdviceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02#CancellationAdviceGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02#mmCancellationAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.
- * CancellationAdviceGeneralInformation}</li>
+ * mmCancellationAdviceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03#CancellationAdviceGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03#mmCancellationAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.
- * CancellationAdviceGeneralInformation}</li>
+ * mmCancellationAdviceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04#CancellationAdviceGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04#mmCancellationAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.
- * CancellationAdviceGeneralInformation}</li>
+ * mmCancellationAdviceGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionProcessingStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionEventStatus1 eventStatus;
 	/**
 	 * Specifies the status of the details of the event.
 	 * <p>
@@ -107,8 +108,8 @@ public class CorporateActionProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#ProcessingStatus
-	 * CorporateActionStatus.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmProcessingStatus
+	 * CorporateActionStatus.mmProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -127,21 +128,22 @@ public class CorporateActionProcessingStatus1Choice {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EventStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEventStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.ProcessingStatus;
 			isDerived = false;
 			xmlTag = "EvtSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStatus";
 			definition = "Specifies the status of the details of the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionEventStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionEventStatus1.mmObject();
 		}
 	};
+	protected YesNoIndicator forInformationOnlyIndicator;
 	/**
 	 * Indicates that the message is for information only, that is processing of
 	 * client's instruction will not be supported by the Account Servicer.
@@ -173,7 +175,7 @@ public class CorporateActionProcessingStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForInformationOnlyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForInformationOnlyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
 			isDerived = false;
@@ -181,8 +183,8 @@ public class CorporateActionProcessingStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForInformationOnlyIndicator";
 			definition = "Indicates that the message is for information only, that is processing of client's instruction will not be supported by the Account Servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -190,14 +192,14 @@ public class CorporateActionProcessingStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.EventStatus,
-						com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.ForInformationOnlyIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmEventStatus,
+						com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmForInformationOnlyIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmCancellationAdviceGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmCancellationAdviceGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmCancellationAdviceGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmCancellationAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.CancellationAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.CancellationAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.CancellationAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.CancellationAdviceGeneralInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProcessingStatus1Choice";
 				definition = "Specifies the status of the details of the corporate action event.";
@@ -205,5 +207,21 @@ public class CorporateActionProcessingStatus1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionEventStatus1 getEventStatus() {
+		return eventStatus;
+	}
+
+	public void setEventStatus(CorporateActionEventStatus1 eventStatus) {
+		this.eventStatus = eventStatus;
+	}
+
+	public YesNoIndicator getForInformationOnlyIndicator() {
+		return forInformationOnlyIndicator;
+	}
+
+	public void setForInformationOnlyIndicator(YesNoIndicator forInformationOnlyIndicator) {
+		this.forInformationOnlyIndicator = forInformationOnlyIndicator;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope11#ModificationScopeIndication
- * ModificationScope11.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope11#mmModificationScopeIndication
+ * ModificationScope11.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope11#InvestorProfileValidation
- * ModificationScope11.InvestorProfileValidation}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope11#mmInvestorProfileValidation
+ * ModificationScope11.mmInvestorProfileValidation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -98,7 +99,7 @@ public class ModificationScope11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope11.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class ModificationScope11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected PartyProfileInformation1 investorProfileValidation;
 	/**
 	 * Detailed information about the party profile information.
 	 * <p>
@@ -139,7 +141,7 @@ public class ModificationScope11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestorProfileValidation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestorProfileValidation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope11.mmObject();
 			isDerived = false;
@@ -147,18 +149,18 @@ public class ModificationScope11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorProfileValidation";
 			definition = "Detailed information about the party profile information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyProfileInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope11.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope11.InvestorProfileValidation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope11.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope11.mmInvestorProfileValidation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope11";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -166,5 +168,21 @@ public class ModificationScope11 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public PartyProfileInformation1 getInvestorProfileValidation() {
+		return investorProfileValidation;
+	}
+
+	public void setInvestorProfileValidation(com.tools20022.repository.msg.PartyProfileInformation1 investorProfileValidation) {
+		this.investorProfileValidation = investorProfileValidation;
 	}
 }

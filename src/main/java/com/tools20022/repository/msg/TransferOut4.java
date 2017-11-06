@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
+import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the transfer to be cancelled.
@@ -35,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#Investor
- * TransferOut4.Investor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#InvestorAddress
- * TransferOut4.InvestorAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#ClientAccount
- * TransferOut4.ClientAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#CashAccount
- * TransferOut4.CashAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#NewPlanManager
- * TransferOut4.NewPlanManager}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#ProductTransfer
- * TransferOut4.ProductTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#Extension
- * TransferOut4.Extension}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#mmInvestor
+ * TransferOut4.mmInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#mmInvestorAddress
+ * TransferOut4.mmInvestorAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#mmClientAccount
+ * TransferOut4.mmClientAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#mmCashAccount
+ * TransferOut4.mmCashAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#mmNewPlanManager
+ * TransferOut4.mmNewPlanManager}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#mmProductTransfer
+ * TransferOut4.mmProductTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#mmExtension
+ * TransferOut4.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOut4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IndividualPerson3 investor;
 	/**
 	 * Information identifying the investor, eg name, address, social security
 	 * number and date of birth..
@@ -104,21 +107,22 @@ public class TransferOut4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Investor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut4.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "Invstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Information identifying the investor, eg name, address, social security number and date of birth..";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson3.mmObject();
 		}
 	};
+	protected PostalAddress1 investorAddress;
 	/**
 	 * Information that locates the investor.
 	 * <p>
@@ -149,21 +153,22 @@ public class TransferOut4 {
 	 * definition} = "Information that locates the investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestorAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestorAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut4.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorAddress";
 			definition = "Information that locates the investor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	protected Account4 clientAccount;
 	/**
 	 * Identification of an account owned by the investor at the old plan
 	 * manager (account servicer).
@@ -175,8 +180,8 @@ public class TransferOut4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Account
-	 * SecuritiesTransfer.Account}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmAccount
+	 * SecuritiesTransfer.mmAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,21 +201,22 @@ public class TransferOut4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClientAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClientAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> TransferOut4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.Account;
 			isDerived = false;
 			xmlTag = "ClntAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Account4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account4.mmObject();
 		}
 	};
+	protected CashAccount6 cashAccount;
 	/**
 	 * Identification of an account owned by the investor and held by the new
 	 * plan manager to which a cash entry is made based on the transfer (sale)
@@ -244,21 +250,22 @@ public class TransferOut4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> TransferOut4.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Identification of an account owned by the investor and held by the new plan manager to which a cash entry is made based on the transfer (sale) of asset(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount6.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice newPlanManager;
 	/**
 	 * Information related to the institution to which the proceeds of the sale
 	 * of the financial instrument is to be deposited.
@@ -288,7 +295,7 @@ public class TransferOut4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewPlanManager = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewPlanManager = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
@@ -296,12 +303,13 @@ public class TransferOut4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPlanManager";
 			definition = "Information related to the institution to which the proceeds of the sale of the financial instrument is to be deposited.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PEPISACashTransfer1> productTransfer;
 	/**
 	 * Provides information related to the asset(s) transferred.
 	 * <p>
@@ -313,8 +321,8 @@ public class TransferOut4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
-	 * SecuritiesTransfer.TransferredQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+	 * SecuritiesTransfer.mmTransferredQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -333,20 +341,21 @@ public class TransferOut4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProductTransfer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProductTransfer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> TransferOut4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity;
 			isDerived = false;
 			xmlTag = "PdctTrf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
 			minOccurs = 0;
-			type_lazy = () -> PEPISACashTransfer1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -374,7 +383,7 @@ public class TransferOut4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
@@ -383,24 +392,80 @@ public class TransferOut4 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut4.Investor, com.tools20022.repository.msg.TransferOut4.InvestorAddress, com.tools20022.repository.msg.TransferOut4.ClientAccount,
-						com.tools20022.repository.msg.TransferOut4.CashAccount, com.tools20022.repository.msg.TransferOut4.NewPlanManager, com.tools20022.repository.msg.TransferOut4.ProductTransfer,
-						com.tools20022.repository.msg.TransferOut4.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut4.mmInvestor, com.tools20022.repository.msg.TransferOut4.mmInvestorAddress, com.tools20022.repository.msg.TransferOut4.mmClientAccount,
+						com.tools20022.repository.msg.TransferOut4.mmCashAccount, com.tools20022.repository.msg.TransferOut4.mmNewPlanManager, com.tools20022.repository.msg.TransferOut4.mmProductTransfer,
+						com.tools20022.repository.msg.TransferOut4.mmExtension);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferOut4";
 				definition = "Information about the transfer to be cancelled.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IndividualPerson3 getInvestor() {
+		return investor;
+	}
+
+	public void setInvestor(com.tools20022.repository.msg.IndividualPerson3 investor) {
+		this.investor = investor;
+	}
+
+	public PostalAddress1 getInvestorAddress() {
+		return investorAddress;
+	}
+
+	public void setInvestorAddress(com.tools20022.repository.msg.PostalAddress1 investorAddress) {
+		this.investorAddress = investorAddress;
+	}
+
+	public Account4 getClientAccount() {
+		return clientAccount;
+	}
+
+	public void setClientAccount(com.tools20022.repository.msg.Account4 clientAccount) {
+		this.clientAccount = clientAccount;
+	}
+
+	public CashAccount6 getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(com.tools20022.repository.msg.CashAccount6 cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public PartyIdentification2Choice getNewPlanManager() {
+		return newPlanManager;
+	}
+
+	public void setNewPlanManager(PartyIdentification2Choice newPlanManager) {
+		this.newPlanManager = newPlanManager;
+	}
+
+	public List<PEPISACashTransfer1> getProductTransfer() {
+		return productTransfer;
+	}
+
+	public void setProductTransfer(List<com.tools20022.repository.msg.PEPISACashTransfer1> productTransfer) {
+		this.productTransfer = productTransfer;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

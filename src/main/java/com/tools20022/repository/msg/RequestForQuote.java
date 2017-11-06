@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.QuoteType1Code;
 import com.tools20022.repository.entity.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details for which one wishes to receive a quote.
@@ -36,48 +37,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#QuoteRequestType
- * RequestForQuote.QuoteRequestType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#QuoteType
- * RequestForQuote.QuoteType}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmQuoteRequestType
+ * RequestForQuote.mmQuoteRequestType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#mmQuoteType
+ * RequestForQuote.mmQuoteType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#PreviousClosingPrice
- * RequestForQuote.PreviousClosingPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmPreviousClosingPrice
+ * RequestForQuote.mmPreviousClosingPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#FinancialInstrumentDetails
- * RequestForQuote.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmFinancialInstrumentDetails
+ * RequestForQuote.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#FinancialInstrumentAttributes
- * RequestForQuote.FinancialInstrumentAttributes}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#Stipulations
- * RequestForQuote.Stipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmFinancialInstrumentAttributes
+ * RequestForQuote.mmFinancialInstrumentAttributes}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#mmStipulations
+ * RequestForQuote.mmStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#UnderlyingFinancialInstrumentDetails
- * RequestForQuote.UnderlyingFinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmUnderlyingFinancialInstrumentDetails
+ * RequestForQuote.mmUnderlyingFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#UnderlyingFinancialInstrumentAttributes
- * RequestForQuote.UnderlyingFinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmUnderlyingFinancialInstrumentAttributes
+ * RequestForQuote.mmUnderlyingFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#UnderlyingStipulations
- * RequestForQuote.UnderlyingStipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmUnderlyingStipulations
+ * RequestForQuote.mmUnderlyingStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#InstrumentLegGroupDetails
- * RequestForQuote.InstrumentLegGroupDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#TradingSession
- * RequestForQuote.TradingSession}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#TradingParties
- * RequestForQuote.TradingParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#CashParties
- * RequestForQuote.CashParties}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmInstrumentLegGroupDetails
+ * RequestForQuote.mmInstrumentLegGroupDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#ReceivingSettlementParties
- * RequestForQuote.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmTradingSession
+ * RequestForQuote.mmTradingSession}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#DeliveringSettlementParties
- * RequestForQuote.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmTradingParties
+ * RequestForQuote.mmTradingParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#mmCashParties
+ * RequestForQuote.mmCashParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#OtherBusinessParties
- * RequestForQuote.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmReceivingSettlementParties
+ * RequestForQuote.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmDeliveringSettlementParties
+ * RequestForQuote.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmOtherBusinessParties
+ * RequestForQuote.mmOtherBusinessParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -87,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestForQuote {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuoteRequestType1Code quoteRequestType;
 	/**
 	 * Specifies the type of quote request being sent.
 	 * <p>
@@ -130,7 +134,7 @@ public class RequestForQuote {
 	 * definition} = "Specifies the type of quote request being sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteRequestType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
@@ -138,11 +142,12 @@ public class RequestForQuote {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteRequestType";
 			definition = "Specifies the type of quote request being sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QuoteRequestType1Code.mmObject();
 		}
 	};
+	protected QuoteType1Code quoteType;
 	/**
 	 * Indicates the scenario in which the quote is (requested to be) used (ie,
 	 * indicative, firm, restricted tradeable or counter).
@@ -157,8 +162,8 @@ public class RequestForQuote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#Type
-	 * SecuritiesQuoteVariable.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmType
+	 * SecuritiesQuoteVariable.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,20 +184,21 @@ public class RequestForQuote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmType;
 			componentContext_lazy = () -> RequestForQuote.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.Type;
 			isDerived = false;
 			xmlTag = "QtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteType";
 			definition = "Indicates the scenario in which the quote is (requested to be) used (ie, indicative, firm, restricted tradeable or counter).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QuoteType1Code.mmObject();
 		}
 	};
+	protected Price1 previousClosingPrice;
 	/**
 	 * Price of a financial instrument at closing time of the exchange in which
 	 * it is traded.
@@ -222,7 +228,7 @@ public class RequestForQuote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousClosingPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousClosingPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
@@ -230,11 +236,12 @@ public class RequestForQuote {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClosingPrice";
 			definition = "Price of a financial instrument at closing time of the exchange in which it is traded.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected SecurityIdentification7 financialInstrumentDetails;
 	/**
 	 * Financial instrument to which a request for quote is related.
 	 * <p>
@@ -267,21 +274,22 @@ public class RequestForQuote {
 	 * "Financial instrument to which a request for quote is related."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument to which a request for quote is related.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> financialInstrumentAttributes;
 	/**
 	 * Provides details about the financial instrument attributes.
 	 * <p>
@@ -314,20 +322,21 @@ public class RequestForQuote {
 	 * "Provides details about the financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attributes.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected FinancialInstrumentStipulations stipulations;
 	/**
 	 * Provides details about the financial instrument stipulations.
 	 * <p>
@@ -360,21 +369,22 @@ public class RequestForQuote {
 	 * "Provides details about the financial instrument stipulations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Stipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> Debt.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "Stiptns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stipulations";
 			definition = "Provides details about the financial instrument stipulations.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails;
 	/**
 	 * Provides details about the underlying financial instrument.
 	 * <p>
@@ -407,20 +417,21 @@ public class RequestForQuote {
 	 * "Provides details about the underlying financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentDetails";
 			definition = "Provides details about the underlying financial instrument.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
 	/**
 	 * Provides details about the underlying financial instrument attributes.
 	 * <p>
@@ -453,20 +464,21 @@ public class RequestForQuote {
 	 * "Provides details about the underlying financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentAttributes";
 			definition = "Provides details about the underlying financial instrument attributes.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations;
 	/**
 	 * Provides details about the underlying financial instrument stipulations.
 	 * <p>
@@ -500,20 +512,21 @@ public class RequestForQuote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> Debt.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Provides details about the underlying financial instrument stipulations.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InstrumentLeg2> instrumentLegGroupDetails;
 	/**
 	 * Provides details about each intrument leg.
 	 * <p>
@@ -544,20 +557,21 @@ public class RequestForQuote {
 	 * definition} = "Provides details about each intrument leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentLegGroupDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentLegGroupDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> Leg.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegGroupDetails";
 			definition = "Provides details about each intrument leg.";
 			minOccurs = 0;
-			type_lazy = () -> InstrumentLeg2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstrumentLeg2.mmObject();
 		}
 	};
+	protected TradingSession1 tradingSession;
 	/**
 	 * Details of a specific trading session associated with a quote.
 	 * <p>
@@ -569,8 +583,8 @@ public class RequestForQuote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#QuoteTradingSession
-	 * SecuritiesQuoteVariable.QuoteTradingSession}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmQuoteTradingSession
+	 * SecuritiesQuoteVariable.mmQuoteTradingSession}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -590,21 +604,22 @@ public class RequestForQuote {
 	 * "Details of a specific trading session associated with a quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingSession = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQuoteTradingSession;
 			componentContext_lazy = () -> RequestForQuote.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.QuoteTradingSession;
 			isDerived = false;
 			xmlTag = "TradgSsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSession";
 			definition = "Details of a specific trading session associated with a quote.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TradingSession1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary14> tradingParties;
 	/**
 	 * Parties used for acting parties that applies either to the whole message
 	 * or to individual sides.
@@ -638,20 +653,21 @@ public class RequestForQuote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParties";
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
 			minOccurs = 0;
-			type_lazy = () -> Intermediary14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 		}
 	};
+	protected CashParties1 cashParties;
 	/**
 	 * Cash parties for which the Request for quote message is applicable.
 	 * <p>
@@ -684,21 +700,22 @@ public class RequestForQuote {
 	 * "Cash parties for which the Request for quote message is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> PaymentPartyRole.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Cash parties for which the Request for quote message is applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashParties1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
 		}
 	};
+	protected SettlementParties3 receivingSettlementParties;
 	/**
 	 * Receiving parties for which the Request for Quote message is applicable.
 	 * <p>
@@ -732,21 +749,22 @@ public class RequestForQuote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Receiving parties for which the Request for Quote message is applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	protected SettlementParties3 deliveringSettlementParties;
 	/**
 	 * Delivering parties for which the Request for Quote message is applicable.
 	 * <p>
@@ -780,21 +798,22 @@ public class RequestForQuote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestForQuote.mmObject();
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
+			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Delivering parties for which the Request for Quote message is applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	protected OtherParties1 otherBusinessParties;
 	/**
 	 * Other business parties for which the Request for Quote message is
 	 * applicable.
@@ -824,7 +843,7 @@ public class RequestForQuote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherBusinessParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestForQuote.mmObject();
 			isDerived = false;
@@ -832,30 +851,158 @@ public class RequestForQuote {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other business parties for which the Request for Quote message is applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OtherParties1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherParties1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestForQuote.QuoteRequestType, com.tools20022.repository.msg.RequestForQuote.QuoteType,
-						com.tools20022.repository.msg.RequestForQuote.PreviousClosingPrice, com.tools20022.repository.msg.RequestForQuote.FinancialInstrumentDetails,
-						com.tools20022.repository.msg.RequestForQuote.FinancialInstrumentAttributes, com.tools20022.repository.msg.RequestForQuote.Stipulations,
-						com.tools20022.repository.msg.RequestForQuote.UnderlyingFinancialInstrumentDetails, com.tools20022.repository.msg.RequestForQuote.UnderlyingFinancialInstrumentAttributes,
-						com.tools20022.repository.msg.RequestForQuote.UnderlyingStipulations, com.tools20022.repository.msg.RequestForQuote.InstrumentLegGroupDetails, com.tools20022.repository.msg.RequestForQuote.TradingSession,
-						com.tools20022.repository.msg.RequestForQuote.TradingParties, com.tools20022.repository.msg.RequestForQuote.CashParties, com.tools20022.repository.msg.RequestForQuote.ReceivingSettlementParties,
-						com.tools20022.repository.msg.RequestForQuote.DeliveringSettlementParties, com.tools20022.repository.msg.RequestForQuote.OtherBusinessParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestForQuote.mmQuoteRequestType, com.tools20022.repository.msg.RequestForQuote.mmQuoteType,
+						com.tools20022.repository.msg.RequestForQuote.mmPreviousClosingPrice, com.tools20022.repository.msg.RequestForQuote.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.RequestForQuote.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.RequestForQuote.mmStipulations,
+						com.tools20022.repository.msg.RequestForQuote.mmUnderlyingFinancialInstrumentDetails, com.tools20022.repository.msg.RequestForQuote.mmUnderlyingFinancialInstrumentAttributes,
+						com.tools20022.repository.msg.RequestForQuote.mmUnderlyingStipulations, com.tools20022.repository.msg.RequestForQuote.mmInstrumentLegGroupDetails, com.tools20022.repository.msg.RequestForQuote.mmTradingSession,
+						com.tools20022.repository.msg.RequestForQuote.mmTradingParties, com.tools20022.repository.msg.RequestForQuote.mmCashParties, com.tools20022.repository.msg.RequestForQuote.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.RequestForQuote.mmDeliveringSettlementParties, com.tools20022.repository.msg.RequestForQuote.mmOtherBusinessParties);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestForQuote";
 				definition = "Details for which one wishes to receive a quote.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuoteRequestType1Code getQuoteRequestType() {
+		return quoteRequestType;
+	}
+
+	public void setQuoteRequestType(QuoteRequestType1Code quoteRequestType) {
+		this.quoteRequestType = quoteRequestType;
+	}
+
+	public QuoteType1Code getQuoteType() {
+		return quoteType;
+	}
+
+	public void setQuoteType(QuoteType1Code quoteType) {
+		this.quoteType = quoteType;
+	}
+
+	public Price1 getPreviousClosingPrice() {
+		return previousClosingPrice;
+	}
+
+	public void setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
+		this.previousClosingPrice = previousClosingPrice;
+	}
+
+	public SecurityIdentification7 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.SecurityIdentification7 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public List<FinancialInstrumentAttributes1> getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public FinancialInstrumentStipulations getStipulations() {
+		return stipulations;
+	}
+
+	public void setStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations stipulations) {
+		this.stipulations = stipulations;
+	}
+
+	public List<SecurityIdentification7> getUnderlyingFinancialInstrumentDetails() {
+		return underlyingFinancialInstrumentDetails;
+	}
+
+	public void setUnderlyingFinancialInstrumentDetails(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails) {
+		this.underlyingFinancialInstrumentDetails = underlyingFinancialInstrumentDetails;
+	}
+
+	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
+		return underlyingFinancialInstrumentAttributes;
+	}
+
+	public void setUnderlyingFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
+		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
+	}
+
+	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
+		return underlyingStipulations;
+	}
+
+	public void setUnderlyingStipulations(List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations) {
+		this.underlyingStipulations = underlyingStipulations;
+	}
+
+	public List<InstrumentLeg2> getInstrumentLegGroupDetails() {
+		return instrumentLegGroupDetails;
+	}
+
+	public void setInstrumentLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg2> instrumentLegGroupDetails) {
+		this.instrumentLegGroupDetails = instrumentLegGroupDetails;
+	}
+
+	public TradingSession1 getTradingSession() {
+		return tradingSession;
+	}
+
+	public void setTradingSession(com.tools20022.repository.msg.TradingSession1 tradingSession) {
+		this.tradingSession = tradingSession;
+	}
+
+	public List<Intermediary14> getTradingParties() {
+		return tradingParties;
+	}
+
+	public void setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
+		this.tradingParties = tradingParties;
+	}
+
+	public CashParties1 getCashParties() {
+		return cashParties;
+	}
+
+	public void setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+		this.cashParties = cashParties;
+	}
+
+	public SettlementParties3 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public SettlementParties3 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public OtherParties1 getOtherBusinessParties() {
+		return otherBusinessParties;
+	}
+
+	public void setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+		this.otherBusinessParties = otherBusinessParties;
 	}
 }

@@ -34,48 +34,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#ReverseRights
- * IntermediateSecurityDistributionType1Code.ReverseRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmReverseRights
+ * IntermediateSecurityDistributionType1Code.mmReverseRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#BonusRights
- * IntermediateSecurityDistributionType1Code.BonusRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmBonusRights
+ * IntermediateSecurityDistributionType1Code.mmBonusRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#DividendReinvestment
- * IntermediateSecurityDistributionType1Code.DividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmDividendReinvestment
+ * IntermediateSecurityDistributionType1Code.mmDividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#CashDividend
- * IntermediateSecurityDistributionType1Code.CashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmCashDividend
+ * IntermediateSecurityDistributionType1Code.mmCashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#DividendOption
- * IntermediateSecurityDistributionType1Code.DividendOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmDividendOption
+ * IntermediateSecurityDistributionType1Code.mmDividendOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#SubscriptionRights
- * IntermediateSecurityDistributionType1Code.SubscriptionRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmSubscriptionRights
+ * IntermediateSecurityDistributionType1Code.mmSubscriptionRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#OpenOfferRights
- * IntermediateSecurityDistributionType1Code.OpenOfferRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmOpenOfferRights
+ * IntermediateSecurityDistributionType1Code.mmOpenOfferRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#ScripDividendOrPayment
- * IntermediateSecurityDistributionType1Code.ScripDividendOrPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmScripDividendOrPayment
+ * IntermediateSecurityDistributionType1Code.mmScripDividendOrPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#StockDividend
- * IntermediateSecurityDistributionType1Code.StockDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmStockDividend
+ * IntermediateSecurityDistributionType1Code.mmStockDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#InterestPayment
- * IntermediateSecurityDistributionType1Code.InterestPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmInterestPayment
+ * IntermediateSecurityDistributionType1Code.mmInterestPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#LiquidationDividendOrPayment
- * IntermediateSecurityDistributionType1Code.LiquidationDividendOrPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmLiquidationDividendOrPayment
+ * IntermediateSecurityDistributionType1Code.mmLiquidationDividendOrPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#SpinOff
- * IntermediateSecurityDistributionType1Code.SpinOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code#mmSpinOff
+ * IntermediateSecurityDistributionType1Code.mmSpinOff}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -111,7 +111,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "ReverseRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReverseRights = new MMCode() {
+	public static final MMCode mmReverseRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRights";
@@ -134,7 +134,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "BonusRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode BonusRights = new MMCode() {
+	public static final MMCode mmBonusRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRights";
@@ -157,7 +157,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestment = new MMCode() {
+	public static final MMCode mmDividendReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
@@ -180,7 +180,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividend = new MMCode() {
+	public static final MMCode mmCashDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
@@ -203,7 +203,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "DividendOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendOption = new MMCode() {
+	public static final MMCode mmDividendOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOption";
@@ -226,7 +226,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "SubscriptionRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubscriptionRights = new MMCode() {
+	public static final MMCode mmSubscriptionRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionRights";
@@ -249,7 +249,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "OpenOfferRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenOfferRights = new MMCode() {
+	public static final MMCode mmOpenOfferRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOfferRights";
@@ -272,7 +272,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "ScripDividendOrPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ScripDividendOrPayment = new MMCode() {
+	public static final MMCode mmScripDividendOrPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividendOrPayment";
@@ -295,7 +295,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "StockDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockDividend = new MMCode() {
+	public static final MMCode mmStockDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
@@ -318,7 +318,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "InterestPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestPayment = new MMCode() {
+	public static final MMCode mmInterestPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
@@ -341,7 +341,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "LiquidationDividendOrPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidationDividendOrPayment = new MMCode() {
+	public static final MMCode mmLiquidationDividendOrPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidationDividendOrPayment";
@@ -364,7 +364,7 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	 * name} = "SpinOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpinOff = new MMCode() {
+	public static final MMCode mmSpinOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOff";
@@ -375,17 +375,17 @@ public class IntermediateSecurityDistributionType1Code extends IntermediateSecur
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntermediateSecurityDistributionType1Code";
 				definition = "Specifies the type of intermediate security distribution.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.ReverseRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.BonusRights,
-						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.DividendReinvestment, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.CashDividend,
-						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.DividendOption, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.SubscriptionRights,
-						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.OpenOfferRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.ScripDividendOrPayment,
-						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.StockDividend, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.InterestPayment,
-						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.LiquidationDividendOrPayment, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.SpinOff);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmReverseRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmBonusRights,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmDividendReinvestment, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmCashDividend,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmDividendOption, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmSubscriptionRights,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmOpenOfferRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmScripDividendOrPayment,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmStockDividend, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmInterestPayment,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmLiquidationDividendOrPayment, com.tools20022.repository.codeset.IntermediateSecurityDistributionType1Code.mmSpinOff);
 				trace_lazy = () -> IntermediateSecurityDistributionTypeCode.mmObject();
 			}
 		});

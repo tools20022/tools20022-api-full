@@ -29,38 +29,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Cards
- * ATMMediaTypeCode.Cards}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Coins
- * ATMMediaTypeCode.Coins}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Commodity
- * ATMMediaTypeCode.Commodity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Coupons
- * ATMMediaTypeCode.Coupons}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Notes
- * ATMMediaTypeCode.Notes}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Stamps
- * ATMMediaTypeCode.Stamps}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmCards
+ * ATMMediaTypeCode.mmCards}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmCoins
+ * ATMMediaTypeCode.mmCoins}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Undetermined
- * ATMMediaTypeCode.Undetermined}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Check
- * ATMMediaTypeCode.Check}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmCommodity
+ * ATMMediaTypeCode.mmCommodity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmCoupons
+ * ATMMediaTypeCode.mmCoupons}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmNotes
+ * ATMMediaTypeCode.mmNotes}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmStamps
+ * ATMMediaTypeCode.mmStamps}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Counterfeit
- * ATMMediaTypeCode.Counterfeit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Fit
- * ATMMediaTypeCode.Fit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmUndetermined
+ * ATMMediaTypeCode.mmUndetermined}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmCheck
+ * ATMMediaTypeCode.mmCheck}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#FitAndUnfit
- * ATMMediaTypeCode.FitAndUnfit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Suspect
- * ATMMediaTypeCode.Suspect}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Unfit
- * ATMMediaTypeCode.Unfit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmCounterfeit
+ * ATMMediaTypeCode.mmCounterfeit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmFit
+ * ATMMediaTypeCode.mmFit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#Unrecognised
- * ATMMediaTypeCode.Unrecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmFitAndUnfit
+ * ATMMediaTypeCode.mmFitAndUnfit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmSuspect
+ * ATMMediaTypeCode.mmSuspect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmUnfit
+ * ATMMediaTypeCode.mmUnfit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmUnrecognised
+ * ATMMediaTypeCode.mmUnrecognised}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -77,8 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,7 +114,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Card media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cards = new MMCode() {
+	public static final MMCode mmCards = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cards";
@@ -143,7 +144,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Coin media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Coins = new MMCode() {
+	public static final MMCode mmCoins = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coins";
@@ -173,7 +174,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Non fixed value of the media, for instance gold, silver."</li>
 	 * </ul>
 	 */
-	public static final MMCode Commodity = new MMCode() {
+	public static final MMCode mmCommodity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
@@ -203,7 +204,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Coupon media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Coupons = new MMCode() {
+	public static final MMCode mmCoupons = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coupons";
@@ -233,7 +234,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Bank note media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Notes = new MMCode() {
+	public static final MMCode mmNotes = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notes";
@@ -263,7 +264,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Stamp media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Stamps = new MMCode() {
+	public static final MMCode mmStamps = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stamps";
@@ -293,7 +294,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Undetermined medias."</li>
 	 * </ul>
 	 */
-	public static final MMCode Undetermined = new MMCode() {
+	public static final MMCode mmUndetermined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undetermined";
@@ -323,7 +324,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Check media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Check = new MMCode() {
+	public static final MMCode mmCheck = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Check";
@@ -353,7 +354,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Detected counterfeit media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Counterfeit = new MMCode() {
+	public static final MMCode mmCounterfeit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterfeit";
@@ -383,7 +384,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Fit media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Fit = new MMCode() {
+	public static final MMCode mmFit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fit";
@@ -413,7 +414,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Fit or unfit media, if fitness cannot be determined."</li>
 	 * </ul>
 	 */
-	public static final MMCode FitAndUnfit = new MMCode() {
+	public static final MMCode mmFitAndUnfit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FitAndUnfit";
@@ -443,7 +444,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Suspect media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspect = new MMCode() {
+	public static final MMCode mmSuspect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspect";
@@ -473,7 +474,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Unfit media (unacceptable quality)."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unfit = new MMCode() {
+	public static final MMCode mmUnfit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfit";
@@ -503,7 +504,7 @@ public class ATMMediaTypeCode {
 	 * definition} = "Unrecognised media."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unrecognised = new MMCode() {
+	public static final MMCode mmUnrecognised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrecognised";
@@ -516,15 +517,15 @@ public class ATMMediaTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaTypeCode";
 				definition = "Type or category of media inside an ATM cassette.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaTypeCode.Cards, com.tools20022.repository.codeset.ATMMediaTypeCode.Coins, com.tools20022.repository.codeset.ATMMediaTypeCode.Commodity,
-						com.tools20022.repository.codeset.ATMMediaTypeCode.Coupons, com.tools20022.repository.codeset.ATMMediaTypeCode.Notes, com.tools20022.repository.codeset.ATMMediaTypeCode.Stamps,
-						com.tools20022.repository.codeset.ATMMediaTypeCode.Undetermined, com.tools20022.repository.codeset.ATMMediaTypeCode.Check, com.tools20022.repository.codeset.ATMMediaTypeCode.Counterfeit,
-						com.tools20022.repository.codeset.ATMMediaTypeCode.Fit, com.tools20022.repository.codeset.ATMMediaTypeCode.FitAndUnfit, com.tools20022.repository.codeset.ATMMediaTypeCode.Suspect,
-						com.tools20022.repository.codeset.ATMMediaTypeCode.Unfit, com.tools20022.repository.codeset.ATMMediaTypeCode.Unrecognised);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaTypeCode.mmCards, com.tools20022.repository.codeset.ATMMediaTypeCode.mmCoins, com.tools20022.repository.codeset.ATMMediaTypeCode.mmCommodity,
+						com.tools20022.repository.codeset.ATMMediaTypeCode.mmCoupons, com.tools20022.repository.codeset.ATMMediaTypeCode.mmNotes, com.tools20022.repository.codeset.ATMMediaTypeCode.mmStamps,
+						com.tools20022.repository.codeset.ATMMediaTypeCode.mmUndetermined, com.tools20022.repository.codeset.ATMMediaTypeCode.mmCheck, com.tools20022.repository.codeset.ATMMediaTypeCode.mmCounterfeit,
+						com.tools20022.repository.codeset.ATMMediaTypeCode.mmFit, com.tools20022.repository.codeset.ATMMediaTypeCode.mmFitAndUnfit, com.tools20022.repository.codeset.ATMMediaTypeCode.mmSuspect,
+						com.tools20022.repository.codeset.ATMMediaTypeCode.mmUnfit, com.tools20022.repository.codeset.ATMMediaTypeCode.mmUnrecognised);
 				derivation_lazy = () -> Arrays.asList(ATMMediaType1Code.mmObject(), ATMMediaType3Code.mmObject(), ATMMediaType2Code.mmObject());
 			}
 		});

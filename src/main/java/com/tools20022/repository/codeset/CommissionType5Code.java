@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#FrontEnd
- * CommissionType5Code.FrontEnd}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#mmFrontEnd
+ * CommissionType5Code.mmFrontEnd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#BackEnd
- * CommissionType5Code.BackEnd}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType5Code#Other
- * CommissionType5Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#mmBackEnd
+ * CommissionType5Code.mmBackEnd}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#mmOther
+ * CommissionType5Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class CommissionType5Code extends CommissionTypeCode {
 	 * name} = "FrontEnd"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrontEnd = new MMCode() {
+	public static final MMCode mmFrontEnd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEnd";
@@ -106,7 +107,7 @@ public class CommissionType5Code extends CommissionTypeCode {
 	 * name} = "BackEnd"</li>
 	 * </ul>
 	 */
-	public static final MMCode BackEnd = new MMCode() {
+	public static final MMCode mmBackEnd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEnd";
@@ -129,7 +130,7 @@ public class CommissionType5Code extends CommissionTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -140,12 +141,13 @@ public class CommissionType5Code extends CommissionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FEND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommissionType5Code";
 				definition = "Specifies the type of investment fund commission.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType5Code.FrontEnd, com.tools20022.repository.codeset.CommissionType5Code.BackEnd, com.tools20022.repository.codeset.CommissionType5Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType5Code.mmFrontEnd, com.tools20022.repository.codeset.CommissionType5Code.mmBackEnd,
+						com.tools20022.repository.codeset.CommissionType5Code.mmOther);
 				trace_lazy = () -> CommissionTypeCode.mmObject();
 			}
 		});

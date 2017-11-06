@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationParty1Code#IssuerOrOtherNominatatedParty
- * PresentationParty1Code.IssuerOrOtherNominatatedParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationParty1Code#mmIssuerOrOtherNominatatedParty
+ * PresentationParty1Code.mmIssuerOrOtherNominatatedParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationParty1Code#ExclusiveConfirmer
- * PresentationParty1Code.ExclusiveConfirmer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationParty1Code#mmExclusiveConfirmer
+ * PresentationParty1Code.mmExclusiveConfirmer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationParty1Code#ExclusiveIssuer
- * PresentationParty1Code.ExclusiveIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationParty1Code#mmExclusiveIssuer
+ * PresentationParty1Code.mmExclusiveIssuer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class PresentationParty1Code extends PresentationPartyCode {
 	 * name} = "IssuerOrOtherNominatatedParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerOrOtherNominatatedParty = new MMCode() {
+	public static final MMCode mmIssuerOrOtherNominatatedParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOrOtherNominatatedParty";
@@ -107,7 +107,7 @@ public class PresentationParty1Code extends PresentationPartyCode {
 	 * name} = "ExclusiveConfirmer"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExclusiveConfirmer = new MMCode() {
+	public static final MMCode mmExclusiveConfirmer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveConfirmer";
@@ -130,7 +130,7 @@ public class PresentationParty1Code extends PresentationPartyCode {
 	 * name} = "ExclusiveIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExclusiveIssuer = new MMCode() {
+	public static final MMCode mmExclusiveIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveIssuer";
@@ -141,13 +141,13 @@ public class PresentationParty1Code extends PresentationPartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ETHR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PresentationParty1Code";
 				definition = "Specifies the party to receive the presentation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PresentationParty1Code.IssuerOrOtherNominatatedParty, com.tools20022.repository.codeset.PresentationParty1Code.ExclusiveConfirmer,
-						com.tools20022.repository.codeset.PresentationParty1Code.ExclusiveIssuer);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PresentationParty1Code.mmIssuerOrOtherNominatatedParty, com.tools20022.repository.codeset.PresentationParty1Code.mmExclusiveConfirmer,
+						com.tools20022.repository.codeset.PresentationParty1Code.mmExclusiveIssuer);
 				trace_lazy = () -> PresentationPartyCode.mmObject();
 			}
 		});

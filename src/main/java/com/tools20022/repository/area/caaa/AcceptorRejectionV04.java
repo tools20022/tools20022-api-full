@@ -59,18 +59,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV04#Header
- * AcceptorRejectionV04.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV04#mmHeader
+ * AcceptorRejectionV04.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV04#Reject
- * AcceptorRejectionV04.Reject}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV04#mmReject
+ * AcceptorRejectionV04.mmReject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV04#identifier
- * AcceptorRejectionV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.015.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorRejectionV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header13 header;
 	/**
 	 * Rejection message management information.
 	 * <p>
@@ -121,30 +120,31 @@ public class AcceptorRejectionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#Header
-	 * AcceptorRejectionV05.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#mmHeader
+	 * AcceptorRejectionV05.mmHeader}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#Header
-	 * AcceptorRejectionV03.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#mmHeader
+	 * AcceptorRejectionV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Rejection message management information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorRejectionV03.Header;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV05.Header);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV05.mmHeader);
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorRejectionV03.mmHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header13.mmObject();
 		}
 	};
+	protected AcceptorRejection2 reject;
 	/**
 	 * Information related to the reject.
 	 * <p>
@@ -170,55 +170,28 @@ public class AcceptorRejectionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#Reject
-	 * AcceptorRejectionV05.Reject}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#mmReject
+	 * AcceptorRejectionV05.mmReject}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#Reject
-	 * AcceptorRejectionV03.Reject}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#mmReject
+	 * AcceptorRejectionV03.mmReject}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rjct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
 			definition = "Information related to the reject.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorRejectionV03.Reject;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV05.Reject);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV05.mmReject);
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorRejectionV03.mmReject;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "015"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "015";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -228,16 +201,39 @@ public class AcceptorRejectionV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorRejectionV04";
 				definition = "The AcceptorRejection message is sent by the acquirer (or its agent) to reject a message request or advice sent by an acceptor (or its agent), to indicate that the received message could not be processed.";
-				previousVersion_lazy = () -> AcceptorRejectionV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorRejectionV05.mmObject());
+				previousVersion_lazy = () -> AcceptorRejectionV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion.mmObject(), CAPEAcceptortoAcquirerMaintenance20142015.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrRjctn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV04.Header, com.tools20022.repository.area.caaa.AcceptorRejectionV04.Reject);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorRejectionV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV04.mmHeader, com.tools20022.repository.area.caaa.AcceptorRejectionV04.mmReject);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "015";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header13 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header13 header) {
+		this.header = header;
+	}
+
+	public AcceptorRejection2 getReject() {
+		return reject;
+	}
+
+	public void setReject(AcceptorRejection2 reject) {
+		this.reject = reject;
 	}
 }

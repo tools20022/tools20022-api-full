@@ -30,19 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#HarmonizedTariffCodeName
- * ProductCategoryCode.HarmonizedTariffCodeName}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#mmHarmonizedTariffCodeName
+ * ProductCategoryCode.mmHarmonizedTariffCodeName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#QuotaCategory
- * ProductCategoryCode.QuotaCategory}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#mmQuotaCategory
+ * ProductCategoryCode.mmQuotaCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#ProductGroup
- * ProductCategoryCode.ProductGroup}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#mmProductGroup
+ * ProductCategoryCode.mmProductGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#LineOfBusiness
- * ProductCategoryCode.LineOfBusiness}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductCategoryCode#Gender
- * ProductCategoryCode.Gender}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#mmLineOfBusiness
+ * ProductCategoryCode.mmLineOfBusiness}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#mmGender
+ * ProductCategoryCode.mmGender}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +100,7 @@ public class ProductCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HarmonizedTariffCodeName = new MMCode() {
+	public static final MMCode mmHarmonizedTariffCodeName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HarmonizedTariffCodeName";
@@ -129,7 +130,7 @@ public class ProductCategoryCode {
 	 * definition} = "Product identifier used by the retail industry."</li>
 	 * </ul>
 	 */
-	public static final MMCode QuotaCategory = new MMCode() {
+	public static final MMCode mmQuotaCategory = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "QuotaCategory";
@@ -159,7 +160,7 @@ public class ProductCategoryCode {
 	 * definition} = "Product Group Code."</li>
 	 * </ul>
 	 */
-	public static final MMCode ProductGroup = new MMCode() {
+	public static final MMCode mmProductGroup = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProductGroup";
@@ -189,7 +190,7 @@ public class ProductCategoryCode {
 	 * definition} = "Line of business code."</li>
 	 * </ul>
 	 */
-	public static final MMCode LineOfBusiness = new MMCode() {
+	public static final MMCode mmLineOfBusiness = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LineOfBusiness";
@@ -219,7 +220,7 @@ public class ProductCategoryCode {
 	 * definition} = "Code for gender."</li>
 	 * </ul>
 	 */
-	public static final MMCode Gender = new MMCode() {
+	public static final MMCode mmGender = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Gender";
@@ -232,13 +233,13 @@ public class ProductCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HRTR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductCategoryCode";
 				definition = "Specifies the category of a product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductCategoryCode.HarmonizedTariffCodeName, com.tools20022.repository.codeset.ProductCategoryCode.QuotaCategory,
-						com.tools20022.repository.codeset.ProductCategoryCode.ProductGroup, com.tools20022.repository.codeset.ProductCategoryCode.LineOfBusiness, com.tools20022.repository.codeset.ProductCategoryCode.Gender);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductCategoryCode.mmHarmonizedTariffCodeName, com.tools20022.repository.codeset.ProductCategoryCode.mmQuotaCategory,
+						com.tools20022.repository.codeset.ProductCategoryCode.mmProductGroup, com.tools20022.repository.codeset.ProductCategoryCode.mmLineOfBusiness, com.tools20022.repository.codeset.ProductCategoryCode.mmGender);
 				derivation_lazy = () -> Arrays.asList(ProductCategory1Code.mmObject());
 			}
 		});

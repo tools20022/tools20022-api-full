@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CashMarginOrderCode#Cash
- * CashMarginOrderCode.Cash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashMarginOrderCode#mmCash
+ * CashMarginOrderCode.mmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashMarginOrderCode#MarginOpen
- * CashMarginOrderCode.MarginOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashMarginOrderCode#mmMarginOpen
+ * CashMarginOrderCode.mmMarginOpen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashMarginOrderCode#MarginClose
- * CashMarginOrderCode.MarginClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashMarginOrderCode#mmMarginClose
+ * CashMarginOrderCode.mmMarginClose}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +98,7 @@ public class CashMarginOrderCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Cash";
@@ -132,7 +132,7 @@ public class CashMarginOrderCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarginOpen = new MMCode() {
+	public static final MMCode mmMarginOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarginOpen";
@@ -167,7 +167,7 @@ public class CashMarginOrderCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarginClose = new MMCode() {
+	public static final MMCode mmMarginClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarginClose";
@@ -180,13 +180,13 @@ public class CashMarginOrderCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashMarginOrderCode";
 				definition = "Identifies whether an order is a non-margin, an opening margin or a closing margin order.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.CashMarginOrderCode.Cash, com.tools20022.repository.codeset.CashMarginOrderCode.MarginOpen, com.tools20022.repository.codeset.CashMarginOrderCode.MarginClose);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashMarginOrderCode.mmCash, com.tools20022.repository.codeset.CashMarginOrderCode.mmMarginOpen,
+						com.tools20022.repository.codeset.CashMarginOrderCode.mmMarginClose);
 				derivation_lazy = () -> Arrays.asList(CashMarginOrder1Code.mmObject());
 			}
 		});

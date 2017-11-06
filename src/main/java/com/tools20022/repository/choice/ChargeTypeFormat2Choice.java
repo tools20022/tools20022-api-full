@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice#Unstructured
- * ChargeTypeFormat2Choice.Unstructured}</li>
+ * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice#mmUnstructured
+ * ChargeTypeFormat2Choice.mmUnstructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice#Structured
- * ChargeTypeFormat2Choice.Structured}</li>
+ * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice#mmStructured
+ * ChargeTypeFormat2Choice.mmStructured}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChargeTypeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text unstructured;
 	/**
 	 * Specifies the type of charge in free text form.
 	 * <p>
@@ -76,8 +77,8 @@ public class ChargeTypeFormat2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class ChargeTypeFormat2Choice {
 	 * definition} = "Specifies the type of charge in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> ChargeTypeFormat2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Specifies the type of charge in free text form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ChargeType4Code structured;
 	/**
 	 * Specifies the type of charge in a structured form.
 	 * <p>
@@ -123,8 +125,8 @@ public class ChargeTypeFormat2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class ChargeTypeFormat2Choice {
 	 * definition} = "Specifies the type of charge in a structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> ChargeTypeFormat2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Specifies the type of charge in a structured form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType4Code.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class ChargeTypeFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeTypeFormat2Choice.Unstructured, com.tools20022.repository.choice.ChargeTypeFormat2Choice.Structured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeTypeFormat2Choice.mmUnstructured, com.tools20022.repository.choice.ChargeTypeFormat2Choice.mmStructured);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeTypeFormat2Choice";
 				definition = "Type of charge expressed either in free format or in structured or free form.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getUnstructured() {
+		return unstructured;
+	}
+
+	public void setUnstructured(Max35Text unstructured) {
+		this.unstructured = unstructured;
+	}
+
+	public ChargeType4Code getStructured() {
+		return structured;
+	}
+
+	public void setStructured(ChargeType4Code structured) {
+		this.structured = structured;
 	}
 }

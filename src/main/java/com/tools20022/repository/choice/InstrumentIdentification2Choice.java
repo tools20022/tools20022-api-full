@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstrumentIdentification2Choice#OtherFinancialInstrument
- * InstrumentIdentification2Choice.OtherFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.choice.InstrumentIdentification2Choice#mmOtherFinancialInstrument
+ * InstrumentIdentification2Choice.mmOtherFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstrumentIdentification2Choice#InvestmentFund
- * InstrumentIdentification2Choice.InvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.choice.InstrumentIdentification2Choice#mmInvestmentFund
+ * InstrumentIdentification2Choice.mmInvestmentFund}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstrumentIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrument2 otherFinancialInstrument;
 	/**
 	 * Financial Instrument excluding investment funds.
 	 * <p>
@@ -96,21 +97,22 @@ public class InstrumentIdentification2Choice {
 	 * definition} = "Financial Instrument excluding investment funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstrumentIdentification2Choice.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> InstrumentIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrFinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherFinancialInstrument";
 			definition = "Financial Instrument excluding investment funds.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrument2.mmObject();
 		}
 	};
+	protected FinancialInstrument13 investmentFund;
 	/**
 	 * Distinct pool of financial instruments managed by a single investment
 	 * policy. May or not be part of an umbrella fund.The pool is issued in at
@@ -146,33 +148,49 @@ public class InstrumentIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentFund = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentFund = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstrumentIdentification2Choice.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> InstrumentIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtFnd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFund";
 			definition = "Distinct pool of financial instruments managed by a single investment policy. May or not be part of an umbrella fund.The pool is issued in at least one investment fund class.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrument13.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstrumentIdentification2Choice.OtherFinancialInstrument, com.tools20022.repository.choice.InstrumentIdentification2Choice.InvestmentFund);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstrumentIdentification2Choice.mmOtherFinancialInstrument, com.tools20022.repository.choice.InstrumentIdentification2Choice.mmInvestmentFund);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstrumentIdentification2Choice";
 				definition = "Choice between the identification of an investment fund and another financial instrument (equity, fixed income, etc.).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrument2 getOtherFinancialInstrument() {
+		return otherFinancialInstrument;
+	}
+
+	public void setOtherFinancialInstrument(FinancialInstrument2 otherFinancialInstrument) {
+		this.otherFinancialInstrument = otherFinancialInstrument;
+	}
+
+	public FinancialInstrument13 getInvestmentFund() {
+		return investmentFund;
+	}
+
+	public void setInvestmentFund(FinancialInstrument13 investmentFund) {
+		this.investmentFund = investmentFund;
 	}
 }

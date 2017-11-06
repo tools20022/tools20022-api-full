@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#CheckPoint
- * CardServiceType1Code.CheckPoint}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardServiceType1Code#Final
- * CardServiceType1Code.Final}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#mmCheckPoint
+ * CardServiceType1Code.mmCheckPoint}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#TotalInquiry
- * CardServiceType1Code.TotalInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#mmFinal
+ * CardServiceType1Code.mmFinal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#mmTotalInquiry
+ * CardServiceType1Code.mmTotalInquiry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,7 +78,7 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 * name} = "CheckPoint"</li>
 	 * </ul>
 	 */
-	public static final MMCode CheckPoint = new MMCode() {
+	public static final MMCode mmCheckPoint = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckPoint";
@@ -100,7 +101,7 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
@@ -123,7 +124,7 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 * name} = "TotalInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalInquiry = new MMCode() {
+	public static final MMCode mmTotalInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInquiry";
@@ -134,12 +135,12 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardServiceType1Code";
 				definition = "Type of reconciliation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType1Code.CheckPoint, com.tools20022.repository.codeset.CardServiceType1Code.Final,
-						com.tools20022.repository.codeset.CardServiceType1Code.TotalInquiry);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType1Code.mmCheckPoint, com.tools20022.repository.codeset.CardServiceType1Code.mmFinal,
+						com.tools20022.repository.codeset.CardServiceType1Code.mmTotalInquiry);
 				trace_lazy = () -> CardServiceTypeCode.mmObject();
 			}
 		});

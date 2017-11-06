@@ -30,21 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeV2Code#CurrentYield
- * YieldTypeV2Code.CurrentYield}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeV2Code#mmCurrentYield
+ * YieldTypeV2Code.mmCurrentYield}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeV2Code#YieldToMaturity
- * YieldTypeV2Code.YieldToMaturity}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeV2Code#mmYieldToMaturity
+ * YieldTypeV2Code.mmYieldToMaturity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeV2Code#YieldToCall
- * YieldTypeV2Code.YieldToCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeV2Code#mmYieldToCall
+ * YieldTypeV2Code.mmYieldToCall}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class YieldTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CurrentYield = new MMCode() {
+	public static final MMCode mmCurrentYield = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CurrentYield";
@@ -121,7 +121,7 @@ public class YieldTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode YieldToMaturity = new MMCode() {
+	public static final MMCode mmYieldToMaturity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "YieldToMaturity";
@@ -155,7 +155,7 @@ public class YieldTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode YieldToCall = new MMCode() {
+	public static final MMCode mmYieldToCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "YieldToCall";
@@ -168,13 +168,13 @@ public class YieldTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUYI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "YieldTypeV2Code";
 				definition = "Type of yield at which the transaction was effected.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.YieldTypeV2Code.CurrentYield, com.tools20022.repository.codeset.YieldTypeV2Code.YieldToMaturity,
-						com.tools20022.repository.codeset.YieldTypeV2Code.YieldToCall);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.YieldTypeV2Code.mmCurrentYield, com.tools20022.repository.codeset.YieldTypeV2Code.mmYieldToMaturity,
+						com.tools20022.repository.codeset.YieldTypeV2Code.mmYieldToCall);
 			}
 		});
 		return mmObject_lazy.get();

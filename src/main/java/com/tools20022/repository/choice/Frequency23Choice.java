@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Frequency23Choice#Code
- * Frequency23Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Frequency23Choice#mmCode
+ * Frequency23Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Frequency23Choice#Proprietary
- * Frequency23Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Frequency23Choice#mmProprietary
+ * Frequency23Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Frequency23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected EventFrequency3Code code;
 	/**
 	 * Frequency expressed as an ISO 20022 code.
 	 * <p>
@@ -92,11 +93,11 @@ public class Frequency23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Frequency3Choice#Code
-	 * Frequency3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.Frequency3Choice#mmCode
+	 * Frequency3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Frequency23Choice.mmObject();
 			isDerived = false;
@@ -104,12 +105,13 @@ public class Frequency23Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Frequency expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency3Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency3Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency3Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Frequency expressed as a proprietary code.
 	 * <p>
@@ -139,11 +141,11 @@ public class Frequency23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Frequency3Choice#Proprietary
-	 * Frequency3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.Frequency3Choice#mmProprietary
+	 * Frequency3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Frequency23Choice.mmObject();
 			isDerived = false;
@@ -151,9 +153,9 @@ public class Frequency23Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Frequency expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency3Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency3Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -161,8 +163,8 @@ public class Frequency23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency23Choice.Code, com.tools20022.repository.choice.Frequency23Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency23Choice.mmCode, com.tools20022.repository.choice.Frequency23Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Frequency23Choice";
 				definition = "Choice of format for a frequency, for example, a payment frequency.";
@@ -170,5 +172,21 @@ public class Frequency23Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EventFrequency3Code getCode() {
+		return code;
+	}
+
+	public void setCode(EventFrequency3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

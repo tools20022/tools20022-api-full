@@ -33,22 +33,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.OffsetTypeCode OffsetTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OffsetType1Code#Price
- * OffsetType1Code.Price}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OffsetType1Code#BasisPoint
- * OffsetType1Code.BasisPoint}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OffsetType1Code#Tick
- * OffsetType1Code.Tick}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OffsetType1Code#mmPrice
+ * OffsetType1Code.mmPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OffsetType1Code#PriceTierLevel
- * OffsetType1Code.PriceTierLevel}</li>
+ * {@linkplain com.tools20022.repository.codeset.OffsetType1Code#mmBasisPoint
+ * OffsetType1Code.mmBasisPoint}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OffsetType1Code#mmTick
+ * OffsetType1Code.mmTick}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OffsetType1Code#mmPriceTierLevel
+ * OffsetType1Code.mmPriceTierLevel}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +87,7 @@ public class OffsetType1Code extends OffsetTypeCode {
 	 * name} = "Price"</li>
 	 * </ul>
 	 */
-	public static final MMCode Price = new MMCode() {
+	public static final MMCode mmPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
@@ -109,7 +110,7 @@ public class OffsetType1Code extends OffsetTypeCode {
 	 * name} = "BasisPoint"</li>
 	 * </ul>
 	 */
-	public static final MMCode BasisPoint = new MMCode() {
+	public static final MMCode mmBasisPoint = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPoint";
@@ -132,7 +133,7 @@ public class OffsetType1Code extends OffsetTypeCode {
 	 * name} = "Tick"</li>
 	 * </ul>
 	 */
-	public static final MMCode Tick = new MMCode() {
+	public static final MMCode mmTick = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tick";
@@ -155,7 +156,7 @@ public class OffsetType1Code extends OffsetTypeCode {
 	 * name} = "PriceTierLevel"</li>
 	 * </ul>
 	 */
-	public static final MMCode PriceTierLevel = new MMCode() {
+	public static final MMCode mmPriceTierLevel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceTierLevel";
@@ -166,13 +167,13 @@ public class OffsetType1Code extends OffsetTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OffsetType1Code";
 				definition = "Type of peg offset or type of discretion offset (e.g. price offset, tick offset etc).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OffsetType1Code.Price, com.tools20022.repository.codeset.OffsetType1Code.BasisPoint, com.tools20022.repository.codeset.OffsetType1Code.Tick,
-						com.tools20022.repository.codeset.OffsetType1Code.PriceTierLevel);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OffsetType1Code.mmPrice, com.tools20022.repository.codeset.OffsetType1Code.mmBasisPoint, com.tools20022.repository.codeset.OffsetType1Code.mmTick,
+						com.tools20022.repository.codeset.OffsetType1Code.mmPriceTierLevel);
 				trace_lazy = () -> OffsetTypeCode.mmObject();
 			}
 		});

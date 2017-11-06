@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.PortfolioStrategy;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Strategy is organisation based.
@@ -36,16 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationStrategy#Organisation
- * OrganisationStrategy.Organisation}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationStrategy#mmOrganisation
+ * OrganisationStrategy.mmOrganisation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#Strategy
- * Organisation.Strategy}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmStrategy
+ * Organisation.mmStrategy}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrganisationStrategy extends PortfolioStrategy {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Organisation> organisation;
 	/**
 	 * Strategy is organisation based.
 	 * <p>
@@ -77,8 +79,8 @@ public class OrganisationStrategy extends PortfolioStrategy {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#Strategy
-	 * Organisation.Strategy}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmStrategy
+	 * Organisation.mmStrategy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -102,7 +104,7 @@ public class OrganisationStrategy extends PortfolioStrategy {
 	 * definition} = "Strategy is organisation based."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Organisation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> OrganisationStrategy.mmObject();
 			isDerived = false;
@@ -110,24 +112,32 @@ public class OrganisationStrategy extends PortfolioStrategy {
 			name = "Organisation";
 			definition = "Strategy is organisation based.";
 			minOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.Strategy;
+			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmStrategy;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrganisationStrategy";
 				definition = "Strategy is organisation based.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.Strategy);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmStrategy);
 				superType_lazy = () -> PortfolioStrategy.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationStrategy.Organisation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationStrategy.mmOrganisation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Organisation> getOrganisation() {
+		return organisation;
+	}
+
+	public void setOrganisation(List<com.tools20022.repository.entity.Organisation> organisation) {
+		this.organisation = organisation;
 	}
 }

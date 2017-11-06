@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionQuantities2Choice#Quantity
- * TransactionQuantities2Choice.Quantity}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionQuantities2Choice#mmQuantity
+ * TransactionQuantities2Choice.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionQuantities2Choice#OriginalAndCurrentFaceAmount
- * TransactionQuantities2Choice.OriginalAndCurrentFaceAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionQuantities2Choice#mmOriginalAndCurrentFaceAmount
+ * TransactionQuantities2Choice.mmOriginalAndCurrentFaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionQuantities2Choice#Proprietary
- * TransactionQuantities2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionQuantities2Choice#mmProprietary
+ * TransactionQuantities2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionQuantities2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantityChoice quantity;
 	/**
 	 * Specifies the quantity (such as securities) in the underlying
 	 * transaction.
@@ -104,21 +105,22 @@ public class TransactionQuantities2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity (such as securities) in the underlying transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected OriginalAndCurrentQuantities1 originalAndCurrentFaceAmount;
 	/**
 	 * Face amount and amortised value of security.
 	 * <p>
@@ -152,20 +154,21 @@ public class TransactionQuantities2Choice {
 	 * definition} = "Face amount and amortised value of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalAndCurrentFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalAndCurrentFaceAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFaceAmount";
 			definition = "Face amount and amortised value of security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalAndCurrentQuantities1.mmObject();
 		}
 	};
+	protected ProprietaryQuantity1 proprietary;
 	/**
 	 * Proprietary quantities specification defined in the underlying
 	 * transaction.
@@ -200,34 +203,58 @@ public class TransactionQuantities2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary quantities specification defined in the underlying transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryQuantity1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryQuantity1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionQuantities2Choice.Quantity, com.tools20022.repository.choice.TransactionQuantities2Choice.OriginalAndCurrentFaceAmount,
-						com.tools20022.repository.choice.TransactionQuantities2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionQuantities2Choice.mmQuantity, com.tools20022.repository.choice.TransactionQuantities2Choice.mmOriginalAndCurrentFaceAmount,
+						com.tools20022.repository.choice.TransactionQuantities2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionQuantities2Choice";
 				definition = "Specifies the quantities (such as securities) in the underlying transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantityChoice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = quantity;
+	}
+
+	public OriginalAndCurrentQuantities1 getOriginalAndCurrentFaceAmount() {
+		return originalAndCurrentFaceAmount;
+	}
+
+	public void setOriginalAndCurrentFaceAmount(OriginalAndCurrentQuantities1 originalAndCurrentFaceAmount) {
+		this.originalAndCurrentFaceAmount = originalAndCurrentFaceAmount;
+	}
+
+	public ProprietaryQuantity1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(ProprietaryQuantity1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

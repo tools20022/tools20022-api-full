@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice#DefaultOptionIndicator
- * DefaultProcessingOrStandingInstruction1Choice.DefaultOptionIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice#mmDefaultOptionIndicator
+ * DefaultProcessingOrStandingInstruction1Choice.mmDefaultOptionIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice#StandingInstructionIndicator
- * DefaultProcessingOrStandingInstruction1Choice.StandingInstructionIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice#mmStandingInstructionIndicator
+ * DefaultProcessingOrStandingInstruction1Choice.mmStandingInstructionIndicator}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DefaultProcessingOrStandingInstruction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator defaultOptionIndicator;
 	/**
 	 * Indicates whether the option, for example, currency option, will be
 	 * selected by default if no instruction is provided by the account owner.
@@ -89,7 +91,7 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultOptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultOptionIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionIndicator";
 			definition = "Indicates whether the option, for example, currency option, will be selected by default if no instruction is provided by the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator standingInstructionIndicator;
 	/**
 	 * Indicates whether an account owner has placed a standing order to select
 	 * this corporate action option.
@@ -133,7 +136,7 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandingInstructionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandingInstructionIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
 			isDerived = false;
@@ -141,8 +144,8 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionIndicator";
 			definition = "Indicates whether an account owner has placed a standing order to select this corporate action option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -150,14 +153,30 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.DefaultOptionIndicator,
-						com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.StandingInstructionIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmDefaultOptionIndicator,
+						com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmStandingInstructionIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DefaultProcessingOrStandingInstruction1Choice";
 				definition = "Choice between default processing or standing instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getDefaultOptionIndicator() {
+		return defaultOptionIndicator;
+	}
+
+	public void setDefaultOptionIndicator(YesNoIndicator defaultOptionIndicator) {
+		this.defaultOptionIndicator = defaultOptionIndicator;
+	}
+
+	public YesNoIndicator getStandingInstructionIndicator() {
+		return standingInstructionIndicator;
+	}
+
+	public void setStandingInstructionIndicator(YesNoIndicator standingInstructionIndicator) {
+		this.standingInstructionIndicator = standingInstructionIndicator;
 	}
 }

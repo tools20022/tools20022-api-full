@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCallResult1#DefaultFundAmount
- * MarginCallResult1.DefaultFundAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCallResult1#mmDefaultFundAmount
+ * MarginCallResult1.mmDefaultFundAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCallResult1#MarginCallResult
- * MarginCallResult1.MarginCallResult}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCallResult1#mmMarginCallResult
+ * MarginCallResult1.mmMarginCallResult}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginCallResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount defaultFundAmount;
 	/**
 	 * Total amount required by the clearing member to participate to the
 	 * default fund.
@@ -80,8 +81,8 @@ public class MarginCallResult1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#ExcessOrDeficitAmount
-	 * DefaultFundContribution.ExcessOrDeficitAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmExcessOrDeficitAmount
+	 * DefaultFundContribution.mmExcessOrDeficitAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class MarginCallResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultFundAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultFundAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmExcessOrDeficitAmount;
 			componentContext_lazy = () -> MarginCallResult1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.ExcessOrDeficitAmount;
 			isDerived = false;
 			xmlTag = "DfltFndAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultFundAmount";
 			definition = "Total amount required by the clearing member to participate to the default fund.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected MarginCallResult1Choice marginCallResult;
 	/**
 	 * Provides the summation of the call amounts for the variation margin and
 	 * the segregated independent amount, or the segregated independent amount
@@ -151,33 +153,49 @@ public class MarginCallResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarginCallResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarginCallResult = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarginCallResult1.mmObject();
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
+			componentContext_lazy = () -> MarginCallResult1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResult";
 			definition = "Provides the summation of the call amounts for the variation margin and the segregated independent amount, or the segregated independent amount only.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarginCallResult1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarginCallResult1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCallResult1.DefaultFundAmount, com.tools20022.repository.msg.MarginCallResult1.MarginCallResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCallResult1.mmDefaultFundAmount, com.tools20022.repository.msg.MarginCallResult1.mmMarginCallResult);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarginCallResult1";
 				definition = "Provides the summation of the call amounts per margin type and optionaly the default fund amount (only for CCP).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getDefaultFundAmount() {
+		return defaultFundAmount;
+	}
+
+	public void setDefaultFundAmount(ActiveCurrencyAndAmount defaultFundAmount) {
+		this.defaultFundAmount = defaultFundAmount;
+	}
+
+	public MarginCallResult1Choice getMarginCallResult() {
+		return marginCallResult;
+	}
+
+	public void setMarginCallResult(MarginCallResult1Choice marginCallResult) {
+		this.marginCallResult = marginCallResult;
 	}
 }

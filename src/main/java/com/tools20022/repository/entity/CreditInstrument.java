@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the instrument to be used for the credit of a payment.
@@ -40,25 +41,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CreditInstrument#RelatedPayment
- * CreditInstrument.RelatedPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditInstrument#Method
- * CreditInstrument.Method}</li>
+ * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmRelatedPayment
+ * CreditInstrument.mmRelatedPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditInstrument#mmMethod
+ * CreditInstrument.mmMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CreditInstrument#CreditInstrumentIdentification
- * CreditInstrument.CreditInstrumentIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditInstrument#NetAmount
- * CreditInstrument.NetAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditInstrument#Deadline
- * CreditInstrument.Deadline}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmCreditInstrumentIdentification
+ * CreditInstrument.mmCreditInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#CreditMethod
- * Payment.CreditMethod}</li>
+ * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmNetAmount
+ * CreditInstrument.mmNetAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditInstrument#mmDeadline
+ * CreditInstrument.mmDeadline}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -71,10 +65,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
+ * Payment.mmCreditMethod}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditInstrument {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Payment> relatedPayment;
 	/**
 	 * Payment which uses the credit instrument.
 	 * <p>
@@ -97,8 +100,8 @@ public class CreditInstrument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CreditMethod
-	 * Payment.CreditMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
+	 * Payment.mmCreditMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -121,7 +124,7 @@ public class CreditInstrument {
 	 * definition} = "Payment which uses the credit instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedPayment = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
@@ -129,11 +132,12 @@ public class CreditInstrument {
 			name = "RelatedPayment";
 			definition = "Payment which uses the credit instrument.";
 			minOccurs = 0;
-			type_lazy = () -> Payment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.CreditMethod;
+			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmCreditMethod;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
+	protected PaymentMethodCode method;
 	/**
 	 * Transfer method to be used for the transfer.
 	 * <p>
@@ -144,106 +148,106 @@ public class CreditInstrument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentMethodCode
 	 * PaymentMethodCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#PaymentMethod
-	 * PaymentInstruction1.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#PaymentMethod
-	 * PaymentInstruction6.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#PaymentMethod
-	 * PaymentInstruction9.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7#PaymentMethod
-	 * PaymentInstruction7.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction10#PaymentMethod
-	 * PaymentInstruction10.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference1#PaymentMethod
-	 * OriginalTransactionReference1.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference13#PaymentMethod
-	 * OriginalTransactionReference13.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference16#PaymentMethod
-	 * OriginalTransactionReference16.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference15#PaymentMethod
-	 * OriginalTransactionReference15.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference17#PaymentMethod
-	 * OriginalTransactionReference17.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction5#PaymentMethod
-	 * PaymentInstruction5.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction8#PaymentMethod
-	 * PaymentInstruction8.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction11#PaymentMethod
-	 * PaymentInstruction11.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInformation15#PaymentMethod
-	 * PaymentInformation15.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentMeans1#PaymentMethodCode
-	 * PaymentMeans1.PaymentMethodCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference9#PaymentMethod
-	 * OriginalTransactionReference9.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference12#PaymentMethod
-	 * OriginalTransactionReference12.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#PaymentMethod
-	 * PaymentInstruction14.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#PaymentMethod
-	 * PaymentInstruction16.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15#PaymentMethod
-	 * PaymentInstruction15.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference20#PaymentMethod
-	 * OriginalTransactionReference20.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction17#PaymentMethod
-	 * PaymentInstruction17.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18#PaymentMethod
-	 * PaymentInstruction18.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction19#PaymentMethod
-	 * PaymentInstruction19.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#PaymentMethod
-	 * PaymentInstruction20.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22#PaymentMethod
-	 * OriginalTransactionReference22.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction21#PaymentMethod
-	 * PaymentInstruction21.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction23#PaymentMethod
-	 * PaymentInstruction23.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#PaymentMethod
-	 * PaymentInstruction22.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#PaymentMethod
-	 * OriginalTransactionReference24.PaymentMethod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
 	 * CreditInstrument}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#mmPaymentMethod
+	 * PaymentInstruction1.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#mmPaymentMethod
+	 * PaymentInstruction6.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#mmPaymentMethod
+	 * PaymentInstruction9.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7#mmPaymentMethod
+	 * PaymentInstruction7.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction10#mmPaymentMethod
+	 * PaymentInstruction10.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference1#mmPaymentMethod
+	 * OriginalTransactionReference1.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference13#mmPaymentMethod
+	 * OriginalTransactionReference13.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference16#mmPaymentMethod
+	 * OriginalTransactionReference16.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference15#mmPaymentMethod
+	 * OriginalTransactionReference15.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference17#mmPaymentMethod
+	 * OriginalTransactionReference17.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction5#mmPaymentMethod
+	 * PaymentInstruction5.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction8#mmPaymentMethod
+	 * PaymentInstruction8.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction11#mmPaymentMethod
+	 * PaymentInstruction11.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInformation15#mmPaymentMethod
+	 * PaymentInformation15.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentMeans1#mmPaymentMethodCode
+	 * PaymentMeans1.mmPaymentMethodCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference9#mmPaymentMethod
+	 * OriginalTransactionReference9.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference12#mmPaymentMethod
+	 * OriginalTransactionReference12.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#mmPaymentMethod
+	 * PaymentInstruction14.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#mmPaymentMethod
+	 * PaymentInstruction16.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15#mmPaymentMethod
+	 * PaymentInstruction15.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference20#mmPaymentMethod
+	 * OriginalTransactionReference20.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction17#mmPaymentMethod
+	 * PaymentInstruction17.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18#mmPaymentMethod
+	 * PaymentInstruction18.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction19#mmPaymentMethod
+	 * PaymentInstruction19.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#mmPaymentMethod
+	 * PaymentInstruction20.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22#mmPaymentMethod
+	 * OriginalTransactionReference22.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction21#mmPaymentMethod
+	 * PaymentInstruction21.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction23#mmPaymentMethod
+	 * PaymentInstruction23.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmPaymentMethod
+	 * PaymentInstruction22.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#mmPaymentMethod
+	 * OriginalTransactionReference24.mmPaymentMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -255,29 +259,31 @@ public class CreditInstrument {
 	 * definition} = "Transfer method to be used for the transfer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Method = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction1.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction6.PaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction9.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction7.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction10.PaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference1.PaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference13.PaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference16.PaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference15.PaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference17.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction5.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction8.PaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction11.PaymentMethod, com.tools20022.repository.msg.PaymentInformation15.PaymentMethod, com.tools20022.repository.msg.PaymentMeans1.PaymentMethodCode,
-					com.tools20022.repository.msg.OriginalTransactionReference9.PaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference12.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction14.PaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction16.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction15.PaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference20.PaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction17.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction18.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction19.PaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction20.PaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference22.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction21.PaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction23.PaymentMethod, com.tools20022.repository.msg.PaymentInstruction22.PaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference24.PaymentMethod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction1.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction6.mmPaymentMethod,
+					com.tools20022.repository.msg.PaymentInstruction9.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction7.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction10.mmPaymentMethod,
+					com.tools20022.repository.msg.OriginalTransactionReference1.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference13.mmPaymentMethod,
+					com.tools20022.repository.msg.OriginalTransactionReference16.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference15.mmPaymentMethod,
+					com.tools20022.repository.msg.OriginalTransactionReference17.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction5.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction8.mmPaymentMethod,
+					com.tools20022.repository.msg.PaymentInstruction11.mmPaymentMethod, com.tools20022.repository.msg.PaymentInformation15.mmPaymentMethod, com.tools20022.repository.msg.PaymentMeans1.mmPaymentMethodCode,
+					com.tools20022.repository.msg.OriginalTransactionReference9.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference12.mmPaymentMethod,
+					com.tools20022.repository.msg.PaymentInstruction14.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction16.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction15.mmPaymentMethod,
+					com.tools20022.repository.msg.OriginalTransactionReference20.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction17.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction18.mmPaymentMethod,
+					com.tools20022.repository.msg.PaymentInstruction19.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction20.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference22.mmPaymentMethod,
+					com.tools20022.repository.msg.PaymentInstruction21.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction23.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction22.mmPaymentMethod,
+					com.tools20022.repository.msg.OriginalTransactionReference24.mmPaymentMethod);
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Method";
 			definition = "Transfer method to be used for the transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentMethodCode.mmObject();
 		}
 	};
+	protected Max35Text creditInstrumentIdentification;
 	/**
 	 * Identifies the credit instrument.
 	 * <p>
@@ -287,26 +293,26 @@ public class CreditInstrument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cheque5#ChequeNumber
-	 * Cheque5.ChequeNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cheque6#ChequeNumber
-	 * Cheque6.ChequeNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cheque7#ChequeNumber
-	 * Cheque7.ChequeNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cheque3#Number
-	 * Cheque3.Number}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cheque9#Number
-	 * Cheque9.Number}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
 	 * CreditInstrument}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmChequeNumber
+	 * Cheque5.mmChequeNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cheque6#mmChequeNumber
+	 * Cheque6.mmChequeNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cheque7#mmChequeNumber
+	 * Cheque7.mmChequeNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cheque3#mmNumber
+	 * Cheque3.mmNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cheque9#mmNumber
+	 * Cheque9.mmNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -318,20 +324,21 @@ public class CreditInstrument {
 	 * definition} = "Identifies the credit instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CreditInstrumentIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCreditInstrumentIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque5.ChequeNumber, com.tools20022.repository.msg.Cheque6.ChequeNumber, com.tools20022.repository.msg.Cheque7.ChequeNumber,
-					com.tools20022.repository.msg.Cheque3.Number, com.tools20022.repository.msg.Cheque9.Number);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque5.mmChequeNumber, com.tools20022.repository.msg.Cheque6.mmChequeNumber, com.tools20022.repository.msg.Cheque7.mmChequeNumber,
+					com.tools20022.repository.msg.Cheque3.mmNumber, com.tools20022.repository.msg.Cheque9.mmNumber);
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditInstrumentIdentification";
 			definition = "Identifies the credit instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount netAmount;
 	/**
 	 * Amount less fees and charges, that will be exchanged on settlement date
 	 * of the trade.
@@ -343,22 +350,22 @@ public class CreditInstrument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LiquidityCreditTransfer1#TransferredAmount
-	 * LiquidityCreditTransfer1.TransferredAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LiquidityDebitTransfer1#TransferredAmount
-	 * LiquidityDebitTransfer1.TransferredAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CreditInstrument
 	 * CreditInstrument}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LiquidityCreditTransfer1#mmTransferredAmount
+	 * LiquidityCreditTransfer1.mmTransferredAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LiquidityDebitTransfer1#mmTransferredAmount
+	 * LiquidityDebitTransfer1.mmTransferredAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -372,19 +379,20 @@ public class CreditInstrument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NetAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNetAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityCreditTransfer1.TransferredAmount, com.tools20022.repository.msg.LiquidityDebitTransfer1.TransferredAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityCreditTransfer1.mmTransferredAmount, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmTransferredAmount);
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetAmount";
 			definition = "Amount less fees and charges, that will be exchanged on settlement date of the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODateTime deadline;
 	/**
 	 * Time by which the amount must be paid in.
 	 * <p>
@@ -410,15 +418,15 @@ public class CreditInstrument {
 	 * definition} = "Time by which the amount must be paid in."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Deadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDeadline = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Deadline";
 			definition = "Time by which the amount must be paid in.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -426,16 +434,56 @@ public class CreditInstrument {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditInstrument";
 				definition = "Specifies the instrument to be used for the credit of a payment.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.CreditMethod);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmCreditMethod);
 				subType_lazy = () -> Arrays.asList(ChequeIssue.mmObject(), BookEntry.mmObject(), AccountEntry.mmObject(), CashDelivery.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditInstrument.RelatedPayment, com.tools20022.repository.entity.CreditInstrument.Method,
-						com.tools20022.repository.entity.CreditInstrument.CreditInstrumentIdentification, com.tools20022.repository.entity.CreditInstrument.NetAmount, com.tools20022.repository.entity.CreditInstrument.Deadline);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditInstrument.mmRelatedPayment, com.tools20022.repository.entity.CreditInstrument.mmMethod,
+						com.tools20022.repository.entity.CreditInstrument.mmCreditInstrumentIdentification, com.tools20022.repository.entity.CreditInstrument.mmNetAmount, com.tools20022.repository.entity.CreditInstrument.mmDeadline);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Payment> getRelatedPayment() {
+		return relatedPayment;
+	}
+
+	public void setRelatedPayment(List<com.tools20022.repository.entity.Payment> relatedPayment) {
+		this.relatedPayment = relatedPayment;
+	}
+
+	public PaymentMethodCode getMethod() {
+		return method;
+	}
+
+	public void setMethod(PaymentMethodCode method) {
+		this.method = method;
+	}
+
+	public Max35Text getCreditInstrumentIdentification() {
+		return creditInstrumentIdentification;
+	}
+
+	public void setCreditInstrumentIdentification(Max35Text creditInstrumentIdentification) {
+		this.creditInstrumentIdentification = creditInstrumentIdentification;
+	}
+
+	public CurrencyAndAmount getNetAmount() {
+		return netAmount;
+	}
+
+	public void setNetAmount(CurrencyAndAmount netAmount) {
+		this.netAmount = netAmount;
+	}
+
+	public ISODateTime getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(ISODateTime deadline) {
+		this.deadline = deadline;
 	}
 }

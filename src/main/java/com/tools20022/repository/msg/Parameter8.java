@@ -34,22 +34,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter8#DigestAlgorithm
- * Parameter8.DigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter8#mmDigestAlgorithm
+ * Parameter8.mmDigestAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Parameter8#MaskGeneratorAlgorithm
- * Parameter8.MaskGeneratorAlgorithm}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter8#SaltLength
- * Parameter8.SaltLength}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter8#TrailerField
- * Parameter8.TrailerField}</li>
+ * {@linkplain com.tools20022.repository.msg.Parameter8#mmMaskGeneratorAlgorithm
+ * Parameter8.mmMaskGeneratorAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter8#mmSaltLength
+ * Parameter8.mmSaltLength}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter8#mmTrailerField
+ * Parameter8.mmTrailerField}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Parameter8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm11Code digestAlgorithm;
 	/**
 	 * Identification of the digest algorithm.
 	 * <p>
@@ -96,11 +97,11 @@ public class Parameter8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Parameter4#DigestAlgorithm
-	 * Parameter4.DigestAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter4#mmDigestAlgorithm
+	 * Parameter4.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter8.mmObject();
 			isDerived = false;
@@ -108,12 +109,13 @@ public class Parameter8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Identification of the digest algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter4.DigestAlgorithm;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter4.mmDigestAlgorithm;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
 		}
 	};
+	protected AlgorithmIdentification12 maskGeneratorAlgorithm;
 	/**
 	 * Mask generator function cryptographic algorithm and parameters.
 	 * <p>
@@ -143,11 +145,11 @@ public class Parameter8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Parameter4#MaskGeneratorAlgorithm
-	 * Parameter4.MaskGeneratorAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter4#mmMaskGeneratorAlgorithm
+	 * Parameter4.mmMaskGeneratorAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaskGeneratorAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter8.mmObject();
 			isDerived = false;
@@ -155,12 +157,13 @@ public class Parameter8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaskGeneratorAlgorithm";
 			definition = "Mask generator function cryptographic algorithm and parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter4.MaskGeneratorAlgorithm;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter4.mmMaskGeneratorAlgorithm;
 			maxOccurs = 1;
-			complexType_lazy = () -> AlgorithmIdentification12.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification12.mmObject();
 		}
 	};
+	protected Number saltLength;
 	/**
 	 * Length of the salt to include in the signature.
 	 * <p>
@@ -187,7 +190,7 @@ public class Parameter8 {
 	 * definition} = "Length of the salt to include in the signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SaltLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSaltLength = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter8.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class Parameter8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaltLength";
 			definition = "Length of the salt to include in the signature.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number trailerField;
 	/**
 	 * Trailer field number.
 	 * <p>
@@ -226,7 +230,7 @@ public class Parameter8 {
 	 * definition} = "Trailer field number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TrailerField = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTrailerField = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter8.mmObject();
 			isDerived = false;
@@ -234,8 +238,8 @@ public class Parameter8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrailerField";
 			definition = "Trailer field number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -243,9 +247,9 @@ public class Parameter8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.DigestAlgorithm, com.tools20022.repository.msg.Parameter8.MaskGeneratorAlgorithm, com.tools20022.repository.msg.Parameter8.SaltLength,
-						com.tools20022.repository.msg.Parameter8.TrailerField);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.mmDigestAlgorithm, com.tools20022.repository.msg.Parameter8.mmMaskGeneratorAlgorithm, com.tools20022.repository.msg.Parameter8.mmSaltLength,
+						com.tools20022.repository.msg.Parameter8.mmTrailerField);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Parameter8";
 				definition = "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).";
@@ -253,5 +257,37 @@ public class Parameter8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm11Code getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(Algorithm11Code digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
+	}
+
+	public AlgorithmIdentification12 getMaskGeneratorAlgorithm() {
+		return maskGeneratorAlgorithm;
+	}
+
+	public void setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification12 maskGeneratorAlgorithm) {
+		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
+	}
+
+	public Number getSaltLength() {
+		return saltLength;
+	}
+
+	public void setSaltLength(Number saltLength) {
+		this.saltLength = saltLength;
+	}
+
+	public Number getTrailerField() {
+		return trailerField;
+	}
+
+	public void setTrailerField(Number trailerField) {
+		this.trailerField = trailerField;
 	}
 }

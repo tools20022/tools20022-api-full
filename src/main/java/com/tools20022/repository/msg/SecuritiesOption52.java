@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption52#ConditionalQuantity
- * SecuritiesOption52.ConditionalQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption52#mmConditionalQuantity
+ * SecuritiesOption52.mmConditionalQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption52#InstructedQuantity
- * SecuritiesOption52.InstructedQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption52#mmInstructedQuantity
+ * SecuritiesOption52.mmInstructedQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesOption52 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1Choice conditionalQuantity;
 	/**
 	 * Minimum quantity of securities to be accepted (used in the framework of
 	 * conditional privilege on election). In case of proration, if this minimum
@@ -82,8 +83,8 @@ public class SecuritiesOption52 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#ConditionalQuantity
-	 * SecuritiesProceedsDefinition.ConditionalQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmConditionalQuantity
+	 * SecuritiesProceedsDefinition.mmConditionalQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,25 +106,26 @@ public class SecuritiesOption52 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption2#ConditionalQuantity
-	 * SecuritiesOption2.ConditionalQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption2#mmConditionalQuantity
+	 * SecuritiesOption2.mmConditionalQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConditionalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConditionalQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmConditionalQuantity;
 			componentContext_lazy = () -> SecuritiesOption52.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.ConditionalQuantity;
 			isDerived = false;
 			xmlTag = "CondlQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalQuantity";
 			definition = "Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election). In case of proration, if this minimum quantity is not reached then the instruction is void.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOption2.ConditionalQuantity;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOption2.mmConditionalQuantity;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected Quantity20Choice instructedQuantity;
 	/**
 	 * Quantity of securities to which this instruction applies.
 	 * <p>
@@ -137,8 +139,8 @@ public class SecuritiesOption52 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#InstructedBalance
-	 * CorporateActionEntitlement.InstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmInstructedBalance
+	 * CorporateActionEntitlement.mmInstructedBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,17 +160,17 @@ public class SecuritiesOption52 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> SecuritiesOption52.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.InstructedBalance;
 			isDerived = false;
 			xmlTag = "InstdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedQuantity";
 			definition = "Quantity of securities to which this instruction applies.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity20Choice.mmObject();
 		}
 	};
@@ -176,9 +178,9 @@ public class SecuritiesOption52 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption52.ConditionalQuantity, com.tools20022.repository.msg.SecuritiesOption52.InstructedQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption52.mmConditionalQuantity, com.tools20022.repository.msg.SecuritiesOption52.mmInstructedQuantity);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOption52";
 				definition = "Specifies the security option of a corporate event.";
@@ -186,5 +188,21 @@ public class SecuritiesOption52 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1Choice getConditionalQuantity() {
+		return conditionalQuantity;
+	}
+
+	public void setConditionalQuantity(FinancialInstrumentQuantity1Choice conditionalQuantity) {
+		this.conditionalQuantity = conditionalQuantity;
+	}
+
+	public Quantity20Choice getInstructedQuantity() {
+		return instructedQuantity;
+	}
+
+	public void setInstructedQuantity(Quantity20Choice instructedQuantity) {
+		this.instructedQuantity = instructedQuantity;
 	}
 }

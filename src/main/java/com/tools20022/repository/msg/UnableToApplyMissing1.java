@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UnableToApplyMissing1#Code
- * UnableToApplyMissing1.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnableToApplyMissing1#mmCode
+ * UnableToApplyMissing1.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnableToApplyMissing1#AdditionalMissingInformation
- * UnableToApplyMissing1.AdditionalMissingInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UnableToApplyMissing1#mmAdditionalMissingInformation
+ * UnableToApplyMissing1.mmAdditionalMissingInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnableToApplyMissing1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnableToApplyMissingInformation3Code code;
 	/**
 	 * Specifies the missing information in a coded form.
 	 * <p>
@@ -86,7 +87,7 @@ public class UnableToApplyMissing1 {
 	 * definition} = "Specifies the missing information in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnableToApplyMissing1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class UnableToApplyMissing1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the missing information in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnableToApplyMissingInformation3Code.mmObject();
 		}
 	};
+	protected Max140Text additionalMissingInformation;
 	/**
 	 * Further details about the missing information.
 	 * <p>
@@ -126,7 +128,7 @@ public class UnableToApplyMissing1 {
 	 * definition} = "Further details about the missing information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalMissingInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalMissingInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnableToApplyMissing1.mmObject();
 			isDerived = false;
@@ -134,8 +136,8 @@ public class UnableToApplyMissing1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalMissingInformation";
 			definition = "Further details about the missing information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class UnableToApplyMissing1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnableToApplyMissing1.Code, com.tools20022.repository.msg.UnableToApplyMissing1.AdditionalMissingInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnableToApplyMissing1.mmCode, com.tools20022.repository.msg.UnableToApplyMissing1.mmAdditionalMissingInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyMissing1";
 				definition = "Specifies the details of missing information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnableToApplyMissingInformation3Code getCode() {
+		return code;
+	}
+
+	public void setCode(UnableToApplyMissingInformation3Code code) {
+		this.code = code;
+	}
+
+	public Max140Text getAdditionalMissingInformation() {
+		return additionalMissingInformation;
+	}
+
+	public void setAdditionalMissingInformation(Max140Text additionalMissingInformation) {
+		this.additionalMissingInformation = additionalMissingInformation;
 	}
 }

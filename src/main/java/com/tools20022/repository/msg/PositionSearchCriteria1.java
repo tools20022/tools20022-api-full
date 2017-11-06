@@ -38,33 +38,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#AccountOwner
- * PositionSearchCriteria1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#mmAccountOwner
+ * PositionSearchCriteria1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#AccountServicer
- * PositionSearchCriteria1.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#mmAccountServicer
+ * PositionSearchCriteria1.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#SafekeepingAccount
- * PositionSearchCriteria1.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#mmSafekeepingAccount
+ * PositionSearchCriteria1.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#FinancialInstrument
- * PositionSearchCriteria1.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#mmFinancialInstrument
+ * PositionSearchCriteria1.mmFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#CountryOfIssue
- * PositionSearchCriteria1.CountryOfIssue}</li>
+ * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#mmCountryOfIssue
+ * PositionSearchCriteria1.mmCountryOfIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#SubBalanceType
- * PositionSearchCriteria1.SubBalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#mmSubBalanceType
+ * PositionSearchCriteria1.mmSubBalanceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#ReturnZeroPosition
- * PositionSearchCriteria1.ReturnZeroPosition}</li>
+ * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria1#mmReturnZeroPosition
+ * PositionSearchCriteria1.mmReturnZeroPosition}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PositionSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification71Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -106,7 +107,7 @@ public class PositionSearchCriteria1 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
@@ -114,11 +115,12 @@ public class PositionSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -152,7 +154,7 @@ public class PositionSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
@@ -160,11 +162,12 @@ public class PositionSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount1Choice safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -192,7 +195,7 @@ public class PositionSearchCriteria1 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
@@ -200,12 +203,13 @@ public class PositionSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SecuritiesAccount1Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrument;
 	/**
 	 * Financial instrument representing a sum of rights of the investor
 	 * vis-à-vis the issuer.
@@ -236,7 +240,7 @@ public class PositionSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
@@ -244,12 +248,13 @@ public class PositionSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Financial instrument representing a sum of rights of the investor vis-à-vis the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected CountryCode countryOfIssue;
 	/**
 	 * Country where the security is issued.
 	 * <p>
@@ -277,7 +282,7 @@ public class PositionSearchCriteria1 {
 	 * definition} = "Country where the security is issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
@@ -285,11 +290,12 @@ public class PositionSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Country where the security is issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected SecuritiesBalanceType2Choice subBalanceType;
 	/**
 	 * Defines specific restriction characteristics for a securities position.
 	 * <p>
@@ -319,7 +325,7 @@ public class PositionSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubBalanceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubBalanceType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
@@ -327,12 +333,13 @@ public class PositionSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceType";
 			definition = "Defines specific restriction characteristics for a securities position. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesBalanceType2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SecuritiesBalanceType2Choice.mmObject();
 		}
 	};
+	protected TrueFalseIndicator returnZeroPosition;
 	/**
 	 * Option to provide output zero position in the results.
 	 * <p>
@@ -361,7 +368,7 @@ public class PositionSearchCriteria1 {
 	 * definition} = "Option to provide output zero position in the results. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReturnZeroPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReturnZeroPosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
@@ -369,8 +376,8 @@ public class PositionSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnZeroPosition";
 			definition = "Option to provide output zero position in the results. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -378,15 +385,72 @@ public class PositionSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PositionSearchCriteria1.AccountOwner, com.tools20022.repository.msg.PositionSearchCriteria1.AccountServicer,
-						com.tools20022.repository.msg.PositionSearchCriteria1.SafekeepingAccount, com.tools20022.repository.msg.PositionSearchCriteria1.FinancialInstrument,
-						com.tools20022.repository.msg.PositionSearchCriteria1.CountryOfIssue, com.tools20022.repository.msg.PositionSearchCriteria1.SubBalanceType, com.tools20022.repository.msg.PositionSearchCriteria1.ReturnZeroPosition);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PositionSearchCriteria1.mmAccountOwner, com.tools20022.repository.msg.PositionSearchCriteria1.mmAccountServicer,
+						com.tools20022.repository.msg.PositionSearchCriteria1.mmSafekeepingAccount, com.tools20022.repository.msg.PositionSearchCriteria1.mmFinancialInstrument,
+						com.tools20022.repository.msg.PositionSearchCriteria1.mmCountryOfIssue, com.tools20022.repository.msg.PositionSearchCriteria1.mmSubBalanceType,
+						com.tools20022.repository.msg.PositionSearchCriteria1.mmReturnZeroPosition);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PositionSearchCriteria1";
 				definition = "Defines the securities account position query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification71Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification71Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public PartyIdentification71Choice getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(PartyIdentification71Choice accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public SecuritiesAccount1Choice getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount1Choice safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public SecurityIdentification14 getFinancialInstrument() {
+		return financialInstrument;
+	}
+
+	public void setFinancialInstrument(com.tools20022.repository.msg.SecurityIdentification14 financialInstrument) {
+		this.financialInstrument = financialInstrument;
+	}
+
+	public CountryCode getCountryOfIssue() {
+		return countryOfIssue;
+	}
+
+	public void setCountryOfIssue(CountryCode countryOfIssue) {
+		this.countryOfIssue = countryOfIssue;
+	}
+
+	public SecuritiesBalanceType2Choice getSubBalanceType() {
+		return subBalanceType;
+	}
+
+	public void setSubBalanceType(SecuritiesBalanceType2Choice subBalanceType) {
+		this.subBalanceType = subBalanceType;
+	}
+
+	public TrueFalseIndicator getReturnZeroPosition() {
+		return returnZeroPosition;
+	}
+
+	public void setReturnZeroPosition(TrueFalseIndicator returnZeroPosition) {
+		this.returnZeroPosition = returnZeroPosition;
 	}
 }

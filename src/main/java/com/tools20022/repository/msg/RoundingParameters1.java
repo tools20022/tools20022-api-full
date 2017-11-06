@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RoundingParameters1#RoundingModulus
- * RoundingParameters1.RoundingModulus}</li>
+ * {@linkplain com.tools20022.repository.msg.RoundingParameters1#mmRoundingModulus
+ * RoundingParameters1.mmRoundingModulus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RoundingParameters1#RoundingDirection
- * RoundingParameters1.RoundingDirection}</li>
+ * {@linkplain com.tools20022.repository.msg.RoundingParameters1#mmRoundingDirection
+ * RoundingParameters1.mmRoundingDirection}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RoundingParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber roundingModulus;
 	/**
 	 * Float value specifying the value to which rounding is required, eg, 10
 	 * means round to a multiple of 10 units/shares, 0.5 means round to a
@@ -78,8 +79,8 @@ public class RoundingParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#RoundingModulus
-	 * RoundingParameters.RoundingModulus}</li>
+	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingModulus
+	 * RoundingParameters.mmRoundingModulus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class RoundingParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundingModulus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundingModulus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingModulus;
 			componentContext_lazy = () -> RoundingParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.RoundingModulus;
 			isDerived = false;
 			xmlTag = "RndgMdlus";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingModulus";
 			definition = "Float value specifying the value to which rounding is required, eg, 10 means round to a multiple of 10 units/shares, 0.5 means round to a multiple of 0.5 units/shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected RoundingDirection1Code roundingDirection;
 	/**
 	 * Rounding direction applied to fractional numbers, eg, round up.
 	 * <p>
@@ -127,8 +129,8 @@ public class RoundingParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#RoundingDirection
-	 * RoundingParameters.RoundingDirection}</li>
+	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingDirection
+	 * RoundingParameters.mmRoundingDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class RoundingParameters1 {
 	 * "Rounding direction applied to fractional numbers, eg, round up."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundingDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundingDirection = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> RoundingParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.RoundingDirection;
 			isDerived = false;
 			xmlTag = "RndgDrctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingDirection";
 			definition = "Rounding direction applied to fractional numbers, eg, round up.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RoundingDirection1Code.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class RoundingParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RoundingParameters1.RoundingModulus, com.tools20022.repository.msg.RoundingParameters1.RoundingDirection);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RoundingParameters1.mmRoundingModulus, com.tools20022.repository.msg.RoundingParameters1.mmRoundingDirection);
 				trace_lazy = () -> RoundingParameters.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RoundingParameters1";
 				definition = "Parameters applied to a fractional number.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getRoundingModulus() {
+		return roundingModulus;
+	}
+
+	public void setRoundingModulus(DecimalNumber roundingModulus) {
+		this.roundingModulus = roundingModulus;
+	}
+
+	public RoundingDirection1Code getRoundingDirection() {
+		return roundingDirection;
+	}
+
+	public void setRoundingDirection(RoundingDirection1Code roundingDirection) {
+		this.roundingDirection = roundingDirection;
 	}
 }

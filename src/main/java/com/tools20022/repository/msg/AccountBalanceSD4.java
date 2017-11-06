@@ -35,27 +35,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountBalanceSD4#PlaceAndName
- * AccountBalanceSD4.PlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#OriginalBalance
- * AccountBalanceSD4.OriginalBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmPlaceAndName
+ * AccountBalanceSD4.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#UnpledgedBalance
- * AccountBalanceSD4.UnpledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmOriginalBalance
+ * AccountBalanceSD4.mmOriginalBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#InvestmentUnpledgedBalance
- * AccountBalanceSD4.InvestmentUnpledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmUnpledgedBalance
+ * AccountBalanceSD4.mmUnpledgedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#InvestmentPledgedBalance
- * AccountBalanceSD4.InvestmentPledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmInvestmentUnpledgedBalance
+ * AccountBalanceSD4.mmInvestmentUnpledgedBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmInvestmentPledgedBalance
+ * AccountBalanceSD4.mmInvestmentPledgedBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountBalanceSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -107,13 +109,13 @@ public class AccountBalanceSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#PlaceAndName
-	 * AccountBalanceSD9.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmPlaceAndName
+	 * AccountBalanceSD9.mmPlaceAndName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
@@ -121,12 +123,13 @@ public class AccountBalanceSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.PlaceAndName);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmPlaceAndName);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 originalBalance;
 	/**
 	 * Position held in a security as of the day prior to publication date. This
 	 * position is subject to a redemption lottery call when this is the first
@@ -161,13 +164,13 @@ public class AccountBalanceSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#OriginalBalance
-	 * AccountBalanceSD9.OriginalBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmOriginalBalance
+	 * AccountBalanceSD9.mmOriginalBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
@@ -175,13 +178,14 @@ public class AccountBalanceSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.OriginalBalance);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmOriginalBalance);
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 unpledgedBalance;
 	/**
 	 * Portion of the Original Balance position held in DTC General Free account
 	 * as of day prior to Publication Date. Position held in this account is
@@ -214,13 +218,13 @@ public class AccountBalanceSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#UnpledgedBalance
-	 * AccountBalanceSD9.UnpledgedBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmUnpledgedBalance
+	 * AccountBalanceSD9.mmUnpledgedBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnpledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
@@ -228,13 +232,14 @@ public class AccountBalanceSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.UnpledgedBalance);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmUnpledgedBalance);
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 investmentUnpledgedBalance;
 	/**
 	 * Portion of the Original Balance position held in DTC Segregated account
 	 * as of day prior to Publication Date. Position held in this account is
@@ -268,13 +273,13 @@ public class AccountBalanceSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#InvestmentUnpledgedBalance
-	 * AccountBalanceSD9.InvestmentUnpledgedBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmInvestmentUnpledgedBalance
+	 * AccountBalanceSD9.mmInvestmentUnpledgedBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
@@ -282,13 +287,14 @@ public class AccountBalanceSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.InvestmentUnpledgedBalance);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmInvestmentUnpledgedBalance);
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 investmentPledgedBalance;
 	/**
 	 * Portion of the Original Balance position held in DTC Investment account
 	 * as of day prior to Publication Date. Position held in this account is
@@ -322,13 +328,13 @@ public class AccountBalanceSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#InvestmentPledgedBalance
-	 * AccountBalanceSD9.InvestmentPledgedBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmInvestmentPledgedBalance
+	 * AccountBalanceSD9.mmInvestmentPledgedBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentPledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentPledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
@@ -336,20 +342,21 @@ public class AccountBalanceSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.InvestmentPledgedBalance);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmInvestmentPledgedBalance);
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD4.PlaceAndName, com.tools20022.repository.msg.AccountBalanceSD4.OriginalBalance,
-						com.tools20022.repository.msg.AccountBalanceSD4.UnpledgedBalance, com.tools20022.repository.msg.AccountBalanceSD4.InvestmentUnpledgedBalance, com.tools20022.repository.msg.AccountBalanceSD4.InvestmentPledgedBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD4.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceSD4.mmOriginalBalance,
+						com.tools20022.repository.msg.AccountBalanceSD4.mmUnpledgedBalance, com.tools20022.repository.msg.AccountBalanceSD4.mmInvestmentUnpledgedBalance,
+						com.tools20022.repository.msg.AccountBalanceSD4.mmInvestmentPledgedBalance);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountBalanceSD4";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
@@ -357,5 +364,45 @@ public class AccountBalanceSD4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public SignedQuantityFormat4 getOriginalBalance() {
+		return originalBalance;
+	}
+
+	public void setOriginalBalance(com.tools20022.repository.msg.SignedQuantityFormat4 originalBalance) {
+		this.originalBalance = originalBalance;
+	}
+
+	public SignedQuantityFormat4 getUnpledgedBalance() {
+		return unpledgedBalance;
+	}
+
+	public void setUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 unpledgedBalance) {
+		this.unpledgedBalance = unpledgedBalance;
+	}
+
+	public SignedQuantityFormat4 getInvestmentUnpledgedBalance() {
+		return investmentUnpledgedBalance;
+	}
+
+	public void setInvestmentUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 investmentUnpledgedBalance) {
+		this.investmentUnpledgedBalance = investmentUnpledgedBalance;
+	}
+
+	public SignedQuantityFormat4 getInvestmentPledgedBalance() {
+		return investmentPledgedBalance;
+	}
+
+	public void setInvestmentPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 investmentPledgedBalance) {
+		this.investmentPledgedBalance = investmentPledgedBalance;
 	}
 }

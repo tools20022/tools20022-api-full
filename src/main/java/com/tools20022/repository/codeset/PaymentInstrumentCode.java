@@ -31,35 +31,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#BankDebitTransfer
- * PaymentInstrumentCode.BankDebitTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmBankDebitTransfer
+ * PaymentInstrumentCode.mmBankDebitTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#BankCreditTransfer
- * PaymentInstrumentCode.BankCreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmBankCreditTransfer
+ * PaymentInstrumentCode.mmBankCreditTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#CustomerDebitTransfer
- * PaymentInstrumentCode.CustomerDebitTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmCustomerDebitTransfer
+ * PaymentInstrumentCode.mmCustomerDebitTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#CustomerCreditTransfer
- * PaymentInstrumentCode.CustomerCreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmCustomerCreditTransfer
+ * PaymentInstrumentCode.mmCustomerCreditTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#Cheque
- * PaymentInstrumentCode.Cheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmCheque
+ * PaymentInstrumentCode.mmCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#BookTransfer
- * PaymentInstrumentCode.BookTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmBookTransfer
+ * PaymentInstrumentCode.mmBookTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#DebitCardPayment
- * PaymentInstrumentCode.DebitCardPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmDebitCardPayment
+ * PaymentInstrumentCode.mmDebitCardPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#CreditCardPayment
- * PaymentInstrumentCode.CreditCardPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmCreditCardPayment
+ * PaymentInstrumentCode.mmCreditCardPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#Return
- * PaymentInstrumentCode.Return}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmReturn
+ * PaymentInstrumentCode.mmReturn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#CancellationRequest
- * PaymentInstrumentCode.CancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmCancellationRequest
+ * PaymentInstrumentCode.mmCancellationRequest}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -72,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -119,7 +119,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BankDebitTransfer = new MMCode() {
+	public static final MMCode mmBankDebitTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BankDebitTransfer";
@@ -152,7 +152,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BankCreditTransfer = new MMCode() {
+	public static final MMCode mmBankCreditTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BankCreditTransfer";
@@ -185,7 +185,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerDebitTransfer = new MMCode() {
+	public static final MMCode mmCustomerDebitTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CustomerDebitTransfer";
@@ -218,7 +218,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerCreditTransfer = new MMCode() {
+	public static final MMCode mmCustomerCreditTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CustomerCreditTransfer";
@@ -252,7 +252,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Cheque = new MMCode() {
+	public static final MMCode mmCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Cheque";
@@ -284,7 +284,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BookTransfer = new MMCode() {
+	public static final MMCode mmBookTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BookTransfer";
@@ -317,7 +317,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DebitCardPayment = new MMCode() {
+	public static final MMCode mmDebitCardPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebitCardPayment";
@@ -350,7 +350,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CreditCardPayment = new MMCode() {
+	public static final MMCode mmCreditCardPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditCardPayment";
@@ -380,7 +380,7 @@ public class PaymentInstrumentCode {
 	 * definition} = "Entry related to a returned or unpaid item."</li>
 	 * </ul>
 	 */
-	public static final MMCode Return = new MMCode() {
+	public static final MMCode mmReturn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Return";
@@ -413,7 +413,7 @@ public class PaymentInstrumentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationRequest = new MMCode() {
+	public static final MMCode mmCancellationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationRequest";
@@ -426,15 +426,16 @@ public class PaymentInstrumentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BDT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrumentCode";
 				definition = "Specifies the payment instrument used or the underlying financial transaction that resulted in a payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentInstrumentCode.BankDebitTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.BankCreditTransfer,
-						com.tools20022.repository.codeset.PaymentInstrumentCode.CustomerDebitTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.CustomerCreditTransfer,
-						com.tools20022.repository.codeset.PaymentInstrumentCode.Cheque, com.tools20022.repository.codeset.PaymentInstrumentCode.BookTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.DebitCardPayment,
-						com.tools20022.repository.codeset.PaymentInstrumentCode.CreditCardPayment, com.tools20022.repository.codeset.PaymentInstrumentCode.Return, com.tools20022.repository.codeset.PaymentInstrumentCode.CancellationRequest);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentInstrumentCode.mmBankDebitTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.mmBankCreditTransfer,
+						com.tools20022.repository.codeset.PaymentInstrumentCode.mmCustomerDebitTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.mmCustomerCreditTransfer,
+						com.tools20022.repository.codeset.PaymentInstrumentCode.mmCheque, com.tools20022.repository.codeset.PaymentInstrumentCode.mmBookTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.mmDebitCardPayment,
+						com.tools20022.repository.codeset.PaymentInstrumentCode.mmCreditCardPayment, com.tools20022.repository.codeset.PaymentInstrumentCode.mmReturn,
+						com.tools20022.repository.codeset.PaymentInstrumentCode.mmCancellationRequest);
 				derivation_lazy = () -> Arrays.asList(PaymentInstrument1Code.mmObject());
 			}
 		});

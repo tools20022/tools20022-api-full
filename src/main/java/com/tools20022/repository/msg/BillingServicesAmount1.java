@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingServicesAmount1#HostAmount
- * BillingServicesAmount1.HostAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingServicesAmount1#mmHostAmount
+ * BillingServicesAmount1.mmHostAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingServicesAmount1#PricingAmount
- * BillingServicesAmount1.PricingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingServicesAmount1#mmPricingAmount
+ * BillingServicesAmount1.mmPricingAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingServicesAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection34 hostAmount;
 	/**
 	 * Sum of all the individual taxes on the service expressed in the host
 	 * currency.
@@ -73,8 +74,8 @@ public class BillingServicesAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Service#Amount
-	 * Service.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Service#mmAmount
+	 * Service.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,21 +96,22 @@ public class BillingServicesAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd HostAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHostAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Service.mmAmount;
 			componentContext_lazy = () -> BillingServicesAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Service.Amount;
 			isDerived = false;
 			xmlTag = "HstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostAmount";
 			definition = "Sum of all the individual taxes on the service expressed in the host currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection34.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection34.mmObject();
 		}
 	};
+	protected AmountAndDirection34 pricingAmount;
 	/**
 	 * Amount of the tax obligation expressed in the tax region's pricing
 	 * currency. Usage: This is the same amount as carried in the host amount
@@ -124,8 +126,8 @@ public class BillingServicesAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Product#UnitPrice
-	 * Product.UnitPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmUnitPrice
+	 * Product.mmUnitPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,33 +148,49 @@ public class BillingServicesAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PricingAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPricingAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmUnitPrice;
 			componentContext_lazy = () -> BillingServicesAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.UnitPrice;
 			isDerived = false;
 			xmlTag = "PricgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingAmount";
 			definition = "Amount of the tax obligation expressed in the tax region's pricing currency.\nUsage: This is the same amount as carried in the host amount but allows the sender to optionally express the value in the pricing currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection34.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection34.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServicesAmount1.HostAmount, com.tools20022.repository.msg.BillingServicesAmount1.PricingAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServicesAmount1.mmHostAmount, com.tools20022.repository.msg.BillingServicesAmount1.mmPricingAmount);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingServicesAmount1";
 				definition = "Taxable service charge amount conversions to host currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection34 getHostAmount() {
+		return hostAmount;
+	}
+
+	public void setHostAmount(com.tools20022.repository.msg.AmountAndDirection34 hostAmount) {
+		this.hostAmount = hostAmount;
+	}
+
+	public AmountAndDirection34 getPricingAmount() {
+		return pricingAmount;
+	}
+
+	public void setPricingAmount(com.tools20022.repository.msg.AmountAndDirection34 pricingAmount) {
+		this.pricingAmount = pricingAmount;
 	}
 }

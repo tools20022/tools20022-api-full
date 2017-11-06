@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#EUSavingsInScope
- * EUSavingsDirective1Code.EUSavingsInScope}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#mmEUSavingsInScope
+ * EUSavingsDirective1Code.mmEUSavingsInScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#EUSavingsOutScope
- * EUSavingsDirective1Code.EUSavingsOutScope}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#mmEUSavingsOutScope
+ * EUSavingsDirective1Code.mmEUSavingsOutScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#EUSavingsVariable
- * EUSavingsDirective1Code.EUSavingsVariable}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#mmEUSavingsVariable
+ * EUSavingsDirective1Code.mmEUSavingsVariable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 * name} = "EUSavingsInScope"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUSavingsInScope = new MMCode() {
+	public static final MMCode mmEUSavingsInScope = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsInScope";
@@ -111,7 +111,7 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 * name} = "EUSavingsOutScope"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUSavingsOutScope = new MMCode() {
+	public static final MMCode mmEUSavingsOutScope = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsOutScope";
@@ -134,7 +134,7 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 * name} = "EUSavingsVariable"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUSavingsVariable = new MMCode() {
+	public static final MMCode mmEUSavingsVariable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsVariable";
@@ -145,13 +145,13 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EUSI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EUSavingsDirective1Code";
 				definition = "ndicate whether or not the fund is subject to reporting  under the EU Savings Directive.  Enter \"Variable\" if the status of the fund is likely to change from time to time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsInScope, com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsOutScope,
-						com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsVariable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUSavingsDirective1Code.mmEUSavingsInScope, com.tools20022.repository.codeset.EUSavingsDirective1Code.mmEUSavingsOutScope,
+						com.tools20022.repository.codeset.EUSavingsDirective1Code.mmEUSavingsVariable);
 				trace_lazy = () -> EUSavingsDirectiveCode.mmObject();
 			}
 		});

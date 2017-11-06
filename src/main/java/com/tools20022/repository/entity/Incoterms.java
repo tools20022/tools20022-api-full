@@ -49,30 +49,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Incoterms#Transport
- * Incoterms.Transport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Incoterms#Code
- * Incoterms.Code}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Incoterms#Location
- * Incoterms.Location}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Incoterms#mmTransport
+ * Incoterms.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Incoterms#mmCode
+ * Incoterms.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Incoterms#mmLocation
+ * Incoterms.mmLocation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Location#Incoterms
- * Location.Incoterms}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#Incoterms
- * Transport.Incoterms}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmIncoterms
+ * Location.mmIncoterms}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmIncoterms
+ * Transport.mmIncoterms}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ShipmentAttribute1#Conditions
- * ShipmentAttribute1.Conditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ShipmentAttribute1#mmConditions
+ * ShipmentAttribute1.mmConditions}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,8 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +108,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Incoterms {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Transport transport;
 	/**
 	 * Specifies the transport information to which the incoterms apply.
 	 * <p>
@@ -115,8 +117,8 @@ public class Incoterms {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#Incoterms
-	 * Transport.Incoterms}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmIncoterms
+	 * Transport.mmIncoterms}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -140,20 +142,21 @@ public class Incoterms {
 	 * "Specifies the transport information to which the incoterms apply."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Transport = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Incoterms.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Transport";
 			definition = "Specifies the transport information to which the incoterms apply.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Transport.Incoterms;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Transport.mmIncoterms;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
 		}
 	};
+	protected IncotermsCode code;
 	/**
 	 * Specifies the applicable Incoterm by means of a code.
 	 * <p>
@@ -164,32 +167,32 @@ public class Incoterms {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.IncotermsCode
 	 * IncotermsCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Incoterms4Choice#Code
-	 * Incoterms4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Incoterms4Choice#Proprietary
-	 * Incoterms4Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms3#IncotermsCode
-	 * Incoterms3.IncotermsCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms1#Code
-	 * Incoterms1.Code}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms1#Other
-	 * Incoterms1.Other}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#Code
-	 * Incoterms2.Code}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#Other
-	 * Incoterms2.Other}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms4#IncotermsCode
-	 * Incoterms4.IncotermsCode}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Incoterms
 	 * Incoterms}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.Incoterms4Choice#mmCode
+	 * Incoterms4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Incoterms4Choice#mmProprietary
+	 * Incoterms4Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms3#mmIncotermsCode
+	 * Incoterms3.mmIncotermsCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms1#mmCode
+	 * Incoterms1.mmCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms1#mmOther
+	 * Incoterms1.mmOther}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmCode
+	 * Incoterms2.mmCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmOther
+	 * Incoterms2.mmOther}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms4#mmIncotermsCode
+	 * Incoterms4.mmIncotermsCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -201,21 +204,22 @@ public class Incoterms {
 	 * definition} = "Specifies the applicable Incoterm by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Code = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Incoterms4Choice.Code, com.tools20022.repository.choice.Incoterms4Choice.Proprietary, com.tools20022.repository.msg.Incoterms3.IncotermsCode,
-					com.tools20022.repository.msg.Incoterms1.Code, com.tools20022.repository.msg.Incoterms1.Other, com.tools20022.repository.msg.Incoterms2.Code, com.tools20022.repository.msg.Incoterms2.Other,
-					com.tools20022.repository.msg.Incoterms4.IncotermsCode);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Incoterms4Choice.mmCode, com.tools20022.repository.choice.Incoterms4Choice.mmProprietary, com.tools20022.repository.msg.Incoterms3.mmIncotermsCode,
+					com.tools20022.repository.msg.Incoterms1.mmCode, com.tools20022.repository.msg.Incoterms1.mmOther, com.tools20022.repository.msg.Incoterms2.mmCode, com.tools20022.repository.msg.Incoterms2.mmOther,
+					com.tools20022.repository.msg.Incoterms4.mmIncotermsCode);
 			elementContext_lazy = () -> Incoterms.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Code";
 			definition = "Specifies the applicable Incoterm by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> IncotermsCode.mmObject();
 		}
 	};
+	protected Location location;
 	/**
 	 * Location where the Incoterms are actioned.
 	 * <p>
@@ -224,31 +228,31 @@ public class Incoterms {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Location#Incoterms
-	 * Location.Incoterms}</li>
+	 * {@linkplain com.tools20022.repository.entity.Location#mmIncoterms
+	 * Location.mmIncoterms}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms3#Location
-	 * Incoterms3.Location}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms1#Location
-	 * Incoterms1.Location}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#Location
-	 * Incoterms2.Location}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms4#Location
-	 * Incoterms4.Location}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Incoterms
 	 * Incoterms}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms3#mmLocation
+	 * Incoterms3.mmLocation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms1#mmLocation
+	 * Incoterms1.mmLocation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmLocation
+	 * Incoterms2.mmLocation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms4#mmLocation
+	 * Incoterms4.mmLocation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -260,36 +264,60 @@ public class Incoterms {
 	 * definition} = "Location where the Incoterms are actioned."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Location = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLocation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms3.Location, com.tools20022.repository.msg.Incoterms1.Location, com.tools20022.repository.msg.Incoterms2.Location,
-					com.tools20022.repository.msg.Incoterms4.Location);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms3.mmLocation, com.tools20022.repository.msg.Incoterms1.mmLocation, com.tools20022.repository.msg.Incoterms2.mmLocation,
+					com.tools20022.repository.msg.Incoterms4.mmLocation);
 			elementContext_lazy = () -> Incoterms.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Location";
 			definition = "Location where the Incoterms are actioned.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.Incoterms;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmIncoterms;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Incoterms";
 				definition = "International commerce terms are a series of international sales terms, published by International Chamber of Commerce (ICC) and widely used in international commercial transactions. These are accepted by governments, legal authorities and practitioners worldwide for the interpretation of most commonly used terms in international trade. Scope of this is limited to matters relating to rights and obligations of the parties to the contract of sale with respect to the delivery of goods sold. They are used to divide transaction costs and responsibilities between buyer and seller and reflect state-of-the-art transportation practices.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.Incoterms, com.tools20022.repository.entity.Transport.Incoterms);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShipmentAttribute1.Conditions);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Incoterms.Transport, com.tools20022.repository.entity.Incoterms.Code, com.tools20022.repository.entity.Incoterms.Location);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.mmIncoterms, com.tools20022.repository.entity.Transport.mmIncoterms);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShipmentAttribute1.mmConditions);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Incoterms.mmTransport, com.tools20022.repository.entity.Incoterms.mmCode, com.tools20022.repository.entity.Incoterms.mmLocation);
 				derivationComponent_lazy = () -> Arrays.asList(Incoterms4Choice.mmObject(), Incoterms3.mmObject(), Incoterms1.mmObject(), Incoterms2.mmObject(), Incoterms4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Transport getTransport() {
+		return transport;
+	}
+
+	public void setTransport(com.tools20022.repository.entity.Transport transport) {
+		this.transport = transport;
+	}
+
+	public IncotermsCode getCode() {
+		return code;
+	}
+
+	public void setCode(IncotermsCode code) {
+		this.code = code;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(com.tools20022.repository.entity.Location location) {
+		this.location = location;
 	}
 }

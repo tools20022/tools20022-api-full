@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide details on the account notification.
@@ -35,15 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountNotification3#Identification
- * AccountNotification3.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountNotification3#Account
- * AccountNotification3.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification3#mmIdentification
+ * AccountNotification3.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountNotification3#mmAccount
+ * AccountNotification3.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountNotification3#RelatedAccount
- * AccountNotification3.RelatedAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountNotification3#Item
- * AccountNotification3.Item}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification3#mmRelatedAccount
+ * AccountNotification3.mmRelatedAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountNotification3#mmItem
+ * AccountNotification3.mmItem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountNotification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identification, as assigned by the account owner, to unambiguously
 	 * identify the account notification.
@@ -98,7 +100,7 @@ public class AccountNotification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountNotification3.mmObject();
 			isDerived = false;
@@ -106,11 +108,12 @@ public class AccountNotification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account owner, to unambiguously identify the account notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CashAccount20 account;
 	/**
 	 * Identifies the account to be credited with the incoming funds.
 	 * <p>
@@ -122,8 +125,8 @@ public class AccountNotification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashAccount
-	 * CashBalance.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashAccount
+	 * CashBalance.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,21 +146,22 @@ public class AccountNotification3 {
 	 * "Identifies the account to be credited with the incoming funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashAccount;
 			componentContext_lazy = () -> AccountNotification3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Identifies the account to be credited with the incoming funds.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount20.mmObject();
 		}
 	};
+	protected CashAccount16 relatedAccount;
 	/**
 	 * Identifies the parent account of the account to be credited with the
 	 * incoming funds.
@@ -170,8 +174,8 @@ public class AccountNotification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashAccount
-	 * CashBalance.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashAccount
+	 * CashBalance.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,21 +196,22 @@ public class AccountNotification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashAccount;
 			componentContext_lazy = () -> AccountNotification3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CashAccount;
 			isDerived = false;
 			xmlTag = "RltdAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAccount";
 			definition = "Identifies the parent account of the account to be credited with the incoming funds.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NotificationEntry2> item;
 	/**
 	 * Set of elements used to provide details of the expected amount on the
 	 * account serviced by the receiver of the message.
@@ -219,8 +224,8 @@ public class AccountNotification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashBalanceEntry
-	 * CashBalance.CashBalanceEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashBalanceEntry
+	 * CashBalance.mmCashBalanceEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,33 +246,65 @@ public class AccountNotification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Item = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmItem = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry;
 			componentContext_lazy = () -> AccountNotification3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CashBalanceEntry;
 			isDerived = false;
 			xmlTag = "Itm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Item";
 			definition = "Set of elements used to provide details of the expected amount on the account serviced by the receiver of the message.";
 			minOccurs = 1;
-			type_lazy = () -> NotificationEntry2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification3.Identification, com.tools20022.repository.msg.AccountNotification3.Account,
-						com.tools20022.repository.msg.AccountNotification3.RelatedAccount, com.tools20022.repository.msg.AccountNotification3.Item);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification3.mmIdentification, com.tools20022.repository.msg.AccountNotification3.mmAccount,
+						com.tools20022.repository.msg.AccountNotification3.mmRelatedAccount, com.tools20022.repository.msg.AccountNotification3.mmItem);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountNotification3";
 				definition = "Set of elements used to provide details on the account notification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public CashAccount20 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount20 account) {
+		this.account = account;
+	}
+
+	public CashAccount16 getRelatedAccount() {
+		return relatedAccount;
+	}
+
+	public void setRelatedAccount(com.tools20022.repository.msg.CashAccount16 relatedAccount) {
+		this.relatedAccount = relatedAccount;
+	}
+
+	public List<NotificationEntry2> getItem() {
+		return item;
+	}
+
+	public void setItem(List<com.tools20022.repository.msg.NotificationEntry2> item) {
+		this.item = item;
 	}
 }

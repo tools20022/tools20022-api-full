@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation2#Type
- * ReferredDocumentInformation2.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation2#mmType
+ * ReferredDocumentInformation2.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation2#DocumentNumber
- * ReferredDocumentInformation2.DocumentNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation2#mmDocumentNumber
+ * ReferredDocumentInformation2.mmDocumentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation2#RelatedDate
- * ReferredDocumentInformation2.RelatedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation2#mmRelatedDate
+ * ReferredDocumentInformation2.mmRelatedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation2#DocumentAmount
- * ReferredDocumentInformation2.DocumentAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation2#mmDocumentAmount
+ * ReferredDocumentInformation2.mmDocumentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReferredDocumentInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReferredDocumentType1 type;
 	/**
 	 * Specifies the type of the document, for example commercial invoice.
 	 * <p>
@@ -82,8 +83,8 @@ public class ReferredDocumentInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Type Document.Type}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmType
+	 * Document.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,21 +104,22 @@ public class ReferredDocumentInformation2 {
 	 * "Specifies the type of the document, for example commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
 			componentContext_lazy = () -> ReferredDocumentInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of the document, for example commercial invoice.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReferredDocumentType1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
 		}
 	};
+	protected Max35Text documentNumber;
 	/**
 	 * Unique and unambiguous identification number of the referred document.
 	 * <p>
@@ -130,8 +132,8 @@ public class ReferredDocumentInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,20 +153,21 @@ public class ReferredDocumentInformation2 {
 	 * "Unique and unambiguous identification number of the referred document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> ReferredDocumentInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "DocNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Unique and unambiguous identification number of the referred document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate relatedDate;
 	/**
 	 * Date associated with the referred document, eg, date of issue.
 	 * <p>
@@ -177,8 +180,8 @@ public class ReferredDocumentInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,20 +201,21 @@ public class ReferredDocumentInformation2 {
 	 * "Date associated with the referred document, eg, date of issue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> ReferredDocumentInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "RltdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDate";
 			definition = "Date associated with the referred document, eg, date of issue.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount documentAmount;
 	/**
 	 * Amount of money and currency of a document referred to invoice to be
 	 * financed.
@@ -243,7 +247,7 @@ public class ReferredDocumentInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReferredDocumentInformation2.mmObject();
 			isDerived = false;
@@ -251,8 +255,8 @@ public class ReferredDocumentInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentAmount";
 			definition = "Amount of money and currency of a document referred to invoice to be financed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -260,15 +264,47 @@ public class ReferredDocumentInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentInformation2.Type, com.tools20022.repository.msg.ReferredDocumentInformation2.DocumentNumber,
-						com.tools20022.repository.msg.ReferredDocumentInformation2.RelatedDate, com.tools20022.repository.msg.ReferredDocumentInformation2.DocumentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentInformation2.mmType, com.tools20022.repository.msg.ReferredDocumentInformation2.mmDocumentNumber,
+						com.tools20022.repository.msg.ReferredDocumentInformation2.mmRelatedDate, com.tools20022.repository.msg.ReferredDocumentInformation2.mmDocumentAmount);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReferredDocumentInformation2";
 				definition = "Structured information related to the invoice to be financed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReferredDocumentType1 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.ReferredDocumentType1 type) {
+		this.type = type;
+	}
+
+	public Max35Text getDocumentNumber() {
+		return documentNumber;
+	}
+
+	public void setDocumentNumber(Max35Text documentNumber) {
+		this.documentNumber = documentNumber;
+	}
+
+	public ISODate getRelatedDate() {
+		return relatedDate;
+	}
+
+	public void setRelatedDate(ISODate relatedDate) {
+		this.relatedDate = relatedDate;
+	}
+
+	public ActiveCurrencyAndAmount getDocumentAmount() {
+		return documentAmount;
+	}
+
+	public void setDocumentAmount(ActiveCurrencyAndAmount documentAmount) {
+		this.documentAmount = documentAmount;
 	}
 }

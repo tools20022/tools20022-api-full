@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.FATCAStatus1;
 import com.tools20022.repository.msg.FATCAStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Foreign Account Tax Compliance Act (FATCA) status and the status source of
@@ -45,17 +46,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.FATCAStatus#FATCAStatus
- * FATCAStatus.FATCAStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCAStatus
+ * FATCAStatus.mmFATCAStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.FATCAStatus#FATCASourceStatus
- * FATCAStatus.FATCASourceStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCASourceStatus
+ * FATCAStatus.mmFATCASourceStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.FATCAStatus#InvestmentAccountParty
- * FATCAStatus.InvestmentAccountParty}</li>
+ * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmInvestmentAccountParty
+ * FATCAStatus.mmInvestmentAccountParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.FATCAStatus#FATCAReportingDate
- * FATCAStatus.FATCAReportingDate}</li>
+ * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCAReportingDate
+ * FATCAStatus.mmFATCAReportingDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#FATCAStatus
- * InvestmentAccountPartyRole.FATCAStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmFATCAStatus
+ * InvestmentAccountPartyRole.mmFATCAStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -86,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FATCAStatus {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected FATCAStatusCode fATCAStatus;
 	/**
 	 * Foreign Account Tax Compliance Act (FATCA) status of the investor.
 	 * <p>
@@ -113,23 +115,25 @@ public class FATCAStatus {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FATCAStatusCode
 	 * FATCAStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus1#Type
-	 * FATCAStatus1.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.FATCAStatus1Choice#Code
-	 * FATCAStatus1Choice.Code}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus2#Type
-	 * FATCAStatus2.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.FATCAStatus2Choice#Code
-	 * FATCAStatus2Choice.Code}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus1#mmType
+	 * FATCAStatus1.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FATCAStatus1Choice#mmCode
+	 * FATCAStatus1Choice.mmCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus2#mmType
+	 * FATCAStatus2.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FATCAStatus2Choice#mmCode
+	 * FATCAStatus2Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -142,20 +146,21 @@ public class FATCAStatus {
 	 * "Foreign Account Tax Compliance Act (FATCA) status of the investor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FATCAStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFATCAStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FATCAStatus1.Type, com.tools20022.repository.choice.FATCAStatus1Choice.Code, com.tools20022.repository.msg.FATCAStatus2.Type,
-					com.tools20022.repository.choice.FATCAStatus2Choice.Code);
-			elementContext_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FATCAStatus1.mmType, com.tools20022.repository.choice.FATCAStatus1Choice.mmCode, com.tools20022.repository.msg.FATCAStatus2.mmType,
+					com.tools20022.repository.choice.FATCAStatus2Choice.mmCode);
+			elementContext_lazy = () -> FATCAStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FATCAStatus";
 			definition = "Foreign Account Tax Compliance Act (FATCA) status of the investor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FATCAStatusCode.mmObject();
 		}
 	};
+	protected FATCASourceStatusCode fATCASourceStatus;
 	/**
 	 * Source of the Foreign Account Tax Compliance Act (FATCA) status.
 	 * <p>
@@ -166,23 +171,24 @@ public class FATCAStatus {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FATCASourceStatusCode
 	 * FATCASourceStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus1#Source
-	 * FATCAStatus1.Source}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.FATCASource1Choice#Code
-	 * FATCASource1Choice.Code}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus2#Source
-	 * FATCAStatus2.Source}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.CRSSource1Choice#Code
-	 * CRSSource1Choice.Code}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus1#mmSource
+	 * FATCAStatus1.mmSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FATCASource1Choice#mmCode
+	 * FATCASource1Choice.mmCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus2#mmSource
+	 * FATCAStatus2.mmSource}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.CRSSource1Choice#mmCode
+	 * CRSSource1Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -195,20 +201,21 @@ public class FATCAStatus {
 	 * "Source of the Foreign Account Tax Compliance Act (FATCA) status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FATCASourceStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFATCASourceStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FATCAStatus1.Source, com.tools20022.repository.choice.FATCASource1Choice.Code, com.tools20022.repository.msg.FATCAStatus2.Source,
-					com.tools20022.repository.choice.CRSSource1Choice.Code);
-			elementContext_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FATCAStatus1.mmSource, com.tools20022.repository.choice.FATCASource1Choice.mmCode, com.tools20022.repository.msg.FATCAStatus2.mmSource,
+					com.tools20022.repository.choice.CRSSource1Choice.mmCode);
+			elementContext_lazy = () -> FATCAStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FATCASourceStatus";
 			definition = "Source of the Foreign Account Tax Compliance Act (FATCA) status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FATCASourceStatusCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InvestmentAccountPartyRole> investmentAccountParty;
 	/**
 	 * Foreign Account Tax Compliance Act (FATCA) status linked to an investment
 	 * account and played by a party in that context.
@@ -218,8 +225,8 @@ public class FATCAStatus {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#FATCAStatus
-	 * InvestmentAccountPartyRole.FATCAStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmFATCAStatus
+	 * InvestmentAccountPartyRole.mmFATCAStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -245,19 +252,20 @@ public class FATCAStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentAccountParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentAccountParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
+			elementContext_lazy = () -> FATCAStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountParty";
 			definition = "Foreign Account Tax Compliance Act (FATCA) status linked to an investment account and played by a party in that context.";
 			minOccurs = 0;
-			type_lazy = () -> InvestmentAccountPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.FATCAStatus;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmFATCAStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 		}
 	};
+	protected ISODate fATCAReportingDate;
 	/**
 	 * Date provided by the account owner to inform the account servicer of the
 	 * date on which the holdings must be reported before the account is
@@ -269,24 +277,24 @@ public class FATCAStatus {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#FATCAReportingDate
-	 * AccountManagementStatusAndReason5.FATCAReportingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#FATCAReportingDate
-	 * InvestmentAccountOwnershipInformation15.FATCAReportingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#FATCAReportingDate
-	 * InvestmentAccountOwnershipInformation14.FATCAReportingDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.FATCAStatus FATCAStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmFATCAReportingDate
+	 * AccountManagementStatusAndReason5.mmFATCAReportingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#mmFATCAReportingDate
+	 * InvestmentAccountOwnershipInformation15.mmFATCAReportingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmFATCAReportingDate
+	 * InvestmentAccountOwnershipInformation14.mmFATCAReportingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -300,17 +308,17 @@ public class FATCAStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FATCAReportingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFATCAReportingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason5.FATCAReportingDate, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.FATCAReportingDate,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.FATCAReportingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmFATCAReportingDate, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmFATCAReportingDate,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmFATCAReportingDate);
+			elementContext_lazy = () -> FATCAStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FATCAReportingDate";
 			definition = "Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -318,16 +326,48 @@ public class FATCAStatus {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FATCAStatus";
 				definition = "Foreign Account Tax Compliance Act (FATCA) status and the status source of the investor.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountPartyRole.FATCAStatus);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FATCAStatus.FATCAStatus, com.tools20022.repository.entity.FATCAStatus.FATCASourceStatus,
-						com.tools20022.repository.entity.FATCAStatus.InvestmentAccountParty, com.tools20022.repository.entity.FATCAStatus.FATCAReportingDate);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountPartyRole.mmFATCAStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FATCAStatus.mmFATCAStatus, com.tools20022.repository.entity.FATCAStatus.mmFATCASourceStatus,
+						com.tools20022.repository.entity.FATCAStatus.mmInvestmentAccountParty, com.tools20022.repository.entity.FATCAStatus.mmFATCAReportingDate);
 				derivationComponent_lazy = () -> Arrays.asList(FATCAStatus1.mmObject(), FATCASource1Choice.mmObject(), FATCAStatus1Choice.mmObject(), FATCAStatus2.mmObject(), FATCAStatus2Choice.mmObject(), CRSSource1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FATCAStatusCode getFATCAStatus() {
+		return fATCAStatus;
+	}
+
+	public void setFATCAStatus(FATCAStatusCode fATCAStatus) {
+		this.fATCAStatus = fATCAStatus;
+	}
+
+	public FATCASourceStatusCode getFATCASourceStatus() {
+		return fATCASourceStatus;
+	}
+
+	public void setFATCASourceStatus(FATCASourceStatusCode fATCASourceStatus) {
+		this.fATCASourceStatus = fATCASourceStatus;
+	}
+
+	public List<InvestmentAccountPartyRole> getInvestmentAccountParty() {
+		return investmentAccountParty;
+	}
+
+	public void setInvestmentAccountParty(List<com.tools20022.repository.entity.InvestmentAccountPartyRole> investmentAccountParty) {
+		this.investmentAccountParty = investmentAccountParty;
+	}
+
+	public ISODate getFATCAReportingDate() {
+		return fATCAReportingDate;
+	}
+
+	public void setFATCAReportingDate(ISODate fATCAReportingDate) {
+		this.fATCAReportingDate = fATCAReportingDate;
 	}
 }

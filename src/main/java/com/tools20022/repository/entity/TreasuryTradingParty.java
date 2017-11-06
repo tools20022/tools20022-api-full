@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.TreasuryTradePartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Party that negotiates and executes treasury transactions on its behalf or on
@@ -37,40 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#InvestmentFund
- * TreasuryTradingParty.InvestmentFund}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#TreasuryTradingParty
- * InvestmentFund.TreasuryTradingParty}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification2#TradeParty
- * TradePartyIdentification2.TradeParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#TradeParty
- * TradePartyIdentification3.TradeParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification5#TradeParty
- * TradePartyIdentification5.TradeParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification1#TradeParty
- * TradePartyIdentification1.TradeParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification4#TradeParty
- * TradePartyIdentification4.TradeParty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#TraderType
- * TreasuryProfile1.TraderType}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#mmInvestmentFund
+ * TreasuryTradingParty.mmInvestmentFund}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -80,6 +49,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmTreasuryTradingParty
+ * InvestmentFund.mmTreasuryTradingParty}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification2#mmTradeParty
+ * TradePartyIdentification2.mmTradeParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#mmTradeParty
+ * TradePartyIdentification3.mmTradeParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification5#mmTradeParty
+ * TradePartyIdentification5.mmTradeParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification1#mmTradeParty
+ * TradePartyIdentification1.mmTradeParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification4#mmTradeParty
+ * TradePartyIdentification4.mmTradeParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#mmTraderType
+ * TreasuryProfile1.mmTraderType}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} =
  * {@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole
@@ -87,8 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TreasuryTradingParty extends TreasuryTradePartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.InvestmentFund> investmentFund;
 	/**
 	 * Specifies the fund for which a treasury trade is executed.
 	 * <p>
@@ -112,8 +114,8 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#TreasuryTradingParty
-	 * InvestmentFund.TreasuryTradingParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmTreasuryTradingParty
+	 * InvestmentFund.mmTreasuryTradingParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -121,40 +123,40 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification2#FundInformation
-	 * TradePartyIdentification2.FundInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#FundInformation
-	 * TradePartyIdentification3.FundInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification5#FundIdentification
-	 * TradePartyIdentification5.FundIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification60#FundIdentification
-	 * PartyIdentification60.FundIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification6#FundIdentification
-	 * TradePartyIdentification6.FundIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification1#FundInformation
-	 * TradePartyIdentification1.FundInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification4#FundInformation
-	 * TradePartyIdentification4.FundInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification7#FundInformation
-	 * TradePartyIdentification7.FundInformation}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty
 	 * TreasuryTradingParty}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification2#mmFundInformation
+	 * TradePartyIdentification2.mmFundInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#mmFundInformation
+	 * TradePartyIdentification3.mmFundInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification5#mmFundIdentification
+	 * TradePartyIdentification5.mmFundIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification60#mmFundIdentification
+	 * PartyIdentification60.mmFundIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification6#mmFundIdentification
+	 * TradePartyIdentification6.mmFundIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification1#mmFundInformation
+	 * TradePartyIdentification1.mmFundInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification4#mmFundInformation
+	 * TradePartyIdentification4.mmFundInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradePartyIdentification7#mmFundInformation
+	 * TradePartyIdentification7.mmFundInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -167,40 +169,48 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 	 * "Specifies the fund for which a treasury trade is executed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentFund = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentFund = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification2.FundInformation, com.tools20022.repository.msg.TradePartyIdentification3.FundInformation,
-					com.tools20022.repository.msg.TradePartyIdentification5.FundIdentification, com.tools20022.repository.msg.PartyIdentification60.FundIdentification,
-					com.tools20022.repository.msg.TradePartyIdentification6.FundIdentification, com.tools20022.repository.msg.TradePartyIdentification1.FundInformation,
-					com.tools20022.repository.msg.TradePartyIdentification4.FundInformation, com.tools20022.repository.msg.TradePartyIdentification7.FundInformation);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification2.mmFundInformation, com.tools20022.repository.msg.TradePartyIdentification3.mmFundInformation,
+					com.tools20022.repository.msg.TradePartyIdentification5.mmFundIdentification, com.tools20022.repository.msg.PartyIdentification60.mmFundIdentification,
+					com.tools20022.repository.msg.TradePartyIdentification6.mmFundIdentification, com.tools20022.repository.msg.TradePartyIdentification1.mmFundInformation,
+					com.tools20022.repository.msg.TradePartyIdentification4.mmFundInformation, com.tools20022.repository.msg.TradePartyIdentification7.mmFundInformation);
 			elementContext_lazy = () -> TreasuryTradingParty.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
 			definition = "Specifies the fund for which a treasury trade is executed.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFund.TreasuryTradingParty;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmTreasuryTradingParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TreasuryTradingParty";
 				definition = "Party that negotiates and executes treasury transactions on its behalf or on behalf of another party.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.TreasuryTradingParty);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification2.TradeParty, com.tools20022.repository.msg.TradePartyIdentification3.TradeParty,
-						com.tools20022.repository.msg.TradePartyIdentification5.TradeParty, com.tools20022.repository.msg.TradePartyIdentification1.TradeParty, com.tools20022.repository.msg.TradePartyIdentification4.TradeParty,
-						com.tools20022.repository.msg.TreasuryProfile1.TraderType);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.mmTreasuryTradingParty);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification2.mmTradeParty, com.tools20022.repository.msg.TradePartyIdentification3.mmTradeParty,
+						com.tools20022.repository.msg.TradePartyIdentification5.mmTradeParty, com.tools20022.repository.msg.TradePartyIdentification1.mmTradeParty, com.tools20022.repository.msg.TradePartyIdentification4.mmTradeParty,
+						com.tools20022.repository.msg.TreasuryProfile1.mmTraderType);
 				subType_lazy = () -> Arrays.asList(TradingBranch.mmObject());
 				superType_lazy = () -> TreasuryTradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTradingParty.InvestmentFund);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<InvestmentFund> getInvestmentFund() {
+		return investmentFund;
+	}
+
+	public void setInvestmentFund(List<com.tools20022.repository.entity.InvestmentFund> investmentFund) {
+		this.investmentFund = investmentFund;
 	}
 }

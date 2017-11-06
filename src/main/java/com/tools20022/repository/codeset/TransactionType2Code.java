@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#Redemption
- * TransactionType2Code.Redemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmRedemption
+ * TransactionType2Code.mmRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#Subscription
- * TransactionType2Code.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmSubscription
+ * TransactionType2Code.mmSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#SubscriptionSavingsPlan
- * TransactionType2Code.SubscriptionSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmSubscriptionSavingsPlan
+ * TransactionType2Code.mmSubscriptionSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#RedemptionWithdrawingPlan
- * TransactionType2Code.RedemptionWithdrawingPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmRedemptionWithdrawingPlan
+ * TransactionType2Code.mmRedemptionWithdrawingPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#TransferIn
- * TransactionType2Code.TransferIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmTransferIn
+ * TransactionType2Code.mmTransferIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#TransferOut
- * TransactionType2Code.TransferOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmTransferOut
+ * TransactionType2Code.mmTransferOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#SwitchIn
- * TransactionType2Code.SwitchIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmSwitchIn
+ * TransactionType2Code.mmSwitchIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#SwitchOut
- * TransactionType2Code.SwitchOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmSwitchOut
+ * TransactionType2Code.mmSwitchOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#SubscriptionAssetAllocation
- * TransactionType2Code.SubscriptionAssetAllocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmSubscriptionAssetAllocation
+ * TransactionType2Code.mmSubscriptionAssetAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#RedemptionAssetAllocation
- * TransactionType2Code.RedemptionAssetAllocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionType2Code#mmRedemptionAssetAllocation
+ * TransactionType2Code.mmRedemptionAssetAllocation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redemption = new MMCode() {
+	public static final MMCode mmRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
@@ -128,7 +128,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
@@ -151,7 +151,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "SubscriptionSavingsPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubscriptionSavingsPlan = new MMCode() {
+	public static final MMCode mmSubscriptionSavingsPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionSavingsPlan";
@@ -174,7 +174,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "RedemptionWithdrawingPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionWithdrawingPlan = new MMCode() {
+	public static final MMCode mmRedemptionWithdrawingPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionWithdrawingPlan";
@@ -197,7 +197,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "TransferIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferIn = new MMCode() {
+	public static final MMCode mmTransferIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIn";
@@ -220,7 +220,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "TransferOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferOut = new MMCode() {
+	public static final MMCode mmTransferOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOut";
@@ -243,7 +243,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "SwitchIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwitchIn = new MMCode() {
+	public static final MMCode mmSwitchIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchIn";
@@ -266,7 +266,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "SwitchOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwitchOut = new MMCode() {
+	public static final MMCode mmSwitchOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOut";
@@ -289,7 +289,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "SubscriptionAssetAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubscriptionAssetAllocation = new MMCode() {
+	public static final MMCode mmSubscriptionAssetAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionAssetAllocation";
@@ -312,7 +312,7 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	 * name} = "RedemptionAssetAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionAssetAllocation = new MMCode() {
+	public static final MMCode mmRedemptionAssetAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionAssetAllocation";
@@ -323,16 +323,16 @@ public class TransactionType2Code extends InvestmentFundTransactionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REDM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionType2Code";
 				definition = "Specifies the type of transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionType2Code.Redemption, com.tools20022.repository.codeset.TransactionType2Code.Subscription,
-						com.tools20022.repository.codeset.TransactionType2Code.SubscriptionSavingsPlan, com.tools20022.repository.codeset.TransactionType2Code.RedemptionWithdrawingPlan,
-						com.tools20022.repository.codeset.TransactionType2Code.TransferIn, com.tools20022.repository.codeset.TransactionType2Code.TransferOut, com.tools20022.repository.codeset.TransactionType2Code.SwitchIn,
-						com.tools20022.repository.codeset.TransactionType2Code.SwitchOut, com.tools20022.repository.codeset.TransactionType2Code.SubscriptionAssetAllocation,
-						com.tools20022.repository.codeset.TransactionType2Code.RedemptionAssetAllocation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionType2Code.mmRedemption, com.tools20022.repository.codeset.TransactionType2Code.mmSubscription,
+						com.tools20022.repository.codeset.TransactionType2Code.mmSubscriptionSavingsPlan, com.tools20022.repository.codeset.TransactionType2Code.mmRedemptionWithdrawingPlan,
+						com.tools20022.repository.codeset.TransactionType2Code.mmTransferIn, com.tools20022.repository.codeset.TransactionType2Code.mmTransferOut, com.tools20022.repository.codeset.TransactionType2Code.mmSwitchIn,
+						com.tools20022.repository.codeset.TransactionType2Code.mmSwitchOut, com.tools20022.repository.codeset.TransactionType2Code.mmSubscriptionAssetAllocation,
+						com.tools20022.repository.codeset.TransactionType2Code.mmRedemptionAssetAllocation);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
 			}
 		});

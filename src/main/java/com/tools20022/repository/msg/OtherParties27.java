@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.Role;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Other parties information.
@@ -32,19 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#Investor
- * OtherParties27.Investor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#mmInvestor
+ * OtherParties27.mmInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherParties27#QualifiedForeignIntermediary
- * OtherParties27.QualifiedForeignIntermediary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#StockExchange
- * OtherParties27.StockExchange}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#TradeRegulator
- * OtherParties27.TradeRegulator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#TripartyAgent
- * OtherParties27.TripartyAgent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#Broker
- * OtherParties27.Broker}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherParties27#mmQualifiedForeignIntermediary
+ * OtherParties27.mmQualifiedForeignIntermediary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#mmStockExchange
+ * OtherParties27.mmStockExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherParties27#mmTradeRegulator
+ * OtherParties27.mmTradeRegulator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#mmTripartyAgent
+ * OtherParties27.mmTripartyAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties27#mmBroker
+ * OtherParties27.mmBroker}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,50 +56,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06#OtherBusinessParties
- * SecuritiesSettlementTransactionInstructionV06.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionInstructionV06.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06#OtherBusinessParties
- * SecuritiesSettlementTransactionConfirmationV06.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionConfirmationV06.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06#OtherBusinessParties
- * SecuritiesFinancingInstructionV06.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06#mmOtherBusinessParties
+ * SecuritiesFinancingInstructionV06.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#OtherBusinessParties
- * SecuritiesSettlementTransactionGenerationNotificationV06.OtherBusinessParties
- * }</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionGenerationNotificationV06.
+ * mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05#OtherBusinessParties
- * SecuritiesSettlementTransactionReversalAdviceV05.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionReversalAdviceV05.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06#OtherBusinessParties
- * SecuritiesFinancingConfirmationV06.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06#mmOtherBusinessParties
+ * SecuritiesFinancingConfirmationV06.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07#OtherBusinessParties
- * SecuritiesFinancingInstructionV07.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07#mmOtherBusinessParties
+ * SecuritiesFinancingInstructionV07.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07#OtherBusinessParties
- * SecuritiesSettlementTransactionGenerationNotificationV07.OtherBusinessParties
- * }</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionGenerationNotificationV07.
+ * mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07#OtherBusinessParties
- * SecuritiesSettlementTransactionConfirmationV07.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionConfirmationV07.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06#OtherBusinessParties
- * SecuritiesSettlementTransactionReversalAdviceV06.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionReversalAdviceV06.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#OtherBusinessParties
- * SecuritiesFinancingConfirmationV07.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#mmOtherBusinessParties
+ * SecuritiesFinancingConfirmationV07.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#OtherBusinessParties
- * SecuritiesSettlementTransactionInstructionV07.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionInstructionV07.mmOtherBusinessParties}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherParties27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount108> investor;
 	/**
 	 * Party, either an individual or organisation, whose assets are being
 	 * invested.
@@ -127,8 +130,8 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,25 +152,26 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherParties19#Investor
-	 * OtherParties19.Investor}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherParties19#mmInvestor
+	 * OtherParties19.mmInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Investor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Invstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.Investor;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.mmInvestor;
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentificationAndAccount108.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount108.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount107 qualifiedForeignIntermediary;
 	/**
 	 * Foreign Financial Institution which has been authorised by local
 	 * authorities to act as account management institution in the country.
@@ -181,8 +185,8 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,26 +207,27 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherParties19#QualifiedForeignIntermediary
-	 * OtherParties19.QualifiedForeignIntermediary}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherParties19#mmQualifiedForeignIntermediary
+	 * OtherParties19.mmQualifiedForeignIntermediary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QualifiedForeignIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQualifiedForeignIntermediary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "QlfdFrgnIntrmy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediary";
 			definition = "Foreign Financial Institution which has been authorised by local authorities to act as account management institution in the country.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.QualifiedForeignIntermediary;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.mmQualifiedForeignIntermediary;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount107.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount107.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount109 stockExchange;
 	/**
 	 * Identification of the stock exchange to which transaction reporting will
 	 * be done.
@@ -236,8 +241,8 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -258,26 +263,27 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherParties19#StockExchange
-	 * OtherParties19.StockExchange}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherParties19#mmStockExchange
+	 * OtherParties19.mmStockExchange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StockExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStockExchange = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StockXchg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			definition = "Identification of the stock exchange to which transaction reporting will be done.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.StockExchange;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.mmStockExchange;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount109.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount109.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount109 tradeRegulator;
 	/**
 	 * Institution to which a trade must be reported.
 	 * <p>
@@ -290,8 +296,8 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,26 +316,27 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherParties19#TradeRegulator
-	 * OtherParties19.TradeRegulator}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherParties19#mmTradeRegulator
+	 * OtherParties19.mmTradeRegulator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeRegulator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeRegulator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "TradRgltr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulator";
 			definition = "Institution to which a trade must be reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.TradeRegulator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.mmTradeRegulator;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount109.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount109.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount107 tripartyAgent;
 	/**
 	 * Party responsible for the administration of a tri-party collateral
 	 * transaction including collateral allocation, marking to market and
@@ -344,8 +351,8 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -366,26 +373,27 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherParties19#TripartyAgent
-	 * OtherParties19.TripartyAgent}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherParties19#mmTripartyAgent
+	 * OtherParties19.mmTripartyAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TripartyAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTripartyAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "TrptyAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgent";
 			definition = "Party responsible for the administration of a tri-party collateral transaction including collateral allocation, marking to market and substitution of collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.TripartyAgent;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.mmTripartyAgent;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount107.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount107.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount107 broker;
 	/**
 	 * Party that identifies a broker when required (for example, authorised
 	 * broker, prime broker, etc).
@@ -399,8 +407,8 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -421,42 +429,42 @@ public class OtherParties27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherParties19#Broker
-	 * OtherParties19.Broker}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherParties19#mmBroker
+	 * OtherParties19.mmBroker}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Broker = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBroker = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Brkr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
 			definition = "Party that identifies a broker when required (for example, authorised broker, prime broker, etc).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.Broker;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties19.mmBroker;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount107.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount107.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties27.Investor, com.tools20022.repository.msg.OtherParties27.QualifiedForeignIntermediary,
-						com.tools20022.repository.msg.OtherParties27.StockExchange, com.tools20022.repository.msg.OtherParties27.TradeRegulator, com.tools20022.repository.msg.OtherParties27.TripartyAgent,
-						com.tools20022.repository.msg.OtherParties27.Broker);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties27.mmInvestor, com.tools20022.repository.msg.OtherParties27.mmQualifiedForeignIntermediary,
+						com.tools20022.repository.msg.OtherParties27.mmStockExchange, com.tools20022.repository.msg.OtherParties27.mmTradeRegulator, com.tools20022.repository.msg.OtherParties27.mmTripartyAgent,
+						com.tools20022.repository.msg.OtherParties27.mmBroker);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06.mmOtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmOtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07.mmOtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07.mmOtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07.mmOtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07.mmOtherBusinessParties);
 				trace_lazy = () -> Role.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06.OtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.OtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07.OtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07.OtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07.OtherBusinessParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07.OtherBusinessParties);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherParties27";
 				definition = "Other parties information.";
@@ -464,5 +472,53 @@ public class OtherParties27 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PartyIdentificationAndAccount108> getInvestor() {
+		return investor;
+	}
+
+	public void setInvestor(List<com.tools20022.repository.msg.PartyIdentificationAndAccount108> investor) {
+		this.investor = investor;
+	}
+
+	public PartyIdentificationAndAccount107 getQualifiedForeignIntermediary() {
+		return qualifiedForeignIntermediary;
+	}
+
+	public void setQualifiedForeignIntermediary(com.tools20022.repository.msg.PartyIdentificationAndAccount107 qualifiedForeignIntermediary) {
+		this.qualifiedForeignIntermediary = qualifiedForeignIntermediary;
+	}
+
+	public PartyIdentificationAndAccount109 getStockExchange() {
+		return stockExchange;
+	}
+
+	public void setStockExchange(com.tools20022.repository.msg.PartyIdentificationAndAccount109 stockExchange) {
+		this.stockExchange = stockExchange;
+	}
+
+	public PartyIdentificationAndAccount109 getTradeRegulator() {
+		return tradeRegulator;
+	}
+
+	public void setTradeRegulator(com.tools20022.repository.msg.PartyIdentificationAndAccount109 tradeRegulator) {
+		this.tradeRegulator = tradeRegulator;
+	}
+
+	public PartyIdentificationAndAccount107 getTripartyAgent() {
+		return tripartyAgent;
+	}
+
+	public void setTripartyAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount107 tripartyAgent) {
+		this.tripartyAgent = tripartyAgent;
+	}
+
+	public PartyIdentificationAndAccount107 getBroker() {
+		return broker;
+	}
+
+	public void setBroker(com.tools20022.repository.msg.PartyIdentificationAndAccount107 broker) {
+		this.broker = broker;
 	}
 }

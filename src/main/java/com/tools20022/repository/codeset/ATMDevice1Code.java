@@ -33,29 +33,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#CustomerConsole
- * ATMDevice1Code.CustomerConsole}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#mmCustomerConsole
+ * ATMDevice1Code.mmCustomerConsole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#DocumentPrinter
- * ATMDevice1Code.DocumentPrinter}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice1Code#Journal
- * ATMDevice1Code.Journal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#mmDocumentPrinter
+ * ATMDevice1Code.mmDocumentPrinter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice1Code#mmJournal
+ * ATMDevice1Code.mmJournal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#JournalPrinter
- * ATMDevice1Code.JournalPrinter}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#mmJournalPrinter
+ * ATMDevice1Code.mmJournalPrinter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#ReceiptPrinter
- * ATMDevice1Code.ReceiptPrinter}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#mmReceiptPrinter
+ * ATMDevice1Code.mmReceiptPrinter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#WithdrawalReceipt
- * ATMDevice1Code.WithdrawalReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice1Code#mmWithdrawalReceipt
+ * ATMDevice1Code.mmWithdrawalReceipt}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 * name} = "CustomerConsole"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerConsole = new MMCode() {
+	public static final MMCode mmCustomerConsole = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerConsole";
@@ -108,7 +108,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 * name} = "DocumentPrinter"</li>
 	 * </ul>
 	 */
-	public static final MMCode DocumentPrinter = new MMCode() {
+	public static final MMCode mmDocumentPrinter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentPrinter";
@@ -131,7 +131,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 * name} = "Journal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Journal = new MMCode() {
+	public static final MMCode mmJournal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Journal";
@@ -154,7 +154,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 * name} = "JournalPrinter"</li>
 	 * </ul>
 	 */
-	public static final MMCode JournalPrinter = new MMCode() {
+	public static final MMCode mmJournalPrinter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalPrinter";
@@ -177,7 +177,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 * name} = "ReceiptPrinter"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceiptPrinter = new MMCode() {
+	public static final MMCode mmReceiptPrinter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptPrinter";
@@ -200,7 +200,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 * name} = "WithdrawalReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithdrawalReceipt = new MMCode() {
+	public static final MMCode mmWithdrawalReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalReceipt";
@@ -211,12 +211,13 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMDevice1Code";
 				definition = "ATM device to output message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMDevice1Code.CustomerConsole, com.tools20022.repository.codeset.ATMDevice1Code.DocumentPrinter, com.tools20022.repository.codeset.ATMDevice1Code.Journal,
-						com.tools20022.repository.codeset.ATMDevice1Code.JournalPrinter, com.tools20022.repository.codeset.ATMDevice1Code.ReceiptPrinter, com.tools20022.repository.codeset.ATMDevice1Code.WithdrawalReceipt);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMDevice1Code.mmCustomerConsole, com.tools20022.repository.codeset.ATMDevice1Code.mmDocumentPrinter,
+						com.tools20022.repository.codeset.ATMDevice1Code.mmJournal, com.tools20022.repository.codeset.ATMDevice1Code.mmJournalPrinter, com.tools20022.repository.codeset.ATMDevice1Code.mmReceiptPrinter,
+						com.tools20022.repository.codeset.ATMDevice1Code.mmWithdrawalReceipt);
 				trace_lazy = () -> ATMDeviceCode.mmObject();
 			}
 		});

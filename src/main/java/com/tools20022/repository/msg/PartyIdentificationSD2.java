@@ -37,30 +37,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#PlaceAndName
- * PartyIdentificationSD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#mmPlaceAndName
+ * PartyIdentificationSD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#AgentIdentification
- * PartyIdentificationSD2.AgentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#mmAgentIdentification
+ * PartyIdentificationSD2.mmAgentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#AgentTelephoneNumber
- * PartyIdentificationSD2.AgentTelephoneNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#mmAgentTelephoneNumber
+ * PartyIdentificationSD2.mmAgentTelephoneNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#ContactInformation
- * PartyIdentificationSD2.ContactInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#mmContactInformation
+ * PartyIdentificationSD2.mmContactInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#AgentEmailAddress
- * PartyIdentificationSD2.AgentEmailAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#mmAgentEmailAddress
+ * PartyIdentificationSD2.mmAgentEmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#AgentAddress
- * PartyIdentificationSD2.AgentAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD2#mmAgentAddress
+ * PartyIdentificationSD2.mmAgentAddress}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentificationSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -102,7 +103,7 @@ public class PartyIdentificationSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD2.mmObject();
 			isDerived = false;
@@ -110,11 +111,12 @@ public class PartyIdentificationSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max8Text agentIdentification;
 	/**
 	 * DTC agent identification number.
 	 * <p>
@@ -142,7 +144,7 @@ public class PartyIdentificationSD2 {
 	 * definition} = "DTC agent identification number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD2.mmObject();
 			isDerived = false;
@@ -150,11 +152,12 @@ public class PartyIdentificationSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentIdentification";
 			definition = "DTC agent identification number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected PhoneNumber agentTelephoneNumber;
 	/**
 	 * Telephone number of the agent.
 	 * <p>
@@ -182,7 +185,7 @@ public class PartyIdentificationSD2 {
 	 * definition} = "Telephone number of the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentTelephoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentTelephoneNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD2.mmObject();
 			isDerived = false;
@@ -190,11 +193,12 @@ public class PartyIdentificationSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentTelephoneNumber";
 			definition = "Telephone number of the agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected PartyIdentificationSD4 contactInformation;
 	/**
 	 * Agent designated contact information details.
 	 * <p>
@@ -221,7 +225,7 @@ public class PartyIdentificationSD2 {
 	 * definition} = "Agent designated contact information details. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD2.mmObject();
 			isDerived = false;
@@ -229,12 +233,13 @@ public class PartyIdentificationSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
 			definition = "Agent designated contact information details. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationSD4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD4.mmObject();
 		}
 	};
+	protected Max256Text agentEmailAddress;
 	/**
 	 * Email address of the event agent.
 	 * <p>
@@ -262,7 +267,7 @@ public class PartyIdentificationSD2 {
 	 * definition} = "Email address of the event agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentEmailAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD2.mmObject();
 			isDerived = false;
@@ -270,11 +275,12 @@ public class PartyIdentificationSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentEmailAddress";
 			definition = "Email address of the event agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected PostalAddress1 agentAddress;
 	/**
 	 * Event agent address.
 	 * <p>
@@ -302,7 +308,7 @@ public class PartyIdentificationSD2 {
 	 * definition} = "Event agent address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD2.mmObject();
 			isDerived = false;
@@ -310,24 +316,72 @@ public class PartyIdentificationSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentAddress";
 			definition = "Event agent address.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationSD2.PlaceAndName, com.tools20022.repository.msg.PartyIdentificationSD2.AgentIdentification,
-						com.tools20022.repository.msg.PartyIdentificationSD2.AgentTelephoneNumber, com.tools20022.repository.msg.PartyIdentificationSD2.ContactInformation,
-						com.tools20022.repository.msg.PartyIdentificationSD2.AgentEmailAddress, com.tools20022.repository.msg.PartyIdentificationSD2.AgentAddress);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationSD2.mmPlaceAndName, com.tools20022.repository.msg.PartyIdentificationSD2.mmAgentIdentification,
+						com.tools20022.repository.msg.PartyIdentificationSD2.mmAgentTelephoneNumber, com.tools20022.repository.msg.PartyIdentificationSD2.mmContactInformation,
+						com.tools20022.repository.msg.PartyIdentificationSD2.mmAgentEmailAddress, com.tools20022.repository.msg.PartyIdentificationSD2.mmAgentAddress);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationSD2";
 				definition = "Provides additional information regarding the existing agent component.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max8Text getAgentIdentification() {
+		return agentIdentification;
+	}
+
+	public void setAgentIdentification(Max8Text agentIdentification) {
+		this.agentIdentification = agentIdentification;
+	}
+
+	public PhoneNumber getAgentTelephoneNumber() {
+		return agentTelephoneNumber;
+	}
+
+	public void setAgentTelephoneNumber(PhoneNumber agentTelephoneNumber) {
+		this.agentTelephoneNumber = agentTelephoneNumber;
+	}
+
+	public PartyIdentificationSD4 getContactInformation() {
+		return contactInformation;
+	}
+
+	public void setContactInformation(com.tools20022.repository.msg.PartyIdentificationSD4 contactInformation) {
+		this.contactInformation = contactInformation;
+	}
+
+	public Max256Text getAgentEmailAddress() {
+		return agentEmailAddress;
+	}
+
+	public void setAgentEmailAddress(Max256Text agentEmailAddress) {
+		this.agentEmailAddress = agentEmailAddress;
+	}
+
+	public PostalAddress1 getAgentAddress() {
+		return agentAddress;
+	}
+
+	public void setAgentAddress(com.tools20022.repository.msg.PostalAddress1 agentAddress) {
+		this.agentAddress = agentAddress;
 	}
 }

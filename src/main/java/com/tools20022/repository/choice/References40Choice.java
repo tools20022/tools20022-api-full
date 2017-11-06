@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.repository.msg.AdditionalReference3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of references used to reference a previous transaction.
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References40Choice#RelatedReference
- * References40Choice.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.choice.References40Choice#mmRelatedReference
+ * References40Choice.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References40Choice#OtherReference
- * References40Choice.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.choice.References40Choice#mmOtherReference
+ * References40Choice.mmOtherReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,18 +46,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#Reference
- * TransferInstructionStatusReportV04.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmReference
+ * TransferInstructionStatusReportV04.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV04#Reference
- * TransferCancellationStatusReportV04.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV04#mmReference
+ * TransferCancellationStatusReportV04.mmReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class References40Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AdditionalReference3> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -111,18 +113,18 @@ public class References40Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References49Choice#RelatedReference
-	 * References49Choice.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.choice.References49Choice#mmRelatedReference
+	 * References49Choice.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References39Choice#PreviousReference
-	 * References39Choice.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.choice.References39Choice#mmPreviousReference
+	 * References39Choice.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> References40Choice.mmObject();
 			isDerived = false;
@@ -130,14 +132,15 @@ public class References40Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References39Choice.PreviousReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References49Choice.RelatedReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References49Choice.mmRelatedReference);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References39Choice.mmPreviousReference;
 			maxOccurs = 2;
-			type_lazy = () -> AdditionalReference3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> otherReference;
 	/**
 	 * Reference to a linked proprietary message or reference of a system that
 	 * was previously received.
@@ -169,18 +172,18 @@ public class References40Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References49Choice#OtherReference
-	 * References49Choice.OtherReference}</li>
+	 * {@linkplain com.tools20022.repository.choice.References49Choice#mmOtherReference
+	 * References49Choice.mmOtherReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References39Choice#OtherReference
-	 * References39Choice.OtherReference}</li>
+	 * {@linkplain com.tools20022.repository.choice.References39Choice#mmOtherReference
+	 * References39Choice.mmOtherReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> References40Choice.mmObject();
 			isDerived = false;
@@ -188,28 +191,44 @@ public class References40Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked proprietary message or reference of a system that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References39Choice.OtherReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References49Choice.OtherReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References49Choice.mmOtherReference);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References39Choice.mmOtherReference;
 			maxOccurs = 2;
-			type_lazy = () -> AdditionalReference3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References40Choice.RelatedReference, com.tools20022.repository.choice.References40Choice.OtherReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.Reference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.Reference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References40Choice.mmRelatedReference, com.tools20022.repository.choice.References40Choice.mmOtherReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.mmReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "References40Choice";
 				definition = "Choice of references used to reference a previous transaction.";
-				previousVersion_lazy = () -> References39Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(References49Choice.mmObject());
+				previousVersion_lazy = () -> References39Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AdditionalReference3> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public List<AdditionalReference3> getOtherReference() {
+		return otherReference;
+	}
+
+	public void setOtherReference(List<AdditionalReference3> otherReference) {
+		this.otherReference = otherReference;
 	}
 }

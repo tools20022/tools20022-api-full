@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Response to the PIN management transaction. request.
@@ -36,31 +37,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction22#TransactionIdentification
- * ATMTransaction22.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction22#mmTransactionIdentification
+ * ATMTransaction22.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction22#ReconciliationIdentification
- * ATMTransaction22.ReconciliationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction22#mmReconciliationIdentification
+ * ATMTransaction22.mmReconciliationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction22#CompletionRequired
- * ATMTransaction22.CompletionRequired}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction22#mmCompletionRequired
+ * ATMTransaction22.mmCompletionRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction22#TransactionResponse
- * ATMTransaction22.TransactionResponse}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction22#Action
- * ATMTransaction22.Action}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction22#mmTransactionResponse
+ * ATMTransaction22.mmTransactionResponse}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction22#mmAction
+ * ATMTransaction22.mmAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction22#ICCRelatedData
- * ATMTransaction22.ICCRelatedData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction22#Command
- * ATMTransaction22.Command}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction22#mmICCRelatedData
+ * ATMTransaction22.mmICCRelatedData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction22#mmCommand
+ * ATMTransaction22.mmCommand}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransaction22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentifier1 transactionIdentification;
 	/**
 	 * Identification of the transaction assigned by the ATM.
 	 * <p>
@@ -109,13 +111,13 @@ public class ATMTransaction22 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction28#TransactionIdentification
-	 * ATMTransaction28.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction28#mmTransactionIdentification
+	 * ATMTransaction28.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction22.mmObject();
 			isDerived = false;
@@ -123,13 +125,14 @@ public class ATMTransaction22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.mmTransactionIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> TransactionIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	protected Max35Text reconciliationIdentification;
 	/**
 	 * Identification of the reconciliation period assigned by the ATM.
 	 * <p>
@@ -158,7 +161,7 @@ public class ATMTransaction22 {
 	 * "Identification of the reconciliation period assigned by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction22.mmObject();
 			isDerived = false;
@@ -166,11 +169,12 @@ public class ATMTransaction22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation period assigned by the ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TrueFalseIndicator completionRequired;
 	/**
 	 * True if a completion advice has to be sent after the end of the
 	 * transaction.
@@ -202,7 +206,7 @@ public class ATMTransaction22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CompletionRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCompletionRequired = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction22.mmObject();
 			isDerived = false;
@@ -210,11 +214,12 @@ public class ATMTransaction22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionRequired";
 			definition = "True if a completion advice has to be sent after the end of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected ResponseType7 transactionResponse;
 	/**
 	 * Result of the PIN service.
 	 * <p>
@@ -242,13 +247,14 @@ public class ATMTransaction22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction28#Response
-	 * ATMTransaction28.Response}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction28#mmResponse
+	 * ATMTransaction28.mmResponse}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction22.mmObject();
 			isDerived = false;
@@ -256,13 +262,14 @@ public class ATMTransaction22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Result of the PIN service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.Response);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.mmResponse);
 			maxOccurs = 1;
-			type_lazy = () -> ResponseType7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ResponseType7.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Action7> action;
 	/**
 	 * Sequence of actions to be performed by the ATM to complete the
 	 * transaction.
@@ -291,7 +298,7 @@ public class ATMTransaction22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Action = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction22.mmObject();
 			isDerived = false;
@@ -300,10 +307,11 @@ public class ATMTransaction22 {
 			name = "Action";
 			definition = "Sequence of actions to be performed by the ATM to complete the transaction.";
 			minOccurs = 0;
-			type_lazy = () -> Action7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Action7.mmObject();
 		}
 	};
+	protected Max10000Binary iCCRelatedData;
 	/**
 	 * Sequence of one or more TLV data elements from the ATM application, in
 	 * accordance with ISO 7816-6, not in a specific order. Present if the
@@ -336,7 +344,7 @@ public class ATMTransaction22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction22.mmObject();
 			isDerived = false;
@@ -344,11 +352,12 @@ public class ATMTransaction22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMCommand7> command;
 	/**
 	 * Maintenance command to perform on the ATM.
 	 * <p>
@@ -376,13 +385,13 @@ public class ATMTransaction22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction28#Command
-	 * ATMTransaction28.Command}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction28#mmCommand
+	 * ATMTransaction28.mmCommand}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Command = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction22.mmObject();
 			isDerived = false;
@@ -390,20 +399,20 @@ public class ATMTransaction22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command to perform on the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.Command);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.mmCommand);
 			minOccurs = 0;
-			type_lazy = () -> ATMCommand7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommand7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction22.TransactionIdentification, com.tools20022.repository.msg.ATMTransaction22.ReconciliationIdentification,
-						com.tools20022.repository.msg.ATMTransaction22.CompletionRequired, com.tools20022.repository.msg.ATMTransaction22.TransactionResponse, com.tools20022.repository.msg.ATMTransaction22.Action,
-						com.tools20022.repository.msg.ATMTransaction22.ICCRelatedData, com.tools20022.repository.msg.ATMTransaction22.Command);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction22.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction22.mmReconciliationIdentification,
+						com.tools20022.repository.msg.ATMTransaction22.mmCompletionRequired, com.tools20022.repository.msg.ATMTransaction22.mmTransactionResponse, com.tools20022.repository.msg.ATMTransaction22.mmAction,
+						com.tools20022.repository.msg.ATMTransaction22.mmICCRelatedData, com.tools20022.repository.msg.ATMTransaction22.mmCommand);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction22";
 				definition = "Response to the PIN management transaction. request.";
@@ -411,5 +420,61 @@ public class ATMTransaction22 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentifier1 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Max35Text getReconciliationIdentification() {
+		return reconciliationIdentification;
+	}
+
+	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
+		this.reconciliationIdentification = reconciliationIdentification;
+	}
+
+	public TrueFalseIndicator getCompletionRequired() {
+		return completionRequired;
+	}
+
+	public void setCompletionRequired(TrueFalseIndicator completionRequired) {
+		this.completionRequired = completionRequired;
+	}
+
+	public ResponseType7 getTransactionResponse() {
+		return transactionResponse;
+	}
+
+	public void setTransactionResponse(com.tools20022.repository.msg.ResponseType7 transactionResponse) {
+		this.transactionResponse = transactionResponse;
+	}
+
+	public List<Action7> getAction() {
+		return action;
+	}
+
+	public void setAction(List<com.tools20022.repository.msg.Action7> action) {
+		this.action = action;
+	}
+
+	public Max10000Binary getICCRelatedData() {
+		return iCCRelatedData;
+	}
+
+	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
+		this.iCCRelatedData = iCCRelatedData;
+	}
+
+	public List<ATMCommand7> getCommand() {
+		return command;
+	}
+
+	public void setCommand(List<com.tools20022.repository.msg.ATMCommand7> command) {
+		this.command = command;
 	}
 }

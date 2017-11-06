@@ -26,6 +26,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Identification of the status being requested.
@@ -36,10 +37,10 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DocumentNumber5#Number
- * DocumentNumber5.Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DocumentNumber5#References
- * DocumentNumber5.References}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DocumentNumber5#mmNumber
+ * DocumentNumber5.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DocumentNumber5#mmReferences
+ * DocumentNumber5.mmReferences}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,15 +50,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02#StatusAdviceRequested
- * SecuritiesTransactionStatusQueryV02.StatusAdviceRequested}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02#mmStatusAdviceRequested
+ * SecuritiesTransactionStatusQueryV02.mmStatusAdviceRequested}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -72,6 +73,7 @@ import java.util.function.Supplier;
 public class DocumentNumber5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentNumber1Choice number;
 	/**
 	 * Number used to identify a message or document.
 	 * <p>
@@ -99,7 +101,7 @@ public class DocumentNumber5 {
 	 * definition} = "Number used to identify a message or document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Number = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentNumber5.mmObject();
 			isDerived = false;
@@ -107,12 +109,13 @@ public class DocumentNumber5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number used to identify a message or document.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Identification6> references;
 	/**
 	 * References of transaction for which the status is requested.
 	 * <p>
@@ -140,7 +143,7 @@ public class DocumentNumber5 {
 	 * "References of transaction for which the status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd References = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReferences = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentNumber5.mmObject();
 			isDerived = false;
@@ -149,18 +152,18 @@ public class DocumentNumber5 {
 			name = "References";
 			definition = "References of transaction for which the status is requested.";
 			minOccurs = 1;
-			type_lazy = () -> Identification6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Identification6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber5.Number, com.tools20022.repository.msg.DocumentNumber5.References);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber5.mmNumber, com.tools20022.repository.msg.DocumentNumber5.mmReferences);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02.mmStatusAdviceRequested);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02.StatusAdviceRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -174,5 +177,21 @@ public class DocumentNumber5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentNumber1Choice getNumber() {
+		return number;
+	}
+
+	public void setNumber(DocumentNumber1Choice number) {
+		this.number = number;
+	}
+
+	public List<Identification6> getReferences() {
+		return references;
+	}
+
+	public void setReferences(List<com.tools20022.repository.msg.Identification6> references) {
+		this.references = references;
 	}
 }

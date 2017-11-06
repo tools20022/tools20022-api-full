@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAdvice1Code#Received
- * FinancialAdvice1Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAdvice1Code#mmReceived
+ * FinancialAdvice1Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAdvice1Code#NotReceived
- * FinancialAdvice1Code.NotReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAdvice1Code#mmNotReceived
+ * FinancialAdvice1Code.mmNotReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAdvice1Code#Unknown
- * FinancialAdvice1Code.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAdvice1Code#mmUnknown
+ * FinancialAdvice1Code.mmUnknown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class FinancialAdvice1Code extends FinancialAdviceCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -109,7 +109,7 @@ public class FinancialAdvice1Code extends FinancialAdviceCode {
 	 * name} = "NotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotReceived = new MMCode() {
+	public static final MMCode mmNotReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReceived";
@@ -132,7 +132,7 @@ public class FinancialAdvice1Code extends FinancialAdviceCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -143,13 +143,13 @@ public class FinancialAdvice1Code extends FinancialAdviceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialAdvice1Code";
 				definition = "Specifies if advice has been received from an independent financial advisor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialAdvice1Code.Received, com.tools20022.repository.codeset.FinancialAdvice1Code.NotReceived,
-						com.tools20022.repository.codeset.FinancialAdvice1Code.Unknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialAdvice1Code.mmReceived, com.tools20022.repository.codeset.FinancialAdvice1Code.mmNotReceived,
+						com.tools20022.repository.codeset.FinancialAdvice1Code.mmUnknown);
 				trace_lazy = () -> FinancialAdviceCode.mmObject();
 			}
 		});

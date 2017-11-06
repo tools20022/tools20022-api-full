@@ -34,6 +34,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -44,64 +45,65 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#NamePrefixOrExtendedNamePrefixRule
- * IndividualPerson6.NamePrefixOrExtendedNamePrefixRule}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmNamePrefixOrExtendedNamePrefixRule
+ * IndividualPerson6.mmNamePrefixOrExtendedNamePrefixRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#NamePrefix
- * IndividualPerson6.NamePrefix}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmNamePrefix
+ * IndividualPerson6.mmNamePrefix}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ExtendedNamePrefix
- * IndividualPerson6.ExtendedNamePrefix}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#GivenName
- * IndividualPerson6.GivenName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#MiddleName
- * IndividualPerson6.MiddleName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#Name
- * IndividualPerson6.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#NameSuffix
- * IndividualPerson6.NameSuffix}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#Gender
- * IndividualPerson6.Gender}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#Language
- * IndividualPerson6.Language}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#BirthDate
- * IndividualPerson6.BirthDate}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmExtendedNamePrefix
+ * IndividualPerson6.mmExtendedNamePrefix}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmGivenName
+ * IndividualPerson6.mmGivenName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmMiddleName
+ * IndividualPerson6.mmMiddleName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmName
+ * IndividualPerson6.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmNameSuffix
+ * IndividualPerson6.mmNameSuffix}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmGender
+ * IndividualPerson6.mmGender}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmLanguage
+ * IndividualPerson6.mmLanguage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmBirthDate
+ * IndividualPerson6.mmBirthDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#CountryOfBirth
- * IndividualPerson6.CountryOfBirth}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmCountryOfBirth
+ * IndividualPerson6.mmCountryOfBirth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ProvinceOfBirth
- * IndividualPerson6.ProvinceOfBirth}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#CityOfBirth
- * IndividualPerson6.CityOfBirth}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#Profession
- * IndividualPerson6.Profession}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmProvinceOfBirth
+ * IndividualPerson6.mmProvinceOfBirth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#TaxationCountry
- * IndividualPerson6.TaxationCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmCityOfBirth
+ * IndividualPerson6.mmCityOfBirth}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmProfession
+ * IndividualPerson6.mmProfession}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#CountryAndResidentialStatus
- * IndividualPerson6.CountryAndResidentialStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmTaxationCountry
+ * IndividualPerson6.mmTaxationCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ModifiedPostalAddress
- * IndividualPerson6.ModifiedPostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmCountryAndResidentialStatus
+ * IndividualPerson6.mmCountryAndResidentialStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ModifiedCitizenship
- * IndividualPerson6.ModifiedCitizenship}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmModifiedPostalAddress
+ * IndividualPerson6.mmModifiedPostalAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#PrimaryCommunicationAddress
- * IndividualPerson6.PrimaryCommunicationAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmModifiedCitizenship
+ * IndividualPerson6.mmModifiedCitizenship}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#SecondaryCommunicationAddress
- * IndividualPerson6.SecondaryCommunicationAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmPrimaryCommunicationAddress
+ * IndividualPerson6.mmPrimaryCommunicationAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ModifiedOtherIdentification
- * IndividualPerson6.ModifiedOtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmSecondaryCommunicationAddress
+ * IndividualPerson6.mmSecondaryCommunicationAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmModifiedOtherIdentification
+ * IndividualPerson6.mmModifiedOtherIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -109,8 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,6 +128,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndividualPerson6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NamePrefix1Code namePrefix;
 	/**
 	 * Specifies the terms used to formally address a person.
 	 * <p>
@@ -139,8 +142,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#NamePrefix
-	 * PersonName.NamePrefix}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmNamePrefix
+	 * PersonName.mmNamePrefix}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +162,21 @@ public class IndividualPerson6 {
 	 * definition} = "Specifies the terms used to formally address a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NamePrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNamePrefix = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmNamePrefix;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.NamePrefix;
 			isDerived = false;
 			xmlTag = "NmPrfx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NamePrefix";
 			definition = "Specifies the terms used to formally address a person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NamePrefix1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedNamePrefix;
 	/**
 	 * Specifies the terms used to formally address a person.
 	 * <p>
@@ -186,8 +190,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#NamePrefix
-	 * PersonName.NamePrefix}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmNamePrefix
+	 * PersonName.mmNamePrefix}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,20 +210,21 @@ public class IndividualPerson6 {
 	 * definition} = "Specifies the terms used to formally address a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedNamePrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedNamePrefix = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmNamePrefix;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.NamePrefix;
 			isDerived = false;
 			xmlTag = "XtndedNmPrfx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedNamePrefix";
 			definition = "Specifies the terms used to formally address a person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected Max35Text givenName;
 	/**
 	 * First name of a person.
 	 * <p>
@@ -232,8 +237,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#GivenName
-	 * PersonName.GivenName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmGivenName
+	 * PersonName.mmGivenName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,20 +257,21 @@ public class IndividualPerson6 {
 	 * definition} = "First name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GivenName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.GivenName;
 			isDerived = false;
 			xmlTag = "GvnNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GivenName";
 			definition = "First name of a person.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text middleName;
 	/**
 	 * Second name of a person.
 	 * <p>
@@ -278,8 +284,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#MiddleName
-	 * PersonName.MiddleName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmMiddleName
+	 * PersonName.mmMiddleName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -298,20 +304,21 @@ public class IndividualPerson6 {
 	 * definition} = "Second name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MiddleName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMiddleName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmMiddleName;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.MiddleName;
 			isDerived = false;
 			xmlTag = "MddlNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiddleName";
 			definition = "Second name of a person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -325,8 +332,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#BirthName
-	 * PersonName.BirthName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmBirthName
+	 * PersonName.mmBirthName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -347,20 +354,21 @@ public class IndividualPerson6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmBirthName;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.BirthName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text nameSuffix;
 	/**
 	 * Additional information about a person that follows a person's name, eg,
 	 * qualification such as Doctor of Philosophy (PhD).
@@ -374,8 +382,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#NameSuffix
-	 * PersonName.NameSuffix}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmNameSuffix
+	 * PersonName.mmNameSuffix}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -396,20 +404,21 @@ public class IndividualPerson6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameSuffix = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameSuffix = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmNameSuffix;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.NameSuffix;
 			isDerived = false;
 			xmlTag = "NmSfx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameSuffix";
 			definition = "Additional information about a person that follows a person's name, eg, qualification such as Doctor of Philosophy (PhD).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GenderCode gender;
 	/**
 	 * Specifies the gender of the person.
 	 * <p>
@@ -422,8 +431,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#Gender Person.Gender}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmGender
+	 * Person.mmGender}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -442,20 +451,21 @@ public class IndividualPerson6 {
 	 * definition} = "Specifies the gender of the person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Gender = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGender = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmGender;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.Gender;
 			isDerived = false;
 			xmlTag = "Gndr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gender";
 			definition = "Specifies the gender of the person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> GenderCode.mmObject();
 		}
 	};
+	protected LanguageCode language;
 	/**
 	 * Language in which a person communicates.
 	 * <p>
@@ -468,8 +478,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#Language
-	 * Person.Language}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmLanguage
+	 * Person.mmLanguage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -488,20 +498,21 @@ public class IndividualPerson6 {
 	 * definition} = "Language in which a person communicates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Language = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmLanguage;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.Language;
 			isDerived = false;
 			xmlTag = "Lang";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Language";
 			definition = "Language in which a person communicates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	protected ISODate birthDate;
 	/**
 	 * Date on which a person is born.
 	 * <p>
@@ -514,8 +525,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#BirthDate
-	 * Person.BirthDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmBirthDate
+	 * Person.mmBirthDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -534,20 +545,21 @@ public class IndividualPerson6 {
 	 * definition} = "Date on which a person is born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBirthDate;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.BirthDate;
 			isDerived = false;
 			xmlTag = "BirthDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDate";
 			definition = "Date on which a person is born.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CountryCode countryOfBirth;
 	/**
 	 * Country where a person was born.
 	 * <p>
@@ -560,8 +572,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#PlaceOfBirth
-	 * Person.PlaceOfBirth}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmPlaceOfBirth
+	 * Person.mmPlaceOfBirth}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -580,20 +592,21 @@ public class IndividualPerson6 {
 	 * definition} = "Country where a person was born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfBirth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfBirth = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPlaceOfBirth;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.PlaceOfBirth;
 			isDerived = false;
 			xmlTag = "CtryOfBirth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfBirth";
 			definition = "Country where a person was born.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max35Text provinceOfBirth;
 	/**
 	 * Province where a person was born.
 	 * <p>
@@ -606,8 +619,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#Province
-	 * PostalAddress.Province}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmProvince
+	 * PostalAddress.mmProvince}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -626,20 +639,21 @@ public class IndividualPerson6 {
 	 * definition} = "Province where a person was born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProvinceOfBirth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProvinceOfBirth = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmProvince;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.Province;
 			isDerived = false;
 			xmlTag = "PrvcOfBirth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProvinceOfBirth";
 			definition = "Province where a person was born.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cityOfBirth;
 	/**
 	 * City where a person was born.
 	 * <p>
@@ -652,8 +666,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#PlaceOfBirth
-	 * Person.PlaceOfBirth}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmPlaceOfBirth
+	 * Person.mmPlaceOfBirth}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -672,20 +686,21 @@ public class IndividualPerson6 {
 	 * definition} = "City where a person was born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CityOfBirth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCityOfBirth = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPlaceOfBirth;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.PlaceOfBirth;
 			isDerived = false;
 			xmlTag = "CityOfBirth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CityOfBirth";
 			definition = "City where a person was born.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text profession;
 	/**
 	 * Name of the occupation or job of a person.
 	 * <p>
@@ -698,8 +713,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#Profession
-	 * Person.Profession}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmProfession
+	 * Person.mmProfession}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -718,20 +733,21 @@ public class IndividualPerson6 {
 	 * definition} = "Name of the occupation or job of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Profession = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProfession = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmProfession;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.Profession;
 			isDerived = false;
 			xmlTag = "Prfssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Profession";
 			definition = "Name of the occupation or job of a person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CountryCode taxationCountry;
 	/**
 	 * Country of taxation of an individual person or an organisation.
 	 * <p>
@@ -744,7 +760,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -764,20 +781,21 @@ public class IndividualPerson6 {
 	 * "Country of taxation of an individual person or an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxationCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxationCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "TaxtnCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxationCountry";
 			definition = "Country of taxation of an individual person or an organisation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountryAndResidentialStatusType1 countryAndResidentialStatus;
 	/**
 	 * Country and residential status of an individual, for example,
 	 * non-pernament resident.
@@ -792,8 +810,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#ResidentialStatus
-	 * Person.ResidentialStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmResidentialStatus
+	 * Person.mmResidentialStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -814,20 +832,21 @@ public class IndividualPerson6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryAndResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryAndResidentialStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmResidentialStatus;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.ResidentialStatus;
 			isDerived = false;
 			xmlTag = "CtryAndResdtlSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryAndResidentialStatus";
 			definition = "Country and residential status of an individual, for example, non-pernament resident.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> CountryAndResidentialStatusType1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ModificationScope1> modifiedPostalAddress;
 	/**
 	 * Address information to be either inserted, updated or deleted.
 	 * <p>
@@ -860,21 +879,22 @@ public class IndividualPerson6 {
 	 * "Address information to be either inserted, updated or deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ModifiedPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModifiedPostalAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndividualPerson6.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> IndividualPerson6.mmObject();
 			isDerived = false;
 			xmlTag = "ModfdPstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedPostalAddress";
 			definition = "Address information to be either inserted, updated or deleted.";
-			minOccurs = 0;
 			maxOccurs = 5;
-			type_lazy = () -> ModificationScope1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ModificationScope1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ModificationScope3> modifiedCitizenship;
 	/**
 	 * Citizenship information to be inserted or deleted.
 	 * <p>
@@ -886,8 +906,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#Nationality
-	 * Person.Nationality}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmNationality
+	 * Person.mmNationality}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -906,21 +926,22 @@ public class IndividualPerson6 {
 	 * definition} = "Citizenship information to be inserted or deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ModifiedCitizenship = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModifiedCitizenship = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmNationality;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.Nationality;
 			isDerived = false;
 			xmlTag = "ModfdCtznsh";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedCitizenship";
 			definition = "Citizenship information to be inserted or deleted.";
-			minOccurs = 0;
 			maxOccurs = 3;
-			type_lazy = () -> ModificationScope3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ModificationScope3.mmObject();
 		}
 	};
+	protected CommunicationAddress3 primaryCommunicationAddress;
 	/**
 	 * Communication device number or electronic address used for communication.
 	 * <p>
@@ -954,21 +975,22 @@ public class IndividualPerson6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrimaryCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrimaryCommunicationAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndividualPerson6.mmObject();
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
+			componentContext_lazy = () -> IndividualPerson6.mmObject();
 			isDerived = false;
 			xmlTag = "PmryComAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCommunicationAddress";
 			definition = "Communication device number or electronic address used for communication.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CommunicationAddress3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmObject();
 		}
 	};
+	protected CommunicationAddress3 secondaryCommunicationAddress;
 	/**
 	 * Communication device number or electronic address used for communication.
 	 * <p>
@@ -1002,21 +1024,22 @@ public class IndividualPerson6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondaryCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondaryCommunicationAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndividualPerson6.mmObject();
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
+			componentContext_lazy = () -> IndividualPerson6.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryComAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCommunicationAddress";
 			definition = "Communication device number or electronic address used for communication.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CommunicationAddress3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ModificationScope2> modifiedOtherIdentification;
 	/**
 	 * Identification information to be either inserted or deleted.
 	 * <p>
@@ -1028,8 +1051,8 @@ public class IndividualPerson6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1049,19 +1072,19 @@ public class IndividualPerson6 {
 	 * "Identification information to be either inserted or deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ModifiedOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModifiedOtherIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> IndividualPerson6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "ModfdOthrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedOtherIdentification";
 			definition = "Identification information to be either inserted or deleted.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> ModificationScope2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ModificationScope2.mmObject();
 		}
 	};
 	/**
@@ -1073,11 +1096,11 @@ public class IndividualPerson6 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#NamePrefix
-	 * IndividualPerson6.NamePrefix}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmNamePrefix
+	 * IndividualPerson6.mmNamePrefix}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ExtendedNamePrefix
-	 * IndividualPerson6.ExtendedNamePrefix}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmExtendedNamePrefix
+	 * IndividualPerson6.mmExtendedNamePrefix}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -1096,35 +1119,195 @@ public class IndividualPerson6 {
 	 * "Either NamePrefix or ExtendedNamePrefix may be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor NamePrefixOrExtendedNamePrefixRule = new MMXor() {
+	public static final MMXor mmNamePrefixOrExtendedNamePrefixRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NamePrefixOrExtendedNamePrefixRule";
 			definition = "Either NamePrefix or ExtendedNamePrefix may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson6.NamePrefix, com.tools20022.repository.msg.IndividualPerson6.ExtendedNamePrefix);
 			messageComponent_lazy = () -> IndividualPerson6.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson6.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson6.mmExtendedNamePrefix);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson6.NamePrefix, com.tools20022.repository.msg.IndividualPerson6.ExtendedNamePrefix,
-						com.tools20022.repository.msg.IndividualPerson6.GivenName, com.tools20022.repository.msg.IndividualPerson6.MiddleName, com.tools20022.repository.msg.IndividualPerson6.Name,
-						com.tools20022.repository.msg.IndividualPerson6.NameSuffix, com.tools20022.repository.msg.IndividualPerson6.Gender, com.tools20022.repository.msg.IndividualPerson6.Language,
-						com.tools20022.repository.msg.IndividualPerson6.BirthDate, com.tools20022.repository.msg.IndividualPerson6.CountryOfBirth, com.tools20022.repository.msg.IndividualPerson6.ProvinceOfBirth,
-						com.tools20022.repository.msg.IndividualPerson6.CityOfBirth, com.tools20022.repository.msg.IndividualPerson6.Profession, com.tools20022.repository.msg.IndividualPerson6.TaxationCountry,
-						com.tools20022.repository.msg.IndividualPerson6.CountryAndResidentialStatus, com.tools20022.repository.msg.IndividualPerson6.ModifiedPostalAddress,
-						com.tools20022.repository.msg.IndividualPerson6.ModifiedCitizenship, com.tools20022.repository.msg.IndividualPerson6.PrimaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson6.SecondaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson6.ModifiedOtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson6.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson6.mmExtendedNamePrefix,
+						com.tools20022.repository.msg.IndividualPerson6.mmGivenName, com.tools20022.repository.msg.IndividualPerson6.mmMiddleName, com.tools20022.repository.msg.IndividualPerson6.mmName,
+						com.tools20022.repository.msg.IndividualPerson6.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson6.mmGender, com.tools20022.repository.msg.IndividualPerson6.mmLanguage,
+						com.tools20022.repository.msg.IndividualPerson6.mmBirthDate, com.tools20022.repository.msg.IndividualPerson6.mmCountryOfBirth, com.tools20022.repository.msg.IndividualPerson6.mmProvinceOfBirth,
+						com.tools20022.repository.msg.IndividualPerson6.mmCityOfBirth, com.tools20022.repository.msg.IndividualPerson6.mmProfession, com.tools20022.repository.msg.IndividualPerson6.mmTaxationCountry,
+						com.tools20022.repository.msg.IndividualPerson6.mmCountryAndResidentialStatus, com.tools20022.repository.msg.IndividualPerson6.mmModifiedPostalAddress,
+						com.tools20022.repository.msg.IndividualPerson6.mmModifiedCitizenship, com.tools20022.repository.msg.IndividualPerson6.mmPrimaryCommunicationAddress,
+						com.tools20022.repository.msg.IndividualPerson6.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson6.mmModifiedOtherIdentification);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IndividualPerson6";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson6.NamePrefixOrExtendedNamePrefixRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson6.mmNamePrefixOrExtendedNamePrefixRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NamePrefix1Code getNamePrefix() {
+		return namePrefix;
+	}
+
+	public void setNamePrefix(NamePrefix1Code namePrefix) {
+		this.namePrefix = namePrefix;
+	}
+
+	public Extended350Code getExtendedNamePrefix() {
+		return extendedNamePrefix;
+	}
+
+	public void setExtendedNamePrefix(Extended350Code extendedNamePrefix) {
+		this.extendedNamePrefix = extendedNamePrefix;
+	}
+
+	public Max35Text getGivenName() {
+		return givenName;
+	}
+
+	public void setGivenName(Max35Text givenName) {
+		this.givenName = givenName;
+	}
+
+	public Max35Text getMiddleName() {
+		return middleName;
+	}
+
+	public void setMiddleName(Max35Text middleName) {
+		this.middleName = middleName;
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getNameSuffix() {
+		return nameSuffix;
+	}
+
+	public void setNameSuffix(Max35Text nameSuffix) {
+		this.nameSuffix = nameSuffix;
+	}
+
+	public GenderCode getGender() {
+		return gender;
+	}
+
+	public void setGender(GenderCode gender) {
+		this.gender = gender;
+	}
+
+	public LanguageCode getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(LanguageCode language) {
+		this.language = language;
+	}
+
+	public ISODate getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(ISODate birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public CountryCode getCountryOfBirth() {
+		return countryOfBirth;
+	}
+
+	public void setCountryOfBirth(CountryCode countryOfBirth) {
+		this.countryOfBirth = countryOfBirth;
+	}
+
+	public Max35Text getProvinceOfBirth() {
+		return provinceOfBirth;
+	}
+
+	public void setProvinceOfBirth(Max35Text provinceOfBirth) {
+		this.provinceOfBirth = provinceOfBirth;
+	}
+
+	public Max35Text getCityOfBirth() {
+		return cityOfBirth;
+	}
+
+	public void setCityOfBirth(Max35Text cityOfBirth) {
+		this.cityOfBirth = cityOfBirth;
+	}
+
+	public Max35Text getProfession() {
+		return profession;
+	}
+
+	public void setProfession(Max35Text profession) {
+		this.profession = profession;
+	}
+
+	public CountryCode getTaxationCountry() {
+		return taxationCountry;
+	}
+
+	public void setTaxationCountry(CountryCode taxationCountry) {
+		this.taxationCountry = taxationCountry;
+	}
+
+	public CountryAndResidentialStatusType1 getCountryAndResidentialStatus() {
+		return countryAndResidentialStatus;
+	}
+
+	public void setCountryAndResidentialStatus(com.tools20022.repository.msg.CountryAndResidentialStatusType1 countryAndResidentialStatus) {
+		this.countryAndResidentialStatus = countryAndResidentialStatus;
+	}
+
+	public List<ModificationScope1> getModifiedPostalAddress() {
+		return modifiedPostalAddress;
+	}
+
+	public void setModifiedPostalAddress(List<com.tools20022.repository.msg.ModificationScope1> modifiedPostalAddress) {
+		this.modifiedPostalAddress = modifiedPostalAddress;
+	}
+
+	public List<ModificationScope3> getModifiedCitizenship() {
+		return modifiedCitizenship;
+	}
+
+	public void setModifiedCitizenship(List<com.tools20022.repository.msg.ModificationScope3> modifiedCitizenship) {
+		this.modifiedCitizenship = modifiedCitizenship;
+	}
+
+	public CommunicationAddress3 getPrimaryCommunicationAddress() {
+		return primaryCommunicationAddress;
+	}
+
+	public void setPrimaryCommunicationAddress(com.tools20022.repository.msg.CommunicationAddress3 primaryCommunicationAddress) {
+		this.primaryCommunicationAddress = primaryCommunicationAddress;
+	}
+
+	public CommunicationAddress3 getSecondaryCommunicationAddress() {
+		return secondaryCommunicationAddress;
+	}
+
+	public void setSecondaryCommunicationAddress(com.tools20022.repository.msg.CommunicationAddress3 secondaryCommunicationAddress) {
+		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
+	}
+
+	public List<ModificationScope2> getModifiedOtherIdentification() {
+		return modifiedOtherIdentification;
+	}
+
+	public void setModifiedOtherIdentification(List<com.tools20022.repository.msg.ModificationScope2> modifiedOtherIdentification) {
+		this.modifiedOtherIdentification = modifiedOtherIdentification;
 	}
 }

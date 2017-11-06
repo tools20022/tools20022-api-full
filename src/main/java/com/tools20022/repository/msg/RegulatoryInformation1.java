@@ -32,21 +32,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RegulatoryInformation1#Sector
- * RegulatoryInformation1.Sector}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RegulatoryInformation1#Branch
- * RegulatoryInformation1.Branch}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RegulatoryInformation1#Group
- * RegulatoryInformation1.Group}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RegulatoryInformation1#Other
- * RegulatoryInformation1.Other}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryInformation1#mmSector
+ * RegulatoryInformation1.mmSector}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryInformation1#mmBranch
+ * RegulatoryInformation1.mmBranch}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RegulatoryInformation1#mmGroup
+ * RegulatoryInformation1.mmGroup}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RegulatoryInformation1#mmOther
+ * RegulatoryInformation1.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegulatoryInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text sector;
 	/**
 	 * Sector of economic activity, for example, SAE in the Italian market.
 	 * <p>
@@ -88,7 +91,7 @@ public class RegulatoryInformation1 {
 	 * "Sector of economic activity, for example, SAE in the Italian market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sector = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
 			isDerived = false;
@@ -96,11 +99,12 @@ public class RegulatoryInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
 			definition = "Sector of economic activity, for example, SAE in the Italian market.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text branch;
 	/**
 	 * Branch of economic activity, for example, RAE in the Italian market.
 	 * <p>
@@ -129,7 +133,7 @@ public class RegulatoryInformation1 {
 	 * "Branch of economic activity, for example, RAE in the Italian market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Branch = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBranch = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
 			isDerived = false;
@@ -137,11 +141,12 @@ public class RegulatoryInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Branch";
 			definition = "Branch of economic activity, for example, RAE in the Italian market.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text group;
 	/**
 	 * Group of economic activity, for example, a code issued by a regulator.
 	 * <p>
@@ -170,7 +175,7 @@ public class RegulatoryInformation1 {
 	 * "Group of economic activity, for example, a code issued by a regulator."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Group = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroup = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
 			isDerived = false;
@@ -178,11 +183,12 @@ public class RegulatoryInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group";
 			definition = "Group of economic activity, for example, a code issued by a regulator.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text other;
 	/**
 	 * Other regulatory information.
 	 * <p>
@@ -210,7 +216,7 @@ public class RegulatoryInformation1 {
 	 * definition} = "Other regulatory information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Other = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
 			isDerived = false;
@@ -218,8 +224,8 @@ public class RegulatoryInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other regulatory information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -227,14 +233,46 @@ public class RegulatoryInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryInformation1.Sector, com.tools20022.repository.msg.RegulatoryInformation1.Branch, com.tools20022.repository.msg.RegulatoryInformation1.Group,
-						com.tools20022.repository.msg.RegulatoryInformation1.Other);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryInformation1.mmSector, com.tools20022.repository.msg.RegulatoryInformation1.mmBranch,
+						com.tools20022.repository.msg.RegulatoryInformation1.mmGroup, com.tools20022.repository.msg.RegulatoryInformation1.mmOther);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryInformation1";
 				definition = "Regulatory information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSector() {
+		return sector;
+	}
+
+	public void setSector(Max35Text sector) {
+		this.sector = sector;
+	}
+
+	public Max35Text getBranch() {
+		return branch;
+	}
+
+	public void setBranch(Max35Text branch) {
+		this.branch = branch;
+	}
+
+	public Max35Text getGroup() {
+		return group;
+	}
+
+	public void setGroup(Max35Text group) {
+		this.group = group;
+	}
+
+	public Max35Text getOther() {
+		return other;
+	}
+
+	public void setOther(Max35Text other) {
+		this.other = other;
 	}
 }

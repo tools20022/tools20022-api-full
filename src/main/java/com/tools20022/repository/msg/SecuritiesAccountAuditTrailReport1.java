@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1#SecuritiesAccountAuditTrailOrError
- * SecuritiesAccountAuditTrailReport1.SecuritiesAccountAuditTrailOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1#mmSecuritiesAccountAuditTrailOrError
+ * SecuritiesAccountAuditTrailReport1.mmSecuritiesAccountAuditTrailOrError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1#DatePeriod
- * SecuritiesAccountAuditTrailReport1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1#mmDatePeriod
+ * SecuritiesAccountAuditTrailReport1.mmDatePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1#SecuritiesAccountIdentification
- * SecuritiesAccountAuditTrailReport1.SecuritiesAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1#mmSecuritiesAccountIdentification
+ * SecuritiesAccountAuditTrailReport1.mmSecuritiesAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccountAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuditTrailOrBusinessError1Choice securitiesAccountAuditTrailOrError;
 	/**
 	 * Identifies the returned securities account reference data or error
 	 * information.
@@ -93,7 +94,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesAccountAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesAccountAuditTrailOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -101,12 +102,13 @@ public class SecuritiesAccountAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountAuditTrailOrError";
 			definition = "Identifies the returned securities account reference data or error information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 		}
 	};
+	protected DateSearchChoice datePeriod;
 	/**
 	 * Period in dates for which the audit trail is provided.
 	 * <p>
@@ -135,7 +137,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * definition} = "Period in dates for which the audit trail is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class SecuritiesAccountAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Period in dates for which the audit trail is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected SecuritiesAccount13 securitiesAccountIdentification;
 	/**
 	 * Identifies the securities account for which the audit trail is provided.
 	 * <p>
@@ -178,7 +181,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -186,23 +189,47 @@ public class SecuritiesAccountAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Identifies the securities account for which the audit trail is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.SecuritiesAccountAuditTrailOrError, com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.DatePeriod,
-						com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.SecuritiesAccountIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.mmSecuritiesAccountAuditTrailOrError, com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.mmDatePeriod,
+						com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.mmSecuritiesAccountIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountAuditTrailReport1";
 				definition = "Report information about securities account reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuditTrailOrBusinessError1Choice getSecuritiesAccountAuditTrailOrError() {
+		return securitiesAccountAuditTrailOrError;
+	}
+
+	public void setSecuritiesAccountAuditTrailOrError(AuditTrailOrBusinessError1Choice securitiesAccountAuditTrailOrError) {
+		this.securitiesAccountAuditTrailOrError = securitiesAccountAuditTrailOrError;
+	}
+
+	public DateSearchChoice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateSearchChoice datePeriod) {
+		this.datePeriod = datePeriod;
+	}
+
+	public SecuritiesAccount13 getSecuritiesAccountIdentification() {
+		return securitiesAccountIdentification;
+	}
+
+	public void setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = securitiesAccountIdentification;
 	}
 }

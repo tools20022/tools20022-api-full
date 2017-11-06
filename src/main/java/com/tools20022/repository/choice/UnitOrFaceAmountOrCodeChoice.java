@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice#Unit
- * UnitOrFaceAmountOrCodeChoice.Unit}</li>
+ * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice#mmUnit
+ * UnitOrFaceAmountOrCodeChoice.mmUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice#FaceAmount
- * UnitOrFaceAmountOrCodeChoice.FaceAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice#mmFaceAmount
+ * UnitOrFaceAmountOrCodeChoice.mmFaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice#Code
- * UnitOrFaceAmountOrCodeChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice#mmCode
+ * UnitOrFaceAmountOrCodeChoice.mmCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnitOrFaceAmountOrCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber unit;
 	/**
 	 * Quantity expressed as a number, eg, a number of shares.
 	 * <p>
@@ -83,8 +84,8 @@ public class UnitOrFaceAmountOrCodeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class UnitOrFaceAmountOrCodeChoice {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> UnitOrFaceAmountOrCodeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "Unit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected CurrencyAndAmount faceAmount;
 	/**
 	 * Quantity expressed as an amount representing the face amount, ie, the
 	 * principal, of a debt instrument.
@@ -131,8 +133,8 @@ public class UnitOrFaceAmountOrCodeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#FaceAmount
-	 * AssetHolding.FaceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmFaceAmount
+	 * AssetHolding.mmFaceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,20 +155,21 @@ public class UnitOrFaceAmountOrCodeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> UnitOrFaceAmountOrCodeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.FaceAmount;
 			isDerived = false;
 			xmlTag = "FaceAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Quantity1Code code;
 	/**
 	 * Quantity expressed as a code.
 	 * <p>
@@ -180,8 +183,8 @@ public class UnitOrFaceAmountOrCodeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Code
-	 * SecuritiesQuantity.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCode
+	 * SecuritiesQuantity.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,17 +203,17 @@ public class UnitOrFaceAmountOrCodeChoice {
 	 * definition} = "Quantity expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmCode;
 			componentContext_lazy = () -> UnitOrFaceAmountOrCodeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Code;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Quantity expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Quantity1Code.mmObject();
 		}
 	};
@@ -218,15 +221,39 @@ public class UnitOrFaceAmountOrCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.Unit, com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.FaceAmount,
-						com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.Code);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.mmUnit, com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.mmFaceAmount,
+						com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.mmCode);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnitOrFaceAmountOrCodeChoice";
 				definition = "Choice between a unit in decimal number, a face amount in currency and amount or a unit expressed as a code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getUnit() {
+		return unit;
+	}
+
+	public void setUnit(DecimalNumber unit) {
+		this.unit = unit;
+	}
+
+	public CurrencyAndAmount getFaceAmount() {
+		return faceAmount;
+	}
+
+	public void setFaceAmount(CurrencyAndAmount faceAmount) {
+		this.faceAmount = faceAmount;
+	}
+
+	public Quantity1Code getCode() {
+		return code;
+	}
+
+	public void setCode(Quantity1Code code) {
+		this.code = code;
 	}
 }

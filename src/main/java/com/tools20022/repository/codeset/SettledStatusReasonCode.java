@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#UnitsPartiallySettled
- * SettledStatusReasonCode.UnitsPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmUnitsPartiallySettled
+ * SettledStatusReasonCode.mmUnitsPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#CashPartiallySettled
- * SettledStatusReasonCode.CashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmCashPartiallySettled
+ * SettledStatusReasonCode.mmCashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#UnitsCashPartiallySettled
- * SettledStatusReasonCode.UnitsCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmUnitsCashPartiallySettled
+ * SettledStatusReasonCode.mmUnitsCashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#GatedOneNAV
- * SettledStatusReasonCode.GatedOneNAV}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmGatedOneNAV
+ * SettledStatusReasonCode.mmGatedOneNAV}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#GatedMultipleNAV
- * SettledStatusReasonCode.GatedMultipleNAV}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmGatedMultipleNAV
+ * SettledStatusReasonCode.mmGatedMultipleNAV}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -100,7 +100,7 @@ public class SettledStatusReasonCode {
 	 * definition} = "Units are partially settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitsPartiallySettled = new MMCode() {
+	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
@@ -130,7 +130,7 @@ public class SettledStatusReasonCode {
 	 * definition} = "Cash is partially settled."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashPartiallySettled = new MMCode() {
+	public static final MMCode mmCashPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
@@ -160,7 +160,7 @@ public class SettledStatusReasonCode {
 	 * definition} = "Units and cash are both partially settled."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitsCashPartiallySettled = new MMCode() {
+	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
@@ -192,7 +192,7 @@ public class SettledStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GatedOneNAV = new MMCode() {
+	public static final MMCode mmGatedOneNAV = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedOneNAV";
@@ -225,7 +225,7 @@ public class SettledStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GatedMultipleNAV = new MMCode() {
+	public static final MMCode mmGatedMultipleNAV = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedMultipleNAV";
@@ -238,14 +238,14 @@ public class SettledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UPST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettledStatusReasonCode";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReasonCode.UnitsPartiallySettled, com.tools20022.repository.codeset.SettledStatusReasonCode.CashPartiallySettled,
-						com.tools20022.repository.codeset.SettledStatusReasonCode.UnitsCashPartiallySettled, com.tools20022.repository.codeset.SettledStatusReasonCode.GatedOneNAV,
-						com.tools20022.repository.codeset.SettledStatusReasonCode.GatedMultipleNAV);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReasonCode.mmUnitsPartiallySettled, com.tools20022.repository.codeset.SettledStatusReasonCode.mmCashPartiallySettled,
+						com.tools20022.repository.codeset.SettledStatusReasonCode.mmUnitsCashPartiallySettled, com.tools20022.repository.codeset.SettledStatusReasonCode.mmGatedOneNAV,
+						com.tools20022.repository.codeset.SettledStatusReasonCode.mmGatedMultipleNAV);
 				derivation_lazy = () -> Arrays.asList(SettledStatusReason1Code.mmObject(), SettledStatusReason2Code.mmObject());
 			}
 		});

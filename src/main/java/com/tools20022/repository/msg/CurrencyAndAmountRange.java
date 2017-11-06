@@ -38,14 +38,15 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange#Amount
- * CurrencyAndAmountRange.Amount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange#CreditDebitIndicator
- * CurrencyAndAmountRange.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange#mmAmount
+ * CurrencyAndAmountRange.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange#Currency
- * CurrencyAndAmountRange.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange#mmCreditDebitIndicator
+ * CurrencyAndAmountRange.mmCreditDebitIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange#mmCurrency
+ * CurrencyAndAmountRange.mmCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,6 +71,7 @@ import java.util.function.Supplier;
 public class CurrencyAndAmountRange {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAmountRangeChoice amount;
 	/**
 	 * Specified amount or amount range.
 	 * <p>
@@ -102,20 +104,21 @@ public class CurrencyAndAmountRange {
 	 * definition} = "Specified amount or amount range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyAndAmountRange.mmObject();
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
+			componentContext_lazy = () -> CurrencyAndAmountRange.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specified amount or amount range.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the amount is a credited or debited amount.
 	 * <p>
@@ -129,8 +132,8 @@ public class CurrencyAndAmountRange {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange#CreditDebitIndicator
-	 * AmountRange.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountRange#mmCreditDebitIndicator
+	 * AmountRange.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +153,21 @@ public class CurrencyAndAmountRange {
 	 * "Indicates whether the amount is a credited or debited amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CurrencyAndAmountRange.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the amount is a credited or debited amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected CurrencyCode currency;
 	/**
 	 * Medium of exchange of value, used to qualify an amount.
 	 * <p>
@@ -176,8 +180,8 @@ public class CurrencyAndAmountRange {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange#Currency
-	 * AmountRange.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountRange#mmCurrency
+	 * AmountRange.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,17 +200,17 @@ public class CurrencyAndAmountRange {
 	 * definition} = "Medium of exchange of value, used to qualify an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmCurrency;
 			componentContext_lazy = () -> CurrencyAndAmountRange.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value, used to qualify an amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
@@ -214,10 +218,10 @@ public class CurrencyAndAmountRange {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyAndAmountRange.Amount, com.tools20022.repository.msg.CurrencyAndAmountRange.CreditDebitIndicator,
-						com.tools20022.repository.msg.CurrencyAndAmountRange.Currency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyAndAmountRange.mmAmount, com.tools20022.repository.msg.CurrencyAndAmountRange.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.CurrencyAndAmountRange.mmCurrency);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -231,5 +235,29 @@ public class CurrencyAndAmountRange {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAmountRangeChoice getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ImpliedCurrencyAmountRangeChoice amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
 	}
 }

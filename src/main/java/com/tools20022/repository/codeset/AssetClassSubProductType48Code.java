@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType48Code#NonDeliverable
- * AssetClassSubProductType48Code.NonDeliverable}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType48Code#mmNonDeliverable
+ * AssetClassSubProductType48Code.mmNonDeliverable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassSubProductType48Code extends AssetClassSubProductTypeCode
 	 * name} = "NonDeliverable"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonDeliverable = new MMCode() {
+	public static final MMCode mmNonDeliverable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDeliverable";
@@ -83,11 +83,11 @@ public class AssetClassSubProductType48Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType48Code";
 				definition = "Defines the sub-product types for specific asset classes.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType48Code.NonDeliverable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType48Code.mmNonDeliverable);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

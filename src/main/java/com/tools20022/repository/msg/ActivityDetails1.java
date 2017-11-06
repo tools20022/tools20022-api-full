@@ -34,19 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ActivityDetails1#DateTime
- * ActivityDetails1.DateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActivityDetails1#Activity
- * ActivityDetails1.Activity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActivityDetails1#Initiator
- * ActivityDetails1.Initiator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActivityDetails1#mmDateTime
+ * ActivityDetails1.mmDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActivityDetails1#mmActivity
+ * ActivityDetails1.mmActivity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActivityDetails1#mmInitiator
+ * ActivityDetails1.mmInitiator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ActivityDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime dateTime;
 	/**
 	 * Date and time when the activity occurred.
 	 * <p>
@@ -89,7 +90,7 @@ public class ActivityDetails1 {
 	 * definition} = "Date and time when the activity occurred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ActivityDetails1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class ActivityDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time when the activity occurred.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Activity1 activity;
 	/**
 	 * Description of the reported activities.
 	 * <p>
@@ -127,7 +129,7 @@ public class ActivityDetails1 {
 	 * definition} = "Description of the reported activities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Activity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmActivity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ActivityDetails1.mmObject();
 			isDerived = false;
@@ -135,12 +137,13 @@ public class ActivityDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activity";
 			definition = "Description of the reported activities.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Activity1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Activity1.mmObject();
 		}
 	};
+	protected BICIdentification1 initiator;
 	/**
 	 * Financial institution which initiated the activity.
 	 * <p>
@@ -167,7 +170,7 @@ public class ActivityDetails1 {
 	 * definition} = "Financial institution which initiated the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Initiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitiator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ActivityDetails1.mmObject();
 			isDerived = false;
@@ -175,23 +178,47 @@ public class ActivityDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiator";
 			definition = "Financial institution which initiated the activity.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActivityDetails1.DateTime, com.tools20022.repository.msg.ActivityDetails1.Activity, com.tools20022.repository.msg.ActivityDetails1.Initiator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActivityDetails1.mmDateTime, com.tools20022.repository.msg.ActivityDetails1.mmActivity, com.tools20022.repository.msg.ActivityDetails1.mmInitiator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActivityDetails1";
 				definition = "Describes the activities that took place during a certain period for one trade transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(ISODateTime dateTime) {
+		this.dateTime = dateTime;
+	}
+
+	public Activity1 getActivity() {
+		return activity;
+	}
+
+	public void setActivity(com.tools20022.repository.msg.Activity1 activity) {
+		this.activity = activity;
+	}
+
+	public BICIdentification1 getInitiator() {
+		return initiator;
+	}
+
+	public void setInitiator(com.tools20022.repository.msg.BICIdentification1 initiator) {
+		this.initiator = initiator;
 	}
 }

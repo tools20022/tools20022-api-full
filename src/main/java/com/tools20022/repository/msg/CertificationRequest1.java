@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificationRequest1#CertificateRequestInformation
- * CertificationRequest1.CertificateRequestInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificationRequest1#mmCertificateRequestInformation
+ * CertificationRequest1.mmCertificateRequestInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificationRequest1#KeyIdentification
- * CertificationRequest1.KeyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificationRequest1#mmKeyIdentification
+ * CertificationRequest1.mmKeyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificationRequest1#KeyVersion
- * CertificationRequest1.KeyVersion}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificationRequest1#mmKeyVersion
+ * CertificationRequest1.mmKeyVersion}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CertificationRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CertificationRequest2 certificateRequestInformation;
 	/**
 	 * Information of the certificate to create.
 	 * <p>
@@ -98,7 +99,7 @@ public class CertificationRequest1 {
 	 * definition} = "Information of the certificate to create."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CertificateRequestInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCertificateRequestInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificationRequest1.mmObject();
 			isDerived = false;
@@ -106,12 +107,13 @@ public class CertificationRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateRequestInformation";
 			definition = "Information of the certificate to create.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CertificationRequest2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CertificationRequest2.mmObject();
 		}
 	};
+	protected Max140Text keyIdentification;
 	/**
 	 * Identification of the key.
 	 * <p>
@@ -141,13 +143,13 @@ public class CertificationRequest1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CertificationRequest2#Version
-	 * CertificationRequest2.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.CertificationRequest2#mmVersion
+	 * CertificationRequest2.mmVersion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CertificationRequest1.mmObject();
 			isDerived = false;
@@ -155,12 +157,13 @@ public class CertificationRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentification";
 			definition = "Identification of the key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.Version);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.mmVersion);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max140Text keyVersion;
 	/**
 	 * Version of the key.
 	 * <p>
@@ -188,7 +191,7 @@ public class CertificationRequest1 {
 	 * definition} = "Version of the key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CertificationRequest1.mmObject();
 			isDerived = false;
@@ -196,8 +199,8 @@ public class CertificationRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVersion";
 			definition = "Version of the key.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -205,15 +208,39 @@ public class CertificationRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest1.CertificateRequestInformation, com.tools20022.repository.msg.CertificationRequest1.KeyIdentification,
-						com.tools20022.repository.msg.CertificationRequest1.KeyVersion);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest1.mmCertificateRequestInformation, com.tools20022.repository.msg.CertificationRequest1.mmKeyIdentification,
+						com.tools20022.repository.msg.CertificationRequest1.mmKeyVersion);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CertificationRequest1";
 				definition = "Certification request PKCS#10 (Public Key Certificate Standard 10) for creation or renewal of an X.509 certificate.";
-				nextVersions_lazy = () -> Arrays.asList(CertificationRequest2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CertificationRequest2 getCertificateRequestInformation() {
+		return certificateRequestInformation;
+	}
+
+	public void setCertificateRequestInformation(com.tools20022.repository.msg.CertificationRequest2 certificateRequestInformation) {
+		this.certificateRequestInformation = certificateRequestInformation;
+	}
+
+	public Max140Text getKeyIdentification() {
+		return keyIdentification;
+	}
+
+	public void setKeyIdentification(Max140Text keyIdentification) {
+		this.keyIdentification = keyIdentification;
+	}
+
+	public Max140Text getKeyVersion() {
+		return keyVersion;
+	}
+
+	public void setKeyVersion(Max140Text keyVersion) {
+		this.keyVersion = keyVersion;
 	}
 }

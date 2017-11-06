@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#EndOfMonth
- * FrequencyGranularityType1Code.EndOfMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#mmEndOfMonth
+ * FrequencyGranularityType1Code.mmEndOfMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#EndOfWeek
- * FrequencyGranularityType1Code.EndOfWeek}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#mmEndOfWeek
+ * FrequencyGranularityType1Code.mmEndOfWeek}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#EndOfSemester
- * FrequencyGranularityType1Code.EndOfSemester}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#mmEndOfSemester
+ * FrequencyGranularityType1Code.mmEndOfSemester}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#EndOfQuarter
- * FrequencyGranularityType1Code.EndOfQuarter}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#mmEndOfQuarter
+ * FrequencyGranularityType1Code.mmEndOfQuarter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#EndOfFortnight
- * FrequencyGranularityType1Code.EndOfFortnight}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#mmEndOfFortnight
+ * FrequencyGranularityType1Code.mmEndOfFortnight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#EndOfDay
- * FrequencyGranularityType1Code.EndOfDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#mmEndOfDay
+ * FrequencyGranularityType1Code.mmEndOfDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#EndOfYear
- * FrequencyGranularityType1Code.EndOfYear}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityType1Code#mmEndOfYear
+ * FrequencyGranularityType1Code.mmEndOfYear}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,7 +91,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 * name} = "EndOfMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfMonth = new MMCode() {
+	public static final MMCode mmEndOfMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonth";
@@ -114,7 +114,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 * name} = "EndOfWeek"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfWeek = new MMCode() {
+	public static final MMCode mmEndOfWeek = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfWeek";
@@ -137,7 +137,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 * name} = "EndOfSemester"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfSemester = new MMCode() {
+	public static final MMCode mmEndOfSemester = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfSemester";
@@ -160,7 +160,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 * name} = "EndOfQuarter"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfQuarter = new MMCode() {
+	public static final MMCode mmEndOfQuarter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfQuarter";
@@ -183,7 +183,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 * name} = "EndOfFortnight"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfFortnight = new MMCode() {
+	public static final MMCode mmEndOfFortnight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfFortnight";
@@ -206,7 +206,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 * name} = "EndOfDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfDay = new MMCode() {
+	public static final MMCode mmEndOfDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfDay";
@@ -229,7 +229,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 * name} = "EndOfYear"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfYear = new MMCode() {
+	public static final MMCode mmEndOfYear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfYear";
@@ -240,14 +240,14 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FrequencyGranularityType1Code";
 				definition = "Defines the granularity of the frequency used for the reporting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrequencyGranularityType1Code.EndOfMonth, com.tools20022.repository.codeset.FrequencyGranularityType1Code.EndOfWeek,
-						com.tools20022.repository.codeset.FrequencyGranularityType1Code.EndOfSemester, com.tools20022.repository.codeset.FrequencyGranularityType1Code.EndOfQuarter,
-						com.tools20022.repository.codeset.FrequencyGranularityType1Code.EndOfFortnight, com.tools20022.repository.codeset.FrequencyGranularityType1Code.EndOfDay,
-						com.tools20022.repository.codeset.FrequencyGranularityType1Code.EndOfYear);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfMonth, com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfWeek,
+						com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfSemester, com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfQuarter,
+						com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfFortnight, com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfDay,
+						com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfYear);
 				trace_lazy = () -> FrequencyGranularityTypeCode.mmObject();
 			}
 		});

@@ -33,49 +33,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#SignatureService
- * ChargeType8Code.SignatureService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmSignatureService
+ * ChargeType8Code.mmSignatureService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#StorageAtDestination
- * ChargeType8Code.StorageAtDestination}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmStorageAtDestination
+ * ChargeType8Code.mmStorageAtDestination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#StorageAtOrigin
- * ChargeType8Code.StorageAtOrigin}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType8Code#Packaging
- * ChargeType8Code.Packaging}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType8Code#PickUp
- * ChargeType8Code.PickUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmStorageAtOrigin
+ * ChargeType8Code.mmStorageAtOrigin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#DangerousGoodsFee
- * ChargeType8Code.DangerousGoodsFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmPackaging
+ * ChargeType8Code.mmPackaging}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmPickUp
+ * ChargeType8Code.mmPickUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#SecurityCharge
- * ChargeType8Code.SecurityCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmDangerousGoodsFee
+ * ChargeType8Code.mmDangerousGoodsFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#InsurancePremium
- * ChargeType8Code.InsurancePremium}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmSecurityCharge
+ * ChargeType8Code.mmSecurityCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#CollectFreight
- * ChargeType8Code.CollectFreight}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmInsurancePremium
+ * ChargeType8Code.mmInsurancePremium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#ClearanceAndHandlingAtOrigin
- * ChargeType8Code.ClearanceAndHandlingAtOrigin}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmCollectFreight
+ * ChargeType8Code.mmCollectFreight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#ClearanceAndHandlingAtDestination
- * ChargeType8Code.ClearanceAndHandlingAtDestination}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmClearanceAndHandlingAtOrigin
+ * ChargeType8Code.mmClearanceAndHandlingAtOrigin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#AirWayBillFee
- * ChargeType8Code.AirWayBillFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmClearanceAndHandlingAtDestination
+ * ChargeType8Code.mmClearanceAndHandlingAtDestination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#TransportCharges
- * ChargeType8Code.TransportCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmAirWayBillFee
+ * ChargeType8Code.mmAirWayBillFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType8Code#mmTransportCharges
+ * ChargeType8Code.mmTransportCharges}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -111,7 +112,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "SignatureService"</li>
 	 * </ul>
 	 */
-	public static final MMCode SignatureService = new MMCode() {
+	public static final MMCode mmSignatureService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureService";
@@ -134,7 +135,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "StorageAtDestination"</li>
 	 * </ul>
 	 */
-	public static final MMCode StorageAtDestination = new MMCode() {
+	public static final MMCode mmStorageAtDestination = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StorageAtDestination";
@@ -157,7 +158,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "StorageAtOrigin"</li>
 	 * </ul>
 	 */
-	public static final MMCode StorageAtOrigin = new MMCode() {
+	public static final MMCode mmStorageAtOrigin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StorageAtOrigin";
@@ -180,7 +181,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "Packaging"</li>
 	 * </ul>
 	 */
-	public static final MMCode Packaging = new MMCode() {
+	public static final MMCode mmPackaging = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Packaging";
@@ -203,7 +204,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "PickUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode PickUp = new MMCode() {
+	public static final MMCode mmPickUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUp";
@@ -226,7 +227,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "DangerousGoodsFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode DangerousGoodsFee = new MMCode() {
+	public static final MMCode mmDangerousGoodsFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DangerousGoodsFee";
@@ -249,7 +250,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "SecurityCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityCharge = new MMCode() {
+	public static final MMCode mmSecurityCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityCharge";
@@ -272,7 +273,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "InsurancePremium"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsurancePremium = new MMCode() {
+	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsurancePremium";
@@ -295,7 +296,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "CollectFreight"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollectFreight = new MMCode() {
+	public static final MMCode mmCollectFreight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectFreight";
@@ -318,7 +319,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "ClearanceAndHandlingAtOrigin"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClearanceAndHandlingAtOrigin = new MMCode() {
+	public static final MMCode mmClearanceAndHandlingAtOrigin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearanceAndHandlingAtOrigin";
@@ -341,7 +342,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "ClearanceAndHandlingAtDestination"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClearanceAndHandlingAtDestination = new MMCode() {
+	public static final MMCode mmClearanceAndHandlingAtDestination = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearanceAndHandlingAtDestination";
@@ -364,7 +365,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "AirWayBillFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode AirWayBillFee = new MMCode() {
+	public static final MMCode mmAirWayBillFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirWayBillFee";
@@ -387,7 +388,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 * name} = "TransportCharges"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransportCharges = new MMCode() {
+	public static final MMCode mmTransportCharges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportCharges";
@@ -398,17 +399,17 @@ public class ChargeType8Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIGN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType8Code";
 				definition = "Identifies charges linked to the conveyance of goods.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType8Code.SignatureService, com.tools20022.repository.codeset.ChargeType8Code.StorageAtDestination,
-						com.tools20022.repository.codeset.ChargeType8Code.StorageAtOrigin, com.tools20022.repository.codeset.ChargeType8Code.Packaging, com.tools20022.repository.codeset.ChargeType8Code.PickUp,
-						com.tools20022.repository.codeset.ChargeType8Code.DangerousGoodsFee, com.tools20022.repository.codeset.ChargeType8Code.SecurityCharge, com.tools20022.repository.codeset.ChargeType8Code.InsurancePremium,
-						com.tools20022.repository.codeset.ChargeType8Code.CollectFreight, com.tools20022.repository.codeset.ChargeType8Code.ClearanceAndHandlingAtOrigin,
-						com.tools20022.repository.codeset.ChargeType8Code.ClearanceAndHandlingAtDestination, com.tools20022.repository.codeset.ChargeType8Code.AirWayBillFee,
-						com.tools20022.repository.codeset.ChargeType8Code.TransportCharges);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType8Code.mmSignatureService, com.tools20022.repository.codeset.ChargeType8Code.mmStorageAtDestination,
+						com.tools20022.repository.codeset.ChargeType8Code.mmStorageAtOrigin, com.tools20022.repository.codeset.ChargeType8Code.mmPackaging, com.tools20022.repository.codeset.ChargeType8Code.mmPickUp,
+						com.tools20022.repository.codeset.ChargeType8Code.mmDangerousGoodsFee, com.tools20022.repository.codeset.ChargeType8Code.mmSecurityCharge, com.tools20022.repository.codeset.ChargeType8Code.mmInsurancePremium,
+						com.tools20022.repository.codeset.ChargeType8Code.mmCollectFreight, com.tools20022.repository.codeset.ChargeType8Code.mmClearanceAndHandlingAtOrigin,
+						com.tools20022.repository.codeset.ChargeType8Code.mmClearanceAndHandlingAtDestination, com.tools20022.repository.codeset.ChargeType8Code.mmAirWayBillFee,
+						com.tools20022.repository.codeset.ChargeType8Code.mmTransportCharges);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

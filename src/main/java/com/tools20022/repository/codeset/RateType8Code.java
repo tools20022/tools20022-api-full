@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType8Code#WithholdingOfLocalTax
- * RateType8Code.WithholdingOfLocalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType8Code#mmWithholdingOfLocalTax
+ * RateType8Code.mmWithholdingOfLocalTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType8Code#WithholdingOfForeignTax
- * RateType8Code.WithholdingOfForeignTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType8Code#LocalTax
- * RateType8Code.LocalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType8Code#mmWithholdingOfForeignTax
+ * RateType8Code.mmWithholdingOfForeignTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType8Code#mmLocalTax
+ * RateType8Code.mmLocalTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class RateType8Code extends RateTypeCode {
 	 * name} = "WithholdingOfLocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingOfLocalTax = new MMCode() {
+	public static final MMCode mmWithholdingOfLocalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfLocalTax";
@@ -105,7 +105,7 @@ public class RateType8Code extends RateTypeCode {
 	 * name} = "WithholdingOfForeignTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingOfForeignTax = new MMCode() {
+	public static final MMCode mmWithholdingOfForeignTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfForeignTax";
@@ -128,7 +128,7 @@ public class RateType8Code extends RateTypeCode {
 	 * name} = "LocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode LocalTax = new MMCode() {
+	public static final MMCode mmLocalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
@@ -139,13 +139,13 @@ public class RateType8Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WITL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType8Code";
 				definition = "Specifies the type of tax rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType8Code.WithholdingOfLocalTax, com.tools20022.repository.codeset.RateType8Code.WithholdingOfForeignTax,
-						com.tools20022.repository.codeset.RateType8Code.LocalTax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType8Code.mmWithholdingOfLocalTax, com.tools20022.repository.codeset.RateType8Code.mmWithholdingOfForeignTax,
+						com.tools20022.repository.codeset.RateType8Code.mmLocalTax);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

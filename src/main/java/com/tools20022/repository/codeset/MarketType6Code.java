@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType6Code#OverTheCounter
- * MarketType6Code.OverTheCounter}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType6Code#Various
- * MarketType6Code.Various}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType6Code#mmOverTheCounter
+ * MarketType6Code.mmOverTheCounter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType6Code#mmVarious
+ * MarketType6Code.mmVarious}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType6Code#StockExchange
- * MarketType6Code.StockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType6Code#mmStockExchange
+ * MarketType6Code.mmStockExchange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class MarketType6Code extends MarketTypeCode {
 	 * name} = "OverTheCounter"</li>
 	 * </ul>
 	 */
-	public static final MMCode OverTheCounter = new MMCode() {
+	public static final MMCode mmOverTheCounter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
@@ -108,7 +108,7 @@ public class MarketType6Code extends MarketTypeCode {
 	 * name} = "Various"</li>
 	 * </ul>
 	 */
-	public static final MMCode Various = new MMCode() {
+	public static final MMCode mmVarious = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
@@ -131,7 +131,7 @@ public class MarketType6Code extends MarketTypeCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchange = new MMCode() {
+	public static final MMCode mmStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
@@ -142,12 +142,13 @@ public class MarketType6Code extends MarketTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OTCO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketType6Code";
 				definition = "Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType6Code.OverTheCounter, com.tools20022.repository.codeset.MarketType6Code.Various, com.tools20022.repository.codeset.MarketType6Code.StockExchange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType6Code.mmOverTheCounter, com.tools20022.repository.codeset.MarketType6Code.mmVarious,
+						com.tools20022.repository.codeset.MarketType6Code.mmStockExchange);
 				trace_lazy = () -> MarketTypeCode.mmObject();
 			}
 		});

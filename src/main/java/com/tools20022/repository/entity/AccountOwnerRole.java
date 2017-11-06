@@ -39,33 +39,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndParties2#Role
- * AccountAndParties2.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount3#AccountOwner
- * CardAccount3.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount1#AccountOwner
- * CardAccount1.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount4#AccountOwner
- * CardAccount4.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#AccountOwner
- * CardAccount2.AccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndParties2#mmRole
+ * AccountAndParties2.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount3#mmAccountOwner
+ * CardAccount3.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount1#mmAccountOwner
+ * CardAccount1.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount4#mmAccountOwner
+ * CardAccount4.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#mmAccountOwner
+ * CardAccount2.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification79#AccountOwner
- * PartyIdentification79.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification79#mmAccountOwner
+ * PartyIdentification79.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount52#AccountOwner
- * InvestmentAccount52.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount10#AccountOwner
- * CardAccount10.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount9#AccountOwner
- * CardAccount9.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount8#AccountOwner
- * CardAccount8.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount7#AccountOwner
- * CardAccount7.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount52#mmAccountOwner
+ * InvestmentAccount52.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount10#mmAccountOwner
+ * CardAccount10.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount9#mmAccountOwner
+ * CardAccount9.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount8#mmAccountOwner
+ * CardAccount8.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount7#mmAccountOwner
+ * CardAccount7.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#AccountOwner
- * InvestmentAccount64.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#mmAccountOwner
+ * InvestmentAccount64.mmAccountOwner}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -86,8 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,14 +105,14 @@ public class AccountOwnerRole extends AccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnerRole";
 				definition = "Party that legally owns the account.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndParties2.Role, com.tools20022.repository.msg.CardAccount3.AccountOwner, com.tools20022.repository.msg.CardAccount1.AccountOwner,
-						com.tools20022.repository.msg.CardAccount4.AccountOwner, com.tools20022.repository.msg.CardAccount2.AccountOwner, com.tools20022.repository.msg.PartyIdentification79.AccountOwner,
-						com.tools20022.repository.msg.InvestmentAccount52.AccountOwner, com.tools20022.repository.msg.CardAccount10.AccountOwner, com.tools20022.repository.msg.CardAccount9.AccountOwner,
-						com.tools20022.repository.msg.CardAccount8.AccountOwner, com.tools20022.repository.msg.CardAccount7.AccountOwner, com.tools20022.repository.msg.InvestmentAccount64.AccountOwner);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndParties2.mmRole, com.tools20022.repository.msg.CardAccount3.mmAccountOwner, com.tools20022.repository.msg.CardAccount1.mmAccountOwner,
+						com.tools20022.repository.msg.CardAccount4.mmAccountOwner, com.tools20022.repository.msg.CardAccount2.mmAccountOwner, com.tools20022.repository.msg.PartyIdentification79.mmAccountOwner,
+						com.tools20022.repository.msg.InvestmentAccount52.mmAccountOwner, com.tools20022.repository.msg.CardAccount10.mmAccountOwner, com.tools20022.repository.msg.CardAccount9.mmAccountOwner,
+						com.tools20022.repository.msg.CardAccount8.mmAccountOwner, com.tools20022.repository.msg.CardAccount7.mmAccountOwner, com.tools20022.repository.msg.InvestmentAccount64.mmAccountOwner);
 				superType_lazy = () -> AccountPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(OwnerType1.mmObject(), AccountRole1.mmObject(), AccountOwner1Choice.mmObject(), AccountOwner2Choice.mmObject());
 			}

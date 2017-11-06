@@ -30,29 +30,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#Margin
- * SecuritiesAccountPurposeTypeCode.Margin}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmMargin
+ * SecuritiesAccountPurposeTypeCode.mmMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#ShortSale
- * SecuritiesAccountPurposeTypeCode.ShortSale}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmShortSale
+ * SecuritiesAccountPurposeTypeCode.mmShortSale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#Abroad
- * SecuritiesAccountPurposeTypeCode.Abroad}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmAbroad
+ * SecuritiesAccountPurposeTypeCode.mmAbroad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#Centralised
- * SecuritiesAccountPurposeTypeCode.Centralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmCentralised
+ * SecuritiesAccountPurposeTypeCode.mmCentralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#CashDVP
- * SecuritiesAccountPurposeTypeCode.CashDVP}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmCashDVP
+ * SecuritiesAccountPurposeTypeCode.mmCashDVP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#Physical
- * SecuritiesAccountPurposeTypeCode.Physical}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmPhysical
+ * SecuritiesAccountPurposeTypeCode.mmPhysical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#Fungible
- * SecuritiesAccountPurposeTypeCode.Fungible}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmFungible
+ * SecuritiesAccountPurposeTypeCode.mmFungible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#NonFungible
- * SecuritiesAccountPurposeTypeCode.NonFungible}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmNonFungible
+ * SecuritiesAccountPurposeTypeCode.mmNonFungible}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -66,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +108,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 * definition} = "Account is used when financing is done by the broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode Margin = new MMCode() {
+	public static final MMCode mmMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Margin";
@@ -138,7 +138,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 * definition} = "Account is used for short sale orders."</li>
 	 * </ul>
 	 */
-	public static final MMCode ShortSale = new MMCode() {
+	public static final MMCode mmShortSale = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ShortSale";
@@ -171,7 +171,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Abroad = new MMCode() {
+	public static final MMCode mmAbroad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Abroad";
@@ -202,7 +202,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 * "Account and all its related positions are held in one location."</li>
 	 * </ul>
 	 */
-	public static final MMCode Centralised = new MMCode() {
+	public static final MMCode mmCentralised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Centralised";
@@ -235,7 +235,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashDVP = new MMCode() {
+	public static final MMCode mmCashDVP = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashDVP";
@@ -265,7 +265,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 * definition} = "Account is used for physical domestic safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMCode Physical = new MMCode() {
+	public static final MMCode mmPhysical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Physical";
@@ -296,7 +296,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 * "Financial instruments in the safekeeping account are fungible."</li>
 	 * </ul>
 	 */
-	public static final MMCode Fungible = new MMCode() {
+	public static final MMCode mmFungible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fungible";
@@ -327,7 +327,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 * "Financial instruments in the safekeeping account are not fungible."</li>
 	 * </ul>
 	 */
-	public static final MMCode NonFungible = new MMCode() {
+	public static final MMCode mmNonFungible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonFungible";
@@ -340,15 +340,15 @@ public class SecuritiesAccountPurposeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MARG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccountPurposeTypeCode";
 				definition = "Specifies the purpose of the securities account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.Margin, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.ShortSale,
-						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.Abroad, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.Centralised,
-						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.CashDVP, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.Physical,
-						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.Fungible, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.NonFungible);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmMargin, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmShortSale,
+						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmAbroad, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmCentralised,
+						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmCashDVP, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmPhysical,
+						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmFungible, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmNonFungible);
 				derivation_lazy = () -> Arrays.asList(SecuritiesAccountPurposeType1Code.mmObject());
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrder3#StandingOrderIdentification
- * StandingOrder3.StandingOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrder3#mmStandingOrderIdentification
+ * StandingOrder3.mmStandingOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrder3#StandingOrderOrError
- * StandingOrder3.StandingOrderOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrder3#mmStandingOrderOrError
+ * StandingOrder3.mmStandingOrderOrError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingOrder3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected StandingOrderIdentification2 standingOrderIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -83,8 +84,8 @@ public class StandingOrder3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder#Identification
-	 * StandingOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder#mmIdentification
+	 * StandingOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,27 +107,28 @@ public class StandingOrder3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StandingOrder4#StandingOrderIdentification
-	 * StandingOrder4.StandingOrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrder4#mmStandingOrderIdentification
+	 * StandingOrder4.mmStandingOrderIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandingOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandingOrderIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmIdentification;
 			componentContext_lazy = () -> StandingOrder3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.Identification;
 			isDerived = false;
 			xmlTag = "StgOrdrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder4.StandingOrderIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder4.mmStandingOrderIdentification);
 			maxOccurs = 1;
-			complexType_lazy = () -> StandingOrderIdentification2.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification2.mmObject();
 		}
 	};
+	protected StandingOrderOrError2Choice standingOrderOrError;
 	/**
 	 * Requested information on the standing order or business error when
 	 * information has not been found.
@@ -158,13 +160,13 @@ public class StandingOrder3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StandingOrder4#StandingOrderOrError
-	 * StandingOrder4.StandingOrderOrError}</li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrder4#mmStandingOrderOrError
+	 * StandingOrder4.mmStandingOrderOrError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StandingOrderOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStandingOrderOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrder3.mmObject();
 			isDerived = false;
@@ -172,20 +174,20 @@ public class StandingOrder3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderOrError";
 			definition = "Requested information on the standing order or business error when information has not been found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder4.StandingOrderOrError);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder4.mmStandingOrderOrError);
 			maxOccurs = 1;
-			type_lazy = () -> StandingOrderOrError2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> StandingOrderOrError2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder3.StandingOrderIdentification, com.tools20022.repository.msg.StandingOrder3.StandingOrderOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder3.mmStandingOrderIdentification, com.tools20022.repository.msg.StandingOrder3.mmStandingOrderOrError);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrder3";
 				definition = "Defines the detailed attributes of a standing order.";
@@ -193,5 +195,21 @@ public class StandingOrder3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StandingOrderIdentification2 getStandingOrderIdentification() {
+		return standingOrderIdentification;
+	}
+
+	public void setStandingOrderIdentification(com.tools20022.repository.msg.StandingOrderIdentification2 standingOrderIdentification) {
+		this.standingOrderIdentification = standingOrderIdentification;
+	}
+
+	public StandingOrderOrError2Choice getStandingOrderOrError() {
+		return standingOrderOrError;
+	}
+
+	public void setStandingOrderOrError(StandingOrderOrError2Choice standingOrderOrError) {
+		this.standingOrderOrError = standingOrderOrError;
 	}
 }

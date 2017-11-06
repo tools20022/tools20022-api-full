@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The AccountOpeningAmendmentRequest message is sent from an organisation to a
@@ -55,48 +56,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#References
- * AccountOpeningAmendmentRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmReferences
+ * AccountOpeningAmendmentRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#From
- * AccountOpeningAmendmentRequestV02.From}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmFrom
+ * AccountOpeningAmendmentRequestV02.mmFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#ContractDates
- * AccountOpeningAmendmentRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmContractDates
+ * AccountOpeningAmendmentRequestV02.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#UnderlyingMasterAgreement
- * AccountOpeningAmendmentRequestV02.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmUnderlyingMasterAgreement
+ * AccountOpeningAmendmentRequestV02.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#Account
- * AccountOpeningAmendmentRequestV02.Account}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmAccount
+ * AccountOpeningAmendmentRequestV02.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#AccountServicerIdentification
- * AccountOpeningAmendmentRequestV02.AccountServicerIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmAccountServicerIdentification
+ * AccountOpeningAmendmentRequestV02.mmAccountServicerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#Organisation
- * AccountOpeningAmendmentRequestV02.Organisation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmOrganisation
+ * AccountOpeningAmendmentRequestV02.mmOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#Mandate
- * AccountOpeningAmendmentRequestV02.Mandate}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmMandate
+ * AccountOpeningAmendmentRequestV02.mmMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#Group
- * AccountOpeningAmendmentRequestV02.Group}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmGroup
+ * AccountOpeningAmendmentRequestV02.mmGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#ReferenceAccount
- * AccountOpeningAmendmentRequestV02.ReferenceAccount}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmReferenceAccount
+ * AccountOpeningAmendmentRequestV02.mmReferenceAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#DigitalSignature
- * AccountOpeningAmendmentRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmDigitalSignature
+ * AccountOpeningAmendmentRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#SupplementaryData
- * AccountOpeningAmendmentRequestV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmSupplementaryData
+ * AccountOpeningAmendmentRequestV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#identifier
- * AccountOpeningAmendmentRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.008.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountOpeningAmendmentRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected References4 references;
 	/**
 	 * Set of elements for the identification of the message and related
 	 * references.
@@ -141,17 +141,18 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock References = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Set of elements for the identification of the message and related references.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> References4.mmObject();
 		}
 	};
+	protected OrganisationIdentification8 from;
 	/**
 	 * Identifies the business sender of the message, if it is not the account
 	 * owner or account servicing financial institution.
@@ -178,17 +179,18 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock From = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFrom = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Fr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Identifies the business sender of the message, if it is not the account owner or account servicing financial institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OrganisationIdentification8.mmObject();
 		}
 	};
+	protected AccountContract2 contractDates;
 	/**
 	 * Specifies target dates.
 	 * <p>
@@ -212,17 +214,18 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * definition} = "Specifies target dates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ContractDates = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmContractDates = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrctDts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates";
 			definition = "Specifies target dates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountContract2.mmObject();
 		}
 	};
+	protected ContractDocument1 underlyingMasterAgreement;
 	/**
 	 * Account contract established between the organisation or the group to
 	 * which the organisation belongs, and the account servicer. This contract
@@ -250,17 +253,18 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingMasterAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingMasterAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygMstrAgrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingMasterAgreement";
 			definition = "Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContractDocument1.mmObject();
 		}
 	};
+	protected CustomerAccount4 account;
 	/**
 	 * Unique and unambiguous identification of the account between the account
 	 * owner and the account servicer.
@@ -287,17 +291,18 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Account = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique and unambiguous identification of the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CustomerAccount4.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountServicerIdentification;
 	/**
 	 * Unique and unambiguous identifier of a financial institution, as assigned
 	 * under an internationally recognised or proprietary identification scheme.
@@ -324,17 +329,18 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. \n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected Organisation12 organisation;
 	/**
 	 * Organised structure that is set up for a particular purpose, for example,
 	 * a business, government body, department, charity, or financial
@@ -361,17 +367,18 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Organisation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOrganisation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Org";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Organisation";
 			definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Organisation12.mmObject();
 		}
 	};
+	protected List<OperationMandate2> mandate;
 	/**
 	 * Information specifying the account mandate.
 	 * <p>
@@ -395,7 +402,7 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * definition} = "Information specifying the account mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Mandate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMandate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mndt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,6 +412,7 @@ public class AccountOpeningAmendmentRequestV02 {
 			complexType_lazy = () -> OperationMandate2.mmObject();
 		}
 	};
+	protected List<Group1> group;
 	/**
 	 * Definition of a group of parties.
 	 * <p>
@@ -426,7 +434,7 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * definition} = "Definition of a group of parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Group = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroup = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Grp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -436,6 +444,7 @@ public class AccountOpeningAmendmentRequestV02 {
 			complexType_lazy = () -> Group1.mmObject();
 		}
 	};
+	protected CashAccount24 referenceAccount;
 	/**
 	 * Unique and unambiguous identification of the account used as a reference
 	 * for the opening of another account.
@@ -461,17 +470,18 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReferenceAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferenceAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RefAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceAccount";
 			definition = "Unique and unambiguous identification of the account used as a reference for the opening of another account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CashAccount24.mmObject();
 		}
 	};
+	protected List<PartyAndSignature2> digitalSignature;
 	/**
 	 * Contains the signature with its components, namely signed info, signature
 	 * value, key info and the object.
@@ -498,7 +508,7 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -508,6 +518,7 @@ public class AccountOpeningAmendmentRequestV02 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -534,7 +545,7 @@ public class AccountOpeningAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -542,33 +553,6 @@ public class AccountOpeningAmendmentRequestV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "008";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -583,15 +567,118 @@ public class AccountOpeningAmendmentRequestV02 {
 				rootElement = "Document";
 				xmlTag = "AcctOpngAmdmntReq";
 				businessArea_lazy = () -> AccountManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.References, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.From,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.ContractDates, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.Account, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.AccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.Organisation, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.Mandate,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.Group, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.ReferenceAccount,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.DigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmReferences, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmFrom,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmAccount, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmAccountServicerIdentification,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmOrganisation, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmMandate,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmGroup, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmReferenceAccount,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "008";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References4 getReferences() {
+		return references;
+	}
+
+	public void setReferences(References4 references) {
+		this.references = references;
+	}
+
+	public OrganisationIdentification8 getFrom() {
+		return from;
+	}
+
+	public void setFrom(OrganisationIdentification8 from) {
+		this.from = from;
+	}
+
+	public AccountContract2 getContractDates() {
+		return contractDates;
+	}
+
+	public void setContractDates(AccountContract2 contractDates) {
+		this.contractDates = contractDates;
+	}
+
+	public ContractDocument1 getUnderlyingMasterAgreement() {
+		return underlyingMasterAgreement;
+	}
+
+	public void setUnderlyingMasterAgreement(ContractDocument1 underlyingMasterAgreement) {
+		this.underlyingMasterAgreement = underlyingMasterAgreement;
+	}
+
+	public CustomerAccount4 getAccount() {
+		return account;
+	}
+
+	public void setAccount(CustomerAccount4 account) {
+		this.account = account;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountServicerIdentification() {
+		return accountServicerIdentification;
+	}
+
+	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification5 accountServicerIdentification) {
+		this.accountServicerIdentification = accountServicerIdentification;
+	}
+
+	public Organisation12 getOrganisation() {
+		return organisation;
+	}
+
+	public void setOrganisation(Organisation12 organisation) {
+		this.organisation = organisation;
+	}
+
+	public List<OperationMandate2> getMandate() {
+		return mandate;
+	}
+
+	public void setMandate(List<OperationMandate2> mandate) {
+		this.mandate = mandate;
+	}
+
+	public List<Group1> getGroup() {
+		return group;
+	}
+
+	public void setGroup(List<Group1> group) {
+		this.group = group;
+	}
+
+	public CashAccount24 getReferenceAccount() {
+		return referenceAccount;
+	}
+
+	public void setReferenceAccount(CashAccount24 referenceAccount) {
+		this.referenceAccount = referenceAccount;
+	}
+
+	public List<PartyAndSignature2> getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(List<PartyAndSignature2> digitalSignature) {
+		this.digitalSignature = digitalSignature;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

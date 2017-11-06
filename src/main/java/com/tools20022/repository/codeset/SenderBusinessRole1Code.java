@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SenderBusinessRole1Code#AccountOwner
- * SenderBusinessRole1Code.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.SenderBusinessRole1Code#mmAccountOwner
+ * SenderBusinessRole1Code.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SenderBusinessRole1Code#AccountServicer
- * SenderBusinessRole1Code.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.codeset.SenderBusinessRole1Code#mmAccountServicer
+ * SenderBusinessRole1Code.mmAccountServicer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +76,7 @@ public class SenderBusinessRole1Code extends SenderBusinessRoleCode {
 	 * name} = "AccountOwner"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountOwner = new MMCode() {
+	public static final MMCode mmAccountOwner = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
@@ -99,7 +99,7 @@ public class SenderBusinessRole1Code extends SenderBusinessRoleCode {
 	 * name} = "AccountServicer"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicer = new MMCode() {
+	public static final MMCode mmAccountServicer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
@@ -110,11 +110,11 @@ public class SenderBusinessRole1Code extends SenderBusinessRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SenderBusinessRole1Code";
 				definition = "Specifies whether an account owner or account servicer sends the message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SenderBusinessRole1Code.AccountOwner, com.tools20022.repository.codeset.SenderBusinessRole1Code.AccountServicer);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SenderBusinessRole1Code.mmAccountOwner, com.tools20022.repository.codeset.SenderBusinessRole1Code.mmAccountServicer);
 				trace_lazy = () -> SenderBusinessRoleCode.mmObject();
 			}
 		});

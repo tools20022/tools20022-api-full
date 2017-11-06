@@ -32,8 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportType1#Type
- * ReportType1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportType1#mmType
+ * ReportType1.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -41,21 +41,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#ReportPurpose
- * FullPushThroughReportV03.ReportPurpose}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#mmReportPurpose
+ * FullPushThroughReportV03.mmReportPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#ReportPurpose
- * FullPushThroughReportV04.ReportPurpose}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#mmReportPurpose
+ * FullPushThroughReportV04.mmReportPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#ReportPurpose
- * FullPushThroughReportV05.ReportPurpose}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#mmReportPurpose
+ * FullPushThroughReportV05.mmReportPurpose}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportType1Code type;
 	/**
 	 * Specifies whether the pushed through baseline is a new one or an
 	 * amendment or a resubmission.
@@ -99,7 +100,7 @@ public class ReportType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportType1.mmObject();
 			isDerived = false;
@@ -107,8 +108,8 @@ public class ReportType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies whether the pushed through baseline is a new one or an amendment or a resubmission.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportType1Code.mmObject();
 		}
 	};
@@ -116,15 +117,23 @@ public class ReportType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportType1.Type);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV03.ReportPurpose, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.ReportPurpose,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.ReportPurpose);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportType1.mmType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmReportPurpose, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmReportPurpose,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmReportPurpose);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportType1";
 				definition = "Specifies the type of report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportType1Code getType() {
+		return type;
+	}
+
+	public void setType(ReportType1Code type) {
+		this.type = type;
 	}
 }

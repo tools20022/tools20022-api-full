@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment9#UndertakingAmendmentResponseMessage
- * Amendment9.UndertakingAmendmentResponseMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment9#mmUndertakingAmendmentResponseMessage
+ * Amendment9.mmUndertakingAmendmentResponseMessage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,16 +45,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01#UndertakingAmendmentResponseNotificationDetails
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01#mmUndertakingAmendmentResponseNotificationDetails
  * UndertakingAmendmentResponseNotificationV01.
- * UndertakingAmendmentResponseNotificationDetails}</li>
+ * mmUndertakingAmendmentResponseNotificationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Amendment9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingAmendmentResponseMessage1 undertakingAmendmentResponseMessage;
 	/**
 	 * Contents of the related UndertakingAmendmentResponse message.
 	 * <p>
@@ -100,34 +101,42 @@ public class Amendment9 {
 	 * "Contents of the related UndertakingAmendmentResponse message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingAmendmentResponseMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingAmendmentResponseMessage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Amendment9.mmObject();
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
+			componentContext_lazy = () -> Amendment9.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntRspnMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentResponseMessage";
 			definition = "Contents of the related UndertakingAmendmentResponse message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UndertakingAmendmentResponseMessage1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment9.UndertakingAmendmentResponseMessage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment9.mmUndertakingAmendmentResponseMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01.mmUndertakingAmendmentResponseNotificationDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01.UndertakingAmendmentResponseNotificationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Amendment9";
 				definition = "Details of the amendment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingAmendmentResponseMessage1 getUndertakingAmendmentResponseMessage() {
+		return undertakingAmendmentResponseMessage;
+	}
+
+	public void setUndertakingAmendmentResponseMessage(com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1 undertakingAmendmentResponseMessage) {
+		this.undertakingAmendmentResponseMessage = undertakingAmendmentResponseMessage;
 	}
 }

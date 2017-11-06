@@ -23,11 +23,13 @@ import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.NetPosition3;
+import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.ReportParameters1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,30 +67,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#ReportParameters
- * NetPositionV03.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmReportParameters
+ * NetPositionV03.mmReportParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#Pagination
- * NetPositionV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmPagination
+ * NetPositionV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#ClearingMember
- * NetPositionV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmClearingMember
+ * NetPositionV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#ClearingSegment
- * NetPositionV03.ClearingSegment}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmClearingSegment
+ * NetPositionV03.mmClearingSegment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#NetPositionReport
- * NetPositionV03.NetPositionReport}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmNetPositionReport
+ * NetPositionV03.mmNetPositionReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#SupplementaryData
- * NetPositionV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmSupplementaryData
+ * NetPositionV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#identifier
- * NetPositionV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code secl.004.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetPositionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportParameters1 reportParameters;
 	/**
 	 * Provides parameters of the margin report such as the creation date and
 	 * time, the report currency or the calculation date and time.
@@ -130,17 +131,18 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameters";
 			definition = "Provides parameters of the margin report such as the creation date and time, the report currency or the calculation date and time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters1.mmObject();
 		}
 	};
+	protected Pagination pagination;
 	/**
 	 * Provides information about the number of used pages.
 	 * <p>
@@ -163,17 +165,18 @@ public class NetPositionV03 {
 	 * definition} = "Provides information about the number of used pages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Provides information about the number of used pages.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingMember;
 	/**
 	 * Provides the identification of the account owner, that is the clearing
 	 * member (individual clearing member or general clearing member).
@@ -200,17 +203,18 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the account owner, that is the clearing member (individual clearing member or general clearing member).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingSegment;
 	/**
 	 * Clearing organisation that will clear the trade.<br>
 	 * <br>
@@ -241,17 +245,18 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingSegment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingSegment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrSgmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\n\r\nNote: This field allows Clearing Member Firm to segregate flows coming from clearing counterparty's clearing system. Indeed, Clearing Member Firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected List<NetPosition3> netPositionReport;
 	/**
 	 * Provides the net position details such as the average deal price and net
 	 * quantity.
@@ -277,7 +282,7 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NetPositionReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNetPositionReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NetPosRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,6 +292,7 @@ public class NetPositionV03 {
 			complexType_lazy = () -> NetPosition3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -313,7 +319,7 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,33 +327,6 @@ public class NetPositionV03 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "secl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "secl";
-			messageFunctionality = "004";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -361,12 +340,67 @@ public class NetPositionV03 {
 				rootElement = "Document";
 				xmlTag = "NetPos";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.NetPositionV03.ReportParameters, com.tools20022.repository.area.secl.NetPositionV03.Pagination,
-						com.tools20022.repository.area.secl.NetPositionV03.ClearingMember, com.tools20022.repository.area.secl.NetPositionV03.ClearingSegment, com.tools20022.repository.area.secl.NetPositionV03.NetPositionReport,
-						com.tools20022.repository.area.secl.NetPositionV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.secl.NetPositionV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.NetPositionV03.mmReportParameters, com.tools20022.repository.area.secl.NetPositionV03.mmPagination,
+						com.tools20022.repository.area.secl.NetPositionV03.mmClearingMember, com.tools20022.repository.area.secl.NetPositionV03.mmClearingSegment, com.tools20022.repository.area.secl.NetPositionV03.mmNetPositionReport,
+						com.tools20022.repository.area.secl.NetPositionV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "secl";
+						messageFunctionality = "004";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportParameters1 getReportParameters() {
+		return reportParameters;
+	}
+
+	public void setReportParameters(ReportParameters1 reportParameters) {
+		this.reportParameters = reportParameters;
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public PartyIdentification35Choice getClearingMember() {
+		return clearingMember;
+	}
+
+	public void setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = clearingMember;
+	}
+
+	public PartyIdentification35Choice getClearingSegment() {
+		return clearingSegment;
+	}
+
+	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+		this.clearingSegment = clearingSegment;
+	}
+
+	public List<NetPosition3> getNetPositionReport() {
+		return netPositionReport;
+	}
+
+	public void setNetPositionReport(List<NetPosition3> netPositionReport) {
+		this.netPositionReport = netPositionReport;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

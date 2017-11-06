@@ -33,10 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Counterparty9Choice#Seller
- * Counterparty9Choice.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Counterparty9Choice#Buyer
- * Counterparty9Choice.Buyer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Counterparty9Choice#mmSeller
+ * Counterparty9Choice.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Counterparty9Choice#mmBuyer
+ * Counterparty9Choice.mmBuyer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Counterparty9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentificationAndAccount106 seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -75,8 +77,8 @@ public class Counterparty9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,26 +99,27 @@ public class Counterparty9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Counterparty3Choice#Seller
-	 * Counterparty3Choice.Seller}</li>
+	 * {@linkplain com.tools20022.repository.choice.Counterparty3Choice#mmSeller
+	 * Counterparty3Choice.mmSeller}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Seller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Counterparty9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Counterparty3Choice.Seller;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Counterparty3Choice.mmSeller;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount106.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentificationAndAccount106.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount106 buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -129,8 +132,8 @@ public class Counterparty9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,33 +154,33 @@ public class Counterparty9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Counterparty3Choice#Buyer
-	 * Counterparty3Choice.Buyer}</li>
+	 * {@linkplain com.tools20022.repository.choice.Counterparty3Choice#mmBuyer
+	 * Counterparty3Choice.mmBuyer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Buyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Counterparty9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Counterparty3Choice.Buyer;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Counterparty3Choice.mmBuyer;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount106.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentificationAndAccount106.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Counterparty9Choice.Seller, com.tools20022.repository.choice.Counterparty9Choice.Buyer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Counterparty9Choice.mmSeller, com.tools20022.repository.choice.Counterparty9Choice.mmBuyer);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Counterparty9Choice";
 				definition = "Choice between buyer and seller.";
@@ -185,5 +188,21 @@ public class Counterparty9Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentificationAndAccount106 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(PartyIdentificationAndAccount106 seller) {
+		this.seller = seller;
+	}
+
+	public PartyIdentificationAndAccount106 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(PartyIdentificationAndAccount106 buyer) {
+		this.buyer = buyer;
 	}
 }

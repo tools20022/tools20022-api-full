@@ -32,35 +32,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#Provincial
- * TaxType15Code.Provincial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#NationalTax
- * TaxType15Code.NationalTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#StateTax
- * TaxType15Code.StateTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#mmProvincial
+ * TaxType15Code.mmProvincial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType15Code#WithholdingTax
- * TaxType15Code.WithholdingTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#StampDuty
- * TaxType15Code.StampDuty}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType15Code#mmNationalTax
+ * TaxType15Code.mmNationalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#mmStateTax
+ * TaxType15Code.mmStateTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType15Code#ConsumptionTax
- * TaxType15Code.ConsumptionTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType15Code#mmWithholdingTax
+ * TaxType15Code.mmWithholdingTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#mmStampDuty
+ * TaxType15Code.mmStampDuty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType15Code#ValueAddedTax
- * TaxType15Code.ValueAddedTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#CustomsTax
- * TaxType15Code.CustomsTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType15Code#mmConsumptionTax
+ * TaxType15Code.mmConsumptionTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType15Code#ValueAddedTaxOfZeroRate
- * TaxType15Code.ValueAddedTaxOfZeroRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType15Code#mmValueAddedTax
+ * TaxType15Code.mmValueAddedTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType15Code#mmCustomsTax
+ * TaxType15Code.mmCustomsTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType15Code#mmValueAddedTaxOfZeroRate
+ * TaxType15Code.mmValueAddedTaxOfZeroRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +97,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "Provincial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Provincial = new MMCode() {
+	public static final MMCode mmProvincial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provincial";
@@ -119,7 +120,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "NationalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalTax = new MMCode() {
+	public static final MMCode mmNationalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
@@ -142,7 +143,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "StateTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode StateTax = new MMCode() {
+	public static final MMCode mmStateTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StateTax";
@@ -165,7 +166,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTax = new MMCode() {
+	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
@@ -188,7 +189,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode StampDuty = new MMCode() {
+	public static final MMCode mmStampDuty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
@@ -211,7 +212,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "ConsumptionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsumptionTax = new MMCode() {
+	public static final MMCode mmConsumptionTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
@@ -234,7 +235,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTax = new MMCode() {
+	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
@@ -257,7 +258,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "CustomsTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomsTax = new MMCode() {
+	public static final MMCode mmCustomsTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomsTax";
@@ -280,7 +281,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 * name} = "ValueAddedTaxOfZeroRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTaxOfZeroRate = new MMCode() {
+	public static final MMCode mmValueAddedTaxOfZeroRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTaxOfZeroRate";
@@ -291,14 +292,14 @@ public class TaxType15Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType15Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType15Code.Provincial, com.tools20022.repository.codeset.TaxType15Code.NationalTax, com.tools20022.repository.codeset.TaxType15Code.StateTax,
-						com.tools20022.repository.codeset.TaxType15Code.WithholdingTax, com.tools20022.repository.codeset.TaxType15Code.StampDuty, com.tools20022.repository.codeset.TaxType15Code.ConsumptionTax,
-						com.tools20022.repository.codeset.TaxType15Code.ValueAddedTax, com.tools20022.repository.codeset.TaxType15Code.CustomsTax, com.tools20022.repository.codeset.TaxType15Code.ValueAddedTaxOfZeroRate);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType15Code.mmProvincial, com.tools20022.repository.codeset.TaxType15Code.mmNationalTax, com.tools20022.repository.codeset.TaxType15Code.mmStateTax,
+						com.tools20022.repository.codeset.TaxType15Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxType15Code.mmStampDuty, com.tools20022.repository.codeset.TaxType15Code.mmConsumptionTax,
+						com.tools20022.repository.codeset.TaxType15Code.mmValueAddedTax, com.tools20022.repository.codeset.TaxType15Code.mmCustomsTax, com.tools20022.repository.codeset.TaxType15Code.mmValueAddedTaxOfZeroRate);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

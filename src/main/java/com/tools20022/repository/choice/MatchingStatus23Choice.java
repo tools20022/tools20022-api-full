@@ -36,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#Matched
- * MatchingStatus23Choice.Matched}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmMatched
+ * MatchingStatus23Choice.mmMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#MatchedWithTolerance
- * MatchingStatus23Choice.MatchedWithTolerance}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmMatchedWithTolerance
+ * MatchingStatus23Choice.mmMatchedWithTolerance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#MatchingAlleged
- * MatchingStatus23Choice.MatchingAlleged}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmMatchingAlleged
+ * MatchingStatus23Choice.mmMatchingAlleged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#Unmatched
- * MatchingStatus23Choice.Unmatched}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmUnmatched
+ * MatchingStatus23Choice.mmUnmatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#ProprietaryStatus
- * MatchingStatus23Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmProprietaryStatus
+ * MatchingStatus23Choice.mmProprietaryStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,15 +60,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#MatchingStatus
- * SecuritiesTradeConfirmationStatusAdviceV02.MatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmMatchingStatus
+ * SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MatchingStatus23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProprietaryReason1 matched;
 	/**
 	 * Trade is matched.
 	 * <p>
@@ -97,8 +98,8 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,26 +119,27 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#Matched
-	 * MatchingStatus9Choice.Matched}</li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmMatched
+	 * MatchingStatus9Choice.mmMatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Matched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "Mtchd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			definition = "Trade is matched.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.Matched;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.mmMatched;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 matchedWithTolerance;
 	/**
 	 * Trade is matched with tolerance.
 	 * <p>
@@ -151,8 +153,8 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -172,25 +174,26 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#MatchedWithTolerance
-	 * MatchingStatus9Choice.MatchedWithTolerance}</li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmMatchedWithTolerance
+	 * MatchingStatus9Choice.mmMatchedWithTolerance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchedWithTolerance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchedWithTolerance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "MtchdWthTlrnce";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedWithTolerance";
 			definition = "Trade is matched with tolerance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.MatchedWithTolerance;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.mmMatchedWithTolerance;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected MatchingReason4Choice matchingAlleged;
 	/**
 	 * Trade is matched alleged.
 	 * <p>
@@ -203,8 +206,8 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -224,26 +227,27 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#MatchingAlleged
-	 * MatchingStatus9Choice.MatchingAlleged}</li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmMatchingAlleged
+	 * MatchingStatus9Choice.mmMatchingAlleged}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MatchingAlleged = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMatchingAlleged = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "MtchgAllgd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingAlleged";
 			definition = "Trade is matched alleged.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.MatchingAlleged;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.mmMatchingAlleged;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingReason4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.MatchingReason4Choice.mmObject();
 		}
 	};
+	protected MatchingReason1Choice unmatched;
 	/**
 	 * Trade is unmatched or mismatched.
 	 * <p>
@@ -256,8 +260,8 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#Reason
-	 * SecuritiesTradeStatus.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmReason
+	 * SecuritiesTradeStatus.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -277,26 +281,27 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#Unmatched
-	 * MatchingStatus9Choice.Unmatched}</li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmUnmatched
+	 * MatchingStatus9Choice.mmUnmatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Unmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.Reason;
 			isDerived = false;
 			xmlTag = "Umtchd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Trade is unmatched or mismatched.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.Unmatched;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.mmUnmatched;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.MatchingReason1Choice.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason1 proprietaryStatus;
 	/**
 	 * Provides a proprietary status and a proprietary reason of the processing
 	 * status of the trade.
@@ -333,35 +338,36 @@ public class MatchingStatus23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#ProprietaryStatus
-	 * MatchingStatus9Choice.ProprietaryStatus}</li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmProprietaryStatus
+	 * MatchingStatus9Choice.mmProprietaryStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Provides a proprietary status and a proprietary reason of the processing status of the trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.ProprietaryStatus;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus9Choice.mmProprietaryStatus;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus23Choice.Matched, com.tools20022.repository.choice.MatchingStatus23Choice.MatchedWithTolerance,
-						com.tools20022.repository.choice.MatchingStatus23Choice.MatchingAlleged, com.tools20022.repository.choice.MatchingStatus23Choice.Unmatched, com.tools20022.repository.choice.MatchingStatus23Choice.ProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus23Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus23Choice.mmMatchedWithTolerance,
+						com.tools20022.repository.choice.MatchingStatus23Choice.mmMatchingAlleged, com.tools20022.repository.choice.MatchingStatus23Choice.mmUnmatched,
+						com.tools20022.repository.choice.MatchingStatus23Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.MatchingStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatus23Choice";
 				definition = "Choice of status for the matching.";
@@ -369,5 +375,45 @@ public class MatchingStatus23Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProprietaryReason1 getMatched() {
+		return matched;
+	}
+
+	public void setMatched(ProprietaryReason1 matched) {
+		this.matched = matched;
+	}
+
+	public ProprietaryReason1 getMatchedWithTolerance() {
+		return matchedWithTolerance;
+	}
+
+	public void setMatchedWithTolerance(ProprietaryReason1 matchedWithTolerance) {
+		this.matchedWithTolerance = matchedWithTolerance;
+	}
+
+	public MatchingReason4Choice getMatchingAlleged() {
+		return matchingAlleged;
+	}
+
+	public void setMatchingAlleged(com.tools20022.repository.choice.MatchingReason4Choice matchingAlleged) {
+		this.matchingAlleged = matchingAlleged;
+	}
+
+	public MatchingReason1Choice getUnmatched() {
+		return unmatched;
+	}
+
+	public void setUnmatched(com.tools20022.repository.choice.MatchingReason1Choice unmatched) {
+		this.unmatched = unmatched;
+	}
+
+	public ProprietaryStatusAndReason1 getProprietaryStatus() {
+		return proprietaryStatus;
+	}
+
+	public void setProprietaryStatus(ProprietaryStatusAndReason1 proprietaryStatus) {
+		this.proprietaryStatus = proprietaryStatus;
 	}
 }

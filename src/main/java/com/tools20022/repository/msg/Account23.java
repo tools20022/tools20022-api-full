@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Account23#AccountIdentification
- * Account23.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Account23#mmAccountIdentification
+ * Account23.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Account23#RelatedAccountDetails
- * Account23.RelatedAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Account23#mmRelatedAccountDetails
+ * Account23.mmRelatedAccountDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Account23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text accountIdentification;
 	/**
 	 * Identification of the account.
 	 * <p>
@@ -80,8 +81,8 @@ public class Account23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Account23
@@ -99,20 +100,21 @@ public class Account23 {
 	 * definition} = "Identification of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> Account23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GenericIdentification1 relatedAccountDetails;
 	/**
 	 * Information about the account to which the existing account is to be
 	 * linked.
@@ -145,28 +147,28 @@ public class Account23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedAccountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Account23.mmObject();
 			businessComponentTrace_lazy = () -> Account.mmObject();
+			componentContext_lazy = () -> Account23.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAccountDetails";
 			definition = "Information about the account to which the existing account is to be linked.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account23.AccountIdentification, com.tools20022.repository.msg.Account23.RelatedAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account23.mmAccountIdentification, com.tools20022.repository.msg.Account23.mmRelatedAccountDetails);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Account23";
 				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
@@ -174,5 +176,21 @@ public class Account23 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public GenericIdentification1 getRelatedAccountDetails() {
+		return relatedAccountDetails;
+	}
+
+	public void setRelatedAccountDetails(com.tools20022.repository.msg.GenericIdentification1 relatedAccountDetails) {
+		this.relatedAccountDetails = relatedAccountDetails;
 	}
 }

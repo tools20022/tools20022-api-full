@@ -39,47 +39,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#FinancialInstrumentIdentification
- * SecuritiesSearchCriteria1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmFinancialInstrumentIdentification
+ * SecuritiesSearchCriteria1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#ClassificationFinancialInstrument
- * SecuritiesSearchCriteria1.ClassificationFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmClassificationFinancialInstrument
+ * SecuritiesSearchCriteria1.mmClassificationFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#MaturityDate
- * SecuritiesSearchCriteria1.MaturityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmMaturityDate
+ * SecuritiesSearchCriteria1.mmMaturityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#IssueDate
- * SecuritiesSearchCriteria1.IssueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmIssueDate
+ * SecuritiesSearchCriteria1.mmIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#IssueCurrency
- * SecuritiesSearchCriteria1.IssueCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmIssueCurrency
+ * SecuritiesSearchCriteria1.mmIssueCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#CountryOfIssue
- * SecuritiesSearchCriteria1.CountryOfIssue}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmCountryOfIssue
+ * SecuritiesSearchCriteria1.mmCountryOfIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#SecurityStatus
- * SecuritiesSearchCriteria1.SecurityStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmSecurityStatus
+ * SecuritiesSearchCriteria1.mmSecurityStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#MaintainingCSD
- * SecuritiesSearchCriteria1.MaintainingCSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmMaintainingCSD
+ * SecuritiesSearchCriteria1.mmMaintainingCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#InvestorCSD
- * SecuritiesSearchCriteria1.InvestorCSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmInvestorCSD
+ * SecuritiesSearchCriteria1.mmInvestorCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#IssuerCSD
- * SecuritiesSearchCriteria1.IssuerCSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmIssuerCSD
+ * SecuritiesSearchCriteria1.mmIssuerCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#TechnicalIssuerCSD
- * SecuritiesSearchCriteria1.TechnicalIssuerCSD}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#CSD
- * SecuritiesSearchCriteria1.CSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmTechnicalIssuerCSD
+ * SecuritiesSearchCriteria1.mmTechnicalIssuerCSD}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria1#mmCSD
+ * SecuritiesSearchCriteria1.mmCSD}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Way(s) of identifying the security.
 	 * <p>
@@ -120,7 +122,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "Way(s) of identifying the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -128,12 +130,13 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Way(s) of identifying the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected CFIIdentifier classificationFinancialInstrument;
 	/**
 	 * Classification type of the financial instrument, as per the ISO
 	 * Classification of Financial Instrument (CFI) codification, for example,
@@ -166,7 +169,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -174,11 +177,12 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
 		}
 	};
+	protected DateSearchChoice maturityDate;
 	/**
 	 * Planned final repayment date at the time of issuance.
 	 * <p>
@@ -207,7 +211,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "Planned final repayment date at the time of issuance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -215,11 +219,12 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected DateSearchChoice issueDate;
 	/**
 	 * Date/time at which the security was made available.
 	 * <p>
@@ -248,7 +253,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "Date/time at which the security was made available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -256,11 +261,12 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date/time at which the security was made available.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode issueCurrency;
 	/**
 	 * Currency in which a security is issued or redenominated.
 	 * <p>
@@ -289,7 +295,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "Currency in which a security is issued or redenominated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -297,11 +303,12 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected CountryCode countryOfIssue;
 	/**
 	 * Primary market or country where a security is issued by the issuer or its
 	 * agent.
@@ -332,7 +339,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -340,11 +347,12 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected SecurityStatus2Choice securityStatus;
 	/**
 	 * Specifies the status of the security within its lifecycle.
 	 * <p>
@@ -374,7 +382,7 @@ public class SecuritiesSearchCriteria1 {
 	 * "Specifies the status of the security within its lifecycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -382,11 +390,12 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecurityStatus2Choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice maintainingCSD;
 	/**
 	 * Entity involved in an activity.
 	 * <p>
@@ -414,7 +423,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "Entity involved in an activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MaintainingCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMaintainingCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -422,12 +431,13 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintainingCSD";
 			definition = "Entity involved in an activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice investorCSD;
 	/**
 	 * Entity involved in an activity.
 	 * <p>
@@ -455,7 +465,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "Entity involved in an activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestorCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestorCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -463,12 +473,13 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCSD";
 			definition = "Entity involved in an activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice issuerCSD;
 	/**
 	 * Entity involved in an activity.
 	 * <p>
@@ -496,7 +507,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "Entity involved in an activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -504,12 +515,13 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "Entity involved in an activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice technicalIssuerCSD;
 	/**
 	 * Technical issuer of a security
 	 * <p>
@@ -537,7 +549,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "Technical issuer of a security"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TechnicalIssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTechnicalIssuerCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -545,12 +557,13 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalIssuerCSD";
 			definition = "Technical issuer of a security";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice cSD;
 	/**
 	 * CSD of a security
 	 * <p>
@@ -578,7 +591,7 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} = "CSD of a security"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -586,27 +599,124 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSD";
 			definition = "CSD of a security";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSearchCriteria1.FinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesSearchCriteria1.ClassificationFinancialInstrument,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.MaturityDate, com.tools20022.repository.msg.SecuritiesSearchCriteria1.IssueDate, com.tools20022.repository.msg.SecuritiesSearchCriteria1.IssueCurrency,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.CountryOfIssue, com.tools20022.repository.msg.SecuritiesSearchCriteria1.SecurityStatus, com.tools20022.repository.msg.SecuritiesSearchCriteria1.MaintainingCSD,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.InvestorCSD, com.tools20022.repository.msg.SecuritiesSearchCriteria1.IssuerCSD, com.tools20022.repository.msg.SecuritiesSearchCriteria1.TechnicalIssuerCSD,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.CSD);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmClassificationFinancialInstrument, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmMaturityDate,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssueDate, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssueCurrency, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmCountryOfIssue,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmSecurityStatus, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmMaintainingCSD,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmInvestorCSD, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssuerCSD,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmTechnicalIssuerCSD, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmCSD);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesSearchCriteria1";
 				definition = "Criteria for a query about securities reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public CFIIdentifier getClassificationFinancialInstrument() {
+		return classificationFinancialInstrument;
+	}
+
+	public void setClassificationFinancialInstrument(CFIIdentifier classificationFinancialInstrument) {
+		this.classificationFinancialInstrument = classificationFinancialInstrument;
+	}
+
+	public DateSearchChoice getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(DateSearchChoice maturityDate) {
+		this.maturityDate = maturityDate;
+	}
+
+	public DateSearchChoice getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(DateSearchChoice issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public ActiveOrHistoricCurrencyCode getIssueCurrency() {
+		return issueCurrency;
+	}
+
+	public void setIssueCurrency(ActiveOrHistoricCurrencyCode issueCurrency) {
+		this.issueCurrency = issueCurrency;
+	}
+
+	public CountryCode getCountryOfIssue() {
+		return countryOfIssue;
+	}
+
+	public void setCountryOfIssue(CountryCode countryOfIssue) {
+		this.countryOfIssue = countryOfIssue;
+	}
+
+	public SecurityStatus2Choice getSecurityStatus() {
+		return securityStatus;
+	}
+
+	public void setSecurityStatus(SecurityStatus2Choice securityStatus) {
+		this.securityStatus = securityStatus;
+	}
+
+	public SystemPartyIdentification1Choice getMaintainingCSD() {
+		return maintainingCSD;
+	}
+
+	public void setMaintainingCSD(SystemPartyIdentification1Choice maintainingCSD) {
+		this.maintainingCSD = maintainingCSD;
+	}
+
+	public SystemPartyIdentification1Choice getInvestorCSD() {
+		return investorCSD;
+	}
+
+	public void setInvestorCSD(SystemPartyIdentification1Choice investorCSD) {
+		this.investorCSD = investorCSD;
+	}
+
+	public SystemPartyIdentification1Choice getIssuerCSD() {
+		return issuerCSD;
+	}
+
+	public void setIssuerCSD(SystemPartyIdentification1Choice issuerCSD) {
+		this.issuerCSD = issuerCSD;
+	}
+
+	public SystemPartyIdentification1Choice getTechnicalIssuerCSD() {
+		return technicalIssuerCSD;
+	}
+
+	public void setTechnicalIssuerCSD(SystemPartyIdentification1Choice technicalIssuerCSD) {
+		this.technicalIssuerCSD = technicalIssuerCSD;
+	}
+
+	public SystemPartyIdentification1Choice getCSD() {
+		return cSD;
+	}
+
+	public void setCSD(SystemPartyIdentification1Choice cSD) {
+		this.cSD = cSD;
 	}
 }

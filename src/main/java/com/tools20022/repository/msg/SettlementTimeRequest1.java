@@ -33,8 +33,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementTimeRequest1#CLSTime
- * SettlementTimeRequest1.CLSTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTimeRequest1#mmCLSTime
+ * SettlementTimeRequest1.mmCLSTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementTimeRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISOTime cLSTime;
 	/**
 	 * Time by which the funds must be credited, with confirmation, to the CLS
 	 * Bank's account at the central bank, expressed in Central European Time
@@ -73,8 +75,8 @@ public class SettlementTimeRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#CLSTime
-	 * SettlementTimeRequest.CLSTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmCLSTime
+	 * SettlementTimeRequest.mmCLSTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,17 +97,17 @@ public class SettlementTimeRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CLSTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCLSTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmCLSTime;
 			componentContext_lazy = () -> SettlementTimeRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.CLSTime;
 			isDerived = false;
 			xmlTag = "CLSTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CLSTime";
 			definition = "Time by which the funds must be credited, with confirmation, to the CLS Bank's account at the central bank, expressed in Central European Time (CET).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -113,14 +115,22 @@ public class SettlementTimeRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTimeRequest1.CLSTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTimeRequest1.mmCLSTime);
 				trace_lazy = () -> SettlementTimeRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementTimeRequest1";
 				definition = "Information on the requested settlement time of the instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISOTime getCLSTime() {
+		return cLSTime;
+	}
+
+	public void setCLSTime(ISOTime cLSTime) {
+		this.cLSTime = cLSTime;
 	}
 }

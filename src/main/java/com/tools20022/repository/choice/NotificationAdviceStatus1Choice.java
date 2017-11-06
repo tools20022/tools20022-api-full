@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NotificationAdviceStatus1Choice#ProcessedStatus
- * NotificationAdviceStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.NotificationAdviceStatus1Choice#mmProcessedStatus
+ * NotificationAdviceStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NotificationAdviceStatus1Choice#RejectedStatus
- * NotificationAdviceStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.NotificationAdviceStatus1Choice#mmRejectedStatus
+ * NotificationAdviceStatus1Choice.mmRejectedStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#NotificationAdviceStatus
- * AgentCANotificationStatusAdviceV01.NotificationAdviceStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#mmNotificationAdviceStatus
+ * AgentCANotificationStatusAdviceV01.mmNotificationAdviceStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationAdviceStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NotificationProcessingStatus1 processedStatus;
 	/**
 	 * Provides information about the processing status of advice.
 	 * <p>
@@ -96,7 +97,7 @@ public class NotificationAdviceStatus1Choice {
 	 * "Provides information about the processing status of advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NotificationAdviceStatus1Choice.mmObject();
 			isDerived = false;
@@ -104,12 +105,13 @@ public class NotificationAdviceStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NotificationProcessingStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NotificationProcessingStatus1.mmObject();
 		}
 	};
+	protected NotificationRejectionReason1 rejectedStatus;
 	/**
 	 * Provides information about the rejection status.
 	 * <p>
@@ -137,7 +139,7 @@ public class NotificationAdviceStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NotificationAdviceStatus1Choice.mmObject();
 			isDerived = false;
@@ -145,24 +147,40 @@ public class NotificationAdviceStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NotificationRejectionReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NotificationRejectionReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NotificationAdviceStatus1Choice.ProcessedStatus, com.tools20022.repository.choice.NotificationAdviceStatus1Choice.RejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.NotificationAdviceStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NotificationAdviceStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.NotificationAdviceStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationAdviceStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationAdviceStatus1Choice";
 				definition = "Provides the status of a notification advice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NotificationProcessingStatus1 getProcessedStatus() {
+		return processedStatus;
+	}
+
+	public void setProcessedStatus(NotificationProcessingStatus1 processedStatus) {
+		this.processedStatus = processedStatus;
+	}
+
+	public NotificationRejectionReason1 getRejectedStatus() {
+		return rejectedStatus;
+	}
+
+	public void setRejectedStatus(NotificationRejectionReason1 rejectedStatus) {
+		this.rejectedStatus = rejectedStatus;
 	}
 }

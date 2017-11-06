@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EligibleSecurity1#SecurityIdentification
- * EligibleSecurity1.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.EligibleSecurity1#mmSecurityIdentification
+ * EligibleSecurity1.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EligibleSecurity1#CollateralisationCurrency
- * EligibleSecurity1.CollateralisationCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.EligibleSecurity1#mmCollateralisationCurrency
+ * EligibleSecurity1.mmCollateralisationCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EligibleSecurity1#PartyIdentification
- * EligibleSecurity1.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.EligibleSecurity1#mmPartyIdentification
+ * EligibleSecurity1.mmPartyIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EligibleSecurity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINIdentifier securityIdentification;
 	/**
 	 * Identification of a security by an ISIN.
 	 * <p>
@@ -94,7 +95,7 @@ public class EligibleSecurity1 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EligibleSecurity1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class EligibleSecurity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security by an ISIN.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode collateralisationCurrency;
 	/**
 	 * Currency which may be processed by the system. A system may process
 	 * transactions in a single currency or in multiple currencies.
@@ -138,7 +140,7 @@ public class EligibleSecurity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralisationCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralisationCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EligibleSecurity1.mmObject();
 			isDerived = false;
@@ -146,11 +148,12 @@ public class EligibleSecurity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisationCurrency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected NCBOrPaymentBank1Choice partyIdentification;
 	/**
 	 * Identifies the party for which the eligible security is defined.
 	 * <p>
@@ -180,7 +183,7 @@ public class EligibleSecurity1 {
 	 * "Identifies the party for which the eligible security is defined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EligibleSecurity1.mmObject();
 			isDerived = false;
@@ -188,8 +191,8 @@ public class EligibleSecurity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the eligible security is defined.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NCBOrPaymentBank1Choice.mmObject();
 		}
 	};
@@ -197,14 +200,38 @@ public class EligibleSecurity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibleSecurity1.SecurityIdentification, com.tools20022.repository.msg.EligibleSecurity1.CollateralisationCurrency,
-						com.tools20022.repository.msg.EligibleSecurity1.PartyIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibleSecurity1.mmSecurityIdentification, com.tools20022.repository.msg.EligibleSecurity1.mmCollateralisationCurrency,
+						com.tools20022.repository.msg.EligibleSecurity1.mmPartyIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibleSecurity1";
 				definition = "Provides details of the eligible securities as defined in the collateral reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINIdentifier getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(ISINIdentifier securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public ActiveOrHistoricCurrencyCode getCollateralisationCurrency() {
+		return collateralisationCurrency;
+	}
+
+	public void setCollateralisationCurrency(ActiveOrHistoricCurrencyCode collateralisationCurrency) {
+		this.collateralisationCurrency = collateralisationCurrency;
+	}
+
+	public NCBOrPaymentBank1Choice getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(NCBOrPaymentBank1Choice partyIdentification) {
+		this.partyIdentification = partyIdentification;
 	}
 }

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max140Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details of many status advice reports where many received reports
@@ -35,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageReportHeader4#MessageReportIdentifier
- * MessageReportHeader4.MessageReportIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageReportHeader4#mmMessageReportIdentifier
+ * MessageReportHeader4.mmMessageReportIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageReportHeader4#MessageStatus
- * MessageReportHeader4.MessageStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageReportHeader4#mmMessageStatus
+ * MessageReportHeader4.mmMessageStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageReportHeader4#RecordStatus
- * MessageReportHeader4.RecordStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageReportHeader4#mmRecordStatus
+ * MessageReportHeader4.mmRecordStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageReportHeader4#SupplementaryData
- * MessageReportHeader4.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageReportHeader4#mmSupplementaryData
+ * MessageReportHeader4.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,15 +54,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingStatusAdviceV01#StatusAdvice
- * FinancialInstrumentReportingStatusAdviceV01.StatusAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingStatusAdviceV01#mmStatusAdvice
+ * FinancialInstrumentReportingStatusAdviceV01.mmStatusAdvice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageReportHeader4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text messageReportIdentifier;
 	/**
 	 * Provide detail on previously received message reports that are being
 	 * reported as part of this status advice.<br>
@@ -113,7 +115,7 @@ public class MessageReportHeader4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageReportIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageReportIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageReportHeader4.mmObject();
 			isDerived = false;
@@ -121,11 +123,12 @@ public class MessageReportHeader4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReportIdentifier";
 			definition = "Provide detail on previously received message reports that are being reported as part of this status advice.\r\n\r\nUsage:\r\nWhen required, this field will be populated with the BAH Business Message Identifier field.  Where only a single message report header is used, this field is not used and relies solely on the BAH Business Message Identifier field.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected StatusAdviceReport3 messageStatus;
 	/**
 	 * Details the status of the whole message that has been received.
 	 * <p>
@@ -153,7 +156,7 @@ public class MessageReportHeader4 {
 	 * "Details the status of the whole message that has been received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MessageReportHeader4.mmObject();
 			isDerived = false;
@@ -161,12 +164,13 @@ public class MessageReportHeader4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageStatus";
 			definition = "Details the status of the whole message that has been received.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> StatusAdviceReport3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReportRecord3> recordStatus;
 	/**
 	 * Provides per record status on the report that has been received.
 	 * <p>
@@ -194,7 +198,7 @@ public class MessageReportHeader4 {
 	 * "Provides per record status on the report that has been received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RecordStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecordStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MessageReportHeader4.mmObject();
 			isDerived = false;
@@ -203,10 +207,11 @@ public class MessageReportHeader4 {
 			name = "RecordStatus";
 			definition = "Provides per record status on the report that has been received.";
 			minOccurs = 0;
-			type_lazy = () -> StatusReportRecord3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -236,7 +241,7 @@ public class MessageReportHeader4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MessageReportHeader4.mmObject();
 			isDerived = false;
@@ -245,23 +250,55 @@ public class MessageReportHeader4 {
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageReportHeader4.MessageReportIdentifier, com.tools20022.repository.msg.MessageReportHeader4.MessageStatus,
-						com.tools20022.repository.msg.MessageReportHeader4.RecordStatus, com.tools20022.repository.msg.MessageReportHeader4.SupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingStatusAdviceV01.StatusAdvice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageReportHeader4.mmMessageReportIdentifier, com.tools20022.repository.msg.MessageReportHeader4.mmMessageStatus,
+						com.tools20022.repository.msg.MessageReportHeader4.mmRecordStatus, com.tools20022.repository.msg.MessageReportHeader4.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingStatusAdviceV01.mmStatusAdvice);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageReportHeader4";
 				definition = "Provides details of many status advice reports where many received reports are reported at once.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getMessageReportIdentifier() {
+		return messageReportIdentifier;
+	}
+
+	public void setMessageReportIdentifier(Max140Text messageReportIdentifier) {
+		this.messageReportIdentifier = messageReportIdentifier;
+	}
+
+	public StatusAdviceReport3 getMessageStatus() {
+		return messageStatus;
+	}
+
+	public void setMessageStatus(com.tools20022.repository.msg.StatusAdviceReport3 messageStatus) {
+		this.messageStatus = messageStatus;
+	}
+
+	public List<StatusReportRecord3> getRecordStatus() {
+		return recordStatus;
+	}
+
+	public void setRecordStatus(List<com.tools20022.repository.msg.StatusReportRecord3> recordStatus) {
+		this.recordStatus = recordStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

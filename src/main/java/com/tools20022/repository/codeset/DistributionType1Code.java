@@ -35,15 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionType1Code#RollingBasis
- * DistributionType1Code.RollingBasis}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionType1Code#mmRollingBasis
+ * DistributionType1Code.mmRollingBasis}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class DistributionType1Code extends DistributionTypeCode {
 	 * name} = "RollingBasis"</li>
 	 * </ul>
 	 */
-	public static final MMCode RollingBasis = new MMCode() {
+	public static final MMCode mmRollingBasis = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollingBasis";
@@ -99,13 +99,13 @@ public class DistributionType1Code extends DistributionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ROLL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DistributionType1Code";
 				definition = "Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.";
 				nextVersions_lazy = () -> Arrays.asList(DistributionType2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionType1Code.RollingBasis);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionType1Code.mmRollingBasis);
 				trace_lazy = () -> DistributionTypeCode.mmObject();
 			}
 		});

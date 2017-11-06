@@ -33,33 +33,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * POIComponentTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType1Code#Soft
- * POIComponentType1Code.Soft}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#EMVKernel
- * POIComponentType1Code.EMVKernel}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#mmSoft
+ * POIComponentType1Code.mmSoft}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#EMVLevel1
- * POIComponentType1Code.EMVLevel1}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#mmEMVKernel
+ * POIComponentType1Code.mmEMVKernel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#MerchantInterface
- * POIComponentType1Code.MerchantInterface}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#mmEMVLevel1
+ * POIComponentType1Code.mmEMVLevel1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#CardholderInterface
- * POIComponentType1Code.CardholderInterface}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#mmMerchantInterface
+ * POIComponentType1Code.mmMerchantInterface}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#SecureModule
- * POIComponentType1Code.SecureModule}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#mmCardholderInterface
+ * POIComponentType1Code.mmCardholderInterface}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#PINEntryDevice
- * POIComponentType1Code.PINEntryDevice}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#mmSecureModule
+ * POIComponentType1Code.mmSecureModule}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentType1Code#mmPINEntryDevice
+ * POIComponentType1Code.mmPINEntryDevice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +97,7 @@ public class POIComponentType1Code extends POIComponentTypeCode {
 	 * name} = "Soft"</li>
 	 * </ul>
 	 */
-	public static final MMCode Soft = new MMCode() {
+	public static final MMCode mmSoft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Soft";
@@ -119,7 +120,7 @@ public class POIComponentType1Code extends POIComponentTypeCode {
 	 * name} = "EMVKernel"</li>
 	 * </ul>
 	 */
-	public static final MMCode EMVKernel = new MMCode() {
+	public static final MMCode mmEMVKernel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVKernel";
@@ -142,7 +143,7 @@ public class POIComponentType1Code extends POIComponentTypeCode {
 	 * name} = "EMVLevel1"</li>
 	 * </ul>
 	 */
-	public static final MMCode EMVLevel1 = new MMCode() {
+	public static final MMCode mmEMVLevel1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVLevel1";
@@ -165,7 +166,7 @@ public class POIComponentType1Code extends POIComponentTypeCode {
 	 * name} = "MerchantInterface"</li>
 	 * </ul>
 	 */
-	public static final MMCode MerchantInterface = new MMCode() {
+	public static final MMCode mmMerchantInterface = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantInterface";
@@ -188,7 +189,7 @@ public class POIComponentType1Code extends POIComponentTypeCode {
 	 * name} = "CardholderInterface"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardholderInterface = new MMCode() {
+	public static final MMCode mmCardholderInterface = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderInterface";
@@ -211,7 +212,7 @@ public class POIComponentType1Code extends POIComponentTypeCode {
 	 * name} = "SecureModule"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecureModule = new MMCode() {
+	public static final MMCode mmSecureModule = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureModule";
@@ -234,7 +235,7 @@ public class POIComponentType1Code extends POIComponentTypeCode {
 	 * name} = "PINEntryDevice"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINEntryDevice = new MMCode() {
+	public static final MMCode mmPINEntryDevice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINEntryDevice";
@@ -245,15 +246,15 @@ public class POIComponentType1Code extends POIComponentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SOFT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "POIComponentType1Code";
 				definition = "Generic component type belonging to a POI (Point of Interaction) Terminal.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType1Code.Soft, com.tools20022.repository.codeset.POIComponentType1Code.EMVKernel,
-						com.tools20022.repository.codeset.POIComponentType1Code.EMVLevel1, com.tools20022.repository.codeset.POIComponentType1Code.MerchantInterface,
-						com.tools20022.repository.codeset.POIComponentType1Code.CardholderInterface, com.tools20022.repository.codeset.POIComponentType1Code.SecureModule,
-						com.tools20022.repository.codeset.POIComponentType1Code.PINEntryDevice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType1Code.mmSoft, com.tools20022.repository.codeset.POIComponentType1Code.mmEMVKernel,
+						com.tools20022.repository.codeset.POIComponentType1Code.mmEMVLevel1, com.tools20022.repository.codeset.POIComponentType1Code.mmMerchantInterface,
+						com.tools20022.repository.codeset.POIComponentType1Code.mmCardholderInterface, com.tools20022.repository.codeset.POIComponentType1Code.mmSecureModule,
+						com.tools20022.repository.codeset.POIComponentType1Code.mmPINEntryDevice);
 				trace_lazy = () -> POIComponentTypeCode.mmObject();
 			}
 		});

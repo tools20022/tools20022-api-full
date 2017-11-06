@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole5Code#TransferAgent
- * InvestmentFundRole5Code.TransferAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole5Code#mmTransferAgent
+ * InvestmentFundRole5Code.mmTransferAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole5Code#Intermediary
- * InvestmentFundRole5Code.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole5Code#mmIntermediary
+ * InvestmentFundRole5Code.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole5Code#Distributor
- * InvestmentFundRole5Code.Distributor}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole5Code#mmDistributor
+ * InvestmentFundRole5Code.mmDistributor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class InvestmentFundRole5Code extends PartyRoleCode {
 	 * name} = "TransferAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferAgent = new MMCode() {
+	public static final MMCode mmTransferAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgent";
@@ -107,7 +107,7 @@ public class InvestmentFundRole5Code extends PartyRoleCode {
 	 * name} = "Intermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediary = new MMCode() {
+	public static final MMCode mmIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
@@ -130,7 +130,7 @@ public class InvestmentFundRole5Code extends PartyRoleCode {
 	 * name} = "Distributor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Distributor = new MMCode() {
+	public static final MMCode mmDistributor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distributor";
@@ -141,13 +141,13 @@ public class InvestmentFundRole5Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRAG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundRole5Code";
 				definition = "Specifies the role played by an actor in an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundRole5Code.TransferAgent, com.tools20022.repository.codeset.InvestmentFundRole5Code.Intermediary,
-						com.tools20022.repository.codeset.InvestmentFundRole5Code.Distributor);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundRole5Code.mmTransferAgent, com.tools20022.repository.codeset.InvestmentFundRole5Code.mmIntermediary,
+						com.tools20022.repository.codeset.InvestmentFundRole5Code.mmDistributor);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

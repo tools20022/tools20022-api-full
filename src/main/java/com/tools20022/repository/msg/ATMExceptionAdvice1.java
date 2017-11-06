@@ -32,13 +32,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMExceptionAdvice1#Environment
- * ATMExceptionAdvice1.Environment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMExceptionAdvice1#Context
- * ATMExceptionAdvice1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMExceptionAdvice1#mmEnvironment
+ * ATMExceptionAdvice1.mmEnvironment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMExceptionAdvice1#mmContext
+ * ATMExceptionAdvice1.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMExceptionAdvice1#Transaction
- * ATMExceptionAdvice1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMExceptionAdvice1#mmTransaction
+ * ATMExceptionAdvice1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAdviceV01#ATMExceptionAdvice
- * ATMExceptionAdviceV01.ATMExceptionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAdviceV01#mmATMExceptionAdvice
+ * ATMExceptionAdviceV01.mmATMExceptionAdvice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMExceptionAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment16 environment;
 	/**
 	 * Environment of the exception.
 	 * <p>
@@ -94,7 +95,7 @@ public class ATMExceptionAdvice1 {
 	 * definition} = "Environment of the exception."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMExceptionAdvice1.mmObject();
 			isDerived = false;
@@ -102,12 +103,13 @@ public class ATMExceptionAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the exception.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment16.mmObject();
 		}
 	};
+	protected ATMContext20 context;
 	/**
 	 * Context of the exception.
 	 * <p>
@@ -134,7 +136,7 @@ public class ATMExceptionAdvice1 {
 	 * definition} = "Context of the exception."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMExceptionAdvice1.mmObject();
 			isDerived = false;
@@ -142,12 +144,13 @@ public class ATMExceptionAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context of the exception.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext20.mmObject();
 		}
 	};
+	protected ATMTransaction27 transaction;
 	/**
 	 * Transaction for which the exception is sent.
 	 * <p>
@@ -174,7 +177,7 @@ public class ATMExceptionAdvice1 {
 	 * definition} = "Transaction for which the exception is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMExceptionAdvice1.mmObject();
 			isDerived = false;
@@ -182,25 +185,49 @@ public class ATMExceptionAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction for which the exception is sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction27.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction27.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMExceptionAdvice1.Environment, com.tools20022.repository.msg.ATMExceptionAdvice1.Context,
-						com.tools20022.repository.msg.ATMExceptionAdvice1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMExceptionAdviceV01.ATMExceptionAdvice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMExceptionAdvice1.mmEnvironment, com.tools20022.repository.msg.ATMExceptionAdvice1.mmContext,
+						com.tools20022.repository.msg.ATMExceptionAdvice1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMExceptionAdviceV01.mmATMExceptionAdvice);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMExceptionAdvice1";
 				definition = "Information related to exceptions occurring on the ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment16 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment16 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext20 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext20 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction27 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction27 transaction) {
+		this.transaction = transaction;
 	}
 }

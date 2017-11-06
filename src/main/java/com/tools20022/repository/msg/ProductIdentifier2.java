@@ -34,10 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProductIdentifier2#Type
- * ProductIdentifier2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProductIdentifier2#Identifier
- * ProductIdentifier2.Identifier}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProductIdentifier2#mmType
+ * ProductIdentifier2.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProductIdentifier2#mmIdentifier
+ * ProductIdentifier2.mmIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProductIdentifier2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProductIdentifier2Code type;
 	/**
 	 * Specifies the type of product identifier by means of a code.
 	 * <p>
@@ -74,8 +76,8 @@ public class ProductIdentifier2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#Type
-	 * ProductIdentification.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmType
+	 * ProductIdentification.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +97,21 @@ public class ProductIdentifier2 {
 	 * "Specifies the type of product identifier by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmType;
 			componentContext_lazy = () -> ProductIdentifier2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of product identifier by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
 	};
+	protected Max35Text identifier;
 	/**
 	 * Specifies the product identifier.
 	 * <p>
@@ -121,8 +124,8 @@ public class ProductIdentifier2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#Identifier
-	 * ProductIdentification.Identifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmIdentifier
+	 * ProductIdentification.mmIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +144,17 @@ public class ProductIdentifier2 {
 	 * definition} = "Specifies the product identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> ProductIdentifier2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.Identifier;
 			isDerived = false;
 			xmlTag = "Idr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identifier";
 			definition = "Specifies the product identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -159,14 +162,30 @@ public class ProductIdentifier2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductIdentifier2.Type, com.tools20022.repository.msg.ProductIdentifier2.Identifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductIdentifier2.mmType, com.tools20022.repository.msg.ProductIdentifier2.mmIdentifier);
 				trace_lazy = () -> ProductIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductIdentifier2";
 				definition = "Information used to identify a product.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProductIdentifier2Code getType() {
+		return type;
+	}
+
+	public void setType(ProductIdentifier2Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getIdentifier() {
+		return identifier;
+	}
+
+	public void setIdentifier(Max35Text identifier) {
+		this.identifier = identifier;
 	}
 }

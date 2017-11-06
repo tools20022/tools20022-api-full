@@ -29,11 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ThresholdTypeCode#Secured
- * ThresholdTypeCode.Secured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ThresholdTypeCode#Unsecured
- * ThresholdTypeCode.Unsecured}</li>
+ * {@linkplain com.tools20022.repository.codeset.ThresholdTypeCode#mmSecured
+ * ThresholdTypeCode.mmSecured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ThresholdTypeCode#mmUnsecured
+ * ThresholdTypeCode.mmUnsecured}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +94,7 @@ public class ThresholdTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Secured = new MMCode() {
+	public static final MMCode mmSecured = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Secured";
@@ -127,7 +128,7 @@ public class ThresholdTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Unsecured = new MMCode() {
+	public static final MMCode mmUnsecured = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsecured";
@@ -140,12 +141,12 @@ public class ThresholdTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SECU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ThresholdTypeCode";
 				definition = "Defines whether the threshold was applied on an unsecured or securited basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ThresholdTypeCode.Secured, com.tools20022.repository.codeset.ThresholdTypeCode.Unsecured);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ThresholdTypeCode.mmSecured, com.tools20022.repository.codeset.ThresholdTypeCode.mmUnsecured);
 				derivation_lazy = () -> Arrays.asList(ThresholdType1Code.mmObject());
 			}
 		});

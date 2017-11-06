@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SuspendedStatusReason5Choice#Code
- * SuspendedStatusReason5Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SuspendedStatusReason5Choice#mmCode
+ * SuspendedStatusReason5Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SuspendedStatusReason5Choice#Proprietary
- * SuspendedStatusReason5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SuspendedStatusReason5Choice#mmProprietary
+ * SuspendedStatusReason5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SuspendedStatusReason5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SuspendedStatusReason3Code code;
 	/**
 	 * Suspended reason expressed as a code.
 	 * <p>
@@ -94,11 +95,11 @@ public class SuspendedStatusReason5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice#Code
-	 * ConditionallyAcceptedStatusReason3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice#mmCode
+	 * ConditionallyAcceptedStatusReason3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SuspendedStatusReason5Choice.mmObject();
 			isDerived = false;
@@ -106,12 +107,13 @@ public class SuspendedStatusReason5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Suspended reason expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReason3Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Suspended reason expressed as a proprietary code.
 	 * <p>
@@ -139,11 +141,11 @@ public class SuspendedStatusReason5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice#Proprietary
-	 * ConditionallyAcceptedStatusReason3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice#mmProprietary
+	 * ConditionallyAcceptedStatusReason3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SuspendedStatusReason5Choice.mmObject();
 			isDerived = false;
@@ -151,19 +153,19 @@ public class SuspendedStatusReason5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Suspended reason expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SuspendedStatusReason5Choice.Code, com.tools20022.repository.choice.SuspendedStatusReason5Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SuspendedStatusReason5Choice.mmCode, com.tools20022.repository.choice.SuspendedStatusReason5Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SuspendedStatusReason5Choice";
 				definition = "Choice of formats for a suspended status.";
@@ -171,5 +173,21 @@ public class SuspendedStatusReason5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SuspendedStatusReason3Code getCode() {
+		return code;
+	}
+
+	public void setCode(SuspendedStatusReason3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

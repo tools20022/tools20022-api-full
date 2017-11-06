@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AcceptedStatusReason1Choice#Code
- * AcceptedStatusReason1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.AcceptedStatusReason1Choice#mmCode
+ * AcceptedStatusReason1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AcceptedStatusReason1Choice#Proprietary
- * AcceptedStatusReason1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.AcceptedStatusReason1Choice#mmProprietary
+ * AcceptedStatusReason1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptedStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AcceptedStatusReason1Code code;
 	/**
 	 * Reason for the status expressed as a code.
 	 * <p>
@@ -93,11 +94,11 @@ public class AcceptedStatusReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PendingStatusReason2Choice#Code
-	 * PendingStatusReason2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingStatusReason2Choice#mmCode
+	 * PendingStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcceptedStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -105,12 +106,13 @@ public class AcceptedStatusReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatusReason2Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatusReason2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AcceptedStatusReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification36 proprietary;
 	/**
 	 * Reason for the status expressed as a proprietary code.
 	 * <p>
@@ -139,11 +141,11 @@ public class AcceptedStatusReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PendingStatusReason2Choice#Proprietary
-	 * PendingStatusReason2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingStatusReason2Choice#mmProprietary
+	 * PendingStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcceptedStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -151,19 +153,19 @@ public class AcceptedStatusReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the status expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatusReason2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatusReason2Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification36.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcceptedStatusReason1Choice.Code, com.tools20022.repository.choice.AcceptedStatusReason1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcceptedStatusReason1Choice.mmCode, com.tools20022.repository.choice.AcceptedStatusReason1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReason1Choice";
 				definition = "Choice of formats for an accepted status reason code.";
@@ -171,5 +173,21 @@ public class AcceptedStatusReason1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AcceptedStatusReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(AcceptedStatusReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification36 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification36 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

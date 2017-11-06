@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.StandAloneRemittanceAdviceISOLatestversi
 import com.tools20022.repository.msgset.StandAloneRemittanceAdviceMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The RemittanceAdvice message allows the originator to provide remittance
@@ -63,21 +64,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV03#GroupHeader
- * RemittanceAdviceV03.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV03#mmGroupHeader
+ * RemittanceAdviceV03.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV03#RemittanceInformation
- * RemittanceAdviceV03.RemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV03#mmRemittanceInformation
+ * RemittanceAdviceV03.mmRemittanceInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV03#SupplementaryData
- * RemittanceAdviceV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV03#mmSupplementaryData
+ * RemittanceAdviceV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV03#identifier
- * RemittanceAdviceV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code remt.001.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RemittanceAdviceV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader62 groupHeader;
 	/**
 	 * Set of characteristics shared by all remittance information included in
 	 * the message.
@@ -123,22 +123,23 @@ public class RemittanceAdviceV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV02#GroupHeader
-	 * RemittanceAdviceV02.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV02#mmGroupHeader
+	 * RemittanceAdviceV02.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all remittance information included in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.remt.RemittanceAdviceV02.GroupHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.remt.RemittanceAdviceV02.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader62.mmObject();
 		}
 	};
+	protected List<RemittanceInformation13> remittanceInformation;
 	/**
 	 * Provides information to enable the matching of an entry with the items
 	 * that the associated payment is intended to settle, such as commercial
@@ -168,21 +169,22 @@ public class RemittanceAdviceV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV02#RemittanceInformation
-	 * RemittanceAdviceV02.RemittanceInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV02#mmRemittanceInformation
+	 * RemittanceAdviceV02.mmRemittanceInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RemittanceInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRemittanceInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Provides information to enable the matching of an entry with the items that the associated payment is intended to settle, such as commercial invoices in an accounts' receivable system, tax obligations, or garnishment orders.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.remt.RemittanceAdviceV02.RemittanceInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.area.remt.RemittanceAdviceV02.mmRemittanceInformation;
 			minOccurs = 1;
 			complexType_lazy = () -> RemittanceInformation13.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -210,46 +212,19 @@ public class RemittanceAdviceV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV02#SupplementaryData
-	 * RemittanceAdviceV02.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV02#mmSupplementaryData
+	 * RemittanceAdviceV02.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be  captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.remt.RemittanceAdviceV02.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.remt.RemittanceAdviceV02.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "remt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "remt";
-			messageFunctionality = "001";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -264,11 +239,42 @@ public class RemittanceAdviceV03 {
 				rootElement = "Document";
 				xmlTag = "RmtAdvc";
 				businessArea_lazy = () -> PaymentsRemittanceAdviceLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.remt.RemittanceAdviceV03.GroupHeader, com.tools20022.repository.area.remt.RemittanceAdviceV03.RemittanceInformation,
-						com.tools20022.repository.area.remt.RemittanceAdviceV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.remt.RemittanceAdviceV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.remt.RemittanceAdviceV03.mmGroupHeader, com.tools20022.repository.area.remt.RemittanceAdviceV03.mmRemittanceInformation,
+						com.tools20022.repository.area.remt.RemittanceAdviceV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "remt";
+						messageFunctionality = "001";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader62 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader62 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<RemittanceInformation13> getRemittanceInformation() {
+		return remittanceInformation;
+	}
+
+	public void setRemittanceInformation(List<RemittanceInformation13> remittanceInformation) {
+		this.remittanceInformation = remittanceInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

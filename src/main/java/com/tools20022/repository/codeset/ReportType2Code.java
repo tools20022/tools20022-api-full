@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportType2Code#Precalculated
- * ReportType2Code.Precalculated}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ReportType2Code#Current
- * ReportType2Code.Current}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportType2Code#mmPrecalculated
+ * ReportType2Code.mmPrecalculated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReportType2Code#mmCurrent
+ * ReportType2Code.mmCurrent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class ReportType2Code extends ReportTypeCode {
 	 * name} = "Precalculated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Precalculated = new MMCode() {
+	public static final MMCode mmPrecalculated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precalculated";
@@ -105,7 +105,7 @@ public class ReportType2Code extends ReportTypeCode {
 	 * name} = "Current"</li>
 	 * </ul>
 	 */
-	public static final MMCode Current = new MMCode() {
+	public static final MMCode mmCurrent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
@@ -116,12 +116,12 @@ public class ReportType2Code extends ReportTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PREC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportType2Code";
 				definition = "Specifies whether the baseline report is based on matching or pre-matching data sets.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportType2Code.Precalculated, com.tools20022.repository.codeset.ReportType2Code.Current);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportType2Code.mmPrecalculated, com.tools20022.repository.codeset.ReportType2Code.mmCurrent);
 				trace_lazy = () -> ReportTypeCode.mmObject();
 			}
 		});

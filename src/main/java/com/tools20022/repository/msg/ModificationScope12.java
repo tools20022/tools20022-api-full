@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope12#ModificationScopeIndication
- * ModificationScope12.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope12#mmModificationScopeIndication
+ * ModificationScope12.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope12#FundDetails
- * ModificationScope12.FundDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope12#mmFundDetails
+ * ModificationScope12.mmFundDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -98,7 +99,7 @@ public class ModificationScope12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope12.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class ModificationScope12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected FinancialInstrument10 fundDetails;
 	/**
 	 * Information related to the account to be modified.
 	 * <p>
@@ -137,7 +139,7 @@ public class ModificationScope12 {
 	 * definition} = "Information related to the account to be modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFundDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope12.mmObject();
 			isDerived = false;
@@ -145,18 +147,18 @@ public class ModificationScope12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetails";
 			definition = "Information related to the account to be modified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope12.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope12.FundDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope12.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope12.mmFundDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope12";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -164,5 +166,21 @@ public class ModificationScope12 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public FinancialInstrument10 getFundDetails() {
+		return fundDetails;
+	}
+
+	public void setFundDetails(com.tools20022.repository.msg.FinancialInstrument10 fundDetails) {
+		this.fundDetails = fundDetails;
 	}
 }

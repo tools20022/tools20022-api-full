@@ -17,12 +17,16 @@
 
 package com.tools20022.metamodel.constraints;
 
+import java.util.function.Function;
+
 import com.tools20022.metamodel.MMLogicalType;
 import com.tools20022.metamodel.MMMessageAttribute;
-import java.util.function.Function;
+import com.tools20022.metamodel.struct.MMMessageAttribute_;
 
 /**
  * Calculate derived attribute {@link MMMessageAttribute#getXmlMemberType()}
+ * 
+ * @see MMMessageAttribute_#checkMessageAttributeHasExactlyOneType
  */
 public class DeriveMMMessageAttribute_xmlMemberType implements Function<MMMessageAttribute, MMLogicalType> {
 
@@ -31,6 +35,12 @@ public class DeriveMMMessageAttribute_xmlMemberType implements Function<MMMessag
 	 */
 	@Override
 	public MMLogicalType apply(MMMessageAttribute mmBean) {
-		throw new RuntimeException("Not implemented!");
+		if (mmBean.getSimpleType().isPresent())
+			return mmBean.getSimpleType().get();
+		else if (mmBean.getComplexType().isPresent())
+			return mmBean.getComplexType().get();
+		else
+			throw new RuntimeException(
+					"A MessageAttribute must have exactly one of the following: simpleType or complexType.");
 	}
 }

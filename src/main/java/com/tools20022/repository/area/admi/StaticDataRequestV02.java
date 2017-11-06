@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The StaticDataRequest message is sent by a participant of a central system to
@@ -60,24 +61,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#MessageIdentification
- * StaticDataRequestV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#mmMessageIdentification
+ * StaticDataRequestV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#SettlementSessionIdentifier
- * StaticDataRequestV02.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#mmSettlementSessionIdentifier
+ * StaticDataRequestV02.mmSettlementSessionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#DataRequestDetails
- * StaticDataRequestV02.DataRequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#mmDataRequestDetails
+ * StaticDataRequestV02.mmDataRequestDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#SupplementaryData
- * StaticDataRequestV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#mmSupplementaryData
+ * StaticDataRequestV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#identifier
- * StaticDataRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code admi.009.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StaticDataRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique and unambiguous identifier for the message, as assigned by the
 	 * sender.
@@ -118,17 +118,18 @@ public class StaticDataRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for the message, as assigned by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * To indicate the requested CLS Settlement Session that the related trade
 	 * is part of.
@@ -155,17 +156,18 @@ public class StaticDataRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected RequestDetails3 dataRequestDetails;
 	/**
 	 * Details of the request.
 	 * <p>
@@ -188,17 +190,18 @@ public class StaticDataRequestV02 {
 	 * definition} = "Details of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DataRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDataRequestDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DataReqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataRequestDetails";
 			definition = "Details of the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RequestDetails3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -225,7 +228,7 @@ public class StaticDataRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,33 +236,6 @@ public class StaticDataRequestV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "admi"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "admi";
-			messageFunctionality = "009";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -273,11 +249,50 @@ public class StaticDataRequestV02 {
 				rootElement = "Document";
 				xmlTag = "StatcDataReq";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataRequestV02.MessageIdentification, com.tools20022.repository.area.admi.StaticDataRequestV02.SettlementSessionIdentifier,
-						com.tools20022.repository.area.admi.StaticDataRequestV02.DataRequestDetails, com.tools20022.repository.area.admi.StaticDataRequestV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.admi.StaticDataRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataRequestV02.mmMessageIdentification, com.tools20022.repository.area.admi.StaticDataRequestV02.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.admi.StaticDataRequestV02.mmDataRequestDetails, com.tools20022.repository.area.admi.StaticDataRequestV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "admi";
+						messageFunctionality = "009";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
+	}
+
+	public RequestDetails3 getDataRequestDetails() {
+		return dataRequestDetails;
+	}
+
+	public void setDataRequestDetails(RequestDetails3 dataRequestDetails) {
+		this.dataRequestDetails = dataRequestDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

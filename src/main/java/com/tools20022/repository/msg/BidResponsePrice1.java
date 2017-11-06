@@ -37,25 +37,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#Price
- * BidResponsePrice1.Price}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#Commission
- * BidResponsePrice1.Commission}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmPrice
+ * BidResponsePrice1.mmPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmCommission
+ * BidResponsePrice1.mmCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#GrossIndicator
- * BidResponsePrice1.GrossIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#Side
- * BidResponsePrice1.Side}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#FairValue
- * BidResponsePrice1.FairValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#Country
- * BidResponsePrice1.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmGrossIndicator
+ * BidResponsePrice1.mmGrossIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmSide
+ * BidResponsePrice1.mmSide}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmFairValue
+ * BidResponsePrice1.mmFairValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmCountry
+ * BidResponsePrice1.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#TradingSession
- * BidResponsePrice1.TradingSession}</li>
+ * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmTradingSession
+ * BidResponsePrice1.mmTradingSession}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#SettlementDetails
- * BidResponsePrice1.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmSettlementDetails
+ * BidResponsePrice1.mmSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BidResponsePrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Price1 price;
 	/**
 	 * Price of the instrument, applicable to the bid.
 	 * <p>
@@ -89,7 +90,8 @@ public class BidResponsePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#Price Quote.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmPrice Quote.mmPrice}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +110,21 @@ public class BidResponsePrice1 {
 	 * definition} = "Price of the instrument, applicable to the bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Price = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmPrice;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.Price;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Price of the instrument, applicable to the bid.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected Commission2 commission;
 	/**
 	 * Amount of money due to a party as compensation for a service.
 	 * <p>
@@ -134,8 +137,8 @@ public class BidResponsePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#Commission
-	 * SecuritiesQuoteVariable.Commission}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmCommission
+	 * SecuritiesQuoteVariable.mmCommission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,20 +158,21 @@ public class BidResponsePrice1 {
 	 * "Amount of money due to a party as compensation for a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Commission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmCommission;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.Commission;
 			isDerived = false;
 			xmlTag = "Comssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Amount of money due to a party as compensation for a service.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> Commission2.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
 		}
 	};
+	protected TrueFalseIndicator grossIndicator;
 	/**
 	 * Indicates whether the bid response price is gross.
 	 * <p>
@@ -182,8 +186,8 @@ public class BidResponsePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#GrossAmountIndicator
-	 * ListTrading.GrossAmountIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmGrossAmountIndicator
+	 * ListTrading.mmGrossAmountIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,20 +206,21 @@ public class BidResponsePrice1 {
 	 * definition} = "Indicates whether the bid response price is gross."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrossIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.GrossAmountIndicator;
 			isDerived = false;
 			xmlTag = "GrssInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether the bid response price is gross.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Side1Code side;
 	/**
 	 * Indicates that bid is required on assumption that SideValue1 is Buy or
 	 * Sell. SideValue2 can be derived by inference.
@@ -229,8 +234,8 @@ public class BidResponsePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -251,20 +256,21 @@ public class BidResponsePrice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Indicates that bid is required on assumption that SideValue1 is Buy or Sell. SideValue2 can be derived by inference.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount fairValue;
 	/**
 	 * Difference between the value of a future and the value of the underlying
 	 * equities after allowing for the discounted cash flows associated with the
@@ -280,8 +286,8 @@ public class BidResponsePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#FairValue
-	 * ExchangeForPhysicalTrade.FairValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmFairValue
+	 * ExchangeForPhysicalTrade.mmFairValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -302,20 +308,21 @@ public class BidResponsePrice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FairValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmFairValue;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.FairValue;
 			isDerived = false;
 			xmlTag = "FairVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FairValue";
 			definition = "Difference between the value of a future and the value of the underlying equities after allowing for the discounted cash flows associated with the underlying stocks.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country to which the residential status is applicable.
 	 * <p>
@@ -328,7 +335,8 @@ public class BidResponsePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -347,20 +355,21 @@ public class BidResponsePrice1 {
 	 * definition} = "Country to which the residential status is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country to which the residential status is applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected TradingSession1 tradingSession;
 	/**
 	 * Established constraints under which a market operates
 	 * <p>
@@ -372,8 +381,8 @@ public class BidResponsePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#QuoteTradingSession
-	 * SecuritiesQuoteVariable.QuoteTradingSession}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmQuoteTradingSession
+	 * SecuritiesQuoteVariable.mmQuoteTradingSession}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -392,21 +401,22 @@ public class BidResponsePrice1 {
 	 * definition} = "Established constraints under which a market operates"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingSession = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQuoteTradingSession;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.QuoteTradingSession;
 			isDerived = false;
 			xmlTag = "TradgSsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSession";
 			definition = "Established constraints under which a market operates";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TradingSession1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 		}
 	};
+	protected SecuritiesSettlement2 settlementDetails;
 	/**
 	 * Parameters applied to the settlement of a security transfer.
 	 * <p>
@@ -418,8 +428,8 @@ public class BidResponsePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -439,35 +449,99 @@ public class BidResponsePrice1 {
 	 * "Parameters applied to the settlement of a security transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Parameters applied to the settlement of a security transfer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlement2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BidResponsePrice1.Price, com.tools20022.repository.msg.BidResponsePrice1.Commission, com.tools20022.repository.msg.BidResponsePrice1.GrossIndicator,
-						com.tools20022.repository.msg.BidResponsePrice1.Side, com.tools20022.repository.msg.BidResponsePrice1.FairValue, com.tools20022.repository.msg.BidResponsePrice1.Country,
-						com.tools20022.repository.msg.BidResponsePrice1.TradingSession, com.tools20022.repository.msg.BidResponsePrice1.SettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BidResponsePrice1.mmPrice, com.tools20022.repository.msg.BidResponsePrice1.mmCommission,
+						com.tools20022.repository.msg.BidResponsePrice1.mmGrossIndicator, com.tools20022.repository.msg.BidResponsePrice1.mmSide, com.tools20022.repository.msg.BidResponsePrice1.mmFairValue,
+						com.tools20022.repository.msg.BidResponsePrice1.mmCountry, com.tools20022.repository.msg.BidResponsePrice1.mmTradingSession, com.tools20022.repository.msg.BidResponsePrice1.mmSettlementDetails);
 				trace_lazy = () -> Quote.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BidResponsePrice1";
 				definition = "Indicates the price of the bid response.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Price1 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
+	}
+
+	public Commission2 getCommission() {
+		return commission;
+	}
+
+	public void setCommission(com.tools20022.repository.msg.Commission2 commission) {
+		this.commission = commission;
+	}
+
+	public TrueFalseIndicator getGrossIndicator() {
+		return grossIndicator;
+	}
+
+	public void setGrossIndicator(TrueFalseIndicator grossIndicator) {
+		this.grossIndicator = grossIndicator;
+	}
+
+	public Side1Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side1Code side) {
+		this.side = side;
+	}
+
+	public ActiveCurrencyAndAmount getFairValue() {
+		return fairValue;
+	}
+
+	public void setFairValue(ActiveCurrencyAndAmount fairValue) {
+		this.fairValue = fairValue;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public TradingSession1 getTradingSession() {
+		return tradingSession;
+	}
+
+	public void setTradingSession(com.tools20022.repository.msg.TradingSession1 tradingSession) {
+		this.tradingSession = tradingSession;
+	}
+
+	public SecuritiesSettlement2 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(com.tools20022.repository.msg.SecuritiesSettlement2 settlementDetails) {
+		this.settlementDetails = settlementDetails;
 	}
 }

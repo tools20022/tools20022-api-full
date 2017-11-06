@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.CorporateActionElection2;
 import com.tools20022.repository.msg.CorporateActionElection3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Decision taken by the account holder regarding the corporate action event.
@@ -43,26 +44,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#ExecutionRequestedDateTime
- * CorporateActionElection.ExecutionRequestedDateTime}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmExecutionRequestedDateTime
+ * CorporateActionElection.mmExecutionRequestedDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#Option
- * CorporateActionElection.Option}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmOption
+ * CorporateActionElection.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#CashAccount
- * CorporateActionElection.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmCashAccount
+ * CorporateActionElection.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#ElectionType
- * CorporateActionElection.ElectionType}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmElectionType
+ * CorporateActionElection.mmElectionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#Quantity
- * CorporateActionElection.Quantity}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmQuantity
+ * CorporateActionElection.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#AmendmentReason
- * CorporateActionElection.AmendmentReason}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmAmendmentReason
+ * CorporateActionElection.mmAmendmentReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#RelatedServicing
- * CorporateActionElection.RelatedServicing}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmRelatedServicing
+ * CorporateActionElection.mmRelatedServicing}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,17 +71,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#RelatedCorporateActionElection
- * CashAccount.RelatedCorporateActionElection}</li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedCorporateActionElection
+ * CashAccount.mmRelatedCorporateActionElection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#CorporateActionElection
- * SecuritiesQuantity.CorporateActionElection}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCorporateActionElection
+ * SecuritiesQuantity.mmCorporateActionElection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#CorporateActionElection
- * CorporateActionOption.CorporateActionElection}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCorporateActionElection
+ * CorporateActionOption.mmCorporateActionElection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#CorporateActionElection
- * CorporateActionServicing.CorporateActionElection}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionElection
+ * CorporateActionServicing.mmCorporateActionElection}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,8 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionElection {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime executionRequestedDateTime;
 	/**
 	 * Date/time at which the instructing party requests the instruction to be
 	 * executed.
@@ -124,58 +126,58 @@ public class CorporateActionElection {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#ExecutionRequestedDateTime
-	 * CorporateActionOption5.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#ExecutionRequestedDateTime
-	 * CorporateActionOption13.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#ExecutionRequestedDateTime
-	 * CorporateActionOption25.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#ExecutionRequestedDateTime
-	 * CorporateActionOption30.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#ExecutionRequestedDateTime
-	 * CorporateActionOption38.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#ExecutionRequestedDateTime
-	 * CorporateActionOption47.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#ExecutionRequestedDateTime
-	 * CorporateActionOption57.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#ExecutionRequestedDateTime
-	 * CorporateActionOption58.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#ExecutionRequestedDateTime
-	 * CorporateActionOption103.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#ExecutionRequestedDateTime
-	 * CorporateActionOption107.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#ExecutionRequestedDateTime
-	 * CorporateActionOption118.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#ExecutionRequestedDateTime
-	 * CorporateActionOption123.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#ExecutionRequestedDateTime
-	 * CorporateActionOption131.ExecutionRequestedDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#ExecutionRequestedDateTime
-	 * CorporateActionOption134.ExecutionRequestedDateTime}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection
 	 * CorporateActionElection}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#mmExecutionRequestedDateTime
+	 * CorporateActionOption5.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#mmExecutionRequestedDateTime
+	 * CorporateActionOption13.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#mmExecutionRequestedDateTime
+	 * CorporateActionOption25.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#mmExecutionRequestedDateTime
+	 * CorporateActionOption30.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#mmExecutionRequestedDateTime
+	 * CorporateActionOption38.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#mmExecutionRequestedDateTime
+	 * CorporateActionOption47.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#mmExecutionRequestedDateTime
+	 * CorporateActionOption57.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#mmExecutionRequestedDateTime
+	 * CorporateActionOption58.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#mmExecutionRequestedDateTime
+	 * CorporateActionOption103.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#mmExecutionRequestedDateTime
+	 * CorporateActionOption107.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#mmExecutionRequestedDateTime
+	 * CorporateActionOption118.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#mmExecutionRequestedDateTime
+	 * CorporateActionOption123.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#mmExecutionRequestedDateTime
+	 * CorporateActionOption131.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmExecutionRequestedDateTime
+	 * CorporateActionOption134.mmExecutionRequestedDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -189,25 +191,26 @@ public class CorporateActionElection {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExecutionRequestedDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExecutionRequestedDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.ExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption13.ExecutionRequestedDateTime,
-					com.tools20022.repository.msg.CorporateActionOption25.ExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption30.ExecutionRequestedDateTime,
-					com.tools20022.repository.msg.CorporateActionOption38.ExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption47.ExecutionRequestedDateTime,
-					com.tools20022.repository.msg.CorporateActionOption57.ExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption58.ExecutionRequestedDateTime,
-					com.tools20022.repository.msg.CorporateActionOption103.ExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption107.ExecutionRequestedDateTime,
-					com.tools20022.repository.msg.CorporateActionOption118.ExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption123.ExecutionRequestedDateTime,
-					com.tools20022.repository.msg.CorporateActionOption131.ExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption134.ExecutionRequestedDateTime);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.mmExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption13.mmExecutionRequestedDateTime,
+					com.tools20022.repository.msg.CorporateActionOption25.mmExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption30.mmExecutionRequestedDateTime,
+					com.tools20022.repository.msg.CorporateActionOption38.mmExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption47.mmExecutionRequestedDateTime,
+					com.tools20022.repository.msg.CorporateActionOption57.mmExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption58.mmExecutionRequestedDateTime,
+					com.tools20022.repository.msg.CorporateActionOption103.mmExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption107.mmExecutionRequestedDateTime,
+					com.tools20022.repository.msg.CorporateActionOption118.mmExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption123.mmExecutionRequestedDateTime,
+					com.tools20022.repository.msg.CorporateActionOption131.mmExecutionRequestedDateTime, com.tools20022.repository.msg.CorporateActionOption134.mmExecutionRequestedDateTime);
 			elementContext_lazy = () -> CorporateActionElection.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExecutionRequestedDateTime";
 			definition = "Date/time at which the instructing party requests the instruction to be executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CorporateActionOption> option;
 	/**
 	 * Option on which the investor makes its decision.
 	 * <p>
@@ -216,8 +219,8 @@ public class CorporateActionElection {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#CorporateActionElection
-	 * CorporateActionOption.CorporateActionElection}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCorporateActionElection
+	 * CorporateActionOption.mmCorporateActionElection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -242,7 +245,7 @@ public class CorporateActionElection {
 	 * definition} = "Option on which the investor makes its decision."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Option = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionElection.mmObject();
 			isDerived = false;
@@ -250,11 +253,12 @@ public class CorporateActionElection {
 			name = "Option";
 			definition = "Option on which the investor makes its decision.";
 			minOccurs = 1;
-			type_lazy = () -> CorporateActionOption.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.CorporateActionElection;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmCorporateActionElection;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashAccount> cashAccount;
 	/**
 	 * Specifies the account(s) used in relation with the election of an option.
 	 * <p>
@@ -263,8 +267,8 @@ public class CorporateActionElection {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#RelatedCorporateActionElection
-	 * CashAccount.RelatedCorporateActionElection}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedCorporateActionElection
+	 * CashAccount.mmRelatedCorporateActionElection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -272,60 +276,60 @@ public class CorporateActionElection {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption2#Account
-	 * CashOption2.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption9#Account
-	 * CashOption9.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption12#Account
-	 * CashOption12.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption13#Account
-	 * CashOption13.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption18#Account
-	 * CashOption18.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption22#Account
-	 * CashOption22.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption26#Account
-	 * CashOption26.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption27#Account
-	 * CashOption27.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption5#Account
-	 * CashOption5.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption7#Account
-	 * CashOption7.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption19#Account
-	 * CashOption19.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption23#Account
-	 * CashOption23.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption30#Account
-	 * CashOption30.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption38#Account
-	 * CashOption38.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption39#Account
-	 * CashOption39.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption41#Account
-	 * CashOption41.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption44#Account
-	 * CashOption44.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption45#Account
-	 * CashOption45.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption46#Account
-	 * CashOption46.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption48#Account
-	 * CashOption48.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#Account
-	 * CashOption52.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption55#Account
-	 * CashOption55.Account}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection
 	 * CorporateActionElection}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption2#mmAccount
+	 * CashOption2.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption9#mmAccount
+	 * CashOption9.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption12#mmAccount
+	 * CashOption12.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption13#mmAccount
+	 * CashOption13.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption18#mmAccount
+	 * CashOption18.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption22#mmAccount
+	 * CashOption22.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption26#mmAccount
+	 * CashOption26.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption27#mmAccount
+	 * CashOption27.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption5#mmAccount
+	 * CashOption5.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption7#mmAccount
+	 * CashOption7.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption19#mmAccount
+	 * CashOption19.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption23#mmAccount
+	 * CashOption23.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption30#mmAccount
+	 * CashOption30.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption38#mmAccount
+	 * CashOption38.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption39#mmAccount
+	 * CashOption39.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption41#mmAccount
+	 * CashOption41.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmAccount
+	 * CashOption44.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption45#mmAccount
+	 * CashOption45.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption46#mmAccount
+	 * CashOption46.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption48#mmAccount
+	 * CashOption48.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#mmAccount
+	 * CashOption52.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption55#mmAccount
+	 * CashOption55.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -339,25 +343,26 @@ public class CorporateActionElection {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption2.Account, com.tools20022.repository.msg.CashOption9.Account, com.tools20022.repository.msg.CashOption12.Account,
-					com.tools20022.repository.msg.CashOption13.Account, com.tools20022.repository.msg.CashOption18.Account, com.tools20022.repository.msg.CashOption22.Account, com.tools20022.repository.msg.CashOption26.Account,
-					com.tools20022.repository.msg.CashOption27.Account, com.tools20022.repository.msg.CashOption5.Account, com.tools20022.repository.msg.CashOption7.Account, com.tools20022.repository.msg.CashOption19.Account,
-					com.tools20022.repository.msg.CashOption23.Account, com.tools20022.repository.msg.CashOption30.Account, com.tools20022.repository.msg.CashOption38.Account, com.tools20022.repository.msg.CashOption39.Account,
-					com.tools20022.repository.msg.CashOption41.Account, com.tools20022.repository.msg.CashOption44.Account, com.tools20022.repository.msg.CashOption45.Account, com.tools20022.repository.msg.CashOption46.Account,
-					com.tools20022.repository.msg.CashOption48.Account, com.tools20022.repository.msg.CashOption52.Account, com.tools20022.repository.msg.CashOption55.Account);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption2.mmAccount, com.tools20022.repository.msg.CashOption9.mmAccount, com.tools20022.repository.msg.CashOption12.mmAccount,
+					com.tools20022.repository.msg.CashOption13.mmAccount, com.tools20022.repository.msg.CashOption18.mmAccount, com.tools20022.repository.msg.CashOption22.mmAccount, com.tools20022.repository.msg.CashOption26.mmAccount,
+					com.tools20022.repository.msg.CashOption27.mmAccount, com.tools20022.repository.msg.CashOption5.mmAccount, com.tools20022.repository.msg.CashOption7.mmAccount, com.tools20022.repository.msg.CashOption19.mmAccount,
+					com.tools20022.repository.msg.CashOption23.mmAccount, com.tools20022.repository.msg.CashOption30.mmAccount, com.tools20022.repository.msg.CashOption38.mmAccount, com.tools20022.repository.msg.CashOption39.mmAccount,
+					com.tools20022.repository.msg.CashOption41.mmAccount, com.tools20022.repository.msg.CashOption44.mmAccount, com.tools20022.repository.msg.CashOption45.mmAccount, com.tools20022.repository.msg.CashOption46.mmAccount,
+					com.tools20022.repository.msg.CashOption48.mmAccount, com.tools20022.repository.msg.CashOption52.mmAccount, com.tools20022.repository.msg.CashOption55.mmAccount);
 			elementContext_lazy = () -> CorporateActionElection.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Specifies the account(s) used in relation with the election of an option.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.RelatedCorporateActionElection;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmRelatedCorporateActionElection;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
+	protected ElectionMovementTypeCode electionType;
 	/**
 	 * Specifies whether the election results in a change of balance type that
 	 * transfers control of the underlying securities or the transfer of
@@ -370,79 +375,79 @@ public class CorporateActionElection {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ElectionMovementTypeCode
 	 * ElectionMovementTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat1Choice#Code
-	 * ElectionTypeFormat1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat1Choice#Proprietary
-	 * ElectionTypeFormat1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction3#ElectionType
-	 * CorporateAction3.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat2Choice#Code
-	 * ElectionTypeFormat2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat2Choice#Proprietary
-	 * ElectionTypeFormat2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction4#ElectionType
-	 * CorporateAction4.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction5#ElectionType
-	 * CorporateAction5.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction6#ElectionType
-	 * CorporateAction6.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction7#ElectionType
-	 * CorporateAction7.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction8#ElectionType
-	 * CorporateAction8.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction10#ElectionType
-	 * CorporateAction10.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction11#ElectionType
-	 * CorporateAction11.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#ElectionType
-	 * CorporateAction2.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction12#ElectionType
-	 * CorporateAction12.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction17#ElectionType
-	 * CorporateAction17.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction31#ElectionType
-	 * CorporateAction31.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat3Choice#Code
-	 * ElectionTypeFormat3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat3Choice#Proprietary
-	 * ElectionTypeFormat3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#ElectionType
-	 * CorporateAction40.ElectionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat4Choice#Code
-	 * ElectionTypeFormat4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat4Choice#Proprietary
-	 * ElectionTypeFormat4Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection
 	 * CorporateActionElection}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat1Choice#mmCode
+	 * ElectionTypeFormat1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat1Choice#mmProprietary
+	 * ElectionTypeFormat1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction3#mmElectionType
+	 * CorporateAction3.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat2Choice#mmCode
+	 * ElectionTypeFormat2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat2Choice#mmProprietary
+	 * ElectionTypeFormat2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction4#mmElectionType
+	 * CorporateAction4.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction5#mmElectionType
+	 * CorporateAction5.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction6#mmElectionType
+	 * CorporateAction6.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction7#mmElectionType
+	 * CorporateAction7.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction8#mmElectionType
+	 * CorporateAction8.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction10#mmElectionType
+	 * CorporateAction10.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction11#mmElectionType
+	 * CorporateAction11.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#mmElectionType
+	 * CorporateAction2.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction12#mmElectionType
+	 * CorporateAction12.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction17#mmElectionType
+	 * CorporateAction17.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction31#mmElectionType
+	 * CorporateAction31.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat3Choice#mmCode
+	 * ElectionTypeFormat3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat3Choice#mmProprietary
+	 * ElectionTypeFormat3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#mmElectionType
+	 * CorporateAction40.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat4Choice#mmCode
+	 * ElectionTypeFormat4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat4Choice#mmProprietary
+	 * ElectionTypeFormat4Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -456,26 +461,27 @@ public class CorporateActionElection {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ElectionType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmElectionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionTypeFormat1Choice.Code, com.tools20022.repository.choice.ElectionTypeFormat1Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateAction3.ElectionType, com.tools20022.repository.choice.ElectionTypeFormat2Choice.Code, com.tools20022.repository.choice.ElectionTypeFormat2Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateAction4.ElectionType, com.tools20022.repository.msg.CorporateAction5.ElectionType, com.tools20022.repository.msg.CorporateAction6.ElectionType,
-					com.tools20022.repository.msg.CorporateAction7.ElectionType, com.tools20022.repository.msg.CorporateAction8.ElectionType, com.tools20022.repository.msg.CorporateAction10.ElectionType,
-					com.tools20022.repository.msg.CorporateAction11.ElectionType, com.tools20022.repository.msg.CorporateAction2.ElectionType, com.tools20022.repository.msg.CorporateAction12.ElectionType,
-					com.tools20022.repository.msg.CorporateAction17.ElectionType, com.tools20022.repository.msg.CorporateAction31.ElectionType, com.tools20022.repository.choice.ElectionTypeFormat3Choice.Code,
-					com.tools20022.repository.choice.ElectionTypeFormat3Choice.Proprietary, com.tools20022.repository.msg.CorporateAction40.ElectionType, com.tools20022.repository.choice.ElectionTypeFormat4Choice.Code,
-					com.tools20022.repository.choice.ElectionTypeFormat4Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionTypeFormat1Choice.mmCode, com.tools20022.repository.choice.ElectionTypeFormat1Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateAction3.mmElectionType, com.tools20022.repository.choice.ElectionTypeFormat2Choice.mmCode, com.tools20022.repository.choice.ElectionTypeFormat2Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateAction4.mmElectionType, com.tools20022.repository.msg.CorporateAction5.mmElectionType, com.tools20022.repository.msg.CorporateAction6.mmElectionType,
+					com.tools20022.repository.msg.CorporateAction7.mmElectionType, com.tools20022.repository.msg.CorporateAction8.mmElectionType, com.tools20022.repository.msg.CorporateAction10.mmElectionType,
+					com.tools20022.repository.msg.CorporateAction11.mmElectionType, com.tools20022.repository.msg.CorporateAction2.mmElectionType, com.tools20022.repository.msg.CorporateAction12.mmElectionType,
+					com.tools20022.repository.msg.CorporateAction17.mmElectionType, com.tools20022.repository.msg.CorporateAction31.mmElectionType, com.tools20022.repository.choice.ElectionTypeFormat3Choice.mmCode,
+					com.tools20022.repository.choice.ElectionTypeFormat3Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction40.mmElectionType, com.tools20022.repository.choice.ElectionTypeFormat4Choice.mmCode,
+					com.tools20022.repository.choice.ElectionTypeFormat4Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionElection.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ElectionType";
 			definition = "Specifies whether the election results in a change of balance type that transfers control of the underlying securities or the transfer of underlying securities themselves.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ElectionMovementTypeCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesQuantity> quantity;
 	/**
 	 * Specifies the quantity of securities elected for the associated option.
 	 * <p>
@@ -484,8 +490,8 @@ public class CorporateActionElection {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#CorporateActionElection
-	 * SecuritiesQuantity.CorporateActionElection}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCorporateActionElection
+	 * SecuritiesQuantity.mmCorporateActionElection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -493,31 +499,31 @@ public class CorporateActionElection {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#InstructedUnderlyingSecuritiesQuantity
-	 * CorporateActionElection3.InstructedUnderlyingSecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#InstructedSecuritiesQuantityToReceive
-	 * CorporateActionElection3.InstructedSecuritiesQuantityToReceive}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection1#OriginalInstructedQuantity
-	 * CorporateActionElection1.OriginalInstructedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection1#RemainingQuantity
-	 * CorporateActionElection1.RemainingQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection2#NewInstructedQuantity
-	 * CorporateActionElection2.NewInstructedQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection
 	 * CorporateActionElection}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#mmInstructedUnderlyingSecuritiesQuantity
+	 * CorporateActionElection3.mmInstructedUnderlyingSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#mmInstructedSecuritiesQuantityToReceive
+	 * CorporateActionElection3.mmInstructedSecuritiesQuantityToReceive}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection1#mmOriginalInstructedQuantity
+	 * CorporateActionElection1.mmOriginalInstructedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection1#mmRemainingQuantity
+	 * CorporateActionElection1.mmRemainingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection2#mmNewInstructedQuantity
+	 * CorporateActionElection2.mmNewInstructedQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -531,22 +537,23 @@ public class CorporateActionElection {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Quantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection3.InstructedUnderlyingSecuritiesQuantity, com.tools20022.repository.msg.CorporateActionElection3.InstructedSecuritiesQuantityToReceive,
-					com.tools20022.repository.msg.CorporateActionElection1.OriginalInstructedQuantity, com.tools20022.repository.msg.CorporateActionElection1.RemainingQuantity,
-					com.tools20022.repository.msg.CorporateActionElection2.NewInstructedQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection3.mmInstructedUnderlyingSecuritiesQuantity,
+					com.tools20022.repository.msg.CorporateActionElection3.mmInstructedSecuritiesQuantityToReceive, com.tools20022.repository.msg.CorporateActionElection1.mmOriginalInstructedQuantity,
+					com.tools20022.repository.msg.CorporateActionElection1.mmRemainingQuantity, com.tools20022.repository.msg.CorporateActionElection2.mmNewInstructedQuantity);
 			elementContext_lazy = () -> CorporateActionElection.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity of securities elected for the associated option.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.CorporateActionElection;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmCorporateActionElection;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected Max350Text amendmentReason;
 	/**
 	 * Reason explaining the amendment of the election.
 	 * <p>
@@ -556,19 +563,19 @@ public class CorporateActionElection {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection2#Reason
-	 * CorporateActionElection2.Reason}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection
 	 * CorporateActionElection}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection2#mmReason
+	 * CorporateActionElection2.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -580,19 +587,20 @@ public class CorporateActionElection {
 	 * definition} = "Reason explaining the amendment of the election."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AmendmentReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmendmentReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection2.Reason);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection2.mmReason);
 			elementContext_lazy = () -> CorporateActionElection.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AmendmentReason";
 			definition = "Reason explaining the amendment of the election.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected CorporateActionServicing relatedServicing;
 	/**
 	 * Process which groups the activities related to corporate action
 	 * servicing.
@@ -602,8 +610,8 @@ public class CorporateActionElection {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#CorporateActionElection
-	 * CorporateActionServicing.CorporateActionElection}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmCorporateActionElection
+	 * CorporateActionServicing.mmCorporateActionElection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -630,36 +638,92 @@ public class CorporateActionElection {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedServicing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedServicing = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionElection.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
 			definition = "Process which groups the activities related to corporate action servicing.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionServicing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.CorporateActionElection;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionElection;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionElection";
 				definition = "Decision taken by the account holder regarding the corporate action event.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.RelatedCorporateActionElection, com.tools20022.repository.entity.SecuritiesQuantity.CorporateActionElection,
-						com.tools20022.repository.entity.CorporateActionOption.CorporateActionElection, com.tools20022.repository.entity.CorporateActionServicing.CorporateActionElection);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionElection.ExecutionRequestedDateTime, com.tools20022.repository.entity.CorporateActionElection.Option,
-						com.tools20022.repository.entity.CorporateActionElection.CashAccount, com.tools20022.repository.entity.CorporateActionElection.ElectionType, com.tools20022.repository.entity.CorporateActionElection.Quantity,
-						com.tools20022.repository.entity.CorporateActionElection.AmendmentReason, com.tools20022.repository.entity.CorporateActionElection.RelatedServicing);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmRelatedCorporateActionElection, com.tools20022.repository.entity.SecuritiesQuantity.mmCorporateActionElection,
+						com.tools20022.repository.entity.CorporateActionOption.mmCorporateActionElection, com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionElection);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionElection.mmExecutionRequestedDateTime, com.tools20022.repository.entity.CorporateActionElection.mmOption,
+						com.tools20022.repository.entity.CorporateActionElection.mmCashAccount, com.tools20022.repository.entity.CorporateActionElection.mmElectionType, com.tools20022.repository.entity.CorporateActionElection.mmQuantity,
+						com.tools20022.repository.entity.CorporateActionElection.mmAmendmentReason, com.tools20022.repository.entity.CorporateActionElection.mmRelatedServicing);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionElection3.mmObject(), CorporateActionElection1.mmObject(), CorporateActionElection2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getExecutionRequestedDateTime() {
+		return executionRequestedDateTime;
+	}
+
+	public void setExecutionRequestedDateTime(ISODateTime executionRequestedDateTime) {
+		this.executionRequestedDateTime = executionRequestedDateTime;
+	}
+
+	public List<CorporateActionOption> getOption() {
+		return option;
+	}
+
+	public void setOption(List<com.tools20022.repository.entity.CorporateActionOption> option) {
+		this.option = option;
+	}
+
+	public List<CashAccount> getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(List<com.tools20022.repository.entity.CashAccount> cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public ElectionMovementTypeCode getElectionType() {
+		return electionType;
+	}
+
+	public void setElectionType(ElectionMovementTypeCode electionType) {
+		this.electionType = electionType;
+	}
+
+	public List<SecuritiesQuantity> getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(List<com.tools20022.repository.entity.SecuritiesQuantity> quantity) {
+		this.quantity = quantity;
+	}
+
+	public Max350Text getAmendmentReason() {
+		return amendmentReason;
+	}
+
+	public void setAmendmentReason(Max350Text amendmentReason) {
+		this.amendmentReason = amendmentReason;
+	}
+
+	public CorporateActionServicing getRelatedServicing() {
+		return relatedServicing;
+	}
+
+	public void setRelatedServicing(com.tools20022.repository.entity.CorporateActionServicing relatedServicing) {
+		this.relatedServicing = relatedServicing;
 	}
 }

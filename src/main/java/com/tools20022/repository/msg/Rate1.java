@@ -33,9 +33,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Rate1#Rate Rate1.Rate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Rate1#ValidityRange
- * Rate1.ValidityRange}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Rate1#mmRate Rate1.mmRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Rate1#mmValidityRange
+ * Rate1.mmValidityRange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Rate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateTypeChoice rate;
 	/**
 	 * Percentage charged for the use of an amount of money, usually expressed
 	 * at an annual rate. The interest rate is the ratio of the amount of
@@ -76,8 +77,8 @@ public class Rate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#Rate
-	 * InterestCalculation.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmRate
+	 * InterestCalculation.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Rate1
@@ -97,21 +98,22 @@ public class Rate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
 			componentContext_lazy = () -> Rate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument. \nExample percentage rate : Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10 of a percent, and 7.0 is 7%.\nExample Textual rate : Rate is expressed as a text.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RateTypeChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateTypeChoice.mmObject();
 		}
 	};
+	protected CurrencyAndAmountRange validityRange;
 	/**
 	 * An amount range where the interest rate is applicable
 	 * <p>
@@ -123,8 +125,8 @@ public class Rate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#RateValidityRange
-	 * InterestCalculation.RateValidityRange}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmRateValidityRange
+	 * InterestCalculation.mmRateValidityRange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Rate1
@@ -142,33 +144,49 @@ public class Rate1 {
 	 * definition} = "An amount range where the interest rate is applicable"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidityRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidityRange = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRateValidityRange;
 			componentContext_lazy = () -> Rate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.RateValidityRange;
 			isDerived = false;
 			xmlTag = "VldtyRg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityRange";
 			definition = "An amount range where the interest rate is applicable";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyAndAmountRange.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyAndAmountRange.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rate1.Rate, com.tools20022.repository.msg.Rate1.ValidityRange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rate1.mmRate, com.tools20022.repository.msg.Rate1.mmValidityRange);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Rate1";
 				definition = "Set of elements qualifying the interest rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateTypeChoice getRate() {
+		return rate;
+	}
+
+	public void setRate(RateTypeChoice rate) {
+		this.rate = rate;
+	}
+
+	public CurrencyAndAmountRange getValidityRange() {
+		return validityRange;
+	}
+
+	public void setValidityRange(com.tools20022.repository.msg.CurrencyAndAmountRange validityRange) {
+		this.validityRange = validityRange;
 	}
 }

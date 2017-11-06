@@ -32,11 +32,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerKeyExchangeResponse1#Environment
- * AcquirerKeyExchangeResponse1.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerKeyExchangeResponse1#mmEnvironment
+ * AcquirerKeyExchangeResponse1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerKeyExchangeResponse1#Transaction
- * AcquirerKeyExchangeResponse1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerKeyExchangeResponse1#mmTransaction
+ * AcquirerKeyExchangeResponse1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,15 +44,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.KeyExchangeResponse#KeyExchangeResponse
- * KeyExchangeResponse.KeyExchangeResponse}</li>
+ * {@linkplain com.tools20022.repository.area.cain.KeyExchangeResponse#mmKeyExchangeResponse
+ * KeyExchangeResponse.mmKeyExchangeResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerKeyExchangeResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardTransactionEnvironment6 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -93,7 +94,7 @@ public class AcquirerKeyExchangeResponse1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerKeyExchangeResponse1.mmObject();
 			isDerived = false;
@@ -101,12 +102,13 @@ public class AcquirerKeyExchangeResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransactionEnvironment6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment6.mmObject();
 		}
 	};
+	protected CardTransaction14 transaction;
 	/**
 	 * Key exchange transaction.
 	 * <p>
@@ -133,7 +135,7 @@ public class AcquirerKeyExchangeResponse1 {
 	 * definition} = "Key exchange transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerKeyExchangeResponse1.mmObject();
 			isDerived = false;
@@ -141,24 +143,40 @@ public class AcquirerKeyExchangeResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Key exchange transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransaction14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerKeyExchangeResponse1.Environment, com.tools20022.repository.msg.AcquirerKeyExchangeResponse1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.KeyExchangeResponse.KeyExchangeResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerKeyExchangeResponse1.mmEnvironment, com.tools20022.repository.msg.AcquirerKeyExchangeResponse1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.KeyExchangeResponse.mmKeyExchangeResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcquirerKeyExchangeResponse1";
 				definition = "Information related to the response to a key exchange.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardTransactionEnvironment6 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment6 environment) {
+		this.environment = environment;
+	}
+
+	public CardTransaction14 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardTransaction14 transaction) {
+		this.transaction = transaction;
 	}
 }

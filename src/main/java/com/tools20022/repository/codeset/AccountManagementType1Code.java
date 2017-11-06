@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType1Code#AccountOpening
- * AccountManagementType1Code.AccountOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType1Code#mmAccountOpening
+ * AccountManagementType1Code.mmAccountOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType1Code#AccountModification
- * AccountManagementType1Code.AccountModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType1Code#mmAccountModification
+ * AccountManagementType1Code.mmAccountModification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class AccountManagementType1Code extends AccountManagementTypeCode {
 	 * name} = "AccountOpening"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountOpening = new MMCode() {
+	public static final MMCode mmAccountOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
@@ -107,7 +107,7 @@ public class AccountManagementType1Code extends AccountManagementTypeCode {
 	 * name} = "AccountModification"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountModification = new MMCode() {
+	public static final MMCode mmAccountModification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
@@ -118,12 +118,12 @@ public class AccountManagementType1Code extends AccountManagementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementType1Code";
 				definition = "Refer to an account management instruction ie, either an account opening instruction or an account modification instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType1Code.AccountOpening, com.tools20022.repository.codeset.AccountManagementType1Code.AccountModification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType1Code.mmAccountOpening, com.tools20022.repository.codeset.AccountManagementType1Code.mmAccountModification);
 				trace_lazy = () -> AccountManagementTypeCode.mmObject();
 			}
 		});

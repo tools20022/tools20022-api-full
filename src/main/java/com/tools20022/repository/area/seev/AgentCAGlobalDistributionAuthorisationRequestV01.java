@@ -70,22 +70,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#Identification
- * AgentCAGlobalDistributionAuthorisationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#mmIdentification
+ * AgentCAGlobalDistributionAuthorisationRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#CorporateActionGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#mmCorporateActionGeneralInformation
  * AgentCAGlobalDistributionAuthorisationRequestV01.
- * CorporateActionGeneralInformation}</li>
+ * mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#GlobalDistributionDetails
- * AgentCAGlobalDistributionAuthorisationRequestV01.GlobalDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#mmGlobalDistributionDetails
+ * AgentCAGlobalDistributionAuthorisationRequestV01.mmGlobalDistributionDetails}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#identifier
- * AgentCAGlobalDistributionAuthorisationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.017.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * request.
@@ -127,17 +127,18 @@ public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -161,17 +162,18 @@ public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected GlobalDistributionRequest1 globalDistributionDetails;
 	/**
 	 * Provides detailed information about the global distribution.
 	 * <p>
@@ -196,42 +198,15 @@ public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 	 * "Provides detailed information about the global distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GlobalDistributionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGlobalDistributionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GblDstrbtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalDistributionDetails";
 			definition = "Provides detailed information about the global distribution.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GlobalDistributionRequest1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "017"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "017";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -245,12 +220,43 @@ public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAGblDstrbtnAuthstnReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.GlobalDistributionDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmGlobalDistributionDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "017";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public GlobalDistributionRequest1 getGlobalDistributionDetails() {
+		return globalDistributionDetails;
+	}
+
+	public void setGlobalDistributionDetails(GlobalDistributionRequest1 globalDistributionDetails) {
+		this.globalDistributionDetails = globalDistributionDetails;
 	}
 }

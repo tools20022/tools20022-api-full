@@ -38,36 +38,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#PlaceAndName
- * FinancialInstrumentAttributesSD6.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#mmPlaceAndName
+ * FinancialInstrumentAttributesSD6.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#CountryOfListing
- * FinancialInstrumentAttributesSD6.CountryOfListing}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#mmCountryOfListing
+ * FinancialInstrumentAttributesSD6.mmCountryOfListing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#IncomeSourceCountry
- * FinancialInstrumentAttributesSD6.IncomeSourceCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#mmIncomeSourceCountry
+ * FinancialInstrumentAttributesSD6.mmIncomeSourceCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#DTCAssetClass
- * FinancialInstrumentAttributesSD6.DTCAssetClass}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#mmDTCAssetClass
+ * FinancialInstrumentAttributesSD6.mmDTCAssetClass}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#DTCAssetType
- * FinancialInstrumentAttributesSD6.DTCAssetType}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#mmDTCAssetType
+ * FinancialInstrumentAttributesSD6.mmDTCAssetType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#SecurityEligibilityIndicator
- * FinancialInstrumentAttributesSD6.SecurityEligibilityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#mmSecurityEligibilityIndicator
+ * FinancialInstrumentAttributesSD6.mmSecurityEligibilityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#TickerSymbol
- * FinancialInstrumentAttributesSD6.TickerSymbol}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#mmTickerSymbol
+ * FinancialInstrumentAttributesSD6.mmTickerSymbol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#LinkedSecurity
- * FinancialInstrumentAttributesSD6.LinkedSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD6#mmLinkedSecurity
+ * FinancialInstrumentAttributesSD6.mmLinkedSecurity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAttributesSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -119,13 +120,13 @@ public class FinancialInstrumentAttributesSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#PlaceAndName
-	 * FinancialInstrumentAttributesSD8.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#mmPlaceAndName
+	 * FinancialInstrumentAttributesSD8.mmPlaceAndName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
@@ -133,12 +134,13 @@ public class FinancialInstrumentAttributesSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.PlaceAndName);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmPlaceAndName);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected CountryCode countryOfListing;
 	/**
 	 * Country in which the security was issued.
 	 * <p>
@@ -168,13 +170,13 @@ public class FinancialInstrumentAttributesSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#CountryOfListing
-	 * FinancialInstrumentAttributesSD8.CountryOfListing}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#mmCountryOfListing
+	 * FinancialInstrumentAttributesSD8.mmCountryOfListing}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfListing = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
@@ -182,12 +184,13 @@ public class FinancialInstrumentAttributesSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfListing";
 			definition = "Country in which the security was issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.CountryOfListing);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmCountryOfListing);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountryCode incomeSourceCountry;
 	/**
 	 * Country of source income for the security.
 	 * <p>
@@ -217,13 +220,13 @@ public class FinancialInstrumentAttributesSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#IncomeSourceCountry
-	 * FinancialInstrumentAttributesSD8.IncomeSourceCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#mmIncomeSourceCountry
+	 * FinancialInstrumentAttributesSD8.mmIncomeSourceCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncomeSourceCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncomeSourceCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
@@ -231,12 +234,13 @@ public class FinancialInstrumentAttributesSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeSourceCountry";
 			definition = "Country of source income for the security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.IncomeSourceCountry);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmIncomeSourceCountry);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected AssetClass1Code dTCAssetClass;
 	/**
 	 * Classification of instruments into asset classes at DTC (The Depository
 	 * Trust Corporation).
@@ -270,13 +274,13 @@ public class FinancialInstrumentAttributesSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#DTCAssetClass
-	 * FinancialInstrumentAttributesSD8.DTCAssetClass}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#mmDTCAssetClass
+	 * FinancialInstrumentAttributesSD8.mmDTCAssetClass}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
@@ -284,12 +288,13 @@ public class FinancialInstrumentAttributesSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.DTCAssetClass);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmDTCAssetClass);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
 		}
 	};
+	protected DTCAssetType1Code dTCAssetType;
 	/**
 	 * Further classification of instruments into (issue) asset types at DTC
 	 * (The Depository Trust Corporation).
@@ -323,13 +328,13 @@ public class FinancialInstrumentAttributesSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#DTCAssetType
-	 * FinancialInstrumentAttributesSD8.DTCAssetType}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#mmDTCAssetType
+	 * FinancialInstrumentAttributesSD8.mmDTCAssetType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
@@ -337,12 +342,13 @@ public class FinancialInstrumentAttributesSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.DTCAssetType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmDTCAssetType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator securityEligibilityIndicator;
 	/**
 	 * Indicates whether the security is eligible for holding at DTC.
 	 * <p>
@@ -374,13 +380,13 @@ public class FinancialInstrumentAttributesSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#SecurityEligibilityIndicator
-	 * FinancialInstrumentAttributesSD8.SecurityEligibilityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#mmSecurityEligibilityIndicator
+	 * FinancialInstrumentAttributesSD8.mmSecurityEligibilityIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityEligibilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityEligibilityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
@@ -388,12 +394,13 @@ public class FinancialInstrumentAttributesSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityEligibilityIndicator";
 			definition = "Indicates whether the security is eligible for holding at DTC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.SecurityEligibilityIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmSecurityEligibilityIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text tickerSymbol;
 	/**
 	 * Ticket symbol for the event security (underlying security).
 	 * <p>
@@ -424,13 +431,13 @@ public class FinancialInstrumentAttributesSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#TickerSymbol
-	 * FinancialInstrumentAttributesSD8.TickerSymbol}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#mmTickerSymbol
+	 * FinancialInstrumentAttributesSD8.mmTickerSymbol}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TickerSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
@@ -438,12 +445,13 @@ public class FinancialInstrumentAttributesSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Ticket symbol for the event security (underlying security). ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.TickerSymbol);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmTickerSymbol);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SecurityIdentification15 linkedSecurity;
 	/**
 	 * Security whose characteristics mirror the event security for purposes of
 	 * FCP eligibility and tax relief. Certain derivative securities like HOLDR
@@ -479,13 +487,13 @@ public class FinancialInstrumentAttributesSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#LinkedSecurity
-	 * FinancialInstrumentAttributesSD8.LinkedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD8#mmLinkedSecurity
+	 * FinancialInstrumentAttributesSD8.mmLinkedSecurity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedSecurity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
@@ -493,21 +501,21 @@ public class FinancialInstrumentAttributesSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedSecurity";
 			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.LinkedSecurity);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmLinkedSecurity);
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.PlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.CountryOfListing,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.IncomeSourceCountry, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.DTCAssetClass,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.DTCAssetType, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.SecurityEligibilityIndicator,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.TickerSymbol, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.LinkedSecurity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmCountryOfListing,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmIncomeSourceCountry, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmDTCAssetClass,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmDTCAssetType, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmSecurityEligibilityIndicator,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmTickerSymbol, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmLinkedSecurity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD6";
 				definition = "Provides additional information regarding underlying security details.";
@@ -515,5 +523,69 @@ public class FinancialInstrumentAttributesSD6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public CountryCode getCountryOfListing() {
+		return countryOfListing;
+	}
+
+	public void setCountryOfListing(CountryCode countryOfListing) {
+		this.countryOfListing = countryOfListing;
+	}
+
+	public CountryCode getIncomeSourceCountry() {
+		return incomeSourceCountry;
+	}
+
+	public void setIncomeSourceCountry(CountryCode incomeSourceCountry) {
+		this.incomeSourceCountry = incomeSourceCountry;
+	}
+
+	public AssetClass1Code getDTCAssetClass() {
+		return dTCAssetClass;
+	}
+
+	public void setDTCAssetClass(AssetClass1Code dTCAssetClass) {
+		this.dTCAssetClass = dTCAssetClass;
+	}
+
+	public DTCAssetType1Code getDTCAssetType() {
+		return dTCAssetType;
+	}
+
+	public void setDTCAssetType(DTCAssetType1Code dTCAssetType) {
+		this.dTCAssetType = dTCAssetType;
+	}
+
+	public YesNoIndicator getSecurityEligibilityIndicator() {
+		return securityEligibilityIndicator;
+	}
+
+	public void setSecurityEligibilityIndicator(YesNoIndicator securityEligibilityIndicator) {
+		this.securityEligibilityIndicator = securityEligibilityIndicator;
+	}
+
+	public Max35Text getTickerSymbol() {
+		return tickerSymbol;
+	}
+
+	public void setTickerSymbol(Max35Text tickerSymbol) {
+		this.tickerSymbol = tickerSymbol;
+	}
+
+	public SecurityIdentification15 getLinkedSecurity() {
+		return linkedSecurity;
+	}
+
+	public void setLinkedSecurity(com.tools20022.repository.msg.SecurityIdentification15 linkedSecurity) {
+		this.linkedSecurity = linkedSecurity;
 	}
 }

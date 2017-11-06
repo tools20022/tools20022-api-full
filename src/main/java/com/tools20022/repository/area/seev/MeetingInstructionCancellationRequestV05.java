@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -62,27 +63,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#PreviousReference
- * MeetingInstructionCancellationRequestV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#mmPreviousReference
+ * MeetingInstructionCancellationRequestV05.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#MeetingReference
- * MeetingInstructionCancellationRequestV05.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#mmMeetingReference
+ * MeetingInstructionCancellationRequestV05.mmMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#FinancialInstrumentIdentification
- * MeetingInstructionCancellationRequestV05.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#mmFinancialInstrumentIdentification
+ * MeetingInstructionCancellationRequestV05.mmFinancialInstrumentIdentification}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#InstructedPosition
- * MeetingInstructionCancellationRequestV05.InstructedPosition}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#mmInstructedPosition
+ * MeetingInstructionCancellationRequestV05.mmInstructedPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#SupplementaryData
- * MeetingInstructionCancellationRequestV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#mmSupplementaryData
+ * MeetingInstructionCancellationRequestV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#identifier
- * MeetingInstructionCancellationRequestV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.005.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingInstructionCancellationRequestV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification previousReference;
 	/**
 	 * Identifies the instruction to be cancelled.
 	 * <p>
@@ -126,22 +127,23 @@ public class MeetingInstructionCancellationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#PreviousReference
-	 * MeetingInstructionCancellationRequestV04.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmPreviousReference
+	 * MeetingInstructionCancellationRequestV04.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Identifies the instruction to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.PreviousReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmPreviousReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification.mmObject();
 		}
 	};
+	protected MeetingReference7 meetingReference;
 	/**
 	 * Series of elements which allow to identify a meeting.
 	 * <p>
@@ -166,22 +168,23 @@ public class MeetingInstructionCancellationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#MeetingReference
-	 * MeetingInstructionCancellationRequestV04.MeetingReference}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmMeetingReference
+	 * MeetingInstructionCancellationRequestV04.mmMeetingReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.MeetingReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmMeetingReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MeetingReference7.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Identifies the security for which the meeting is organised.
 	 * <p>
@@ -207,22 +210,23 @@ public class MeetingInstructionCancellationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#SecurityIdentification
-	 * MeetingInstructionCancellationRequestV04.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmSecurityIdentification
+	 * MeetingInstructionCancellationRequestV04.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the security for which the meeting is organised.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.SecurityIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmSecurityIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
 		}
 	};
+	protected List<SafekeepingAccount6> instructedPosition;
 	/**
 	 * Identifies the account and instructed positions for which the instruction
 	 * cancellation request applies.
@@ -250,21 +254,22 @@ public class MeetingInstructionCancellationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#InstructedPosition
-	 * MeetingInstructionCancellationRequestV04.InstructedPosition}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmInstructedPosition
+	 * MeetingInstructionCancellationRequestV04.mmInstructedPosition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructedPosition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructedPosition = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstdPos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedPosition";
 			definition = "Identifies the account and instructed positions for which the instruction cancellation request applies.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.InstructedPosition;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmInstructedPosition;
 			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingAccount6.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -291,7 +296,7 @@ public class MeetingInstructionCancellationRequestV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,33 +304,6 @@ public class MeetingInstructionCancellationRequestV05 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "005";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -340,12 +318,59 @@ public class MeetingInstructionCancellationRequestV05 {
 				rootElement = "Document";
 				xmlTag = "MtgInstrCxlReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.PreviousReference,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.MeetingReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.InstructedPosition, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.mmPreviousReference,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.mmMeetingReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.mmInstructedPosition, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "005";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(MessageIdentification previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public MeetingReference7 getMeetingReference() {
+		return meetingReference;
+	}
+
+	public void setMeetingReference(MeetingReference7 meetingReference) {
+		this.meetingReference = meetingReference;
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public List<SafekeepingAccount6> getInstructedPosition() {
+		return instructedPosition;
+	}
+
+	public void setInstructedPosition(List<SafekeepingAccount6> instructedPosition) {
+		this.instructedPosition = instructedPosition;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

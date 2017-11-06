@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.Clearing;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Process of settling securities through a central system.
@@ -36,14 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#SecuritiesSettlement
- * SecuritiesClearing.SecuritiesSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesClearing#BuyIn
- * SecuritiesClearing.BuyIn}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesClearing#Novation
- * SecuritiesClearing.Novation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesClearing#Netting
- * SecuritiesClearing.Netting}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmSecuritiesSettlement
+ * SecuritiesClearing.mmSecuritiesSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmBuyIn
+ * SecuritiesClearing.mmBuyIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmNovation
+ * SecuritiesClearing.mmNovation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmNetting
+ * SecuritiesClearing.mmNetting}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,16 +54,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SecuritiesClearing
- * SecuritiesSettlement.SecuritiesClearing}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesClearing
+ * SecuritiesSettlement.mmSecuritiesClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BuyIn#RelatedSecuritiesClearingProcess
- * BuyIn.RelatedSecuritiesClearingProcess}</li>
+ * {@linkplain com.tools20022.repository.entity.BuyIn#mmRelatedSecuritiesClearingProcess
+ * BuyIn.mmRelatedSecuritiesClearingProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Netting#RelatedSecuritiesClearingProcess
- * Netting.RelatedSecuritiesClearingProcess}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Novation#SecuritiesClearing
- * Novation.SecuritiesClearing}</li>
+ * {@linkplain com.tools20022.repository.entity.Netting#mmRelatedSecuritiesClearingProcess
+ * Netting.mmRelatedSecuritiesClearingProcess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Novation#mmSecuritiesClearing
+ * Novation.mmSecuritiesClearing}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -68,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesClearing extends Clearing {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement;
 	/**
 	 * Settlement process performed as part of the securities clearing.
 	 * <p>
@@ -91,8 +96,8 @@ public class SecuritiesClearing extends Clearing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SecuritiesClearing
-	 * SecuritiesSettlement.SecuritiesClearing}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesClearing
+	 * SecuritiesSettlement.mmSecuritiesClearing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -118,7 +123,7 @@ public class SecuritiesClearing extends Clearing {
 	 * "Settlement process performed as part of the securities clearing."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesClearing.mmObject();
 			isDerived = false;
@@ -126,11 +131,12 @@ public class SecuritiesClearing extends Clearing {
 			name = "SecuritiesSettlement";
 			definition = "Settlement process performed as part of the securities clearing.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SecuritiesClearing;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesClearing;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.BuyIn> buyIn;
 	/**
 	 * Buy-in process performed as part of the securities clearing.
 	 * <p>
@@ -139,8 +145,8 @@ public class SecuritiesClearing extends Clearing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#RelatedSecuritiesClearingProcess
-	 * BuyIn.RelatedSecuritiesClearingProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmRelatedSecuritiesClearingProcess
+	 * BuyIn.mmRelatedSecuritiesClearingProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -164,7 +170,7 @@ public class SecuritiesClearing extends Clearing {
 	 * "Buy-in process performed as part of the securities clearing."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd BuyIn = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmBuyIn = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesClearing.mmObject();
 			isDerived = false;
@@ -172,11 +178,12 @@ public class SecuritiesClearing extends Clearing {
 			name = "BuyIn";
 			definition = "Buy-in process performed as part of the securities clearing.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.BuyIn.RelatedSecuritiesClearingProcess;
+			opposite_lazy = () -> com.tools20022.repository.entity.BuyIn.mmRelatedSecuritiesClearingProcess;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Novation> novation;
 	/**
 	 * Novation process performed as part of the securities clearing.
 	 * <p>
@@ -185,8 +192,8 @@ public class SecuritiesClearing extends Clearing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Novation#SecuritiesClearing
-	 * Novation.SecuritiesClearing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Novation#mmSecuritiesClearing
+	 * Novation.mmSecuritiesClearing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -210,7 +217,7 @@ public class SecuritiesClearing extends Clearing {
 	 * "Novation process performed as part of the securities clearing."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Novation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNovation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesClearing.mmObject();
 			isDerived = false;
@@ -218,11 +225,12 @@ public class SecuritiesClearing extends Clearing {
 			name = "Novation";
 			definition = "Novation process performed as part of the securities clearing.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Novation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Novation.SecuritiesClearing;
+			opposite_lazy = () -> com.tools20022.repository.entity.Novation.mmSecuritiesClearing;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Novation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Netting> netting;
 	/**
 	 * Netting process performed as part of the securities clearing.
 	 * <p>
@@ -231,8 +239,8 @@ public class SecuritiesClearing extends Clearing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Netting#RelatedSecuritiesClearingProcess
-	 * Netting.RelatedSecuritiesClearingProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.Netting#mmRelatedSecuritiesClearingProcess
+	 * Netting.mmRelatedSecuritiesClearingProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -256,7 +264,7 @@ public class SecuritiesClearing extends Clearing {
 	 * "Netting process performed as part of the securities clearing."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Netting = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNetting = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesClearing.mmObject();
 			isDerived = false;
@@ -264,26 +272,58 @@ public class SecuritiesClearing extends Clearing {
 			name = "Netting";
 			definition = "Netting process performed as part of the securities clearing.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Netting.RelatedSecuritiesClearingProcess;
+			opposite_lazy = () -> com.tools20022.repository.entity.Netting.mmRelatedSecuritiesClearingProcess;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesClearing";
 				definition = "Process of settling securities through a central system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.SecuritiesClearing, com.tools20022.repository.entity.BuyIn.RelatedSecuritiesClearingProcess,
-						com.tools20022.repository.entity.Netting.RelatedSecuritiesClearingProcess, com.tools20022.repository.entity.Novation.SecuritiesClearing);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesClearing, com.tools20022.repository.entity.BuyIn.mmRelatedSecuritiesClearingProcess,
+						com.tools20022.repository.entity.Netting.mmRelatedSecuritiesClearingProcess, com.tools20022.repository.entity.Novation.mmSecuritiesClearing);
 				superType_lazy = () -> Clearing.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesClearing.SecuritiesSettlement, com.tools20022.repository.entity.SecuritiesClearing.BuyIn,
-						com.tools20022.repository.entity.SecuritiesClearing.Novation, com.tools20022.repository.entity.SecuritiesClearing.Netting);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesClearing.mmSecuritiesSettlement, com.tools20022.repository.entity.SecuritiesClearing.mmBuyIn,
+						com.tools20022.repository.entity.SecuritiesClearing.mmNovation, com.tools20022.repository.entity.SecuritiesClearing.mmNetting);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesSettlement> getSecuritiesSettlement() {
+		return securitiesSettlement;
+	}
+
+	public void setSecuritiesSettlement(List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement) {
+		this.securitiesSettlement = securitiesSettlement;
+	}
+
+	public List<BuyIn> getBuyIn() {
+		return buyIn;
+	}
+
+	public void setBuyIn(List<com.tools20022.repository.entity.BuyIn> buyIn) {
+		this.buyIn = buyIn;
+	}
+
+	public List<Novation> getNovation() {
+		return novation;
+	}
+
+	public void setNovation(List<com.tools20022.repository.entity.Novation> novation) {
+		this.novation = novation;
+	}
+
+	public List<Netting> getNetting() {
+		return netting;
+	}
+
+	public void setNetting(List<com.tools20022.repository.entity.Netting> netting) {
+		this.netting = netting;
 	}
 }

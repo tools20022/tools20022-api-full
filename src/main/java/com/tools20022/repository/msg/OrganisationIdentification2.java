@@ -38,32 +38,32 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#BIC
- * OrganisationIdentification2.BIC}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmBIC
+ * OrganisationIdentification2.mmBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#IBEI
- * OrganisationIdentification2.IBEI}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmIBEI
+ * OrganisationIdentification2.mmIBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#BEI
- * OrganisationIdentification2.BEI}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmBEI
+ * OrganisationIdentification2.mmBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#EANGLN
- * OrganisationIdentification2.EANGLN}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmEANGLN
+ * OrganisationIdentification2.mmEANGLN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#CHIPSUniversalIdentification
- * OrganisationIdentification2.CHIPSUniversalIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmCHIPSUniversalIdentification
+ * OrganisationIdentification2.mmCHIPSUniversalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#DUNS
- * OrganisationIdentification2.DUNS}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmDUNS
+ * OrganisationIdentification2.mmDUNS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#BankPartyIdentification
- * OrganisationIdentification2.BankPartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmBankPartyIdentification
+ * OrganisationIdentification2.mmBankPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#TaxIdentificationNumber
- * OrganisationIdentification2.TaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmTaxIdentificationNumber
+ * OrganisationIdentification2.mmTaxIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#ProprietaryIdentification
- * OrganisationIdentification2.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmProprietaryIdentification
+ * OrganisationIdentification2.mmProprietaryIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,8 +73,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -89,6 +89,7 @@ import java.util.function.Supplier;
 public class OrganisationIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICIdentifier bIC;
 	/**
 	 * Code allocated to a financial institution by the ISO 9362 Registration
 	 * Authority as described in ISO 9362
@@ -105,8 +106,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -127,20 +128,21 @@ public class OrganisationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected IBEIIdentifier iBEI;
 	/**
 	 * International Business Entity Identifier to uniquely identify business
 	 * entities playing a role in the lifecycle of and events related to a
@@ -156,8 +158,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICNonFI
-	 * OrganisationIdentification.BICNonFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICNonFI
+	 * OrganisationIdentification.mmBICNonFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -178,20 +180,21 @@ public class OrganisationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICNonFI;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICNonFI;
 			isDerived = false;
 			xmlTag = "IBEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBEI";
 			definition = "International Business Entity Identifier to uniquely identify business entities playing a role in the lifecycle of and events related to a financial instrument. (tentative - to be confirmed)";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> IBEIIdentifier.mmObject();
 		}
 	};
+	protected BEIIdentifier bEI;
 	/**
 	 * Code allocated to a non-financial institution by the ISO 9362
 	 * Registration Authority as described in ISO 9362
@@ -208,8 +211,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICNonFI
-	 * OrganisationIdentification.BICNonFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICNonFI
+	 * OrganisationIdentification.mmBICNonFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,20 +233,21 @@ public class OrganisationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICNonFI;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICNonFI;
 			isDerived = false;
 			xmlTag = "BEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BEI";
 			definition = "Code allocated to a non-financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BEIIdentifier.mmObject();
 		}
 	};
+	protected EANGLNIdentifier eANGLN;
 	/**
 	 * Global Location Number. A non-significant reference number used to
 	 * identify legal entities, functional entities, or physical entities
@@ -261,8 +265,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#EANGLN
-	 * OrganisationIdentification.EANGLN}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmEANGLN
+	 * OrganisationIdentification.mmEANGLN}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,20 +287,21 @@ public class OrganisationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EANGLN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEANGLN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmEANGLN;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.EANGLN;
 			isDerived = false;
 			xmlTag = "EANGLN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EANGLN";
 			definition = "Global Location Number. A non-significant reference number used to identify legal entities, functional entities, or physical entities according to the European Association for Numbering (EAN) numbering scheme rules.The number is used to retrieve detailed information that is linked to it.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EANGLNIdentifier.mmObject();
 		}
 	};
+	protected CHIPSUniversalIdentifier cHIPSUniversalIdentification;
 	/**
 	 * (United States) Clearing House Interbank Payments System (CHIPS)
 	 * Universal Identification (UID) - identifies entities that own accounts at
@@ -313,8 +318,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#CHIPSUniversalIdentifier
-	 * OrganisationIdentification.CHIPSUniversalIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmCHIPSUniversalIdentifier
+	 * OrganisationIdentification.mmCHIPSUniversalIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,20 +340,21 @@ public class OrganisationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CHIPSUniversalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCHIPSUniversalIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmCHIPSUniversalIdentifier;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.CHIPSUniversalIdentifier;
 			isDerived = false;
 			xmlTag = "USCHU";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CHIPSUniversalIdentification";
 			definition = "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID) - identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CHIPSUniversalIdentifier.mmObject();
 		}
 	};
+	protected DunsIdentifier dUNS;
 	/**
 	 * Data Universal Numbering System. A unique identification number provided
 	 * by Dun &amp; Bradstreet to identify an organization.
@@ -363,8 +369,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#DUNS
-	 * OrganisationIdentification.DUNS}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmDUNS
+	 * OrganisationIdentification.mmDUNS}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -385,20 +391,21 @@ public class OrganisationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DUNS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDUNS = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmDUNS;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.DUNS;
 			isDerived = false;
 			xmlTag = "DUNS";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUNS";
 			definition = "Data Universal Numbering System. A unique identification number provided by Dun & Bradstreet to identify an organization.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DunsIdentifier.mmObject();
 		}
 	};
+	protected Max35Text bankPartyIdentification;
 	/**
 	 * Unique and unambiguous assignment made by a specific bank to identify a
 	 * relationship as defined between the bank and its client.
@@ -412,8 +419,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BankPartyIdentification
-	 * OrganisationIdentification.BankPartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBankPartyIdentification
+	 * OrganisationIdentification.mmBankPartyIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -434,20 +441,21 @@ public class OrganisationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankPartyIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBankPartyIdentification;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BankPartyIdentification;
 			isDerived = false;
 			xmlTag = "BkPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankPartyIdentification";
 			definition = "Unique and unambiguous assignment made by a specific bank to identify a relationship as defined between the bank and its client.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text taxIdentificationNumber;
 	/**
 	 * Number assigned by a tax authority to an entity.
 	 * <p>
@@ -460,8 +468,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
-	 * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+	 * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -480,20 +488,21 @@ public class OrganisationIdentification2 {
 	 * definition} = "Number assigned by a tax authority to an entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber;
 			isDerived = false;
 			xmlTag = "TaxIdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GenericIdentification3 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier for an organisation that is allocated
 	 * by an institution.
@@ -506,8 +515,8 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -528,32 +537,32 @@ public class OrganisationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.BIC, com.tools20022.repository.msg.OrganisationIdentification2.IBEI,
-						com.tools20022.repository.msg.OrganisationIdentification2.BEI, com.tools20022.repository.msg.OrganisationIdentification2.EANGLN,
-						com.tools20022.repository.msg.OrganisationIdentification2.CHIPSUniversalIdentification, com.tools20022.repository.msg.OrganisationIdentification2.DUNS,
-						com.tools20022.repository.msg.OrganisationIdentification2.BankPartyIdentification, com.tools20022.repository.msg.OrganisationIdentification2.TaxIdentificationNumber,
-						com.tools20022.repository.msg.OrganisationIdentification2.ProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.mmBIC, com.tools20022.repository.msg.OrganisationIdentification2.mmIBEI,
+						com.tools20022.repository.msg.OrganisationIdentification2.mmBEI, com.tools20022.repository.msg.OrganisationIdentification2.mmEANGLN,
+						com.tools20022.repository.msg.OrganisationIdentification2.mmCHIPSUniversalIdentification, com.tools20022.repository.msg.OrganisationIdentification2.mmDUNS,
+						com.tools20022.repository.msg.OrganisationIdentification2.mmBankPartyIdentification, com.tools20022.repository.msg.OrganisationIdentification2.mmTaxIdentificationNumber,
+						com.tools20022.repository.msg.OrganisationIdentification2.mmProprietaryIdentification);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -567,5 +576,77 @@ public class OrganisationIdentification2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICIdentifier getBIC() {
+		return bIC;
+	}
+
+	public void setBIC(BICIdentifier bIC) {
+		this.bIC = bIC;
+	}
+
+	public IBEIIdentifier getIBEI() {
+		return iBEI;
+	}
+
+	public void setIBEI(IBEIIdentifier iBEI) {
+		this.iBEI = iBEI;
+	}
+
+	public BEIIdentifier getBEI() {
+		return bEI;
+	}
+
+	public void setBEI(BEIIdentifier bEI) {
+		this.bEI = bEI;
+	}
+
+	public EANGLNIdentifier getEANGLN() {
+		return eANGLN;
+	}
+
+	public void setEANGLN(EANGLNIdentifier eANGLN) {
+		this.eANGLN = eANGLN;
+	}
+
+	public CHIPSUniversalIdentifier getCHIPSUniversalIdentification() {
+		return cHIPSUniversalIdentification;
+	}
+
+	public void setCHIPSUniversalIdentification(CHIPSUniversalIdentifier cHIPSUniversalIdentification) {
+		this.cHIPSUniversalIdentification = cHIPSUniversalIdentification;
+	}
+
+	public DunsIdentifier getDUNS() {
+		return dUNS;
+	}
+
+	public void setDUNS(DunsIdentifier dUNS) {
+		this.dUNS = dUNS;
+	}
+
+	public Max35Text getBankPartyIdentification() {
+		return bankPartyIdentification;
+	}
+
+	public void setBankPartyIdentification(Max35Text bankPartyIdentification) {
+		this.bankPartyIdentification = bankPartyIdentification;
+	}
+
+	public Max35Text getTaxIdentificationNumber() {
+		return taxIdentificationNumber;
+	}
+
+	public void setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
+		this.taxIdentificationNumber = taxIdentificationNumber;
+	}
+
+	public GenericIdentification3 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification3 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
 	}
 }

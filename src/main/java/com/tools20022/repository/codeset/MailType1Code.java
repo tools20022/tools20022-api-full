@@ -32,20 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.MailTypeCode MailTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MailType1Code#AirMail
- * MailType1Code.AirMail}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MailType1Code#OrdinaryMail
- * MailType1Code.OrdinaryMail}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MailType1Code#mmAirMail
+ * MailType1Code.mmAirMail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MailType1Code#RegisteredMail
- * MailType1Code.RegisteredMail}</li>
+ * {@linkplain com.tools20022.repository.codeset.MailType1Code#mmOrdinaryMail
+ * MailType1Code.mmOrdinaryMail}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MailType1Code#mmRegisteredMail
+ * MailType1Code.mmRegisteredMail}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +76,7 @@ public class MailType1Code extends MailTypeCode {
 	 * name} = "AirMail"</li>
 	 * </ul>
 	 */
-	public static final MMCode AirMail = new MMCode() {
+	public static final MMCode mmAirMail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirMail";
@@ -98,7 +99,7 @@ public class MailType1Code extends MailTypeCode {
 	 * name} = "OrdinaryMail"</li>
 	 * </ul>
 	 */
-	public static final MMCode OrdinaryMail = new MMCode() {
+	public static final MMCode mmOrdinaryMail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryMail";
@@ -121,7 +122,7 @@ public class MailType1Code extends MailTypeCode {
 	 * name} = "RegisteredMail"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegisteredMail = new MMCode() {
+	public static final MMCode mmRegisteredMail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMail";
@@ -132,11 +133,11 @@ public class MailType1Code extends MailTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MailType1Code";
 				definition = "Specifies the type of mail service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MailType1Code.AirMail, com.tools20022.repository.codeset.MailType1Code.OrdinaryMail, com.tools20022.repository.codeset.MailType1Code.RegisteredMail);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MailType1Code.mmAirMail, com.tools20022.repository.codeset.MailType1Code.mmOrdinaryMail, com.tools20022.repository.codeset.MailType1Code.mmRegisteredMail);
 				trace_lazy = () -> MailTypeCode.mmObject();
 			}
 		});

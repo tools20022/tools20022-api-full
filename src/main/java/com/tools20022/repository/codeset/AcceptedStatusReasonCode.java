@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#SectorNotAllowed
- * AcceptedStatusReasonCode.SectorNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#mmSectorNotAllowed
+ * AcceptedStatusReasonCode.mmSectorNotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#PlaceNotAllowed
- * AcceptedStatusReasonCode.PlaceNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#mmPlaceNotAllowed
+ * AcceptedStatusReasonCode.mmPlaceNotAllowed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +87,7 @@ public class AcceptedStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SectorNotAllowed = new MMCode() {
+	public static final MMCode mmSectorNotAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SectorNotAllowed";
@@ -120,7 +120,7 @@ public class AcceptedStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceNotAllowed = new MMCode() {
+	public static final MMCode mmPlaceNotAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceNotAllowed";
@@ -133,11 +133,11 @@ public class AcceptedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReasonCode";
 				definition = "Specifies the reason for an accepted status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcceptedStatusReasonCode.SectorNotAllowed, com.tools20022.repository.codeset.AcceptedStatusReasonCode.PlaceNotAllowed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcceptedStatusReasonCode.mmSectorNotAllowed, com.tools20022.repository.codeset.AcceptedStatusReasonCode.mmPlaceNotAllowed);
 				derivation_lazy = () -> Arrays.asList(AcceptedStatusReason1Code.mmObject());
 			}
 		});

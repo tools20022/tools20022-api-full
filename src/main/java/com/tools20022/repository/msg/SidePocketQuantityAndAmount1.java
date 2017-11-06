@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SidePocketQuantityAndAmount1#UnitsNumber
- * SidePocketQuantityAndAmount1.UnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.SidePocketQuantityAndAmount1#mmUnitsNumber
+ * SidePocketQuantityAndAmount1.mmUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SidePocketQuantityAndAmount1#OrderedAmount
- * SidePocketQuantityAndAmount1.OrderedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SidePocketQuantityAndAmount1#mmOrderedAmount
+ * SidePocketQuantityAndAmount1.mmOrderedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SidePocketQuantityAndAmount1#HoldingsRate
- * SidePocketQuantityAndAmount1.HoldingsRate}</li>
+ * {@linkplain com.tools20022.repository.msg.SidePocketQuantityAndAmount1#mmHoldingsRate
+ * SidePocketQuantityAndAmount1.mmHoldingsRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SidePocketQuantityAndAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
 	 * Total of quantity of units subscribed or redeemed in the lot or side
 	 * pocket.
@@ -80,8 +81,8 @@ public class SidePocketQuantityAndAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class SidePocketQuantityAndAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Total of quantity of units subscribed or redeemed in the lot or side pocket.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount orderedAmount;
 	/**
 	 * Amount of money invested or redeemed into the lot or side pocket.
 	 * <p>
@@ -129,8 +131,8 @@ public class SidePocketQuantityAndAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedAmount
-	 * SecuritiesOrder.OrderedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedAmount
+	 * SecuritiesOrder.mmOrderedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class SidePocketQuantityAndAmount1 {
 	 * "Amount of money invested or redeemed into the lot or side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedAmount;
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedAmount";
 			definition = "Amount of money invested or redeemed into the lot or side pocket.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate holdingsRate;
 	/**
 	 * Percentage of the financial instrument quantity invested or redeemed in
 	 * the lot or side pocket.
@@ -178,8 +181,8 @@ public class SidePocketQuantityAndAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#HoldingsRate
-	 * InvestmentFundOrder.HoldingsRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmHoldingsRate
+	 * InvestmentFundOrder.mmHoldingsRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,17 +203,17 @@ public class SidePocketQuantityAndAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingsRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.HoldingsRate;
 			isDerived = false;
 			xmlTag = "HldgsRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRate";
 			definition = "Percentage of the financial instrument quantity invested or redeemed in the lot or side pocket.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -218,15 +221,39 @@ public class SidePocketQuantityAndAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SidePocketQuantityAndAmount1.UnitsNumber, com.tools20022.repository.msg.SidePocketQuantityAndAmount1.OrderedAmount,
-						com.tools20022.repository.msg.SidePocketQuantityAndAmount1.HoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmUnitsNumber, com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmOrderedAmount,
+						com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmHoldingsRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SidePocketQuantityAndAmount1";
 				definition = "Quantity of a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1 getUnitsNumber() {
+		return unitsNumber;
+	}
+
+	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = unitsNumber;
+	}
+
+	public ActiveCurrencyAndAmount getOrderedAmount() {
+		return orderedAmount;
+	}
+
+	public void setOrderedAmount(ActiveCurrencyAndAmount orderedAmount) {
+		this.orderedAmount = orderedAmount;
+	}
+
+	public PercentageRate getHoldingsRate() {
+		return holdingsRate;
+	}
+
+	public void setHoldingsRate(PercentageRate holdingsRate) {
+		this.holdingsRate = holdingsRate;
 	}
 }

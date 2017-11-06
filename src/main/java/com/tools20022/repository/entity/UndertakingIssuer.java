@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking9#Issuer
- * Undertaking9.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking6#Issuer
- * Undertaking6.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking7#Issuer
- * Undertaking7.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking1#Issuer
- * Undertaking1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking3#Issuer
- * Undertaking3.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking8#Issuer
- * Undertaking8.Issuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking9#mmIssuer
+ * Undertaking9.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking6#mmIssuer
+ * Undertaking6.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking7#mmIssuer
+ * Undertaking7.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking1#mmIssuer
+ * Undertaking1.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking3#mmIssuer
+ * Undertaking3.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking8#mmIssuer
+ * Undertaking8.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,12 +75,12 @@ public class UndertakingIssuer extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingIssuer";
 				definition = "Party that issues the undertaking (or counter-undertaking).";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking9.Issuer, com.tools20022.repository.msg.Undertaking6.Issuer, com.tools20022.repository.msg.Undertaking7.Issuer,
-						com.tools20022.repository.msg.Undertaking1.Issuer, com.tools20022.repository.msg.Undertaking3.Issuer, com.tools20022.repository.msg.Undertaking8.Issuer);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking9.mmIssuer, com.tools20022.repository.msg.Undertaking6.mmIssuer, com.tools20022.repository.msg.Undertaking7.mmIssuer,
+						com.tools20022.repository.msg.Undertaking1.mmIssuer, com.tools20022.repository.msg.Undertaking3.mmIssuer, com.tools20022.repository.msg.Undertaking8.mmIssuer);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 			}
 		});

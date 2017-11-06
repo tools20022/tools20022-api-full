@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.AmountTypeCode AmountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountType1Code#Open
- * AmountType1Code.Open}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountType1Code#Unknown
- * AmountType1Code.Unknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountType1Code#mmOpen
+ * AmountType1Code.mmOpen}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountType1Code#mmUnknown
+ * AmountType1Code.mmUnknown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class AmountType1Code extends AmountTypeCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode Open = new MMCode() {
+	public static final MMCode mmOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
@@ -101,7 +101,7 @@ public class AmountType1Code extends AmountTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -112,12 +112,12 @@ public class AmountType1Code extends AmountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountType1Code";
 				definition = "Specifies the value of the amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountType1Code.Open, com.tools20022.repository.codeset.AmountType1Code.Unknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountType1Code.mmOpen, com.tools20022.repository.codeset.AmountType1Code.mmUnknown);
 				trace_lazy = () -> AmountTypeCode.mmObject();
 			}
 		});

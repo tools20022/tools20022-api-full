@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivide1Code#Multiply
- * DTCMultiplyDivide1Code.Multiply}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivide1Code#mmMultiply
+ * DTCMultiplyDivide1Code.mmMultiply}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivide1Code#Divide
- * DTCMultiplyDivide1Code.Divide}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivide1Code#mmDivide
+ * DTCMultiplyDivide1Code.mmDivide}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class DTCMultiplyDivide1Code extends DTCMultiplyDivideCode {
 	 * name} = "Multiply"</li>
 	 * </ul>
 	 */
-	public static final MMCode Multiply = new MMCode() {
+	public static final MMCode mmMultiply = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiply";
@@ -106,7 +106,7 @@ public class DTCMultiplyDivide1Code extends DTCMultiplyDivideCode {
 	 * name} = "Divide"</li>
 	 * </ul>
 	 */
-	public static final MMCode Divide = new MMCode() {
+	public static final MMCode mmDivide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Divide";
@@ -117,12 +117,12 @@ public class DTCMultiplyDivide1Code extends DTCMultiplyDivideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MULT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCMultiplyDivide1Code";
 				definition = "Specifies DTC (The Depository Trust Company) entitlement calculation logic.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCMultiplyDivide1Code.Multiply, com.tools20022.repository.codeset.DTCMultiplyDivide1Code.Divide);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCMultiplyDivide1Code.mmMultiply, com.tools20022.repository.codeset.DTCMultiplyDivide1Code.mmDivide);
 				trace_lazy = () -> DTCMultiplyDivideCode.mmObject();
 			}
 		});

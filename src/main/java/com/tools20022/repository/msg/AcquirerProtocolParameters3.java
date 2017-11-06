@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Acceptor parameters dedicated to the acquirer protocol.
@@ -37,44 +38,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#AcquirerIdentification
- * AcquirerProtocolParameters3.AcquirerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmAcquirerIdentification
+ * AcquirerProtocolParameters3.mmAcquirerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#ApplicationIdentification
- * AcquirerProtocolParameters3.ApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmApplicationIdentification
+ * AcquirerProtocolParameters3.mmApplicationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#Host
- * AcquirerProtocolParameters3.Host}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmHost
+ * AcquirerProtocolParameters3.mmHost}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#OnLineTransaction
- * AcquirerProtocolParameters3.OnLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmOnLineTransaction
+ * AcquirerProtocolParameters3.mmOnLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#OffLineTransaction
- * AcquirerProtocolParameters3.OffLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmOffLineTransaction
+ * AcquirerProtocolParameters3.mmOffLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#ReconciliationExchange
- * AcquirerProtocolParameters3.ReconciliationExchange}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmReconciliationExchange
+ * AcquirerProtocolParameters3.mmReconciliationExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#ReconciliationByAcquirer
- * AcquirerProtocolParameters3.ReconciliationByAcquirer}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmReconciliationByAcquirer
+ * AcquirerProtocolParameters3.mmReconciliationByAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#TotalsPerCurrency
- * AcquirerProtocolParameters3.TotalsPerCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmTotalsPerCurrency
+ * AcquirerProtocolParameters3.mmTotalsPerCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#SplitTotals
- * AcquirerProtocolParameters3.SplitTotals}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmSplitTotals
+ * AcquirerProtocolParameters3.mmSplitTotals}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#CardDataVerification
- * AcquirerProtocolParameters3.CardDataVerification}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmCardDataVerification
+ * AcquirerProtocolParameters3.mmCardDataVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#BatchTransferContent
- * AcquirerProtocolParameters3.BatchTransferContent}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmBatchTransferContent
+ * AcquirerProtocolParameters3.mmBatchTransferContent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#MessageItem
- * AcquirerProtocolParameters3.MessageItem}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmMessageItem
+ * AcquirerProtocolParameters3.mmMessageItem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#ProtectCardData
- * AcquirerProtocolParameters3.ProtectCardData}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmProtectCardData
+ * AcquirerProtocolParameters3.mmProtectCardData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -83,8 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerProtocolParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.GenericIdentification32> acquirerIdentification;
 	/**
 	 * Identification of the acquirer using this protocol.
 	 * <p>
@@ -121,8 +123,8 @@ public class AcquirerProtocolParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,27 +145,28 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#AcquirerIdentification
-	 * AcquirerProtocolParameters6.AcquirerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmAcquirerIdentification
+	 * AcquirerProtocolParameters6.mmAcquirerIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcquirerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcquirerIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "AcqrrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerIdentification";
 			definition = "Identification of the acquirer using this protocol.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.AcquirerIdentification);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmAcquirerIdentification);
 			minOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected List<Max35Text> applicationIdentification;
 	/**
 	 * Identification of the payment application, user of the acquirer protocol.
 	 * <p>
@@ -176,8 +179,8 @@ public class AcquirerProtocolParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ApplicationIdentification
-	 * AcceptorConfiguration.ApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationIdentification
+	 * AcceptorConfiguration.mmApplicationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,26 +203,27 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#ApplicationIdentification
-	 * AcquirerProtocolParameters6.ApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmApplicationIdentification
+	 * AcquirerProtocolParameters6.mmApplicationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationIdentification;
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.ApplicationIdentification;
 			isDerived = false;
 			xmlTag = "ApplId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of the payment application, user of the acquirer protocol.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.ApplicationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmApplicationIdentification);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AcquirerHostConfiguration2> host;
 	/**
 	 * Acquirer host configuration.
 	 * <p>
@@ -232,8 +236,8 @@ public class AcquirerProtocolParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#TerminalManagementSystem
-	 * AcceptorConfiguration.TerminalManagementSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTerminalManagementSystem
+	 * AcceptorConfiguration.mmTerminalManagementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,27 +258,28 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#Host
-	 * AcquirerProtocolParameters6.Host}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmHost
+	 * AcquirerProtocolParameters6.mmHost}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Host = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHost = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmTerminalManagementSystem;
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.TerminalManagementSystem;
 			isDerived = false;
 			xmlTag = "Hst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Host";
 			definition = "Acquirer host configuration.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.Host);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmHost);
 			minOccurs = 0;
-			type_lazy = () -> AcquirerHostConfiguration2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration2.mmObject();
 		}
 	};
+	protected AcquirerProtocolParameters4 onLineTransaction;
 	/**
 	 * Acquirer protocol parameters of transactions performing an online
 	 * authorisation.
@@ -312,28 +317,29 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#OnLineTransaction
-	 * AcquirerProtocolParameters6.OnLineTransaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmOnLineTransaction
+	 * AcquirerProtocolParameters6.mmOnLineTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OnLineTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOnLineTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
+			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "OnLineTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineTransaction";
 			definition = "Acquirer protocol parameters of transactions performing an online authorisation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.OnLineTransaction);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmOnLineTransaction);
 			maxOccurs = 1;
-			type_lazy = () -> AcquirerProtocolParameters4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters4.mmObject();
 		}
 	};
+	protected AcquirerProtocolParameters4 offLineTransaction;
 	/**
 	 * Acquirer protocol parameters of transactions performing an offline
 	 * authorisation.
@@ -371,28 +377,29 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#OffLineTransaction
-	 * AcquirerProtocolParameters6.OffLineTransaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmOffLineTransaction
+	 * AcquirerProtocolParameters6.mmOffLineTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OffLineTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOffLineTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
+			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "OffLineTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffLineTransaction";
 			definition = "Acquirer protocol parameters of transactions performing an offline authorisation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.OffLineTransaction);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmOffLineTransaction);
 			maxOccurs = 1;
-			type_lazy = () -> AcquirerProtocolParameters4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters4.mmObject();
 		}
 	};
+	protected ExchangeConfiguration2 reconciliationExchange;
 	/**
 	 * Configuration parameters of reconciliation exchanges.
 	 * <p>
@@ -426,28 +433,29 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#ReconciliationExchange
-	 * AcquirerProtocolParameters6.ReconciliationExchange}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmReconciliationExchange
+	 * AcquirerProtocolParameters6.mmReconciliationExchange}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReconciliationExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReconciliationExchange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
+			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnXchg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationExchange";
 			definition = "Configuration parameters of reconciliation exchanges.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.ReconciliationExchange);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmReconciliationExchange);
 			maxOccurs = 1;
-			type_lazy = () -> ExchangeConfiguration2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration2.mmObject();
 		}
 	};
+	protected TrueFalseIndicator reconciliationByAcquirer;
 	/**
 	 * Indicates the reconciliation period is assigned by the acquirer instead
 	 * of the acceptor.
@@ -462,8 +470,8 @@ public class AcquirerProtocolParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ReconciliationByAcquirer
-	 * AcceptorConfiguration.ReconciliationByAcquirer}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmReconciliationByAcquirer
+	 * AcceptorConfiguration.mmReconciliationByAcquirer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -486,27 +494,28 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#ReconciliationByAcquirer
-	 * AcquirerProtocolParameters6.ReconciliationByAcquirer}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmReconciliationByAcquirer
+	 * AcquirerProtocolParameters6.mmReconciliationByAcquirer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationByAcquirer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationByAcquirer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmReconciliationByAcquirer;
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.ReconciliationByAcquirer;
 			isDerived = false;
 			xmlTag = "RcncltnByAcqrr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationByAcquirer";
 			definition = "Indicates the reconciliation period is assigned by the acquirer instead of the acceptor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.ReconciliationByAcquirer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmReconciliationByAcquirer);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator totalsPerCurrency;
 	/**
 	 * Indicates the reconciliation total amounts are computed per currency.
 	 * <p>
@@ -520,8 +529,8 @@ public class AcquirerProtocolParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#TotalsPerCurrency
-	 * AcceptorConfiguration.TotalsPerCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTotalsPerCurrency
+	 * AcceptorConfiguration.mmTotalsPerCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -543,27 +552,28 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#TotalsPerCurrency
-	 * AcquirerProtocolParameters6.TotalsPerCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmTotalsPerCurrency
+	 * AcquirerProtocolParameters6.mmTotalsPerCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalsPerCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalsPerCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmTotalsPerCurrency;
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.TotalsPerCurrency;
 			isDerived = false;
 			xmlTag = "TtlsPerCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalsPerCurrency";
 			definition = "Indicates the reconciliation total amounts are computed per currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.TotalsPerCurrency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmTotalsPerCurrency);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator splitTotals;
 	/**
 	 * Indicates that totals in reconciliation or batch must be split per group
 	 * of points of interaction and card product profiles when these
@@ -598,13 +608,13 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#SplitTotals
-	 * AcquirerProtocolParameters6.SplitTotals}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmSplitTotals
+	 * AcquirerProtocolParameters6.mmSplitTotals}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SplitTotals = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSplitTotals = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			isDerived = false;
@@ -612,12 +622,13 @@ public class AcquirerProtocolParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitTotals";
 			definition = "Indicates that totals in reconciliation or batch must be split per group of points of interaction and card product profiles when these informations are present in the transactions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.SplitTotals);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmSplitTotals);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator cardDataVerification;
 	/**
 	 * Indicates that response messages and an AcceptorCompletionAdvice message
 	 * following an authorisation exchange must contain protected or plain card
@@ -652,13 +663,13 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#CardDataVerification
-	 * AcquirerProtocolParameters6.CardDataVerification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmCardDataVerification
+	 * AcquirerProtocolParameters6.mmCardDataVerification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardDataVerification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardDataVerification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			isDerived = false;
@@ -666,12 +677,13 @@ public class AcquirerProtocolParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataVerification";
 			definition = "Indicates that response messages and an AcceptorCompletionAdvice message following an authorisation exchange must contain protected or plain card data.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.CardDataVerification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmCardDataVerification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected List<BatchTransactionType1Code> batchTransferContent;
 	/**
 	 * Types of transaction to include in the batch.
 	 * <p>
@@ -685,8 +697,8 @@ public class AcquirerProtocolParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#BatchTransferContent
-	 * AcceptorConfiguration.BatchTransferContent}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmBatchTransferContent
+	 * AcceptorConfiguration.mmBatchTransferContent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -707,26 +719,27 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#BatchTransferContent
-	 * AcquirerProtocolParameters6.BatchTransferContent}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmBatchTransferContent
+	 * AcquirerProtocolParameters6.mmBatchTransferContent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BatchTransferContent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBatchTransferContent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmBatchTransferContent;
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.BatchTransferContent;
 			isDerived = false;
 			xmlTag = "BtchTrfCntt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchTransferContent";
 			definition = "Types of transaction to include in the batch.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.BatchTransferContent);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmBatchTransferContent);
 			minOccurs = 0;
 			simpleType_lazy = () -> BatchTransactionType1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.MessageItemCondition1> messageItem;
 	/**
 	 * Configuration of a message item.
 	 * <p>
@@ -755,13 +768,13 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#MessageItem
-	 * AcquirerProtocolParameters6.MessageItem}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmMessageItem
+	 * AcquirerProtocolParameters6.mmMessageItem}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageItem = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
 			isDerived = false;
@@ -769,12 +782,13 @@ public class AcquirerProtocolParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageItem";
 			definition = "Configuration of a message item.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.MessageItem);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmMessageItem);
 			minOccurs = 0;
-			type_lazy = () -> MessageItemCondition1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageItemCondition1.mmObject();
 		}
 	};
+	protected TrueFalseIndicator protectCardData;
 	/**
 	 * Indicator to require protection of sensitive card data in messages.
 	 * <p>
@@ -788,8 +802,8 @@ public class AcquirerProtocolParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ProtectCardData
-	 * AcceptorConfiguration.ProtectCardData}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmProtectCardData
+	 * AcceptorConfiguration.mmProtectCardData}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -811,24 +825,24 @@ public class AcquirerProtocolParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#ProtectCardData
-	 * AcquirerProtocolParameters6.ProtectCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmProtectCardData
+	 * AcquirerProtocolParameters6.mmProtectCardData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProtectCardData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProtectCardData = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmProtectCardData;
 			componentContext_lazy = () -> AcquirerProtocolParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.ProtectCardData;
 			isDerived = false;
 			xmlTag = "PrtctCardData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectCardData";
 			definition = "Indicator to require protection of sensitive card data in messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.ProtectCardData);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters6.mmProtectCardData);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -836,22 +850,126 @@ public class AcquirerProtocolParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters3.AcquirerIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters3.ApplicationIdentification,
-						com.tools20022.repository.msg.AcquirerProtocolParameters3.Host, com.tools20022.repository.msg.AcquirerProtocolParameters3.OnLineTransaction,
-						com.tools20022.repository.msg.AcquirerProtocolParameters3.OffLineTransaction, com.tools20022.repository.msg.AcquirerProtocolParameters3.ReconciliationExchange,
-						com.tools20022.repository.msg.AcquirerProtocolParameters3.ReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters3.TotalsPerCurrency,
-						com.tools20022.repository.msg.AcquirerProtocolParameters3.SplitTotals, com.tools20022.repository.msg.AcquirerProtocolParameters3.CardDataVerification,
-						com.tools20022.repository.msg.AcquirerProtocolParameters3.BatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters3.MessageItem,
-						com.tools20022.repository.msg.AcquirerProtocolParameters3.ProtectCardData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters3.mmAcquirerIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmApplicationIdentification,
+						com.tools20022.repository.msg.AcquirerProtocolParameters3.mmHost, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmOnLineTransaction,
+						com.tools20022.repository.msg.AcquirerProtocolParameters3.mmOffLineTransaction, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmReconciliationExchange,
+						com.tools20022.repository.msg.AcquirerProtocolParameters3.mmReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmTotalsPerCurrency,
+						com.tools20022.repository.msg.AcquirerProtocolParameters3.mmSplitTotals, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmCardDataVerification,
+						com.tools20022.repository.msg.AcquirerProtocolParameters3.mmBatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmMessageItem,
+						com.tools20022.repository.msg.AcquirerProtocolParameters3.mmProtectCardData);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcquirerProtocolParameters3";
 				definition = "Acceptor parameters dedicated to the acquirer protocol.";
-				previousVersion_lazy = () -> AcquirerProtocolParameters1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters6.mmObject());
+				previousVersion_lazy = () -> AcquirerProtocolParameters1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<GenericIdentification32> getAcquirerIdentification() {
+		return acquirerIdentification;
+	}
+
+	public void setAcquirerIdentification(List<com.tools20022.repository.msg.GenericIdentification32> acquirerIdentification) {
+		this.acquirerIdentification = acquirerIdentification;
+	}
+
+	public List<Max35Text> getApplicationIdentification() {
+		return applicationIdentification;
+	}
+
+	public void setApplicationIdentification(List<Max35Text> applicationIdentification) {
+		this.applicationIdentification = applicationIdentification;
+	}
+
+	public List<AcquirerHostConfiguration2> getHost() {
+		return host;
+	}
+
+	public void setHost(List<com.tools20022.repository.msg.AcquirerHostConfiguration2> host) {
+		this.host = host;
+	}
+
+	public AcquirerProtocolParameters4 getOnLineTransaction() {
+		return onLineTransaction;
+	}
+
+	public void setOnLineTransaction(com.tools20022.repository.msg.AcquirerProtocolParameters4 onLineTransaction) {
+		this.onLineTransaction = onLineTransaction;
+	}
+
+	public AcquirerProtocolParameters4 getOffLineTransaction() {
+		return offLineTransaction;
+	}
+
+	public void setOffLineTransaction(com.tools20022.repository.msg.AcquirerProtocolParameters4 offLineTransaction) {
+		this.offLineTransaction = offLineTransaction;
+	}
+
+	public ExchangeConfiguration2 getReconciliationExchange() {
+		return reconciliationExchange;
+	}
+
+	public void setReconciliationExchange(com.tools20022.repository.msg.ExchangeConfiguration2 reconciliationExchange) {
+		this.reconciliationExchange = reconciliationExchange;
+	}
+
+	public TrueFalseIndicator getReconciliationByAcquirer() {
+		return reconciliationByAcquirer;
+	}
+
+	public void setReconciliationByAcquirer(TrueFalseIndicator reconciliationByAcquirer) {
+		this.reconciliationByAcquirer = reconciliationByAcquirer;
+	}
+
+	public TrueFalseIndicator getTotalsPerCurrency() {
+		return totalsPerCurrency;
+	}
+
+	public void setTotalsPerCurrency(TrueFalseIndicator totalsPerCurrency) {
+		this.totalsPerCurrency = totalsPerCurrency;
+	}
+
+	public TrueFalseIndicator getSplitTotals() {
+		return splitTotals;
+	}
+
+	public void setSplitTotals(TrueFalseIndicator splitTotals) {
+		this.splitTotals = splitTotals;
+	}
+
+	public TrueFalseIndicator getCardDataVerification() {
+		return cardDataVerification;
+	}
+
+	public void setCardDataVerification(TrueFalseIndicator cardDataVerification) {
+		this.cardDataVerification = cardDataVerification;
+	}
+
+	public List<BatchTransactionType1Code> getBatchTransferContent() {
+		return batchTransferContent;
+	}
+
+	public void setBatchTransferContent(List<BatchTransactionType1Code> batchTransferContent) {
+		this.batchTransferContent = batchTransferContent;
+	}
+
+	public List<MessageItemCondition1> getMessageItem() {
+		return messageItem;
+	}
+
+	public void setMessageItem(List<com.tools20022.repository.msg.MessageItemCondition1> messageItem) {
+		this.messageItem = messageItem;
+	}
+
+	public TrueFalseIndicator getProtectCardData() {
+		return protectCardData;
+	}
+
+	public void setProtectCardData(TrueFalseIndicator protectCardData) {
+		this.protectCardData = protectCardData;
 	}
 }

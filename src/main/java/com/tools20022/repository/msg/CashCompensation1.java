@@ -36,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashCompensation1#SettlementAmount
- * CashCompensation1.SettlementAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashCompensation1#Fees
- * CashCompensation1.Fees}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashCompensation1#ValueDate
- * CashCompensation1.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashCompensation1#mmSettlementAmount
+ * CashCompensation1.mmSettlementAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashCompensation1#mmFees
+ * CashCompensation1.mmFees}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashCompensation1#mmValueDate
+ * CashCompensation1.mmValueDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashCompensation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection20 settlementAmount;
 	/**
 	 * Provides the original amount to be settled.
 	 * <p>
@@ -77,8 +78,8 @@ public class CashCompensation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Amount
-	 * PaymentObligation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAmount
+	 * PaymentObligation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,21 +98,22 @@ public class CashCompensation1 {
 	 * definition} = "Provides the original amount to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
 			componentContext_lazy = () -> CashCompensation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Amount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Provides the original amount to be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	protected AmountAndDirection20 fees;
 	/**
 	 * Amount of fees linked to the cash compensation process.
 	 * <p>
@@ -123,7 +125,7 @@ public class CashCompensation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#Fees BuyIn.Fees}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmFees BuyIn.mmFees}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,21 +144,22 @@ public class CashCompensation1 {
 	 * definition} = "Amount of fees linked to the cash compensation process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Fees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmFees;
 			componentContext_lazy = () -> CashCompensation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.Fees;
 			isDerived = false;
 			xmlTag = "Fees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			definition = "Amount of fees linked to the cash compensation process.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Indicates the value date of the cash compensation.
 	 * <p>
@@ -169,8 +172,8 @@ public class CashCompensation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -189,17 +192,17 @@ public class CashCompensation1 {
 	 * definition} = "Indicates the value date of the cash compensation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> CashCompensation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Indicates the value date of the cash compensation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -207,14 +210,39 @@ public class CashCompensation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCompensation1.SettlementAmount, com.tools20022.repository.msg.CashCompensation1.Fees, com.tools20022.repository.msg.CashCompensation1.ValueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCompensation1.mmSettlementAmount, com.tools20022.repository.msg.CashCompensation1.mmFees,
+						com.tools20022.repository.msg.CashCompensation1.mmValueDate);
 				trace_lazy = () -> BuyIn.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashCompensation1";
 				definition = "Provides details about the cash compensation such as the fees and the total settlement amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection20 getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public AmountAndDirection20 getFees() {
+		return fees;
+	}
+
+	public void setFees(com.tools20022.repository.msg.AmountAndDirection20 fees) {
+		this.fees = fees;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
 	}
 }

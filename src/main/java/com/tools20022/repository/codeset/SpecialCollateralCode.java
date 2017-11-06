@@ -31,14 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateralCode#GeneralCollateral
- * SpecialCollateralCode.GeneralCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateralCode#mmGeneralCollateral
+ * SpecialCollateralCode.mmGeneralCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateralCode#SpecialCollateral
- * SpecialCollateralCode.SpecialCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateralCode#mmSpecialCollateral
+ * SpecialCollateralCode.mmSpecialCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateralCode#MatchedAndReverseRepurchaseAgreement
- * SpecialCollateralCode.MatchedAndReverseRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateralCode#mmMatchedAndReverseRepurchaseAgreement
+ * SpecialCollateralCode.mmMatchedAndReverseRepurchaseAgreement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,7 +94,7 @@ public class SpecialCollateralCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GeneralCollateral = new MMCode() {
+	public static final MMCode mmGeneralCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralCollateral";
@@ -127,7 +127,7 @@ public class SpecialCollateralCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCollateral = new MMCode() {
+	public static final MMCode mmSpecialCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCollateral";
@@ -160,7 +160,7 @@ public class SpecialCollateralCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MatchedAndReverseRepurchaseAgreement = new MMCode() {
+	public static final MMCode mmMatchedAndReverseRepurchaseAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedAndReverseRepurchaseAgreement";
@@ -173,12 +173,12 @@ public class SpecialCollateralCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SpecialCollateralCode";
 				definition = "Specifies the collateral type against which all repurchase agreements are conducted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SpecialCollateralCode.GeneralCollateral, com.tools20022.repository.codeset.SpecialCollateralCode.SpecialCollateral,
-						com.tools20022.repository.codeset.SpecialCollateralCode.MatchedAndReverseRepurchaseAgreement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SpecialCollateralCode.mmGeneralCollateral, com.tools20022.repository.codeset.SpecialCollateralCode.mmSpecialCollateral,
+						com.tools20022.repository.codeset.SpecialCollateralCode.mmMatchedAndReverseRepurchaseAgreement);
 				derivation_lazy = () -> Arrays.asList(SpecialCollateral1Code.mmObject(), SpecialCollateral2Code.mmObject());
 			}
 		});

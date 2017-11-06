@@ -39,14 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#Initiation
- * UnderlyingTransaction1Choice.Initiation}</li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#mmInitiation
+ * UnderlyingTransaction1Choice.mmInitiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#Interbank
- * UnderlyingTransaction1Choice.Interbank}</li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#mmInterbank
+ * UnderlyingTransaction1Choice.mmInterbank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#StatementEntry
- * UnderlyingTransaction1Choice.StatementEntry}</li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#mmStatementEntry
+ * UnderlyingTransaction1Choice.mmStatementEntry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,27 +56,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#Underlying
- * RequestToModifyPaymentV03.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmUnderlying
+ * RequestToModifyPaymentV03.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#Underlying
- * UnableToApplyV03.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#mmUnderlying
+ * UnableToApplyV03.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV03#Underlying
- * ClaimNonReceiptV03.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV03#mmUnderlying
+ * ClaimNonReceiptV03.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#Underlying
- * AdditionalPaymentInformationV03.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#mmUnderlying
+ * AdditionalPaymentInformationV03.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV03#Underlying
- * DebitAuthorisationRequestV03.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV03#mmUnderlying
+ * DebitAuthorisationRequestV03.mmUnderlying}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnderlyingTransaction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnderlyingPaymentInstruction1 initiation;
 	/**
 	 * Set of elements used to reference the details of the original payment
 	 * initiation.
@@ -127,21 +128,22 @@ public class UnderlyingTransaction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Initiation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitiation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Initn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiation";
 			definition = "Set of elements used to reference the details of the original payment initiation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UnderlyingPaymentInstruction1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UnderlyingPaymentInstruction1.mmObject();
 		}
 	};
+	protected UnderlyingPaymentTransaction1 interbank;
 	/**
 	 * Set of elements used to reference the details of the original interbank
 	 * payment transaction.
@@ -176,21 +178,22 @@ public class UnderlyingTransaction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Interbank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterbank = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interbank";
 			definition = "Set of elements used to reference the details of the original interbank payment transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UnderlyingPaymentTransaction1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UnderlyingPaymentTransaction1.mmObject();
 		}
 	};
+	protected UnderlyingStatementEntry1 statementEntry;
 	/**
 	 * Reference details on the underlying statement cash entry.
 	 * <p>
@@ -223,37 +226,61 @@ public class UnderlyingTransaction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatementEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatementEntry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
+			componentContext_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtNtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementEntry";
 			definition = "Reference details on the underlying statement cash entry.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UnderlyingStatementEntry1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UnderlyingStatementEntry1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingTransaction1Choice.Initiation, com.tools20022.repository.choice.UnderlyingTransaction1Choice.Interbank,
-						com.tools20022.repository.choice.UnderlyingTransaction1Choice.StatementEntry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingTransaction1Choice.mmInitiation, com.tools20022.repository.choice.UnderlyingTransaction1Choice.mmInterbank,
+						com.tools20022.repository.choice.UnderlyingTransaction1Choice.mmStatementEntry);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmUnderlying, com.tools20022.repository.area.camt.UnableToApplyV03.mmUnderlying,
+						com.tools20022.repository.area.camt.ClaimNonReceiptV03.mmUnderlying, com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.mmUnderlying,
+						com.tools20022.repository.area.camt.DebitAuthorisationRequestV03.mmUnderlying);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV03.Underlying, com.tools20022.repository.area.camt.UnableToApplyV03.Underlying,
-						com.tools20022.repository.area.camt.ClaimNonReceiptV03.Underlying, com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.Underlying,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV03.Underlying);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction1Choice";
 				definition = "Specifies the details of the underlying transaction on which the investigation is processed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnderlyingPaymentInstruction1 getInitiation() {
+		return initiation;
+	}
+
+	public void setInitiation(UnderlyingPaymentInstruction1 initiation) {
+		this.initiation = initiation;
+	}
+
+	public UnderlyingPaymentTransaction1 getInterbank() {
+		return interbank;
+	}
+
+	public void setInterbank(UnderlyingPaymentTransaction1 interbank) {
+		this.interbank = interbank;
+	}
+
+	public UnderlyingStatementEntry1 getStatementEntry() {
+		return statementEntry;
+	}
+
+	public void setStatementEntry(UnderlyingStatementEntry1 statementEntry) {
+		this.statementEntry = statementEntry;
 	}
 }

@@ -19,9 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.entity.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies individually each leg of a transport of goods.
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport1#TransportByAir
- * SingleTransport1.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport1#mmTransportByAir
+ * SingleTransport1.mmTransportByAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport1#TransportBySea
- * SingleTransport1.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport1#mmTransportBySea
+ * SingleTransport1.mmTransportBySea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport1#TransportByRoad
- * SingleTransport1.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport1#mmTransportByRoad
+ * SingleTransport1.mmTransportByRoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport1#TransportByRail
- * SingleTransport1.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport1#mmTransportByRail
+ * SingleTransport1.mmTransportByRail}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SingleTransport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.TransportByAir1> transportByAir;
 	/**
 	 * Moving of goods or people from one place to another by vehicle.
 	 * <p>
@@ -98,20 +100,21 @@ public class SingleTransport1 {
 	 * "Moving of goods or people from one place to another by vehicle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransportByAir = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransportByAir = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> TransportByAir.mmObject();
 			componentContext_lazy = () -> SingleTransport1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByAir";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByAir";
 			definition = "Moving of goods or people from one place to another by vehicle.";
 			minOccurs = 0;
-			type_lazy = () -> TransportByAir1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransportByAir1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransportBySea1> transportBySea;
 	/**
 	 * Information related for the transportation of goods by sea.
 	 * <p>
@@ -144,20 +147,21 @@ public class SingleTransport1 {
 	 * "Information related for the transportation of goods by sea."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransportBySea = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransportBySea = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> TransportBySea.mmObject();
 			componentContext_lazy = () -> SingleTransport1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.TransportBySea.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtBySea";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportBySea";
 			definition = "Information related for the transportation of goods by sea.";
 			minOccurs = 0;
-			type_lazy = () -> TransportBySea1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransportBySea1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransportByRoad1> transportByRoad;
 	/**
 	 * Information related to the transportation of goods by road.
 	 * <p>
@@ -190,20 +194,21 @@ public class SingleTransport1 {
 	 * "Information related to the transportation of goods by road."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransportByRoad = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransportByRoad = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> TransportByRoad.mmObject();
 			componentContext_lazy = () -> SingleTransport1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.TransportByRoad.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByRoad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByRoad";
 			definition = "Information related to the transportation of goods by road.";
 			minOccurs = 0;
-			type_lazy = () -> TransportByRoad1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransportByRoad1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransportByRail1> transportByRail;
 	/**
 	 * Information related to the transportation of goods by rail.
 	 * <p>
@@ -236,33 +241,65 @@ public class SingleTransport1 {
 	 * "Information related to the transportation of goods by rail."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransportByRail = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransportByRail = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> TransportByRail.mmObject();
 			componentContext_lazy = () -> SingleTransport1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.TransportByRail.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByRail";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByRail";
 			definition = "Information related to the transportation of goods by rail.";
 			minOccurs = 0;
-			type_lazy = () -> TransportByRail1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransportByRail1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.TransportByAir, com.tools20022.repository.msg.SingleTransport1.TransportBySea,
-						com.tools20022.repository.msg.SingleTransport1.TransportByRoad, com.tools20022.repository.msg.SingleTransport1.TransportByRail);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.mmTransportByAir, com.tools20022.repository.msg.SingleTransport1.mmTransportBySea,
+						com.tools20022.repository.msg.SingleTransport1.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport1.mmTransportByRail);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleTransport1";
 				definition = "Specifies individually each leg of a transport of goods.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<TransportByAir1> getTransportByAir() {
+		return transportByAir;
+	}
+
+	public void setTransportByAir(List<com.tools20022.repository.msg.TransportByAir1> transportByAir) {
+		this.transportByAir = transportByAir;
+	}
+
+	public List<TransportBySea1> getTransportBySea() {
+		return transportBySea;
+	}
+
+	public void setTransportBySea(List<com.tools20022.repository.msg.TransportBySea1> transportBySea) {
+		this.transportBySea = transportBySea;
+	}
+
+	public List<TransportByRoad1> getTransportByRoad() {
+		return transportByRoad;
+	}
+
+	public void setTransportByRoad(List<com.tools20022.repository.msg.TransportByRoad1> transportByRoad) {
+		this.transportByRoad = transportByRoad;
+	}
+
+	public List<TransportByRail1> getTransportByRail() {
+		return transportByRail;
+	}
+
+	public void setTransportByRail(List<com.tools20022.repository.msg.TransportByRail1> transportByRail) {
+		this.transportByRail = transportByRail;
 	}
 }

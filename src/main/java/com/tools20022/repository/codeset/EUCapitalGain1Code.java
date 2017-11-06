@@ -37,23 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code#CapitalGainInScope
- * EUCapitalGain1Code.CapitalGainInScope}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code#mmCapitalGainInScope
+ * EUCapitalGain1Code.mmCapitalGainInScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code#CapitalGainOutScope
- * EUCapitalGain1Code.CapitalGainOutScope}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code#mmCapitalGainOutScope
+ * EUCapitalGain1Code.mmCapitalGainOutScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code#CapitalGainUnknown
- * EUCapitalGain1Code.CapitalGainUnknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code#Other
- * EUCapitalGain1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code#mmCapitalGainUnknown
+ * EUCapitalGain1Code.mmCapitalGainUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EUCapitalGain1Code#mmOther
+ * EUCapitalGain1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class EUCapitalGain1Code extends EUCapitalGainCode {
 	 * name} = "CapitalGainInScope"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGainInScope = new MMCode() {
+	public static final MMCode mmCapitalGainInScope = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainInScope";
@@ -114,7 +114,7 @@ public class EUCapitalGain1Code extends EUCapitalGainCode {
 	 * name} = "CapitalGainOutScope"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGainOutScope = new MMCode() {
+	public static final MMCode mmCapitalGainOutScope = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainOutScope";
@@ -137,7 +137,7 @@ public class EUCapitalGain1Code extends EUCapitalGainCode {
 	 * name} = "CapitalGainUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGainUnknown = new MMCode() {
+	public static final MMCode mmCapitalGainUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainUnknown";
@@ -160,7 +160,7 @@ public class EUCapitalGain1Code extends EUCapitalGainCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -171,13 +171,13 @@ public class EUCapitalGain1Code extends EUCapitalGainCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EUSI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EUCapitalGain1Code";
 				definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June) for an income realised upon sale, a refund or redemption of shares and units etc.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUCapitalGain1Code.CapitalGainInScope, com.tools20022.repository.codeset.EUCapitalGain1Code.CapitalGainOutScope,
-						com.tools20022.repository.codeset.EUCapitalGain1Code.CapitalGainUnknown, com.tools20022.repository.codeset.EUCapitalGain1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUCapitalGain1Code.mmCapitalGainInScope, com.tools20022.repository.codeset.EUCapitalGain1Code.mmCapitalGainOutScope,
+						com.tools20022.repository.codeset.EUCapitalGain1Code.mmCapitalGainUnknown, com.tools20022.repository.codeset.EUCapitalGain1Code.mmOther);
 				trace_lazy = () -> EUCapitalGainCode.mmObject();
 			}
 		});

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.PointOfInteraction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Content of the status report.
@@ -37,31 +38,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportContent3#POICapabilities
- * StatusReportContent3.POICapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportContent3#mmPOICapabilities
+ * StatusReportContent3.mmPOICapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportContent3#POIComponent
- * StatusReportContent3.POIComponent}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportContent3#mmPOIComponent
+ * StatusReportContent3.mmPOIComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportContent3#AttendanceContext
- * StatusReportContent3.AttendanceContext}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportContent3#mmAttendanceContext
+ * StatusReportContent3.mmAttendanceContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportContent3#POIDateTime
- * StatusReportContent3.POIDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportContent3#mmPOIDateTime
+ * StatusReportContent3.mmPOIDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportContent3#DataSetRequired
- * StatusReportContent3.DataSetRequired}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusReportContent3#Event
- * StatusReportContent3.Event}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusReportContent3#Errors
- * StatusReportContent3.Errors}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportContent3#mmDataSetRequired
+ * StatusReportContent3.mmDataSetRequired}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReportContent3#mmEvent
+ * StatusReportContent3.mmEvent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReportContent3#mmErrors
+ * StatusReportContent3.mmErrors}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReportContent3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PointOfInteractionCapabilities2 pOICapabilities;
 	/**
 	 * Capabilities of the POI (Point Of Interaction) performing the status
 	 * report.
@@ -123,34 +125,35 @@ public class StatusReportContent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#POICapabilities
-	 * StatusReportContent4.POICapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#mmPOICapabilities
+	 * StatusReportContent4.mmPOICapabilities}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#POICapabilities
-	 * StatusReportContent2.POICapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#mmPOICapabilities
+	 * StatusReportContent2.mmPOICapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POICapabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOICapabilities = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReportContent3.mmObject();
 			businessComponentTrace_lazy = () -> PointOfInteraction.mmObject();
+			componentContext_lazy = () -> StatusReportContent3.mmObject();
 			isDerived = false;
 			xmlTag = "POICpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POICapabilities";
 			definition = "Capabilities of the POI (Point Of Interaction) performing the status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.POICapabilities;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.POICapabilities);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.mmPOICapabilities);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmPOICapabilities;
 			maxOccurs = 1;
-			type_lazy = () -> PointOfInteractionCapabilities2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PointOfInteractionComponent4> pOIComponent;
 	/**
 	 * Data related to a component of the POI (Point Of Interaction) performing
 	 * the status report.
@@ -164,8 +167,8 @@ public class StatusReportContent3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#Component
-	 * PointOfInteraction.Component}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponent
+	 * PointOfInteraction.mmComponent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,33 +191,34 @@ public class StatusReportContent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#POIComponent
-	 * StatusReportContent4.POIComponent}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#mmPOIComponent
+	 * StatusReportContent4.mmPOIComponent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#POIComponent
-	 * StatusReportContent2.POIComponent}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#mmPOIComponent
+	 * StatusReportContent2.mmPOIComponent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POIComponent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOIComponent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> StatusReportContent3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.Component;
 			isDerived = false;
 			xmlTag = "POICmpnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIComponent";
 			definition = "Data related to a component of the POI (Point Of Interaction) performing the status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.POIComponent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.POIComponent);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.mmPOIComponent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmPOIComponent;
 			minOccurs = 0;
-			type_lazy = () -> PointOfInteractionComponent4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent4.mmObject();
 		}
 	};
+	protected AttendanceContext1Code attendanceContext;
 	/**
 	 * Human attendance at the POI (Point Of Interaction) location during
 	 * transactions.
@@ -229,8 +233,8 @@ public class StatusReportContent3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#AttendanceContext
-	 * CardPaymentAcquiring.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendanceContext
+	 * CardPaymentAcquiring.mmAttendanceContext}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,33 +257,34 @@ public class StatusReportContent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#AttendanceContext
-	 * StatusReportContent4.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#mmAttendanceContext
+	 * StatusReportContent4.mmAttendanceContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#AttendanceContext
-	 * StatusReportContent2.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#mmAttendanceContext
+	 * StatusReportContent2.mmAttendanceContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> StatusReportContent3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.AttendanceContext;
 			isDerived = false;
 			xmlTag = "AttndncCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceContext";
 			definition = "Human attendance at the POI (Point Of Interaction) location during transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.AttendanceContext;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.AttendanceContext);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.mmAttendanceContext);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmAttendanceContext;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
 		}
 	};
+	protected ISODateTime pOIDateTime;
 	/**
 	 * System date time of the point of interaction (POI) sending the status
 	 * report.
@@ -312,18 +317,18 @@ public class StatusReportContent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#POIDateTime
-	 * StatusReportContent4.POIDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#mmPOIDateTime
+	 * StatusReportContent4.mmPOIDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#POIDateTime
-	 * StatusReportContent2.POIDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#mmPOIDateTime
+	 * StatusReportContent2.mmPOIDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute POIDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPOIDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusReportContent3.mmObject();
 			isDerived = false;
@@ -331,13 +336,14 @@ public class StatusReportContent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIDateTime";
 			definition = "System date time of the point of interaction (POI) sending the status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.POIDateTime;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.POIDateTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.mmPOIDateTime);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmPOIDateTime;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected TerminalManagementDataSet8 dataSetRequired;
 	/**
 	 * Request the terminal management system to answer with the identified data
 	 * set.
@@ -370,18 +376,18 @@ public class StatusReportContent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#DataSetRequired
-	 * StatusReportContent4.DataSetRequired}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#mmDataSetRequired
+	 * StatusReportContent4.mmDataSetRequired}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#DataSetRequired
-	 * StatusReportContent2.DataSetRequired}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#mmDataSetRequired
+	 * StatusReportContent2.mmDataSetRequired}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetRequired = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetRequired = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReportContent3.mmObject();
 			isDerived = false;
@@ -389,14 +395,15 @@ public class StatusReportContent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetRequired";
 			definition = "Request the terminal management system to answer with the identified data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.DataSetRequired;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.DataSetRequired);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.mmDataSetRequired);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmDataSetRequired;
 			maxOccurs = 1;
-			type_lazy = () -> TerminalManagementDataSet8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet8.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TMSEvent2> event;
 	/**
 	 * Result of an individual terminal management action by the point of
 	 * interaction.
@@ -426,18 +433,19 @@ public class StatusReportContent3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.StatusReportContent4#Event
-	 * StatusReportContent4.Event}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#mmEvent
+	 * StatusReportContent4.mmEvent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#Event
-	 * StatusReportContent2.Event}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#mmEvent
+	 * StatusReportContent2.mmEvent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Event = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReportContent3.mmObject();
 			isDerived = false;
@@ -445,13 +453,14 @@ public class StatusReportContent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Result of an individual terminal management action by the point of interaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.Event;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.Event);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.mmEvent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmEvent;
 			minOccurs = 0;
-			type_lazy = () -> TMSEvent2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TMSEvent2.mmObject();
 		}
 	};
+	protected List<Max140Text> errors;
 	/**
 	 * Error log of the point of interaction since the last status report.
 	 * <p>
@@ -482,18 +491,18 @@ public class StatusReportContent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#Errors
-	 * StatusReportContent4.Errors}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent4#mmErrors
+	 * StatusReportContent4.mmErrors}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#Errors
-	 * StatusReportContent2.Errors}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent2#mmErrors
+	 * StatusReportContent2.mmErrors}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Errors = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmErrors = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusReportContent3.mmObject();
 			isDerived = false;
@@ -501,8 +510,8 @@ public class StatusReportContent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Errors";
 			definition = "Error log of the point of interaction since the last status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.Errors;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.Errors);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent4.mmErrors);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmErrors;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
@@ -511,17 +520,73 @@ public class StatusReportContent3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent3.POICapabilities, com.tools20022.repository.msg.StatusReportContent3.POIComponent,
-						com.tools20022.repository.msg.StatusReportContent3.AttendanceContext, com.tools20022.repository.msg.StatusReportContent3.POIDateTime, com.tools20022.repository.msg.StatusReportContent3.DataSetRequired,
-						com.tools20022.repository.msg.StatusReportContent3.Event, com.tools20022.repository.msg.StatusReportContent3.Errors);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent3.mmPOICapabilities, com.tools20022.repository.msg.StatusReportContent3.mmPOIComponent,
+						com.tools20022.repository.msg.StatusReportContent3.mmAttendanceContext, com.tools20022.repository.msg.StatusReportContent3.mmPOIDateTime, com.tools20022.repository.msg.StatusReportContent3.mmDataSetRequired,
+						com.tools20022.repository.msg.StatusReportContent3.mmEvent, com.tools20022.repository.msg.StatusReportContent3.mmErrors);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusReportContent3";
 				definition = "Content of the status report.";
-				previousVersion_lazy = () -> StatusReportContent2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(StatusReportContent4.mmObject());
+				previousVersion_lazy = () -> StatusReportContent2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PointOfInteractionCapabilities2 getPOICapabilities() {
+		return pOICapabilities;
+	}
+
+	public void setPOICapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities2 pOICapabilities) {
+		this.pOICapabilities = pOICapabilities;
+	}
+
+	public List<PointOfInteractionComponent4> getPOIComponent() {
+		return pOIComponent;
+	}
+
+	public void setPOIComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent4> pOIComponent) {
+		this.pOIComponent = pOIComponent;
+	}
+
+	public AttendanceContext1Code getAttendanceContext() {
+		return attendanceContext;
+	}
+
+	public void setAttendanceContext(AttendanceContext1Code attendanceContext) {
+		this.attendanceContext = attendanceContext;
+	}
+
+	public ISODateTime getPOIDateTime() {
+		return pOIDateTime;
+	}
+
+	public void setPOIDateTime(ISODateTime pOIDateTime) {
+		this.pOIDateTime = pOIDateTime;
+	}
+
+	public TerminalManagementDataSet8 getDataSetRequired() {
+		return dataSetRequired;
+	}
+
+	public void setDataSetRequired(com.tools20022.repository.msg.TerminalManagementDataSet8 dataSetRequired) {
+		this.dataSetRequired = dataSetRequired;
+	}
+
+	public List<TMSEvent2> getEvent() {
+		return event;
+	}
+
+	public void setEvent(List<com.tools20022.repository.msg.TMSEvent2> event) {
+		this.event = event;
+	}
+
+	public List<Max140Text> getErrors() {
+		return errors;
+	}
+
+	public void setErrors(List<Max140Text> errors) {
+		this.errors = errors;
 	}
 }

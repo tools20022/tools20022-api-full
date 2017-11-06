@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#SettlementCurrency
- * PaymentInstrument10.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#mmSettlementCurrency
+ * PaymentInstrument10.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#PaymentInstrument
- * PaymentInstrument10.PaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#mmPaymentInstrument
+ * PaymentInstrument10.mmPaymentInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#DividendPercentage
- * PaymentInstrument10.DividendPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#mmDividendPercentage
+ * PaymentInstrument10.mmDividendPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentInstrument10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyCode settlementCurrency;
 	/**
 	 * Currency associated with the payment instrument.
 	 * <p>
@@ -93,8 +94,8 @@ public class PaymentInstrument10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyOfTransfer
-	 * Payment.CurrencyOfTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
+	 * Payment.mmCurrencyOfTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,27 +116,28 @@ public class PaymentInstrument10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#SettlementCurrency
-	 * PaymentInstrument12.SettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#mmSettlementCurrency
+	 * PaymentInstrument12.mmSettlementCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> PaymentInstrument10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyOfTransfer;
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency associated with the payment instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument12.SettlementCurrency);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument12.mmSettlementCurrency);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected PaymentInstrument16Choice paymentInstrument;
 	/**
 	 * Choice of payment instruments.
 	 * <p>
@@ -149,8 +151,8 @@ public class PaymentInstrument10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CreditMethod
-	 * Payment.CreditMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
+	 * Payment.mmCreditMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,27 +173,28 @@ public class PaymentInstrument10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#PaymentInstrument
-	 * PaymentInstrument12.PaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#mmPaymentInstrument
+	 * PaymentInstrument12.mmPaymentInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInstrument = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCreditMethod;
 			componentContext_lazy = () -> PaymentInstrument10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CreditMethod;
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Choice of payment instruments.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument12.PaymentInstrument);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument12.mmPaymentInstrument);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstrument16Choice.mmObject();
 		}
 	};
+	protected PercentageBoundedRate dividendPercentage;
 	/**
 	 * Percentage of the dividend payment not to be reinvested.
 	 * <p>
@@ -205,8 +208,8 @@ public class PaymentInstrument10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#AnnualTotalDividendRate
-	 * Dividend.AnnualTotalDividendRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmAnnualTotalDividendRate
+	 * Dividend.mmAnnualTotalDividendRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -227,24 +230,24 @@ public class PaymentInstrument10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#DividendPercentage
-	 * PaymentInstrument12.DividendPercentage}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#mmDividendPercentage
+	 * PaymentInstrument12.mmDividendPercentage}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DividendPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDividendPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> PaymentInstrument10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.AnnualTotalDividendRate;
 			isDerived = false;
 			xmlTag = "DvddPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage";
 			definition = "Percentage of the dividend payment not to be reinvested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument12.DividendPercentage);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument12.mmDividendPercentage);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageBoundedRate.mmObject();
 		}
 	};
@@ -252,17 +255,41 @@ public class PaymentInstrument10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument10.SettlementCurrency, com.tools20022.repository.msg.PaymentInstrument10.PaymentInstrument,
-						com.tools20022.repository.msg.PaymentInstrument10.DividendPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument10.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument10.mmPaymentInstrument,
+						com.tools20022.repository.msg.PaymentInstrument10.mmDividendPercentage);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument10";
 				definition = "Instrument that has or represents monetary value and is used to process a payment instruction.";
-				previousVersion_lazy = () -> PaymentInstrument9.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PaymentInstrument12.mmObject());
+				previousVersion_lazy = () -> PaymentInstrument9.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyCode getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public PaymentInstrument16Choice getPaymentInstrument() {
+		return paymentInstrument;
+	}
+
+	public void setPaymentInstrument(PaymentInstrument16Choice paymentInstrument) {
+		this.paymentInstrument = paymentInstrument;
+	}
+
+	public PercentageBoundedRate getDividendPercentage() {
+		return dividendPercentage;
+	}
+
+	public void setDividendPercentage(PercentageBoundedRate dividendPercentage) {
+		this.dividendPercentage = dividendPercentage;
 	}
 }

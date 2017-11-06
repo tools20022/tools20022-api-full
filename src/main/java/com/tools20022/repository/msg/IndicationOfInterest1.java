@@ -33,6 +33,7 @@ import com.tools20022.repository.entity.DeliveringSettlementParty;
 import com.tools20022.repository.entity.ReceivingSettlementParty;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Intention to buy or sell a financial Instrument.
@@ -43,79 +44,79 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IndicationOfInterest1#Side
- * IndicationOfInterest1.Side}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmSide
+ * IndicationOfInterest1.mmSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#IOIQuantity
- * IndicationOfInterest1.IOIQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndicationOfInterest1#Price
- * IndicationOfInterest1.Price}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmIOIQuantity
+ * IndicationOfInterest1.mmIOIQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmPrice
+ * IndicationOfInterest1.mmPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#ValidUntilDateTime
- * IndicationOfInterest1.ValidUntilDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmValidUntilDateTime
+ * IndicationOfInterest1.mmValidUntilDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#QualityIndication
- * IndicationOfInterest1.QualityIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmQualityIndication
+ * IndicationOfInterest1.mmQualityIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#NaturalIndicator
- * IndicationOfInterest1.NaturalIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmNaturalIndicator
+ * IndicationOfInterest1.mmNaturalIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#Qualifier
- * IndicationOfInterest1.Qualifier}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmQualifier
+ * IndicationOfInterest1.mmQualifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#LinkedURLAddress
- * IndicationOfInterest1.LinkedURLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmLinkedURLAddress
+ * IndicationOfInterest1.mmLinkedURLAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#NumberOfLegs
- * IndicationOfInterest1.NumberOfLegs}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmNumberOfLegs
+ * IndicationOfInterest1.mmNumberOfLegs}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#FinancialInstrumentDetails
- * IndicationOfInterest1.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmFinancialInstrumentDetails
+ * IndicationOfInterest1.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#FinancialInstrumentAttributes
- * IndicationOfInterest1.FinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmFinancialInstrumentAttributes
+ * IndicationOfInterest1.mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#Stipulations
- * IndicationOfInterest1.Stipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmStipulations
+ * IndicationOfInterest1.mmStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#UnderlyingFinancialInstrumentDetails
- * IndicationOfInterest1.UnderlyingFinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmUnderlyingFinancialInstrumentDetails
+ * IndicationOfInterest1.mmUnderlyingFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#UnderlyingFinancialInstrumentAttributes
- * IndicationOfInterest1.UnderlyingFinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmUnderlyingFinancialInstrumentAttributes
+ * IndicationOfInterest1.mmUnderlyingFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#UnderlyingStipulations
- * IndicationOfInterest1.UnderlyingStipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmUnderlyingStipulations
+ * IndicationOfInterest1.mmUnderlyingStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#InstrumentLegGroupDetails
- * IndicationOfInterest1.InstrumentLegGroupDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmInstrumentLegGroupDetails
+ * IndicationOfInterest1.mmInstrumentLegGroupDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#YieldDetails
- * IndicationOfInterest1.YieldDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmYieldDetails
+ * IndicationOfInterest1.mmYieldDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#OrderQuantity
- * IndicationOfInterest1.OrderQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmOrderQuantity
+ * IndicationOfInterest1.mmOrderQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#SpreadAndBenchmarkCurveDetails
- * IndicationOfInterest1.SpreadAndBenchmarkCurveDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmSpreadAndBenchmarkCurveDetails
+ * IndicationOfInterest1.mmSpreadAndBenchmarkCurveDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#TwoLegTransactionDetails
- * IndicationOfInterest1.TwoLegTransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmTwoLegTransactionDetails
+ * IndicationOfInterest1.mmTwoLegTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#TradingParties
- * IndicationOfInterest1.TradingParties}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmTradingParties
+ * IndicationOfInterest1.mmTradingParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#CashParties
- * IndicationOfInterest1.CashParties}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmCashParties
+ * IndicationOfInterest1.mmCashParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#ReceivingSettlementParties
- * IndicationOfInterest1.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmReceivingSettlementParties
+ * IndicationOfInterest1.mmReceivingSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#DeliveringSettlementParties
- * IndicationOfInterest1.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmDeliveringSettlementParties
+ * IndicationOfInterest1.mmDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#OtherBusinessParties
- * IndicationOfInterest1.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmOtherBusinessParties
+ * IndicationOfInterest1.mmOtherBusinessParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -125,8 +126,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -140,6 +141,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndicationOfInterest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IOISideTypeCode side;
 	/**
 	 * Side of the indication of interest.
 	 * <p>
@@ -153,8 +155,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,20 +175,21 @@ public class IndicationOfInterest1 {
 	 * definition} = "Side of the indication of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Side of the indication of interest.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> IOISideTypeCode.mmObject();
 		}
 	};
+	protected Quantity1Choice iOIQuantity;
 	/**
 	 * Quantity of financial instrument to which the indication applies.
 	 * <p>
@@ -200,8 +203,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#Quantity
-	 * Quote.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmQuantity
+	 * Quote.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -221,20 +224,21 @@ public class IndicationOfInterest1 {
 	 * "Quantity of financial instrument to which the indication applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IOIQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIOIQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuantity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.Quantity;
 			isDerived = false;
 			xmlTag = "IOIQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOIQuantity";
 			definition = "Quantity of financial instrument to which the indication applies.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity1Choice.mmObject();
 		}
 	};
+	protected Price1 price;
 	/**
 	 * Indicates the price of the instrument, applicable to the indication of
 	 * interest.
@@ -247,8 +251,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#Price
-	 * BuyOrSellIndicationOfInterest.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmPrice
+	 * BuyOrSellIndicationOfInterest.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -269,20 +273,21 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Price = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmPrice;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.Price;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Indicates the price of the instrument, applicable to the indication of interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected ISODateTime validUntilDateTime;
 	/**
 	 * Specifies the date and time at which the indication of interest expires
 	 * and is no longer valid.
@@ -296,8 +301,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#ValidUntilDateTime
-	 * Quote.ValidUntilDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmValidUntilDateTime
+	 * Quote.mmValidUntilDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -318,20 +323,21 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidUntilDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.ValidUntilDateTime;
 			isDerived = false;
 			xmlTag = "VldUntilDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntilDateTime";
 			definition = "Specifies the date and time at which the indication of interest expires and is no longer valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected QualityIndication1Code qualityIndication;
 	/**
 	 * Indicates the relative quality of the indication of interest.
 	 * <p>
@@ -345,8 +351,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#QualityIndication
-	 * BuyOrSellIndicationOfInterest.QualityIndication}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmQualityIndication
+	 * BuyOrSellIndicationOfInterest.mmQualityIndication}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -366,20 +372,21 @@ public class IndicationOfInterest1 {
 	 * "Indicates the relative quality of the indication of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QualityIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQualityIndication = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmQualityIndication;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.QualityIndication;
 			isDerived = false;
 			xmlTag = "QltyIndctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualityIndication";
 			definition = "Indicates the relative quality of the indication of interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QualityIndication1Code.mmObject();
 		}
 	};
+	protected TrueFalseIndicator naturalIndicator;
 	/**
 	 * Indicates whether or not the indication of interest is the result of an
 	 * existing agency order or a facilitation position resulting from an agency
@@ -395,8 +402,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#NaturalIndicator
-	 * BuyOrSellIndicationOfInterest.NaturalIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmNaturalIndicator
+	 * BuyOrSellIndicationOfInterest.mmNaturalIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -417,20 +424,21 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NaturalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNaturalIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmNaturalIndicator;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.NaturalIndicator;
 			isDerived = false;
 			xmlTag = "NtrlInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NaturalIndicator";
 			definition = "Indicates whether or not the indication of interest is the result of an existing agency order or a facilitation position resulting from an agency order, not from principal trading or order solicitation activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected List<Qualifier1Code> qualifier;
 	/**
 	 * Qualifies the use of the indication of interest.
 	 * <p>
@@ -444,8 +452,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#Qualifier
-	 * BuyOrSellIndicationOfInterest.Qualifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmQualifier
+	 * BuyOrSellIndicationOfInterest.mmQualifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -464,10 +472,10 @@ public class IndicationOfInterest1 {
 	 * definition} = "Qualifies the use of the indication of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Qualifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmQualifier;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.Qualifier;
 			isDerived = false;
 			xmlTag = "Qlfr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -477,6 +485,7 @@ public class IndicationOfInterest1 {
 			simpleType_lazy = () -> Qualifier1Code.mmObject();
 		}
 	};
+	protected Max256Text linkedURLAddress;
 	/**
 	 * Address for the Universal Resource Locator (URL), eg, used over the www
 	 * (HTTP) service.
@@ -507,7 +516,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedURLAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
@@ -515,11 +524,12 @@ public class IndicationOfInterest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedURLAddress";
 			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected DecimalNumber numberOfLegs;
 	/**
 	 * Number of InstrumentLeg repeating group instances. Required for multilegs
 	 * IOIs.
@@ -534,8 +544,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#NumberOfLegs
-	 * BuyOrSellIndicationOfInterest.NumberOfLegs}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmNumberOfLegs
+	 * BuyOrSellIndicationOfInterest.mmNumberOfLegs}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -556,20 +566,21 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfLegs = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfLegs = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmNumberOfLegs;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.NumberOfLegs;
 			isDerived = false;
 			xmlTag = "NbOfLegs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfLegs";
 			definition = "Number of InstrumentLeg repeating group instances. Required for multilegs IOIs.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected SecurityIdentification7 financialInstrumentDetails;
 	/**
 	 * Financial instrument to which an indication of interest is related.
 	 * <p>
@@ -582,8 +593,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -603,21 +614,22 @@ public class IndicationOfInterest1 {
 	 * "Financial instrument to which an indication of interest is related."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument to which an indication of interest is related.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes1 financialInstrumentAttributes;
 	/**
 	 * Financial instrument attributes to which an indication of interest is
 	 * related.
@@ -631,8 +643,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -653,21 +665,22 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Financial instrument attributes to which an indication of interest is related.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected FinancialInstrumentStipulations stipulations;
 	/**
 	 * Financial instrument stipulations to which an indication of interest is
 	 * related.
@@ -681,8 +694,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -703,21 +716,22 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Stipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "Stiptns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stipulations";
 			definition = "Financial instrument stipulations to which an indication of interest is related.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails;
 	/**
 	 * Underlying financial instrument to which an indication of interest is
 	 * related.
@@ -731,8 +745,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -753,20 +767,21 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentDetails";
 			definition = "Underlying financial instrument to which an indication of interest is related.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
 	/**
 	 * Underlying financial instrument attributes to which an indication of
 	 * interest is related.
@@ -780,8 +795,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -802,20 +817,21 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentAttributes";
 			definition = "Underlying financial instrument attributes to which an indication of interest is related.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations;
 	/**
 	 * Underlying financial instrument stipulations to which an indication of
 	 * interest is related.
@@ -829,8 +845,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -851,20 +867,21 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Underlying financial instrument stipulations to which an indication of interest is related.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InstrumentLeg1> instrumentLegGroupDetails;
 	/**
 	 * Provides details about each leg of the multileg instrument.
 	 * <p>
@@ -876,8 +893,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#LegAdditionalInformation
-	 * Asset.LegAdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmLegAdditionalInformation
+	 * Asset.mmLegAdditionalInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -897,20 +914,21 @@ public class IndicationOfInterest1 {
 	 * "Provides details about each leg of the multileg instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentLegGroupDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentLegGroupDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.LegAdditionalInformation;
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegGroupDetails";
 			definition = "Provides details about each leg of the multileg instrument.";
 			minOccurs = 0;
-			type_lazy = () -> InstrumentLeg1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
 		}
 	};
+	protected YieldCalculation1 yieldDetails;
 	/**
 	 * Details about the return provided by a financial instrument.
 	 * <p>
@@ -922,8 +940,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#YieldCalculation
-	 * SecuritiesPricing.YieldCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmYieldCalculation
+	 * SecuritiesPricing.mmYieldCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -943,21 +961,22 @@ public class IndicationOfInterest1 {
 	 * "Details about the return provided by a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd YieldDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmYieldDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmYieldCalculation;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.YieldCalculation;
 			isDerived = false;
 			xmlTag = "YldDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldDetails";
 			definition = "Details about the return provided by a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> YieldCalculation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.YieldCalculation1.mmObject();
 		}
 	};
+	protected OrderQuantity1 orderQuantity;
 	/**
 	 * Details about the order quantity to which an indication of interest is
 	 * related.
@@ -970,8 +989,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -992,21 +1011,22 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "OrdrQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderQuantity";
 			definition = "Details about the order quantity to which an indication of interest is related.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OrderQuantity1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
 		}
 	};
+	protected BenchmarkCurve1 spreadAndBenchmarkCurveDetails;
 	/**
 	 * Indicates the difference in value between a financial instrument and a
 	 * benchmark for an indication of interest.
@@ -1019,8 +1039,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#SpreadToBenchmark
-	 * BuyOrSellIndicationOfInterest.SpreadToBenchmark}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmSpreadToBenchmark
+	 * BuyOrSellIndicationOfInterest.mmSpreadToBenchmark}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1041,21 +1061,22 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmSpreadToBenchmark;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.SpreadToBenchmark;
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrvDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadAndBenchmarkCurveDetails";
 			definition = "Indicates the difference in value between a financial instrument and a benchmark for an indication of interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BenchmarkCurve1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve1.mmObject();
 		}
 	};
+	protected SecuritiesFinancing1 twoLegTransactionDetails;
 	/**
 	 * Securities Financing is the process of lending or borrowing cash or
 	 * securities against securities or cash collateral. It aims at optimising
@@ -1069,8 +1090,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#TwoLegTransaction
-	 * BuyOrSellIndicationOfInterest.TwoLegTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmTwoLegTransaction
+	 * BuyOrSellIndicationOfInterest.mmTwoLegTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1091,21 +1112,22 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TwoLegTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTwoLegTransactionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmTwoLegTransaction;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.TwoLegTransaction;
 			isDerived = false;
 			xmlTag = "TwoLegTxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionDetails";
 			definition = "Securities Financing is the process of lending or borrowing cash or securities against securities or cash collateral. It aims at optimising liquidity, support a trading strategy, or increase settlement efficiency.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesFinancing1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary14> tradingParties;
 	/**
 	 * Parties involved in the specific transaction.
 	 * <p>
@@ -1117,8 +1139,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradePartyRole
-	 * Trade.TradePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+	 * Trade.mmTradePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1137,20 +1159,21 @@ public class IndicationOfInterest1 {
 	 * definition} = "Parties involved in the specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradePartyRole;
 			isDerived = false;
 			xmlTag = "TradgPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParties";
 			definition = "Parties involved in the specific transaction.";
 			minOccurs = 0;
-			type_lazy = () -> Intermediary14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 		}
 	};
+	protected CashParties1 cashParties;
 	/**
 	 * Cash parties involved in the transaction.
 	 * <p>
@@ -1162,8 +1185,8 @@ public class IndicationOfInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PartyRole
-	 * Payment.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPartyRole
+	 * Payment.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1182,21 +1205,22 @@ public class IndicationOfInterest1 {
 	 * definition} = "Cash parties involved in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PartyRole;
 			isDerived = false;
 			xmlTag = "CshPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Cash parties involved in the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashParties1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
 		}
 	};
+	protected SettlementParties3 receivingSettlementParties;
 	/**
 	 * Receiving parties involved in the transaction.
 	 * <p>
@@ -1228,21 +1252,22 @@ public class IndicationOfInterest1 {
 	 * definition} = "Receiving parties involved in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
+			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Receiving parties involved in the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	protected SettlementParties3 deliveringSettlementParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -1279,21 +1304,22 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
+			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	protected OtherParties1 otherBusinessParties;
 	/**
 	 * Other parties involved in the transaction.
 	 * <p>
@@ -1320,7 +1346,7 @@ public class IndicationOfInterest1 {
 	 * definition} = "Other parties involved in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherBusinessParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
@@ -1328,33 +1354,235 @@ public class IndicationOfInterest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other parties involved in the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OtherParties1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherParties1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.Side, com.tools20022.repository.msg.IndicationOfInterest1.IOIQuantity, com.tools20022.repository.msg.IndicationOfInterest1.Price,
-						com.tools20022.repository.msg.IndicationOfInterest1.ValidUntilDateTime, com.tools20022.repository.msg.IndicationOfInterest1.QualityIndication, com.tools20022.repository.msg.IndicationOfInterest1.NaturalIndicator,
-						com.tools20022.repository.msg.IndicationOfInterest1.Qualifier, com.tools20022.repository.msg.IndicationOfInterest1.LinkedURLAddress, com.tools20022.repository.msg.IndicationOfInterest1.NumberOfLegs,
-						com.tools20022.repository.msg.IndicationOfInterest1.FinancialInstrumentDetails, com.tools20022.repository.msg.IndicationOfInterest1.FinancialInstrumentAttributes,
-						com.tools20022.repository.msg.IndicationOfInterest1.Stipulations, com.tools20022.repository.msg.IndicationOfInterest1.UnderlyingFinancialInstrumentDetails,
-						com.tools20022.repository.msg.IndicationOfInterest1.UnderlyingFinancialInstrumentAttributes, com.tools20022.repository.msg.IndicationOfInterest1.UnderlyingStipulations,
-						com.tools20022.repository.msg.IndicationOfInterest1.InstrumentLegGroupDetails, com.tools20022.repository.msg.IndicationOfInterest1.YieldDetails, com.tools20022.repository.msg.IndicationOfInterest1.OrderQuantity,
-						com.tools20022.repository.msg.IndicationOfInterest1.SpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.IndicationOfInterest1.TwoLegTransactionDetails,
-						com.tools20022.repository.msg.IndicationOfInterest1.TradingParties, com.tools20022.repository.msg.IndicationOfInterest1.CashParties, com.tools20022.repository.msg.IndicationOfInterest1.ReceivingSettlementParties,
-						com.tools20022.repository.msg.IndicationOfInterest1.DeliveringSettlementParties, com.tools20022.repository.msg.IndicationOfInterest1.OtherBusinessParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmSide, com.tools20022.repository.msg.IndicationOfInterest1.mmIOIQuantity,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmPrice, com.tools20022.repository.msg.IndicationOfInterest1.mmValidUntilDateTime, com.tools20022.repository.msg.IndicationOfInterest1.mmQualityIndication,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmNaturalIndicator, com.tools20022.repository.msg.IndicationOfInterest1.mmQualifier, com.tools20022.repository.msg.IndicationOfInterest1.mmLinkedURLAddress,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmNumberOfLegs, com.tools20022.repository.msg.IndicationOfInterest1.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.IndicationOfInterest1.mmStipulations,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmUnderlyingFinancialInstrumentDetails, com.tools20022.repository.msg.IndicationOfInterest1.mmUnderlyingFinancialInstrumentAttributes,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmUnderlyingStipulations, com.tools20022.repository.msg.IndicationOfInterest1.mmInstrumentLegGroupDetails,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmYieldDetails, com.tools20022.repository.msg.IndicationOfInterest1.mmOrderQuantity,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.IndicationOfInterest1.mmTwoLegTransactionDetails,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmTradingParties, com.tools20022.repository.msg.IndicationOfInterest1.mmCashParties,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmReceivingSettlementParties, com.tools20022.repository.msg.IndicationOfInterest1.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmOtherBusinessParties);
 				trace_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IndicationOfInterest1";
 				definition = "Intention to buy or sell a financial Instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IOISideTypeCode getSide() {
+		return side;
+	}
+
+	public void setSide(IOISideTypeCode side) {
+		this.side = side;
+	}
+
+	public Quantity1Choice getIOIQuantity() {
+		return iOIQuantity;
+	}
+
+	public void setIOIQuantity(Quantity1Choice iOIQuantity) {
+		this.iOIQuantity = iOIQuantity;
+	}
+
+	public Price1 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
+	}
+
+	public ISODateTime getValidUntilDateTime() {
+		return validUntilDateTime;
+	}
+
+	public void setValidUntilDateTime(ISODateTime validUntilDateTime) {
+		this.validUntilDateTime = validUntilDateTime;
+	}
+
+	public QualityIndication1Code getQualityIndication() {
+		return qualityIndication;
+	}
+
+	public void setQualityIndication(QualityIndication1Code qualityIndication) {
+		this.qualityIndication = qualityIndication;
+	}
+
+	public TrueFalseIndicator getNaturalIndicator() {
+		return naturalIndicator;
+	}
+
+	public void setNaturalIndicator(TrueFalseIndicator naturalIndicator) {
+		this.naturalIndicator = naturalIndicator;
+	}
+
+	public List<Qualifier1Code> getQualifier() {
+		return qualifier;
+	}
+
+	public void setQualifier(List<Qualifier1Code> qualifier) {
+		this.qualifier = qualifier;
+	}
+
+	public Max256Text getLinkedURLAddress() {
+		return linkedURLAddress;
+	}
+
+	public void setLinkedURLAddress(Max256Text linkedURLAddress) {
+		this.linkedURLAddress = linkedURLAddress;
+	}
+
+	public DecimalNumber getNumberOfLegs() {
+		return numberOfLegs;
+	}
+
+	public void setNumberOfLegs(DecimalNumber numberOfLegs) {
+		this.numberOfLegs = numberOfLegs;
+	}
+
+	public SecurityIdentification7 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.SecurityIdentification7 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public FinancialInstrumentStipulations getStipulations() {
+		return stipulations;
+	}
+
+	public void setStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations stipulations) {
+		this.stipulations = stipulations;
+	}
+
+	public List<SecurityIdentification7> getUnderlyingFinancialInstrumentDetails() {
+		return underlyingFinancialInstrumentDetails;
+	}
+
+	public void setUnderlyingFinancialInstrumentDetails(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails) {
+		this.underlyingFinancialInstrumentDetails = underlyingFinancialInstrumentDetails;
+	}
+
+	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
+		return underlyingFinancialInstrumentAttributes;
+	}
+
+	public void setUnderlyingFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
+		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
+	}
+
+	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
+		return underlyingStipulations;
+	}
+
+	public void setUnderlyingStipulations(List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations) {
+		this.underlyingStipulations = underlyingStipulations;
+	}
+
+	public List<InstrumentLeg1> getInstrumentLegGroupDetails() {
+		return instrumentLegGroupDetails;
+	}
+
+	public void setInstrumentLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg1> instrumentLegGroupDetails) {
+		this.instrumentLegGroupDetails = instrumentLegGroupDetails;
+	}
+
+	public YieldCalculation1 getYieldDetails() {
+		return yieldDetails;
+	}
+
+	public void setYieldDetails(com.tools20022.repository.msg.YieldCalculation1 yieldDetails) {
+		this.yieldDetails = yieldDetails;
+	}
+
+	public OrderQuantity1 getOrderQuantity() {
+		return orderQuantity;
+	}
+
+	public void setOrderQuantity(com.tools20022.repository.msg.OrderQuantity1 orderQuantity) {
+		this.orderQuantity = orderQuantity;
+	}
+
+	public BenchmarkCurve1 getSpreadAndBenchmarkCurveDetails() {
+		return spreadAndBenchmarkCurveDetails;
+	}
+
+	public void setSpreadAndBenchmarkCurveDetails(com.tools20022.repository.msg.BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
+		this.spreadAndBenchmarkCurveDetails = spreadAndBenchmarkCurveDetails;
+	}
+
+	public SecuritiesFinancing1 getTwoLegTransactionDetails() {
+		return twoLegTransactionDetails;
+	}
+
+	public void setTwoLegTransactionDetails(com.tools20022.repository.msg.SecuritiesFinancing1 twoLegTransactionDetails) {
+		this.twoLegTransactionDetails = twoLegTransactionDetails;
+	}
+
+	public List<Intermediary14> getTradingParties() {
+		return tradingParties;
+	}
+
+	public void setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
+		this.tradingParties = tradingParties;
+	}
+
+	public CashParties1 getCashParties() {
+		return cashParties;
+	}
+
+	public void setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+		this.cashParties = cashParties;
+	}
+
+	public SettlementParties3 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public SettlementParties3 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public OtherParties1 getOtherBusinessParties() {
+		return otherBusinessParties;
+	}
+
+	public void setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+		this.otherBusinessParties = otherBusinessParties;
 	}
 }

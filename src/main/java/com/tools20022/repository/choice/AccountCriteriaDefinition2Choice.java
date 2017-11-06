@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountCriteriaDefinition2Choice#QueryName
- * AccountCriteriaDefinition2Choice.QueryName}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountCriteriaDefinition2Choice#mmQueryName
+ * AccountCriteriaDefinition2Choice.mmQueryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountCriteriaDefinition2Choice#NewCriteria
- * AccountCriteriaDefinition2Choice.NewCriteria}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountCriteriaDefinition2Choice#mmNewCriteria
+ * AccountCriteriaDefinition2Choice.mmNewCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountCriteriaDefinition2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text queryName;
 	/**
 	 * Recalls the criteria (search and return criteria) defined in a preceding
 	 * query.
@@ -93,7 +94,7 @@ public class AccountCriteriaDefinition2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCriteriaDefinition2Choice.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class AccountCriteriaDefinition2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AccountCriteria2 newCriteria;
 	/**
 	 * Explicitly defines the query criteria.
 	 * <p>
@@ -132,7 +134,7 @@ public class AccountCriteriaDefinition2Choice {
 	 * definition} = "Explicitly defines the query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountCriteriaDefinition2Choice.mmObject();
 			isDerived = false;
@@ -140,23 +142,39 @@ public class AccountCriteriaDefinition2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Explicitly defines the query criteria.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AccountCriteria2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AccountCriteria2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountCriteriaDefinition2Choice.QueryName, com.tools20022.repository.choice.AccountCriteriaDefinition2Choice.NewCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountCriteriaDefinition2Choice.mmQueryName, com.tools20022.repository.choice.AccountCriteriaDefinition2Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountCriteriaDefinition2Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQueryName() {
+		return queryName;
+	}
+
+	public void setQueryName(Max35Text queryName) {
+		this.queryName = queryName;
+	}
+
+	public AccountCriteria2 getNewCriteria() {
+		return newCriteria;
+	}
+
+	public void setNewCriteria(AccountCriteria2 newCriteria) {
+		this.newCriteria = newCriteria;
 	}
 }

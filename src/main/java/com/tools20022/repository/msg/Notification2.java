@@ -35,19 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Notification2#NotificationType
- * Notification2.NotificationType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Notification2#Required
- * Notification2.Required}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Notification2#DistributionType
- * Notification2.DistributionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Notification2#mmNotificationType
+ * Notification2.mmNotificationType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Notification2#mmRequired
+ * Notification2.mmRequired}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Notification2#mmDistributionType
+ * Notification2.mmDistributionType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Notification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text notificationType;
 	/**
 	 * Type of notification.
 	 * <p>
@@ -87,7 +90,7 @@ public class Notification2 {
 	 * definition} = "Type of notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Notification2.mmObject();
 			isDerived = false;
@@ -95,11 +98,12 @@ public class Notification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationType";
 			definition = "Type of notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator required;
 	/**
 	 * Indicates whether the notification is required.
 	 * <p>
@@ -127,7 +131,7 @@ public class Notification2 {
 	 * definition} = "Indicates whether the notification is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Required = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequired = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Notification2.mmObject();
 			isDerived = false;
@@ -135,11 +139,12 @@ public class Notification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Required";
 			definition = "Indicates whether the notification is required.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected InformationDistribution1Choice distributionType;
 	/**
 	 * Specifies how the notification is sent.
 	 * <p>
@@ -166,7 +171,7 @@ public class Notification2 {
 	 * definition} = "Specifies how the notification is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DistributionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDistributionType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Notification2.mmObject();
 			isDerived = false;
@@ -174,23 +179,48 @@ public class Notification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionType";
 			definition = "Specifies how the notification is sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InformationDistribution1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InformationDistribution1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Notification2.NotificationType, com.tools20022.repository.msg.Notification2.Required, com.tools20022.repository.msg.Notification2.DistributionType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Notification2.mmNotificationType, com.tools20022.repository.msg.Notification2.mmRequired,
+						com.tools20022.repository.msg.Notification2.mmDistributionType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Notification2";
 				definition = "Information about the type of notification required.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNotificationType() {
+		return notificationType;
+	}
+
+	public void setNotificationType(Max35Text notificationType) {
+		this.notificationType = notificationType;
+	}
+
+	public YesNoIndicator getRequired() {
+		return required;
+	}
+
+	public void setRequired(YesNoIndicator required) {
+		this.required = required;
+	}
+
+	public InformationDistribution1Choice getDistributionType() {
+		return distributionType;
+	}
+
+	public void setDistributionType(InformationDistribution1Choice distributionType) {
+		this.distributionType = distributionType;
 	}
 }

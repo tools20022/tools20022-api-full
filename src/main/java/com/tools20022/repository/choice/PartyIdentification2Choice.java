@@ -40,14 +40,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#BICOrBEI
- * PartyIdentification2Choice.BICOrBEI}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#mmBICOrBEI
+ * PartyIdentification2Choice.mmBICOrBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#ProprietaryIdentification
- * PartyIdentification2Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#mmProprietaryIdentification
+ * PartyIdentification2Choice.mmProprietaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#NameAndAddress
- * PartyIdentification2Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#mmNameAndAddress
+ * PartyIdentification2Choice.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,63 +59,63 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#NewPlanManager
- * PEPOrISAOrPortfolioInformationV01.NewPlanManager}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#mmNewPlanManager
+ * PEPOrISAOrPortfolioInformationV01.mmNewPlanManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#Transferee
- * AccountHoldingInformationV02.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#mmTransferee
+ * AccountHoldingInformationV02.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#Transferee
- * AccountHoldingInformationV03.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#mmTransferee
+ * AccountHoldingInformationV03.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#NewPlanManager
- * PEPOrISAOrPortfolioTransferConfirmationV02.NewPlanManager}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#mmNewPlanManager
+ * PEPOrISAOrPortfolioTransferConfirmationV02.mmNewPlanManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#Transferee
- * PortfolioTransferConfirmationV03.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#mmTransferee
+ * PortfolioTransferConfirmationV03.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#Transferee
- * PortfolioTransferConfirmationV04.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#mmTransferee
+ * PortfolioTransferConfirmationV04.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#NewPlanManager
- * PEPOrISAOrPortfolioTransferInstructionV02.NewPlanManager}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#mmNewPlanManager
+ * PEPOrISAOrPortfolioTransferInstructionV02.mmNewPlanManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#Transferee
- * PortfolioTransferInstructionV03.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#mmTransferee
+ * PortfolioTransferInstructionV03.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#Transferee
- * PortfolioTransferInstructionV04.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#mmTransferee
+ * PortfolioTransferInstructionV04.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#NewPlanManager
- * RequestForPEPOrISAOrPortfolioInformationV01.NewPlanManager}</li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#mmNewPlanManager
+ * RequestForPEPOrISAOrPortfolioInformationV01.mmNewPlanManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#Transferee
- * AccountHoldingInformationRequestV02.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmTransferee
+ * AccountHoldingInformationRequestV02.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#Transferee
- * AccountHoldingInformationRequestV03.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmTransferee
+ * AccountHoldingInformationRequestV03.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#Transferee
- * AccountHoldingInformationV04.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#mmTransferee
+ * AccountHoldingInformationV04.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#Transferee
- * PortfolioTransferInstructionV05.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#mmTransferee
+ * PortfolioTransferInstructionV05.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#Transferee
- * PortfolioTransferConfirmationV05.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#mmTransferee
+ * PortfolioTransferConfirmationV05.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#Transferee
- * PortfolioTransferConfirmationV06.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#mmTransferee
+ * PortfolioTransferConfirmationV06.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#Transferee
- * PortfolioTransferInstructionV06.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmTransferee
+ * PortfolioTransferInstructionV06.mmTransferee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -139,6 +139,7 @@ import java.util.function.Supplier;
 public class PartyIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bICOrBEI;
 	/**
 	 * Code allocated to a financial or non-financial institution by the ISO
 	 * 9362 Registration Authority, as described in ISO 9362
@@ -155,8 +156,8 @@ public class PartyIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -177,20 +178,21 @@ public class PartyIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier, as assigned to a financial institution
 	 * using a proprietary identification scheme.
@@ -205,8 +207,8 @@ public class PartyIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -229,27 +231,28 @@ public class PartyIdentification2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#ProprietaryIdentification
-	 * PartyIdentification90Choice.ProprietaryIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#mmProprietaryIdentification
+	 * PartyIdentification90Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification90Choice.ProprietaryIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification90Choice.mmProprietaryIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	protected NameAndAddress5 nameAndAddress;
 	/**
 	 * Name and address of a party.
 	 * <p>
@@ -284,24 +287,24 @@ public class PartyIdentification2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#NameAndAddress
-	 * PartyIdentification90Choice.NameAndAddress}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#mmNameAndAddress
+	 * PartyIdentification90Choice.mmNameAndAddress}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification2Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification90Choice.NameAndAddress);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification90Choice.mmNameAndAddress);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
 		}
 	};
@@ -309,19 +312,19 @@ public class PartyIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification2Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification2Choice.ProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification2Choice.NameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification2Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification2Choice.mmProprietaryIdentification,
+						com.tools20022.repository.choice.PartyIdentification2Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmNewPlanManager, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmTransferee,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV03.mmTransferee, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmNewPlanManager,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmTransferee,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmNewPlanManager, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmTransferee,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmTransferee, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.mmNewPlanManager,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmTransferee, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmTransferee,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.mmTransferee,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmTransferee,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmTransferee);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.NewPlanManager, com.tools20022.repository.area.sese.AccountHoldingInformationV02.Transferee,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV03.Transferee, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.NewPlanManager,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.Transferee, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.Transferee,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.NewPlanManager, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.Transferee,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.Transferee, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.NewPlanManager,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.Transferee, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.Transferee,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV04.Transferee, com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.Transferee,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.Transferee, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.Transferee,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.Transferee);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -336,5 +339,29 @@ public class PartyIdentification2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBICOrBEI() {
+		return bICOrBEI;
+	}
+
+	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = bICOrBEI;
+	}
+
+	public GenericIdentification1 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
+	}
+
+	public NameAndAddress5 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
 	}
 }

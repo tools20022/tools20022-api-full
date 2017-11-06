@@ -35,26 +35,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#ISIN
- * SecurityIdentification22Choice.ISIN}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmISIN
+ * SecurityIdentification22Choice.mmISIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#AlternateIdentification
- * SecurityIdentification22Choice.AlternateIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmAlternateIdentification
+ * SecurityIdentification22Choice.mmAlternateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#RIC
- * SecurityIdentification22Choice.RIC}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmRIC
+ * SecurityIdentification22Choice.mmRIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#TickerSymbol
- * SecurityIdentification22Choice.TickerSymbol}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmTickerSymbol
+ * SecurityIdentification22Choice.mmTickerSymbol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#Bloomberg
- * SecurityIdentification22Choice.Bloomberg}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmBloomberg
+ * SecurityIdentification22Choice.mmBloomberg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#CTA
- * SecurityIdentification22Choice.CTA}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmCTA
+ * SecurityIdentification22Choice.mmCTA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#Common
- * SecurityIdentification22Choice.Common}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmCommon
+ * SecurityIdentification22Choice.mmCommon}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINOct2015Identifier iSIN;
 	/**
 	 * International Securities Identification Number (ISIN). A numbering system
 	 * designed by the United Nation's International Organisation for
@@ -103,8 +104,8 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -126,25 +127,26 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#ISIN
-	 * SecurityIdentification1Choice.ISIN}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmISIN
+	 * SecurityIdentification1Choice.mmISIN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.ISIN;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.mmISIN;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected AlternateIdentification1 alternateIdentification;
 	/**
 	 * Proprietary identification of a security assigned by an institution or
 	 * organisation.
@@ -182,25 +184,26 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#AlternateIdentification
-	 * SecurityIdentification1Choice.AlternateIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmAlternateIdentification
+	 * SecurityIdentification1Choice.mmAlternateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlternateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityIdentification22Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SecurityIdentification22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.AlternateIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.mmAlternateIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AlternateIdentification1.mmObject();
 		}
 	};
+	protected RICIdentifier rIC;
 	/**
 	 * Reuters Identification Code (RIC). A numbering system used within the
 	 * Reuters system to identify instruments worldwide. The RIC contains an
@@ -218,8 +221,8 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#RIC
-	 * SecuritiesIdentification.RIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRIC
+	 * SecuritiesIdentification.mmRIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,25 +244,26 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#RIC
-	 * SecurityIdentification1Choice.RIC}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmRIC
+	 * SecurityIdentification1Choice.mmRIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmRIC;
 			componentContext_lazy = () -> SecurityIdentification22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.RIC;
 			isDerived = false;
 			xmlTag = "RIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RIC";
 			definition = "Reuters Identification Code (RIC). A numbering system used within the Reuters system to identify instruments worldwide. The RIC contains an X-character market specific code (can be the CUSIP or EPIC codes) followed by a full stop, then the two-digit ISO country code, eg, IBM in UK is IBM.UK.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.RIC;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.mmRIC;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RICIdentifier.mmObject();
 		}
 	};
+	protected TickerIdentifier tickerSymbol;
 	/**
 	 * Letters that identify a stock traded on a stock exchange. The Ticker
 	 * Symbol is a short and convenient way of identifying a stock, eg, RTR.L
@@ -275,8 +279,8 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#TickerSymbol
-	 * SecuritiesIdentification.TickerSymbol}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmTickerSymbol
+	 * SecuritiesIdentification.mmTickerSymbol}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -298,25 +302,26 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#TickerSymbol
-	 * SecurityIdentification1Choice.TickerSymbol}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmTickerSymbol
+	 * SecurityIdentification1Choice.mmTickerSymbol}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TickerSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmTickerSymbol;
 			componentContext_lazy = () -> SecurityIdentification22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.TickerSymbol;
 			isDerived = false;
 			xmlTag = "TckrSymb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, eg, RTR.L for Reuters quoted in London.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.TickerSymbol;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.mmTickerSymbol;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TickerIdentifier.mmObject();
 		}
 	};
+	protected BloombergIdentifier bloomberg;
 	/**
 	 * Identifier of a security assigned by the Bloomberg organisation.
 	 * <p>
@@ -330,8 +335,8 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Bloomberg
-	 * SecuritiesIdentification.Bloomberg}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmBloomberg
+	 * SecuritiesIdentification.mmBloomberg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -352,25 +357,26 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#Bloomberg
-	 * SecurityIdentification1Choice.Bloomberg}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmBloomberg
+	 * SecurityIdentification1Choice.mmBloomberg}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Bloomberg = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBloomberg = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmBloomberg;
 			componentContext_lazy = () -> SecurityIdentification22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.Bloomberg;
 			isDerived = false;
 			xmlTag = "Blmbrg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bloomberg";
 			definition = "Identifier of a security assigned by the Bloomberg organisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.Bloomberg;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.mmBloomberg;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BloombergIdentifier.mmObject();
 		}
 	};
+	protected ConsolidatedTapeAssociationIdentifier cTA;
 	/**
 	 * Identifier of a security assigned by the Consolidated Tape Association.
 	 * <p>
@@ -384,8 +390,8 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#CTA
-	 * SecuritiesIdentification.CTA}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCTA
+	 * SecuritiesIdentification.mmCTA}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -407,25 +413,26 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#CTA
-	 * SecurityIdentification1Choice.CTA}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmCTA
+	 * SecurityIdentification1Choice.mmCTA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CTA = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCTA = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmCTA;
 			componentContext_lazy = () -> SecurityIdentification22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.CTA;
 			isDerived = false;
 			xmlTag = "CTA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CTA";
 			definition = "Identifier of a security assigned by the Consolidated Tape Association.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.CTA;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.mmCTA;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ConsolidatedTapeAssociationIdentifier.mmObject();
 		}
 	};
+	protected EuroclearClearstreamIdentifier common;
 	/**
 	 * Identifier of securities issued in Luxembourg. The common code is a
 	 * 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.
@@ -440,8 +447,8 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Common
-	 * SecuritiesIdentification.Common}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCommon
+	 * SecuritiesIdentification.mmCommon}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -463,22 +470,22 @@ public class SecurityIdentification22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#Common
-	 * SecurityIdentification1Choice.Common}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmCommon
+	 * SecurityIdentification1Choice.mmCommon}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Common = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommon = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmCommon;
 			componentContext_lazy = () -> SecurityIdentification22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.Common;
 			isDerived = false;
 			xmlTag = "Cmon";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Common";
 			definition = "Identifier of securities issued in Luxembourg.  The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.Common;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification1Choice.mmCommon;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EuroclearClearstreamIdentifier.mmObject();
 		}
 	};
@@ -486,11 +493,12 @@ public class SecurityIdentification22Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification22Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification22Choice.AlternateIdentification,
-						com.tools20022.repository.choice.SecurityIdentification22Choice.RIC, com.tools20022.repository.choice.SecurityIdentification22Choice.TickerSymbol,
-						com.tools20022.repository.choice.SecurityIdentification22Choice.Bloomberg, com.tools20022.repository.choice.SecurityIdentification22Choice.CTA, com.tools20022.repository.choice.SecurityIdentification22Choice.Common);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification22Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification22Choice.mmAlternateIdentification,
+						com.tools20022.repository.choice.SecurityIdentification22Choice.mmRIC, com.tools20022.repository.choice.SecurityIdentification22Choice.mmTickerSymbol,
+						com.tools20022.repository.choice.SecurityIdentification22Choice.mmBloomberg, com.tools20022.repository.choice.SecurityIdentification22Choice.mmCTA,
+						com.tools20022.repository.choice.SecurityIdentification22Choice.mmCommon);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification22Choice";
 				definition = "Choice between formats for the identification of a financial instrument.";
@@ -498,5 +506,61 @@ public class SecurityIdentification22Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINOct2015Identifier getISIN() {
+		return iSIN;
+	}
+
+	public void setISIN(ISINOct2015Identifier iSIN) {
+		this.iSIN = iSIN;
+	}
+
+	public AlternateIdentification1 getAlternateIdentification() {
+		return alternateIdentification;
+	}
+
+	public void setAlternateIdentification(AlternateIdentification1 alternateIdentification) {
+		this.alternateIdentification = alternateIdentification;
+	}
+
+	public RICIdentifier getRIC() {
+		return rIC;
+	}
+
+	public void setRIC(RICIdentifier rIC) {
+		this.rIC = rIC;
+	}
+
+	public TickerIdentifier getTickerSymbol() {
+		return tickerSymbol;
+	}
+
+	public void setTickerSymbol(TickerIdentifier tickerSymbol) {
+		this.tickerSymbol = tickerSymbol;
+	}
+
+	public BloombergIdentifier getBloomberg() {
+		return bloomberg;
+	}
+
+	public void setBloomberg(BloombergIdentifier bloomberg) {
+		this.bloomberg = bloomberg;
+	}
+
+	public ConsolidatedTapeAssociationIdentifier getCTA() {
+		return cTA;
+	}
+
+	public void setCTA(ConsolidatedTapeAssociationIdentifier cTA) {
+		this.cTA = cTA;
+	}
+
+	public EuroclearClearstreamIdentifier getCommon() {
+		return common;
+	}
+
+	public void setCommon(EuroclearClearstreamIdentifier common) {
+		this.common = common;
 	}
 }

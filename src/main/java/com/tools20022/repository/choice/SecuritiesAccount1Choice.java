@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.SecuritiesAccount13;
 import com.tools20022.repository.msg.SecuritiesAccountRange1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies one or a range of securities accounts.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesAccount1Choice#Range
- * SecuritiesAccount1Choice.Range}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccount1Choice#mmRange
+ * SecuritiesAccount1Choice.mmRange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesAccount1Choice#Account
- * SecuritiesAccount1Choice.Account}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccount1Choice#mmAccount
+ * SecuritiesAccount1Choice.mmAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccountRange1 range;
 	/**
 	 * Range of identifications of the securities accounts.
 	 * <p>
@@ -90,7 +92,7 @@ public class SecuritiesAccount1Choice {
 	 * definition} = "Range of identifications of the securities accounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Range = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRange = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccount1Choice.mmObject();
 			isDerived = false;
@@ -98,12 +100,13 @@ public class SecuritiesAccount1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Range";
 			definition = "Range of identifications of the securities accounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccountRange1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesAccountRange1.mmObject();
 		}
 	};
+	protected List<SecuritiesAccount13> account;
 	/**
 	 * Unique identification of the securities account.
 	 * <p>
@@ -135,32 +138,48 @@ public class SecuritiesAccount1Choice {
 	 * definition} = "Unique identification of the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccount1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> SecuritiesAccount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique identification of the securities account.";
 			minOccurs = 1;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
 			isComposite = true;
+			type_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccount1Choice.Range, com.tools20022.repository.choice.SecuritiesAccount1Choice.Account);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccount1Choice.mmRange, com.tools20022.repository.choice.SecuritiesAccount1Choice.mmAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccount1Choice";
 				definition = "Specifies one or a range of securities accounts.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccountRange1 getRange() {
+		return range;
+	}
+
+	public void setRange(SecuritiesAccountRange1 range) {
+		this.range = range;
+	}
+
+	public List<SecuritiesAccount13> getAccount() {
+		return account;
+	}
+
+	public void setAccount(List<SecuritiesAccount13> account) {
+		this.account = account;
 	}
 }

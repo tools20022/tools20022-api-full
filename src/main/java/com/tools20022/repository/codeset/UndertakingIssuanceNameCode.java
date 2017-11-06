@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingIssuanceNameCode#Guarantee
- * UndertakingIssuanceNameCode.Guarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingIssuanceNameCode#mmGuarantee
+ * UndertakingIssuanceNameCode.mmGuarantee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingIssuanceNameCode#Standby
- * UndertakingIssuanceNameCode.Standby}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingIssuanceNameCode#mmStandby
+ * UndertakingIssuanceNameCode.mmStandby}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class UndertakingIssuanceNameCode {
 	 * definition} = "Demand guarantee."</li>
 	 * </ul>
 	 */
-	public static final MMCode Guarantee = new MMCode() {
+	public static final MMCode mmGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Guarantee";
@@ -120,7 +120,7 @@ public class UndertakingIssuanceNameCode {
 	 * definition} = "Standby letter of credit."</li>
 	 * </ul>
 	 */
-	public static final MMCode Standby = new MMCode() {
+	public static final MMCode mmStandby = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standby";
@@ -133,12 +133,12 @@ public class UndertakingIssuanceNameCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DGAR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingIssuanceNameCode";
 				definition = "Specifies the issued undertaking name.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingIssuanceNameCode.Guarantee, com.tools20022.repository.codeset.UndertakingIssuanceNameCode.Standby);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingIssuanceNameCode.mmGuarantee, com.tools20022.repository.codeset.UndertakingIssuanceNameCode.mmStandby);
 				derivation_lazy = () -> Arrays.asList(UndertakingIssuanceName1Code.mmObject());
 			}
 		});

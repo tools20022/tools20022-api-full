@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Country;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the parameters for which a transaction report must be generated.
@@ -36,43 +37,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#TransactionIdentification
- * ReportSpecification3.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmTransactionIdentification
+ * ReportSpecification3.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#TransactionStatus
- * ReportSpecification3.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmTransactionStatus
+ * ReportSpecification3.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#SubmitterTransactionReference
- * ReportSpecification3.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmSubmitterTransactionReference
+ * ReportSpecification3.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#EntitiesToBeReported
- * ReportSpecification3.EntitiesToBeReported}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmEntitiesToBeReported
+ * ReportSpecification3.mmEntitiesToBeReported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#Correspondent
- * ReportSpecification3.Correspondent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportSpecification3#Buyer
- * ReportSpecification3.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportSpecification3#Seller
- * ReportSpecification3.Seller}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmCorrespondent
+ * ReportSpecification3.mmCorrespondent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportSpecification3#mmBuyer
+ * ReportSpecification3.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportSpecification3#mmSeller
+ * ReportSpecification3.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#BuyerCountry
- * ReportSpecification3.BuyerCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmBuyerCountry
+ * ReportSpecification3.mmBuyerCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#SellerCountry
- * ReportSpecification3.SellerCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmSellerCountry
+ * ReportSpecification3.mmSellerCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#CorrespondentCountry
- * ReportSpecification3.CorrespondentCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmCorrespondentCountry
+ * ReportSpecification3.mmCorrespondentCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportSpecification3#PendingRequestForAction
- * ReportSpecification3.PendingRequestForAction}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportSpecification3#mmPendingRequestForAction
+ * ReportSpecification3.mmPendingRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportSpecification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> transactionIdentification;
 	/**
 	 * Unique identification assigned by the TSU to a transaction, for which the
 	 * TSU must generate a report.
@@ -100,8 +102,8 @@ public class ReportSpecification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#EndToEndIdentification
-	 * PaymentIdentification.EndToEndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
+	 * PaymentIdentification.mmEndToEndIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -122,10 +124,10 @@ public class ReportSpecification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.EndToEndIdentification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,6 +137,7 @@ public class ReportSpecification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionStatus1> transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -162,7 +165,7 @@ public class ReportSpecification3 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -171,10 +174,11 @@ public class ReportSpecification3 {
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			minOccurs = 0;
-			type_lazy = () -> TransactionStatus1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus1.mmObject();
 		}
 	};
+	protected List<Max35Text> submitterTransactionReference;
 	/**
 	 * Reference to the identification of a transaction of a user, for which the
 	 * TSU must generate a report.
@@ -205,7 +209,7 @@ public class ReportSpecification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubmitterTransactionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubmitterTransactionReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -217,6 +221,7 @@ public class ReportSpecification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BICIdentification1> entitiesToBeReported;
 	/**
 	 * Specifies a list of entities for which the TSU must generate a report.
 	 * <p>
@@ -244,7 +249,7 @@ public class ReportSpecification3 {
 	 * "Specifies a list of entities for which the TSU must generate a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EntitiesToBeReported = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEntitiesToBeReported = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -253,10 +258,11 @@ public class ReportSpecification3 {
 			name = "EntitiesToBeReported";
 			definition = "Specifies a list of entities for which the TSU must generate a report.";
 			minOccurs = 0;
-			type_lazy = () -> BICIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BICIdentification1> correspondent;
 	/**
 	 * Financial institution that is the counterparty to the trade transaction.
 	 * <p>
@@ -285,7 +291,7 @@ public class ReportSpecification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Correspondent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCorrespondent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -294,10 +300,11 @@ public class ReportSpecification3 {
 			name = "Correspondent";
 			definition = "Financial institution that is the counterparty to the trade transaction.";
 			minOccurs = 0;
-			type_lazy = () -> BICIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyIdentification9> buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -325,7 +332,7 @@ public class ReportSpecification3 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Buyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -334,10 +341,11 @@ public class ReportSpecification3 {
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentification9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyIdentification9> seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -365,7 +373,7 @@ public class ReportSpecification3 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Seller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -374,10 +382,11 @@ public class ReportSpecification3 {
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentification9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected List<CountryCode> buyerCountry;
 	/**
 	 * Country of the buyer.
 	 * <p>
@@ -405,7 +414,7 @@ public class ReportSpecification3 {
 	 * definition} = "Country of the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BuyerCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBuyerCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -417,6 +426,7 @@ public class ReportSpecification3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected List<CountryCode> sellerCountry;
 	/**
 	 * Country of the seller.
 	 * <p>
@@ -444,7 +454,7 @@ public class ReportSpecification3 {
 	 * definition} = "Country of the seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SellerCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSellerCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -456,6 +466,7 @@ public class ReportSpecification3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected List<CountryCode> correspondentCountry;
 	/**
 	 * Country of the financial institution which is the other party to the
 	 * trade.
@@ -490,10 +501,10 @@ public class ReportSpecification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorrespondentCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorrespondentCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			businessComponentTrace_lazy = () -> Country.mmObject();
+			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "CrspdtCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -503,6 +514,7 @@ public class ReportSpecification3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction;
 	/**
 	 * Specifies a pending request for action for which the TSU must generate a
 	 * report.
@@ -532,7 +544,7 @@ public class ReportSpecification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingRequestForAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingRequestForAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
@@ -541,25 +553,113 @@ public class ReportSpecification3 {
 			name = "PendingRequestForAction";
 			definition = "Specifies a pending request for action for which the TSU must generate a report.";
 			minOccurs = 0;
-			type_lazy = () -> PendingActivity1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PendingActivity1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportSpecification3.TransactionIdentification, com.tools20022.repository.msg.ReportSpecification3.TransactionStatus,
-						com.tools20022.repository.msg.ReportSpecification3.SubmitterTransactionReference, com.tools20022.repository.msg.ReportSpecification3.EntitiesToBeReported,
-						com.tools20022.repository.msg.ReportSpecification3.Correspondent, com.tools20022.repository.msg.ReportSpecification3.Buyer, com.tools20022.repository.msg.ReportSpecification3.Seller,
-						com.tools20022.repository.msg.ReportSpecification3.BuyerCountry, com.tools20022.repository.msg.ReportSpecification3.SellerCountry, com.tools20022.repository.msg.ReportSpecification3.CorrespondentCountry,
-						com.tools20022.repository.msg.ReportSpecification3.PendingRequestForAction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportSpecification3.mmTransactionIdentification, com.tools20022.repository.msg.ReportSpecification3.mmTransactionStatus,
+						com.tools20022.repository.msg.ReportSpecification3.mmSubmitterTransactionReference, com.tools20022.repository.msg.ReportSpecification3.mmEntitiesToBeReported,
+						com.tools20022.repository.msg.ReportSpecification3.mmCorrespondent, com.tools20022.repository.msg.ReportSpecification3.mmBuyer, com.tools20022.repository.msg.ReportSpecification3.mmSeller,
+						com.tools20022.repository.msg.ReportSpecification3.mmBuyerCountry, com.tools20022.repository.msg.ReportSpecification3.mmSellerCountry, com.tools20022.repository.msg.ReportSpecification3.mmCorrespondentCountry,
+						com.tools20022.repository.msg.ReportSpecification3.mmPendingRequestForAction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportSpecification3";
 				definition = "Specifies the parameters for which a transaction report must be generated.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(List<Max35Text> transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public List<TransactionStatus1> getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(List<com.tools20022.repository.msg.TransactionStatus1> transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public List<Max35Text> getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(List<Max35Text> submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public List<BICIdentification1> getEntitiesToBeReported() {
+		return entitiesToBeReported;
+	}
+
+	public void setEntitiesToBeReported(List<com.tools20022.repository.msg.BICIdentification1> entitiesToBeReported) {
+		this.entitiesToBeReported = entitiesToBeReported;
+	}
+
+	public List<BICIdentification1> getCorrespondent() {
+		return correspondent;
+	}
+
+	public void setCorrespondent(List<com.tools20022.repository.msg.BICIdentification1> correspondent) {
+		this.correspondent = correspondent;
+	}
+
+	public List<PartyIdentification9> getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(List<com.tools20022.repository.msg.PartyIdentification9> buyer) {
+		this.buyer = buyer;
+	}
+
+	public List<PartyIdentification9> getSeller() {
+		return seller;
+	}
+
+	public void setSeller(List<com.tools20022.repository.msg.PartyIdentification9> seller) {
+		this.seller = seller;
+	}
+
+	public List<CountryCode> getBuyerCountry() {
+		return buyerCountry;
+	}
+
+	public void setBuyerCountry(List<CountryCode> buyerCountry) {
+		this.buyerCountry = buyerCountry;
+	}
+
+	public List<CountryCode> getSellerCountry() {
+		return sellerCountry;
+	}
+
+	public void setSellerCountry(List<CountryCode> sellerCountry) {
+		this.sellerCountry = sellerCountry;
+	}
+
+	public List<CountryCode> getCorrespondentCountry() {
+		return correspondentCountry;
+	}
+
+	public void setCorrespondentCountry(List<CountryCode> correspondentCountry) {
+		this.correspondentCountry = correspondentCountry;
+	}
+
+	public List<PendingActivity1> getPendingRequestForAction() {
+		return pendingRequestForAction;
+	}
+
+	public void setPendingRequestForAction(List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction) {
+		this.pendingRequestForAction = pendingRequestForAction;
 	}
 }

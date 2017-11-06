@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestvers
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope <br>
@@ -87,42 +88,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#Pagination
- * SecuritiesBalanceAccountingReportV09.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmPagination
+ * SecuritiesBalanceAccountingReportV09.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#StatementGeneralDetails
- * SecuritiesBalanceAccountingReportV09.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmStatementGeneralDetails
+ * SecuritiesBalanceAccountingReportV09.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#AccountOwner
- * SecuritiesBalanceAccountingReportV09.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmAccountOwner
+ * SecuritiesBalanceAccountingReportV09.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#AccountServicer
- * SecuritiesBalanceAccountingReportV09.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmAccountServicer
+ * SecuritiesBalanceAccountingReportV09.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#SafekeepingAccount
- * SecuritiesBalanceAccountingReportV09.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmSafekeepingAccount
+ * SecuritiesBalanceAccountingReportV09.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#IntermediaryInformation
- * SecuritiesBalanceAccountingReportV09.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmIntermediaryInformation
+ * SecuritiesBalanceAccountingReportV09.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#BalanceForAccount
- * SecuritiesBalanceAccountingReportV09.BalanceForAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmBalanceForAccount
+ * SecuritiesBalanceAccountingReportV09.mmBalanceForAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#SubAccountDetails
- * SecuritiesBalanceAccountingReportV09.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmSubAccountDetails
+ * SecuritiesBalanceAccountingReportV09.mmSubAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#AccountBaseCurrencyTotalAmounts
- * SecuritiesBalanceAccountingReportV09.AccountBaseCurrencyTotalAmounts}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmAccountBaseCurrencyTotalAmounts
+ * SecuritiesBalanceAccountingReportV09.mmAccountBaseCurrencyTotalAmounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#AlternateReportingCurrencyTotalAmounts
- * SecuritiesBalanceAccountingReportV09.AlternateReportingCurrencyTotalAmounts}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmAlternateReportingCurrencyTotalAmounts
+ * SecuritiesBalanceAccountingReportV09.mmAlternateReportingCurrencyTotalAmounts
+ * }</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#identifier
- * SecuritiesBalanceAccountingReportV09.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.003.001.09}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,6 +142,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesBalanceAccountingReportV09 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -169,22 +170,23 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#Pagination
-	 * SecuritiesBalanceAccountingReportV08.Pagination}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmPagination
+	 * SecuritiesBalanceAccountingReportV08.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.Pagination;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmPagination;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement40 statementGeneralDetails;
 	/**
 	 * Provides general information on the report.
 	 * <p>
@@ -208,22 +210,23 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#StatementGeneralDetails
-	 * SecuritiesBalanceAccountingReportV08.StatementGeneralDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmStatementGeneralDetails
+	 * SecuritiesBalanceAccountingReportV08.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "Provides general information on the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.StatementGeneralDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmStatementGeneralDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement40.mmObject();
 		}
 	};
+	protected PartyIdentification98 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -248,22 +251,23 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#AccountOwner
-	 * SecuritiesBalanceAccountingReportV08.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmAccountOwner
+	 * SecuritiesBalanceAccountingReportV08.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.AccountOwner;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmAccountOwner;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
 		}
 	};
+	protected PartyIdentification100 accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -293,22 +297,23 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#AccountServicer
-	 * SecuritiesBalanceAccountingReportV08.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmAccountServicer
+	 * SecuritiesBalanceAccountingReportV08.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountServicer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountServicer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.AccountServicer;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmAccountServicer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification100.mmObject();
 		}
 	};
+	protected SecuritiesAccount26 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -333,22 +338,23 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#SafekeepingAccount
-	 * SecuritiesBalanceAccountingReportV08.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmSafekeepingAccount
+	 * SecuritiesBalanceAccountingReportV08.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.SafekeepingAccount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount26.mmObject();
 		}
 	};
+	protected List<Intermediary32> intermediaryInformation;
 	/**
 	 * Information about the party that provides services relating to financial
 	 * products to investors, for example, advice on products and placement of
@@ -376,22 +382,23 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#IntermediaryInformation
-	 * SecuritiesBalanceAccountingReportV08.IntermediaryInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmIntermediaryInformation
+	 * SecuritiesBalanceAccountingReportV08.mmIntermediaryInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IntermediaryInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIntermediaryInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrmyInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryInformation";
 			definition = "Information about the party that provides services relating to financial products to investors, for example, advice on products and placement of orders for the investment fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.IntermediaryInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmIntermediaryInformation;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> Intermediary32.mmObject();
 		}
 	};
+	protected List<AggregateBalanceInformation31> balanceForAccount;
 	/**
 	 * Net position of a segregated holding, in a single security, within the
 	 * overall position held in a securities account.
@@ -419,21 +426,22 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#BalanceForAccount
-	 * SecuritiesBalanceAccountingReportV08.BalanceForAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmBalanceForAccount
+	 * SecuritiesBalanceAccountingReportV08.mmBalanceForAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BalanceForAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBalanceForAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BalForAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.BalanceForAccount;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmBalanceForAccount;
 			minOccurs = 0;
 			complexType_lazy = () -> AggregateBalanceInformation31.mmObject();
 		}
 	};
+	protected List<SubAccountIdentification43> subAccountDetails;
 	/**
 	 * Sub-account of the safekeeping or investment account.
 	 * <p>
@@ -458,21 +466,22 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#SubAccountDetails
-	 * SecuritiesBalanceAccountingReportV08.SubAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmSubAccountDetails
+	 * SecuritiesBalanceAccountingReportV08.mmSubAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-account of the safekeeping or investment account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.SubAccountDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmSubAccountDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> SubAccountIdentification43.mmObject();
 		}
 	};
+	protected TotalValueInPageAndStatement2 accountBaseCurrencyTotalAmounts;
 	/**
 	 * Total valuation amounts provided in the base currency of the account.
 	 * <p>
@@ -498,22 +507,23 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#AccountBaseCurrencyTotalAmounts
-	 * SecuritiesBalanceAccountingReportV08.AccountBaseCurrencyTotalAmounts}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmAccountBaseCurrencyTotalAmounts
+	 * SecuritiesBalanceAccountingReportV08.mmAccountBaseCurrencyTotalAmounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountBaseCurrencyTotalAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountBaseCurrencyTotalAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctBaseCcyTtlAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBaseCurrencyTotalAmounts";
 			definition = "Total valuation amounts provided in the base currency of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.AccountBaseCurrencyTotalAmounts;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmAccountBaseCurrencyTotalAmounts;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TotalValueInPageAndStatement2.mmObject();
 		}
 	};
+	protected TotalValueInPageAndStatement2 alternateReportingCurrencyTotalAmounts;
 	/**
 	 * Total valuation amounts provided in another currency than the base
 	 * currency of the account.
@@ -541,48 +551,21 @@ public class SecuritiesBalanceAccountingReportV09 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#AlternateReportingCurrencyTotalAmounts
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmAlternateReportingCurrencyTotalAmounts
 	 * SecuritiesBalanceAccountingReportV08.
-	 * AlternateReportingCurrencyTotalAmounts}</li>
+	 * mmAlternateReportingCurrencyTotalAmounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AlternateReportingCurrencyTotalAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAlternateReportingCurrencyTotalAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AltrnRptgCcyTtlAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateReportingCurrencyTotalAmounts";
 			definition = "Total valuation amounts provided in another currency than the base currency of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.AlternateReportingCurrencyTotalAmounts;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmAlternateReportingCurrencyTotalAmounts;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TotalValueInPageAndStatement2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "09"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "003";
-			version = "09";
-			flavour = "001";
 		}
 	};
 
@@ -597,15 +580,102 @@ public class SecuritiesBalanceAccountingReportV09 {
 				rootElement = "Document";
 				xmlTag = "SctiesBalAcctgRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.StatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.AccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.IntermediaryInformation, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.BalanceForAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.SubAccountDetails, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.AccountBaseCurrencyTotalAmounts,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.AlternateReportingCurrencyTotalAmounts);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmIntermediaryInformation, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmBalanceForAccount,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmSubAccountDetails, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmAccountBaseCurrencyTotalAmounts,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmAlternateReportingCurrencyTotalAmounts);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "003";
+						version = "09";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Statement40 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement40 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public PartyIdentification98 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification98 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public PartyIdentification100 getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(PartyIdentification100 accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public SecuritiesAccount26 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount26 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<Intermediary32> getIntermediaryInformation() {
+		return intermediaryInformation;
+	}
+
+	public void setIntermediaryInformation(List<Intermediary32> intermediaryInformation) {
+		this.intermediaryInformation = intermediaryInformation;
+	}
+
+	public List<AggregateBalanceInformation31> getBalanceForAccount() {
+		return balanceForAccount;
+	}
+
+	public void setBalanceForAccount(List<AggregateBalanceInformation31> balanceForAccount) {
+		this.balanceForAccount = balanceForAccount;
+	}
+
+	public List<SubAccountIdentification43> getSubAccountDetails() {
+		return subAccountDetails;
+	}
+
+	public void setSubAccountDetails(List<SubAccountIdentification43> subAccountDetails) {
+		this.subAccountDetails = subAccountDetails;
+	}
+
+	public TotalValueInPageAndStatement2 getAccountBaseCurrencyTotalAmounts() {
+		return accountBaseCurrencyTotalAmounts;
+	}
+
+	public void setAccountBaseCurrencyTotalAmounts(TotalValueInPageAndStatement2 accountBaseCurrencyTotalAmounts) {
+		this.accountBaseCurrencyTotalAmounts = accountBaseCurrencyTotalAmounts;
+	}
+
+	public TotalValueInPageAndStatement2 getAlternateReportingCurrencyTotalAmounts() {
+		return alternateReportingCurrencyTotalAmounts;
+	}
+
+	public void setAlternateReportingCurrencyTotalAmounts(TotalValueInPageAndStatement2 alternateReportingCurrencyTotalAmounts) {
+		this.alternateReportingCurrencyTotalAmounts = alternateReportingCurrencyTotalAmounts;
 	}
 }

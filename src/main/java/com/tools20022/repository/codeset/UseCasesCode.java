@@ -29,14 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#Opening
- * UseCasesCode.Opening}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#Maintenance
- * UseCasesCode.Maintenance}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#Closing
- * UseCasesCode.Closing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#View
- * UseCasesCode.View}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmOpening
+ * UseCasesCode.mmOpening}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmMaintenance
+ * UseCasesCode.mmMaintenance}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmClosing
+ * UseCasesCode.mmClosing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmView
+ * UseCasesCode.mmView}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class UseCasesCode {
 	 * definition} = "Code indicating the opening of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Opening = new MMCode() {
+	public static final MMCode mmOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
@@ -119,7 +119,7 @@ public class UseCasesCode {
 	 * definition} = "Code indicating the maintenance of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Maintenance = new MMCode() {
+	public static final MMCode mmMaintenance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maintenance";
@@ -148,7 +148,7 @@ public class UseCasesCode {
 	 * definition} = "Code indicating the closing of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Closing = new MMCode() {
+	public static final MMCode mmClosing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
@@ -177,7 +177,7 @@ public class UseCasesCode {
 	 * definition} = "Code indicating the view of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode View = new MMCode() {
+	public static final MMCode mmView = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "View";
@@ -190,13 +190,13 @@ public class UseCasesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UseCasesCode";
 				definition = "Specifies the action on the cash account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UseCasesCode.Opening, com.tools20022.repository.codeset.UseCasesCode.Maintenance, com.tools20022.repository.codeset.UseCasesCode.Closing,
-						com.tools20022.repository.codeset.UseCasesCode.View);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UseCasesCode.mmOpening, com.tools20022.repository.codeset.UseCasesCode.mmMaintenance, com.tools20022.repository.codeset.UseCasesCode.mmClosing,
+						com.tools20022.repository.codeset.UseCasesCode.mmView);
 				derivation_lazy = () -> Arrays.asList(UseCases1Code.mmObject());
 			}
 		});

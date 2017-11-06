@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -71,54 +72,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#MessageIdentification
- * AccountModificationInstructionV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmMessageIdentification
+ * AccountModificationInstructionV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#PreviousReference
- * AccountModificationInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmPreviousReference
+ * AccountModificationInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#InstructionDetails
- * AccountModificationInstructionV02.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmInstructionDetails
+ * AccountModificationInstructionV02.mmInstructionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#InvestmentAccountSelection
- * AccountModificationInstructionV02.InvestmentAccountSelection}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmInvestmentAccountSelection
+ * AccountModificationInstructionV02.mmInvestmentAccountSelection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedInvestmentAccount
- * AccountModificationInstructionV02.ModifiedInvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedInvestmentAccount
+ * AccountModificationInstructionV02.mmModifiedInvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedAccountParties
- * AccountModificationInstructionV02.ModifiedAccountParties}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedAccountParties
+ * AccountModificationInstructionV02.mmModifiedAccountParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedIntermediaries
- * AccountModificationInstructionV02.ModifiedIntermediaries}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedIntermediaries
+ * AccountModificationInstructionV02.mmModifiedIntermediaries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedPlacement
- * AccountModificationInstructionV02.ModifiedPlacement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedPlacement
+ * AccountModificationInstructionV02.mmModifiedPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedIssueAllocation
- * AccountModificationInstructionV02.ModifiedIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedIssueAllocation
+ * AccountModificationInstructionV02.mmModifiedIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedSavingsInvestmentPlan
- * AccountModificationInstructionV02.ModifiedSavingsInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedSavingsInvestmentPlan
+ * AccountModificationInstructionV02.mmModifiedSavingsInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedWithdrawalInvestmentPlan
- * AccountModificationInstructionV02.ModifiedWithdrawalInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedWithdrawalInvestmentPlan
+ * AccountModificationInstructionV02.mmModifiedWithdrawalInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedCashSettlement
- * AccountModificationInstructionV02.ModifiedCashSettlement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedCashSettlement
+ * AccountModificationInstructionV02.mmModifiedCashSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedServiceLevelAgreement
- * AccountModificationInstructionV02.ModifiedServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedServiceLevelAgreement
+ * AccountModificationInstructionV02.mmModifiedServiceLevelAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#Extension
- * AccountModificationInstructionV02.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmExtension
+ * AccountModificationInstructionV02.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#identifier
- * AccountModificationInstructionV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.003.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,6 +141,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountModificationInstructionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Identifies the message.
 	 * <p>
@@ -165,17 +165,18 @@ public class AccountModificationInstructionV02 {
 	 * definition} = "Identifies the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -199,17 +200,18 @@ public class AccountModificationInstructionV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected InvestmentAccountModificationDetails instructionDetails;
 	/**
 	 * Provide detailed information about the application modification
 	 * instruction.
@@ -236,17 +238,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
 			definition = "Provide detailed information about the application modification instruction. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccountModificationDetails.mmObject();
 		}
 	};
+	protected InvestmentAccountSelection2 investmentAccountSelection;
 	/**
 	 * Investment account selection information used to identify the account for
 	 * which the information is modified..
@@ -273,17 +276,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InvestmentAccountSelection = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInvestmentAccountSelection = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstmtAcctSelctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountSelection";
 			definition = "Investment account selection information used to identify the account for which the information is modified..";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccountSelection2.mmObject();
 		}
 	};
+	protected InvestmentAccount28 modifiedInvestmentAccount;
 	/**
 	 * Information related to general characteristics of an investment account
 	 * to be inserted, updated or deleted.
@@ -310,17 +314,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedInvestmentAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedInvestmentAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdInvstmtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedInvestmentAccount";
 			definition = "Information related to general characteristics of an investment account to be inserted, updated or deleted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccount28.mmObject();
 		}
 	};
+	protected List<AccountParties4> modifiedAccountParties;
 	/**
 	 * Information related to the account related parties (eg. account owner) to
 	 * be inserted, updated or deleted.
@@ -346,17 +351,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedAccountParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedAccountParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdAcctPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedAccountParties";
 			definition = "Information related to the account related parties (eg. account owner) to be inserted, updated or deleted.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountParties4.mmObject();
 		}
 	};
+	protected List<ModificationScope7> modifiedIntermediaries;
 	/**
 	 * Information related to intermediaries to be inserted, updated or deleted.
 	 * <p>
@@ -382,17 +388,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedIntermediaries = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedIntermediaries = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdIntrmies";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedIntermediaries";
 			definition = "Information related to intermediaries to be inserted, updated or deleted.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope7.mmObject();
 		}
 	};
+	protected ReferredAgent1 modifiedPlacement;
 	/**
 	 * Information related to referred placement agent in the hedge fund
 	 * industry to be inserted, updated or deleted.
@@ -418,17 +425,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedPlacement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedPlacement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdPlcmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedPlacement";
 			definition = "Information related to referred placement agent in the hedge fund industry to be inserted, updated or deleted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ReferredAgent1.mmObject();
 		}
 	};
+	protected ModificationScope9 modifiedIssueAllocation;
 	/**
 	 * Eligibility conditions information related to new issues allocation to be
 	 * inserted, updated or deleted.
@@ -455,17 +463,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedIssueAllocation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedIssueAllocation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdIsseAllcn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedIssueAllocation";
 			definition = "Eligibility conditions information related to new issues allocation to be inserted, updated or deleted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope9.mmObject();
 		}
 	};
+	protected List<ModificationScope8> modifiedSavingsInvestmentPlan;
 	/**
 	 * Information related to a savings plan to be either inserted, updated or
 	 * deleted.
@@ -492,17 +501,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedSavingsInvestmentPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedSavingsInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdSvgsInvstmtPlan";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedSavingsInvestmentPlan";
 			definition = "Information related to a savings plan to be either inserted, updated or deleted.";
-			minOccurs = 0;
 			maxOccurs = 50;
+			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope8.mmObject();
 		}
 	};
+	protected List<ModificationScope8> modifiedWithdrawalInvestmentPlan;
 	/**
 	 * Information related to a withrawal plan to be either inserted, updated or
 	 * deleted.
@@ -529,17 +539,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdWdrwlInvstmtPlan";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedWithdrawalInvestmentPlan";
 			definition = "Information related to a withrawal plan to be either inserted, updated or deleted.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope8.mmObject();
 		}
 	};
+	protected List<InvestmentFundCashSettlementInformation4> modifiedCashSettlement;
 	/**
 	 * Cash settlement standing instruction associated to the investment fund
 	 * transaction and to be either inserted or deleted.
@@ -566,17 +577,18 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedCashSettlement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedCashSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdCshSttlm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedCashSettlement";
 			definition = "Cash settlement standing instruction associated to the investment fund transaction and to be either inserted or deleted.";
-			minOccurs = 0;
 			maxOccurs = 8;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundCashSettlementInformation4.mmObject();
 		}
 	};
+	protected List<ModificationScope10> modifiedServiceLevelAgreement;
 	/**
 	 * Information related to documents to be added, deleted or updated.
 	 * <p>
@@ -601,17 +613,18 @@ public class AccountModificationInstructionV02 {
 	 * "Information related to documents to be added, deleted or updated.\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedServiceLevelAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedServiceLevelAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdSvcLvlAgrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedServiceLevelAgreement";
 			definition = "Information related to documents to be added, deleted or updated.\n";
-			minOccurs = 0;
 			maxOccurs = 30;
+			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope10.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -637,7 +650,7 @@ public class AccountModificationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -645,33 +658,6 @@ public class AccountModificationInstructionV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "003";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -686,17 +672,136 @@ public class AccountModificationInstructionV02 {
 				rootElement = "Document";
 				xmlTag = "AcctModInstrV02";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.PreviousReference, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.InstructionDetails,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.InvestmentAccountSelection, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedInvestmentAccount,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedAccountParties, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedIntermediaries,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedPlacement, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedSavingsInvestmentPlan, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedWithdrawalInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedCashSettlement, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmPreviousReference, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmInstructionDetails,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmInvestmentAccountSelection, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedInvestmentAccount,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedAccountParties, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedIntermediaries,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedPlacement, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedIssueAllocation,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedSavingsInvestmentPlan, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedWithdrawalInvestmentPlan,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedCashSettlement, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedServiceLevelAgreement,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "003";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public InvestmentAccountModificationDetails getInstructionDetails() {
+		return instructionDetails;
+	}
+
+	public void setInstructionDetails(InvestmentAccountModificationDetails instructionDetails) {
+		this.instructionDetails = instructionDetails;
+	}
+
+	public InvestmentAccountSelection2 getInvestmentAccountSelection() {
+		return investmentAccountSelection;
+	}
+
+	public void setInvestmentAccountSelection(InvestmentAccountSelection2 investmentAccountSelection) {
+		this.investmentAccountSelection = investmentAccountSelection;
+	}
+
+	public InvestmentAccount28 getModifiedInvestmentAccount() {
+		return modifiedInvestmentAccount;
+	}
+
+	public void setModifiedInvestmentAccount(InvestmentAccount28 modifiedInvestmentAccount) {
+		this.modifiedInvestmentAccount = modifiedInvestmentAccount;
+	}
+
+	public List<AccountParties4> getModifiedAccountParties() {
+		return modifiedAccountParties;
+	}
+
+	public void setModifiedAccountParties(List<AccountParties4> modifiedAccountParties) {
+		this.modifiedAccountParties = modifiedAccountParties;
+	}
+
+	public List<ModificationScope7> getModifiedIntermediaries() {
+		return modifiedIntermediaries;
+	}
+
+	public void setModifiedIntermediaries(List<ModificationScope7> modifiedIntermediaries) {
+		this.modifiedIntermediaries = modifiedIntermediaries;
+	}
+
+	public ReferredAgent1 getModifiedPlacement() {
+		return modifiedPlacement;
+	}
+
+	public void setModifiedPlacement(ReferredAgent1 modifiedPlacement) {
+		this.modifiedPlacement = modifiedPlacement;
+	}
+
+	public ModificationScope9 getModifiedIssueAllocation() {
+		return modifiedIssueAllocation;
+	}
+
+	public void setModifiedIssueAllocation(ModificationScope9 modifiedIssueAllocation) {
+		this.modifiedIssueAllocation = modifiedIssueAllocation;
+	}
+
+	public List<ModificationScope8> getModifiedSavingsInvestmentPlan() {
+		return modifiedSavingsInvestmentPlan;
+	}
+
+	public void setModifiedSavingsInvestmentPlan(List<ModificationScope8> modifiedSavingsInvestmentPlan) {
+		this.modifiedSavingsInvestmentPlan = modifiedSavingsInvestmentPlan;
+	}
+
+	public List<ModificationScope8> getModifiedWithdrawalInvestmentPlan() {
+		return modifiedWithdrawalInvestmentPlan;
+	}
+
+	public void setModifiedWithdrawalInvestmentPlan(List<ModificationScope8> modifiedWithdrawalInvestmentPlan) {
+		this.modifiedWithdrawalInvestmentPlan = modifiedWithdrawalInvestmentPlan;
+	}
+
+	public List<InvestmentFundCashSettlementInformation4> getModifiedCashSettlement() {
+		return modifiedCashSettlement;
+	}
+
+	public void setModifiedCashSettlement(List<InvestmentFundCashSettlementInformation4> modifiedCashSettlement) {
+		this.modifiedCashSettlement = modifiedCashSettlement;
+	}
+
+	public List<ModificationScope10> getModifiedServiceLevelAgreement() {
+		return modifiedServiceLevelAgreement;
+	}
+
+	public void setModifiedServiceLevelAgreement(List<ModificationScope10> modifiedServiceLevelAgreement) {
+		this.modifiedServiceLevelAgreement = modifiedServiceLevelAgreement;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

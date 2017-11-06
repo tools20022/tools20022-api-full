@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#AcceptedTechnicalValidation
- * ValidationGroupStatus1Code.AcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#mmAcceptedTechnicalValidation
+ * ValidationGroupStatus1Code.mmAcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#AcceptedCustomerProfile
- * ValidationGroupStatus1Code.AcceptedCustomerProfile}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#mmAcceptedCustomerProfile
+ * ValidationGroupStatus1Code.mmAcceptedCustomerProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#AcceptedSettlementInProcess
- * ValidationGroupStatus1Code.AcceptedSettlementInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#mmAcceptedSettlementInProcess
+ * ValidationGroupStatus1Code.mmAcceptedSettlementInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#AcceptedSettlementCompleted
- * ValidationGroupStatus1Code.AcceptedSettlementCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#mmAcceptedSettlementCompleted
+ * ValidationGroupStatus1Code.mmAcceptedSettlementCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#AcceptedWithChange
- * ValidationGroupStatus1Code.AcceptedWithChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus1Code#mmAcceptedWithChange
+ * ValidationGroupStatus1Code.mmAcceptedWithChange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class ValidationGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedTechnicalValidation = new MMCode() {
+	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
@@ -116,7 +116,7 @@ public class ValidationGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedCustomerProfile"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedCustomerProfile = new MMCode() {
+	public static final MMCode mmAcceptedCustomerProfile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCustomerProfile";
@@ -139,7 +139,7 @@ public class ValidationGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedSettlementInProcess = new MMCode() {
+	public static final MMCode mmAcceptedSettlementInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementInProcess";
@@ -162,7 +162,7 @@ public class ValidationGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedSettlementCompleted = new MMCode() {
+	public static final MMCode mmAcceptedSettlementCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementCompleted";
@@ -185,7 +185,7 @@ public class ValidationGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedWithChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithChange = new MMCode() {
+	public static final MMCode mmAcceptedWithChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithChange";
@@ -196,14 +196,14 @@ public class ValidationGroupStatus1Code extends PaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ValidationGroupStatus1Code";
 				definition = "Indicates the status of a single payment transaction or of a group of payment transactions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValidationGroupStatus1Code.AcceptedTechnicalValidation, com.tools20022.repository.codeset.ValidationGroupStatus1Code.AcceptedCustomerProfile,
-						com.tools20022.repository.codeset.ValidationGroupStatus1Code.AcceptedSettlementInProcess, com.tools20022.repository.codeset.ValidationGroupStatus1Code.AcceptedSettlementCompleted,
-						com.tools20022.repository.codeset.ValidationGroupStatus1Code.AcceptedWithChange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValidationGroupStatus1Code.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.ValidationGroupStatus1Code.mmAcceptedCustomerProfile,
+						com.tools20022.repository.codeset.ValidationGroupStatus1Code.mmAcceptedSettlementInProcess, com.tools20022.repository.codeset.ValidationGroupStatus1Code.mmAcceptedSettlementCompleted,
+						com.tools20022.repository.codeset.ValidationGroupStatus1Code.mmAcceptedWithChange);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
 			}
 		});

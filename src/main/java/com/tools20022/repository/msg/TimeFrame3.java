@@ -38,15 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TimeFrame3#OtherTimeFrameDescription
- * TimeFrame3.OtherTimeFrameDescription}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TimeFrame3#TradeMinus
- * TimeFrame3.TradeMinus}</li>
+ * {@linkplain com.tools20022.repository.msg.TimeFrame3#mmOtherTimeFrameDescription
+ * TimeFrame3.mmOtherTimeFrameDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TimeFrame3#mmTradeMinus
+ * TimeFrame3.mmTradeMinus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TimeFrame3#NonWorkingDayAdjustment
- * TimeFrame3.NonWorkingDayAdjustment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TimeFrame3#ReferToOrderDesk
- * TimeFrame3.ReferToOrderDesk}</li>
+ * {@linkplain com.tools20022.repository.msg.TimeFrame3#mmNonWorkingDayAdjustment
+ * TimeFrame3.mmNonWorkingDayAdjustment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TimeFrame3#mmReferToOrderDesk
+ * TimeFrame3.mmReferToOrderDesk}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TimeFrame3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text otherTimeFrameDescription;
 	/**
 	 * Specifies a description of any other TimeFrame that may be used for the
 	 * DealingCutOffTimeFrame
@@ -84,8 +85,8 @@ public class TimeFrame3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TimeFrame#OtherTimeFrameDescription
-	 * TimeFrame.OtherTimeFrameDescription}</li>
+	 * {@linkplain com.tools20022.repository.entity.TimeFrame#mmOtherTimeFrameDescription
+	 * TimeFrame.mmOtherTimeFrameDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TimeFrame3
@@ -105,20 +106,21 @@ public class TimeFrame3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherTimeFrameDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherTimeFrameDescription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmOtherTimeFrameDescription;
 			componentContext_lazy = () -> TimeFrame3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.OtherTimeFrameDescription;
 			isDerived = false;
 			xmlTag = "OthrTmFrameDesc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTimeFrameDescription";
 			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Number tradeMinus;
 	/**
 	 * An agreed number of days before the Trade date (T) used to define
 	 * standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition
@@ -134,8 +136,8 @@ public class TimeFrame3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TimeFrame#TradeMinus
-	 * TimeFrame.TradeMinus}</li>
+	 * {@linkplain com.tools20022.repository.entity.TimeFrame#mmTradeMinus
+	 * TimeFrame.mmTradeMinus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TimeFrame3
@@ -155,20 +157,21 @@ public class TimeFrame3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeMinus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeMinus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmTradeMinus;
 			componentContext_lazy = () -> TimeFrame3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.TradeMinus;
 			isDerived = false;
 			xmlTag = "TMns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeMinus";
 			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\n\nWhere = T is the date that the price is applied to a transaction,";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected BusinessDayConvention1Code nonWorkingDayAdjustment;
 	/**
 	 * Convention used for adjusting a date when it is not a business day.
 	 * <p>
@@ -182,8 +185,8 @@ public class TimeFrame3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RedemptionSchedule#BusinessDayConvention
-	 * RedemptionSchedule.BusinessDayConvention}</li>
+	 * {@linkplain com.tools20022.repository.entity.RedemptionSchedule#mmBusinessDayConvention
+	 * RedemptionSchedule.mmBusinessDayConvention}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TimeFrame3
@@ -202,20 +205,21 @@ public class TimeFrame3 {
 	 * "Convention used for adjusting a date when it is not a business day."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonWorkingDayAdjustment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonWorkingDayAdjustment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionSchedule.mmBusinessDayConvention;
 			componentContext_lazy = () -> TimeFrame3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionSchedule.BusinessDayConvention;
 			isDerived = false;
 			xmlTag = "NonWorkgDayAdjstmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonWorkingDayAdjustment";
 			definition = "Convention used for adjusting a date when it is not a business day.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BusinessDayConvention1Code.mmObject();
 		}
 	};
+	protected ReferToFundOrderDesk1Code referToOrderDesk;
 	/**
 	 * Refer to Order Desk
 	 * <p>
@@ -243,7 +247,7 @@ public class TimeFrame3 {
 	 * definition} = "Refer to Order Desk"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferToOrderDesk = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferToOrderDesk = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TimeFrame3.mmObject();
 			isDerived = false;
@@ -251,8 +255,8 @@ public class TimeFrame3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferToOrderDesk";
 			definition = "Refer to Order Desk";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ReferToFundOrderDesk1Code.mmObject();
 		}
 	};
@@ -260,15 +264,47 @@ public class TimeFrame3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeFrame3.OtherTimeFrameDescription, com.tools20022.repository.msg.TimeFrame3.TradeMinus,
-						com.tools20022.repository.msg.TimeFrame3.NonWorkingDayAdjustment, com.tools20022.repository.msg.TimeFrame3.ReferToOrderDesk);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeFrame3.mmOtherTimeFrameDescription, com.tools20022.repository.msg.TimeFrame3.mmTradeMinus,
+						com.tools20022.repository.msg.TimeFrame3.mmNonWorkingDayAdjustment, com.tools20022.repository.msg.TimeFrame3.mmReferToOrderDesk);
 				trace_lazy = () -> TimeFrame.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame3";
 				definition = "TimeFrame elements that define a period as number of days before or after a activity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getOtherTimeFrameDescription() {
+		return otherTimeFrameDescription;
+	}
+
+	public void setOtherTimeFrameDescription(Max350Text otherTimeFrameDescription) {
+		this.otherTimeFrameDescription = otherTimeFrameDescription;
+	}
+
+	public Number getTradeMinus() {
+		return tradeMinus;
+	}
+
+	public void setTradeMinus(Number tradeMinus) {
+		this.tradeMinus = tradeMinus;
+	}
+
+	public BusinessDayConvention1Code getNonWorkingDayAdjustment() {
+		return nonWorkingDayAdjustment;
+	}
+
+	public void setNonWorkingDayAdjustment(BusinessDayConvention1Code nonWorkingDayAdjustment) {
+		this.nonWorkingDayAdjustment = nonWorkingDayAdjustment;
+	}
+
+	public ReferToFundOrderDesk1Code getReferToOrderDesk() {
+		return referToOrderDesk;
+	}
+
+	public void setReferToOrderDesk(ReferToFundOrderDesk1Code referToOrderDesk) {
+		this.referToOrderDesk = referToOrderDesk;
 	}
 }

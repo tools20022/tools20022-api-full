@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,16 +38,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance26#SafekeepingAccount
- * AccountAndBalance26.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance26#mmSafekeepingAccount
+ * AccountAndBalance26.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance26#AccountOwner
- * AccountAndBalance26.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance26#mmAccountOwner
+ * AccountAndBalance26.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance26#SafekeepingPlace
- * AccountAndBalance26.SafekeepingPlace}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance26#Balance
- * AccountAndBalance26.Balance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance26#mmSafekeepingPlace
+ * AccountAndBalance26.mmSafekeepingPlace}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance26#mmBalance
+ * AccountAndBalance26.mmBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,18 +58,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05#AccountDetails
- * CorporateActionMovementConfirmationV05.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05#mmAccountDetails
+ * CorporateActionMovementConfirmationV05.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06#AccountDetails
- * CorporateActionMovementConfirmationV06.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06#mmAccountDetails
+ * CorporateActionMovementConfirmationV06.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountAndBalance26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text safekeepingAccount;
 	/**
 	 * Account where financial instruments are maintained.
 	 * <p>
@@ -127,33 +129,34 @@ public class AccountAndBalance26 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#SafekeepingAccount
-	 * AccountAndBalance34.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#mmSafekeepingAccount
+	 * AccountAndBalance34.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#SafekeepingAccount
-	 * AccountAndBalance22.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#mmSafekeepingAccount
+	 * AccountAndBalance22.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountAndBalance26.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> AccountAndBalance26.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountAndBalance22.SafekeepingAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance34.SafekeepingAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance34.mmSafekeepingAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountAndBalance22.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification36Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -166,8 +169,8 @@ public class AccountAndBalance26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,34 +191,35 @@ public class AccountAndBalance26 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#AccountOwner
-	 * AccountAndBalance34.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#mmAccountOwner
+	 * AccountAndBalance34.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#AccountOwner
-	 * AccountAndBalance22.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#mmAccountOwner
+	 * AccountAndBalance22.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AccountAndBalance26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountAndBalance22.AccountOwner;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance34.AccountOwner);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance34.mmAccountOwner);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountAndBalance22.mmAccountOwner;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification36Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 	};
+	protected SafekeepingPlaceFormat2Choice safekeepingPlace;
 	/**
 	 * Location where the financial instruments are/will be safekept.
 	 * <p>
@@ -251,34 +255,35 @@ public class AccountAndBalance26 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#SafekeepingPlace
-	 * AccountAndBalance34.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#mmSafekeepingPlace
+	 * AccountAndBalance34.mmSafekeepingPlace}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#SafekeepingPlace
-	 * AccountAndBalance22.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#mmSafekeepingPlace
+	 * AccountAndBalance22.mmSafekeepingPlace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> AccountAndBalance26.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are/will be safekept.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountAndBalance22.SafekeepingPlace;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance34.SafekeepingPlace);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance34.mmSafekeepingPlace);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountAndBalance22.mmSafekeepingPlace;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceFormat2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceFormat2Choice.mmObject();
 		}
 	};
+	protected CorporateActionBalanceDetails22 balance;
 	/**
 	 * Provides information about balance related to a corporate action.
 	 * <p>
@@ -291,8 +296,8 @@ public class AccountAndBalance26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#SecuritiesBalance
-	 * SecuritiesAccount.SecuritiesBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesBalance
+	 * SecuritiesAccount.mmSecuritiesBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -314,51 +319,83 @@ public class AccountAndBalance26 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#Balance
-	 * AccountAndBalance34.Balance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#mmBalance
+	 * AccountAndBalance34.mmBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#Balance
-	 * AccountAndBalance22.Balance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#mmBalance
+	 * AccountAndBalance22.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Balance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> AccountAndBalance26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.SecuritiesBalance;
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about balance related to a corporate action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountAndBalance22.Balance;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance34.Balance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance34.mmBalance);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountAndBalance22.mmBalance;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionBalanceDetails22.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails22.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance26.SafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance26.AccountOwner,
-						com.tools20022.repository.msg.AccountAndBalance26.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance26.Balance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance26.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance26.mmAccountOwner,
+						com.tools20022.repository.msg.AccountAndBalance26.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance26.mmBalance);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05.mmAccountDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.mmAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05.AccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.AccountDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountAndBalance26";
 				definition = "Provides account and balance information.";
-				previousVersion_lazy = () -> AccountAndBalance22.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AccountAndBalance34.mmObject());
+				previousVersion_lazy = () -> AccountAndBalance22.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(Max35Text safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public PartyIdentification36Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SafekeepingPlaceFormat2Choice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormat2Choice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public CorporateActionBalanceDetails22 getBalance() {
+		return balance;
+	}
+
+	public void setBalance(com.tools20022.repository.msg.CorporateActionBalanceDetails22 balance) {
+		this.balance = balance;
 	}
 }

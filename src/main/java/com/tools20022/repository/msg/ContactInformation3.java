@@ -37,11 +37,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContactInformation3#ContactPerson
- * ContactInformation3.ContactPerson}</li>
+ * {@linkplain com.tools20022.repository.msg.ContactInformation3#mmContactPerson
+ * ContactInformation3.mmContactPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContactInformation3#EmployingParty
- * ContactInformation3.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.ContactInformation3#mmEmployingParty
+ * ContactInformation3.mmEmployingParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +67,7 @@ import java.util.function.Supplier;
 public class ContactInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContactIdentification1 contactPerson;
 	/**
 	 * Identifies a contact person by a name, a given name and an address.
 	 * <p>
@@ -98,21 +99,22 @@ public class ContactInformation3 {
 	 * "Identifies a contact person by a name, a given name and an address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ContactInformation3.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> ContactInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "CtctPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Identifies a contact person by a name, a given name and an address.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContactIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
 		}
 	};
+	protected PartyIdentificationSD3 employingParty;
 	/**
 	 * Identifies the organisation which is represented by a person or for which
 	 * a person works.
@@ -125,8 +127,8 @@ public class ContactInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#EmployingParty
-	 * Person.EmployingParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmEmployingParty
+	 * Person.mmEmployingParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,28 +149,28 @@ public class ContactInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EmployingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmEmployingParty;
 			componentContext_lazy = () -> ContactInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.EmployingParty;
 			isDerived = false;
 			xmlTag = "EmplngPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployingParty";
 			definition = "Identifies the organisation which is represented by a person or for which a person works.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationSD3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactInformation3.ContactPerson, com.tools20022.repository.msg.ContactInformation3.EmployingParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactInformation3.mmContactPerson, com.tools20022.repository.msg.ContactInformation3.mmEmployingParty);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -182,5 +184,21 @@ public class ContactInformation3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContactIdentification1 getContactPerson() {
+		return contactPerson;
+	}
+
+	public void setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
+		this.contactPerson = contactPerson;
+	}
+
+	public PartyIdentificationSD3 getEmployingParty() {
+		return employingParty;
+	}
+
+	public void setEmployingParty(com.tools20022.repository.msg.PartyIdentificationSD3 employingParty) {
+		this.employingParty = employingParty;
 	}
 }

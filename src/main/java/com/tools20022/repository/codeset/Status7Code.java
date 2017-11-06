@@ -33,29 +33,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status7Code#CancelledBySubcustodian
- * Status7Code.CancelledBySubcustodian}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#Accepted
- * Status7Code.Accepted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#Cancelled
- * Status7Code.Cancelled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#Completed
- * Status7Code.Completed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#NotReceived
- * Status7Code.NotReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status7Code#mmCancelledBySubcustodian
+ * Status7Code.mmCancelledBySubcustodian}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#mmAccepted
+ * Status7Code.mmAccepted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#mmCancelled
+ * Status7Code.mmCancelled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#mmCompleted
+ * Status7Code.mmCompleted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#mmNotReceived
+ * Status7Code.mmNotReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status7Code#ReceivedByIssuerOrRegistrar
- * Status7Code.ReceivedByIssuerOrRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status7Code#mmReceivedByIssuerOrRegistrar
+ * Status7Code.mmReceivedByIssuerOrRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status7Code#StandingInstruction
- * Status7Code.StandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status7Code#mmStandingInstruction
+ * Status7Code.mmStandingInstruction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +84,7 @@ public class Status7Code extends StatusCode {
 	 * name} = "CancelledBySubcustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledBySubcustodian = new MMCode() {
+	public static final MMCode mmCancelledBySubcustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySubcustodian";
@@ -106,7 +106,7 @@ public class Status7Code extends StatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -128,7 +128,7 @@ public class Status7Code extends StatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -150,7 +150,7 @@ public class Status7Code extends StatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Completed = new MMCode() {
+	public static final MMCode mmCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
@@ -172,7 +172,7 @@ public class Status7Code extends StatusCode {
 	 * name} = "NotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotReceived = new MMCode() {
+	public static final MMCode mmNotReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReceived";
@@ -194,7 +194,7 @@ public class Status7Code extends StatusCode {
 	 * name} = "ReceivedByIssuerOrRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivedByIssuerOrRegistrar = new MMCode() {
+	public static final MMCode mmReceivedByIssuerOrRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedByIssuerOrRegistrar";
@@ -216,7 +216,7 @@ public class Status7Code extends StatusCode {
 	 * name} = "StandingInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode StandingInstruction = new MMCode() {
+	public static final MMCode mmStandingInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
@@ -227,13 +227,13 @@ public class Status7Code extends StatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Status7Code";
 				definition = "Specifies the status of an instruction/vote.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status7Code.CancelledBySubcustodian, com.tools20022.repository.codeset.Status7Code.Accepted, com.tools20022.repository.codeset.Status7Code.Cancelled,
-						com.tools20022.repository.codeset.Status7Code.Completed, com.tools20022.repository.codeset.Status7Code.NotReceived, com.tools20022.repository.codeset.Status7Code.ReceivedByIssuerOrRegistrar,
-						com.tools20022.repository.codeset.Status7Code.StandingInstruction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status7Code.mmCancelledBySubcustodian, com.tools20022.repository.codeset.Status7Code.mmAccepted, com.tools20022.repository.codeset.Status7Code.mmCancelled,
+						com.tools20022.repository.codeset.Status7Code.mmCompleted, com.tools20022.repository.codeset.Status7Code.mmNotReceived, com.tools20022.repository.codeset.Status7Code.mmReceivedByIssuerOrRegistrar,
+						com.tools20022.repository.codeset.Status7Code.mmStandingInstruction);
 				trace_lazy = () -> StatusCode.mmObject();
 			}
 		});

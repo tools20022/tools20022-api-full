@@ -38,11 +38,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure3#Code
- * BankTransactionCodeStructure3.Code}</li>
+ * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure3#mmCode
+ * BankTransactionCodeStructure3.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure3#SubFamilyCode
- * BankTransactionCodeStructure3.SubFamilyCode}</li>
+ * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure3#mmSubFamilyCode
+ * BankTransactionCodeStructure3.mmSubFamilyCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +67,7 @@ import java.util.function.Supplier;
 public class BankTransactionCodeStructure3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalBankTransactionFamilyCode code;
 	/**
 	 * Specifies the family within a domain.
 	 * <p>
@@ -80,8 +81,8 @@ public class BankTransactionCodeStructure3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BankTransaction#Family
-	 * BankTransaction.Family}</li>
+	 * {@linkplain com.tools20022.repository.entity.BankTransaction#mmFamily
+	 * BankTransaction.mmFamily}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class BankTransactionCodeStructure3 {
 	 * definition} = "Specifies the family within a domain."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmFamily;
 			componentContext_lazy = () -> BankTransactionCodeStructure3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.Family;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the family within a domain.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalBankTransactionFamilyCode.mmObject();
 		}
 	};
+	protected ExternalBankTransactionSubFamilyCode subFamilyCode;
 	/**
 	 * Specifies the sub-product family within a specific family.
 	 * <p>
@@ -127,8 +129,8 @@ public class BankTransactionCodeStructure3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BankTransaction#SubFamily
-	 * BankTransaction.SubFamily}</li>
+	 * {@linkplain com.tools20022.repository.entity.BankTransaction#mmSubFamily
+	 * BankTransaction.mmSubFamily}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class BankTransactionCodeStructure3 {
 	 * "Specifies the sub-product family within a specific family."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubFamilyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubFamilyCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmSubFamily;
 			componentContext_lazy = () -> BankTransactionCodeStructure3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.SubFamily;
 			isDerived = false;
 			xmlTag = "SubFmlyCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubFamilyCode";
 			definition = "Specifies the sub-product family within a specific family.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalBankTransactionSubFamilyCode.mmObject();
 		}
 	};
@@ -166,9 +168,9 @@ public class BankTransactionCodeStructure3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure3.Code, com.tools20022.repository.msg.BankTransactionCodeStructure3.SubFamilyCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure3.mmCode, com.tools20022.repository.msg.BankTransactionCodeStructure3.mmSubFamilyCode);
 				trace_lazy = () -> BankTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -182,5 +184,21 @@ public class BankTransactionCodeStructure3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalBankTransactionFamilyCode getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalBankTransactionFamilyCode code) {
+		this.code = code;
+	}
+
+	public ExternalBankTransactionSubFamilyCode getSubFamilyCode() {
+		return subFamilyCode;
+	}
+
+	public void setSubFamilyCode(ExternalBankTransactionSubFamilyCode subFamilyCode) {
+		this.subFamilyCode = subFamilyCode;
 	}
 }

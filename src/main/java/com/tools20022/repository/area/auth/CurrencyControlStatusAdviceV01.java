@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The CurrencyControlStatusAdvice message is sent by either the reporting party
@@ -63,24 +64,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#GroupHeader
- * CurrencyControlStatusAdviceV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#mmGroupHeader
+ * CurrencyControlStatusAdviceV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#GroupStatus
- * CurrencyControlStatusAdviceV01.GroupStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#mmGroupStatus
+ * CurrencyControlStatusAdviceV01.mmGroupStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#PackageStatus
- * CurrencyControlStatusAdviceV01.PackageStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#mmPackageStatus
+ * CurrencyControlStatusAdviceV01.mmPackageStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#SupplementaryData
- * CurrencyControlStatusAdviceV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#mmSupplementaryData
+ * CurrencyControlStatusAdviceV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#identifier
- * CurrencyControlStatusAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.027.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyControlStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyControlHeader2 groupHeader;
 	/**
 	 * Characteristics shared by all individual items included in the message.
 	 * <p>
@@ -121,17 +121,18 @@ public class CurrencyControlStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Characteristics shared by all individual items included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CurrencyControlHeader2.mmObject();
 		}
 	};
+	protected List<CurrencyControlGroupStatus1> groupStatus;
 	/**
 	 * Provides the group status for the global message.
 	 * <p>
@@ -155,7 +156,7 @@ public class CurrencyControlStatusAdviceV01 {
 	 * definition} = "Provides the group status for the global message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,6 +166,7 @@ public class CurrencyControlStatusAdviceV01 {
 			complexType_lazy = () -> CurrencyControlGroupStatus1.mmObject();
 		}
 	};
+	protected List<CurrencyControlPackageStatus1> packageStatus;
 	/**
 	 * Provides the status of the package in the message, which may contain the
 	 * individual records.
@@ -191,7 +193,7 @@ public class CurrencyControlStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PackageStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPackageStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PackgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,6 +203,7 @@ public class CurrencyControlStatusAdviceV01 {
 			complexType_lazy = () -> CurrencyControlPackageStatus1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -227,7 +230,7 @@ public class CurrencyControlStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,33 +238,6 @@ public class CurrencyControlStatusAdviceV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "027"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "027";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -275,11 +251,50 @@ public class CurrencyControlStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "CcyCtrlStsAdvc";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.GroupHeader, com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.GroupStatus,
-						com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.PackageStatus, com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.mmGroupHeader, com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.mmGroupStatus,
+						com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.mmPackageStatus, com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "027";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyControlHeader2 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(CurrencyControlHeader2 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<CurrencyControlGroupStatus1> getGroupStatus() {
+		return groupStatus;
+	}
+
+	public void setGroupStatus(List<CurrencyControlGroupStatus1> groupStatus) {
+		this.groupStatus = groupStatus;
+	}
+
+	public List<CurrencyControlPackageStatus1> getPackageStatus() {
+		return packageStatus;
+	}
+
+	public void setPackageStatus(List<CurrencyControlPackageStatus1> packageStatus) {
+		this.packageStatus = packageStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

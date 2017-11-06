@@ -34,134 +34,135 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#AccountServicerDeadlineMissed
- * UnmatchedReason1Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmAccountServicerDeadlineMissed
+ * UnmatchedReason1Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#RepurchaseCallDelay
- * UnmatchedReason1Code.RepurchaseCallDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmRepurchaseCallDelay
+ * UnmatchedReason1Code.mmRepurchaseCallDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#CounterpartyTooLateForMatching
- * UnmatchedReason1Code.CounterpartyTooLateForMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmCounterpartyTooLateForMatching
+ * UnmatchedReason1Code.mmCounterpartyTooLateForMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#NoMatch
- * UnmatchedReason1Code.NoMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmNoMatch
+ * UnmatchedReason1Code.mmNoMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#CounterpartyCancelled
- * UnmatchedReason1Code.CounterpartyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmCounterpartyCancelled
+ * UnmatchedReason1Code.mmCounterpartyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#SettlementDate
- * UnmatchedReason1Code.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmSettlementDate
+ * UnmatchedReason1Code.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#DealPrice
- * UnmatchedReason1Code.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmDealPrice
+ * UnmatchedReason1Code.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#TransactionDirection
- * UnmatchedReason1Code.TransactionDirection}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmTransactionDirection
+ * UnmatchedReason1Code.mmTransactionDirection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#ReceivingDeliveringDepository
- * UnmatchedReason1Code.ReceivingDeliveringDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmReceivingDeliveringDepository
+ * UnmatchedReason1Code.mmReceivingDeliveringDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#SettlementAmount
- * UnmatchedReason1Code.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmSettlementAmount
+ * UnmatchedReason1Code.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#FinancialInstrumentQuantity
- * UnmatchedReason1Code.FinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmFinancialInstrumentQuantity
+ * UnmatchedReason1Code.mmFinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#FinancialInstrument
- * UnmatchedReason1Code.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmFinancialInstrument
+ * UnmatchedReason1Code.mmFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#NotRecognised
- * UnmatchedReason1Code.NotRecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmNotRecognised
+ * UnmatchedReason1Code.mmNotRecognised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#TradeDate
- * UnmatchedReason1Code.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmTradeDate
+ * UnmatchedReason1Code.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#ForfeitRepurchaseAmount
- * UnmatchedReason1Code.ForfeitRepurchaseAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmForfeitRepurchaseAmount
+ * UnmatchedReason1Code.mmForfeitRepurchaseAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#PaymentCode
- * UnmatchedReason1Code.PaymentCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmPaymentCode
+ * UnmatchedReason1Code.mmPaymentCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#ReceivingDeliveringParty1
- * UnmatchedReason1Code.ReceivingDeliveringParty1}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmReceivingDeliveringParty1
+ * UnmatchedReason1Code.mmReceivingDeliveringParty1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#ReceivingDeliveringParty2
- * UnmatchedReason1Code.ReceivingDeliveringParty2}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmReceivingDeliveringParty2
+ * UnmatchedReason1Code.mmReceivingDeliveringParty2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#ReceivingDeliveringParty3
- * UnmatchedReason1Code.ReceivingDeliveringParty3}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmReceivingDeliveringParty3
+ * UnmatchedReason1Code.mmReceivingDeliveringParty3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#CommonReference
- * UnmatchedReason1Code.CommonReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmCommonReference
+ * UnmatchedReason1Code.mmCommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#MarketDeadlineMissed
- * UnmatchedReason1Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmMarketDeadlineMissed
+ * UnmatchedReason1Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#LetterOfGuarantee
- * UnmatchedReason1Code.LetterOfGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmLetterOfGuarantee
+ * UnmatchedReason1Code.mmLetterOfGuarantee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#CurrencySettlementAmount
- * UnmatchedReason1Code.CurrencySettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmCurrencySettlementAmount
+ * UnmatchedReason1Code.mmCurrencySettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#NoMatchingStarted
- * UnmatchedReason1Code.NoMatchingStarted}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmNoMatchingStarted
+ * UnmatchedReason1Code.mmNoMatchingStarted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#PhysicalSettlement
- * UnmatchedReason1Code.PhysicalSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmPhysicalSettlement
+ * UnmatchedReason1Code.mmPhysicalSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#PlaceOfTrade
- * UnmatchedReason1Code.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmPlaceOfTrade
+ * UnmatchedReason1Code.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#PossibleDuplicate
- * UnmatchedReason1Code.PossibleDuplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmPossibleDuplicate
+ * UnmatchedReason1Code.mmPossibleDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#RegistrationDetails
- * UnmatchedReason1Code.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmRegistrationDetails
+ * UnmatchedReason1Code.mmRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#RepurchaseAmount
- * UnmatchedReason1Code.RepurchaseAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmRepurchaseAmount
+ * UnmatchedReason1Code.mmRepurchaseAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#RepurchaseRate
- * UnmatchedReason1Code.RepurchaseRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmRepurchaseRate
+ * UnmatchedReason1Code.mmRepurchaseRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#RepurchasePremiumAmount
- * UnmatchedReason1Code.RepurchasePremiumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmRepurchasePremiumAmount
+ * UnmatchedReason1Code.mmRepurchasePremiumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#RepurchaseRateType
- * UnmatchedReason1Code.RepurchaseRateType}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmRepurchaseRateType
+ * UnmatchedReason1Code.mmRepurchaseRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#RTGSSystem
- * UnmatchedReason1Code.RTGSSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmRTGSSystem
+ * UnmatchedReason1Code.mmRTGSSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#SafekeepingAccount
- * UnmatchedReason1Code.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmSafekeepingAccount
+ * UnmatchedReason1Code.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#SettlementTransaction
- * UnmatchedReason1Code.SettlementTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmSettlementTransaction
+ * UnmatchedReason1Code.mmSettlementTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#SettlementSystemMethod
- * UnmatchedReason1Code.SettlementSystemMethod}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmSettlementSystemMethod
+ * UnmatchedReason1Code.mmSettlementSystemMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#ClosingDateTime
- * UnmatchedReason1Code.ClosingDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmClosingDateTime
+ * UnmatchedReason1Code.mmClosingDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#TaxStatus
- * UnmatchedReason1Code.TaxStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmTaxStatus
+ * UnmatchedReason1Code.mmTaxStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#VariableRateSupport
- * UnmatchedReason1Code.VariableRateSupport}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmVariableRateSupport
+ * UnmatchedReason1Code.mmVariableRateSupport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#PlaceOfSafekeeping
- * UnmatchedReason1Code.PlaceOfSafekeeping}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#Other
- * UnmatchedReason1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmPlaceOfSafekeeping
+ * UnmatchedReason1Code.mmPlaceOfSafekeeping}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason1Code#mmOther
+ * UnmatchedReason1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -205,7 +206,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -228,7 +229,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "RepurchaseCallDelay"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseCallDelay = new MMCode() {
+	public static final MMCode mmRepurchaseCallDelay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCallDelay";
@@ -251,7 +252,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "CounterpartyTooLateForMatching"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyTooLateForMatching = new MMCode() {
+	public static final MMCode mmCounterpartyTooLateForMatching = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTooLateForMatching";
@@ -274,7 +275,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "NoMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatch = new MMCode() {
+	public static final MMCode mmNoMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
@@ -297,7 +298,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "CounterpartyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyCancelled = new MMCode() {
+	public static final MMCode mmCounterpartyCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancelled";
@@ -320,7 +321,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDate = new MMCode() {
+	public static final MMCode mmSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
@@ -343,7 +344,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "DealPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode DealPrice = new MMCode() {
+	public static final MMCode mmDealPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
@@ -366,7 +367,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "TransactionDirection"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionDirection = new MMCode() {
+	public static final MMCode mmTransactionDirection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDirection";
@@ -389,7 +390,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "ReceivingDeliveringDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringDepository = new MMCode() {
+	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
@@ -412,7 +413,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "SettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmount = new MMCode() {
+	public static final MMCode mmSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
@@ -435,7 +436,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "FinancialInstrumentQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentQuantity = new MMCode() {
+	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
@@ -458,7 +459,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "FinancialInstrument"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrument = new MMCode() {
+	public static final MMCode mmFinancialInstrument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
@@ -481,7 +482,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "NotRecognised"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotRecognised = new MMCode() {
+	public static final MMCode mmNotRecognised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotRecognised";
@@ -504,7 +505,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "TradeDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeDate = new MMCode() {
+	public static final MMCode mmTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
@@ -527,7 +528,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "ForfeitRepurchaseAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForfeitRepurchaseAmount = new MMCode() {
+	public static final MMCode mmForfeitRepurchaseAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForfeitRepurchaseAmount";
@@ -550,7 +551,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "PaymentCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentCode = new MMCode() {
+	public static final MMCode mmPaymentCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCode";
@@ -573,7 +574,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "ReceivingDeliveringParty1"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty1 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
@@ -596,7 +597,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "ReceivingDeliveringParty2"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty2 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
@@ -619,7 +620,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "ReceivingDeliveringParty3"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty3 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
@@ -642,7 +643,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "CommonReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommonReference = new MMCode() {
+	public static final MMCode mmCommonReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
@@ -665,7 +666,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -688,7 +689,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "LetterOfGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode LetterOfGuarantee = new MMCode() {
+	public static final MMCode mmLetterOfGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfGuarantee";
@@ -711,7 +712,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "CurrencySettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode CurrencySettlementAmount = new MMCode() {
+	public static final MMCode mmCurrencySettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencySettlementAmount";
@@ -734,7 +735,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "NoMatchingStarted"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatchingStarted = new MMCode() {
+	public static final MMCode mmNoMatchingStarted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingStarted";
@@ -757,7 +758,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "PhysicalSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSettlement = new MMCode() {
+	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
@@ -780,7 +781,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "PlaceOfTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfTrade = new MMCode() {
+	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
@@ -803,7 +804,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "PossibleDuplicate"</li>
 	 * </ul>
 	 */
-	public static final MMCode PossibleDuplicate = new MMCode() {
+	public static final MMCode mmPossibleDuplicate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
@@ -826,7 +827,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "RegistrationDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegistrationDetails = new MMCode() {
+	public static final MMCode mmRegistrationDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
@@ -849,7 +850,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "RepurchaseAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseAmount = new MMCode() {
+	public static final MMCode mmRepurchaseAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseAmount";
@@ -872,7 +873,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "RepurchaseRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseRate = new MMCode() {
+	public static final MMCode mmRepurchaseRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
@@ -895,7 +896,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "RepurchasePremiumAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchasePremiumAmount = new MMCode() {
+	public static final MMCode mmRepurchasePremiumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchasePremiumAmount";
@@ -918,7 +919,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "RepurchaseRateType"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseRateType = new MMCode() {
+	public static final MMCode mmRepurchaseRateType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRateType";
@@ -941,7 +942,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "RTGSSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode RTGSSystem = new MMCode() {
+	public static final MMCode mmRTGSSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGSSystem";
@@ -964,7 +965,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "SafekeepingAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccount = new MMCode() {
+	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
@@ -987,7 +988,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "SettlementTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementTransaction = new MMCode() {
+	public static final MMCode mmSettlementTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
@@ -1010,7 +1011,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "SettlementSystemMethod"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementSystemMethod = new MMCode() {
+	public static final MMCode mmSettlementSystemMethod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
@@ -1033,7 +1034,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "ClosingDateTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClosingDateTime = new MMCode() {
+	public static final MMCode mmClosingDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDateTime";
@@ -1056,7 +1057,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "TaxStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxStatus = new MMCode() {
+	public static final MMCode mmTaxStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatus";
@@ -1079,7 +1080,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "VariableRateSupport"</li>
 	 * </ul>
 	 */
-	public static final MMCode VariableRateSupport = new MMCode() {
+	public static final MMCode mmVariableRateSupport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
@@ -1102,7 +1103,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "PlaceOfSafekeeping"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfSafekeeping = new MMCode() {
+	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
@@ -1125,7 +1126,7 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -1136,31 +1137,33 @@ public class UnmatchedReason1Code extends UnmatchedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason1Code";
 				definition = "Specifies the reason the transaction/instruction is unmatched.";
 				nextVersions_lazy = () -> Arrays.asList(UnmatchedReason7Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason1Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason1Code.RepurchaseCallDelay,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.CounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedReason1Code.NoMatch,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.CounterpartyCancelled, com.tools20022.repository.codeset.UnmatchedReason1Code.SettlementDate, com.tools20022.repository.codeset.UnmatchedReason1Code.DealPrice,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.TransactionDirection, com.tools20022.repository.codeset.UnmatchedReason1Code.ReceivingDeliveringDepository,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.SettlementAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.FinancialInstrumentQuantity,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.FinancialInstrument, com.tools20022.repository.codeset.UnmatchedReason1Code.NotRecognised, com.tools20022.repository.codeset.UnmatchedReason1Code.TradeDate,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.ForfeitRepurchaseAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.PaymentCode,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.ReceivingDeliveringParty1, com.tools20022.repository.codeset.UnmatchedReason1Code.ReceivingDeliveringParty2,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.ReceivingDeliveringParty3, com.tools20022.repository.codeset.UnmatchedReason1Code.CommonReference,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.MarketDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason1Code.LetterOfGuarantee,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.CurrencySettlementAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.NoMatchingStarted,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.PhysicalSettlement, com.tools20022.repository.codeset.UnmatchedReason1Code.PlaceOfTrade,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.PossibleDuplicate, com.tools20022.repository.codeset.UnmatchedReason1Code.RegistrationDetails,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.RepurchaseAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.RepurchaseRate,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.RepurchasePremiumAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.RepurchaseRateType,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.RTGSSystem, com.tools20022.repository.codeset.UnmatchedReason1Code.SafekeepingAccount,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.SettlementTransaction, com.tools20022.repository.codeset.UnmatchedReason1Code.SettlementSystemMethod,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.ClosingDateTime, com.tools20022.repository.codeset.UnmatchedReason1Code.TaxStatus, com.tools20022.repository.codeset.UnmatchedReason1Code.VariableRateSupport,
-						com.tools20022.repository.codeset.UnmatchedReason1Code.PlaceOfSafekeeping, com.tools20022.repository.codeset.UnmatchedReason1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason1Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason1Code.mmRepurchaseCallDelay,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmCounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedReason1Code.mmNoMatch,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmCounterpartyCancelled, com.tools20022.repository.codeset.UnmatchedReason1Code.mmSettlementDate,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmDealPrice, com.tools20022.repository.codeset.UnmatchedReason1Code.mmTransactionDirection,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmReceivingDeliveringDepository, com.tools20022.repository.codeset.UnmatchedReason1Code.mmSettlementAmount,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmFinancialInstrumentQuantity, com.tools20022.repository.codeset.UnmatchedReason1Code.mmFinancialInstrument,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmNotRecognised, com.tools20022.repository.codeset.UnmatchedReason1Code.mmTradeDate,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmForfeitRepurchaseAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.mmPaymentCode,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmReceivingDeliveringParty1, com.tools20022.repository.codeset.UnmatchedReason1Code.mmReceivingDeliveringParty2,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmReceivingDeliveringParty3, com.tools20022.repository.codeset.UnmatchedReason1Code.mmCommonReference,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason1Code.mmLetterOfGuarantee,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmCurrencySettlementAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.mmNoMatchingStarted,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmPhysicalSettlement, com.tools20022.repository.codeset.UnmatchedReason1Code.mmPlaceOfTrade,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmPossibleDuplicate, com.tools20022.repository.codeset.UnmatchedReason1Code.mmRegistrationDetails,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmRepurchaseAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.mmRepurchaseRate,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmRepurchasePremiumAmount, com.tools20022.repository.codeset.UnmatchedReason1Code.mmRepurchaseRateType,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmRTGSSystem, com.tools20022.repository.codeset.UnmatchedReason1Code.mmSafekeepingAccount,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmSettlementTransaction, com.tools20022.repository.codeset.UnmatchedReason1Code.mmSettlementSystemMethod,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmClosingDateTime, com.tools20022.repository.codeset.UnmatchedReason1Code.mmTaxStatus,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmVariableRateSupport, com.tools20022.repository.codeset.UnmatchedReason1Code.mmPlaceOfSafekeeping,
+						com.tools20022.repository.codeset.UnmatchedReason1Code.mmOther);
 				trace_lazy = () -> UnmatchedReasonCode.mmObject();
 			}
 		});

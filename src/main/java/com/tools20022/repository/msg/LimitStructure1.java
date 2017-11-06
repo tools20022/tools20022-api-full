@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitStructure1#LimitIdentification
- * LimitStructure1.LimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitStructure1#mmLimitIdentification
+ * LimitStructure1.mmLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitStructure1#NewLimitValueSet
- * LimitStructure1.NewLimitValueSet}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitStructure1#mmNewLimitValueSet
+ * LimitStructure1.mmNewLimitValueSet}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitStructure1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LimitIdentification1Choice limitIdentification;
 	/**
 	 * Identification of the default limit.
 	 * <p>
@@ -97,21 +98,22 @@ public class LimitStructure1 {
 	 * definition} = "Identification of the default limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitStructure1.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the default limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LimitIdentification1Choice.mmObject();
 		}
 	};
+	protected Limit6 newLimitValueSet;
 	/**
 	 * New limit values.
 	 * <p>
@@ -142,33 +144,49 @@ public class LimitStructure1 {
 	 * definition} = "New limit values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewLimitValueSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewLimitValueSet = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitStructure1.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "NewLmtValSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewLimitValueSet";
 			definition = "New limit values.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Limit6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Limit6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitStructure1.LimitIdentification, com.tools20022.repository.msg.LimitStructure1.NewLimitValueSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitStructure1.mmLimitIdentification, com.tools20022.repository.msg.LimitStructure1.mmNewLimitValueSet);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitStructure1";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LimitIdentification1Choice getLimitIdentification() {
+		return limitIdentification;
+	}
+
+	public void setLimitIdentification(LimitIdentification1Choice limitIdentification) {
+		this.limitIdentification = limitIdentification;
+	}
+
+	public Limit6 getNewLimitValueSet() {
+		return newLimitValueSet;
+	}
+
+	public void setNewLimitValueSet(com.tools20022.repository.msg.Limit6 newLimitValueSet) {
+		this.newLimitValueSet = newLimitValueSet;
 	}
 }

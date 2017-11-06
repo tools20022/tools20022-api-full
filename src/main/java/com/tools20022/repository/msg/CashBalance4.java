@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.BalanceCounterparty1Code;
 import com.tools20022.repository.entity.CashBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Balance details for a cash account.
@@ -36,15 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalance4#Type
- * CashBalance4.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalance4#CounterpartyType
- * CashBalance4.CounterpartyType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance4#mmType
+ * CashBalance4.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalance4#CounterpartyIdentification
- * CashBalance4.CounterpartyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalance4#ValueDate
- * CashBalance4.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalance4#mmCounterpartyType
+ * CashBalance4.mmCounterpartyType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashBalance4#mmCounterpartyIdentification
+ * CashBalance4.mmCounterpartyIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance4#mmValueDate
+ * CashBalance4.mmValueDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashBalance4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<BalanceType8Choice> type;
 	/**
 	 * Specifies the nature of a balance.
 	 * <p>
@@ -79,7 +82,8 @@ public class CashBalance4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +101,21 @@ public class CashBalance4 {
 	 * definition} = "Specifies the nature of a balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> CashBalance4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of a balance.";
 			minOccurs = 0;
-			type_lazy = () -> BalanceType8Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> BalanceType8Choice.mmObject();
 		}
 	};
+	protected BalanceCounterparty1Code counterpartyType;
 	/**
 	 * Specifies the type of counterparty for which the balance is calculated.
 	 * <p>
@@ -124,8 +129,8 @@ public class CashBalance4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CalculationType
-	 * CashBalance.CalculationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCalculationType
+	 * CashBalance.mmCalculationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +150,21 @@ public class CashBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCalculationType;
 			componentContext_lazy = () -> CashBalance4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CalculationType;
 			isDerived = false;
 			xmlTag = "CtrPtyTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyType";
 			definition = "Specifies the type of counterparty for which the balance is calculated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BalanceCounterparty1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> counterpartyIdentification;
 	/**
 	 * Specifies the counterparty for which the balance is calculated.
 	 * <p>
@@ -171,8 +177,8 @@ public class CashBalance4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#Counterparty
-	 * CashBalance.Counterparty}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCounterparty
+	 * CashBalance.mmCounterparty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,20 +197,21 @@ public class CashBalance4 {
 	 * "Specifies the counterparty for which the balance is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCounterparty;
 			componentContext_lazy = () -> CashBalance4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.Counterparty;
 			isDerived = false;
 			xmlTag = "CtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
 			definition = "Specifies the counterparty for which the balance is calculated.";
 			minOccurs = 0;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected List<DateAndDateTimeSearchChoice> valueDate;
 	/**
 	 * Date and time at which the balance is or will be available.
 	 * <p>
@@ -218,8 +225,8 @@ public class CashBalance4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#ValueDate
-	 * Balance.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmValueDate
+	 * Balance.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -238,10 +245,10 @@ public class CashBalance4 {
 	 * "Date and time at which the balance is or will be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
 			componentContext_lazy = () -> CashBalance4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,15 +262,47 @@ public class CashBalance4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance4.Type, com.tools20022.repository.msg.CashBalance4.CounterpartyType, com.tools20022.repository.msg.CashBalance4.CounterpartyIdentification,
-						com.tools20022.repository.msg.CashBalance4.ValueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance4.mmType, com.tools20022.repository.msg.CashBalance4.mmCounterpartyType,
+						com.tools20022.repository.msg.CashBalance4.mmCounterpartyIdentification, com.tools20022.repository.msg.CashBalance4.mmValueDate);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashBalance4";
 				definition = "Balance details for a cash account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BalanceType8Choice> getType() {
+		return type;
+	}
+
+	public void setType(List<BalanceType8Choice> type) {
+		this.type = type;
+	}
+
+	public BalanceCounterparty1Code getCounterpartyType() {
+		return counterpartyType;
+	}
+
+	public void setCounterpartyType(BalanceCounterparty1Code counterpartyType) {
+		this.counterpartyType = counterpartyType;
+	}
+
+	public List<BranchAndFinancialInstitutionIdentification5> getCounterpartyIdentification() {
+		return counterpartyIdentification;
+	}
+
+	public void setCounterpartyIdentification(List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> counterpartyIdentification) {
+		this.counterpartyIdentification = counterpartyIdentification;
+	}
+
+	public List<DateAndDateTimeSearchChoice> getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(List<DateAndDateTimeSearchChoice> valueDate) {
+		this.valueDate = valueDate;
 	}
 }

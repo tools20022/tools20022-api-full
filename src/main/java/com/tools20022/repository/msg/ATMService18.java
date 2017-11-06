@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService18#Identification
- * ATMService18.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService18#Label
- * ATMService18.Label}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService18#mmIdentification
+ * ATMService18.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService18#mmLabel
+ * ATMService18.mmLabel}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMService18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the service variant.
 	 * <p>
@@ -86,11 +87,11 @@ public class ATMService18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService16#ServiceReference
-	 * ATMService16.ServiceReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService16#mmServiceReference
+	 * ATMService16.mmServiceReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService18.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class ATMService18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the service variant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService16.ServiceReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService16.mmServiceReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text label;
 	/**
 	 * Label of the service variant.
 	 * <p>
@@ -131,11 +133,11 @@ public class ATMService18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService16#ATMServiceCode
-	 * ATMService16.ATMServiceCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService16#mmATMServiceCode
+	 * ATMService16.mmATMServiceCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Label = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService18.mmObject();
 			isDerived = false;
@@ -143,9 +145,9 @@ public class ATMService18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Label";
 			definition = "Label of the service variant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService16.ATMServiceCode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService16.mmATMServiceCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -153,8 +155,8 @@ public class ATMService18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService18.Identification, com.tools20022.repository.msg.ATMService18.Label);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService18.mmIdentification, com.tools20022.repository.msg.ATMService18.mmLabel);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMService18";
 				definition = "Service provided by the ATM inside the session.";
@@ -162,5 +164,21 @@ public class ATMService18 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getLabel() {
+		return label;
+	}
+
+	public void setLabel(Max35Text label) {
+		this.label = label;
 	}
 }

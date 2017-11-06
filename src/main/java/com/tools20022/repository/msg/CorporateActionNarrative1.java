@@ -36,26 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#InformationConditions
- * CorporateActionNarrative1.InformationConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#mmInformationConditions
+ * CorporateActionNarrative1.mmInformationConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#InformationToComplyWith
- * CorporateActionNarrative1.InformationToComplyWith}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#mmInformationToComplyWith
+ * CorporateActionNarrative1.mmInformationToComplyWith}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#TaxationConditions
- * CorporateActionNarrative1.TaxationConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#mmTaxationConditions
+ * CorporateActionNarrative1.mmTaxationConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#NewCompanyName
- * CorporateActionNarrative1.NewCompanyName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#mmNewCompanyName
+ * CorporateActionNarrative1.mmNewCompanyName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#Offeror
- * CorporateActionNarrative1.Offeror}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#mmOfferor
+ * CorporateActionNarrative1.mmOfferor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#URLAddress
- * CorporateActionNarrative1.URLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#mmURLAddress
+ * CorporateActionNarrative1.mmURLAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#AdditionalText
- * CorporateActionNarrative1.AdditionalText}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#mmAdditionalText
+ * CorporateActionNarrative1.mmAdditionalText}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text informationConditions;
 	/**
 	 * Provides conditional information related to the event, eg, an offer is
 	 * subject to 50% acceptance, the offeror allows the securities holder to
@@ -94,8 +95,8 @@ public class CorporateActionNarrative1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#InformationConditions
-	 * CorporateActionEvent.InformationConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmInformationConditions
+	 * CorporateActionEvent.mmInformationConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,20 +117,21 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InformationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformationConditions = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> CorporateActionNarrative1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.InformationConditions;
 			isDerived = false;
 			xmlTag = "InfConds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationConditions";
 			definition = "Provides conditional information related to the event, eg, an offer is subject to 50% acceptance, the offeror allows the securities holder to set some conditions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text informationToComplyWith;
 	/**
 	 * Provides information conditions to the account owner that are to be
 	 * complied with, eg, not open to US/Canadian residents, QIB or SIL to be
@@ -144,8 +146,8 @@ public class CorporateActionNarrative1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#InformationToComplyWith
-	 * BiddingConditions.InformationToComplyWith}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmInformationToComplyWith
+	 * BiddingConditions.mmInformationToComplyWith}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,20 +168,21 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> CorporateActionNarrative1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.InformationToComplyWith;
 			isDerived = false;
 			xmlTag = "InfToCmplyWth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationToComplyWith";
 			definition = "Provides information conditions to the account owner that are to be complied with, eg, not open to US/Canadian residents, QIB or SIL to be provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text taxationConditions;
 	/**
 	 * Provides taxation conditions that cannot be included within the
 	 * structured fields of this message.
@@ -193,8 +196,8 @@ public class CorporateActionNarrative1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxationConditions
-	 * Tax.TaxationConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxationConditions
+	 * Tax.mmTaxationConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,20 +218,21 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxationConditions = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxationConditions;
 			componentContext_lazy = () -> CorporateActionNarrative1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxationConditions;
 			isDerived = false;
 			xmlTag = "TaxtnConds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxationConditions";
 			definition = "Provides taxation conditions that cannot be included within the structured fields of this message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text newCompanyName;
 	/**
 	 * Provide the new name of a company following a name change
 	 * <p>
@@ -257,7 +261,7 @@ public class CorporateActionNarrative1 {
 	 * "Provide  the new name of a company following a name change"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewCompanyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewCompanyName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative1.mmObject();
 			isDerived = false;
@@ -265,11 +269,12 @@ public class CorporateActionNarrative1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCompanyName";
 			definition = "Provide  the new name of a company following a name change";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice offeror;
 	/**
 	 * Provides the entity making the offer and is different from the issuing
 	 * company.
@@ -284,8 +289,8 @@ public class CorporateActionNarrative1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -306,20 +311,21 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Offeror = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOfferor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionNarrative1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Offerr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offeror";
 			definition = "Provides the entity making the offer and is different from the issuing company.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Max256Text uRLAddress;
 	/**
 	 * Provides the web address published for the event, ie the address for the
 	 * Universal Resource Locator (URL), eg, used over the www (HTTP) service.
@@ -333,8 +339,8 @@ public class CorporateActionNarrative1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#URLAddress
-	 * ElectronicAddress.URLAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
+	 * ElectronicAddress.mmURLAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -355,20 +361,21 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute URLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> CorporateActionNarrative1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.URLAddress;
 			isDerived = false;
 			xmlTag = "URLAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Provides the web address published for the event, ie the address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected Max350Text additionalText;
 	/**
 	 * Provides additional information or specifies in more detail the content
 	 * of a message.
@@ -399,7 +406,7 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative1.mmObject();
 			isDerived = false;
@@ -407,8 +414,8 @@ public class CorporateActionNarrative1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalText";
 			definition = "Provides additional information or specifies in more detail the content of a\nmessage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -416,16 +423,72 @@ public class CorporateActionNarrative1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative1.InformationConditions, com.tools20022.repository.msg.CorporateActionNarrative1.InformationToComplyWith,
-						com.tools20022.repository.msg.CorporateActionNarrative1.TaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative1.NewCompanyName, com.tools20022.repository.msg.CorporateActionNarrative1.Offeror,
-						com.tools20022.repository.msg.CorporateActionNarrative1.URLAddress, com.tools20022.repository.msg.CorporateActionNarrative1.AdditionalText);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative1.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative1.mmInformationToComplyWith,
+						com.tools20022.repository.msg.CorporateActionNarrative1.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative1.mmNewCompanyName,
+						com.tools20022.repository.msg.CorporateActionNarrative1.mmOfferor, com.tools20022.repository.msg.CorporateActionNarrative1.mmURLAddress, com.tools20022.repository.msg.CorporateActionNarrative1.mmAdditionalText);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative1";
 				definition = "Provides addtional information such as the taxation conditions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getInformationConditions() {
+		return informationConditions;
+	}
+
+	public void setInformationConditions(Max350Text informationConditions) {
+		this.informationConditions = informationConditions;
+	}
+
+	public Max350Text getInformationToComplyWith() {
+		return informationToComplyWith;
+	}
+
+	public void setInformationToComplyWith(Max350Text informationToComplyWith) {
+		this.informationToComplyWith = informationToComplyWith;
+	}
+
+	public Max350Text getTaxationConditions() {
+		return taxationConditions;
+	}
+
+	public void setTaxationConditions(Max350Text taxationConditions) {
+		this.taxationConditions = taxationConditions;
+	}
+
+	public Max350Text getNewCompanyName() {
+		return newCompanyName;
+	}
+
+	public void setNewCompanyName(Max350Text newCompanyName) {
+		this.newCompanyName = newCompanyName;
+	}
+
+	public PartyIdentification2Choice getOfferor() {
+		return offeror;
+	}
+
+	public void setOfferor(PartyIdentification2Choice offeror) {
+		this.offeror = offeror;
+	}
+
+	public Max256Text getURLAddress() {
+		return uRLAddress;
+	}
+
+	public void setURLAddress(Max256Text uRLAddress) {
+		this.uRLAddress = uRLAddress;
+	}
+
+	public Max350Text getAdditionalText() {
+		return additionalText;
+	}
+
+	public void setAdditionalText(Max350Text additionalText) {
+		this.additionalText = additionalText;
 	}
 }

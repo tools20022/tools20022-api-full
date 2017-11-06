@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAutoOfferProgramCode#Offine
- * DTCAutoOfferProgramCode.Offine}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAutoOfferProgramCode#mmOffine
+ * DTCAutoOfferProgramCode.mmOffine}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAutoOfferProgramCode#Online
- * DTCAutoOfferProgramCode.Online}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAutoOfferProgramCode#mmOnline
+ * DTCAutoOfferProgramCode.mmOnline}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class DTCAutoOfferProgramCode {
 	 * definition} = "No automated interface. Hardcopy reporting required."</li>
 	 * </ul>
 	 */
-	public static final MMCode Offine = new MMCode() {
+	public static final MMCode mmOffine = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offine";
@@ -123,7 +123,7 @@ public class DTCAutoOfferProgramCode {
 	 * "Automated interface for instruction processing is present."</li>
 	 * </ul>
 	 */
-	public static final MMCode Online = new MMCode() {
+	public static final MMCode mmOnline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Online";
@@ -136,12 +136,12 @@ public class DTCAutoOfferProgramCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCAutoOfferProgramCode";
 				definition = "Indicates what type of interface an agent has with DTC (The Depository Trust Corporation).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAutoOfferProgramCode.Offine, com.tools20022.repository.codeset.DTCAutoOfferProgramCode.Online);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAutoOfferProgramCode.mmOffine, com.tools20022.repository.codeset.DTCAutoOfferProgramCode.mmOnline);
 				derivation_lazy = () -> Arrays.asList(DTCAutoOfferProgram1Code.mmObject());
 			}
 		});

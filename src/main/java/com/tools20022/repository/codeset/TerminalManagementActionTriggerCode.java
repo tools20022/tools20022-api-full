@@ -31,17 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#DateTime
- * TerminalManagementActionTriggerCode.DateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmDateTime
+ * TerminalManagementActionTriggerCode.mmDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#HostEvent
- * TerminalManagementActionTriggerCode.HostEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmHostEvent
+ * TerminalManagementActionTriggerCode.mmHostEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#Manual
- * TerminalManagementActionTriggerCode.Manual}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmManual
+ * TerminalManagementActionTriggerCode.mmManual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#SaleEvent
- * TerminalManagementActionTriggerCode.SaleEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmSaleEvent
+ * TerminalManagementActionTriggerCode.mmSaleEvent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +99,7 @@ public class TerminalManagementActionTriggerCode {
 	 * definition} = "Date and time trigger the terminal management action."</li>
 	 * </ul>
 	 */
-	public static final MMCode DateTime = new MMCode() {
+	public static final MMCode mmDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DateTime";
@@ -129,7 +129,7 @@ public class TerminalManagementActionTriggerCode {
 	 * definition} = "Acquirer triggers the terminal management action."</li>
 	 * </ul>
 	 */
-	public static final MMCode HostEvent = new MMCode() {
+	public static final MMCode mmHostEvent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HostEvent";
@@ -159,7 +159,7 @@ public class TerminalManagementActionTriggerCode {
 	 * definition} = "Acceptor triggers the terminal management action."</li>
 	 * </ul>
 	 */
-	public static final MMCode Manual = new MMCode() {
+	public static final MMCode mmManual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Manual";
@@ -189,7 +189,7 @@ public class TerminalManagementActionTriggerCode {
 	 * definition} = "Sale system triggers the terminal management action."</li>
 	 * </ul>
 	 */
-	public static final MMCode SaleEvent = new MMCode() {
+	public static final MMCode mmSaleEvent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SaleEvent";
@@ -202,13 +202,13 @@ public class TerminalManagementActionTriggerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DATE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionTriggerCode";
 				definition = "Event to start a terminal management action by the point of interaction (POI).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.DateTime, com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.HostEvent,
-						com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.Manual, com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.SaleEvent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmDateTime, com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmHostEvent,
+						com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmManual, com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmSaleEvent);
 				derivation_lazy = () -> Arrays.asList(TerminalManagementActionTrigger1Code.mmObject());
 			}
 		});

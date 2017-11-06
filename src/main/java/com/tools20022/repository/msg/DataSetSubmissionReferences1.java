@@ -37,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DataSetSubmissionReferences1#TransactionIdentification
- * DataSetSubmissionReferences1.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DataSetSubmissionReferences1#mmTransactionIdentification
+ * DataSetSubmissionReferences1.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DataSetSubmissionReferences1#SubmitterTransactionReference
- * DataSetSubmissionReferences1.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.DataSetSubmissionReferences1#mmSubmitterTransactionReference
+ * DataSetSubmissionReferences1.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DataSetSubmissionReferences1#FinalSubmission
- * DataSetSubmissionReferences1.FinalSubmission}</li>
+ * {@linkplain com.tools20022.repository.msg.DataSetSubmissionReferences1#mmFinalSubmission
+ * DataSetSubmissionReferences1.mmFinalSubmission}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DataSetSubmissionReferences1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unique identification assigned by the TSU to the transaction. This
 	 * identification is to be used in any communication between the parties and
@@ -98,7 +99,7 @@ public class DataSetSubmissionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class DataSetSubmissionReferences1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the TSU to the transaction.\nThis identification is to be used in any communication between the parties and with the TSU.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DocumentIdentification5 submitterTransactionReference;
 	/**
 	 * Reference to the transaction for the financial institution that submits
 	 * the data set.
@@ -141,7 +143,7 @@ public class DataSetSubmissionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubmitterTransactionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubmitterTransactionReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
@@ -149,12 +151,13 @@ public class DataSetSubmissionReferences1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the financial institution that submits the data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
 		}
 	};
+	protected YesNoIndicator finalSubmission;
 	/**
 	 * Specifies whether the current submission of data sets is the last
 	 * submission for the transaction identified by the TSU transaction
@@ -187,7 +190,7 @@ public class DataSetSubmissionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalSubmission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalSubmission = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
@@ -195,8 +198,8 @@ public class DataSetSubmissionReferences1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalSubmission";
 			definition = "Specifies whether the current submission of data sets is the last submission for the transaction identified by the TSU transaction identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -204,14 +207,38 @@ public class DataSetSubmissionReferences1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetSubmissionReferences1.TransactionIdentification, com.tools20022.repository.msg.DataSetSubmissionReferences1.SubmitterTransactionReference,
-						com.tools20022.repository.msg.DataSetSubmissionReferences1.FinalSubmission);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetSubmissionReferences1.mmTransactionIdentification, com.tools20022.repository.msg.DataSetSubmissionReferences1.mmSubmitterTransactionReference,
+						com.tools20022.repository.msg.DataSetSubmissionReferences1.mmFinalSubmission);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DataSetSubmissionReferences1";
 				definition = "Provides references to the submitted data set both for the TSU and for the user.  Also specifies whether the submission is the last one for the underlying transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification5 getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(com.tools20022.repository.msg.DocumentIdentification5 submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public YesNoIndicator getFinalSubmission() {
+		return finalSubmission;
+	}
+
+	public void setFinalSubmission(YesNoIndicator finalSubmission) {
+		this.finalSubmission = finalSubmission;
 	}
 }

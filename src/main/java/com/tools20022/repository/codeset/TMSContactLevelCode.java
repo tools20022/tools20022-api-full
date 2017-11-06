@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#Critical
- * TMSContactLevelCode.Critical}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#mmCritical
+ * TMSContactLevelCode.mmCritical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#AsSoonAsPossible
- * TMSContactLevelCode.AsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#mmAsSoonAsPossible
+ * TMSContactLevelCode.mmAsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#DateTime
- * TMSContactLevelCode.DateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#mmDateTime
+ * TMSContactLevelCode.mmDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#EndCustomerSession
- * TMSContactLevelCode.EndCustomerSession}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#mmEndCustomerSession
+ * TMSContactLevelCode.mmEndCustomerSession}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -101,7 +101,7 @@ public class TMSContactLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Critical = new MMCode() {
+	public static final MMCode mmCritical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Critical";
@@ -134,7 +134,7 @@ public class TMSContactLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AsSoonAsPossible = new MMCode() {
+	public static final MMCode mmAsSoonAsPossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AsSoonAsPossible";
@@ -167,7 +167,7 @@ public class TMSContactLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DateTime = new MMCode() {
+	public static final MMCode mmDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DateTime";
@@ -197,7 +197,7 @@ public class TMSContactLevelCode {
 	 * definition} = "After the end of the customer session"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndCustomerSession = new MMCode() {
+	public static final MMCode mmEndCustomerSession = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndCustomerSession";
@@ -210,13 +210,13 @@ public class TMSContactLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TMSContactLevelCode";
 				definition = "Level of urgency in contacting the terminal management system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TMSContactLevelCode.Critical, com.tools20022.repository.codeset.TMSContactLevelCode.AsSoonAsPossible,
-						com.tools20022.repository.codeset.TMSContactLevelCode.DateTime, com.tools20022.repository.codeset.TMSContactLevelCode.EndCustomerSession);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TMSContactLevelCode.mmCritical, com.tools20022.repository.codeset.TMSContactLevelCode.mmAsSoonAsPossible,
+						com.tools20022.repository.codeset.TMSContactLevelCode.mmDateTime, com.tools20022.repository.codeset.TMSContactLevelCode.mmEndCustomerSession);
 				derivation_lazy = () -> Arrays.asList(TMSContactLevel1Code.mmObject(), TMSContactLevel2Code.mmObject());
 			}
 		});

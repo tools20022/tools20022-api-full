@@ -37,8 +37,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#BasisOrExtendedBasisRule
- * TaxCalculationInformation5.BasisOrExtendedBasisRule}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#mmBasisOrExtendedBasisRule
+ * TaxCalculationInformation5.mmBasisOrExtendedBasisRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,11 +46,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#Basis
- * TaxCalculationInformation5.Basis}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#mmBasis
+ * TaxCalculationInformation5.mmBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#ExtendedBasis
- * TaxCalculationInformation5.ExtendedBasis}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#mmExtendedBasis
+ * TaxCalculationInformation5.mmExtendedBasis}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,6 +82,7 @@ import java.util.function.Supplier;
 public class TaxCalculationInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxationBasis2Code basis;
 	/**
 	 * Basis used to determine the capital gain or loss, eg, the purchase price.
 	 * <p>
@@ -95,7 +96,7 @@ public class TaxCalculationInformation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Basis Tax.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,27 +119,28 @@ public class TaxCalculationInformation5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8#Basis
-	 * TaxCalculationInformation8.Basis}</li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8#mmBasis
+	 * TaxCalculationInformation8.mmBasis}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Basis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationInformation5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Basis;
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation8.Basis);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation8.mmBasis);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TaxationBasis2Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedBasis;
 	/**
 	 * Basis used to determine the capital gain or loss, eg, the purchase price.
 	 * <p>
@@ -152,7 +154,7 @@ public class TaxCalculationInformation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Basis Tax.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,17 +175,17 @@ public class TaxCalculationInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationInformation5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Basis;
 			isDerived = false;
 			xmlTag = "XtndedBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedBasis";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
@@ -196,11 +198,11 @@ public class TaxCalculationInformation5 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#Basis
-	 * TaxCalculationInformation5.Basis}</li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#mmBasis
+	 * TaxCalculationInformation5.mmBasis}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#ExtendedBasis
-	 * TaxCalculationInformation5.ExtendedBasis}</li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5#mmExtendedBasis
+	 * TaxCalculationInformation5.mmExtendedBasis}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -219,22 +221,22 @@ public class TaxCalculationInformation5 {
 	 * "Either Basis or ExtendedBasis may be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor BasisOrExtendedBasisRule = new MMXor() {
+	public static final MMXor mmBasisOrExtendedBasisRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisOrExtendedBasisRule";
 			definition = "Either Basis or ExtendedBasis may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.Basis, com.tools20022.repository.msg.TaxCalculationInformation5.ExtendedBasis);
 			messageComponent_lazy = () -> TaxCalculationInformation5.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation5.mmExtendedBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.Basis, com.tools20022.repository.msg.TaxCalculationInformation5.ExtendedBasis);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation5.mmExtendedBasis);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -246,9 +248,25 @@ public class TaxCalculationInformation5 {
 				name = "TaxCalculationInformation5";
 				definition = "Information used to calculate the tax.";
 				nextVersions_lazy = () -> Arrays.asList(TaxCalculationInformation8.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.BasisOrExtendedBasisRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.mmBasisOrExtendedBasisRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxationBasis2Code getBasis() {
+		return basis;
+	}
+
+	public void setBasis(TaxationBasis2Code basis) {
+		this.basis = basis;
+	}
+
+	public Extended350Code getExtendedBasis() {
+		return extendedBasis;
+	}
+
+	public void setExtendedBasis(Extended350Code extendedBasis) {
+		this.extendedBasis = extendedBasis;
 	}
 }

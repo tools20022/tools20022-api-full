@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Portfolio;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Describes the characteristics of a portfolio.
@@ -34,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Portfolio1#PortfolioInformation
- * Portfolio1.PortfolioInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Portfolio1#mmPortfolioInformation
+ * Portfolio1.mmPortfolioInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Portfolio1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max350Text> portfolioInformation;
 	/**
 	 * Additional information related to the portfolio.
 	 * <p>
@@ -88,17 +90,17 @@ public class Portfolio1 {
 	 * definition} = "Additional information related to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PortfolioInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPortfolioInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Portfolio1.mmObject();
 			businessComponentTrace_lazy = () -> Portfolio.mmObject();
+			componentContext_lazy = () -> Portfolio1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtflInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioInformation";
 			definition = "Additional information related to the portfolio.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -106,14 +108,22 @@ public class Portfolio1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Portfolio1.PortfolioInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Portfolio1.mmPortfolioInformation);
 				trace_lazy = () -> Portfolio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Portfolio1";
 				definition = "Describes the characteristics of a portfolio.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max350Text> getPortfolioInformation() {
+		return portfolioInformation;
+	}
+
+	public void setPortfolioInformation(List<Max350Text> portfolioInformation) {
+		this.portfolioInformation = portfolioInformation;
 	}
 }

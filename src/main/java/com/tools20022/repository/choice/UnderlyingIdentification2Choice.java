@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingIdentification2Choice#Swap
- * UnderlyingIdentification2Choice.Swap}</li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingIdentification2Choice#mmSwap
+ * UnderlyingIdentification2Choice.mmSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingIdentification2Choice#Other
- * UnderlyingIdentification2Choice.Other}</li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingIdentification2Choice#mmOther
+ * UnderlyingIdentification2Choice.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnderlyingIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SwapLegIdentification2 swap;
 	/**
 	 * Underlying of a swap transaction.
 	 * <p>
@@ -84,7 +85,7 @@ public class UnderlyingIdentification2Choice {
 	 * definition} = "Underlying of a swap transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Swap = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSwap = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UnderlyingIdentification2Choice.mmObject();
 			isDerived = false;
@@ -92,12 +93,13 @@ public class UnderlyingIdentification2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
 			definition = "Underlying of a swap transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SwapLegIdentification2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SwapLegIdentification2.mmObject();
 		}
 	};
+	protected FinancialInstrumentIdentification7Choice other;
 	/**
 	 * Underlying of any other type of transaction.
 	 * <p>
@@ -125,7 +127,7 @@ public class UnderlyingIdentification2Choice {
 	 * definition} = "Underlying of any other type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UnderlyingIdentification2Choice.mmObject();
 			isDerived = false;
@@ -133,23 +135,39 @@ public class UnderlyingIdentification2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Underlying of any other type of transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingIdentification2Choice.Swap, com.tools20022.repository.choice.UnderlyingIdentification2Choice.Other);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmSwap, com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmOther);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingIdentification2Choice";
 				definition = "Details of the underlying of a security transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SwapLegIdentification2 getSwap() {
+		return swap;
+	}
+
+	public void setSwap(SwapLegIdentification2 swap) {
+		this.swap = swap;
+	}
+
+	public FinancialInstrumentIdentification7Choice getOther() {
+		return other;
+	}
+
+	public void setOther(com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice other) {
+		this.other = other;
 	}
 }

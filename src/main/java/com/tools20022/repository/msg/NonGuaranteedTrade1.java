@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#TradeCounterpartyMemberIdentification
- * NonGuaranteedTrade1.TradeCounterpartyMemberIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#mmTradeCounterpartyMemberIdentification
+ * NonGuaranteedTrade1.mmTradeCounterpartyMemberIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#TradeCounterpartyClearingMemberIdentification
- * NonGuaranteedTrade1.TradeCounterpartyClearingMemberIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#mmTradeCounterpartyClearingMemberIdentification
+ * NonGuaranteedTrade1.mmTradeCounterpartyClearingMemberIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#DeliveringParties
- * NonGuaranteedTrade1.DeliveringParties}</li>
+ * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#mmDeliveringParties
+ * NonGuaranteedTrade1.mmDeliveringParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#ReceivingParties
- * NonGuaranteedTrade1.ReceivingParties}</li>
+ * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#mmReceivingParties
+ * NonGuaranteedTrade1.mmReceivingParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NonGuaranteedTrade1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification35Choice tradeCounterpartyMemberIdentification;
 	/**
 	 * External identification of the member who is the market counterpart
 	 * member of the current trade leg (in case of non guarantee trades, this
@@ -86,8 +87,8 @@ public class NonGuaranteedTrade1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class NonGuaranteedTrade1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeCounterpartyMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeCounterpartyMemberIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> NonGuaranteedTrade1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "TradCtrPtyMmbId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeCounterpartyMemberIdentification";
 			definition = "External identification of the member who is the market counterpart member of the current trade leg (in case of non guarantee trades, this field allows buyer and seller to identify each other).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice tradeCounterpartyClearingMemberIdentification;
 	/**
 	 * External identification of the clearing member of the market couterpart
 	 * member (in case of non guarantee trades, this field allows buyer and
@@ -137,8 +139,8 @@ public class NonGuaranteedTrade1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +161,21 @@ public class NonGuaranteedTrade1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeCounterpartyClearingMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeCounterpartyClearingMemberIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> NonGuaranteedTrade1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "TradCtrPtyClrMmbId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeCounterpartyClearingMemberIdentification";
 			definition = "External identification of the clearing member of the market couterpart member (in case of non guarantee trades, this field allows buyer and seller to identify each other).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected DeliveringPartiesAndAccount5 deliveringParties;
 	/**
 	 * Provides details about the delivering parties involved in the settlement
 	 * chain.
@@ -208,21 +211,22 @@ public class NonGuaranteedTrade1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NonGuaranteedTrade1.mmObject();
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
+			componentContext_lazy = () -> NonGuaranteedTrade1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringParties";
 			definition = "Provides details about the delivering parties involved in the settlement chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DeliveringPartiesAndAccount5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmObject();
 		}
 	};
+	protected ReceivingPartiesAndAccount6 receivingParties;
 	/**
 	 * Provides details about the receiving parties involved in the settlement
 	 * chain.
@@ -258,35 +262,67 @@ public class NonGuaranteedTrade1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NonGuaranteedTrade1.mmObject();
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
+			componentContext_lazy = () -> NonGuaranteedTrade1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingParties";
 			definition = "Provides details about the receiving parties involved in the settlement chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReceivingPartiesAndAccount6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonGuaranteedTrade1.TradeCounterpartyMemberIdentification,
-						com.tools20022.repository.msg.NonGuaranteedTrade1.TradeCounterpartyClearingMemberIdentification, com.tools20022.repository.msg.NonGuaranteedTrade1.DeliveringParties,
-						com.tools20022.repository.msg.NonGuaranteedTrade1.ReceivingParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonGuaranteedTrade1.mmTradeCounterpartyMemberIdentification,
+						com.tools20022.repository.msg.NonGuaranteedTrade1.mmTradeCounterpartyClearingMemberIdentification, com.tools20022.repository.msg.NonGuaranteedTrade1.mmDeliveringParties,
+						com.tools20022.repository.msg.NonGuaranteedTrade1.mmReceivingParties);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NonGuaranteedTrade1";
 				definition = "Provides the non guaranteed trade details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification35Choice getTradeCounterpartyMemberIdentification() {
+		return tradeCounterpartyMemberIdentification;
+	}
+
+	public void setTradeCounterpartyMemberIdentification(PartyIdentification35Choice tradeCounterpartyMemberIdentification) {
+		this.tradeCounterpartyMemberIdentification = tradeCounterpartyMemberIdentification;
+	}
+
+	public PartyIdentification35Choice getTradeCounterpartyClearingMemberIdentification() {
+		return tradeCounterpartyClearingMemberIdentification;
+	}
+
+	public void setTradeCounterpartyClearingMemberIdentification(PartyIdentification35Choice tradeCounterpartyClearingMemberIdentification) {
+		this.tradeCounterpartyClearingMemberIdentification = tradeCounterpartyClearingMemberIdentification;
+	}
+
+	public DeliveringPartiesAndAccount5 getDeliveringParties() {
+		return deliveringParties;
+	}
+
+	public void setDeliveringParties(com.tools20022.repository.msg.DeliveringPartiesAndAccount5 deliveringParties) {
+		this.deliveringParties = deliveringParties;
+	}
+
+	public ReceivingPartiesAndAccount6 getReceivingParties() {
+		return receivingParties;
+	}
+
+	public void setReceivingParties(com.tools20022.repository.msg.ReceivingPartiesAndAccount6 receivingParties) {
+		this.receivingParties = receivingParties;
 	}
 }

@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TimeOutResult1#TransactionFutureStatus
- * TimeOutResult1.TransactionFutureStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TimeOutResult1#TimeOutEvent
- * TimeOutResult1.TimeOutEvent}</li>
+ * {@linkplain com.tools20022.repository.msg.TimeOutResult1#mmTransactionFutureStatus
+ * TimeOutResult1.mmTransactionFutureStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TimeOutResult1#mmTimeOutEvent
+ * TimeOutResult1.mmTimeOutEvent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +56,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TimeOutResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionStatus2 transactionFutureStatus;
 	/**
 	 * Specifies the status of the transaction if no action is taken by the
 	 * user.
@@ -84,7 +85,7 @@ public class TimeOutResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionFutureStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionFutureStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TimeOutResult1.mmObject();
 			isDerived = false;
@@ -92,12 +93,13 @@ public class TimeOutResult1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionFutureStatus";
 			definition = "Specifies the status of the transaction if no action is taken by the user.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionStatus2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus2.mmObject();
 		}
 	};
+	protected TimeOutEvent1 timeOutEvent;
 	/**
 	 * Describes the time-out reason.
 	 * <p>
@@ -123,7 +125,7 @@ public class TimeOutResult1 {
 	 * definition} = "Describes the time-out reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TimeOutEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTimeOutEvent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TimeOutResult1.mmObject();
 			isDerived = false;
@@ -131,23 +133,39 @@ public class TimeOutResult1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeOutEvent";
 			definition = "Describes the time-out reason.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TimeOutEvent1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TimeOutEvent1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeOutResult1.TransactionFutureStatus, com.tools20022.repository.msg.TimeOutResult1.TimeOutEvent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeOutResult1.mmTransactionFutureStatus, com.tools20022.repository.msg.TimeOutResult1.mmTimeOutEvent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TimeOutResult1";
 				definition = "Describes the time-out consequences.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionStatus2 getTransactionFutureStatus() {
+		return transactionFutureStatus;
+	}
+
+	public void setTransactionFutureStatus(com.tools20022.repository.msg.TransactionStatus2 transactionFutureStatus) {
+		this.transactionFutureStatus = transactionFutureStatus;
+	}
+
+	public TimeOutEvent1 getTimeOutEvent() {
+		return timeOutEvent;
+	}
+
+	public void setTimeOutEvent(com.tools20022.repository.msg.TimeOutEvent1 timeOutEvent) {
+		this.timeOutEvent = timeOutEvent;
 	}
 }

@@ -34,43 +34,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#ReceivedEventType
- * RelatedCustodianMessageDetailsSD1.ReceivedEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmReceivedEventType
+ * RelatedCustodianMessageDetailsSD1.mmReceivedEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#ReceivedMandatoryVoluntaryEventType
- * RelatedCustodianMessageDetailsSD1.ReceivedMandatoryVoluntaryEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmReceivedMandatoryVoluntaryEventType
+ * RelatedCustodianMessageDetailsSD1.mmReceivedMandatoryVoluntaryEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#ReceivedCorporateActionEventIdentification
- * RelatedCustodianMessageDetailsSD1.ReceivedCorporateActionEventIdentification}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmReceivedCorporateActionEventIdentification
+ * RelatedCustodianMessageDetailsSD1.
+ * mmReceivedCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#ReceivedDate
- * RelatedCustodianMessageDetailsSD1.ReceivedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmReceivedDate
+ * RelatedCustodianMessageDetailsSD1.mmReceivedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#ReceivedTime
- * RelatedCustodianMessageDetailsSD1.ReceivedTime}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmReceivedTime
+ * RelatedCustodianMessageDetailsSD1.mmReceivedTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#InboundISOMessageType
- * RelatedCustodianMessageDetailsSD1.InboundISOMessageType}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmInboundISOMessageType
+ * RelatedCustodianMessageDetailsSD1.mmInboundISOMessageType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#InboundISOMessageReceiverBIC
- * RelatedCustodianMessageDetailsSD1.InboundISOMessageReceiverBIC}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmInboundISOMessageReceiverBIC
+ * RelatedCustodianMessageDetailsSD1.mmInboundISOMessageReceiverBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#ReceivedRelatedReference
- * RelatedCustodianMessageDetailsSD1.ReceivedRelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmReceivedRelatedReference
+ * RelatedCustodianMessageDetailsSD1.mmReceivedRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#ReceivedSenderMessageReference
- * RelatedCustodianMessageDetailsSD1.ReceivedSenderMessageReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmReceivedSenderMessageReference
+ * RelatedCustodianMessageDetailsSD1.mmReceivedSenderMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#InboundISOMessageSenderBIC
- * RelatedCustodianMessageDetailsSD1.InboundISOMessageSenderBIC}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1#mmInboundISOMessageSenderBIC
+ * RelatedCustodianMessageDetailsSD1.mmInboundISOMessageSenderBIC}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RelatedCustodianMessageDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText receivedEventType;
 	/**
 	 * Reference the CAEV value from the received custodian message. Applicable
 	 * to custodian service only.
@@ -117,7 +118,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceivedEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceivedEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -125,11 +126,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedEventType";
 			definition = "Reference the CAEV value from the received custodian message. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText receivedMandatoryVoluntaryEventType;
 	/**
 	 * Reference the CAMV value from the received custodian message. Applicable
 	 * to custodian service only.
@@ -161,7 +163,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceivedMandatoryVoluntaryEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceivedMandatoryVoluntaryEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -169,11 +171,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedMandatoryVoluntaryEventType";
 			definition = "Reference the CAMV value from the received custodian message. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text receivedCorporateActionEventIdentification;
 	/**
 	 * Reference the CORP value from the received custodian message. Applicable
 	 * to custodian service only.
@@ -205,7 +208,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceivedCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceivedCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -213,11 +216,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedCorporateActionEventIdentification";
 			definition = "Reference the CORP value from the received custodian message. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected ISODate receivedDate;
 	/**
 	 * Rate that the ISO message was received from the custodian. Applicable to
 	 * custodian service only.
@@ -248,7 +252,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceivedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceivedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -256,11 +260,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedDate";
 			definition = "Rate that the  ISO message was received from the custodian. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISOTime receivedTime;
 	/**
 	 * Time of day that the ISO message was received from the custodian.
 	 * Applicable to custodian service only.
@@ -291,7 +296,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceivedTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceivedTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -299,11 +304,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedTime";
 			definition = "Time of day that the ISO message was received from the custodian. Applicable to custodian service only.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected Exact3NumericText inboundISOMessageType;
 	/**
 	 * Reference of the ISO15022 MT message type received from the custodian
 	 * message. Applicable to custodian service only.
@@ -335,7 +341,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InboundISOMessageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInboundISOMessageType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -343,11 +349,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InboundISOMessageType";
 			definition = "Reference of the ISO15022 MT message type received from the custodian message. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected AnyBICIdentifier inboundISOMessageReceiverBIC;
 	/**
 	 * BIC Code of the recipient of the custodian record on a received message.
 	 * Applicable to custodian service only.
@@ -379,7 +386,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InboundISOMessageReceiverBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInboundISOMessageReceiverBIC = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -387,11 +394,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InboundISOMessageReceiverBIC";
 			definition = "BIC Code of the recipient of the custodian record on a received message. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text receivedRelatedReference;
 	/**
 	 * Sender related reference from the received custodian message. Applicable
 	 * to custodian service only.
@@ -423,7 +431,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceivedRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceivedRelatedReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -431,11 +439,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedRelatedReference";
 			definition = "Sender related reference from the received custodian message. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text receivedSenderMessageReference;
 	/**
 	 * Sender SEME from received custodian message. Applicable to custodian
 	 * service only.
@@ -467,7 +476,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceivedSenderMessageReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceivedSenderMessageReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -475,11 +484,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedSenderMessageReference";
 			definition = "Sender SEME from received custodian message. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected AnyBICIdentifier inboundISOMessageSenderBIC;
 	/**
 	 * BIC Code of the sender of the custodian record on a received message.
 	 * Applicable to custodian service only.
@@ -511,7 +521,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InboundISOMessageSenderBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInboundISOMessageSenderBIC = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -519,8 +529,8 @@ public class RelatedCustodianMessageDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InboundISOMessageSenderBIC";
 			definition = "BIC Code of the sender of the custodian record on a received message. Applicable to custodian service only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
@@ -528,18 +538,98 @@ public class RelatedCustodianMessageDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.ReceivedEventType,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.ReceivedMandatoryVoluntaryEventType, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.ReceivedCorporateActionEventIdentification,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.ReceivedDate, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.ReceivedTime,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.InboundISOMessageType, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.InboundISOMessageReceiverBIC,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.ReceivedRelatedReference, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.ReceivedSenderMessageReference,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.InboundISOMessageSenderBIC);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedEventType,
+						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedMandatoryVoluntaryEventType, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedCorporateActionEventIdentification,
+						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedDate, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedTime,
+						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmInboundISOMessageType, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmInboundISOMessageReceiverBIC,
+						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedRelatedReference, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedSenderMessageReference,
+						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmInboundISOMessageSenderBIC);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RelatedCustodianMessageDetailsSD1";
 				definition = "Provides selected corporate action events message details extracted from the related custodian messages received.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getReceivedEventType() {
+		return receivedEventType;
+	}
+
+	public void setReceivedEventType(Max4AlphaNumericText receivedEventType) {
+		this.receivedEventType = receivedEventType;
+	}
+
+	public Max4AlphaNumericText getReceivedMandatoryVoluntaryEventType() {
+		return receivedMandatoryVoluntaryEventType;
+	}
+
+	public void setReceivedMandatoryVoluntaryEventType(Max4AlphaNumericText receivedMandatoryVoluntaryEventType) {
+		this.receivedMandatoryVoluntaryEventType = receivedMandatoryVoluntaryEventType;
+	}
+
+	public RestrictedFINXMax16Text getReceivedCorporateActionEventIdentification() {
+		return receivedCorporateActionEventIdentification;
+	}
+
+	public void setReceivedCorporateActionEventIdentification(RestrictedFINXMax16Text receivedCorporateActionEventIdentification) {
+		this.receivedCorporateActionEventIdentification = receivedCorporateActionEventIdentification;
+	}
+
+	public ISODate getReceivedDate() {
+		return receivedDate;
+	}
+
+	public void setReceivedDate(ISODate receivedDate) {
+		this.receivedDate = receivedDate;
+	}
+
+	public ISOTime getReceivedTime() {
+		return receivedTime;
+	}
+
+	public void setReceivedTime(ISOTime receivedTime) {
+		this.receivedTime = receivedTime;
+	}
+
+	public Exact3NumericText getInboundISOMessageType() {
+		return inboundISOMessageType;
+	}
+
+	public void setInboundISOMessageType(Exact3NumericText inboundISOMessageType) {
+		this.inboundISOMessageType = inboundISOMessageType;
+	}
+
+	public AnyBICIdentifier getInboundISOMessageReceiverBIC() {
+		return inboundISOMessageReceiverBIC;
+	}
+
+	public void setInboundISOMessageReceiverBIC(AnyBICIdentifier inboundISOMessageReceiverBIC) {
+		this.inboundISOMessageReceiverBIC = inboundISOMessageReceiverBIC;
+	}
+
+	public RestrictedFINXMax16Text getReceivedRelatedReference() {
+		return receivedRelatedReference;
+	}
+
+	public void setReceivedRelatedReference(RestrictedFINXMax16Text receivedRelatedReference) {
+		this.receivedRelatedReference = receivedRelatedReference;
+	}
+
+	public RestrictedFINXMax16Text getReceivedSenderMessageReference() {
+		return receivedSenderMessageReference;
+	}
+
+	public void setReceivedSenderMessageReference(RestrictedFINXMax16Text receivedSenderMessageReference) {
+		this.receivedSenderMessageReference = receivedSenderMessageReference;
+	}
+
+	public AnyBICIdentifier getInboundISOMessageSenderBIC() {
+		return inboundISOMessageSenderBIC;
+	}
+
+	public void setInboundISOMessageSenderBIC(AnyBICIdentifier inboundISOMessageSenderBIC) {
+		this.inboundISOMessageSenderBIC = inboundISOMessageSenderBIC;
 	}
 }

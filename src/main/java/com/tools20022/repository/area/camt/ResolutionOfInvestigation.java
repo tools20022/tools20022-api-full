@@ -100,24 +100,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#Assignment
- * ResolutionOfInvestigation.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#mmAssignment
+ * ResolutionOfInvestigation.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#ResolvedCase
- * ResolutionOfInvestigation.ResolvedCase}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#mmResolvedCase
+ * ResolutionOfInvestigation.mmResolvedCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#Status
- * ResolutionOfInvestigation.Status}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#mmStatus
+ * ResolutionOfInvestigation.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#CorrectionTransaction
- * ResolutionOfInvestigation.CorrectionTransaction}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#mmCorrectionTransaction
+ * ResolutionOfInvestigation.mmCorrectionTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#identifier
- * ResolutionOfInvestigation.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.029.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,6 +131,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResolutionOfInvestigation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment assignment;
 	/**
 	 * Note: the Assigner must be the sender of this confirmation and the
 	 * Assignee must be the receiver.
@@ -158,17 +157,18 @@ public class ResolutionOfInvestigation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Note: the Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected Case resolvedCase;
 	/**
 	 * Identifies a resolved case.
 	 * <p>
@@ -190,17 +190,18 @@ public class ResolutionOfInvestigation {
 	 * definition} = "Identifies a resolved case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ResolvedCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmResolvedCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RslvdCase";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolvedCase";
 			definition = "Identifies a resolved case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected InvestigationStatusChoice status;
 	/**
 	 * Indicates the status of the investigation.
 	 * <p>
@@ -224,17 +225,18 @@ public class ResolutionOfInvestigation {
 	 * definition} = "Indicates the status of the investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Status = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Indicates the status of the investigation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestigationStatusChoice.mmObject();
 		}
 	};
+	protected PaymentInstructionExtract correctionTransaction;
 	/**
 	 * References a transaction intitiated to fix the case under investigation.
 	 * <p>
@@ -260,42 +262,15 @@ public class ResolutionOfInvestigation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorrectionTransaction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorrectionTransaction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CrrctnTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectionTransaction";
 			definition = "References a transaction intitiated to fix the case under investigation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "029"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "029";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -310,11 +285,50 @@ public class ResolutionOfInvestigation {
 				xmlTag = "camt.029.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.029.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigation.Assignment, com.tools20022.repository.area.camt.ResolutionOfInvestigation.ResolvedCase,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigation.Status, com.tools20022.repository.area.camt.ResolutionOfInvestigation.CorrectionTransaction);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigation.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmResolvedCase,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmStatus, com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmCorrectionTransaction);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "029";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case getResolvedCase() {
+		return resolvedCase;
+	}
+
+	public void setResolvedCase(Case resolvedCase) {
+		this.resolvedCase = resolvedCase;
+	}
+
+	public InvestigationStatusChoice getStatus() {
+		return status;
+	}
+
+	public void setStatus(InvestigationStatusChoice status) {
+		this.status = status;
+	}
+
+	public PaymentInstructionExtract getCorrectionTransaction() {
+		return correctionTransaction;
+	}
+
+	public void setCorrectionTransaction(PaymentInstructionExtract correctionTransaction) {
+		this.correctionTransaction = correctionTransaction;
 	}
 }

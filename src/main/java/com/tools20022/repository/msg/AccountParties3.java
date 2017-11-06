@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.entity.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Any party who is related to an investment account.
@@ -34,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties3#AccountOwnerRule
- * AccountParties3.AccountOwnerRule}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmAccountOwnerRule
+ * AccountParties3.mmAccountOwnerRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -43,35 +44,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties3#ModificationScopeIndication
- * AccountParties3.ModificationScopeIndication}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#PrimaryOwner
- * AccountParties3.PrimaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#Trustee
- * AccountParties3.Trustee}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmModificationScopeIndication
+ * AccountParties3.mmModificationScopeIndication}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmPrimaryOwner
+ * AccountParties3.mmPrimaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmTrustee
+ * AccountParties3.mmTrustee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties3#CustodianForMinor
- * AccountParties3.CustodianForMinor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#Nominee
- * AccountParties3.Nominee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#JointOwner
- * AccountParties3.JointOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#SecondaryOwner
- * AccountParties3.SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#Beneficiary
- * AccountParties3.Beneficiary}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmCustodianForMinor
+ * AccountParties3.mmCustodianForMinor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmNominee
+ * AccountParties3.mmNominee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmJointOwner
+ * AccountParties3.mmJointOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties3#PowerOfAttorney
- * AccountParties3.PowerOfAttorney}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#LegalGuardian
- * AccountParties3.LegalGuardian}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmSecondaryOwner
+ * AccountParties3.mmSecondaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmBeneficiary
+ * AccountParties3.mmBeneficiary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties3#SuccessorOnDeath
- * AccountParties3.SuccessorOnDeath}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#Administrator
- * AccountParties3.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#OtherParty
- * AccountParties3.OtherParty}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmPowerOfAttorney
+ * AccountParties3.mmPowerOfAttorney}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmLegalGuardian
+ * AccountParties3.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmSuccessorOnDeath
+ * AccountParties3.mmSuccessorOnDeath}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmAdministrator
+ * AccountParties3.mmAdministrator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmOtherParty
+ * AccountParties3.mmOtherParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -81,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountParties3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification1Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -126,7 +131,7 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountParties3.mmObject();
 			isDerived = false;
@@ -134,11 +139,12 @@ public class AccountParties3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 primaryOwner;
 	/**
 	 * Single owner of the investment account or, when the ownership is split
 	 * among several owners, the primary owner is the one giving its address and
@@ -174,21 +180,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrimaryOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrimaryOwner = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> PrimaryOwner.mmObject();
 			componentContext_lazy = () -> AccountParties3.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.PrimaryOwner.mmObject();
 			isDerived = false;
 			xmlTag = "PmryOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryOwner";
 			definition = "Single owner of the investment account or, when the ownership is split among several owners, the primary owner is the one giving its address and account details for the registration.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 trustee;
 	/**
 	 * Legal owners of the property. However, the beneficiary has the equitable
 	 * or beneficial ownership.
@@ -223,21 +230,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Trustee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTrustee = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountParties3.mmObject();
 			businessComponentTrace_lazy = () -> TrusteeRole.mmObject();
+			componentContext_lazy = () -> AccountParties3.mmObject();
 			isDerived = false;
 			xmlTag = "Trstee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trustee";
 			definition = "Legal owners of the property. However, the beneficiary has the equitable or beneficial ownership.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 custodianForMinor;
 	/**
 	 * Entity that holds shares/units on behalf of a legal minor. Although the
 	 * account is registered under the name of the minor, the custodian retains
@@ -274,21 +282,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CustodianForMinor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCustodianForMinor = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> CustodianForMinor.mmObject();
 			componentContext_lazy = () -> AccountParties3.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.CustodianForMinor.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnForMnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianForMinor";
 			definition = "Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 nominee;
 	/**
 	 * Entity named by the beneficial owner to act on its behalf, often to
 	 * facilitate dealing, or to conceal the identity of the beneficiary.
@@ -323,21 +332,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Nominee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNominee = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Nominee.mmObject();
 			componentContext_lazy = () -> AccountParties3.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Nominee.mmObject();
 			isDerived = false;
 			xmlTag = "Nmnee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nominee";
 			definition = "Entity named by the beneficial owner to act on its behalf, often to facilitate dealing, or to conceal the identity of the beneficiary.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3> jointOwner;
 	/**
 	 * Co-owner of the investment account when the ownership is assigned to more
 	 * than one party.
@@ -372,21 +382,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd JointOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmJointOwner = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> JointOwner.mmObject();
 			componentContext_lazy = () -> AccountParties3.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.JointOwner.mmObject();
 			isDerived = false;
 			xmlTag = "JntOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointOwner";
 			definition = "Co-owner of the investment account when the ownership is assigned to more than one party.";
-			minOccurs = 0;
 			maxOccurs = 5;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 secondaryOwner;
 	/**
 	 * Entity that is not the primary owner when the ownership of the investment
 	 * account is split among several owners.
@@ -422,21 +433,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondaryOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondaryOwner = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SecondaryOwner.mmObject();
 			componentContext_lazy = () -> AccountParties3.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SecondaryOwner.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryOwner";
 			definition = "Entity that is not the primary owner when the ownership of the investment account is split among several owners. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 beneficiary;
 	/**
 	 * Ultimate party that is entitled to either receive the benefits of the
 	 * ownership of a financial instrument, or to be paid/credited as a result
@@ -473,21 +485,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Beneficiary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficiary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountParties3.mmObject();
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
+			componentContext_lazy = () -> AccountParties3.mmObject();
 			isDerived = false;
 			xmlTag = "Bnfcry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Beneficiary";
 			definition = "Ultimate party that is entitled to either receive the benefits of the ownership of a financial instrument, or to be paid/credited as a result of a transfer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 powerOfAttorney;
 	/**
 	 * Entity that was given the authority by another entity to act on its
 	 * behalf.
@@ -523,21 +536,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PowerOfAttorney = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPowerOfAttorney = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountParties3.mmObject();
 			businessComponentTrace_lazy = () -> MandateHolder.mmObject();
+			componentContext_lazy = () -> AccountParties3.mmObject();
 			isDerived = false;
 			xmlTag = "PwrOfAttny";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerOfAttorney";
 			definition = "Entity that was given the authority by another entity to act on its behalf.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 legalGuardian;
 	/**
 	 * Entity that has been appointed by a legal authority to act on behalf of a
 	 * person judged to be incapacitated.
@@ -573,21 +587,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegalGuardian = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegalGuardian = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountParties3.mmObject();
 			businessComponentTrace_lazy = () -> LegalGuardianRole.mmObject();
+			componentContext_lazy = () -> AccountParties3.mmObject();
 			isDerived = false;
 			xmlTag = "LglGuardn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalGuardian";
 			definition = "Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 successorOnDeath;
 	/**
 	 * Deceased's estate, or successor, to whom the respective percentage of
 	 * ownership will be transferred upon the death of one of the owners.
@@ -623,21 +638,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SuccessorOnDeath = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSuccessorOnDeath = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SuccessorOnDeath.mmObject();
 			componentContext_lazy = () -> AccountParties3.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SuccessorOnDeath.mmObject();
 			isDerived = false;
 			xmlTag = "SucssrOnDth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuccessorOnDeath";
 			definition = "Deceased's estate, or successor, to whom the respective percentage of ownership will be transferred upon the death of one of the owners.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 administrator;
 	/**
 	 * Entity that has been appointed by a legal authorithy to act on behalf of
 	 * a person or organisation that has gone bankrupt.
@@ -673,21 +689,22 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Administrator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdministrator = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountParties3.mmObject();
 			businessComponentTrace_lazy = () -> AdministratorRole.mmObject();
+			componentContext_lazy = () -> AccountParties3.mmObject();
 			isDerived = false;
 			xmlTag = "Admstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Administrator";
 			definition = "Entity that has been appointed by a legal authorithy to act on behalf of a person or organisation that has gone bankrupt.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation3 otherParty;
 	/**
 	 * An other type of party.
 	 * <p>
@@ -720,19 +737,19 @@ public class AccountParties3 {
 	 * definition} = "An other type of party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountParties3.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			componentContext_lazy = () -> AccountParties3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParty";
 			definition = "An other type of party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmObject();
 		}
 	};
 	/**
@@ -746,17 +763,18 @@ public class AccountParties3 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountParties3#PrimaryOwner
-	 * AccountParties3.PrimaryOwner}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#Trustee
-	 * AccountParties3.Trustee}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountParties3#mmPrimaryOwner
+	 * AccountParties3.mmPrimaryOwner}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmTrustee
+	 * AccountParties3.mmTrustee}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountParties3#CustodianForMinor
-	 * AccountParties3.CustodianForMinor}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#Nominee
-	 * AccountParties3.Nominee}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#JointOwner
-	 * AccountParties3.JointOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountParties3#mmCustodianForMinor
+	 * AccountParties3.mmCustodianForMinor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmNominee
+	 * AccountParties3.mmNominee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountParties3#mmJointOwner
+	 * AccountParties3.mmJointOwner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -776,33 +794,137 @@ public class AccountParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor AccountOwnerRule = new MMXor() {
+	public static final MMXor mmAccountOwnerRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerRule";
 			definition = "Any occurrence of one and only one message element in the list (PrimaryOwner, Trustee, CustodianForMinor, Nominee, JointOwner) may be present. The chosen message element may be repeated if repetitive.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties3.PrimaryOwner, com.tools20022.repository.msg.AccountParties3.Trustee, com.tools20022.repository.msg.AccountParties3.CustodianForMinor,
-					com.tools20022.repository.msg.AccountParties3.Nominee, com.tools20022.repository.msg.AccountParties3.JointOwner);
 			messageComponent_lazy = () -> AccountParties3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties3.mmPrimaryOwner, com.tools20022.repository.msg.AccountParties3.mmTrustee,
+					com.tools20022.repository.msg.AccountParties3.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties3.mmNominee, com.tools20022.repository.msg.AccountParties3.mmJointOwner);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties3.ModificationScopeIndication, com.tools20022.repository.msg.AccountParties3.PrimaryOwner,
-						com.tools20022.repository.msg.AccountParties3.Trustee, com.tools20022.repository.msg.AccountParties3.CustodianForMinor, com.tools20022.repository.msg.AccountParties3.Nominee,
-						com.tools20022.repository.msg.AccountParties3.JointOwner, com.tools20022.repository.msg.AccountParties3.SecondaryOwner, com.tools20022.repository.msg.AccountParties3.Beneficiary,
-						com.tools20022.repository.msg.AccountParties3.PowerOfAttorney, com.tools20022.repository.msg.AccountParties3.LegalGuardian, com.tools20022.repository.msg.AccountParties3.SuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties3.Administrator, com.tools20022.repository.msg.AccountParties3.OtherParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties3.mmModificationScopeIndication, com.tools20022.repository.msg.AccountParties3.mmPrimaryOwner,
+						com.tools20022.repository.msg.AccountParties3.mmTrustee, com.tools20022.repository.msg.AccountParties3.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties3.mmNominee,
+						com.tools20022.repository.msg.AccountParties3.mmJointOwner, com.tools20022.repository.msg.AccountParties3.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties3.mmBeneficiary,
+						com.tools20022.repository.msg.AccountParties3.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties3.mmLegalGuardian, com.tools20022.repository.msg.AccountParties3.mmSuccessorOnDeath,
+						com.tools20022.repository.msg.AccountParties3.mmAdministrator, com.tools20022.repository.msg.AccountParties3.mmOtherParty);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountParties3";
 				definition = "Any party who is related to an investment account.\n\n";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties3.AccountOwnerRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties3.mmAccountOwnerRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification1Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getPrimaryOwner() {
+		return primaryOwner;
+	}
+
+	public void setPrimaryOwner(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 primaryOwner) {
+		this.primaryOwner = primaryOwner;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getTrustee() {
+		return trustee;
+	}
+
+	public void setTrustee(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 trustee) {
+		this.trustee = trustee;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getCustodianForMinor() {
+		return custodianForMinor;
+	}
+
+	public void setCustodianForMinor(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 custodianForMinor) {
+		this.custodianForMinor = custodianForMinor;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getNominee() {
+		return nominee;
+	}
+
+	public void setNominee(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 nominee) {
+		this.nominee = nominee;
+	}
+
+	public List<InvestmentAccountOwnershipInformation3> getJointOwner() {
+		return jointOwner;
+	}
+
+	public void setJointOwner(List<com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3> jointOwner) {
+		this.jointOwner = jointOwner;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getSecondaryOwner() {
+		return secondaryOwner;
+	}
+
+	public void setSecondaryOwner(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 secondaryOwner) {
+		this.secondaryOwner = secondaryOwner;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getBeneficiary() {
+		return beneficiary;
+	}
+
+	public void setBeneficiary(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 beneficiary) {
+		this.beneficiary = beneficiary;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getPowerOfAttorney() {
+		return powerOfAttorney;
+	}
+
+	public void setPowerOfAttorney(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 powerOfAttorney) {
+		this.powerOfAttorney = powerOfAttorney;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getLegalGuardian() {
+		return legalGuardian;
+	}
+
+	public void setLegalGuardian(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 legalGuardian) {
+		this.legalGuardian = legalGuardian;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getSuccessorOnDeath() {
+		return successorOnDeath;
+	}
+
+	public void setSuccessorOnDeath(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 successorOnDeath) {
+		this.successorOnDeath = successorOnDeath;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getAdministrator() {
+		return administrator;
+	}
+
+	public void setAdministrator(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 administrator) {
+		this.administrator = administrator;
+	}
+
+	public InvestmentAccountOwnershipInformation3 getOtherParty() {
+		return otherParty;
+	}
+
+	public void setOtherParty(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3 otherParty) {
+		this.otherParty = otherParty;
 	}
 }

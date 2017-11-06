@@ -35,38 +35,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#UnableToProcess
- * RejectReason1Code.UnableToProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmUnableToProcess
+ * RejectReason1Code.mmUnableToProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#InvalidMessage
- * RejectReason1Code.InvalidMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmInvalidMessage
+ * RejectReason1Code.mmInvalidMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#ParsingError
- * RejectReason1Code.ParsingError}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectReason1Code#Security
- * RejectReason1Code.Security}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmParsingError
+ * RejectReason1Code.mmParsingError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#InitiatingParty
- * RejectReason1Code.InitiatingParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmSecurity
+ * RejectReason1Code.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#RecipientParty
- * RejectReason1Code.RecipientParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmInitiatingParty
+ * RejectReason1Code.mmInitiatingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#DuplicateMessage
- * RejectReason1Code.DuplicateMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmRecipientParty
+ * RejectReason1Code.mmRecipientParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#ProtocolVersion
- * RejectReason1Code.ProtocolVersion}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmDuplicateMessage
+ * RejectReason1Code.mmDuplicateMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#MessageType
- * RejectReason1Code.MessageType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmProtocolVersion
+ * RejectReason1Code.mmProtocolVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RejectReason1Code#mmMessageType
+ * RejectReason1Code.mmMessageType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -113,17 +114,17 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#UnableToProcess
-	 * RejectReason2Code.UnableToProcess}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#mmUnableToProcess
+	 * RejectReason2Code.mmUnableToProcess}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnableToProcess = new MMCode() {
+	public static final MMCode mmUnableToProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToProcess";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.UnableToProcess);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.mmUnableToProcess);
 			owner_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
@@ -145,17 +146,17 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#InvalidMessage
-	 * RejectReason2Code.InvalidMessage}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#mmInvalidMessage
+	 * RejectReason2Code.mmInvalidMessage}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidMessage = new MMCode() {
+	public static final MMCode mmInvalidMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidMessage";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.InvalidMessage);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.mmInvalidMessage);
 			owner_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
@@ -177,17 +178,17 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#ParsingError
-	 * RejectReason2Code.ParsingError}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#mmParsingError
+	 * RejectReason2Code.mmParsingError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ParsingError = new MMCode() {
+	public static final MMCode mmParsingError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParsingError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.ParsingError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.mmParsingError);
 			owner_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
@@ -209,17 +210,17 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#Security
-	 * RejectReason2Code.Security}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#mmSecurity
+	 * RejectReason2Code.mmSecurity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Security = new MMCode() {
+	public static final MMCode mmSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.Security);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.mmSecurity);
 			owner_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
@@ -241,17 +242,17 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#InitiatingParty
-	 * RejectReason2Code.InitiatingParty}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#mmInitiatingParty
+	 * RejectReason2Code.mmInitiatingParty}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InitiatingParty = new MMCode() {
+	public static final MMCode mmInitiatingParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.InitiatingParty);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.mmInitiatingParty);
 			owner_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
@@ -273,17 +274,17 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#RecipientParty
-	 * RejectReason2Code.RecipientParty}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#mmRecipientParty
+	 * RejectReason2Code.mmRecipientParty}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RecipientParty = new MMCode() {
+	public static final MMCode mmRecipientParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.RecipientParty);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.mmRecipientParty);
 			owner_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
@@ -303,7 +304,7 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * name} = "DuplicateMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode DuplicateMessage = new MMCode() {
+	public static final MMCode mmDuplicateMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateMessage";
@@ -328,17 +329,17 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#ProtocolVersion
-	 * RejectReason2Code.ProtocolVersion}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#mmProtocolVersion
+	 * RejectReason2Code.mmProtocolVersion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ProtocolVersion = new MMCode() {
+	public static final MMCode mmProtocolVersion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.ProtocolVersion);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.mmProtocolVersion);
 			owner_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
@@ -360,17 +361,17 @@ public class RejectReason1Code extends RejectReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#MessageType
-	 * RejectReason2Code.MessageType}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectReason2Code#mmMessageType
+	 * RejectReason2Code.mmMessageType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MessageType = new MMCode() {
+	public static final MMCode mmMessageType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageType";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.MessageType);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason2Code.mmMessageType);
 			owner_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
@@ -378,16 +379,16 @@ public class RejectReason1Code extends RejectReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNPR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectReason1Code";
 				definition = "Reason of transmission of a rejection message in response to a request or an advice.";
 				nextVersions_lazy = () -> Arrays.asList(RejectReason2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason1Code.UnableToProcess, com.tools20022.repository.codeset.RejectReason1Code.InvalidMessage,
-						com.tools20022.repository.codeset.RejectReason1Code.ParsingError, com.tools20022.repository.codeset.RejectReason1Code.Security, com.tools20022.repository.codeset.RejectReason1Code.InitiatingParty,
-						com.tools20022.repository.codeset.RejectReason1Code.RecipientParty, com.tools20022.repository.codeset.RejectReason1Code.DuplicateMessage, com.tools20022.repository.codeset.RejectReason1Code.ProtocolVersion,
-						com.tools20022.repository.codeset.RejectReason1Code.MessageType);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectReason1Code.mmUnableToProcess, com.tools20022.repository.codeset.RejectReason1Code.mmInvalidMessage,
+						com.tools20022.repository.codeset.RejectReason1Code.mmParsingError, com.tools20022.repository.codeset.RejectReason1Code.mmSecurity, com.tools20022.repository.codeset.RejectReason1Code.mmInitiatingParty,
+						com.tools20022.repository.codeset.RejectReason1Code.mmRecipientParty, com.tools20022.repository.codeset.RejectReason1Code.mmDuplicateMessage, com.tools20022.repository.codeset.RejectReason1Code.mmProtocolVersion,
+						com.tools20022.repository.codeset.RejectReason1Code.mmMessageType);
 				trace_lazy = () -> RejectReasonCode.mmObject();
 			}
 		});

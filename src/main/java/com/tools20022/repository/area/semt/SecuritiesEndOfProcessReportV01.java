@@ -21,14 +21,12 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
-import com.tools20022.repository.msg.ConfirmationParties2;
-import com.tools20022.repository.msg.PartyIdentificationAndAccount79;
-import com.tools20022.repository.msg.Report3;
-import com.tools20022.repository.msg.SupplementaryData1;
+import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -74,27 +72,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#Pagination
- * SecuritiesEndOfProcessReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#mmPagination
+ * SecuritiesEndOfProcessReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#ReportGeneralDetails
- * SecuritiesEndOfProcessReportV01.ReportGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#mmReportGeneralDetails
+ * SecuritiesEndOfProcessReportV01.mmReportGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#ConfirmationParties
- * SecuritiesEndOfProcessReportV01.ConfirmationParties}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#mmConfirmationParties
+ * SecuritiesEndOfProcessReportV01.mmConfirmationParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#Investor
- * SecuritiesEndOfProcessReportV01.Investor}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#mmInvestor
+ * SecuritiesEndOfProcessReportV01.mmInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#SupplementaryData
- * SecuritiesEndOfProcessReportV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#mmSupplementaryData
+ * SecuritiesEndOfProcessReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#identifier
- * SecuritiesEndOfProcessReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.023.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesEndOfProcessReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<Pagination> pagination;
 	/**
 	 * Number used to sequence pages when it is not possible for data to be
 	 * conveyed in a single message and the data has to be split across several
@@ -136,16 +133,17 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Number used to sequence pages when it is not possible for data to be conveyed in a single message and the data has to be split across several pages (messages).";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Report3 reportGeneralDetails;
 	/**
 	 * Notifies the type of report transmitted.
 	 * <p>
@@ -168,17 +166,18 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * definition} = "Notifies the type of report transmitted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportGeneralDetails";
 			definition = "Notifies the type of report transmitted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Report3.mmObject();
 		}
 	};
+	protected List<ConfirmationParties2> confirmationParties;
 	/**
 	 * Parties involved in the confirmation of the details of a trade.
 	 * <p>
@@ -203,7 +202,7 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * "Parties involved in the confirmation of the details of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ConfirmationParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmConfirmationParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ConfPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,6 +212,7 @@ public class SecuritiesEndOfProcessReportV01 {
 			complexType_lazy = () -> ConfirmationParties2.mmObject();
 		}
 	};
+	protected List<PartyIdentificationAndAccount79> investor;
 	/**
 	 * Party that identifies the underlying investor.
 	 * <p>
@@ -236,7 +236,7 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * definition} = "Party that identifies the underlying investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Investor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Invstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,6 +246,7 @@ public class SecuritiesEndOfProcessReportV01 {
 			complexType_lazy = () -> PartyIdentificationAndAccount79.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -272,7 +273,7 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,33 +281,6 @@ public class SecuritiesEndOfProcessReportV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "023"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "023";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -320,12 +294,59 @@ public class SecuritiesEndOfProcessReportV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesEndOfPrcRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.Pagination, com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.ReportGeneralDetails,
-						com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.ConfirmationParties, com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.Investor,
-						com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmPagination, com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmReportGeneralDetails,
+						com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmConfirmationParties, com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmInvestor,
+						com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "023";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Pagination> getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(List<Pagination> pagination) {
+		this.pagination = pagination;
+	}
+
+	public Report3 getReportGeneralDetails() {
+		return reportGeneralDetails;
+	}
+
+	public void setReportGeneralDetails(Report3 reportGeneralDetails) {
+		this.reportGeneralDetails = reportGeneralDetails;
+	}
+
+	public List<ConfirmationParties2> getConfirmationParties() {
+		return confirmationParties;
+	}
+
+	public void setConfirmationParties(List<ConfirmationParties2> confirmationParties) {
+		this.confirmationParties = confirmationParties;
+	}
+
+	public List<PartyIdentificationAndAccount79> getInvestor() {
+		return investor;
+	}
+
+	public void setInvestor(List<PartyIdentificationAndAccount79> investor) {
+		this.investor = investor;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

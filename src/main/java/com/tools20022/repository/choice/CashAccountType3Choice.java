@@ -34,18 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.CashAccountType3Choice#Code
- * CashAccountType3Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashAccountType3Choice#Proprietary
- * CashAccountType3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountType3Choice#mmCode
+ * CashAccountType3Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountType3Choice#mmProprietary
+ * CashAccountType3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountType3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccountType5Code code;
 	/**
 	 * Type of cash account expressed as a code.
 	 * <p>
@@ -87,7 +89,7 @@ public class CashAccountType3Choice {
 	 * definition} = "Type of cash account expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountType3Choice.mmObject();
 			isDerived = false;
@@ -95,11 +97,12 @@ public class CashAccountType3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of cash account expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CashAccountType5Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Type of cash account expressed as a proprietary code.
 	 * <p>
@@ -127,7 +130,7 @@ public class CashAccountType3Choice {
 	 * definition} = "Type of cash account expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CashAccountType3Choice.mmObject();
 			isDerived = false;
@@ -135,23 +138,39 @@ public class CashAccountType3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of cash account expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAccountType3Choice.Code, com.tools20022.repository.choice.CashAccountType3Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAccountType3Choice.mmCode, com.tools20022.repository.choice.CashAccountType3Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType3Choice";
 				definition = "Choice of formats for the type of cash account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccountType5Code getCode() {
+		return code;
+	}
+
+	public void setCode(CashAccountType5Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification10#IdentificationCode
- * AccountIdentification10.IdentificationCode}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification10#mmIdentificationCode
+ * AccountIdentification10.mmIdentificationCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingAccountIdentification1Code identificationCode;
 	/**
 	 * Standard code to specify that announcement applies to all safekeeping
 	 * accounts that own underlying financial instrument.
@@ -95,17 +96,17 @@ public class AccountIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentification10.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "IdCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCode";
 			definition = "Standard code to specify that announcement applies to all safekeeping accounts that own underlying financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingAccountIdentification1Code.mmObject();
 		}
 	};
@@ -113,14 +114,22 @@ public class AccountIdentification10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification10.IdentificationCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification10.mmIdentificationCode);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification10";
 				definition = "Provides account identification information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingAccountIdentification1Code getIdentificationCode() {
+		return identificationCode;
+	}
+
+	public void setIdentificationCode(SafekeepingAccountIdentification1Code identificationCode) {
+		this.identificationCode = identificationCode;
 	}
 }

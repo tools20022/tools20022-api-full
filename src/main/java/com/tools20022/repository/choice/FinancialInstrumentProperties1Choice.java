@@ -19,7 +19,7 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#Equity
- * FinancialInstrumentProperties1Choice.Equity}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmEquity
+ * FinancialInstrumentProperties1Choice.mmEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#Debt
- * FinancialInstrumentProperties1Choice.Debt}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmDebt
+ * FinancialInstrumentProperties1Choice.mmDebt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#Option
- * FinancialInstrumentProperties1Choice.Option}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmOption
+ * FinancialInstrumentProperties1Choice.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#Warrant
- * FinancialInstrumentProperties1Choice.Warrant}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmWarrant
+ * FinancialInstrumentProperties1Choice.mmWarrant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#Future
- * FinancialInstrumentProperties1Choice.Future}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmFuture
+ * FinancialInstrumentProperties1Choice.mmFuture}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentProperties1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Equity1 equity;
 	/**
 	 * Financial instrument which represents a title of ownership in a company,
 	 * ie, the shareholder is entitled to a part of the company's profit -
@@ -110,21 +111,22 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Equity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEquity = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Equity.mmObject();
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
 			xmlTag = "Eqty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			definition = "Financial instrument which represents a title of ownership  in a company, ie,  the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, eg, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Equity1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Equity1.mmObject();
 		}
 	};
+	protected Debt1 debt;
 	/**
 	 * Any interest-bearing or discounted government or corporate security that
 	 * obligates the issuer to pay the bondholder a specified sum of money,
@@ -159,21 +161,22 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Debt = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebt = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
 			xmlTag = "Debt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debt";
 			definition = "Any interest-bearing or discounted government or corporate security that obligates the issuer to pay the bondholder a specified sum of money, usually at specific intervals, and to repay the principal amount of the loan at the maturity.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Debt1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Debt1.mmObject();
 		}
 	};
+	protected Option1 option;
 	/**
 	 * Right to buy (call) or sell (put) an underlying asset (securities, index,
 	 * commodities, etc) at the predetermined price within a specified period of
@@ -207,21 +210,22 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Option = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Option.mmObject();
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			isDerived = false;
 			xmlTag = "Optn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
 			definition = "Right to buy (call) or sell (put) an underlying asset (securities, index, commodities, etc) at the predetermined price within a specified period of time";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Option1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Option1.mmObject();
 		}
 	};
+	protected Warrant1 warrant;
 	/**
 	 * Financial instrument that gives the holder the right to purchase shares
 	 * or bonds at a given price within a specified time.
@@ -254,21 +258,22 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Warrant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmWarrant = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Warrant.mmObject();
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
 			xmlTag = "Warrt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warrant";
 			definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Warrant1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Warrant1.mmObject();
 		}
 	};
+	protected Future1 future;
 	/**
 	 * Agreement to buy or sell a specific amount of a commodity or financial
 	 * instrument at a particular price on a stipulated future date.
@@ -301,35 +306,75 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Future = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFuture = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Future.mmObject();
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
 			isDerived = false;
 			xmlTag = "Futr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
 			definition = "Agreement to buy or sell a specific amount of a commodity or financial instrument at a particular price on a stipulated future date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Future1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Future1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.Equity, com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.Debt,
-						com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.Option, com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.Warrant,
-						com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.Future);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmEquity, com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmDebt,
+						com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmOption, com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmWarrant,
+						com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmFuture);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentProperties1Choice";
 				definition = "Alternative identification of a financial instrument other than an identifier.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Equity1 getEquity() {
+		return equity;
+	}
+
+	public void setEquity(Equity1 equity) {
+		this.equity = equity;
+	}
+
+	public Debt1 getDebt() {
+		return debt;
+	}
+
+	public void setDebt(Debt1 debt) {
+		this.debt = debt;
+	}
+
+	public Option1 getOption() {
+		return option;
+	}
+
+	public void setOption(Option1 option) {
+		this.option = option;
+	}
+
+	public Warrant1 getWarrant() {
+		return warrant;
+	}
+
+	public void setWarrant(Warrant1 warrant) {
+		this.warrant = warrant;
+	}
+
+	public Future1 getFuture() {
+		return future;
+	}
+
+	public void setFuture(Future1 future) {
+		this.future = future;
 	}
 }

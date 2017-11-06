@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Recipient2Choice#KeyTransport
- * Recipient2Choice.KeyTransport}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Recipient2Choice#KEK
- * Recipient2Choice.KEK}</li>
+ * {@linkplain com.tools20022.repository.choice.Recipient2Choice#mmKeyTransport
+ * Recipient2Choice.mmKeyTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Recipient2Choice#mmKEK
+ * Recipient2Choice.mmKEK}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Recipient2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected KeyTransport2 keyTransport;
 	/**
 	 * Encryption key using previously distributed asymmetric public key.
 	 * <p>
@@ -98,13 +99,13 @@ public class Recipient2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Recipient3Choice#KeyTransport
-	 * Recipient3Choice.KeyTransport}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient3Choice#mmKeyTransport
+	 * Recipient3Choice.mmKeyTransport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient2Choice.mmObject();
 			isDerived = false;
@@ -112,13 +113,14 @@ public class Recipient2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyTransport";
 			definition = "Encryption key using previously distributed asymmetric public key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient3Choice.KeyTransport);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient3Choice.mmKeyTransport);
 			maxOccurs = 1;
-			type_lazy = () -> KeyTransport2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> KeyTransport2.mmObject();
 		}
 	};
+	protected KEK2 kEK;
 	/**
 	 * Encryption key using previously distributed symmetric key.
 	 * <p>
@@ -146,13 +148,13 @@ public class Recipient2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Recipient3Choice#KEK
-	 * Recipient3Choice.KEK}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Recipient3Choice#mmKEK
+	 * Recipient3Choice.mmKEK}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient2Choice.mmObject();
 			isDerived = false;
@@ -160,26 +162,42 @@ public class Recipient2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEK";
 			definition = "Encryption key using previously distributed symmetric key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient3Choice.KEK);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient3Choice.mmKEK);
 			maxOccurs = 1;
-			type_lazy = () -> KEK2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> KEK2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient2Choice.KeyTransport, com.tools20022.repository.choice.Recipient2Choice.KEK);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient2Choice.mmKeyTransport, com.tools20022.repository.choice.Recipient2Choice.mmKEK);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Recipient2Choice";
 				definition = "Transport key or key encryption key (KEK) for the recipient.";
-				previousVersion_lazy = () -> Recipient1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Recipient3Choice.mmObject());
+				previousVersion_lazy = () -> Recipient1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public KeyTransport2 getKeyTransport() {
+		return keyTransport;
+	}
+
+	public void setKeyTransport(KeyTransport2 keyTransport) {
+		this.keyTransport = keyTransport;
+	}
+
+	public KEK2 getKEK() {
+		return kEK;
+	}
+
+	public void setKEK(KEK2 kEK) {
+		this.kEK = kEK;
 	}
 }

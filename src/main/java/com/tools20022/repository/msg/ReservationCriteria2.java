@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Reservation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria to extract the reservation information and the expected
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationCriteria2#NewQueryName
- * ReservationCriteria2.NewQueryName}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationCriteria2#mmNewQueryName
+ * ReservationCriteria2.mmNewQueryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationCriteria2#SearchCriteria
- * ReservationCriteria2.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationCriteria2#mmSearchCriteria
+ * ReservationCriteria2.mmSearchCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationCriteria2#ReturnCriteria
- * ReservationCriteria2.ReturnCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationCriteria2#mmReturnCriteria
+ * ReservationCriteria2.mmReturnCriteria}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReservationCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text newQueryName;
 	/**
 	 * Name of the query defined by the search criteria and return criteria.
 	 * <p>
@@ -97,7 +99,7 @@ public class ReservationCriteria2 {
 	 * "Name of the query defined by the search criteria and return criteria. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReservationCriteria2.mmObject();
 			isDerived = false;
@@ -105,11 +107,12 @@ public class ReservationCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
 			definition = "Name of the query defined by the search criteria and return criteria. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ReservationSearchCriteria2> searchCriteria;
 	/**
 	 * Defines the criteria to extract the reservation information.
 	 * <p>
@@ -142,20 +145,21 @@ public class ReservationCriteria2 {
 	 * "Defines the criteria to extract the reservation information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReservationCriteria2.mmObject();
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
+			componentContext_lazy = () -> ReservationCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SchCrit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to extract the reservation information.";
 			minOccurs = 0;
-			type_lazy = () -> ReservationSearchCriteria2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria2.mmObject();
 		}
 	};
+	protected ReservationReturnCriteria returnCriteria;
 	/**
 	 * Defines the expected reservation report.
 	 * <p>
@@ -183,7 +187,7 @@ public class ReservationCriteria2 {
 	 * definition} = "Defines the expected reservation report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReservationCriteria2.mmObject();
 			isDerived = false;
@@ -191,25 +195,49 @@ public class ReservationCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the expected reservation report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReservationReturnCriteria.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReservationReturnCriteria.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationCriteria2.NewQueryName, com.tools20022.repository.msg.ReservationCriteria2.SearchCriteria,
-						com.tools20022.repository.msg.ReservationCriteria2.ReturnCriteria);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationCriteria2.mmNewQueryName, com.tools20022.repository.msg.ReservationCriteria2.mmSearchCriteria,
+						com.tools20022.repository.msg.ReservationCriteria2.mmReturnCriteria);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationCriteria2";
 				definition = "Defines the criteria to extract the reservation information and the expected reservation report. A name may be given to the new query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNewQueryName() {
+		return newQueryName;
+	}
+
+	public void setNewQueryName(Max35Text newQueryName) {
+		this.newQueryName = newQueryName;
+	}
+
+	public List<ReservationSearchCriteria2> getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(List<com.tools20022.repository.msg.ReservationSearchCriteria2> searchCriteria) {
+		this.searchCriteria = searchCriteria;
+	}
+
+	public ReservationReturnCriteria getReturnCriteria() {
+		return returnCriteria;
+	}
+
+	public void setReturnCriteria(com.tools20022.repository.msg.ReservationReturnCriteria returnCriteria) {
+		this.returnCriteria = returnCriteria;
 	}
 }

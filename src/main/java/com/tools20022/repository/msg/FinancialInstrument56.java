@@ -40,48 +40,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#Identification
- * FinancialInstrument56.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument56#Name
- * FinancialInstrument56.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmIdentification
+ * FinancialInstrument56.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmName
+ * FinancialInstrument56.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#ShortName
- * FinancialInstrument56.ShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmShortName
+ * FinancialInstrument56.mmShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#SupplementaryIdentification
- * FinancialInstrument56.SupplementaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmSupplementaryIdentification
+ * FinancialInstrument56.mmSupplementaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#ClassType
- * FinancialInstrument56.ClassType}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmClassType
+ * FinancialInstrument56.mmClassType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#SecuritiesForm
- * FinancialInstrument56.SecuritiesForm}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmSecuritiesForm
+ * FinancialInstrument56.mmSecuritiesForm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#DistributionPolicy
- * FinancialInstrument56.DistributionPolicy}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmDistributionPolicy
+ * FinancialInstrument56.mmDistributionPolicy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#ProductGroup
- * FinancialInstrument56.ProductGroup}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmProductGroup
+ * FinancialInstrument56.mmProductGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#BlockedHoldingDetails
- * FinancialInstrument56.BlockedHoldingDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument56#Pledging
- * FinancialInstrument56.Pledging}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmBlockedHoldingDetails
+ * FinancialInstrument56.mmBlockedHoldingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#Collateral
- * FinancialInstrument56.Collateral}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmPledging
+ * FinancialInstrument56.mmPledging}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#ThirdPartyRights
- * FinancialInstrument56.ThirdPartyRights}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmCollateral
+ * FinancialInstrument56.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#FundOwnership
- * FinancialInstrument56.FundOwnership}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmThirdPartyRights
+ * FinancialInstrument56.mmThirdPartyRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#FundIntention
- * FinancialInstrument56.FundIntention}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmFundOwnership
+ * FinancialInstrument56.mmFundOwnership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#OperationalStatus
- * FinancialInstrument56.OperationalStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmFundIntention
+ * FinancialInstrument56.mmFundIntention}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmOperationalStatus
+ * FinancialInstrument56.mmOperationalStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -90,8 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +112,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument56 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification25Choice identification;
 	/**
 	 * Identification of the security by an ISIN.
 	 * <p>
@@ -124,8 +126,8 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,25 +147,26 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#Identification
-	 * FinancialInstrument51.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmIdentification
+	 * FinancialInstrument51.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the security by an ISIN.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification25Choice.mmObject();
 		}
 	};
+	protected Max350Text name;
 	/**
 	 * Name of the financial instrument in free format text.
 	 * <p>
@@ -176,8 +179,8 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#FullName
-	 * LocalName.FullName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+	 * LocalName.mmFullName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,25 +200,26 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#Name
-	 * FinancialInstrument51.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmName
+	 * FinancialInstrument51.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.FullName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.Name;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text shortName;
 	/**
 	 * Financial Instrument Short Name (FISN) expressed in conformance with the
 	 * ISO 18774 standard.
@@ -229,8 +233,8 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#ShortName
-	 * LocalName.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmShortName
+	 * LocalName.mmShortName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,25 +256,26 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#ShortName
-	 * FinancialInstrument51.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmShortName
+	 * FinancialInstrument51.mmShortName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmShortName;
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.ShortName;
 			isDerived = false;
 			xmlTag = "ShrtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.ShortName;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmShortName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text supplementaryIdentification;
 	/**
 	 * Additional information about the financial instrument to help identify
 	 * the instrument.
@@ -302,11 +307,11 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#SupplementaryIdentification
-	 * FinancialInstrument51.SupplementaryIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmSupplementaryIdentification
+	 * FinancialInstrument51.mmSupplementaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SupplementaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSupplementaryIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			isDerived = false;
@@ -314,12 +319,13 @@ public class FinancialInstrument56 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryIdentification";
 			definition = "Additional information about the financial instrument to help identify the instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.SupplementaryIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmSupplementaryIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text classType;
 	/**
 	 * Features of units offered by the fund. For example, a unit may have a
 	 * specific load structure, for example, front end or back end, an income
@@ -336,8 +342,8 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#ClassType
-	 * InvestmentFundClass.ClassType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmClassType
+	 * InvestmentFundClass.mmClassType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -359,25 +365,26 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#ClassType
-	 * FinancialInstrument51.ClassType}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmClassType
+	 * FinancialInstrument51.mmClassType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.ClassType;
 			isDerived = false;
 			xmlTag = "ClssTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassType";
 			definition = "Features of units offered by the fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy,  for example, pay out or accumulate, or a trailer policy,  for example, with or without. Fund classes are typically denoted by a single character,  for example, 'Class A', 'Class 2'.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.ClassType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmClassType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected FormOfSecurity1Code securitiesForm;
 	/**
 	 * Form of ownership, that is registered or bearer.
 	 * <p>
@@ -391,8 +398,8 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#RegistrationForm
-	 * Security.RegistrationForm}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRegistrationForm
+	 * Security.mmRegistrationForm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -412,25 +419,26 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#SecuritiesForm
-	 * FinancialInstrument51.SecuritiesForm}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmSecuritiesForm
+	 * FinancialInstrument51.mmSecuritiesForm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesForm = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistrationForm;
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.RegistrationForm;
 			isDerived = false;
 			xmlTag = "SctiesForm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesForm";
 			definition = "Form of ownership, that is registered or bearer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.SecuritiesForm;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmSecuritiesForm;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
 		}
 	};
+	protected DistributionPolicy1Code distributionPolicy;
 	/**
 	 * Income policy relating to the class type, that is, if income is paid out
 	 * or retained in the fund.
@@ -445,8 +453,8 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#DistributionPolicy
-	 * InvestmentFundClass.DistributionPolicy}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDistributionPolicy
+	 * InvestmentFundClass.mmDistributionPolicy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -468,25 +476,26 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#DistributionPolicy
-	 * FinancialInstrument51.DistributionPolicy}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmDistributionPolicy
+	 * FinancialInstrument51.mmDistributionPolicy}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DistributionPolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDistributionPolicy = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDistributionPolicy;
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.DistributionPolicy;
 			isDerived = false;
 			xmlTag = "DstrbtnPlcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionPolicy";
 			definition = "Income policy relating to the class type, that is, if income is paid out or retained in the fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.DistributionPolicy;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmDistributionPolicy;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
 		}
 	};
+	protected Max140Text productGroup;
 	/**
 	 * Company specific description of a group of funds.
 	 * <p>
@@ -499,8 +508,8 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#ProductGroup
-	 * InvestmentFundClass.ProductGroup}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProductGroup
+	 * InvestmentFundClass.mmProductGroup}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -520,25 +529,26 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#ProductGroup
-	 * FinancialInstrument51.ProductGroup}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmProductGroup
+	 * FinancialInstrument51.mmProductGroup}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProductGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProductGroup = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProductGroup;
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.ProductGroup;
 			isDerived = false;
 			xmlTag = "PdctGrp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductGroup";
 			definition = "Company specific description of a group of funds.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.ProductGroup;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmProductGroup;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected BlockedHoldingDetails2 blockedHoldingDetails;
 	/**
 	 * When an account at fund or security level is blocked, this specifies
 	 * details on how the holding is blocked.
@@ -576,25 +586,26 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#BlockedHoldingDetails
-	 * FinancialInstrument51.BlockedHoldingDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmBlockedHoldingDetails
+	 * FinancialInstrument51.mmBlockedHoldingDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BlockedHoldingDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBlockedHoldingDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			isDerived = false;
 			xmlTag = "BlckdHldgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedHoldingDetails";
 			definition = "When an account at fund or security level is blocked, this specifies details on how the holding is blocked.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.BlockedHoldingDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmBlockedHoldingDetails;
 			maxOccurs = 1;
-			complexType_lazy = () -> BlockedHoldingDetails2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.BlockedHoldingDetails2.mmObject();
 		}
 	};
+	protected Eligible1Code pledging;
 	/**
 	 * Specifies whether the holdings in the account are eligible for pledging.
 	 * <p>
@@ -626,11 +637,11 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#Pledging
-	 * FinancialInstrument51.Pledging}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmPledging
+	 * FinancialInstrument51.mmPledging}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Pledging = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPledging = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			isDerived = false;
@@ -638,12 +649,13 @@ public class FinancialInstrument56 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledging";
 			definition = "Specifies whether the holdings in the account are eligible for pledging.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.Pledging;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmPledging;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Eligible1Code.mmObject();
 		}
 	};
+	protected Collateral1Code collateral;
 	/**
 	 * Specifies whether the holdings in the account are used as collateral.
 	 * <p>
@@ -674,11 +686,11 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#Collateral
-	 * FinancialInstrument51.Collateral}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmCollateral
+	 * FinancialInstrument51.mmCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Collateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateral = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			isDerived = false;
@@ -686,12 +698,13 @@ public class FinancialInstrument56 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
 			definition = "Specifies whether the holdings in the account are used as collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.Collateral;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmCollateral;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Collateral1Code.mmObject();
 		}
 	};
+	protected ThirdPartyRights1 thirdPartyRights;
 	/**
 	 * Details of third party rights.
 	 * <p>
@@ -719,11 +732,11 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#ThirdPartyRights
-	 * FinancialInstrument51.ThirdPartyRights}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmThirdPartyRights
+	 * FinancialInstrument51.mmThirdPartyRights}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ThirdPartyRights = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmThirdPartyRights = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			isDerived = false;
@@ -731,13 +744,14 @@ public class FinancialInstrument56 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdPartyRights";
 			definition = "Details of third party rights.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.ThirdPartyRights;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmThirdPartyRights;
 			maxOccurs = 1;
-			type_lazy = () -> ThirdPartyRights1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ThirdPartyRights1.mmObject();
 		}
 	};
+	protected FundOwnership1Code fundOwnership;
 	/**
 	 * Specifies if all the shares are owned exclusively by the fund company.
 	 * <p>
@@ -769,11 +783,11 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#FundOwnership
-	 * FinancialInstrument51.FundOwnership}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmFundOwnership
+	 * FinancialInstrument51.mmFundOwnership}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FundOwnership = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFundOwnership = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			isDerived = false;
@@ -781,12 +795,13 @@ public class FinancialInstrument56 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundOwnership";
 			definition = "Specifies if all the shares are owned exclusively by the fund company. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.FundOwnership;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmFundOwnership;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> FundOwnership1Code.mmObject();
 		}
 	};
+	protected FundIntention1Code fundIntention;
 	/**
 	 * Specifies if the fund is intended for qualified investors.
 	 * <p>
@@ -817,11 +832,11 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#FundIntention
-	 * FinancialInstrument51.FundIntention}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmFundIntention
+	 * FinancialInstrument51.mmFundIntention}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FundIntention = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFundIntention = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			isDerived = false;
@@ -829,12 +844,13 @@ public class FinancialInstrument56 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIntention";
 			definition = "Specifies if the fund is intended for qualified investors.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.FundIntention;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmFundIntention;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> FundIntention1Code.mmObject();
 		}
 	};
+	protected OperationalStatus1Code operationalStatus;
 	/**
 	 * Operational status of the fund.
 	 * <p>
@@ -864,11 +880,11 @@ public class FinancialInstrument56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#OperationalStatus
-	 * FinancialInstrument51.OperationalStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmOperationalStatus
+	 * FinancialInstrument51.mmOperationalStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OperationalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperationalStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrument56.mmObject();
 			isDerived = false;
@@ -876,9 +892,9 @@ public class FinancialInstrument56 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalStatus";
 			definition = "Operational status of the fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.OperationalStatus;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmOperationalStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OperationalStatus1Code.mmObject();
 		}
 	};
@@ -886,14 +902,14 @@ public class FinancialInstrument56 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument56.Identification, com.tools20022.repository.msg.FinancialInstrument56.Name,
-						com.tools20022.repository.msg.FinancialInstrument56.ShortName, com.tools20022.repository.msg.FinancialInstrument56.SupplementaryIdentification, com.tools20022.repository.msg.FinancialInstrument56.ClassType,
-						com.tools20022.repository.msg.FinancialInstrument56.SecuritiesForm, com.tools20022.repository.msg.FinancialInstrument56.DistributionPolicy, com.tools20022.repository.msg.FinancialInstrument56.ProductGroup,
-						com.tools20022.repository.msg.FinancialInstrument56.BlockedHoldingDetails, com.tools20022.repository.msg.FinancialInstrument56.Pledging, com.tools20022.repository.msg.FinancialInstrument56.Collateral,
-						com.tools20022.repository.msg.FinancialInstrument56.ThirdPartyRights, com.tools20022.repository.msg.FinancialInstrument56.FundOwnership, com.tools20022.repository.msg.FinancialInstrument56.FundIntention,
-						com.tools20022.repository.msg.FinancialInstrument56.OperationalStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument56.mmIdentification, com.tools20022.repository.msg.FinancialInstrument56.mmName,
+						com.tools20022.repository.msg.FinancialInstrument56.mmShortName, com.tools20022.repository.msg.FinancialInstrument56.mmSupplementaryIdentification, com.tools20022.repository.msg.FinancialInstrument56.mmClassType,
+						com.tools20022.repository.msg.FinancialInstrument56.mmSecuritiesForm, com.tools20022.repository.msg.FinancialInstrument56.mmDistributionPolicy, com.tools20022.repository.msg.FinancialInstrument56.mmProductGroup,
+						com.tools20022.repository.msg.FinancialInstrument56.mmBlockedHoldingDetails, com.tools20022.repository.msg.FinancialInstrument56.mmPledging, com.tools20022.repository.msg.FinancialInstrument56.mmCollateral,
+						com.tools20022.repository.msg.FinancialInstrument56.mmThirdPartyRights, com.tools20022.repository.msg.FinancialInstrument56.mmFundOwnership, com.tools20022.repository.msg.FinancialInstrument56.mmFundIntention,
+						com.tools20022.repository.msg.FinancialInstrument56.mmOperationalStatus);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument56";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.";
@@ -901,5 +917,125 @@ public class FinancialInstrument56 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification25Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(SecurityIdentification25Choice identification) {
+		this.identification = identification;
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getShortName() {
+		return shortName;
+	}
+
+	public void setShortName(Max35Text shortName) {
+		this.shortName = shortName;
+	}
+
+	public Max35Text getSupplementaryIdentification() {
+		return supplementaryIdentification;
+	}
+
+	public void setSupplementaryIdentification(Max35Text supplementaryIdentification) {
+		this.supplementaryIdentification = supplementaryIdentification;
+	}
+
+	public Max35Text getClassType() {
+		return classType;
+	}
+
+	public void setClassType(Max35Text classType) {
+		this.classType = classType;
+	}
+
+	public FormOfSecurity1Code getSecuritiesForm() {
+		return securitiesForm;
+	}
+
+	public void setSecuritiesForm(FormOfSecurity1Code securitiesForm) {
+		this.securitiesForm = securitiesForm;
+	}
+
+	public DistributionPolicy1Code getDistributionPolicy() {
+		return distributionPolicy;
+	}
+
+	public void setDistributionPolicy(DistributionPolicy1Code distributionPolicy) {
+		this.distributionPolicy = distributionPolicy;
+	}
+
+	public Max140Text getProductGroup() {
+		return productGroup;
+	}
+
+	public void setProductGroup(Max140Text productGroup) {
+		this.productGroup = productGroup;
+	}
+
+	public BlockedHoldingDetails2 getBlockedHoldingDetails() {
+		return blockedHoldingDetails;
+	}
+
+	public void setBlockedHoldingDetails(com.tools20022.repository.msg.BlockedHoldingDetails2 blockedHoldingDetails) {
+		this.blockedHoldingDetails = blockedHoldingDetails;
+	}
+
+	public Eligible1Code getPledging() {
+		return pledging;
+	}
+
+	public void setPledging(Eligible1Code pledging) {
+		this.pledging = pledging;
+	}
+
+	public Collateral1Code getCollateral() {
+		return collateral;
+	}
+
+	public void setCollateral(Collateral1Code collateral) {
+		this.collateral = collateral;
+	}
+
+	public ThirdPartyRights1 getThirdPartyRights() {
+		return thirdPartyRights;
+	}
+
+	public void setThirdPartyRights(com.tools20022.repository.msg.ThirdPartyRights1 thirdPartyRights) {
+		this.thirdPartyRights = thirdPartyRights;
+	}
+
+	public FundOwnership1Code getFundOwnership() {
+		return fundOwnership;
+	}
+
+	public void setFundOwnership(FundOwnership1Code fundOwnership) {
+		this.fundOwnership = fundOwnership;
+	}
+
+	public FundIntention1Code getFundIntention() {
+		return fundIntention;
+	}
+
+	public void setFundIntention(FundIntention1Code fundIntention) {
+		this.fundIntention = fundIntention;
+	}
+
+	public OperationalStatus1Code getOperationalStatus() {
+		return operationalStatus;
+	}
+
+	public void setOperationalStatus(OperationalStatus1Code operationalStatus) {
+		this.operationalStatus = operationalStatus;
 	}
 }

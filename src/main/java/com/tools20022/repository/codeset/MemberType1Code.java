@@ -34,23 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.MemberTypeCode MemberTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#Direct
- * MemberType1Code.Direct}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#Indirect
- * MemberType1Code.Indirect}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#Remote
- * MemberType1Code.Remote}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#EURO1
- * MemberType1Code.EURO1}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#STEP1
- * MemberType1Code.STEP1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmDirect
+ * MemberType1Code.mmDirect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmIndirect
+ * MemberType1Code.mmIndirect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmRemote
+ * MemberType1Code.mmRemote}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmEURO1
+ * MemberType1Code.mmEURO1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmSTEP1
+ * MemberType1Code.mmSTEP1}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "Direct"</li>
 	 * </ul>
 	 */
-	public static final MMCode Direct = new MMCode() {
+	public static final MMCode mmDirect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
@@ -111,7 +111,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "Indirect"</li>
 	 * </ul>
 	 */
-	public static final MMCode Indirect = new MMCode() {
+	public static final MMCode mmIndirect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indirect";
@@ -134,7 +134,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "Remote"</li>
 	 * </ul>
 	 */
-	public static final MMCode Remote = new MMCode() {
+	public static final MMCode mmRemote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Remote";
@@ -157,7 +157,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "EURO1"</li>
 	 * </ul>
 	 */
-	public static final MMCode EURO1 = new MMCode() {
+	public static final MMCode mmEURO1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EURO1";
@@ -180,7 +180,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "STEP1"</li>
 	 * </ul>
 	 */
-	public static final MMCode STEP1 = new MMCode() {
+	public static final MMCode mmSTEP1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "STEP1";
@@ -191,13 +191,13 @@ public class MemberType1Code extends MemberTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DRCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MemberType1Code";
 				definition = "Specifies the nature of the membership of a party in a system. A system may recognise different types of membership, with different related rights and obligations.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberType1Code.Direct, com.tools20022.repository.codeset.MemberType1Code.Indirect, com.tools20022.repository.codeset.MemberType1Code.Remote,
-						com.tools20022.repository.codeset.MemberType1Code.EURO1, com.tools20022.repository.codeset.MemberType1Code.STEP1);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberType1Code.mmDirect, com.tools20022.repository.codeset.MemberType1Code.mmIndirect, com.tools20022.repository.codeset.MemberType1Code.mmRemote,
+						com.tools20022.repository.codeset.MemberType1Code.mmEURO1, com.tools20022.repository.codeset.MemberType1Code.mmSTEP1);
 				trace_lazy = () -> MemberTypeCode.mmObject();
 			}
 		});

@@ -53,18 +53,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV01#Header
- * TerminalManagementRejectionV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV01#mmHeader
+ * TerminalManagementRejectionV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV01#Reject
- * TerminalManagementRejectionV01.Reject}</li>
+ * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV01#mmReject
+ * TerminalManagementRejectionV01.mmReject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV01#identifier
- * TerminalManagementRejectionV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catm.004.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminalManagementRejectionV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header6 header;
 	/**
 	 * Rejection message management information.
 	 * <p>
@@ -112,24 +111,25 @@ public class TerminalManagementRejectionV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV02#Header
-	 * TerminalManagementRejectionV02.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV02#mmHeader
+	 * TerminalManagementRejectionV02.mmHeader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Rejection message management information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV02.Header);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV02.mmHeader);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header6.mmObject();
 		}
 	};
+	protected AcceptorRejection1 reject;
 	/**
 	 * Information related to the reject.
 	 * <p>
@@ -155,49 +155,22 @@ public class TerminalManagementRejectionV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV02#Reject
-	 * TerminalManagementRejectionV02.Reject}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV02#mmReject
+	 * TerminalManagementRejectionV02.mmReject}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rjct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
 			definition = "Information related to the reject.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV02.Reject);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV02.mmReject);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catm";
-			messageFunctionality = "004";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -212,10 +185,33 @@ public class TerminalManagementRejectionV01 {
 				rootElement = "Document";
 				xmlTag = "TermnlMgmtRjctn";
 				businessArea_lazy = () -> TerminalManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV01.Header, com.tools20022.repository.area.catm.TerminalManagementRejectionV01.Reject);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catm.TerminalManagementRejectionV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV01.mmHeader, com.tools20022.repository.area.catm.TerminalManagementRejectionV01.mmReject);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catm";
+						messageFunctionality = "004";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header6 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header6 header) {
+		this.header = header;
+	}
+
+	public AcceptorRejection1 getReject() {
+		return reject;
+	}
+
+	public void setReject(AcceptorRejection1 reject) {
+		this.reject = reject;
 	}
 }

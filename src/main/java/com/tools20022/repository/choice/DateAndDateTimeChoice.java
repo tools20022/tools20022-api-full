@@ -33,11 +33,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateAndDateTimeChoice#Date
- * DateAndDateTimeChoice.Date}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateAndDateTimeChoice#DateTime
- * DateAndDateTimeChoice.DateTime}</li>
+ * {@linkplain com.tools20022.repository.choice.DateAndDateTimeChoice#mmDate
+ * DateAndDateTimeChoice.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateAndDateTimeChoice#mmDateTime
+ * DateAndDateTimeChoice.mmDateTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01#DateOfAdvice
- * UndertakingIssuanceAdviceV01.DateOfAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01#mmDateOfAdvice
+ * UndertakingIssuanceAdviceV01.mmDateOfAdvice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateAndDateTimeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Specified date.
 	 * <p>
@@ -94,7 +96,7 @@ public class DateAndDateTimeChoice {
 	 * definition} = "Specified date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndDateTimeChoice.mmObject();
 			isDerived = false;
@@ -102,11 +104,12 @@ public class DateAndDateTimeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Specified date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime dateTime;
 	/**
 	 * Specified date and time.
 	 * <p>
@@ -134,7 +137,7 @@ public class DateAndDateTimeChoice {
 	 * definition} = "Specified date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndDateTimeChoice.mmObject();
 			isDerived = false;
@@ -142,8 +145,8 @@ public class DateAndDateTimeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Specified date and time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -151,14 +154,30 @@ public class DateAndDateTimeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeChoice.Date, com.tools20022.repository.choice.DateAndDateTimeChoice.DateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01.DateOfAdvice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeChoice.mmDate, com.tools20022.repository.choice.DateAndDateTimeChoice.mmDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01.mmDateOfAdvice);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateAndDateTimeChoice";
 				definition = "Choice between a date or a date and time format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public ISODateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(ISODateTime dateTime) {
+		this.dateTime = dateTime;
 	}
 }

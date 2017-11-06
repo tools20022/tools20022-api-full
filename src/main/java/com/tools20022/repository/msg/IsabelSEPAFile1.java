@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the characteristics for a SEPA formatted payment initiation file.
@@ -34,21 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelSEPAFile1#SEPAIndicator
- * IsabelSEPAFile1.SEPAIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelSEPAFile1#CategoryPurpose
- * IsabelSEPAFile1.CategoryPurpose}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSEPAFile1#mmSEPAIndicator
+ * IsabelSEPAFile1.mmSEPAIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelSEPAFile1#MarketPractices
- * IsabelSEPAFile1.MarketPractices}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSEPAFile1#mmCategoryPurpose
+ * IsabelSEPAFile1.mmCategoryPurpose}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSEPAFile1#mmMarketPractices
+ * IsabelSEPAFile1.mmMarketPractices}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelSEPAFile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator sEPAIndicator;
 	/**
 	 * Specifies whether the SEPA formatted file is compliant to the SEPA
 	 * rulebook.
@@ -95,7 +98,7 @@ public class IsabelSEPAFile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SEPAIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSEPAIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
 			isDerived = false;
@@ -103,11 +106,12 @@ public class IsabelSEPAFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAIndicator";
 			definition = "Specifies whether the SEPA formatted file is compliant to the SEPA rulebook.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Max6Text categoryPurpose;
 	/**
 	 * High level category purpose of the payment initiation messages in the
 	 * file, based on the SEPA rulebook.
@@ -138,7 +142,7 @@ public class IsabelSEPAFile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CategoryPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCategoryPurpose = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
 			isDerived = false;
@@ -146,11 +150,12 @@ public class IsabelSEPAFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryPurpose";
 			definition = "High level category purpose of the payment initiation messages in the file, based on the SEPA rulebook.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	protected List<Max35Text> marketPractices;
 	/**
 	 * Local market practices applicable to the SEPA file.
 	 * <p>
@@ -178,7 +183,7 @@ public class IsabelSEPAFile1 {
 	 * definition} = "Local market practices applicable to the SEPA file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketPractices = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketPractices = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
 			isDerived = false;
@@ -186,8 +191,8 @@ public class IsabelSEPAFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPractices";
 			definition = "Local market practices applicable to the SEPA file.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -195,14 +200,38 @@ public class IsabelSEPAFile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSEPAFile1.SEPAIndicator, com.tools20022.repository.msg.IsabelSEPAFile1.CategoryPurpose,
-						com.tools20022.repository.msg.IsabelSEPAFile1.MarketPractices);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSEPAFile1.mmSEPAIndicator, com.tools20022.repository.msg.IsabelSEPAFile1.mmCategoryPurpose,
+						com.tools20022.repository.msg.IsabelSEPAFile1.mmMarketPractices);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSEPAFile1";
 				definition = "Specifies the characteristics for a SEPA formatted payment initiation file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getSEPAIndicator() {
+		return sEPAIndicator;
+	}
+
+	public void setSEPAIndicator(TrueFalseIndicator sEPAIndicator) {
+		this.sEPAIndicator = sEPAIndicator;
+	}
+
+	public Max6Text getCategoryPurpose() {
+		return categoryPurpose;
+	}
+
+	public void setCategoryPurpose(Max6Text categoryPurpose) {
+		this.categoryPurpose = categoryPurpose;
+	}
+
+	public List<Max35Text> getMarketPractices() {
+		return marketPractices;
+	}
+
+	public void setMarketPractices(List<Max35Text> marketPractices) {
+		this.marketPractices = marketPractices;
 	}
 }

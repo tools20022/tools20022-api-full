@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SuspendedStatusReason4#Reason
- * SuspendedStatusReason4.Reason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason4#AdditionalInformation
- * SuspendedStatusReason4.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason4#mmReason
+ * SuspendedStatusReason4.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason4#mmAdditionalInformation
+ * SuspendedStatusReason4.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SuspendedStatusReason4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SuspendedStatusReason5Choice reason;
 	/**
 	 * Reason for the conditionally accepted status expressed as a code.
 	 * <p>
@@ -100,26 +102,27 @@ public class SuspendedStatusReason4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3#Reason
-	 * ConditionallyAcceptedStatusReason3.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3#mmReason
+	 * ConditionallyAcceptedStatusReason3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SuspendedStatusReason4.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> SuspendedStatusReason4.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the conditionally accepted status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3.Reason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3.mmReason;
 			maxOccurs = 1;
-			type_lazy = () -> SuspendedStatusReason5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SuspendedStatusReason5Choice.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the suspended reason.
 	 * <p>
@@ -148,11 +151,11 @@ public class SuspendedStatusReason4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3#AdditionalInformation
-	 * ConditionallyAcceptedStatusReason3.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3#mmAdditionalInformation
+	 * ConditionallyAcceptedStatusReason3.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SuspendedStatusReason4.mmObject();
 			isDerived = false;
@@ -160,9 +163,9 @@ public class SuspendedStatusReason4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the suspended reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3.AdditionalInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -170,9 +173,9 @@ public class SuspendedStatusReason4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason4.Reason, com.tools20022.repository.msg.SuspendedStatusReason4.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason4.mmReason, com.tools20022.repository.msg.SuspendedStatusReason4.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SuspendedStatusReason4";
 				definition = "Reason for a suspended status.";
@@ -180,5 +183,21 @@ public class SuspendedStatusReason4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SuspendedStatusReason5Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(SuspendedStatusReason5Choice reason) {
+		this.reason = reason;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

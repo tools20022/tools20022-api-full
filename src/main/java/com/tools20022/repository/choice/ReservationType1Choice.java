@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ReservationType1Choice#Code
- * ReservationType1Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationType1Choice#Proprietary
- * ReservationType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ReservationType1Choice#mmCode
+ * ReservationType1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReservationType1Choice#mmProprietary
+ * ReservationType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReservationType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReservationType2Code code;
 	/**
 	 * Liquidity transfer request type, in a coded form.
 	 * <p>
@@ -75,8 +77,8 @@ public class ReservationType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Reservation#ReservationType
-	 * Reservation.ReservationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reservation#mmReservationType
+	 * Reservation.mmReservationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +97,21 @@ public class ReservationType1Choice {
 	 * definition} = "Liquidity transfer request type, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.mmReservationType;
 			componentContext_lazy = () -> ReservationType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.ReservationType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Liquidity transfer request type, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReservationType2Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Liquidity transfer request type, in a proprietary form.
 	 * <p>
@@ -121,8 +124,8 @@ public class ReservationType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Reservation#ReservationType
-	 * Reservation.ReservationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reservation#mmReservationType
+	 * Reservation.mmReservationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +144,17 @@ public class ReservationType1Choice {
 	 * definition} = "Liquidity transfer request type, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.mmReservationType;
 			componentContext_lazy = () -> ReservationType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.ReservationType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Liquidity transfer request type, in a proprietary form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -159,14 +162,30 @@ public class ReservationType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationType1Choice.Code, com.tools20022.repository.choice.ReservationType1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationType1Choice.mmCode, com.tools20022.repository.choice.ReservationType1Choice.mmProprietary);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReservationType1Choice";
 				definition = "Defines the type of action to be performed in the request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReservationType2Code getCode() {
+		return code;
+	}
+
+	public void setCode(ReservationType2Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -40,46 +40,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#Operating
- * MarketIdentification92.Operating}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#Segment
- * MarketIdentification92.Segment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#Type
- * MarketIdentification92.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmOperating
+ * MarketIdentification92.mmOperating}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#Category
- * MarketIdentification92.Category}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmSegment
+ * MarketIdentification92.mmSegment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#mmType
+ * MarketIdentification92.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#InstitutionName
- * MarketIdentification92.InstitutionName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#Acronym
- * MarketIdentification92.Acronym}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#City
- * MarketIdentification92.City}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#Country
- * MarketIdentification92.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmCategory
+ * MarketIdentification92.mmCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#AuthorityName
- * MarketIdentification92.AuthorityName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#WebSite
- * MarketIdentification92.WebSite}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#Note
- * MarketIdentification92.Note}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmInstitutionName
+ * MarketIdentification92.mmInstitutionName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#Modification
- * MarketIdentification92.Modification}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmAcronym
+ * MarketIdentification92.mmAcronym}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#mmCity
+ * MarketIdentification92.mmCity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#CreationDate
- * MarketIdentification92.CreationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmCountry
+ * MarketIdentification92.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#ValidityPeriod
- * MarketIdentification92.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmAuthorityName
+ * MarketIdentification92.mmAuthorityName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#StatusDate
- * MarketIdentification92.StatusDate}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmWebSite
+ * MarketIdentification92.mmWebSite}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92#mmNote
+ * MarketIdentification92.mmNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification92#LastUpdatedDate
- * MarketIdentification92.LastUpdatedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmModification
+ * MarketIdentification92.mmModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmCreationDate
+ * MarketIdentification92.mmCreationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmValidityPeriod
+ * MarketIdentification92.mmValidityPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmStatusDate
+ * MarketIdentification92.mmStatusDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmLastUpdatedDate
+ * MarketIdentification92.mmLastUpdatedDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -89,16 +93,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01#MarketIdentification
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01#mmMarketIdentification
  * FinancialInstrumentReportingMarketIdentificationCodeReportV01.
- * MarketIdentification}</li>
+ * mmMarketIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketIdentification92 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MICIdentifier operating;
 	/**
 	 * Operating MIC of the venue.
 	 * <p>
@@ -125,8 +130,8 @@ public class MarketIdentification92 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Market#Identification
-	 * Market.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Market#mmIdentification
+	 * Market.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +150,21 @@ public class MarketIdentification92 {
 	 * definition} = "Operating MIC of the venue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Operating = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperating = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Market.mmIdentification;
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Market.Identification;
 			isDerived = false;
 			xmlTag = "Oprg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operating";
 			definition = "Operating MIC of the venue.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected MICIdentifier segment;
 	/**
 	 * Segment MIC of the venue where it exists, otherwise the Operating MIC.
 	 * <p>
@@ -172,8 +178,8 @@ public class MarketIdentification92 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Market#Identification
-	 * Market.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Market#mmIdentification
+	 * Market.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,20 +199,21 @@ public class MarketIdentification92 {
 	 * "Segment MIC of the venue where it exists, otherwise the Operating MIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Segment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSegment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Market.mmIdentification;
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Market.Identification;
 			isDerived = false;
 			xmlTag = "Sgmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Segment";
 			definition = "Segment MIC of the venue where it exists, otherwise the Operating MIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected MarketIdentification1Code type;
 	/**
 	 * Define the type of Market Identification Code that is being supplied.
 	 * <p>
@@ -220,8 +227,8 @@ public class MarketIdentification92 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#PartyType
-	 * PartyIdentificationInformation.PartyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyType
+	 * PartyIdentificationInformation.mmPartyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,20 +248,21 @@ public class MarketIdentification92 {
 	 * "Define the type of Market Identification Code that is being supplied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.PartyType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Define the type of Market Identification Code that is being supplied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MarketIdentification1Code.mmObject();
 		}
 	};
+	protected TradingVenue1Code category;
 	/**
 	 * Provides the category of market the venue operates in.
 	 * <p>
@@ -268,8 +276,8 @@ public class MarketIdentification92 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#Type
-	 * TradingMarket.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmType
+	 * TradingMarket.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -288,20 +296,21 @@ public class MarketIdentification92 {
 	 * definition} = "Provides the category of market the venue operates in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Category = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmType;
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.Type;
 			isDerived = false;
 			xmlTag = "Ctgy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Category";
 			definition = "Provides the category of market the venue operates in.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TradingVenue1Code.mmObject();
 		}
 	};
+	protected Max450Text institutionName;
 	/**
 	 * The name or description of the institution, market, or infrastructure.
 	 * <p>
@@ -314,8 +323,8 @@ public class MarketIdentification92 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,20 +344,21 @@ public class MarketIdentification92 {
 	 * "The name or description of the institution, market, or infrastructure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstitutionName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstitutionName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "InstnNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstitutionName";
 			definition = "The name or description of the institution, market, or infrastructure.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max450Text.mmObject();
 		}
 	};
+	protected Max35Text acronym;
 	/**
 	 * Known acronym of the institution, market, or infrastructure.
 	 * <p>
@@ -377,7 +387,7 @@ public class MarketIdentification92 {
 	 * "Known acronym of the institution, market, or infrastructure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Acronym = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcronym = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
@@ -385,11 +395,12 @@ public class MarketIdentification92 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acronym";
 			definition = "Known acronym of the institution, market, or infrastructure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text city;
 	/**
 	 * City where the institution, market, or infrastructure operates.
 	 * <p>
@@ -402,8 +413,8 @@ public class MarketIdentification92 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#TownName
-	 * PostalAddress.TownName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmTownName
+	 * PostalAddress.mmTownName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -423,20 +434,21 @@ public class MarketIdentification92 {
 	 * "City where the institution, market, or infrastructure operates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute City = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmTownName;
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.TownName;
 			isDerived = false;
 			xmlTag = "City";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "City";
 			definition = "City where the institution, market, or infrastructure operates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CountryCodeAndName3 country;
 	/**
 	 * Two character country code and country name as per ISO 3166.
 	 * <p>
@@ -448,8 +460,8 @@ public class MarketIdentification92 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Market#Country
-	 * Market.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.Market#mmCountry
+	 * Market.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -469,21 +481,22 @@ public class MarketIdentification92 {
 	 * "Two character country code and country name as per ISO 3166."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Country = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCountry = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Market.mmCountry;
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Market.Country;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Two character country code and country name as per ISO 3166.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CountryCodeAndName3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName3.mmObject();
 		}
 	};
+	protected Max450Text authorityName;
 	/**
 	 * The name of the national competent authority associated with the MIC.
 	 * <p>
@@ -517,20 +530,21 @@ public class MarketIdentification92 {
 	 * "The name of the national competent authority associated with the MIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthorityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthorityName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			businessComponentTrace_lazy = () -> RegulatoryAuthorityRole.mmObject();
+			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorityName";
 			definition = "The name of the national competent authority associated with the MIC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max450Text.mmObject();
 		}
 	};
+	protected Max210Text webSite;
 	/**
 	 * Website URI of the institution, market, or infrastructure.
 	 * <p>
@@ -559,7 +573,7 @@ public class MarketIdentification92 {
 	 * "Website URI of the institution, market, or infrastructure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WebSite = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWebSite = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
@@ -567,11 +581,12 @@ public class MarketIdentification92 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WebSite";
 			definition = "Website URI of the institution, market, or infrastructure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
+	protected Max450Text note;
 	/**
 	 * Details additional information about the market operator.
 	 * <p>
@@ -600,7 +615,7 @@ public class MarketIdentification92 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Note = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNote = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
@@ -608,11 +623,12 @@ public class MarketIdentification92 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Note";
 			definition = "Details additional information about the market operator.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max450Text.mmObject();
 		}
 	};
+	protected Modification1Code modification;
 	/**
 	 * Additional information to help users identify the exchange or understand
 	 * a modification.
@@ -644,7 +660,7 @@ public class MarketIdentification92 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Modification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
@@ -652,11 +668,12 @@ public class MarketIdentification92 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Additional information to help users identify the exchange or understand a modification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
 		}
 	};
+	protected ISODate creationDate;
 	/**
 	 * First date of the MIC issuance.
 	 * <p>
@@ -684,7 +701,7 @@ public class MarketIdentification92 {
 	 * definition} = "First date of the MIC issuance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
@@ -692,11 +709,12 @@ public class MarketIdentification92 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDate";
 			definition = "First date of the MIC issuance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Period4Choice validityPeriod;
 	/**
 	 * Details the validity of the specific record.
 	 * <p>
@@ -723,7 +741,7 @@ public class MarketIdentification92 {
 	 * definition} = "Details the validity of the specific record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
@@ -731,12 +749,13 @@ public class MarketIdentification92 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Details the validity of the specific record.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected ISODate statusDate;
 	/**
 	 * Date when the market identification code was last modified.
 	 * <p>
@@ -765,7 +784,7 @@ public class MarketIdentification92 {
 	 * "Date when the market identification code was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
@@ -773,11 +792,12 @@ public class MarketIdentification92 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date when the market identification code was last modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime lastUpdatedDate;
 	/**
 	 * Date when this record was last modified.
 	 * <p>
@@ -805,7 +825,7 @@ public class MarketIdentification92 {
 	 * definition} = "Date when this record was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastUpdatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastUpdatedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentification92.mmObject();
 			isDerived = false;
@@ -813,8 +833,8 @@ public class MarketIdentification92 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdatedDate";
 			definition = "Date when this record was last modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -822,20 +842,148 @@ public class MarketIdentification92 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification92.Operating, com.tools20022.repository.msg.MarketIdentification92.Segment,
-						com.tools20022.repository.msg.MarketIdentification92.Type, com.tools20022.repository.msg.MarketIdentification92.Category, com.tools20022.repository.msg.MarketIdentification92.InstitutionName,
-						com.tools20022.repository.msg.MarketIdentification92.Acronym, com.tools20022.repository.msg.MarketIdentification92.City, com.tools20022.repository.msg.MarketIdentification92.Country,
-						com.tools20022.repository.msg.MarketIdentification92.AuthorityName, com.tools20022.repository.msg.MarketIdentification92.WebSite, com.tools20022.repository.msg.MarketIdentification92.Note,
-						com.tools20022.repository.msg.MarketIdentification92.Modification, com.tools20022.repository.msg.MarketIdentification92.CreationDate, com.tools20022.repository.msg.MarketIdentification92.ValidityPeriod,
-						com.tools20022.repository.msg.MarketIdentification92.StatusDate, com.tools20022.repository.msg.MarketIdentification92.LastUpdatedDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification92.mmOperating, com.tools20022.repository.msg.MarketIdentification92.mmSegment,
+						com.tools20022.repository.msg.MarketIdentification92.mmType, com.tools20022.repository.msg.MarketIdentification92.mmCategory, com.tools20022.repository.msg.MarketIdentification92.mmInstitutionName,
+						com.tools20022.repository.msg.MarketIdentification92.mmAcronym, com.tools20022.repository.msg.MarketIdentification92.mmCity, com.tools20022.repository.msg.MarketIdentification92.mmCountry,
+						com.tools20022.repository.msg.MarketIdentification92.mmAuthorityName, com.tools20022.repository.msg.MarketIdentification92.mmWebSite, com.tools20022.repository.msg.MarketIdentification92.mmNote,
+						com.tools20022.repository.msg.MarketIdentification92.mmModification, com.tools20022.repository.msg.MarketIdentification92.mmCreationDate, com.tools20022.repository.msg.MarketIdentification92.mmValidityPeriod,
+						com.tools20022.repository.msg.MarketIdentification92.mmStatusDate, com.tools20022.repository.msg.MarketIdentification92.mmLastUpdatedDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01.mmMarketIdentification);
 				trace_lazy = () -> Market.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01.MarketIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentification92";
 				definition = "Details on a trading venue as per ISO 10383.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MICIdentifier getOperating() {
+		return operating;
+	}
+
+	public void setOperating(MICIdentifier operating) {
+		this.operating = operating;
+	}
+
+	public MICIdentifier getSegment() {
+		return segment;
+	}
+
+	public void setSegment(MICIdentifier segment) {
+		this.segment = segment;
+	}
+
+	public MarketIdentification1Code getType() {
+		return type;
+	}
+
+	public void setType(MarketIdentification1Code type) {
+		this.type = type;
+	}
+
+	public TradingVenue1Code getCategory() {
+		return category;
+	}
+
+	public void setCategory(TradingVenue1Code category) {
+		this.category = category;
+	}
+
+	public Max450Text getInstitutionName() {
+		return institutionName;
+	}
+
+	public void setInstitutionName(Max450Text institutionName) {
+		this.institutionName = institutionName;
+	}
+
+	public Max35Text getAcronym() {
+		return acronym;
+	}
+
+	public void setAcronym(Max35Text acronym) {
+		this.acronym = acronym;
+	}
+
+	public Max35Text getCity() {
+		return city;
+	}
+
+	public void setCity(Max35Text city) {
+		this.city = city;
+	}
+
+	public CountryCodeAndName3 getCountry() {
+		return country;
+	}
+
+	public void setCountry(com.tools20022.repository.msg.CountryCodeAndName3 country) {
+		this.country = country;
+	}
+
+	public Max450Text getAuthorityName() {
+		return authorityName;
+	}
+
+	public void setAuthorityName(Max450Text authorityName) {
+		this.authorityName = authorityName;
+	}
+
+	public Max210Text getWebSite() {
+		return webSite;
+	}
+
+	public void setWebSite(Max210Text webSite) {
+		this.webSite = webSite;
+	}
+
+	public Max450Text getNote() {
+		return note;
+	}
+
+	public void setNote(Max450Text note) {
+		this.note = note;
+	}
+
+	public Modification1Code getModification() {
+		return modification;
+	}
+
+	public void setModification(Modification1Code modification) {
+		this.modification = modification;
+	}
+
+	public ISODate getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(ISODate creationDate) {
+		this.creationDate = creationDate;
+	}
+
+	public Period4Choice getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(Period4Choice validityPeriod) {
+		this.validityPeriod = validityPeriod;
+	}
+
+	public ISODate getStatusDate() {
+		return statusDate;
+	}
+
+	public void setStatusDate(ISODate statusDate) {
+		this.statusDate = statusDate;
+	}
+
+	public ISODateTime getLastUpdatedDate() {
+		return lastUpdatedDate;
+	}
+
+	public void setLastUpdatedDate(ISODateTime lastUpdatedDate) {
+		this.lastUpdatedDate = lastUpdatedDate;
 	}
 }

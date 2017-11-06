@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#CorporateDebt
- * AssetClass1Code.CorporateDebt}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#mmCorporateDebt
+ * AssetClass1Code.mmCorporateDebt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#CorporateEquity
- * AssetClass1Code.CorporateEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#mmCorporateEquity
+ * AssetClass1Code.mmCorporateEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#MunicipalDebt
- * AssetClass1Code.MunicipalDebt}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#mmMunicipalDebt
+ * AssetClass1Code.mmMunicipalDebt}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class AssetClass1Code extends AssetClassCode {
 	 * name} = "CorporateDebt"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateDebt = new MMCode() {
+	public static final MMCode mmCorporateDebt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateDebt";
@@ -107,7 +107,7 @@ public class AssetClass1Code extends AssetClassCode {
 	 * name} = "CorporateEquity"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateEquity = new MMCode() {
+	public static final MMCode mmCorporateEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateEquity";
@@ -130,7 +130,7 @@ public class AssetClass1Code extends AssetClassCode {
 	 * name} = "MunicipalDebt"</li>
 	 * </ul>
 	 */
-	public static final MMCode MunicipalDebt = new MMCode() {
+	public static final MMCode mmMunicipalDebt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalDebt";
@@ -141,13 +141,13 @@ public class AssetClass1Code extends AssetClassCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRPB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClass1Code";
 				definition = "Specifies DTC (The Depository Trust Company) defined asset class.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClass1Code.CorporateDebt, com.tools20022.repository.codeset.AssetClass1Code.CorporateEquity,
-						com.tools20022.repository.codeset.AssetClass1Code.MunicipalDebt);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClass1Code.mmCorporateDebt, com.tools20022.repository.codeset.AssetClass1Code.mmCorporateEquity,
+						com.tools20022.repository.codeset.AssetClass1Code.mmMunicipalDebt);
 				trace_lazy = () -> AssetClassCode.mmObject();
 			}
 		});

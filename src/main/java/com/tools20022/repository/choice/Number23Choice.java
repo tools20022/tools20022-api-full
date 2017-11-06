@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Number23Choice#Short
- * Number23Choice.Short}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Number23Choice#Long
- * Number23Choice.Long}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Number23Choice#mmShort
+ * Number23Choice.mmShort}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Number23Choice#mmLong
+ * Number23Choice.mmLong}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Number23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText short_;
 	/**
 	 * Number of maximum 3 numeric text.
 	 * <p>
@@ -85,7 +86,7 @@ public class Number23Choice {
 	 * definition} = "Number of maximum 3 numeric text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Short = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShort = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number23Choice.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class Number23Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Number of maximum 3 numeric text.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected GenericIdentification18 long_;
 	/**
 	 * Number of maximum 35 text, with the possibility to provide an issuer for
 	 * the number identification.
@@ -129,7 +131,7 @@ public class Number23Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Long = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLong = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number23Choice.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class Number23Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Number of maximum 35 text, with the possibility to provide an issuer for the number identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification18.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class Number23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number23Choice.Short, com.tools20022.repository.choice.Number23Choice.Long);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number23Choice.mmShort, com.tools20022.repository.choice.Number23Choice.mmLong);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Number23Choice";
 				definition = "Choice number format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getShort() {
+		return short_;
+	}
+
+	public void setShort(Exact3NumericText short_) {
+		this.short_ = short_;
+	}
+
+	public GenericIdentification18 getLong() {
+		return long_;
+	}
+
+	public void setLong(GenericIdentification18 long_) {
+		this.long_ = long_;
 	}
 }

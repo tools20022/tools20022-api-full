@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * SCOPE<br>
@@ -75,45 +76,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#MessageIdentification
- * PriceReportCancellationV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmMessageIdentification
+ * PriceReportCancellationV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#PoolReference
- * PriceReportCancellationV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmPoolReference
+ * PriceReportCancellationV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#PreviousReference
- * PriceReportCancellationV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmPreviousReference
+ * PriceReportCancellationV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#MessagePagination
- * PriceReportCancellationV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmMessagePagination
+ * PriceReportCancellationV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#PriceReportIdentification
- * PriceReportCancellationV04.PriceReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmPriceReportIdentification
+ * PriceReportCancellationV04.mmPriceReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#CancellationIdentification
- * PriceReportCancellationV04.CancellationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmCancellationIdentification
+ * PriceReportCancellationV04.mmCancellationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#CancellationReason
- * PriceReportCancellationV04.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmCancellationReason
+ * PriceReportCancellationV04.mmCancellationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#ExpectedPriceCorrectionDate
- * PriceReportCancellationV04.ExpectedPriceCorrectionDate}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmExpectedPriceCorrectionDate
+ * PriceReportCancellationV04.mmExpectedPriceCorrectionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#CompletePriceCancellation
- * PriceReportCancellationV04.CompletePriceCancellation}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmCompletePriceCancellation
+ * PriceReportCancellationV04.mmCompletePriceCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#CancelledPriceValuationDetails
- * PriceReportCancellationV04.CancelledPriceValuationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmCancelledPriceValuationDetails
+ * PriceReportCancellationV04.mmCancelledPriceValuationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#Extension
- * PriceReportCancellationV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmExtension
+ * PriceReportCancellationV04.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#identifier
- * PriceReportCancellationV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code reda.002.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,6 +132,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceReportCancellationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -159,17 +159,18 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -193,17 +194,18 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -227,17 +229,18 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * <p>
@@ -260,17 +263,18 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Max35Text priceReportIdentification;
 	/**
 	 * Unique and unambiguous identifier for the price report, as assigned by
 	 * the reporting party.
@@ -296,17 +300,18 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PriceReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPriceReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PricRptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceReportIdentification";
 			definition = "Unique and unambiguous identifier for the price report, as assigned by the reporting party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cancellationIdentification;
 	/**
 	 * Unique and unambiguous identifier for the cancellation of the previous
 	 * price report, as assigned by the reporting party.
@@ -332,17 +337,18 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationIdentification";
 			definition = "Unique and unambiguous identifier for the cancellation of the previous price report, as assigned by the reporting party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text cancellationReason;
 	/**
 	 * Reason for the cancellation.
 	 * <p>
@@ -365,17 +371,18 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Reason for the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Reason for the cancellation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DateAndDateTime1Choice expectedPriceCorrectionDate;
 	/**
 	 * Date or date and time the price will be corrected.
 	 * <p>
@@ -399,17 +406,18 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Date or date and time the price will be corrected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ExpectedPriceCorrectionDate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExpectedPriceCorrectionDate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "XpctdPricCrrctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedPriceCorrectionDate";
 			definition = "Date or date and time the price will be corrected.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator completePriceCancellation;
 	/**
 	 * Indicates whether or not all the prices of the referenced price report
 	 * are cancelled.
@@ -436,17 +444,18 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CompletePriceCancellation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCompletePriceCancellation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CmpltPricCxl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletePriceCancellation";
 			definition = "Indicates whether or not all the prices of the referenced price report are cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<PriceReport3> cancelledPriceValuationDetails;
 	/**
 	 * Details of prices to be cancelled.
 	 * <p>
@@ -469,7 +478,7 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Details of prices to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancelledPriceValuationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancelledPriceValuationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CancPricValtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -479,6 +488,7 @@ public class PriceReportCancellationV04 {
 			complexType_lazy = () -> PriceReport3.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -504,7 +514,7 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -512,33 +522,6 @@ public class PriceReportCancellationV04 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "reda"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "reda";
-			messageFunctionality = "002";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -553,15 +536,110 @@ public class PriceReportCancellationV04 {
 				rootElement = "Document";
 				xmlTag = "PricRptCxl";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV04.MessageIdentification, com.tools20022.repository.area.reda.PriceReportCancellationV04.PoolReference,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.PreviousReference, com.tools20022.repository.area.reda.PriceReportCancellationV04.MessagePagination,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.PriceReportIdentification, com.tools20022.repository.area.reda.PriceReportCancellationV04.CancellationIdentification,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.CancellationReason, com.tools20022.repository.area.reda.PriceReportCancellationV04.ExpectedPriceCorrectionDate,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.CompletePriceCancellation, com.tools20022.repository.area.reda.PriceReportCancellationV04.CancelledPriceValuationDetails,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.reda.PriceReportCancellationV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessageIdentification, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPoolReference,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessagePagination,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPriceReportIdentification, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancellationIdentification,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancellationReason, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmExpectedPriceCorrectionDate,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCompletePriceCancellation, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancelledPriceValuationDetails,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "reda";
+						messageFunctionality = "002";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference3 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public Max35Text getPriceReportIdentification() {
+		return priceReportIdentification;
+	}
+
+	public void setPriceReportIdentification(Max35Text priceReportIdentification) {
+		this.priceReportIdentification = priceReportIdentification;
+	}
+
+	public Max35Text getCancellationIdentification() {
+		return cancellationIdentification;
+	}
+
+	public void setCancellationIdentification(Max35Text cancellationIdentification) {
+		this.cancellationIdentification = cancellationIdentification;
+	}
+
+	public Max350Text getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(Max350Text cancellationReason) {
+		this.cancellationReason = cancellationReason;
+	}
+
+	public DateAndDateTime1Choice getExpectedPriceCorrectionDate() {
+		return expectedPriceCorrectionDate;
+	}
+
+	public void setExpectedPriceCorrectionDate(DateAndDateTime1Choice expectedPriceCorrectionDate) {
+		this.expectedPriceCorrectionDate = expectedPriceCorrectionDate;
+	}
+
+	public YesNoIndicator getCompletePriceCancellation() {
+		return completePriceCancellation;
+	}
+
+	public void setCompletePriceCancellation(YesNoIndicator completePriceCancellation) {
+		this.completePriceCancellation = completePriceCancellation;
+	}
+
+	public List<PriceReport3> getCancelledPriceValuationDetails() {
+		return cancelledPriceValuationDetails;
+	}
+
+	public void setCancelledPriceValuationDetails(List<PriceReport3> cancelledPriceValuationDetails) {
+		this.cancelledPriceValuationDetails = cancelledPriceValuationDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

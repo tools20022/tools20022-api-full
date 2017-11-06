@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport4#LimitIdentification
- * LimitReport4.LimitIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport4#LimitOrError
- * LimitReport4.LimitOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport4#mmLimitIdentification
+ * LimitReport4.mmLimitIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport4#mmLimitOrError
+ * LimitReport4.mmLimitOrError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitReport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LimitIdentification1 limitIdentification;
 	/**
 	 * Identification of the limit on which information is requested.
 	 * <p>
@@ -101,28 +102,29 @@ public class LimitReport4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitReport5#LimitIdentification
-	 * LimitReport5.LimitIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.LimitReport5#mmLimitIdentification
+	 * LimitReport5.mmLimitIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitReport4.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitReport4.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the limit on which information is requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport5.LimitIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport5.mmLimitIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> LimitIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitIdentification1.mmObject();
 		}
 	};
+	protected LimitOrError1Choice limitOrError;
 	/**
 	 * Requested information on the limit or business error report when
 	 * information has not been found.
@@ -152,13 +154,14 @@ public class LimitReport4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.LimitReport5#LimitOrError
-	 * LimitReport5.LimitOrError}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitReport5#mmLimitOrError
+	 * LimitReport5.mmLimitOrError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitReport4.mmObject();
 			isDerived = false;
@@ -166,20 +169,20 @@ public class LimitReport4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrError";
 			definition = "Requested information on the limit or business error report when information has not been found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport5.LimitOrError);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport5.mmLimitOrError);
 			maxOccurs = 1;
-			type_lazy = () -> LimitOrError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LimitOrError1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport4.LimitIdentification, com.tools20022.repository.msg.LimitReport4.LimitOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport4.mmLimitIdentification, com.tools20022.repository.msg.LimitReport4.mmLimitOrError);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitReport4";
 				definition = "Reports either on the risk management limit or on a business error.";
@@ -187,5 +190,21 @@ public class LimitReport4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LimitIdentification1 getLimitIdentification() {
+		return limitIdentification;
+	}
+
+	public void setLimitIdentification(com.tools20022.repository.msg.LimitIdentification1 limitIdentification) {
+		this.limitIdentification = limitIdentification;
+	}
+
+	public LimitOrError1Choice getLimitOrError() {
+		return limitOrError;
+	}
+
+	public void setLimitOrError(LimitOrError1Choice limitOrError) {
+		this.limitOrError = limitOrError;
 	}
 }

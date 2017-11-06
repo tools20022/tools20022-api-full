@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatus1Code#AcknowledgedAccepted
- * RegistrationProcessingStatus1Code.AcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatus1Code#mmAcknowledgedAccepted
+ * RegistrationProcessingStatus1Code.mmAcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatus1Code#Rejected
- * RegistrationProcessingStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatus1Code#mmRejected
+ * RegistrationProcessingStatus1Code.mmRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class RegistrationProcessingStatus1Code extends RegistrationProcessingSta
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgedAccepted = new MMCode() {
+	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
@@ -104,7 +104,7 @@ public class RegistrationProcessingStatus1Code extends RegistrationProcessingSta
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -115,12 +115,12 @@ public class RegistrationProcessingStatus1Code extends RegistrationProcessingSta
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegistrationProcessingStatus1Code";
 				definition = "Specifies the status of the registration processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.AcknowledgedAccepted, com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.mmAcknowledgedAccepted, com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.mmRejected);
 				trace_lazy = () -> RegistrationProcessingStatusCode.mmObject();
 			}
 		});

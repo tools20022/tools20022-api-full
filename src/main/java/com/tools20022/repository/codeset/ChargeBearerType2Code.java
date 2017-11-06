@@ -35,15 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerType2Code#FollowingServiceLevel
- * ChargeBearerType2Code.FollowingServiceLevel}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerType2Code#mmFollowingServiceLevel
+ * ChargeBearerType2Code.mmFollowingServiceLevel}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class ChargeBearerType2Code extends ChargeBearerTypeCode {
 	 * name} = "FollowingServiceLevel"</li>
 	 * </ul>
 	 */
-	public static final MMCode FollowingServiceLevel = new MMCode() {
+	public static final MMCode mmFollowingServiceLevel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FollowingServiceLevel";
@@ -92,12 +92,12 @@ public class ChargeBearerType2Code extends ChargeBearerTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SLEV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeBearerType2Code";
 				definition = "Specifies which party(ies) will pay charges due for processing of the instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearerType2Code.FollowingServiceLevel);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearerType2Code.mmFollowingServiceLevel);
 				trace_lazy = () -> ChargeBearerTypeCode.mmObject();
 			}
 		});

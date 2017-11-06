@@ -31,6 +31,6 @@ public class DeriveMMMessageAttribute_memberType implements Function<MMMessageAt
 	 */
 	@Override
 	public MMRepositoryType apply(MMMessageAttribute mmBean) {
-		throw new RuntimeException("Not implemented!");
+		return mmBean.getXmlMemberType();
 	}
 }

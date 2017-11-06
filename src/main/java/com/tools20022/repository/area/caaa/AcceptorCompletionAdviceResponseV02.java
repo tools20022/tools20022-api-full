@@ -55,21 +55,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02#Header
- * AcceptorCompletionAdviceResponseV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02#mmHeader
+ * AcceptorCompletionAdviceResponseV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02#CompletionAdviceResponse
- * AcceptorCompletionAdviceResponseV02.CompletionAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02#mmCompletionAdviceResponse
+ * AcceptorCompletionAdviceResponseV02.mmCompletionAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02#SecurityTrailer
- * AcceptorCompletionAdviceResponseV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02#mmSecurityTrailer
+ * AcceptorCompletionAdviceResponseV02.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02#identifier
- * AcceptorCompletionAdviceResponseV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.004.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorCompletionAdviceResponseV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header2 header;
 	/**
 	 * Completion advice response message management information.
 	 * <p>
@@ -122,24 +121,25 @@ public class AcceptorCompletionAdviceResponseV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03#Header
-	 * AcceptorCompletionAdviceResponseV03.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03#mmHeader
+	 * AcceptorCompletionAdviceResponseV03.mmHeader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Completion advice response message management information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03.Header);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03.mmHeader);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header2.mmObject();
 		}
 	};
+	protected AcceptorCompletionAdviceResponse2 completionAdviceResponse;
 	/**
 	 * Information related to the completion advice response.
 	 * <p>
@@ -165,24 +165,25 @@ public class AcceptorCompletionAdviceResponseV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03#CompletionAdviceResponse
-	 * AcceptorCompletionAdviceResponseV03.CompletionAdviceResponse}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03#mmCompletionAdviceResponse
+	 * AcceptorCompletionAdviceResponseV03.mmCompletionAdviceResponse}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CompletionAdviceResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCompletionAdviceResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CmpltnAdvcRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionAdviceResponse";
 			definition = "Information related to the completion advice response.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03.CompletionAdviceResponse);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03.mmCompletionAdviceResponse);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCompletionAdviceResponse2.mmObject();
 		}
 	};
+	protected ContentInformationType6 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -208,49 +209,22 @@ public class AcceptorCompletionAdviceResponseV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03#SecurityTrailer
-	 * AcceptorCompletionAdviceResponseV03.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03#mmSecurityTrailer
+	 * AcceptorCompletionAdviceResponseV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03.SecurityTrailer);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV03.mmSecurityTrailer);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType6.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "004";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -260,17 +234,48 @@ public class AcceptorCompletionAdviceResponseV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCompletionAdviceResponseV02";
 				definition = "The AcceptorCompletionAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) of the outcome of the payment transaction, and the transfer the  financial data of the transaction contained in the completion advice.";
-				previousVersion_lazy = () -> AcceptorCompletionAdviceResponseV01.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdviceResponseV03.mmObject());
+				previousVersion_lazy = () -> AcceptorCompletionAdviceResponseV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCmpltnAdvcRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02.Header,
-						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02.CompletionAdviceResponse, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02.mmCompletionAdviceResponse, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "004";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header2 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header2 header) {
+		this.header = header;
+	}
+
+	public AcceptorCompletionAdviceResponse2 getCompletionAdviceResponse() {
+		return completionAdviceResponse;
+	}
+
+	public void setCompletionAdviceResponse(AcceptorCompletionAdviceResponse2 completionAdviceResponse) {
+		this.completionAdviceResponse = completionAdviceResponse;
+	}
+
+	public ContentInformationType6 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType6 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

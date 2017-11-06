@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Aggregated position of holdings held in a securities account for a specified
@@ -38,14 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#ItemDate
- * FinancialInstrumentAggregateBalance1.ItemDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#mmItemDate
+ * FinancialInstrumentAggregateBalance1.mmItemDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#Holdings
- * FinancialInstrumentAggregateBalance1.Holdings}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#mmHoldings
+ * FinancialInstrumentAggregateBalance1.mmHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#Price
- * FinancialInstrumentAggregateBalance1.Price}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#mmPrice
+ * FinancialInstrumentAggregateBalance1.mmPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAggregateBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate itemDate;
 	/**
 	 * Date of the line of holding in the statement.
 	 * <p>
@@ -83,8 +85,8 @@ public class FinancialInstrumentAggregateBalance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#ValueDate
-	 * Balance.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmValueDate
+	 * Balance.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class FinancialInstrumentAggregateBalance1 {
 	 * definition} = "Date of the line of holding in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
 			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.ValueDate;
 			isDerived = false;
 			xmlTag = "ItmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemDate";
 			definition = "Date of the line of holding in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected FinancialInstrumentAggregateBalance1Choice holdings;
 	/**
 	 * Balances and sub-balances attributed to the holding.
 	 * <p>
@@ -148,21 +151,22 @@ public class FinancialInstrumentAggregateBalance1 {
 	 * definition} = "Balances and sub-balances attributed to the holding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Holdings = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHoldings = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
 			businessComponentTrace_lazy = () -> AssetHolding.mmObject();
+			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Hldgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Holdings";
 			definition = "Balances and sub-balances attributed to the holding.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAggregateBalance1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentAggregateBalance1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Price6> price;
 	/**
 	 * Details on the price value, type and source.
 	 * <p>
@@ -193,33 +197,57 @@ public class FinancialInstrumentAggregateBalance1 {
 	 * definition} = "Details on the price value, type and source."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Price = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
+			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Details on the price value, type and source.";
 			minOccurs = 0;
-			type_lazy = () -> Price6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.ItemDate, com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.Holdings,
-						com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.Price);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmItemDate, com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmHoldings,
+						com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmPrice);
 				trace_lazy = () -> AssetHolding.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAggregateBalance1";
 				definition = "Aggregated position of holdings held in a securities account for a specified financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getItemDate() {
+		return itemDate;
+	}
+
+	public void setItemDate(ISODate itemDate) {
+		this.itemDate = itemDate;
+	}
+
+	public FinancialInstrumentAggregateBalance1Choice getHoldings() {
+		return holdings;
+	}
+
+	public void setHoldings(FinancialInstrumentAggregateBalance1Choice holdings) {
+		this.holdings = holdings;
+	}
+
+	public List<Price6> getPrice() {
+		return price;
+	}
+
+	public void setPrice(List<com.tools20022.repository.msg.Price6> price) {
+		this.price = price;
 	}
 }

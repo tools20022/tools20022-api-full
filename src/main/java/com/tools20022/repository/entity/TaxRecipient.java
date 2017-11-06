@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReporting1#TaxRecipient
- * TaxReporting1.TaxRecipient}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReporting2#TaxRecipient
- * TaxReporting2.TaxRecipient}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReporting1#mmTaxRecipient
+ * TaxReporting1.mmTaxRecipient}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReporting2#mmTaxRecipient
+ * TaxReporting2.mmTaxRecipient}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,11 +69,11 @@ public class TaxRecipient extends TaxPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxRecipient";
 				definition = "Party that receives the tax. The recipient of, and the party entitled to, the tax may be two different parties.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReporting1.TaxRecipient, com.tools20022.repository.msg.TaxReporting2.TaxRecipient);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReporting1.mmTaxRecipient, com.tools20022.repository.msg.TaxReporting2.mmTaxRecipient);
 				superType_lazy = () -> TaxPartyRole.mmObject();
 			}
 		});

@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElectronicMessageDetails1#ElectronicSystemInformationMessageIdentifier
- * ElectronicMessageDetails1.ElectronicSystemInformationMessageIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.ElectronicMessageDetails1#mmElectronicSystemInformationMessageIdentifier
+ * ElectronicMessageDetails1.mmElectronicSystemInformationMessageIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElectronicMessageDetails1#ElectronicSystemInformationMessagePacketIdentifier
- * ElectronicMessageDetails1.ElectronicSystemInformationMessagePacketIdentifier}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.ElectronicMessageDetails1#mmElectronicSystemInformationMessagePacketIdentifier
+ * ElectronicMessageDetails1.
+ * mmElectronicSystemInformationMessagePacketIdentifier}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ElectronicMessageDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text electronicSystemInformationMessageIdentifier;
 	/**
 	 * Information about separate electronic system information message.
 	 * <p>
@@ -87,7 +88,7 @@ public class ElectronicMessageDetails1 {
 	 * "Information about separate electronic system information message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElectronicSystemInformationMessageIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElectronicSystemInformationMessageIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElectronicMessageDetails1.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class ElectronicMessageDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSystemInformationMessageIdentifier";
 			definition = "Information about separate electronic system information message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text electronicSystemInformationMessagePacketIdentifier;
 	/**
 	 * Information about packet of electronic system messages.
 	 * <p>
@@ -127,7 +129,7 @@ public class ElectronicMessageDetails1 {
 	 * definition} = "Information about packet of electronic system messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElectronicSystemInformationMessagePacketIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElectronicSystemInformationMessagePacketIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElectronicMessageDetails1.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class ElectronicMessageDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSystemInformationMessagePacketIdentifier";
 			definition = "Information about packet of electronic system messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -144,14 +146,30 @@ public class ElectronicMessageDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElectronicMessageDetails1.ElectronicSystemInformationMessageIdentifier,
-						com.tools20022.repository.msg.ElectronicMessageDetails1.ElectronicSystemInformationMessagePacketIdentifier);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElectronicMessageDetails1.mmElectronicSystemInformationMessageIdentifier,
+						com.tools20022.repository.msg.ElectronicMessageDetails1.mmElectronicSystemInformationMessagePacketIdentifier);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ElectronicMessageDetails1";
 				definition = "Summary of electronic message details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getElectronicSystemInformationMessageIdentifier() {
+		return electronicSystemInformationMessageIdentifier;
+	}
+
+	public void setElectronicSystemInformationMessageIdentifier(Max35Text electronicSystemInformationMessageIdentifier) {
+		this.electronicSystemInformationMessageIdentifier = electronicSystemInformationMessageIdentifier;
+	}
+
+	public Max35Text getElectronicSystemInformationMessagePacketIdentifier() {
+		return electronicSystemInformationMessagePacketIdentifier;
+	}
+
+	public void setElectronicSystemInformationMessagePacketIdentifier(Max35Text electronicSystemInformationMessagePacketIdentifier) {
+		this.electronicSystemInformationMessagePacketIdentifier = electronicSystemInformationMessagePacketIdentifier;
 	}
 }

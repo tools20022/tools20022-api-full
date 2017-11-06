@@ -40,25 +40,25 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#ReasonOrExtendedReasonOrDSSRule
- * InRepairStatusReason3.ReasonOrExtendedReasonOrDSSRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmReasonOrExtendedReasonOrDSSRule
+ * InRepairStatusReason3.mmReasonOrExtendedReasonOrDSSRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InRepairStatusReason3#Reason
- * InRepairStatusReason3.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmReason
+ * InRepairStatusReason3.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#ExtendedReason
- * InRepairStatusReason3.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmExtendedReason
+ * InRepairStatusReason3.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#DataSourceScheme
- * InRepairStatusReason3.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmDataSourceScheme
+ * InRepairStatusReason3.mmDataSourceScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#AdditionalInformation
- * InRepairStatusReason3.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmAdditionalInformation
+ * InRepairStatusReason3.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +67,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -92,6 +92,7 @@ import java.util.function.Supplier;
 public class InRepairStatusReason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InRepairStatusReason1Code reason;
 	/**
 	 * Reason for the in repair status.
 	 * <p>
@@ -124,20 +125,21 @@ public class InRepairStatusReason3 {
 	 * definition} = "Reason for the in repair status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InRepairStatusReason3.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> InRepairStatusReason3.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the in repair status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InRepairStatusReason1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason of the in repair status.
 	 * <p>
@@ -166,7 +168,7 @@ public class InRepairStatusReason3 {
 	 * definition} = "Reason of the in repair status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InRepairStatusReason3.mmObject();
 			isDerived = false;
@@ -174,11 +176,12 @@ public class InRepairStatusReason3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason of the in repair status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the in-repair status.
 	 * <p>
@@ -190,8 +193,8 @@ public class InRepairStatusReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -211,21 +214,22 @@ public class InRepairStatusReason3 {
 	 * "Proprietary identification of the reason for the in-repair status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> InRepairStatusReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the in-repair status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the in-repair status reason.
 	 * <p>
@@ -238,8 +242,8 @@ public class InRepairStatusReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,17 +263,17 @@ public class InRepairStatusReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> InRepairStatusReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the in-repair status reason.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -283,14 +287,14 @@ public class InRepairStatusReason3 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#Reason
-	 * InRepairStatusReason3.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmReason
+	 * InRepairStatusReason3.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#ExtendedReason
-	 * InRepairStatusReason3.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmExtendedReason
+	 * InRepairStatusReason3.mmExtendedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#DataSourceScheme
-	 * InRepairStatusReason3.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmDataSourceScheme
+	 * InRepairStatusReason3.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -310,24 +314,24 @@ public class InRepairStatusReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReasonOrExtendedReasonOrDSSRule = new MMXor() {
+	public static final MMXor mmReasonOrExtendedReasonOrDSSRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonOrDSSRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme) must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatusReason3.Reason, com.tools20022.repository.msg.InRepairStatusReason3.ExtendedReason,
-					com.tools20022.repository.msg.InRepairStatusReason3.DataSourceScheme);
 			messageComponent_lazy = () -> InRepairStatusReason3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatusReason3.mmReason, com.tools20022.repository.msg.InRepairStatusReason3.mmExtendedReason,
+					com.tools20022.repository.msg.InRepairStatusReason3.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatusReason3.Reason, com.tools20022.repository.msg.InRepairStatusReason3.ExtendedReason,
-						com.tools20022.repository.msg.InRepairStatusReason3.DataSourceScheme, com.tools20022.repository.msg.InRepairStatusReason3.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatusReason3.mmReason, com.tools20022.repository.msg.InRepairStatusReason3.mmExtendedReason,
+						com.tools20022.repository.msg.InRepairStatusReason3.mmDataSourceScheme, com.tools20022.repository.msg.InRepairStatusReason3.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -339,9 +343,41 @@ public class InRepairStatusReason3 {
 				name = "InRepairStatusReason3";
 				definition = "Identification of the reason for the in-repair status.";
 				nextVersions_lazy = () -> Arrays.asList(InRepairStatusReason4.mmObject(), InRepairStatusReason5Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatusReason3.ReasonOrExtendedReasonOrDSSRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatusReason3.mmReasonOrExtendedReasonOrDSSRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InRepairStatusReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(InRepairStatusReason1Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

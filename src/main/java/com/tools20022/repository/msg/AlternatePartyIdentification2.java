@@ -40,14 +40,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2#IdentificationType
- * AlternatePartyIdentification2.IdentificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2#mmIdentificationType
+ * AlternatePartyIdentification2.mmIdentificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2#Country
- * AlternatePartyIdentification2.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2#mmCountry
+ * AlternatePartyIdentification2.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2#AlternateIdentification
- * AlternatePartyIdentification2.AlternateIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2#mmAlternateIdentification
+ * AlternatePartyIdentification2.mmAlternateIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,6 +82,7 @@ import java.util.function.Supplier;
 public class AlternatePartyIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IdentificationType4Choice identificationType;
 	/**
 	 * Specifies the type of alternate identification of the party identified.
 	 * <p>
@@ -119,27 +120,28 @@ public class AlternatePartyIdentification2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#IdentificationType
-	 * AlternatePartyIdentification7.IdentificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#mmIdentificationType
+	 * AlternatePartyIdentification7.mmIdentificationType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AlternatePartyIdentification2.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> AlternatePartyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationType";
 			definition = "Specifies the type of alternate identification of the party identified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification7.IdentificationType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification7.mmIdentificationType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> IdentificationType4Choice.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country in which a person resides (the place of a person's home). In the
 	 * case of a company, it is the country from which the affairs of that
@@ -154,7 +156,8 @@ public class AlternatePartyIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -177,27 +180,28 @@ public class AlternatePartyIdentification2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#Country
-	 * AlternatePartyIdentification7.Country}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#mmCountry
+	 * AlternatePartyIdentification7.mmCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> AlternatePartyIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification7.Country);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification7.mmCountry);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max35Text alternateIdentification;
 	/**
 	 * Alternate identification for a party.
 	 * <p>
@@ -210,8 +214,8 @@ public class AlternatePartyIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -232,24 +236,24 @@ public class AlternatePartyIdentification2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#AlternateIdentification
-	 * AlternatePartyIdentification7.AlternateIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#mmAlternateIdentification
+	 * AlternatePartyIdentification7.mmAlternateIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlternateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AlternatePartyIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AltrnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification7.AlternateIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification7.mmAlternateIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -257,10 +261,10 @@ public class AlternatePartyIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification2.IdentificationType, com.tools20022.repository.msg.AlternatePartyIdentification2.Country,
-						com.tools20022.repository.msg.AlternatePartyIdentification2.AlternateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification2.mmIdentificationType, com.tools20022.repository.msg.AlternatePartyIdentification2.mmCountry,
+						com.tools20022.repository.msg.AlternatePartyIdentification2.mmAlternateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -275,5 +279,29 @@ public class AlternatePartyIdentification2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IdentificationType4Choice getIdentificationType() {
+		return identificationType;
+	}
+
+	public void setIdentificationType(IdentificationType4Choice identificationType) {
+		this.identificationType = identificationType;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public Max35Text getAlternateIdentification() {
+		return alternateIdentification;
+	}
+
+	public void setAlternateIdentification(Max35Text alternateIdentification) {
+		this.alternateIdentification = alternateIdentification;
 	}
 }

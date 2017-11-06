@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * ATM information.
@@ -38,32 +39,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#Identification
- * AutomatedTellerMachine4.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmIdentification
+ * AutomatedTellerMachine4.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#AdditionalIdentification
- * AutomatedTellerMachine4.AdditionalIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmAdditionalIdentification
+ * AutomatedTellerMachine4.mmAdditionalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#SequenceNumber
- * AutomatedTellerMachine4.SequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmSequenceNumber
+ * AutomatedTellerMachine4.mmSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#BaseCurrency
- * AutomatedTellerMachine4.BaseCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmBaseCurrency
+ * AutomatedTellerMachine4.mmBaseCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#Location
- * AutomatedTellerMachine4.Location}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmLocation
+ * AutomatedTellerMachine4.mmLocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#LocationCategory
- * AutomatedTellerMachine4.LocationCategory}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmLocationCategory
+ * AutomatedTellerMachine4.mmLocationCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#Capabilities
- * AutomatedTellerMachine4.Capabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmCapabilities
+ * AutomatedTellerMachine4.mmCapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#Equipment
- * AutomatedTellerMachine4.Equipment}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmEquipment
+ * AutomatedTellerMachine4.mmEquipment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#AvailableDevice
- * AutomatedTellerMachine4.AvailableDevice}</li>
+ * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmAvailableDevice
+ * AutomatedTellerMachine4.mmAvailableDevice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -72,8 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AutomatedTellerMachine4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * ATM terminal device identification for the acquirer and the issuer.
 	 * <p>
@@ -110,8 +112,8 @@ public class AutomatedTellerMachine4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification#IdentificationForSystem
-	 * SystemIdentification.IdentificationForSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentificationForSystem
+	 * SystemIdentification.mmIdentificationForSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,33 +135,34 @@ public class AutomatedTellerMachine4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#Identification
-	 * AutomatedTellerMachine5.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#mmIdentification
+	 * AutomatedTellerMachine5.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#Identification
-	 * AutomatedTellerMachine1.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#mmIdentification
+	 * AutomatedTellerMachine1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmIdentificationForSystem;
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.IdentificationForSystem;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "ATM terminal device identification for the acquirer and the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.Identification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text additionalIdentification;
 	/**
 	 * ATM terminal device identification for the ATM manager.
 	 * <p>
@@ -189,18 +192,18 @@ public class AutomatedTellerMachine4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#AdditionalIdentification
-	 * AutomatedTellerMachine5.AdditionalIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#mmAdditionalIdentification
+	 * AutomatedTellerMachine5.mmAdditionalIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#AdditionalIdentification
-	 * AutomatedTellerMachine1.AdditionalIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#mmAdditionalIdentification
+	 * AutomatedTellerMachine1.mmAdditionalIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
 			isDerived = false;
@@ -208,13 +211,14 @@ public class AutomatedTellerMachine4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "ATM terminal device identification for the ATM manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.AdditionalIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.AdditionalIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmAdditionalIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmAdditionalIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text sequenceNumber;
 	/**
 	 * ATM terminal device identification for the branch.
 	 * <p>
@@ -227,8 +231,8 @@ public class AutomatedTellerMachine4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification#SystemName
-	 * SystemIdentification.SystemName}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
+	 * SystemIdentification.mmSystemName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,33 +253,34 @@ public class AutomatedTellerMachine4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#SequenceNumber
-	 * AutomatedTellerMachine5.SequenceNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#mmSequenceNumber
+	 * AutomatedTellerMachine5.mmSequenceNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#SequenceNumber
-	 * AutomatedTellerMachine1.SequenceNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#mmSequenceNumber
+	 * AutomatedTellerMachine1.mmSequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmSystemName;
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.SystemName;
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "ATM terminal device identification for the branch.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.SequenceNumber;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.SequenceNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmSequenceNumber);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmSequenceNumber;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode baseCurrency;
 	/**
 	 * Reference currency of the ATM.
 	 * <p>
@@ -289,8 +294,8 @@ public class AutomatedTellerMachine4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyOfTransfer
-	 * Payment.CurrencyOfTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
+	 * Payment.mmCurrencyOfTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,33 +316,34 @@ public class AutomatedTellerMachine4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#BaseCurrency
-	 * AutomatedTellerMachine5.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#mmBaseCurrency
+	 * AutomatedTellerMachine5.mmBaseCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#BaseCurrency
-	 * AutomatedTellerMachine1.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#mmBaseCurrency
+	 * AutomatedTellerMachine1.mmBaseCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyOfTransfer;
 			isDerived = false;
 			xmlTag = "BaseCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
 			definition = "Reference currency of the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.BaseCurrency;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.BaseCurrency);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmBaseCurrency);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmBaseCurrency;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected PostalAddress17 location;
 	/**
 	 * Location of the ATM.
 	 * <p>
@@ -349,8 +355,8 @@ public class AutomatedTellerMachine4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#Location
-	 * System.Location}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmLocation
+	 * System.mmLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -371,34 +377,35 @@ public class AutomatedTellerMachine4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#Location
-	 * AutomatedTellerMachine5.Location}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#mmLocation
+	 * AutomatedTellerMachine5.mmLocation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#Location
-	 * AutomatedTellerMachine1.Location}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#mmLocation
+	 * AutomatedTellerMachine1.mmLocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Location = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmLocation;
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.Location;
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location of the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.Location;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.Location);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmLocation);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmLocation;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress17.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress17.mmObject();
 		}
 	};
+	protected TransactionEnvironment2Code locationCategory;
 	/**
 	 * Indicates the environment of the transaction.
 	 * <p>
@@ -429,18 +436,18 @@ public class AutomatedTellerMachine4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#LocationCategory
-	 * AutomatedTellerMachine5.LocationCategory}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#mmLocationCategory
+	 * AutomatedTellerMachine5.mmLocationCategory}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#LocationCategory
-	 * AutomatedTellerMachine1.LocationCategory}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#mmLocationCategory
+	 * AutomatedTellerMachine1.mmLocationCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocationCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
 			isDerived = false;
@@ -448,13 +455,14 @@ public class AutomatedTellerMachine4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCategory";
 			definition = "Indicates the environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.LocationCategory;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.LocationCategory);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmLocationCategory);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmLocationCategory;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment2Code.mmObject();
 		}
 	};
+	protected PointOfInteractionCapabilities5 capabilities;
 	/**
 	 * Capabilities of the ATM terminal performing the transaction.
 	 * <p>
@@ -467,8 +475,8 @@ public class AutomatedTellerMachine4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#CardReadingCapabilities
-	 * PointOfInteraction.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardReadingCapabilities
+	 * PointOfInteraction.mmCardReadingCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -489,26 +497,27 @@ public class AutomatedTellerMachine4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#Capabilities
-	 * AutomatedTellerMachine1.Capabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#mmCapabilities
+	 * AutomatedTellerMachine1.mmCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Capabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.CardReadingCapabilities;
 			isDerived = false;
 			xmlTag = "Cpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the ATM terminal performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.Capabilities;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmCapabilities;
 			maxOccurs = 1;
-			type_lazy = () -> PointOfInteractionCapabilities5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmObject();
 		}
 	};
+	protected ATMEquipment1 equipment;
 	/**
 	 * ATM terminal equipment.
 	 * <p>
@@ -537,18 +546,18 @@ public class AutomatedTellerMachine4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#Equipment
-	 * AutomatedTellerMachine5.Equipment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#mmEquipment
+	 * AutomatedTellerMachine5.mmEquipment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#Equipment
-	 * AutomatedTellerMachine1.Equipment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine1#mmEquipment
+	 * AutomatedTellerMachine1.mmEquipment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Equipment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEquipment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
 			isDerived = false;
@@ -556,14 +565,15 @@ public class AutomatedTellerMachine4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equipment";
 			definition = "ATM terminal equipment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.Equipment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.Equipment);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmEquipment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmEquipment;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEquipment1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 		}
 	};
+	protected List<ATMDevice2Code> availableDevice;
 	/**
 	 * List of ATM devices out of service.
 	 * <p>
@@ -594,13 +604,13 @@ public class AutomatedTellerMachine4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#OutOfServiceDevice
-	 * AutomatedTellerMachine5.OutOfServiceDevice}</li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine5#mmOutOfServiceDevice
+	 * AutomatedTellerMachine5.mmOutOfServiceDevice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AvailableDevice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAvailableDevice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AutomatedTellerMachine4.mmObject();
 			isDerived = false;
@@ -608,7 +618,7 @@ public class AutomatedTellerMachine4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDevice";
 			definition = "List of ATM devices out of service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.OutOfServiceDevice);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmOutOfServiceDevice);
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMDevice2Code.mmObject();
 		}
@@ -617,19 +627,91 @@ public class AutomatedTellerMachine4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine4.Identification, com.tools20022.repository.msg.AutomatedTellerMachine4.AdditionalIdentification,
-						com.tools20022.repository.msg.AutomatedTellerMachine4.SequenceNumber, com.tools20022.repository.msg.AutomatedTellerMachine4.BaseCurrency, com.tools20022.repository.msg.AutomatedTellerMachine4.Location,
-						com.tools20022.repository.msg.AutomatedTellerMachine4.LocationCategory, com.tools20022.repository.msg.AutomatedTellerMachine4.Capabilities, com.tools20022.repository.msg.AutomatedTellerMachine4.Equipment,
-						com.tools20022.repository.msg.AutomatedTellerMachine4.AvailableDevice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine4.mmIdentification, com.tools20022.repository.msg.AutomatedTellerMachine4.mmAdditionalIdentification,
+						com.tools20022.repository.msg.AutomatedTellerMachine4.mmSequenceNumber, com.tools20022.repository.msg.AutomatedTellerMachine4.mmBaseCurrency, com.tools20022.repository.msg.AutomatedTellerMachine4.mmLocation,
+						com.tools20022.repository.msg.AutomatedTellerMachine4.mmLocationCategory, com.tools20022.repository.msg.AutomatedTellerMachine4.mmCapabilities, com.tools20022.repository.msg.AutomatedTellerMachine4.mmEquipment,
+						com.tools20022.repository.msg.AutomatedTellerMachine4.mmAvailableDevice);
 				trace_lazy = () -> SystemIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AutomatedTellerMachine4";
 				definition = "ATM information.";
-				previousVersion_lazy = () -> AutomatedTellerMachine1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AutomatedTellerMachine5.mmObject());
+				previousVersion_lazy = () -> AutomatedTellerMachine1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getAdditionalIdentification() {
+		return additionalIdentification;
+	}
+
+	public void setAdditionalIdentification(Max35Text additionalIdentification) {
+		this.additionalIdentification = additionalIdentification;
+	}
+
+	public Max35Text getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(Max35Text sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+
+	public ActiveCurrencyCode getBaseCurrency() {
+		return baseCurrency;
+	}
+
+	public void setBaseCurrency(ActiveCurrencyCode baseCurrency) {
+		this.baseCurrency = baseCurrency;
+	}
+
+	public PostalAddress17 getLocation() {
+		return location;
+	}
+
+	public void setLocation(com.tools20022.repository.msg.PostalAddress17 location) {
+		this.location = location;
+	}
+
+	public TransactionEnvironment2Code getLocationCategory() {
+		return locationCategory;
+	}
+
+	public void setLocationCategory(TransactionEnvironment2Code locationCategory) {
+		this.locationCategory = locationCategory;
+	}
+
+	public PointOfInteractionCapabilities5 getCapabilities() {
+		return capabilities;
+	}
+
+	public void setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities5 capabilities) {
+		this.capabilities = capabilities;
+	}
+
+	public ATMEquipment1 getEquipment() {
+		return equipment;
+	}
+
+	public void setEquipment(com.tools20022.repository.msg.ATMEquipment1 equipment) {
+		this.equipment = equipment;
+	}
+
+	public List<ATMDevice2Code> getAvailableDevice() {
+		return availableDevice;
+	}
+
+	public void setAvailableDevice(List<ATMDevice2Code> availableDevice) {
+		this.availableDevice = availableDevice;
 	}
 }

@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Presentation3#Format
- * Presentation3.Format}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Presentation3#Channel
- * Presentation3.Channel}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Presentation3#Address
- * Presentation3.Address}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Presentation3#mmFormat
+ * Presentation3.mmFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Presentation3#mmChannel
+ * Presentation3.mmChannel}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Presentation3#mmAddress
+ * Presentation3.mmAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Presentation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentFormat1Choice format;
 	/**
 	 * Format for presentation documents that are submitted electronically.
 	 * <p>
@@ -77,8 +78,8 @@ public class Presentation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#Format
-	 * UndertakingDocument.Format}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#mmFormat
+	 * UndertakingDocument.mmFormat}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class Presentation3 {
 	 * "Format for presentation documents that are submitted electronically."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Format = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> Presentation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.Format;
 			isDerived = false;
 			xmlTag = "Frmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Format for presentation documents that are submitted electronically.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentFormat1Choice.mmObject();
 		}
 	};
+	protected Channel1Choice channel;
 	/**
 	 * Channel through which presentation documents are submitted
 	 * electronically, such as SWIFT, Web upload, or secure email.
@@ -125,8 +127,8 @@ public class Presentation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#CommunicationMethod
-	 * Presentation.CommunicationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmCommunicationMethod
+	 * Presentation.mmCommunicationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +148,21 @@ public class Presentation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Channel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> Presentation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.CommunicationMethod;
 			isDerived = false;
 			xmlTag = "Chanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Channel";
 			definition = "Channel through which presentation documents are submitted electronically, such as SWIFT,  Web upload, or secure email.  ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Channel1Choice.mmObject();
 		}
 	};
+	protected Max256Text address;
 	/**
 	 * Uniform Resource Identifier (URI), such as a web or an email address,
 	 * specifying where the presentation can be addressed.
@@ -173,8 +176,8 @@ public class Presentation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#ElectronicPresentationAddress
-	 * Presentation.ElectronicPresentationAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmElectronicPresentationAddress
+	 * Presentation.mmElectronicPresentationAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,17 +197,17 @@ public class Presentation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Address = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmElectronicPresentationAddress;
 			componentContext_lazy = () -> Presentation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.ElectronicPresentationAddress;
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Uniform Resource Identifier (URI), such as a web or an email address, specifying where the presentation can be addressed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -212,14 +215,38 @@ public class Presentation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation3.Format, com.tools20022.repository.msg.Presentation3.Channel, com.tools20022.repository.msg.Presentation3.Address);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation3.mmFormat, com.tools20022.repository.msg.Presentation3.mmChannel, com.tools20022.repository.msg.Presentation3.mmAddress);
 				trace_lazy = () -> Presentation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Presentation3";
 				definition = "Electronic presentation information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentFormat1Choice getFormat() {
+		return format;
+	}
+
+	public void setFormat(DocumentFormat1Choice format) {
+		this.format = format;
+	}
+
+	public Channel1Choice getChannel() {
+		return channel;
+	}
+
+	public void setChannel(Channel1Choice channel) {
+		this.channel = channel;
+	}
+
+	public Max256Text getAddress() {
+		return address;
+	}
+
+	public void setAddress(Max256Text address) {
+		this.address = address;
 	}
 }

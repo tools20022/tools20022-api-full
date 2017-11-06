@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndustrialProductCommodityConstruction1#BaseProduct
- * IndustrialProductCommodityConstruction1.BaseProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.IndustrialProductCommodityConstruction1#mmBaseProduct
+ * IndustrialProductCommodityConstruction1.mmBaseProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndustrialProductCommodityConstruction1#SubProduct
- * IndustrialProductCommodityConstruction1.SubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.IndustrialProductCommodityConstruction1#mmSubProduct
+ * IndustrialProductCommodityConstruction1.mmSubProduct}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndustrialProductCommodityConstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetClassProductType6Code baseProduct;
 	/**
 	 * Base product for the underlying asset class as specified in the
 	 * classification of commodities derivatives table.
@@ -93,7 +94,7 @@ public class IndustrialProductCommodityConstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IndustrialProductCommodityConstruction1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class IndustrialProductCommodityConstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType6Code.mmObject();
 		}
 	};
+	protected AssetClassSubProductType33Code subProduct;
 	/**
 	 * Sub-product for the underlying asset class.
 	 * <p>
@@ -134,7 +136,7 @@ public class IndustrialProductCommodityConstruction1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IndustrialProductCommodityConstruction1.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class IndustrialProductCommodityConstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassSubProductType33Code.mmObject();
 		}
 	};
@@ -151,13 +153,29 @@ public class IndustrialProductCommodityConstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndustrialProductCommodityConstruction1.BaseProduct, com.tools20022.repository.msg.IndustrialProductCommodityConstruction1.SubProduct);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndustrialProductCommodityConstruction1.mmBaseProduct, com.tools20022.repository.msg.IndustrialProductCommodityConstruction1.mmSubProduct);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IndustrialProductCommodityConstruction1";
 				definition = "Defines commodity sub-product attributes of an industrial product derivative of type construction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetClassProductType6Code getBaseProduct() {
+		return baseProduct;
+	}
+
+	public void setBaseProduct(AssetClassProductType6Code baseProduct) {
+		this.baseProduct = baseProduct;
+	}
+
+	public AssetClassSubProductType33Code getSubProduct() {
+		return subProduct;
+	}
+
+	public void setSubProduct(AssetClassSubProductType33Code subProduct) {
+		this.subProduct = subProduct;
 	}
 }

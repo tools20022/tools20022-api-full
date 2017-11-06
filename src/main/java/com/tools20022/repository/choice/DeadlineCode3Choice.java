@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DeadlineCode3Choice#Code
- * DeadlineCode3Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DeadlineCode3Choice#mmCode
+ * DeadlineCode3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DeadlineCode3Choice#Proprietary
- * DeadlineCode3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.DeadlineCode3Choice#mmProprietary
+ * DeadlineCode3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeadlineCode3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionDeadline1Code code;
 	/**
 	 * Standard code to specify the reference date of a corporate action.
 	 * <p>
@@ -94,11 +95,11 @@ public class DeadlineCode3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.DeadlineCode1Choice#Code
-	 * DeadlineCode1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.DeadlineCode1Choice#mmCode
+	 * DeadlineCode1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DeadlineCode3Choice.mmObject();
 			isDerived = false;
@@ -106,12 +107,13 @@ public class DeadlineCode3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the reference date of a corporate action.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DeadlineCode1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.DeadlineCode1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionDeadline1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Proprietary identification of the reference date of a corporate action.
 	 * <p>
@@ -142,11 +144,11 @@ public class DeadlineCode3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.DeadlineCode1Choice#Proprietary
-	 * DeadlineCode1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.DeadlineCode1Choice#mmProprietary
+	 * DeadlineCode1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DeadlineCode3Choice.mmObject();
 			isDerived = false;
@@ -154,19 +156,19 @@ public class DeadlineCode3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the reference date of a corporate action.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DeadlineCode1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.DeadlineCode1Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeadlineCode3Choice.Code, com.tools20022.repository.choice.DeadlineCode3Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeadlineCode3Choice.mmCode, com.tools20022.repository.choice.DeadlineCode3Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeadlineCode3Choice";
 				definition = "Choice between a code or a proprietary code for a deadline code.";
@@ -174,5 +176,21 @@ public class DeadlineCode3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionDeadline1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionDeadline1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

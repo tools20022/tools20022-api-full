@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#Snapshot
- * SubscriptionRequest1Code.Snapshot}</li>
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#mmSnapshot
+ * SubscriptionRequest1Code.mmSnapshot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#Subscribe
- * SubscriptionRequest1Code.Subscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#mmSubscribe
+ * SubscriptionRequest1Code.mmSubscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#Unsubscribe
- * SubscriptionRequest1Code.Unsubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#mmUnsubscribe
+ * SubscriptionRequest1Code.mmUnsubscribe}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 * name} = "Snapshot"</li>
 	 * </ul>
 	 */
-	public static final MMCode Snapshot = new MMCode() {
+	public static final MMCode mmSnapshot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Snapshot";
@@ -107,7 +107,7 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 * name} = "Subscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscribe = new MMCode() {
+	public static final MMCode mmSubscribe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscribe";
@@ -130,7 +130,7 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 * name} = "Unsubscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unsubscribe = new MMCode() {
+	public static final MMCode mmUnsubscribe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsubscribe";
@@ -141,13 +141,13 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SNAP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionRequest1Code";
 				definition = "Type of subscription to market data.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SubscriptionRequest1Code.Snapshot, com.tools20022.repository.codeset.SubscriptionRequest1Code.Subscribe,
-						com.tools20022.repository.codeset.SubscriptionRequest1Code.Unsubscribe);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SubscriptionRequest1Code.mmSnapshot, com.tools20022.repository.codeset.SubscriptionRequest1Code.mmSubscribe,
+						com.tools20022.repository.codeset.SubscriptionRequest1Code.mmUnsubscribe);
 				trace_lazy = () -> SubscriptionRequestCode.mmObject();
 			}
 		});

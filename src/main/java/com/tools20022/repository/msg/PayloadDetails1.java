@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PayloadDetails1#PayloadIdentifier
- * PayloadDetails1.PayloadIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.PayloadDetails1#mmPayloadIdentifier
+ * PayloadDetails1.mmPayloadIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PayloadDetails1#CreationDateAndTime
- * PayloadDetails1.CreationDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.msg.PayloadDetails1#mmCreationDateAndTime
+ * PayloadDetails1.mmCreationDateAndTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PayloadDetails1#PossibleDuplicateFlag
- * PayloadDetails1.PossibleDuplicateFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.PayloadDetails1#mmPossibleDuplicateFlag
+ * PayloadDetails1.mmPossibleDuplicateFlag}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayloadDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text payloadIdentifier;
 	/**
 	 * String of characters that uniquely identifies the file, which was
 	 * delivered by the sender.
@@ -94,7 +95,7 @@ public class PayloadDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayloadIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayloadIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PayloadDetails1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class PayloadDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadIdentifier";
 			definition = "String of characters that uniquely identifies the file, which was delivered by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateAndTime;
 	/**
 	 * Date and time when the file was created by the sender.
 	 * <p>
@@ -134,7 +136,7 @@ public class PayloadDetails1 {
 	 * definition} = "Date and time when the file was created by the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PayloadDetails1.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class PayloadDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateAndTime";
 			definition = "Date and time when the file was created by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected TrueFalseIndicator possibleDuplicateFlag;
 	/**
 	 * Flag indicating if the file exchanged between the two business
 	 * applications is possibly a duplicate. If this indicator is not present
@@ -179,7 +182,7 @@ public class PayloadDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PossibleDuplicateFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPossibleDuplicateFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PayloadDetails1.mmObject();
 			isDerived = false;
@@ -187,8 +190,8 @@ public class PayloadDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicateFlag";
 			definition = "Flag indicating if the file exchanged between the two business applications is possibly a duplicate. If this indicator is not present within the message, please note that the default value would be \"False\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -196,14 +199,38 @@ public class PayloadDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadDetails1.PayloadIdentifier, com.tools20022.repository.msg.PayloadDetails1.CreationDateAndTime,
-						com.tools20022.repository.msg.PayloadDetails1.PossibleDuplicateFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadDetails1.mmPayloadIdentifier, com.tools20022.repository.msg.PayloadDetails1.mmCreationDateAndTime,
+						com.tools20022.repository.msg.PayloadDetails1.mmPossibleDuplicateFlag);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PayloadDetails1";
 				definition = "This component identifies the instance of the document exchanged.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPayloadIdentifier() {
+		return payloadIdentifier;
+	}
+
+	public void setPayloadIdentifier(Max35Text payloadIdentifier) {
+		this.payloadIdentifier = payloadIdentifier;
+	}
+
+	public ISODateTime getCreationDateAndTime() {
+		return creationDateAndTime;
+	}
+
+	public void setCreationDateAndTime(ISODateTime creationDateAndTime) {
+		this.creationDateAndTime = creationDateAndTime;
+	}
+
+	public TrueFalseIndicator getPossibleDuplicateFlag() {
+		return possibleDuplicateFlag;
+	}
+
+	public void setPossibleDuplicateFlag(TrueFalseIndicator possibleDuplicateFlag) {
+		this.possibleDuplicateFlag = possibleDuplicateFlag;
 	}
 }

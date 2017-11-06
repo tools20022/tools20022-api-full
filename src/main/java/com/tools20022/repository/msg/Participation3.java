@@ -37,16 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Participation3#TotalNumberOfVotingRights
- * Participation3.TotalNumberOfVotingRights}</li>
+ * {@linkplain com.tools20022.repository.msg.Participation3#mmTotalNumberOfVotingRights
+ * Participation3.mmTotalNumberOfVotingRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Participation3#PercentageOfVotingRights
- * Participation3.PercentageOfVotingRights}</li>
+ * {@linkplain com.tools20022.repository.msg.Participation3#mmPercentageOfVotingRights
+ * Participation3.mmPercentageOfVotingRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Participation3#TotalNumberOfSecuritiesOutstanding
- * Participation3.TotalNumberOfSecuritiesOutstanding}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Participation3#CalculationDate
- * Participation3.CalculationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.Participation3#mmTotalNumberOfSecuritiesOutstanding
+ * Participation3.mmTotalNumberOfSecuritiesOutstanding}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Participation3#mmCalculationDate
+ * Participation3.mmCalculationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,18 +58,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#Participation
- * MeetingResultDisseminationV03.Participation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#mmParticipation
+ * MeetingResultDisseminationV03.mmParticipation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#Participation
- * MeetingResultDisseminationV04.Participation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmParticipation
+ * MeetingResultDisseminationV04.mmParticipation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Participation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number totalNumberOfVotingRights;
 	/**
 	 * Number of rights admitted to the vote.
 	 * <p>
@@ -101,8 +103,8 @@ public class Participation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#TotalNumberOfVotingRights
-	 * MeetingParticipation.TotalNumberOfVotingRights}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#mmTotalNumberOfVotingRights
+	 * MeetingParticipation.mmTotalNumberOfVotingRights}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -122,27 +124,28 @@ public class Participation3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Participation4#TotalNumberOfVotingRights
-	 * Participation4.TotalNumberOfVotingRights}</li>
+	 * {@linkplain com.tools20022.repository.msg.Participation4#mmTotalNumberOfVotingRights
+	 * Participation4.mmTotalNumberOfVotingRights}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfVotingRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfVotingRights = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfVotingRights;
 			componentContext_lazy = () -> Participation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.TotalNumberOfVotingRights;
 			isDerived = false;
 			xmlTag = "TtlNbOfVtngRghts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfVotingRights";
 			definition = "Number of rights admitted to the vote.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.TotalNumberOfVotingRights);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.mmTotalNumberOfVotingRights);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfVotingRights;
 	/**
 	 * Percentage of rights participating to the vote versus total voting
 	 * rights.
@@ -175,13 +178,13 @@ public class Participation3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Participation4#PercentageOfVotingRights
-	 * Participation4.PercentageOfVotingRights}</li>
+	 * {@linkplain com.tools20022.repository.msg.Participation4#mmPercentageOfVotingRights
+	 * Participation4.mmPercentageOfVotingRights}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageOfVotingRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageOfVotingRights = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Participation3.mmObject();
 			isDerived = false;
@@ -189,12 +192,13 @@ public class Participation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfVotingRights";
 			definition = "Percentage of rights participating to the vote versus total voting rights.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.PercentageOfVotingRights);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.mmPercentageOfVotingRights);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalNumberOfSecuritiesOutstanding;
 	/**
 	 * Number of securities admitted to the vote, expressed as an amount and a
 	 * currency.
@@ -209,8 +213,8 @@ public class Participation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#TotalNumberOfSecuritiesOutstanding
-	 * MeetingParticipation.TotalNumberOfSecuritiesOutstanding}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#mmTotalNumberOfSecuritiesOutstanding
+	 * MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -232,27 +236,28 @@ public class Participation3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Participation4#TotalNumberOfSecuritiesOutstanding
-	 * Participation4.TotalNumberOfSecuritiesOutstanding}</li>
+	 * {@linkplain com.tools20022.repository.msg.Participation4#mmTotalNumberOfSecuritiesOutstanding
+	 * Participation4.mmTotalNumberOfSecuritiesOutstanding}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding;
 			componentContext_lazy = () -> Participation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.TotalNumberOfSecuritiesOutstanding;
 			isDerived = false;
 			xmlTag = "TtlNbOfSctiesOutsdng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfSecuritiesOutstanding";
 			definition = "Number of securities admitted to the vote, expressed as an amount and a currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.TotalNumberOfSecuritiesOutstanding);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.mmTotalNumberOfSecuritiesOutstanding);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate calculationDate;
 	/**
 	 * Date of calculation of the total number of oustanding securities.
 	 * <p>
@@ -265,8 +270,8 @@ public class Participation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#CalculationDate
-	 * MeetingParticipation.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#mmCalculationDate
+	 * MeetingParticipation.mmCalculationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,24 +292,24 @@ public class Participation3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Participation4#CalculationDate
-	 * Participation4.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Participation4#mmCalculationDate
+	 * Participation4.mmCalculationDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.mmCalculationDate;
 			componentContext_lazy = () -> Participation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.CalculationDate;
 			isDerived = false;
 			xmlTag = "ClctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Date of calculation of the total number of oustanding securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.CalculationDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.mmCalculationDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -312,11 +317,11 @@ public class Participation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation3.TotalNumberOfVotingRights, com.tools20022.repository.msg.Participation3.PercentageOfVotingRights,
-						com.tools20022.repository.msg.Participation3.TotalNumberOfSecuritiesOutstanding, com.tools20022.repository.msg.Participation3.CalculationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation3.mmTotalNumberOfVotingRights, com.tools20022.repository.msg.Participation3.mmPercentageOfVotingRights,
+						com.tools20022.repository.msg.Participation3.mmTotalNumberOfSecuritiesOutstanding, com.tools20022.repository.msg.Participation3.mmCalculationDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV03.mmParticipation, com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmParticipation);
 				trace_lazy = () -> MeetingParticipation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV03.Participation, com.tools20022.repository.area.seev.MeetingResultDisseminationV04.Participation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Participation3";
 				definition = "Specifies the level of participation to a shareholders meeting.";
@@ -324,5 +329,37 @@ public class Participation3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getTotalNumberOfVotingRights() {
+		return totalNumberOfVotingRights;
+	}
+
+	public void setTotalNumberOfVotingRights(Number totalNumberOfVotingRights) {
+		this.totalNumberOfVotingRights = totalNumberOfVotingRights;
+	}
+
+	public PercentageRate getPercentageOfVotingRights() {
+		return percentageOfVotingRights;
+	}
+
+	public void setPercentageOfVotingRights(PercentageRate percentageOfVotingRights) {
+		this.percentageOfVotingRights = percentageOfVotingRights;
+	}
+
+	public ActiveCurrencyAndAmount getTotalNumberOfSecuritiesOutstanding() {
+		return totalNumberOfSecuritiesOutstanding;
+	}
+
+	public void setTotalNumberOfSecuritiesOutstanding(ActiveCurrencyAndAmount totalNumberOfSecuritiesOutstanding) {
+		this.totalNumberOfSecuritiesOutstanding = totalNumberOfSecuritiesOutstanding;
+	}
+
+	public ISODate getCalculationDate() {
+		return calculationDate;
+	}
+
+	public void setCalculationDate(ISODate calculationDate) {
+		this.calculationDate = calculationDate;
 	}
 }

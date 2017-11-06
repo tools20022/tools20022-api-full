@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Account to or from which a securities entry is made.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification6#Identification
- * SubAccountIdentification6.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification6#mmIdentification
+ * SubAccountIdentification6.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification6#ActivityIndicator
- * SubAccountIdentification6.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification6#mmActivityIndicator
+ * SubAccountIdentification6.mmActivityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification6#TransactionOnSubAccount
- * SubAccountIdentification6.TransactionOnSubAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification6#mmTransactionOnSubAccount
+ * SubAccountIdentification6.mmTransactionOnSubAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,15 +55,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#SubAccountDetails
- * StatementOfInvestmentFundTransactionsV02.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmSubAccountDetails
+ * StatementOfInvestmentFundTransactionsV02.mmSubAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubAccountIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentificationFormatChoice identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -121,27 +123,28 @@ public class SubAccountIdentification6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36#Identification
-	 * SubAccountIdentification36.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36#mmIdentification
+	 * SubAccountIdentification36.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity reported in the statement.
 	 * <p>
@@ -173,13 +176,13 @@ public class SubAccountIdentification6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36#ActivityIndicator
-	 * SubAccountIdentification36.ActivityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36#mmActivityIndicator
+	 * SubAccountIdentification36.mmActivityIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
 			isDerived = false;
@@ -187,12 +190,13 @@ public class SubAccountIdentification6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity reported in the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.ActivityIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.mmActivityIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund2> transactionOnSubAccount;
 	/**
 	 * Creation/cancellation of investment units on the books of the fund or its
 	 * designated agent, as a result of executing an investment fund order.
@@ -206,8 +210,8 @@ public class SubAccountIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#InvestmentFundTransaction
-	 * InvestmentAccount.InvestmentFundTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundTransaction
+	 * InvestmentAccount.mmInvestmentFundTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,36 +234,36 @@ public class SubAccountIdentification6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36#TransactionOnSubAccount
-	 * SubAccountIdentification36.TransactionOnSubAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36#mmTransactionOnSubAccount
+	 * SubAccountIdentification36.mmTransactionOnSubAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionOnSubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionOnSubAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTransaction;
 			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.InvestmentFundTransaction;
 			isDerived = false;
 			xmlTag = "TxOnSubAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnSubAccount";
 			definition = "Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.TransactionOnSubAccount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.mmTransactionOnSubAccount);
 			minOccurs = 0;
-			type_lazy = () -> InvestmentFundTransactionsByFund2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification6.Identification, com.tools20022.repository.msg.SubAccountIdentification6.ActivityIndicator,
-						com.tools20022.repository.msg.SubAccountIdentification6.TransactionOnSubAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification6.mmIdentification, com.tools20022.repository.msg.SubAccountIdentification6.mmActivityIndicator,
+						com.tools20022.repository.msg.SubAccountIdentification6.mmTransactionOnSubAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmSubAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.SubAccountDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubAccountIdentification6";
 				definition = "Account to or from which a securities entry is made.";
@@ -267,5 +271,29 @@ public class SubAccountIdentification6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentificationFormatChoice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(AccountIdentificationFormatChoice identification) {
+		this.identification = identification;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
+	}
+
+	public List<InvestmentFundTransactionsByFund2> getTransactionOnSubAccount() {
+		return transactionOnSubAccount;
+	}
+
+	public void setTransactionOnSubAccount(List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund2> transactionOnSubAccount) {
+		this.transactionOnSubAccount = transactionOnSubAccount;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Price;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * ATM cassette counter per unit value or globally.
@@ -37,20 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#UnitValue
- * ATMCassetteCounters1.UnitValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#Currency
- * ATMCassetteCounters1.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#ItemType
- * ATMCassetteCounters1.ItemType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#Counter
- * ATMCassetteCounters1.Counter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#CurrentNumber
- * ATMCassetteCounters1.CurrentNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#mmUnitValue
+ * ATMCassetteCounters1.mmUnitValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#CurrentAmount
- * ATMCassetteCounters1.CurrentAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#mmCurrency
+ * ATMCassetteCounters1.mmCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#mmItemType
+ * ATMCassetteCounters1.mmItemType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#mmCounter
+ * ATMCassetteCounters1.mmCounter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#mmCurrentNumber
+ * ATMCassetteCounters1.mmCurrentNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters1#mmCurrentAmount
+ * ATMCassetteCounters1.mmCurrentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCassetteCounters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmount unitValue;
 	/**
 	 * Amount of one media unit, if the media type is valued.
 	 * <p>
@@ -93,7 +98,8 @@ public class ATMCassetteCounters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Amount Price.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmAmount
+	 * Price.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +118,21 @@ public class ATMCassetteCounters1 {
 	 * definition} = "Amount of one media unit, if the media type is valued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
 			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Amount;
 			isDerived = false;
 			xmlTag = "UnitVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitValue";
 			definition = "Amount of one media unit, if the media type is valued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currency;
 	/**
 	 * Currency of the media, if the media type is valued and different from the
 	 * currency of the requested amount.
@@ -140,8 +147,8 @@ public class ATMCassetteCounters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Currency
-	 * Price.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmCurrency
+	 * Price.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,20 +169,21 @@ public class ATMCassetteCounters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmCurrency;
 			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the media, if the media type is valued and different from the currency of the requested amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ATMNoteType2Code itemType;
 	/**
 	 * Type of notes.
 	 * <p>
@@ -204,7 +212,7 @@ public class ATMCassetteCounters1 {
 	 * definition} = "Type of notes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
 			isDerived = false;
@@ -212,11 +220,12 @@ public class ATMCassetteCounters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemType";
 			definition = "Type of notes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ATMNoteType2Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMCassetteCounters2> counter;
 	/**
 	 * Counters of media inside the cassette.
 	 * <p>
@@ -243,7 +252,7 @@ public class ATMCassetteCounters1 {
 	 * definition} = "Counters of media inside the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Counter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCounter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
 			isDerived = false;
@@ -252,10 +261,11 @@ public class ATMCassetteCounters1 {
 			name = "Counter";
 			definition = "Counters of media inside the cassette.";
 			minOccurs = 0;
-			type_lazy = () -> ATMCassetteCounters2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 		}
 	};
+	protected Number currentNumber;
 	/**
 	 * Current number of media present in the cassette.
 	 * <p>
@@ -283,7 +293,7 @@ public class ATMCassetteCounters1 {
 	 * definition} = "Current number of media present in the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
 			isDerived = false;
@@ -291,11 +301,12 @@ public class ATMCassetteCounters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentNumber";
 			definition = "Current number of media present in the cassette.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount currentAmount;
 	/**
 	 * Current amount in the cassette.
 	 * <p>
@@ -309,7 +320,8 @@ public class ATMCassetteCounters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Amount Price.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmAmount
+	 * Price.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -328,17 +340,17 @@ public class ATMCassetteCounters1 {
 	 * definition} = "Current amount in the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
 			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Amount;
 			isDerived = false;
 			xmlTag = "CurAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentAmount";
 			definition = "Current amount in the cassette.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -346,17 +358,65 @@ public class ATMCassetteCounters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters1.UnitValue, com.tools20022.repository.msg.ATMCassetteCounters1.Currency,
-						com.tools20022.repository.msg.ATMCassetteCounters1.ItemType, com.tools20022.repository.msg.ATMCassetteCounters1.Counter, com.tools20022.repository.msg.ATMCassetteCounters1.CurrentNumber,
-						com.tools20022.repository.msg.ATMCassetteCounters1.CurrentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters1.mmUnitValue, com.tools20022.repository.msg.ATMCassetteCounters1.mmCurrency,
+						com.tools20022.repository.msg.ATMCassetteCounters1.mmItemType, com.tools20022.repository.msg.ATMCassetteCounters1.mmCounter, com.tools20022.repository.msg.ATMCassetteCounters1.mmCurrentNumber,
+						com.tools20022.repository.msg.ATMCassetteCounters1.mmCurrentAmount);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteCounters1";
 				definition = "ATM cassette counter per unit value or globally.";
-				nextVersions_lazy = () -> Arrays.asList(ATMCassetteCounters2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmount getUnitValue() {
+		return unitValue;
+	}
+
+	public void setUnitValue(ImpliedCurrencyAndAmount unitValue) {
+		this.unitValue = unitValue;
+	}
+
+	public ActiveCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public ATMNoteType2Code getItemType() {
+		return itemType;
+	}
+
+	public void setItemType(ATMNoteType2Code itemType) {
+		this.itemType = itemType;
+	}
+
+	public List<ATMCassetteCounters2> getCounter() {
+		return counter;
+	}
+
+	public void setCounter(List<com.tools20022.repository.msg.ATMCassetteCounters2> counter) {
+		this.counter = counter;
+	}
+
+	public Number getCurrentNumber() {
+		return currentNumber;
+	}
+
+	public void setCurrentNumber(Number currentNumber) {
+		this.currentNumber = currentNumber;
+	}
+
+	public ImpliedCurrencyAndAmount getCurrentAmount() {
+		return currentAmount;
+	}
+
+	public void setCurrentAmount(ImpliedCurrencyAndAmount currentAmount) {
+		this.currentAmount = currentAmount;
 	}
 }

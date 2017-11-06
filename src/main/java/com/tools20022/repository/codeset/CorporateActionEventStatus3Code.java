@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code#Cancelled
- * CorporateActionEventStatus3Code.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code#mmCancelled
+ * CorporateActionEventStatus3Code.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code#Inactive
- * CorporateActionEventStatus3Code.Inactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code#mmInactive
+ * CorporateActionEventStatus3Code.mmInactive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class CorporateActionEventStatus3Code extends CorporateActionEventStatusC
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -104,7 +104,7 @@ public class CorporateActionEventStatus3Code extends CorporateActionEventStatusC
 	 * name} = "Inactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode Inactive = new MMCode() {
+	public static final MMCode mmInactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
@@ -115,12 +115,12 @@ public class CorporateActionEventStatus3Code extends CorporateActionEventStatusC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStatus3Code";
 				definition = "Specifies the status of the CA event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStatus3Code.Cancelled, com.tools20022.repository.codeset.CorporateActionEventStatus3Code.Inactive);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStatus3Code.mmCancelled, com.tools20022.repository.codeset.CorporateActionEventStatus3Code.mmInactive);
 				trace_lazy = () -> CorporateActionEventStatusCode.mmObject();
 			}
 		});

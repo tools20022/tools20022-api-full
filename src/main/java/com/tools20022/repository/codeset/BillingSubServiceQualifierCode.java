@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#Lockbox
- * BillingSubServiceQualifierCode.Lockbox}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#mmLockbox
+ * BillingSubServiceQualifierCode.mmLockbox}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#Store
- * BillingSubServiceQualifierCode.Store}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#mmStore
+ * BillingSubServiceQualifierCode.mmStore}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#BilaterallyAgreed
- * BillingSubServiceQualifierCode.BilaterallyAgreed}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#mmBilaterallyAgreed
+ * BillingSubServiceQualifierCode.mmBilaterallyAgreed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#SequenceNumber
- * BillingSubServiceQualifierCode.SequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#mmSequenceNumber
+ * BillingSubServiceQualifierCode.mmSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#MemberAccount
- * BillingSubServiceQualifierCode.MemberAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#mmMemberAccount
+ * BillingSubServiceQualifierCode.mmMemberAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +102,7 @@ public class BillingSubServiceQualifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Lockbox = new MMCode() {
+	public static final MMCode mmLockbox = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lockbox";
@@ -135,7 +135,7 @@ public class BillingSubServiceQualifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Store = new MMCode() {
+	public static final MMCode mmStore = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Store";
@@ -166,7 +166,7 @@ public class BillingSubServiceQualifierCode {
 	 * "Meaning of the subservice code is established by the trading partners."</li>
 	 * </ul>
 	 */
-	public static final MMCode BilaterallyAgreed = new MMCode() {
+	public static final MMCode mmBilaterallyAgreed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilaterallyAgreed";
@@ -199,7 +199,7 @@ public class BillingSubServiceQualifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SequenceNumber = new MMCode() {
+	public static final MMCode mmSequenceNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
@@ -234,7 +234,7 @@ public class BillingSubServiceQualifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MemberAccount = new MMCode() {
+	public static final MMCode mmMemberAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberAccount";
@@ -247,14 +247,14 @@ public class BillingSubServiceQualifierCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LBOX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingSubServiceQualifierCode";
 				definition = "Qualifies the content of the subservice code.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingSubServiceQualifierCode.Lockbox, com.tools20022.repository.codeset.BillingSubServiceQualifierCode.Store,
-						com.tools20022.repository.codeset.BillingSubServiceQualifierCode.BilaterallyAgreed, com.tools20022.repository.codeset.BillingSubServiceQualifierCode.SequenceNumber,
-						com.tools20022.repository.codeset.BillingSubServiceQualifierCode.MemberAccount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmLockbox, com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmStore,
+						com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmBilaterallyAgreed, com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmSequenceNumber,
+						com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmMemberAccount);
 				derivation_lazy = () -> Arrays.asList(BillingSubServiceQualifier1Code.mmObject());
 			}
 		});

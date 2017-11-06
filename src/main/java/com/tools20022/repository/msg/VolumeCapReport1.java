@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.datatype.MICIdentifier;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Double volume cap report.
@@ -35,13 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VolumeCapReport1#ReportingPeriod
- * VolumeCapReport1.ReportingPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VolumeCapReport1#TradingVenue
- * VolumeCapReport1.TradingVenue}</li>
+ * {@linkplain com.tools20022.repository.msg.VolumeCapReport1#mmReportingPeriod
+ * VolumeCapReport1.mmReportingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VolumeCapReport1#InstrumentReport
- * VolumeCapReport1.InstrumentReport}</li>
+ * {@linkplain com.tools20022.repository.msg.VolumeCapReport1#mmTradingVenue
+ * VolumeCapReport1.mmTradingVenue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VolumeCapReport1#mmInstrumentReport
+ * VolumeCapReport1.mmInstrumentReport}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01#VolumeCapData
- * FinancialInstrumentReportingTradingVolumeCapDataReportV01.VolumeCapData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01#mmVolumeCapData
+ * FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmVolumeCapData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VolumeCapReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Period4Choice reportingPeriod;
 	/**
 	 * Date or date range the report relates to.
 	 * <p>
@@ -97,7 +100,7 @@ public class VolumeCapReport1 {
 	 * definition} = "Date or date range the report relates to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> VolumeCapReport1.mmObject();
 			isDerived = false;
@@ -105,12 +108,13 @@ public class VolumeCapReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Date or date range the report relates to.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected MICIdentifier tradingVenue;
 	/**
 	 * The venue this report is in relation to specified as {MIC} (segment MIC,
 	 * where available, otherwise operational MIC).
@@ -125,8 +129,8 @@ public class VolumeCapReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#PlaceOfListing
-	 * Security.PlaceOfListing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPlaceOfListing
+	 * Security.mmPlaceOfListing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,20 +151,21 @@ public class VolumeCapReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
 			componentContext_lazy = () -> VolumeCapReport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.PlaceOfListing;
 			isDerived = false;
 			xmlTag = "TradgVn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
 			definition = "The venue this report is in relation to specified as {MIC} (segment MIC, where available, otherwise operational MIC).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.VolumeCapReport2> instrumentReport;
 	/**
 	 * Volume cap data specific to a reporting period.
 	 * <p>
@@ -187,7 +192,7 @@ public class VolumeCapReport1 {
 	 * definition} = "Volume cap data specific to a reporting period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> VolumeCapReport1.mmObject();
 			isDerived = false;
@@ -196,23 +201,47 @@ public class VolumeCapReport1 {
 			name = "InstrumentReport";
 			definition = "Volume cap data specific to a reporting period.";
 			minOccurs = 1;
-			type_lazy = () -> VolumeCapReport2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.VolumeCapReport2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VolumeCapReport1.ReportingPeriod, com.tools20022.repository.msg.VolumeCapReport1.TradingVenue,
-						com.tools20022.repository.msg.VolumeCapReport1.InstrumentReport);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.VolumeCapData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VolumeCapReport1.mmReportingPeriod, com.tools20022.repository.msg.VolumeCapReport1.mmTradingVenue,
+						com.tools20022.repository.msg.VolumeCapReport1.mmInstrumentReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmVolumeCapData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VolumeCapReport1";
 				definition = "Double volume cap report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Period4Choice getReportingPeriod() {
+		return reportingPeriod;
+	}
+
+	public void setReportingPeriod(Period4Choice reportingPeriod) {
+		this.reportingPeriod = reportingPeriod;
+	}
+
+	public MICIdentifier getTradingVenue() {
+		return tradingVenue;
+	}
+
+	public void setTradingVenue(MICIdentifier tradingVenue) {
+		this.tradingVenue = tradingVenue;
+	}
+
+	public List<VolumeCapReport2> getInstrumentReport() {
+		return instrumentReport;
+	}
+
+	public void setInstrumentReport(List<com.tools20022.repository.msg.VolumeCapReport2> instrumentReport) {
+		this.instrumentReport = instrumentReport;
 	}
 }

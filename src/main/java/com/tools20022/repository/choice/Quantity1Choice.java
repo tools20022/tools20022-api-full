@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity1Choice#Quantity
- * Quantity1Choice.Quantity}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity1Choice#mmQuantity
+ * Quantity1Choice.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity1Choice#RelativeSize
- * Quantity1Choice.RelativeSize}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity1Choice#mmRelativeSize
+ * Quantity1Choice.mmRelativeSize}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quantity1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantityChoice quantity;
 	/**
 	 * Quantity is expressed in units, face amount or amortised amount.
 	 * <p>
@@ -98,20 +99,21 @@ public class Quantity1Choice {
 	 * "Quantity is expressed in units, face amount or amortised amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Quantity1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> Quantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity is expressed in units, face amount or amortised amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected RelativeSize1Code relativeSize;
 	/**
 	 * Quantity expressed in relative size (small, medium or large).
 	 * <p>
@@ -146,17 +148,17 @@ public class Quantity1Choice {
 	 * "Quantity expressed in relative size (small, medium or large)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelativeSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelativeSize = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Quantity1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> Quantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RltvSz";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelativeSize";
 			definition = "Quantity expressed in relative size (small, medium or large).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RelativeSize1Code.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class Quantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity1Choice.Quantity, com.tools20022.repository.choice.Quantity1Choice.RelativeSize);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity1Choice.mmQuantity, com.tools20022.repository.choice.Quantity1Choice.mmRelativeSize);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Quantity1Choice";
 				definition = "Choice between the quantity expressed in units or face amounts or amortised amount and a relative size (small, medium or large).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantityChoice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = quantity;
+	}
+
+	public RelativeSize1Code getRelativeSize() {
+		return relativeSize;
+	}
+
+	public void setRelativeSize(RelativeSize1Code relativeSize) {
+		this.relativeSize = relativeSize;
 	}
 }

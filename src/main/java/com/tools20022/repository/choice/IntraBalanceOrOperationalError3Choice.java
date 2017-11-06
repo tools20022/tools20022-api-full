@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.IntraBalanceModification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between the report data or an operational error.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice#Modifications
- * IntraBalanceOrOperationalError3Choice.Modifications}</li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice#mmModifications
+ * IntraBalanceOrOperationalError3Choice.mmModifications}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice#OperationalError
- * IntraBalanceOrOperationalError3Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice#mmOperationalError
+ * IntraBalanceOrOperationalError3Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalanceOrOperationalError3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<IntraBalanceModification1> modifications;
 	/**
 	 * Identifies the transactions.
 	 * <p>
@@ -93,20 +95,21 @@ public class IntraBalanceOrOperationalError3Choice {
 	 * definition} = "Identifies the transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Modifications = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModifications = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceOrOperationalError3Choice.mmObject();
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
+			componentContext_lazy = () -> IntraBalanceOrOperationalError3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mods";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modifications";
 			definition = "Identifies the transactions.";
 			minOccurs = 1;
-			type_lazy = () -> IntraBalanceModification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> IntraBalanceModification1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Operational error resulting from a rejection.
 	 * <p>
@@ -133,7 +136,7 @@ public class IntraBalanceOrOperationalError3Choice {
 	 * definition} = "Operational error resulting from a rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraBalanceOrOperationalError3Choice.mmObject();
 			isDerived = false;
@@ -142,22 +145,38 @@ public class IntraBalanceOrOperationalError3Choice {
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice.Modifications, com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice.OperationalError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice.mmModifications, com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice.mmOperationalError);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceOrOperationalError3Choice";
 				definition = "Choice between the report data or an operational error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<IntraBalanceModification1> getModifications() {
+		return modifications;
+	}
+
+	public void setModifications(List<IntraBalanceModification1> modifications) {
+		this.modifications = modifications;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

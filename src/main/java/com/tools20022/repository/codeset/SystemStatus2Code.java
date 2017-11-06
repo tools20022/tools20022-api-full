@@ -34,21 +34,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemStatus2Code#Suspended
- * SystemStatus2Code.Suspended}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemStatus2Code#Active
- * SystemStatus2Code.Active}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemStatus2Code#Closed
- * SystemStatus2Code.Closed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemStatus2Code#Closing
- * SystemStatus2Code.Closing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemStatus2Code#mmSuspended
+ * SystemStatus2Code.mmSuspended}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemStatus2Code#mmActive
+ * SystemStatus2Code.mmActive}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemStatus2Code#mmClosed
+ * SystemStatus2Code.mmClosed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SystemStatus2Code#mmClosing
+ * SystemStatus2Code.mmClosing}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +85,7 @@ public class SystemStatus2Code extends SystemStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
@@ -107,7 +108,7 @@ public class SystemStatus2Code extends SystemStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -130,7 +131,7 @@ public class SystemStatus2Code extends SystemStatusCode {
 	 * name} = "Closed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closed = new MMCode() {
+	public static final MMCode mmClosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
@@ -153,7 +154,7 @@ public class SystemStatus2Code extends SystemStatusCode {
 	 * name} = "Closing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closing = new MMCode() {
+	public static final MMCode mmClosing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
@@ -164,13 +165,13 @@ public class SystemStatus2Code extends SystemStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SUSP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemStatus2Code";
 				definition = "Specifies the status of a system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemStatus2Code.Suspended, com.tools20022.repository.codeset.SystemStatus2Code.Active, com.tools20022.repository.codeset.SystemStatus2Code.Closed,
-						com.tools20022.repository.codeset.SystemStatus2Code.Closing);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemStatus2Code.mmSuspended, com.tools20022.repository.codeset.SystemStatus2Code.mmActive, com.tools20022.repository.codeset.SystemStatus2Code.mmClosed,
+						com.tools20022.repository.codeset.SystemStatus2Code.mmClosing);
 				trace_lazy = () -> SystemStatusCode.mmObject();
 			}
 		});

@@ -38,8 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline#RegistrationDate
- * SecuritiesRegistrationDeadline.RegistrationDate}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline#mmRegistrationDate
+ * SecuritiesRegistrationDeadline.mmRegistrationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesRegistrationDeadline extends Deadline {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime registrationDate;
 	/**
 	 * Date at which the voting positions are established (in some countries).
 	 * <p>
@@ -71,22 +72,22 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntitlementAssessment#SecuritiesRegistrationDate
-	 * EntitlementAssessment.SecuritiesRegistrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EligibilityDates#SecuritiesRegistrationDate
-	 * EligibilityDates.SecuritiesRegistrationDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline
 	 * SecuritiesRegistrationDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntitlementAssessment#mmSecuritiesRegistrationDate
+	 * EntitlementAssessment.mmSecuritiesRegistrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibilityDates#mmSecuritiesRegistrationDate
+	 * EligibilityDates.mmSecuritiesRegistrationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -100,16 +101,16 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RegistrationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRegistrationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAssessment.SecuritiesRegistrationDate, com.tools20022.repository.msg.EligibilityDates.SecuritiesRegistrationDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesRegistrationDate, com.tools20022.repository.msg.EligibilityDates.mmSecuritiesRegistrationDate);
 			elementContext_lazy = () -> SecuritiesRegistrationDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDate";
 			definition = "Date at which the voting positions are established (in some countries).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -117,14 +118,22 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesRegistrationDeadline";
 				definition = "Date by which the securities have to be registered.";
 				superType_lazy = () -> Deadline.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesRegistrationDeadline.RegistrationDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesRegistrationDeadline.mmRegistrationDate);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(ISODateTime registrationDate) {
+		this.registrationDate = registrationDate;
 	}
 }

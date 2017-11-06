@@ -36,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18#UnitPrice
- * UnitPrice18.UnitPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18#Amount
- * UnitPrice18.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18#Factor
- * UnitPrice18.Factor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18#mmUnitPrice
+ * UnitPrice18.mmUnitPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18#mmAmount
+ * UnitPrice18.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18#mmFactor
+ * UnitPrice18.mmFactor}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnitPrice18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnitOfMeasure3Choice unitPrice;
 	/**
 	 * Specifies the unit price.
 	 * <p>
@@ -80,8 +81,8 @@ public class UnitPrice18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#UnitOfMeasure
-	 * Price.UnitOfMeasure}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmUnitOfMeasure
+	 * Price.mmUnitOfMeasure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +100,22 @@ public class UnitPrice18 {
 	 * definition} = "Specifies the unit price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnitPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnitPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmUnitOfMeasure;
 			componentContext_lazy = () -> UnitPrice18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.UnitOfMeasure;
 			isDerived = false;
 			xmlTag = "UnitPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitPrice";
 			definition = "Specifies the unit price.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UnitOfMeasure3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UnitOfMeasure3Choice.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Price expressed as a currency and value.
 	 * <p>
@@ -127,7 +129,8 @@ public class UnitPrice18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Amount Price.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmAmount
+	 * Price.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,25 +149,26 @@ public class UnitPrice18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnitPrice9#Amount
-	 * UnitPrice9.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnitPrice9#mmAmount
+	 * UnitPrice9.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
 			componentContext_lazy = () -> UnitPrice18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Price expressed as a currency and value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice9.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice9.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max15NumericText factor;
 	/**
 	 * Multiplication factor of measurement values. For example: goods that can
 	 * be ordered by 36 pieces.
@@ -179,8 +183,8 @@ public class UnitPrice18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#Factor
-	 * ProductQuantity.Factor}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmFactor
+	 * ProductQuantity.mmFactor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,22 +205,22 @@ public class UnitPrice18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnitPrice9#Factor
-	 * UnitPrice9.Factor}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnitPrice9#mmFactor
+	 * UnitPrice9.mmFactor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Factor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFactor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmFactor;
 			componentContext_lazy = () -> UnitPrice18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.Factor;
 			isDerived = false;
 			xmlTag = "Fctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Factor";
 			definition = "Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice9.Factor;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice9.mmFactor;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
@@ -224,9 +228,9 @@ public class UnitPrice18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice18.UnitPrice, com.tools20022.repository.msg.UnitPrice18.Amount, com.tools20022.repository.msg.UnitPrice18.Factor);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice18.mmUnitPrice, com.tools20022.repository.msg.UnitPrice18.mmAmount, com.tools20022.repository.msg.UnitPrice18.mmFactor);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnitPrice18";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
@@ -234,5 +238,29 @@ public class UnitPrice18 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnitOfMeasure3Choice getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(UnitOfMeasure3Choice unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public Max15NumericText getFactor() {
+		return factor;
+	}
+
+	public void setFactor(Max15NumericText factor) {
+		this.factor = factor;
 	}
 }

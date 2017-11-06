@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradePostingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code#Gross
- * TradePosting1Code.Gross}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code#Net
- * TradePosting1Code.Net}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code#mmGross
+ * TradePosting1Code.mmGross}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code#mmNet
+ * TradePosting1Code.mmNet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class TradePosting1Code extends TradePostingCode {
 	 * name} = "Gross"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gross = new MMCode() {
+	public static final MMCode mmGross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
@@ -105,7 +105,7 @@ public class TradePosting1Code extends TradePostingCode {
 	 * name} = "Net"</li>
 	 * </ul>
 	 */
-	public static final MMCode Net = new MMCode() {
+	public static final MMCode mmNet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
@@ -116,12 +116,12 @@ public class TradePosting1Code extends TradePostingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradePosting1Code";
 				definition = "Specifies the trade is maintained as a separate individual position in the clearing account, or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradePosting1Code.Gross, com.tools20022.repository.codeset.TradePosting1Code.Net);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradePosting1Code.mmGross, com.tools20022.repository.codeset.TradePosting1Code.mmNet);
 				trace_lazy = () -> TradePostingCode.mmObject();
 			}
 		});

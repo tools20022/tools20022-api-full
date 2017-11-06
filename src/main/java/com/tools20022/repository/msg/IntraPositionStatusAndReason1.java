@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.SettlementStatus9Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of the movement status types.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#ProcessingStatus
- * IntraPositionStatusAndReason1.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#mmProcessingStatus
+ * IntraPositionStatusAndReason1.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#SettlementStatus
- * IntraPositionStatusAndReason1.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#mmSettlementStatus
+ * IntraPositionStatusAndReason1.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#Settled
- * IntraPositionStatusAndReason1.Settled}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#mmSettled
+ * IntraPositionStatusAndReason1.mmSettled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ProcessingStatus35Choice> processingStatus;
 	/**
 	 * Provides details on the processing status of the transaction.
 	 * <p>
@@ -80,8 +82,8 @@ public class IntraPositionStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#Reason
-	 * SecuritiesTradeStatus.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmReason
+	 * SecuritiesTradeStatus.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,10 +103,10 @@ public class IntraPositionStatusAndReason1 {
 	 * "Provides details on the processing status of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> IntraPositionStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.Reason;
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,6 +116,7 @@ public class IntraPositionStatusAndReason1 {
 			complexType_lazy = () -> ProcessingStatus35Choice.mmObject();
 		}
 	};
+	protected List<SettlementStatus9Choice> settlementStatus;
 	/**
 	 * Provides the settlement status of a transaction
 	 * <p>
@@ -146,20 +149,21 @@ public class IntraPositionStatusAndReason1 {
 	 * definition} = "Provides the settlement status of a transaction"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraPositionStatusAndReason1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> IntraPositionStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the settlement status of a transaction";
 			minOccurs = 0;
-			type_lazy = () -> SettlementStatus9Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> SettlementStatus9Choice.mmObject();
 		}
 	};
+	protected ProprietaryReason1 settled;
 	/**
 	 * Specifies the state or the condition.
 	 * <p>
@@ -191,34 +195,58 @@ public class IntraPositionStatusAndReason1 {
 	 * definition} = "Specifies the state or the condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Settled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraPositionStatusAndReason1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> IntraPositionStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Sttld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Specifies the state or the condition.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionStatusAndReason1.ProcessingStatus, com.tools20022.repository.msg.IntraPositionStatusAndReason1.SettlementStatus,
-						com.tools20022.repository.msg.IntraPositionStatusAndReason1.Settled);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmProcessingStatus, com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmSettlementStatus,
+						com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmSettled);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionStatusAndReason1";
 				definition = "Choice of the movement status types.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ProcessingStatus35Choice> getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(List<ProcessingStatus35Choice> processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public List<SettlementStatus9Choice> getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(List<SettlementStatus9Choice> settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public ProprietaryReason1 getSettled() {
+		return settled;
+	}
+
+	public void setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+		this.settled = settled;
 	}
 }

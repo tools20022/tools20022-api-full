@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CounterpartyDetailsType1#FinancialInstrumentIdentification
- * CounterpartyDetailsType1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CounterpartyDetailsType1#mmFinancialInstrumentIdentification
+ * CounterpartyDetailsType1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CounterpartyDetailsType1#PostEffectiveDateClassification
- * CounterpartyDetailsType1.PostEffectiveDateClassification}</li>
+ * {@linkplain com.tools20022.repository.msg.CounterpartyDetailsType1#mmPostEffectiveDateClassification
+ * CounterpartyDetailsType1.mmPostEffectiveDateClassification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CounterpartyDetailsType1#AbbreviatedLocalLanguageSecurityName
- * CounterpartyDetailsType1.AbbreviatedLocalLanguageSecurityName}</li>
+ * {@linkplain com.tools20022.repository.msg.CounterpartyDetailsType1#mmAbbreviatedLocalLanguageSecurityName
+ * CounterpartyDetailsType1.mmAbbreviatedLocalLanguageSecurityName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CounterpartyDetailsType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification15 financialInstrumentIdentification;
 	/**
 	 * Identifies the financial instrument.
 	 * <p>
@@ -94,7 +95,7 @@ public class CounterpartyDetailsType1 {
 	 * definition} = "Identifies the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class CounterpartyDetailsType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	protected InstitutionalClassificationCode postEffectiveDateClassification;
 	/**
 	 * Classification of the Issuer or the Counterparty institution in case of a
 	 * merger.<br>
@@ -140,7 +142,7 @@ public class CounterpartyDetailsType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostEffectiveDateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostEffectiveDateClassification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
 			isDerived = false;
@@ -148,11 +150,12 @@ public class CounterpartyDetailsType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostEffectiveDateClassification";
 			definition = "Classification of the Issuer or the Counterparty institution in case of a merger.\r\n存続/消滅/親会社/子会社/未定の区分\r\n※イベントタイプがMRGRの場合に、存続会社or消滅会社、親会社or子会社の通知を見分けるために必要。";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> InstitutionalClassificationCode.mmObject();
 		}
 	};
+	protected Max240Text abbreviatedLocalLanguageSecurityName;
 	/**
 	 * Abbreviated name of underlying securities in the local language.<br>
 	 * Note that in case of non-listed securities, it will be a full local
@@ -185,7 +188,7 @@ public class CounterpartyDetailsType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
 			isDerived = false;
@@ -193,8 +196,8 @@ public class CounterpartyDetailsType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
 			definition = "Abbreviated name of underlying securities in the local language.\r\nNote that in case of non-listed securities, it will be a full local language security name.\r\n銘柄名（銘柄略称）";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
 		}
 	};
@@ -202,14 +205,38 @@ public class CounterpartyDetailsType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CounterpartyDetailsType1.FinancialInstrumentIdentification, com.tools20022.repository.msg.CounterpartyDetailsType1.PostEffectiveDateClassification,
-						com.tools20022.repository.msg.CounterpartyDetailsType1.AbbreviatedLocalLanguageSecurityName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CounterpartyDetailsType1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.CounterpartyDetailsType1.mmPostEffectiveDateClassification,
+						com.tools20022.repository.msg.CounterpartyDetailsType1.mmAbbreviatedLocalLanguageSecurityName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CounterpartyDetailsType1";
 				definition = "Information of the counterparty in case of [sankaku] gappei (a third party is involved as one of the counterparties in the merger but there is no security movement from the third party).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification15 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification15 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public InstitutionalClassificationCode getPostEffectiveDateClassification() {
+		return postEffectiveDateClassification;
+	}
+
+	public void setPostEffectiveDateClassification(InstitutionalClassificationCode postEffectiveDateClassification) {
+		this.postEffectiveDateClassification = postEffectiveDateClassification;
+	}
+
+	public Max240Text getAbbreviatedLocalLanguageSecurityName() {
+		return abbreviatedLocalLanguageSecurityName;
+	}
+
+	public void setAbbreviatedLocalLanguageSecurityName(Max240Text abbreviatedLocalLanguageSecurityName) {
+		this.abbreviatedLocalLanguageSecurityName = abbreviatedLocalLanguageSecurityName;
 	}
 }

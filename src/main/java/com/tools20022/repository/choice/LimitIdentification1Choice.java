@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#Current
- * LimitIdentification1Choice.Current}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#mmCurrent
+ * LimitIdentification1Choice.mmCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#Default
- * LimitIdentification1Choice.Default}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#mmDefault
+ * LimitIdentification1Choice.mmDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#AllCurrent
- * LimitIdentification1Choice.AllCurrent}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#mmAllCurrent
+ * LimitIdentification1Choice.mmAllCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#AllDefault
- * LimitIdentification1Choice.AllDefault}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#mmAllDefault
+ * LimitIdentification1Choice.mmAllDefault}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected LimitIdentification1 current;
 	/**
 	 * Identification of the current limit.
 	 * <p>
@@ -103,21 +104,22 @@ public class LimitIdentification1Choice {
 	 * definition} = "Identification of the current limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Current = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cur";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			definition = "Identification of the current limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LimitIdentification1.mmObject();
 		}
 	};
+	protected LimitIdentification1 default_;
 	/**
 	 * Identification of the default limit.
 	 * <p>
@@ -149,21 +151,22 @@ public class LimitIdentification1Choice {
 	 * definition} = "Identification of the default limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Default = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDefault = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dflt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
 			definition = "Identification of the default limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LimitIdentification1.mmObject();
 		}
 	};
+	protected LimitIdentification2 allCurrent;
 	/**
 	 * Identification of all current limits.
 	 * <p>
@@ -195,21 +198,22 @@ public class LimitIdentification1Choice {
 	 * definition} = "Identification of all current limits."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AllCurrent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAllCurrent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllCur";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllCurrent";
 			definition = "Identification of all current limits.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitIdentification2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LimitIdentification2.mmObject();
 		}
 	};
+	protected LimitIdentification2 allDefault;
 	/**
 	 * Identification of all default limits.
 	 * <p>
@@ -241,34 +245,66 @@ public class LimitIdentification1Choice {
 	 * definition} = "Identification of all default limits."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AllDefault = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAllDefault = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllDflt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllDefault";
 			definition = "Identification of all default limits.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitIdentification2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LimitIdentification2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitIdentification1Choice.Current, com.tools20022.repository.choice.LimitIdentification1Choice.Default,
-						com.tools20022.repository.choice.LimitIdentification1Choice.AllCurrent, com.tools20022.repository.choice.LimitIdentification1Choice.AllDefault);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitIdentification1Choice.mmCurrent, com.tools20022.repository.choice.LimitIdentification1Choice.mmDefault,
+						com.tools20022.repository.choice.LimitIdentification1Choice.mmAllCurrent, com.tools20022.repository.choice.LimitIdentification1Choice.mmAllDefault);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitIdentification1Choice";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LimitIdentification1 getCurrent() {
+		return current;
+	}
+
+	public void setCurrent(LimitIdentification1 current) {
+		this.current = current;
+	}
+
+	public LimitIdentification1 getDefault() {
+		return default_;
+	}
+
+	public void setDefault(LimitIdentification1 default_) {
+		this.default_ = default_;
+	}
+
+	public LimitIdentification2 getAllCurrent() {
+		return allCurrent;
+	}
+
+	public void setAllCurrent(LimitIdentification2 allCurrent) {
+		this.allCurrent = allCurrent;
+	}
+
+	public LimitIdentification2 getAllDefault() {
+		return allDefault;
+	}
+
+	public void setAllDefault(LimitIdentification2 allDefault) {
+		this.allDefault = allDefault;
 	}
 }

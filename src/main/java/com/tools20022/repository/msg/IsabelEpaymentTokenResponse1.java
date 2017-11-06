@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max1kBinary;
 import com.tools20022.repository.datatype.Max50Binary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the token data on which the signature is calculated by the LRCI
@@ -36,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEpaymentTokenResponse1#LRCITransactionIdentification
- * IsabelEpaymentTokenResponse1.LRCITransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEpaymentTokenResponse1#mmLRCITransactionIdentification
+ * IsabelEpaymentTokenResponse1.mmLRCITransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEpaymentTokenResponse1#PaymentInformation
- * IsabelEpaymentTokenResponse1.PaymentInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEpaymentTokenResponse1#mmPaymentInformation
+ * IsabelEpaymentTokenResponse1.mmPaymentInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEpaymentTokenResponse1#ServerSignature
- * IsabelEpaymentTokenResponse1.ServerSignature}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEpaymentTokenResponse1#mmServerSignature
+ * IsabelEpaymentTokenResponse1.mmServerSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelEpaymentTokenResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max50Binary lRCITransactionIdentification;
 	/**
 	 * Unique and unambiguous transaction identification of the group of signed
 	 * payment files.
@@ -96,7 +98,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LRCITransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLRCITransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class IsabelEpaymentTokenResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LRCITransactionIdentification";
 			definition = "Unique and unambiguous transaction identification of the group of signed payment files.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IsabelLRCIPaymentInformation1> paymentInformation;
 	/**
 	 * Individual record holding all data related to a payment file that is
 	 * being used during the signature process.
@@ -139,7 +142,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
@@ -147,12 +150,13 @@ public class IsabelEpaymentTokenResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformation";
 			definition = "Individual record holding all data related to a payment file that is being used during the signature process.";
-			minOccurs = 1;
 			maxOccurs = 100;
-			type_lazy = () -> IsabelLRCIPaymentInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmObject();
 		}
 	};
+	protected Max1kBinary serverSignature;
 	/**
 	 * Mathematical scheme for demonstrating the authenticity of the original
 	 * server challenge exchanged by the LRCI protocol during the signature
@@ -184,7 +188,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServerSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServerSignature = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
@@ -192,8 +196,8 @@ public class IsabelEpaymentTokenResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServerSignature";
 			definition = "Mathematical scheme for demonstrating the authenticity of the original server challenge exchanged by the LRCI protocol during the signature process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max1kBinary.mmObject();
 		}
 	};
@@ -201,14 +205,38 @@ public class IsabelEpaymentTokenResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.LRCITransactionIdentification, com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.PaymentInformation,
-						com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.ServerSignature);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmLRCITransactionIdentification, com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmPaymentInformation,
+						com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmServerSignature);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelEpaymentTokenResponse1";
 				definition = "Specifies the token data on which the signature is calculated by the LRCI client.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max50Binary getLRCITransactionIdentification() {
+		return lRCITransactionIdentification;
+	}
+
+	public void setLRCITransactionIdentification(Max50Binary lRCITransactionIdentification) {
+		this.lRCITransactionIdentification = lRCITransactionIdentification;
+	}
+
+	public List<IsabelLRCIPaymentInformation1> getPaymentInformation() {
+		return paymentInformation;
+	}
+
+	public void setPaymentInformation(List<com.tools20022.repository.msg.IsabelLRCIPaymentInformation1> paymentInformation) {
+		this.paymentInformation = paymentInformation;
+	}
+
+	public Max1kBinary getServerSignature() {
+		return serverSignature;
+	}
+
+	public void setServerSignature(Max1kBinary serverSignature) {
+		this.serverSignature = serverSignature;
 	}
 }

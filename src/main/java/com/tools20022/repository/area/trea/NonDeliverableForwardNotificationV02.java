@@ -57,30 +57,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#TradingSideIdentification
- * NonDeliverableForwardNotificationV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#mmTradingSideIdentification
+ * NonDeliverableForwardNotificationV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#CounterpartySideIdentification
- * NonDeliverableForwardNotificationV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#mmCounterpartySideIdentification
+ * NonDeliverableForwardNotificationV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#OpeningData
- * NonDeliverableForwardNotificationV02.OpeningData}</li>
+ * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#mmOpeningData
+ * NonDeliverableForwardNotificationV02.mmOpeningData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#ValuationData
- * NonDeliverableForwardNotificationV02.ValuationData}</li>
+ * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#mmValuationData
+ * NonDeliverableForwardNotificationV02.mmValuationData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#TradeInformationAndStatus
- * NonDeliverableForwardNotificationV02.TradeInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#mmTradeInformationAndStatus
+ * NonDeliverableForwardNotificationV02.mmTradeInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#SettlementData
- * NonDeliverableForwardNotificationV02.SettlementData}</li>
+ * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#mmSettlementData
+ * NonDeliverableForwardNotificationV02.mmSettlementData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#identifier
- * NonDeliverableForwardNotificationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code trea.007.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NonDeliverableForwardNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradePartyIdentification3 tradingSideIdentification;
 	/**
 	 * Specifies the trading side of the non deliverable trade which is
 	 * reported.
@@ -122,17 +121,18 @@ public class NonDeliverableForwardNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Specifies the trading side of the non deliverable trade which is reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
 	};
+	protected TradePartyIdentification3 counterpartySideIdentification;
 	/**
 	 * Specifies the counterparty of the non deliverable trade which is
 	 * reported.
@@ -159,17 +159,18 @@ public class NonDeliverableForwardNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Specifies the counterparty of the non deliverable trade which is reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
 	};
+	protected OpeningData2 openingData;
 	/**
 	 * Set of data specified for the opening of a non deliverable trade.
 	 * <p>
@@ -193,17 +194,18 @@ public class NonDeliverableForwardNotificationV02 {
 	 * "Set of data specified for the opening of a non deliverable trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OpeningData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOpeningData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OpngData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningData";
 			definition = "Set of data specified for the opening of a non deliverable trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OpeningData2.mmObject();
 		}
 	};
+	protected ClosingData2 valuationData;
 	/**
 	 * Set of data specified for the valuation of a non deliverable trade.
 	 * <p>
@@ -227,17 +229,18 @@ public class NonDeliverableForwardNotificationV02 {
 	 * "Set of data specified for the valuation of a non deliverable trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ValuationData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmValuationData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ValtnData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationData";
 			definition = "Set of data specified for the valuation of a non deliverable trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ClosingData2.mmObject();
 		}
 	};
+	protected TradeStatus1 tradeInformationAndStatus;
 	/**
 	 * Provides information on the status of a trade in a central system.
 	 * <p>
@@ -261,17 +264,18 @@ public class NonDeliverableForwardNotificationV02 {
 	 * "Provides information on the status of a trade in a central system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeInformationAndStatus";
 			definition = "Provides information on the status of a trade in a central system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeStatus1.mmObject();
 		}
 	};
+	protected SettlementData2 settlementData;
 	/**
 	 * Provides information on the settlement of a trade.
 	 * <p>
@@ -294,42 +298,15 @@ public class NonDeliverableForwardNotificationV02 {
 	 * definition} = "Provides information on the settlement of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementData";
 			definition = "Provides information on the settlement of a trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementData2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "trea"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "trea";
-			messageFunctionality = "007";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -343,13 +320,68 @@ public class NonDeliverableForwardNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "NDFNtfctnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.CounterpartySideIdentification, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.OpeningData,
-						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.ValuationData, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.TradeInformationAndStatus,
-						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.SettlementData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmOpeningData,
+						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmValuationData, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmTradeInformationAndStatus,
+						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmSettlementData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "trea";
+						messageFunctionality = "007";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradePartyIdentification3 getTradingSideIdentification() {
+		return tradingSideIdentification;
+	}
+
+	public void setTradingSideIdentification(TradePartyIdentification3 tradingSideIdentification) {
+		this.tradingSideIdentification = tradingSideIdentification;
+	}
+
+	public TradePartyIdentification3 getCounterpartySideIdentification() {
+		return counterpartySideIdentification;
+	}
+
+	public void setCounterpartySideIdentification(TradePartyIdentification3 counterpartySideIdentification) {
+		this.counterpartySideIdentification = counterpartySideIdentification;
+	}
+
+	public OpeningData2 getOpeningData() {
+		return openingData;
+	}
+
+	public void setOpeningData(OpeningData2 openingData) {
+		this.openingData = openingData;
+	}
+
+	public ClosingData2 getValuationData() {
+		return valuationData;
+	}
+
+	public void setValuationData(ClosingData2 valuationData) {
+		this.valuationData = valuationData;
+	}
+
+	public TradeStatus1 getTradeInformationAndStatus() {
+		return tradeInformationAndStatus;
+	}
+
+	public void setTradeInformationAndStatus(TradeStatus1 tradeInformationAndStatus) {
+		this.tradeInformationAndStatus = tradeInformationAndStatus;
+	}
+
+	public SettlementData2 getSettlementData() {
+		return settlementData;
+	}
+
+	public void setSettlementData(SettlementData2 settlementData) {
+		this.settlementData = settlementData;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Describes a transaction and its status.
@@ -36,22 +37,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportItems1#TransactionIdentification
- * StatusReportItems1.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportItems1#mmTransactionIdentification
+ * StatusReportItems1.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportItems1#ReportedEntity
- * StatusReportItems1.ReportedEntity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusReportItems1#Status
- * StatusReportItems1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusReportItems1#SubStatus
- * StatusReportItems1.SubStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportItems1#mmReportedEntity
+ * StatusReportItems1.mmReportedEntity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReportItems1#mmStatus
+ * StatusReportItems1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReportItems1#mmSubStatus
+ * StatusReportItems1.mmSubStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReportItems1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unique identification assigned by the TSU to the transaction. This
 	 * identification is to be used in any communication between the parties and
@@ -96,7 +98,7 @@ public class StatusReportItems1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusReportItems1.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class StatusReportItems1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the TSU to the transaction.\nThis identification is to be used in any communication between the parties and with the TSU.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BICIdentification1> reportedEntity;
 	/**
 	 * Entity for which the TSU has generated a report.
 	 * <p>
@@ -135,7 +138,7 @@ public class StatusReportItems1 {
 	 * definition} = "Entity for which the TSU has generated a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportedEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportedEntity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReportItems1.mmObject();
 			isDerived = false;
@@ -143,12 +146,13 @@ public class StatusReportItems1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedEntity";
 			definition = "Entity for which the TSU has generated a report.";
-			minOccurs = 1;
 			maxOccurs = 2;
-			type_lazy = () -> BICIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	protected BaselineStatus1Code status;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -162,8 +166,8 @@ public class StatusReportItems1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#Status
-	 * BaselineStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#mmStatus
+	 * BaselineStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,20 +187,21 @@ public class StatusReportItems1 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
 			componentContext_lazy = () -> StatusReportItems1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus1Code.mmObject();
 		}
 	};
+	protected Max140Text subStatus;
 	/**
 	 * Further description of the transaction status.
 	 * <p>
@@ -224,7 +229,7 @@ public class StatusReportItems1 {
 	 * definition} = "Further description of the transaction status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusReportItems1.mmObject();
 			isDerived = false;
@@ -232,8 +237,8 @@ public class StatusReportItems1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubStatus";
 			definition = "Further description of the transaction status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -241,14 +246,46 @@ public class StatusReportItems1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportItems1.TransactionIdentification, com.tools20022.repository.msg.StatusReportItems1.ReportedEntity,
-						com.tools20022.repository.msg.StatusReportItems1.Status, com.tools20022.repository.msg.StatusReportItems1.SubStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportItems1.mmTransactionIdentification, com.tools20022.repository.msg.StatusReportItems1.mmReportedEntity,
+						com.tools20022.repository.msg.StatusReportItems1.mmStatus, com.tools20022.repository.msg.StatusReportItems1.mmSubStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusReportItems1";
 				definition = "Describes a transaction and its status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public List<BICIdentification1> getReportedEntity() {
+		return reportedEntity;
+	}
+
+	public void setReportedEntity(List<com.tools20022.repository.msg.BICIdentification1> reportedEntity) {
+		this.reportedEntity = reportedEntity;
+	}
+
+	public BaselineStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(BaselineStatus1Code status) {
+		this.status = status;
+	}
+
+	public Max140Text getSubStatus() {
+		return subStatus;
+	}
+
+	public void setSubStatus(Max140Text subStatus) {
+		this.subStatus = subStatus;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1#BaseProduct
- * EnvironmentalCommodityCarbonRelated1.BaseProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1#mmBaseProduct
+ * EnvironmentalCommodityCarbonRelated1.mmBaseProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1#SubProduct
- * EnvironmentalCommodityCarbonRelated1.SubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1#mmSubProduct
+ * EnvironmentalCommodityCarbonRelated1.mmSubProduct}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EnvironmentalCommodityCarbonRelated1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetClassProductType3Code baseProduct;
 	/**
 	 * Base product for the underlying asset class as specified in the
 	 * classification of commodities derivatives table.
@@ -93,7 +94,7 @@ public class EnvironmentalCommodityCarbonRelated1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EnvironmentalCommodityCarbonRelated1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class EnvironmentalCommodityCarbonRelated1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType3Code.mmObject();
 		}
 	};
+	protected AssetClassSubProductType29Code subProduct;
 	/**
 	 * Sub-product for the underlying asset class.
 	 * <p>
@@ -134,7 +136,7 @@ public class EnvironmentalCommodityCarbonRelated1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EnvironmentalCommodityCarbonRelated1.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class EnvironmentalCommodityCarbonRelated1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType29Code.mmObject();
 		}
 	};
@@ -151,13 +153,29 @@ public class EnvironmentalCommodityCarbonRelated1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1.BaseProduct, com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1.SubProduct);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1.mmBaseProduct, com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1.mmSubProduct);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EnvironmentalCommodityCarbonRelated1";
 				definition = "Defines commodity sub-product attributes of an environmental derivative of type carbon related.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetClassProductType3Code getBaseProduct() {
+		return baseProduct;
+	}
+
+	public void setBaseProduct(AssetClassProductType3Code baseProduct) {
+		this.baseProduct = baseProduct;
+	}
+
+	public AssetClassSubProductType29Code getSubProduct() {
+		return subProduct;
+	}
+
+	public void setSubProduct(AssetClassSubProductType29Code subProduct) {
+		this.subProduct = subProduct;
 	}
 }

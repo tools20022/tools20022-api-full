@@ -41,27 +41,28 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals3#POIGroupIdentification
- * TransactionTotals3.POIGroupIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals3#mmPOIGroupIdentification
+ * TransactionTotals3.mmPOIGroupIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals3#CardProductProfile
- * TransactionTotals3.CardProductProfile}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals3#Currency
- * TransactionTotals3.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals3#Type
- * TransactionTotals3.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals3#TotalNumber
- * TransactionTotals3.TotalNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals3#mmCardProductProfile
+ * TransactionTotals3.mmCardProductProfile}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals3#mmCurrency
+ * TransactionTotals3.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals3#mmType
+ * TransactionTotals3.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals3#CumulativeAmount
- * TransactionTotals3.CumulativeAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals3#mmTotalNumber
+ * TransactionTotals3.mmTotalNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals3#mmCumulativeAmount
+ * TransactionTotals3.mmCumulativeAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -91,6 +92,7 @@ import java.util.function.Supplier;
 public class TransactionTotals3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text pOIGroupIdentification;
 	/**
 	 * Identifier assigned by the merchant identifying a set of POI terminals
 	 * performing some categories of transactions.
@@ -123,18 +125,18 @@ public class TransactionTotals3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#POIGroupIdentification
-	 * TransactionTotals7.POIGroupIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#mmPOIGroupIdentification
+	 * TransactionTotals7.mmPOIGroupIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#POIGroupIdentification
-	 * TransactionTotals2.POIGroupIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#mmPOIGroupIdentification
+	 * TransactionTotals2.mmPOIGroupIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute POIGroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPOIGroupIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals3.mmObject();
 			isDerived = false;
@@ -142,13 +144,14 @@ public class TransactionTotals3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIGroupIdentification";
 			definition = "Identifier assigned by the merchant identifying a set of POI terminals performing some categories of transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.POIGroupIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.POIGroupIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.mmPOIGroupIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.mmPOIGroupIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cardProductProfile;
 	/**
 	 * Category of cards related the acceptance processing rules defined by the
 	 * acquirer.
@@ -181,18 +184,18 @@ public class TransactionTotals3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#CardProductProfile
-	 * TransactionTotals7.CardProductProfile}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#mmCardProductProfile
+	 * TransactionTotals7.mmCardProductProfile}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#CardProductProfile
-	 * TransactionTotals2.CardProductProfile}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#mmCardProductProfile
+	 * TransactionTotals2.mmCardProductProfile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardProductProfile = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardProductProfile = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals3.mmObject();
 			isDerived = false;
@@ -200,13 +203,14 @@ public class TransactionTotals3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProductProfile";
 			definition = "Category of cards related the acceptance processing rules defined by the acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.CardProductProfile;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.CardProductProfile);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.mmCardProductProfile);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.mmCardProductProfile;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CurrencyCode currency;
 	/**
 	 * Currency associated with the transaction totals.
 	 * <p>
@@ -219,8 +223,8 @@ public class TransactionTotals3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#Currency
-	 * ReconciliationTransaction.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCurrency
+	 * ReconciliationTransaction.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,33 +245,34 @@ public class TransactionTotals3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#Currency
-	 * TransactionTotals7.Currency}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#mmCurrency
+	 * TransactionTotals7.mmCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#Currency
-	 * TransactionTotals2.Currency}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#mmCurrency
+	 * TransactionTotals2.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmCurrency;
 			componentContext_lazy = () -> TransactionTotals3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency associated with the transaction totals.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.Currency;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.Currency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.mmCurrency);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.mmCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected TypeTransactionTotals2Code type;
 	/**
 	 * Identification of the type of transaction.
 	 * <p>
@@ -281,8 +286,8 @@ public class TransactionTotals3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#TransactionType
-	 * ReconciliationTransaction.TransactionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmTransactionType
+	 * ReconciliationTransaction.mmTransactionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -302,33 +307,34 @@ public class TransactionTotals3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals7#Type
-	 * TransactionTotals7.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals7#mmType
+	 * TransactionTotals7.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#Type
-	 * TransactionTotals2.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#mmType
+	 * TransactionTotals2.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmTransactionType;
 			componentContext_lazy = () -> TransactionTotals3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.TransactionType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identification of the type of transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.Type;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.mmType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TypeTransactionTotals2Code.mmObject();
 		}
 	};
+	protected Number totalNumber;
 	/**
 	 * Total number of transactions during a reconciliation period.
 	 * <p>
@@ -359,18 +365,18 @@ public class TransactionTotals3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#TotalNumber
-	 * TransactionTotals7.TotalNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#mmTotalNumber
+	 * TransactionTotals7.mmTotalNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#TotalNumber
-	 * TransactionTotals2.TotalNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#mmTotalNumber
+	 * TransactionTotals2.mmTotalNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals3.mmObject();
 			isDerived = false;
@@ -378,13 +384,14 @@ public class TransactionTotals3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumber";
 			definition = "Total number of transactions during a reconciliation period.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.TotalNumber;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.TotalNumber);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.mmTotalNumber);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.mmTotalNumber;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount cumulativeAmount;
 	/**
 	 * Total amount of a collection of transactions.
 	 * <p>
@@ -398,8 +405,8 @@ public class TransactionTotals3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#CumulativeAmount
-	 * ReconciliationTransaction.CumulativeAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCumulativeAmount
+	 * ReconciliationTransaction.mmCumulativeAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -420,30 +427,30 @@ public class TransactionTotals3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#CumulativeAmount
-	 * TransactionTotals7.CumulativeAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals7#mmCumulativeAmount
+	 * TransactionTotals7.mmCumulativeAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#CumulativeAmount
-	 * TransactionTotals2.CumulativeAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTotals2#mmCumulativeAmount
+	 * TransactionTotals2.mmCumulativeAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CumulativeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCumulativeAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmCumulativeAmount;
 			componentContext_lazy = () -> TransactionTotals3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.CumulativeAmount;
 			isDerived = false;
 			xmlTag = "CmltvAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumulativeAmount";
 			definition = "Total amount of a collection of transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.CumulativeAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.CumulativeAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.mmCumulativeAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.mmCumulativeAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -451,10 +458,10 @@ public class TransactionTotals3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals3.POIGroupIdentification, com.tools20022.repository.msg.TransactionTotals3.CardProductProfile,
-						com.tools20022.repository.msg.TransactionTotals3.Currency, com.tools20022.repository.msg.TransactionTotals3.Type, com.tools20022.repository.msg.TransactionTotals3.TotalNumber,
-						com.tools20022.repository.msg.TransactionTotals3.CumulativeAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals3.mmPOIGroupIdentification, com.tools20022.repository.msg.TransactionTotals3.mmCardProductProfile,
+						com.tools20022.repository.msg.TransactionTotals3.mmCurrency, com.tools20022.repository.msg.TransactionTotals3.mmType, com.tools20022.repository.msg.TransactionTotals3.mmTotalNumber,
+						com.tools20022.repository.msg.TransactionTotals3.mmCumulativeAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -465,10 +472,58 @@ public class TransactionTotals3 {
 				})).get();
 				name = "TransactionTotals3";
 				definition = "Transaction totals during the reconciliation period, for a certain type of transaction.";
-				previousVersion_lazy = () -> TransactionTotals2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransactionTotals4.mmObject(), TransactionTotals7.mmObject());
+				previousVersion_lazy = () -> TransactionTotals2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPOIGroupIdentification() {
+		return pOIGroupIdentification;
+	}
+
+	public void setPOIGroupIdentification(Max35Text pOIGroupIdentification) {
+		this.pOIGroupIdentification = pOIGroupIdentification;
+	}
+
+	public Max35Text getCardProductProfile() {
+		return cardProductProfile;
+	}
+
+	public void setCardProductProfile(Max35Text cardProductProfile) {
+		this.cardProductProfile = cardProductProfile;
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public TypeTransactionTotals2Code getType() {
+		return type;
+	}
+
+	public void setType(TypeTransactionTotals2Code type) {
+		this.type = type;
+	}
+
+	public Number getTotalNumber() {
+		return totalNumber;
+	}
+
+	public void setTotalNumber(Number totalNumber) {
+		this.totalNumber = totalNumber;
+	}
+
+	public ImpliedCurrencyAndAmount getCumulativeAmount() {
+		return cumulativeAmount;
+	}
+
+	public void setCumulativeAmount(ImpliedCurrencyAndAmount cumulativeAmount) {
+		this.cumulativeAmount = cumulativeAmount;
 	}
 }

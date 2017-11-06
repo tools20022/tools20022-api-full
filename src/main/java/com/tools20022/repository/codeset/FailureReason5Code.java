@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason5Code#Security
- * FailureReason5Code.Security}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason5Code#mmSecurity
+ * FailureReason5Code.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason5Code#Hardware
- * FailureReason5Code.Hardware}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason5Code#mmHardware
+ * FailureReason5Code.mmHardware}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class FailureReason5Code extends FailureReasonCode {
 	 * name} = "Security"</li>
 	 * </ul>
 	 */
-	public static final MMCode Security = new MMCode() {
+	public static final MMCode mmSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
@@ -98,7 +98,7 @@ public class FailureReason5Code extends FailureReasonCode {
 	 * name} = "Hardware"</li>
 	 * </ul>
 	 */
-	public static final MMCode Hardware = new MMCode() {
+	public static final MMCode mmHardware = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hardware";
@@ -109,11 +109,11 @@ public class FailureReason5Code extends FailureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FailureReason5Code";
 				definition = "Incident occurring on a device.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason5Code.Security, com.tools20022.repository.codeset.FailureReason5Code.Hardware);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason5Code.mmSecurity, com.tools20022.repository.codeset.FailureReason5Code.mmHardware);
 				trace_lazy = () -> FailureReasonCode.mmObject();
 			}
 		});

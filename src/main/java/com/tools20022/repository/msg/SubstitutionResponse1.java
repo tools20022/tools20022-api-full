@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubstitutionResponse1#ResponseType
- * SubstitutionResponse1.ResponseType}</li>
+ * {@linkplain com.tools20022.repository.msg.SubstitutionResponse1#mmResponseType
+ * SubstitutionResponse1.mmResponseType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubstitutionResponse1#CollateralSubstitutionAcceptanceDetails
- * SubstitutionResponse1.CollateralSubstitutionAcceptanceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubstitutionResponse1#mmCollateralSubstitutionAcceptanceDetails
+ * SubstitutionResponse1.mmCollateralSubstitutionAcceptanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubstitutionResponse1#CollateralSubstitutionRejectionDetails
- * SubstitutionResponse1.CollateralSubstitutionRejectionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubstitutionResponse1#mmCollateralSubstitutionRejectionDetails
+ * SubstitutionResponse1.mmCollateralSubstitutionRejectionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,18 +53,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03#SubstitutionResponse
- * CollateralSubstitutionResponseV03.SubstitutionResponse}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03#mmSubstitutionResponse
+ * CollateralSubstitutionResponseV03.mmSubstitutionResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04#SubstitutionResponse
- * CollateralSubstitutionResponseV04.SubstitutionResponse}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04#mmSubstitutionResponse
+ * CollateralSubstitutionResponseV04.mmSubstitutionResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubstitutionResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status4Code responseType;
 	/**
 	 * Indicates if the substitution request was accepted or rejected.
 	 * <p>
@@ -90,8 +91,8 @@ public class SubstitutionResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#InstructionProcessingStatus
-	 * Status.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+	 * Status.mmInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +112,21 @@ public class SubstitutionResponse1 {
 	 * "Indicates if the substitution request was accepted or rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> SubstitutionResponse1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.InstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "RspnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Indicates if the substitution request was accepted or rejected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
 		}
 	};
+	protected CollateralSubstitutionResponse1 collateralSubstitutionAcceptanceDetails;
 	/**
 	 * Provides details about the accepted collateral substitution.
 	 * <p>
@@ -158,21 +160,22 @@ public class SubstitutionResponse1 {
 	 * "Provides details about the accepted collateral substitution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CollateralSubstitutionAcceptanceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCollateralSubstitutionAcceptanceDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubstitutionResponse1.mmObject();
 			businessComponentTrace_lazy = () -> CollateralSubstitution.mmObject();
+			componentContext_lazy = () -> SubstitutionResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnAccptncDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionAcceptanceDetails";
 			definition = "Provides details about the accepted collateral substitution.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralSubstitutionResponse1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmObject();
 		}
 	};
+	protected CollateralSubstitutionResponse2 collateralSubstitutionRejectionDetails;
 	/**
 	 * Provides details about the rejected collateral substitution.
 	 * <p>
@@ -206,36 +209,60 @@ public class SubstitutionResponse1 {
 	 * "Provides details about the rejected collateral substitution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CollateralSubstitutionRejectionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCollateralSubstitutionRejectionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubstitutionResponse1.mmObject();
 			businessComponentTrace_lazy = () -> CollateralSubstitution.mmObject();
+			componentContext_lazy = () -> SubstitutionResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnRjctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRejectionDetails";
 			definition = "Provides details about the rejected collateral substitution.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralSubstitutionResponse2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubstitutionResponse1.ResponseType, com.tools20022.repository.msg.SubstitutionResponse1.CollateralSubstitutionAcceptanceDetails,
-						com.tools20022.repository.msg.SubstitutionResponse1.CollateralSubstitutionRejectionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubstitutionResponse1.mmResponseType, com.tools20022.repository.msg.SubstitutionResponse1.mmCollateralSubstitutionAcceptanceDetails,
+						com.tools20022.repository.msg.SubstitutionResponse1.mmCollateralSubstitutionRejectionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03.mmSubstitutionResponse,
+						com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.mmSubstitutionResponse);
 				trace_lazy = () -> CollateralSubstitution.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03.SubstitutionResponse,
-						com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.SubstitutionResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubstitutionResponse1";
 				definition = "Provides details about the collateral substitution response.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status4Code getResponseType() {
+		return responseType;
+	}
+
+	public void setResponseType(Status4Code responseType) {
+		this.responseType = responseType;
+	}
+
+	public CollateralSubstitutionResponse1 getCollateralSubstitutionAcceptanceDetails() {
+		return collateralSubstitutionAcceptanceDetails;
+	}
+
+	public void setCollateralSubstitutionAcceptanceDetails(com.tools20022.repository.msg.CollateralSubstitutionResponse1 collateralSubstitutionAcceptanceDetails) {
+		this.collateralSubstitutionAcceptanceDetails = collateralSubstitutionAcceptanceDetails;
+	}
+
+	public CollateralSubstitutionResponse2 getCollateralSubstitutionRejectionDetails() {
+		return collateralSubstitutionRejectionDetails;
+	}
+
+	public void setCollateralSubstitutionRejectionDetails(com.tools20022.repository.msg.CollateralSubstitutionResponse2 collateralSubstitutionRejectionDetails) {
+		this.collateralSubstitutionRejectionDetails = collateralSubstitutionRejectionDetails;
 	}
 }

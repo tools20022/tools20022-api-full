@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder4#OrderReference
- * InvestmentFundOrder4.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder4#mmOrderReference
+ * InvestmentFundOrder4.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder4#MasterReference
- * InvestmentFundOrder4.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder4#mmMasterReference
+ * InvestmentFundOrder4.mmMasterReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,48 +49,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#OrderReference
- * AccountDetailsConfirmationV02.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmOrderReference
+ * AccountDetailsConfirmationV02.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#OrderReference
- * AccountDetailsConfirmationV03.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#mmOrderReference
+ * AccountDetailsConfirmationV03.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#OrderReference
- * AccountOpeningInstructionV02.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#mmOrderReference
+ * AccountOpeningInstructionV02.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#OrderReference
- * AccountOpeningInstructionV03.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#mmOrderReference
+ * AccountOpeningInstructionV03.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#OrderReference
- * AccountDetailsConfirmationV04.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#mmOrderReference
+ * AccountDetailsConfirmationV04.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#OrderReference
- * AccountOpeningInstructionV04.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#mmOrderReference
+ * AccountOpeningInstructionV04.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#OrderReference
- * AccountOpeningInstructionV05.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmOrderReference
+ * AccountOpeningInstructionV05.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#OrderReference
- * AccountDetailsConfirmationV05.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#mmOrderReference
+ * AccountDetailsConfirmationV05.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#OrderReference
- * AccountOpeningInstructionV06.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmOrderReference
+ * AccountOpeningInstructionV06.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06#OrderReference
- * AccountDetailsConfirmationV06.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06#mmOrderReference
+ * AccountDetailsConfirmationV06.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07#OrderReference
- * AccountDetailsConfirmationV07.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07#mmOrderReference
+ * AccountDetailsConfirmationV07.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#OrderReference
- * AccountOpeningInstructionV07.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmOrderReference
+ * AccountOpeningInstructionV07.mmOrderReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier for an order, as assigned by the
 	 * instructing party.
@@ -117,8 +118,8 @@ public class InvestmentFundOrder4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,20 +140,21 @@ public class InvestmentFundOrder4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text masterReference;
 	/**
 	 * Unique and unambiguous identifier for a group of individual orders, as
 	 * assigned by the instructing party. This identifier links the individual
@@ -167,8 +169,8 @@ public class InvestmentFundOrder4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -189,17 +191,17 @@ public class InvestmentFundOrder4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -207,20 +209,36 @@ public class InvestmentFundOrder4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder4.OrderReference, com.tools20022.repository.msg.InvestmentFundOrder4.MasterReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder4.mmOrderReference, com.tools20022.repository.msg.InvestmentFundOrder4.mmMasterReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmOrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmOrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmOrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmOrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmOrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmOrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmOrderReference);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.OrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.OrderReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.OrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.OrderReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.OrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.OrderReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.OrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.OrderReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.OrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.OrderReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.OrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.OrderReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrder4";
 				definition = "Identifies an order linked to an account opening.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
 	}
 }

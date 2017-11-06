@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#Identification
- * SecurityInstrumentDescription11.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#mmIdentification
+ * SecurityInstrumentDescription11.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#FullName
- * SecurityInstrumentDescription11.FullName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#mmFullName
+ * SecurityInstrumentDescription11.mmFullName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#ClassificationType
- * SecurityInstrumentDescription11.ClassificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#mmClassificationType
+ * SecurityInstrumentDescription11.mmClassificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#NotionalCurrency
- * SecurityInstrumentDescription11.NotionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#mmNotionalCurrency
+ * SecurityInstrumentDescription11.mmNotionalCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityInstrumentDescription11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINOct2015Identifier identification;
 	/**
 	 * Identifies the financial instrument using an ISIN.
 	 * <p>
@@ -89,8 +90,8 @@ public class SecurityInstrumentDescription11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,25 +111,26 @@ public class SecurityInstrumentDescription11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#Identification
-	 * SecurityInstrumentDescription9.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#mmIdentification
+	 * SecurityInstrumentDescription9.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecurityInstrumentDescription11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.Identification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected Max350Text fullName;
 	/**
 	 * Full name or description of the financial instrument.
 	 * <p>
@@ -141,8 +143,8 @@ public class SecurityInstrumentDescription11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#FullName
-	 * LocalName.FullName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+	 * LocalName.mmFullName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,25 +164,26 @@ public class SecurityInstrumentDescription11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#FullName
-	 * SecurityInstrumentDescription9.FullName}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#mmFullName
+	 * SecurityInstrumentDescription9.mmFullName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FullName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
 			componentContext_lazy = () -> SecurityInstrumentDescription11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.FullName;
 			isDerived = false;
 			xmlTag = "FullNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullName";
 			definition = "Full name or description of the financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.FullName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmFullName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected CFIOct2015Identifier classificationType;
 	/**
 	 * Classification type of the financial instrument, as per the ISO
 	 * classification of financial instrument (CFI) codification, that is common
@@ -196,8 +199,8 @@ public class SecurityInstrumentDescription11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ClassificationType
-	 * AssetClassification.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmClassificationType
+	 * AssetClassification.mmClassificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,25 +222,26 @@ public class SecurityInstrumentDescription11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#ClassificationType
-	 * SecurityInstrumentDescription9.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#mmClassificationType
+	 * SecurityInstrumentDescription9.mmClassificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> SecurityInstrumentDescription11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ClassificationType;
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Classification type of the financial instrument, as per the ISO classification of financial instrument (CFI) codification, that is common share with voting rights, fully paid, or registered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.ClassificationType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmClassificationType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode notionalCurrency;
 	/**
 	 * Currency in which the notional is denominated.
 	 * <p>
@@ -251,8 +255,8 @@ public class SecurityInstrumentDescription11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#NotionalCurrency
-	 * Derivative.NotionalCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrency
+	 * Derivative.mmNotionalCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -272,22 +276,22 @@ public class SecurityInstrumentDescription11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#NotionalCurrency
-	 * SecurityInstrumentDescription9.NotionalCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#mmNotionalCurrency
+	 * SecurityInstrumentDescription9.mmNotionalCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> SecurityInstrumentDescription11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.NotionalCurrency;
 			isDerived = false;
 			xmlTag = "NtnlCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency";
 			definition = "Currency in which the notional is denominated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.NotionalCurrency;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmNotionalCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
@@ -295,10 +299,10 @@ public class SecurityInstrumentDescription11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityInstrumentDescription11.Identification, com.tools20022.repository.msg.SecurityInstrumentDescription11.FullName,
-						com.tools20022.repository.msg.SecurityInstrumentDescription11.ClassificationType, com.tools20022.repository.msg.SecurityInstrumentDescription11.NotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityInstrumentDescription11.mmIdentification, com.tools20022.repository.msg.SecurityInstrumentDescription11.mmFullName,
+						com.tools20022.repository.msg.SecurityInstrumentDescription11.mmClassificationType, com.tools20022.repository.msg.SecurityInstrumentDescription11.mmNotionalCurrency);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityInstrumentDescription11";
 				definition = "Identifies the security instrument by its name and typical characteristics.";
@@ -306,5 +310,37 @@ public class SecurityInstrumentDescription11 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINOct2015Identifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ISINOct2015Identifier identification) {
+		this.identification = identification;
+	}
+
+	public Max350Text getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(Max350Text fullName) {
+		this.fullName = fullName;
+	}
+
+	public CFIOct2015Identifier getClassificationType() {
+		return classificationType;
+	}
+
+	public void setClassificationType(CFIOct2015Identifier classificationType) {
+		this.classificationType = classificationType;
+	}
+
+	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
+		return notionalCurrency;
+	}
+
+	public void setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
+		this.notionalCurrency = notionalCurrency;
 	}
 }

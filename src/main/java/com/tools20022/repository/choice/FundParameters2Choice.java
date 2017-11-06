@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FundParameters2Choice#Parameters
- * FundParameters2Choice.Parameters}</li>
+ * {@linkplain com.tools20022.repository.choice.FundParameters2Choice#mmParameters
+ * FundParameters2Choice.mmParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FundParameters2Choice#NoCriteria
- * FundParameters2Choice.NoCriteria}</li>
+ * {@linkplain com.tools20022.repository.choice.FundParameters2Choice#mmNoCriteria
+ * FundParameters2Choice.mmNoCriteria}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundParameters2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FundParameters3 parameters;
 	/**
 	 * Report parameters.
 	 * <p>
@@ -90,7 +91,7 @@ public class FundParameters2Choice {
 	 * definition} = "Report parameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Parameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParameters = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundParameters2Choice.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class FundParameters2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Report parameters.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FundParameters3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FundParameters3.mmObject();
 		}
 	};
+	protected NoCriteria1Code noCriteria;
 	/**
 	 * Specifies that there is no criteria for the report. The request is a
 	 * request for all reports, rather than reports attributed to a specific
@@ -136,7 +138,7 @@ public class FundParameters2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoCriteria = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoCriteria = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FundParameters2Choice.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class FundParameters2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCriteria";
 			definition = "Specifies that there is no criteria for the report. The request is a request for all reports, rather than reports attributed to a specific financial instrument or date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoCriteria1Code.mmObject();
 		}
 	};
@@ -153,14 +155,30 @@ public class FundParameters2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FundParameters2Choice.Parameters, com.tools20022.repository.choice.FundParameters2Choice.NoCriteria);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FundParameters2Choice.mmParameters, com.tools20022.repository.choice.FundParameters2Choice.mmNoCriteria);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FundParameters2Choice";
 				definition = "Choice of parameters.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FundParameters3 getParameters() {
+		return parameters;
+	}
+
+	public void setParameters(FundParameters3 parameters) {
+		this.parameters = parameters;
+	}
+
+	public NoCriteria1Code getNoCriteria() {
+		return noCriteria;
+	}
+
+	public void setNoCriteria(NoCriteria1Code noCriteria) {
+		this.noCriteria = noCriteria;
 	}
 }

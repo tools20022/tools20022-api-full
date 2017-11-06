@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice#ModifiedRecord
- * SecuritiesReferenceDeltaStatusReport2Choice.ModifiedRecord}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice#mmModifiedRecord
+ * SecuritiesReferenceDeltaStatusReport2Choice.mmModifiedRecord}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice#NewRecord
- * SecuritiesReferenceDeltaStatusReport2Choice.NewRecord}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice#mmNewRecord
+ * SecuritiesReferenceDeltaStatusReport2Choice.mmNewRecord}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice#TerminatedRecord
- * SecuritiesReferenceDeltaStatusReport2Choice.TerminatedRecord}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice#mmTerminatedRecord
+ * SecuritiesReferenceDeltaStatusReport2Choice.mmTerminatedRecord}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,15 +49,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01#FinancialInstrument
- * FinancialInstrumentReportingReferenceDataDeltaReportV01.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01#mmFinancialInstrument
+ * FinancialInstrumentReportingReferenceDataDeltaReportV01.mmFinancialInstrument
+ * }</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesReferenceDeltaStatusReport2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesReferenceDataReport5 modifiedRecord;
 	/**
 	 * Specifies data that has been modified since the previous report.
 	 * <p>
@@ -101,7 +103,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * "Specifies data that has been modified since the previous report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ModifiedRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModifiedRecord = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
@@ -109,12 +111,13 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedRecord";
 			definition = "Specifies data that has been modified since the previous report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 		}
 	};
+	protected SecuritiesReferenceDataReport5 newRecord;
 	/**
 	 * Specifies new instruments that have been added since the previous report.
 	 * <p>
@@ -144,7 +147,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewRecord = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
@@ -152,12 +155,13 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewRecord";
 			definition = "Specifies new instruments that have been added since the previous report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 		}
 	};
+	protected SecuritiesReferenceDataReport5 terminatedRecord;
 	/**
 	 * Specifies instruments which have been terminated / have reached there
 	 * pre-set termination data and are no longer valid instruments.
@@ -188,7 +192,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TerminatedRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTerminatedRecord = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
@@ -196,25 +200,49 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminatedRecord";
 			definition = "Specifies instruments which have been terminated / have reached there pre-set termination data and are no longer valid instruments.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.ModifiedRecord, com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.NewRecord,
-						com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.TerminatedRecord);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.FinancialInstrument);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmModifiedRecord,
+						com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmNewRecord, com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmTerminatedRecord);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.mmFinancialInstrument);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesReferenceDeltaStatusReport2Choice";
 				definition = "Choice defining financial instruments that are either new or have been modified. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesReferenceDataReport5 getModifiedRecord() {
+		return modifiedRecord;
+	}
+
+	public void setModifiedRecord(SecuritiesReferenceDataReport5 modifiedRecord) {
+		this.modifiedRecord = modifiedRecord;
+	}
+
+	public SecuritiesReferenceDataReport5 getNewRecord() {
+		return newRecord;
+	}
+
+	public void setNewRecord(SecuritiesReferenceDataReport5 newRecord) {
+		this.newRecord = newRecord;
+	}
+
+	public SecuritiesReferenceDataReport5 getTerminatedRecord() {
+		return terminatedRecord;
+	}
+
+	public void setTerminatedRecord(SecuritiesReferenceDataReport5 terminatedRecord) {
+		this.terminatedRecord = terminatedRecord;
 	}
 }

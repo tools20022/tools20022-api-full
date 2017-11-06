@@ -42,14 +42,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#SubscriptionPrice
- * Warrant.SubscriptionPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#Multiplier
- * Warrant.Multiplier}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#Style Warrant.Style}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#WarrantParity
- * Warrant.WarrantParity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
+ * Warrant.mmSubscriptionPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmMultiplier
+ * Warrant.mmMultiplier}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmStyle
+ * Warrant.mmStyle}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmWarrantParity
+ * Warrant.mmWarrantParity}</li>
  * </ul>
  * </li>
  * <li>
@@ -57,10 +57,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#RelatedWarrant
- * SecuritiesPricing.RelatedWarrant}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#warrant
- * QuantityRatio.warrant}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedWarrant
+ * SecuritiesPricing.mmRelatedWarrant}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmwarrant
+ * QuantityRatio.mmwarrant}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,10 +68,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#Warrant
- * FinancialInstrumentProperties1Choice.Warrant}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#Warrant
- * FinancialInstrument28.Warrant}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmWarrant
+ * FinancialInstrumentProperties1Choice.mmWarrant}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmWarrant
+ * FinancialInstrument28.mmWarrant}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -89,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Warrant extends Security {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesPricing subscriptionPrice;
 	/**
 	 * Pre-determined price at which the holder of a warrant is entitled to buy
 	 * the underlying instrument.
@@ -115,8 +117,8 @@ public class Warrant extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#RelatedWarrant
-	 * SecuritiesPricing.RelatedWarrant}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedWarrant
+	 * SecuritiesPricing.mmRelatedWarrant}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -124,88 +126,90 @@ public class Warrant extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes8#SubscriptionPrice
-	 * FinancialInstrumentAttributes8.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes20#SubscriptionPrice
-	 * FinancialInstrumentAttributes20.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes35#SubscriptionPrice
-	 * FinancialInstrumentAttributes35.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes41#SubscriptionPrice
-	 * FinancialInstrumentAttributes41.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes4#SubscriptionPrice
-	 * FinancialInstrumentAttributes4.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes13#SubscriptionPrice
-	 * FinancialInstrumentAttributes13.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes21#SubscriptionPrice
-	 * FinancialInstrumentAttributes21.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes26#SubscriptionPrice
-	 * FinancialInstrumentAttributes26.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes36#SubscriptionPrice
-	 * FinancialInstrumentAttributes36.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes42#SubscriptionPrice
-	 * FinancialInstrumentAttributes42.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes27#SubscriptionPrice
-	 * FinancialInstrumentAttributes27.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#SubscriptionPrice
-	 * FinancialInstrumentAttributes14.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes30#SubscriptionPrice
-	 * FinancialInstrumentAttributes30.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes28#SubscriptionPrice
-	 * FinancialInstrumentAttributes28.SubscriptionPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Warrant1#SubscriptionPrice
-	 * Warrant1.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes31#SubscriptionPrice
-	 * FinancialInstrumentAttributes31.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes44#SubscriptionPrice
-	 * FinancialInstrumentAttributes44.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes15#SubscriptionPrice
-	 * FinancialInstrumentAttributes15.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes29#SubscriptionPrice
-	 * FinancialInstrumentAttributes29.SubscriptionPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Warrant2#SubscriptionPrice
-	 * Warrant2.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes2#SubscriptionPrice
-	 * FinancialInstrumentAttributes2.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes63#SubscriptionPrice
-	 * FinancialInstrumentAttributes63.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes64#SubscriptionPrice
-	 * FinancialInstrumentAttributes64.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes75#SubscriptionPrice
-	 * FinancialInstrumentAttributes75.SubscriptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#SubscriptionPrice
-	 * FinancialInstrumentAttributes78.SubscriptionPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
 	 * Warrant}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes8#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes8.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes20#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes20.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes35#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes35.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes41#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes41.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes4#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes4.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes13#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes13.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes21#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes21.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes26#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes26.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes36#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes36.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes42#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes42.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes27#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes27.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes14.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes30#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes30.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes28#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes28.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Warrant1#mmSubscriptionPrice
+	 * Warrant1.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes31#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes31.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes44#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes44.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes15#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes15.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes29#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes29.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Warrant2#mmSubscriptionPrice
+	 * Warrant2.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes2#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes2.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes63#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes63.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes64#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes64.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes75#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes75.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes78.mmSubscriptionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -219,32 +223,34 @@ public class Warrant extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SubscriptionPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSubscriptionPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes20.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes41.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes13.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes26.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes42.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes28.SubscriptionPrice, com.tools20022.repository.msg.Warrant1.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes44.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes29.SubscriptionPrice, com.tools20022.repository.msg.Warrant2.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes63.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes75.SubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.SubscriptionPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmSubscriptionPrice,
+					com.tools20022.repository.msg.Warrant1.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmSubscriptionPrice, com.tools20022.repository.msg.Warrant2.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmSubscriptionPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmSubscriptionPrice);
 			elementContext_lazy = () -> Warrant.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Pre-determined price at which the holder of a warrant is entitled to buy the underlying instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.RelatedWarrant;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected BaseOneRate multiplier;
 	/**
 	 * Specifies the ratio or multiply factor used to convert from contracts to
 	 * shares.
@@ -255,19 +261,19 @@ public class Warrant extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Warrant1#Multiplier
-	 * Warrant1.Multiplier}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Warrant2#Multiplier
-	 * Warrant2.Multiplier}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
 	 * Warrant}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Warrant1#mmMultiplier
+	 * Warrant1.mmMultiplier}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Warrant2#mmMultiplier
+	 * Warrant2.mmMultiplier}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -281,19 +287,20 @@ public class Warrant extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Multiplier = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMultiplier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Warrant1.Multiplier, com.tools20022.repository.msg.Warrant2.Multiplier);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Warrant1.mmMultiplier, com.tools20022.repository.msg.Warrant2.mmMultiplier);
 			elementContext_lazy = () -> Warrant.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Multiplier";
 			definition = "Specifies the ratio or multiply factor used to convert from contracts to shares.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected WarrantStyleCode style;
 	/**
 	 * Specifies the expiration style of the warrant.
 	 * <p>
@@ -304,23 +311,23 @@ public class Warrant extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.WarrantStyleCode
 	 * WarrantStyleCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.WarrantStyle2Choice#Code
-	 * WarrantStyle2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.WarrantStyle2Choice#Proprietary
-	 * WarrantStyle2Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Warrant2#Type
-	 * Warrant2.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
 	 * Warrant}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.WarrantStyle2Choice#mmCode
+	 * WarrantStyle2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.WarrantStyle2Choice#mmProprietary
+	 * WarrantStyle2Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Warrant2#mmType
+	 * Warrant2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -332,19 +339,20 @@ public class Warrant extends Security {
 	 * definition} = "Specifies the expiration style of the warrant."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Style = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStyle = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.WarrantStyle2Choice.Code, com.tools20022.repository.choice.WarrantStyle2Choice.Proprietary, com.tools20022.repository.msg.Warrant2.Type);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.WarrantStyle2Choice.mmCode, com.tools20022.repository.choice.WarrantStyle2Choice.mmProprietary, com.tools20022.repository.msg.Warrant2.mmType);
 			elementContext_lazy = () -> Warrant.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Style";
 			definition = "Specifies the expiration style of the warrant.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> WarrantStyleCode.mmObject();
 		}
 	};
+	protected QuantityRatio warrantParity;
 	/**
 	 * Provides the ratio between the quantity of warrants and the quantity of
 	 * underlying securities.
@@ -354,8 +362,8 @@ public class Warrant extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#warrant
-	 * QuantityRatio.warrant}</li>
+	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmwarrant
+	 * QuantityRatio.mmwarrant}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -363,33 +371,33 @@ public class Warrant extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
 	 * QuantityRatio}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes48#WarrantParity
-	 * FinancialInstrumentAttributes48.WarrantParity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes55#WarrantParity
-	 * FinancialInstrumentAttributes55.WarrantParity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes66#WarrantParity
-	 * FinancialInstrumentAttributes66.WarrantParity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes70#WarrantParity
-	 * FinancialInstrumentAttributes70.WarrantParity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#WarrantParity
-	 * FinancialInstrumentAttributes79.WarrantParity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes85#WarrantParity
-	 * FinancialInstrumentAttributes85.WarrantParity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Warrant
 	 * Warrant}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes48#mmWarrantParity
+	 * FinancialInstrumentAttributes48.mmWarrantParity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes55#mmWarrantParity
+	 * FinancialInstrumentAttributes55.mmWarrantParity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes66#mmWarrantParity
+	 * FinancialInstrumentAttributes66.mmWarrantParity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes70#mmWarrantParity
+	 * FinancialInstrumentAttributes70.mmWarrantParity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#mmWarrantParity
+	 * FinancialInstrumentAttributes79.mmWarrantParity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes85#mmWarrantParity
+	 * FinancialInstrumentAttributes85.mmWarrantParity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -403,39 +411,71 @@ public class Warrant extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd WarrantParity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmWarrantParity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes48.WarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes55.WarrantParity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes66.WarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes70.WarrantParity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes79.WarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes85.WarrantParity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmWarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmWarrantParity,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmWarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmWarrantParity,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmWarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmWarrantParity);
 			elementContext_lazy = () -> Warrant.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantParity";
 			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities. ";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QuantityRatio.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.QuantityRatio.warrant;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmwarrant;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Warrant";
 				definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.RelatedWarrant, com.tools20022.repository.entity.QuantityRatio.warrant);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.Warrant, com.tools20022.repository.msg.FinancialInstrument28.Warrant);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant, com.tools20022.repository.entity.QuantityRatio.mmwarrant);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmWarrant, com.tools20022.repository.msg.FinancialInstrument28.mmWarrant);
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Warrant.SubscriptionPrice, com.tools20022.repository.entity.Warrant.Multiplier, com.tools20022.repository.entity.Warrant.Style,
-						com.tools20022.repository.entity.Warrant.WarrantParity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Warrant.mmSubscriptionPrice, com.tools20022.repository.entity.Warrant.mmMultiplier, com.tools20022.repository.entity.Warrant.mmStyle,
+						com.tools20022.repository.entity.Warrant.mmWarrantParity);
 				derivationComponent_lazy = () -> Arrays.asList(Warrant1.mmObject(), WarrantStyle2Choice.mmObject(), Warrant2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesPricing getSubscriptionPrice() {
+		return subscriptionPrice;
+	}
+
+	public void setSubscriptionPrice(com.tools20022.repository.entity.SecuritiesPricing subscriptionPrice) {
+		this.subscriptionPrice = subscriptionPrice;
+	}
+
+	public BaseOneRate getMultiplier() {
+		return multiplier;
+	}
+
+	public void setMultiplier(BaseOneRate multiplier) {
+		this.multiplier = multiplier;
+	}
+
+	public WarrantStyleCode getStyle() {
+		return style;
+	}
+
+	public void setStyle(WarrantStyleCode style) {
+		this.style = style;
+	}
+
+	public QuantityRatio getWarrantParity() {
+		return warrantParity;
+	}
+
+	public void setWarrantParity(com.tools20022.repository.entity.QuantityRatio warrantParity) {
+		this.warrantParity = warrantParity;
 	}
 }

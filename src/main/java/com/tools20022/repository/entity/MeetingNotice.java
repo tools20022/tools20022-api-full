@@ -40,11 +40,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingNotice#RelatedServicing
- * MeetingNotice.RelatedServicing}</li>
+ * {@linkplain com.tools20022.repository.entity.MeetingNotice#mmRelatedServicing
+ * MeetingNotice.mmRelatedServicing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingNotice#BeneficialOwnerExclusiveIndicator
- * MeetingNotice.BeneficialOwnerExclusiveIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.MeetingNotice#mmBeneficialOwnerExclusiveIndicator
+ * MeetingNotice.mmBeneficialOwnerExclusiveIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingServicing#MeetingNotice
- * MeetingServicing.MeetingNotice}</li>
+ * {@linkplain com.tools20022.repository.entity.MeetingServicing#mmMeetingNotice
+ * MeetingServicing.mmMeetingNotice}</li>
  * </ul>
  * </li>
  * <li>
@@ -73,8 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingNotice {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected MeetingServicing relatedServicing;
 	/**
 	 * Meeting servicing process which comprises the notification of a meeting.
 	 * <p>
@@ -98,8 +99,8 @@ public class MeetingNotice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingServicing#MeetingNotice
-	 * MeetingServicing.MeetingNotice}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingServicing#mmMeetingNotice
+	 * MeetingServicing.mmMeetingNotice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -125,20 +126,21 @@ public class MeetingNotice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedServicing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedServicing = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> MeetingNotice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
 			definition = "Meeting servicing process which comprises the notification of a meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MeetingServicing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.MeetingServicing.MeetingNotice;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.MeetingServicing.mmMeetingNotice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.MeetingServicing.mmObject();
 		}
 	};
+	protected YesNoIndicator beneficialOwnerExclusiveIndicator;
 	/**
 	 * Indicates that only the beneficial owner may participate in the event, ie
 	 * no proxy or nominee voting is allowed.
@@ -168,15 +170,15 @@ public class MeetingNotice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BeneficialOwnerExclusiveIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBeneficialOwnerExclusiveIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> MeetingNotice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BeneficialOwnerExclusiveIndicator";
 			definition = "Indicates that only the beneficial owner may participate in the event, ie no proxy or nominee voting is allowed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -184,15 +186,31 @@ public class MeetingNotice {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingNotice";
 				definition = "Information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingServicing.MeetingNotice);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingNotice.RelatedServicing, com.tools20022.repository.entity.MeetingNotice.BeneficialOwnerExclusiveIndicator);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingServicing.mmMeetingNotice);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingNotice.mmRelatedServicing, com.tools20022.repository.entity.MeetingNotice.mmBeneficialOwnerExclusiveIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(MeetingNotice1.mmObject(), MeetingNotice2.mmObject(), MeetingNotice3.mmObject(), EligibilityDates.mmObject(), EligibilityDates1.mmObject(), MeetingNotice4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MeetingServicing getRelatedServicing() {
+		return relatedServicing;
+	}
+
+	public void setRelatedServicing(com.tools20022.repository.entity.MeetingServicing relatedServicing) {
+		this.relatedServicing = relatedServicing;
+	}
+
+	public YesNoIndicator getBeneficialOwnerExclusiveIndicator() {
+		return beneficialOwnerExclusiveIndicator;
+	}
+
+	public void setBeneficialOwnerExclusiveIndicator(YesNoIndicator beneficialOwnerExclusiveIndicator) {
+		this.beneficialOwnerExclusiveIndicator = beneficialOwnerExclusiveIndicator;
 	}
 }

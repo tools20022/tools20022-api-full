@@ -30,21 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#No
- * TargetCompanyAgreementCode.No}</li>
+ * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#mmNo
+ * TargetCompanyAgreementCode.mmNo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#Yes
- * TargetCompanyAgreementCode.Yes}</li>
+ * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#mmYes
+ * TargetCompanyAgreementCode.mmYes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#NotDecided
- * TargetCompanyAgreementCode.NotDecided}</li>
+ * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#mmNotDecided
+ * TargetCompanyAgreementCode.mmNotDecided}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +80,7 @@ public class TargetCompanyAgreementCode {
 	 * definition} = "No agreement of the target company."</li>
 	 * </ul>
 	 */
-	public static final MMCode No = new MMCode() {
+	public static final MMCode mmNo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "No";
@@ -110,7 +110,7 @@ public class TargetCompanyAgreementCode {
 	 * definition} = "Agreement of the target company."</li>
 	 * </ul>
 	 */
-	public static final MMCode Yes = new MMCode() {
+	public static final MMCode mmYes = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yes";
@@ -140,7 +140,7 @@ public class TargetCompanyAgreementCode {
 	 * definition} = "Agreement of the target company is not decided."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotDecided = new MMCode() {
+	public static final MMCode mmNotDecided = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDecided";
@@ -153,12 +153,12 @@ public class TargetCompanyAgreementCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TargetCompanyAgreementCode";
 				definition = "TSE/JASDEC extension codes for the agreement of the target company.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TargetCompanyAgreementCode.No, com.tools20022.repository.codeset.TargetCompanyAgreementCode.Yes,
-						com.tools20022.repository.codeset.TargetCompanyAgreementCode.NotDecided);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmNo, com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmYes,
+						com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmNotDecided);
 			}
 		});
 		return mmObject_lazy.get();

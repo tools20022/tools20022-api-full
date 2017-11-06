@@ -33,20 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * RepurchaseTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType6Code#Swap
- * RepurchaseType6Code.Swap}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType6Code#TopUp
- * RepurchaseType6Code.TopUp}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType6Code#mmSwap
+ * RepurchaseType6Code.mmSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType6Code#Withdrawal
- * RepurchaseType6Code.Withdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType6Code#mmTopUp
+ * RepurchaseType6Code.mmTopUp}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType6Code#mmWithdrawal
+ * RepurchaseType6Code.mmWithdrawal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +83,7 @@ public class RepurchaseType6Code extends RepurchaseTypeCode {
 	 * name} = "Swap"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swap = new MMCode() {
+	public static final MMCode mmSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
@@ -105,7 +106,7 @@ public class RepurchaseType6Code extends RepurchaseTypeCode {
 	 * name} = "TopUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode TopUp = new MMCode() {
+	public static final MMCode mmTopUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TopUp";
@@ -128,7 +129,7 @@ public class RepurchaseType6Code extends RepurchaseTypeCode {
 	 * name} = "Withdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withdrawal = new MMCode() {
+	public static final MMCode mmWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawal";
@@ -139,12 +140,13 @@ public class RepurchaseType6Code extends RepurchaseTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CADJ");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseType6Code";
 				definition = "Specifies the type of repurchase transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseType6Code.Swap, com.tools20022.repository.codeset.RepurchaseType6Code.TopUp, com.tools20022.repository.codeset.RepurchaseType6Code.Withdrawal);
+				code_lazy = () -> Arrays
+						.asList(com.tools20022.repository.codeset.RepurchaseType6Code.mmSwap, com.tools20022.repository.codeset.RepurchaseType6Code.mmTopUp, com.tools20022.repository.codeset.RepurchaseType6Code.mmWithdrawal);
 				trace_lazy = () -> RepurchaseTypeCode.mmObject();
 			}
 		});

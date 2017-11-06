@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationTypeCode#ProcessingInstructions
- * InformationTypeCode.ProcessingInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationTypeCode#mmProcessingInstructions
+ * InformationTypeCode.mmProcessingInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationTypeCode#RelayInstructions
- * InformationTypeCode.RelayInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationTypeCode#mmRelayInstructions
+ * InformationTypeCode.mmRelayInstructions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class InformationTypeCode {
 	 * definition} = "Instructions used to ease automatic request processing."</li>
 	 * </ul>
 	 */
-	public static final MMCode ProcessingInstructions = new MMCode() {
+	public static final MMCode mmProcessingInstructions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingInstructions";
@@ -119,7 +119,7 @@ public class InformationTypeCode {
 	 * definition} = "Instructions used to ease automatic request relay."</li>
 	 * </ul>
 	 */
-	public static final MMCode RelayInstructions = new MMCode() {
+	public static final MMCode mmRelayInstructions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelayInstructions";
@@ -132,12 +132,12 @@ public class InformationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InformationTypeCode";
 				definition = "Specifies the coded type of additional information provided.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationTypeCode.ProcessingInstructions, com.tools20022.repository.codeset.InformationTypeCode.RelayInstructions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationTypeCode.mmProcessingInstructions, com.tools20022.repository.codeset.InformationTypeCode.mmRelayInstructions);
 				derivation_lazy = () -> Arrays.asList(InformationType1Code.mmObject());
 			}
 		});

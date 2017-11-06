@@ -45,28 +45,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#Undertaking
- * UnderlyingTransaction.Undertaking}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UnderlyingTransaction#Type
- * UnderlyingTransaction.Type}</li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmUndertaking
+ * UnderlyingTransaction.mmUndertaking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#Identification
- * UnderlyingTransaction.Identification}</li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmType
+ * UnderlyingTransaction.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#IssueDate
- * UnderlyingTransaction.IssueDate}</li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmIdentification
+ * UnderlyingTransaction.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#TenderClosingDate
- * UnderlyingTransaction.TenderClosingDate}</li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmIssueDate
+ * UnderlyingTransaction.mmIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#TotalAmount
- * UnderlyingTransaction.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmTenderClosingDate
+ * UnderlyingTransaction.mmTenderClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#ContractAmountPercentage
- * UnderlyingTransaction.ContractAmountPercentage}</li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmTotalAmount
+ * UnderlyingTransaction.mmTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#CommercialTrade
- * UnderlyingTransaction.CommercialTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmContractAmountPercentage
+ * UnderlyingTransaction.mmContractAmountPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction#mmCommercialTrade
+ * UnderlyingTransaction.mmCommercialTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -74,11 +75,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#UnderlyingTransaction
- * Undertaking.UnderlyingTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUnderlyingTransaction
+ * Undertaking.mmUnderlyingTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#RelatedUndertaking
- * CommercialTrade.RelatedUndertaking}</li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmRelatedUndertaking
+ * CommercialTrade.mmRelatedUndertaking}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,8 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnderlyingTransaction {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Undertaking undertaking;
 	/**
 	 * Undertaking issued to support a contract.
 	 * <p>
@@ -120,8 +122,8 @@ public class UnderlyingTransaction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UnderlyingTransaction
-	 * Undertaking.UnderlyingTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUnderlyingTransaction
+	 * Undertaking.mmUnderlyingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -145,20 +147,21 @@ public class UnderlyingTransaction {
 	 * definition} = "Undertaking issued to support a contract."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Undertaking = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Undertaking issued to support a contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.UnderlyingTransaction;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUnderlyingTransaction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 		}
 	};
+	protected ExternalUnderlyingTradeTransactionTypeCode type;
 	/**
 	 * Type of commercial obligation such as a tender, order, contract, etc.
 	 * <p>
@@ -169,25 +172,25 @@ public class UnderlyingTransaction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExternalUnderlyingTradeTransactionTypeCode
 	 * ExternalUnderlyingTradeTransactionTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice#Code
-	 * UnderlyingTradeTransactionType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice#Proprietary
-	 * UnderlyingTradeTransactionType1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#Type
-	 * UnderlyingTradeTransaction1.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
 	 * UnderlyingTransaction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice#mmCode
+	 * UnderlyingTradeTransactionType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice#mmProprietary
+	 * UnderlyingTradeTransactionType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmType
+	 * UnderlyingTradeTransaction1.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -200,20 +203,21 @@ public class UnderlyingTransaction {
 	 * "Type of commercial obligation such as a tender, order, contract, etc."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice.Code, com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice.Proprietary,
-					com.tools20022.repository.msg.UnderlyingTradeTransaction1.Type);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice.mmCode, com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice.mmProprietary,
+					com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmType);
 			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type of commercial obligation such as a tender, order, contract, etc.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUnderlyingTradeTransactionTypeCode.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Identification of the commercial obligation.
 	 * <p>
@@ -223,19 +227,19 @@ public class UnderlyingTransaction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#Identification
-	 * UnderlyingTradeTransaction1.Identification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
 	 * UnderlyingTransaction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmIdentification
+	 * UnderlyingTradeTransaction1.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -247,19 +251,20 @@ public class UnderlyingTransaction {
 	 * definition} = "Identification of the commercial obligation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Identification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.Identification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmIdentification);
 			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of the commercial obligation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate issueDate;
 	/**
 	 * Date the commercial obligation was issued or awarded.
 	 * <p>
@@ -269,19 +274,19 @@ public class UnderlyingTransaction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#TransactionDate
-	 * UnderlyingTradeTransaction1.TransactionDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
 	 * UnderlyingTransaction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmTransactionDate
+	 * UnderlyingTradeTransaction1.mmTransactionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -293,19 +298,20 @@ public class UnderlyingTransaction {
 	 * definition} = "Date the commercial obligation was issued or awarded."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute IssueDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIssueDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.TransactionDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTransactionDate);
 			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssueDate";
 			definition = "Date the commercial obligation was issued or awarded.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate tenderClosingDate;
 	/**
 	 * Date the tender closes.
 	 * <p>
@@ -315,19 +321,19 @@ public class UnderlyingTransaction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#TenderClosingDate
-	 * UnderlyingTradeTransaction1.TenderClosingDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
 	 * UnderlyingTransaction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmTenderClosingDate
+	 * UnderlyingTradeTransaction1.mmTenderClosingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -339,19 +345,20 @@ public class UnderlyingTransaction {
 	 * definition} = "Date the tender closes."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TenderClosingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTenderClosingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.TenderClosingDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTenderClosingDate);
 			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TenderClosingDate";
 			definition = "Date the tender closes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount totalAmount;
 	/**
 	 * Amount of the commercial obligation.
 	 * <p>
@@ -362,19 +369,19 @@ public class UnderlyingTransaction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#TransactionAmount
-	 * UnderlyingTradeTransaction1.TransactionAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
 	 * UnderlyingTransaction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmTransactionAmount
+	 * UnderlyingTradeTransaction1.mmTransactionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -386,19 +393,20 @@ public class UnderlyingTransaction {
 	 * definition} = "Amount of the commercial obligation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.TransactionAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTransactionAmount);
 			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalAmount";
 			definition = "Amount of the commercial obligation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate contractAmountPercentage;
 	/**
 	 * Percentage of the underlying contract covered by the undertaking.
 	 * <p>
@@ -409,19 +417,19 @@ public class UnderlyingTransaction {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#ContractAmountPercentage
-	 * UnderlyingTradeTransaction1.ContractAmountPercentage}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UnderlyingTransaction
 	 * UnderlyingTransaction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTradeTransaction1#mmContractAmountPercentage
+	 * UnderlyingTradeTransaction1.mmContractAmountPercentage}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -434,19 +442,20 @@ public class UnderlyingTransaction {
 	 * "Percentage of the underlying contract covered by the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ContractAmountPercentage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmContractAmountPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.ContractAmountPercentage);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmContractAmountPercentage);
 			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ContractAmountPercentage";
 			definition = "Percentage of the underlying contract covered by the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CommercialTrade commercialTrade;
 	/**
 	 * Commercial trade for which an undertaking is issued.
 	 * <p>
@@ -455,8 +464,8 @@ public class UnderlyingTransaction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#RelatedUndertaking
-	 * CommercialTrade.RelatedUndertaking}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmRelatedUndertaking
+	 * CommercialTrade.mmRelatedUndertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -480,36 +489,100 @@ public class UnderlyingTransaction {
 	 * definition} = "Commercial trade for which an undertaking is issued."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CommercialTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> UnderlyingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialTrade";
 			definition = "Commercial trade for which an undertaking is issued.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.RelatedUndertaking;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmRelatedUndertaking;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction";
 				definition = "Reference information on a commercial obligation between the beneficiary and applicant for which an undertaking is issued.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.UnderlyingTransaction, com.tools20022.repository.entity.CommercialTrade.RelatedUndertaking);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UnderlyingTransaction.Undertaking, com.tools20022.repository.entity.UnderlyingTransaction.Type,
-						com.tools20022.repository.entity.UnderlyingTransaction.Identification, com.tools20022.repository.entity.UnderlyingTransaction.IssueDate, com.tools20022.repository.entity.UnderlyingTransaction.TenderClosingDate,
-						com.tools20022.repository.entity.UnderlyingTransaction.TotalAmount, com.tools20022.repository.entity.UnderlyingTransaction.ContractAmountPercentage,
-						com.tools20022.repository.entity.UnderlyingTransaction.CommercialTrade);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmUnderlyingTransaction, com.tools20022.repository.entity.CommercialTrade.mmRelatedUndertaking);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UnderlyingTransaction.mmUndertaking, com.tools20022.repository.entity.UnderlyingTransaction.mmType,
+						com.tools20022.repository.entity.UnderlyingTransaction.mmIdentification, com.tools20022.repository.entity.UnderlyingTransaction.mmIssueDate,
+						com.tools20022.repository.entity.UnderlyingTransaction.mmTenderClosingDate, com.tools20022.repository.entity.UnderlyingTransaction.mmTotalAmount,
+						com.tools20022.repository.entity.UnderlyingTransaction.mmContractAmountPercentage, com.tools20022.repository.entity.UnderlyingTransaction.mmCommercialTrade);
 				derivationComponent_lazy = () -> Arrays.asList(UnderlyingTradeTransactionType1Choice.mmObject(), UnderlyingTradeTransaction1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Undertaking getUndertaking() {
+		return undertaking;
+	}
+
+	public void setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+		this.undertaking = undertaking;
+	}
+
+	public ExternalUnderlyingTradeTransactionTypeCode getType() {
+		return type;
+	}
+
+	public void setType(ExternalUnderlyingTradeTransactionTypeCode type) {
+		this.type = type;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODate getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(ISODate issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public ISODate getTenderClosingDate() {
+		return tenderClosingDate;
+	}
+
+	public void setTenderClosingDate(ISODate tenderClosingDate) {
+		this.tenderClosingDate = tenderClosingDate;
+	}
+
+	public CurrencyAndAmount getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(CurrencyAndAmount totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public PercentageRate getContractAmountPercentage() {
+		return contractAmountPercentage;
+	}
+
+	public void setContractAmountPercentage(PercentageRate contractAmountPercentage) {
+		this.contractAmountPercentage = contractAmountPercentage;
+	}
+
+	public CommercialTrade getCommercialTrade() {
+		return commercialTrade;
+	}
+
+	public void setCommercialTrade(com.tools20022.repository.entity.CommercialTrade commercialTrade) {
+		this.commercialTrade = commercialTrade;
 	}
 }

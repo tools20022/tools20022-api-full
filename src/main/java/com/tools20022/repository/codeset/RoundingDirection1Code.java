@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirection1Code#RoundUp
- * RoundingDirection1Code.RoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirection1Code#mmRoundUp
+ * RoundingDirection1Code.mmRoundUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirection1Code#RoundDown
- * RoundingDirection1Code.RoundDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirection1Code#mmRoundDown
+ * RoundingDirection1Code.mmRoundDown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirection1Code#RoundToNearest
- * RoundingDirection1Code.RoundToNearest}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirection1Code#mmRoundToNearest
+ * RoundingDirection1Code.mmRoundToNearest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirection1Code#IssueFraction
- * RoundingDirection1Code.IssueFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirection1Code#mmIssueFraction
+ * RoundingDirection1Code.mmIssueFraction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	 * name} = "RoundUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundUp = new MMCode() {
+	public static final MMCode mmRoundUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
@@ -110,7 +110,7 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	 * name} = "RoundDown"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundDown = new MMCode() {
+	public static final MMCode mmRoundDown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
@@ -133,7 +133,7 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	 * name} = "RoundToNearest"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundToNearest = new MMCode() {
+	public static final MMCode mmRoundToNearest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundToNearest";
@@ -156,7 +156,7 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	 * name} = "IssueFraction"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssueFraction = new MMCode() {
+	public static final MMCode mmIssueFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
@@ -167,13 +167,13 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RDUP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RoundingDirection1Code";
 				definition = "Specifies the rounding direction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingDirection1Code.RoundUp, com.tools20022.repository.codeset.RoundingDirection1Code.RoundDown,
-						com.tools20022.repository.codeset.RoundingDirection1Code.RoundToNearest, com.tools20022.repository.codeset.RoundingDirection1Code.IssueFraction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingDirection1Code.mmRoundUp, com.tools20022.repository.codeset.RoundingDirection1Code.mmRoundDown,
+						com.tools20022.repository.codeset.RoundingDirection1Code.mmRoundToNearest, com.tools20022.repository.codeset.RoundingDirection1Code.mmIssueFraction);
 				trace_lazy = () -> RoundingDirectionCode.mmObject();
 			}
 		});

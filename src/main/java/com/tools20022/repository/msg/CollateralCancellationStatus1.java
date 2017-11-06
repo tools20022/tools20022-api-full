@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralCancellationStatus1#CollateralStatusCode
- * CollateralCancellationStatus1.CollateralStatusCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralCancellationStatus1#mmCollateralStatusCode
+ * CollateralCancellationStatus1.mmCollateralStatusCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralCancellationStatus1#AdditionalInformation
- * CollateralCancellationStatus1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralCancellationStatus1#mmAdditionalInformation
+ * CollateralCancellationStatus1.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralCancellationStatus1#RejectionDetails
- * CollateralCancellationStatus1.RejectionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralCancellationStatus1#mmRejectionDetails
+ * CollateralCancellationStatus1.mmRejectionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,18 +55,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#CancellationStatus
- * CollateralManagementCancellationStatusV03.CancellationStatus}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#mmCancellationStatus
+ * CollateralManagementCancellationStatusV03.mmCancellationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#CancellationStatus
- * CollateralManagementCancellationStatusV04.CancellationStatus}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#mmCancellationStatus
+ * CollateralManagementCancellationStatusV04.mmCancellationStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralCancellationStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status4Code collateralStatusCode;
 	/**
 	 * Allows to provide a cancellation status using a code or a proprietary
 	 * status.
@@ -95,8 +96,8 @@ public class CollateralCancellationStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#InstructionProcessingStatus
-	 * Status.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+	 * Status.mmInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,20 +118,21 @@ public class CollateralCancellationStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralStatusCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralStatusCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> CollateralCancellationStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.InstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "CollStsCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralStatusCode";
 			definition = "Allows to provide a cancellation status using a code or a proprietary status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
 		}
 	};
+	protected Max35Text additionalInformation;
 	/**
 	 * Provides additional information on the status of the
 	 * CollateralManagementCancellationRequest message.
@@ -144,8 +146,8 @@ public class CollateralCancellationStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDescription
-	 * Status.StatusDescription}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDescription
+	 * Status.mmStatusDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,20 +168,21 @@ public class CollateralCancellationStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDescription;
 			componentContext_lazy = () -> CollateralCancellationStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDescription;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information on the status of the CollateralManagementCancellationRequest message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected RejectionStatus2 rejectionDetails;
 	/**
 	 * Provides rejection reason and optionaly additional information.
 	 * <p>
@@ -191,8 +194,8 @@ public class CollateralCancellationStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#CollateralManagementCancellationReason
-	 * CollateralStatus.CollateralManagementCancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateralManagementCancellationReason
+	 * CollateralStatus.mmCollateralManagementCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,36 +215,60 @@ public class CollateralCancellationStatus1 {
 	 * "Provides rejection reason and optionaly additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RejectionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejectionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmCollateralManagementCancellationReason;
 			componentContext_lazy = () -> CollateralCancellationStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.CollateralManagementCancellationReason;
 			isDerived = false;
 			xmlTag = "RjctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionDetails";
 			definition = "Provides rejection reason and optionaly additional information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RejectionStatus2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RejectionStatus2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralCancellationStatus1.CollateralStatusCode, com.tools20022.repository.msg.CollateralCancellationStatus1.AdditionalInformation,
-						com.tools20022.repository.msg.CollateralCancellationStatus1.RejectionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralCancellationStatus1.mmCollateralStatusCode, com.tools20022.repository.msg.CollateralCancellationStatus1.mmAdditionalInformation,
+						com.tools20022.repository.msg.CollateralCancellationStatus1.mmRejectionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.mmCancellationStatus,
+						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.mmCancellationStatus);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.CancellationStatus,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.CancellationStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralCancellationStatus1";
 				definition = "Provides details on the status (that is accept or reject) of the CollateralManagementCancellationRequest message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status4Code getCollateralStatusCode() {
+		return collateralStatusCode;
+	}
+
+	public void setCollateralStatusCode(Status4Code collateralStatusCode) {
+		this.collateralStatusCode = collateralStatusCode;
+	}
+
+	public Max35Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max35Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public RejectionStatus2 getRejectionDetails() {
+		return rejectionDetails;
+	}
+
+	public void setRejectionDetails(com.tools20022.repository.msg.RejectionStatus2 rejectionDetails) {
+		this.rejectionDetails = rejectionDetails;
 	}
 }

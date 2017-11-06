@@ -33,10 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement8#Deliver
- * CollateralMovement8.Deliver}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement8#Return
- * CollateralMovement8.Return}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement8#mmDeliver
+ * CollateralMovement8.mmDeliver}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement8#mmReturn
+ * CollateralMovement8.mmReturn}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralMovement8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Collateral12 deliver;
 	/**
 	 * Provides the collateral movement direction that is a delivery only.
 	 * <p>
@@ -84,8 +85,8 @@ public class CollateralMovement8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralProposal#ProposedCollateralMovement
-	 * CollateralProposal.ProposedCollateralMovement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmProposedCollateralMovement
+	 * CollateralProposal.mmProposedCollateralMovement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,34 +108,35 @@ public class CollateralMovement8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralMovement11#Deliver
-	 * CollateralMovement11.Deliver}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralMovement11#mmDeliver
+	 * CollateralMovement11.mmDeliver}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralMovement6#Deliver
-	 * CollateralMovement6.Deliver}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralMovement6#mmDeliver
+	 * CollateralMovement6.mmDeliver}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Deliver = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliver = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralMovement8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.ProposedCollateralMovement;
 			isDerived = false;
 			xmlTag = "Dlvr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliver";
 			definition = "Provides the collateral movement direction that is a delivery only.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralMovement6.Deliver;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement11.Deliver);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement11.mmDeliver);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralMovement6.mmDeliver;
 			maxOccurs = 1;
-			type_lazy = () -> Collateral12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Collateral12.mmObject();
 		}
 	};
+	protected Collateral11 return_;
 	/**
 	 * Provides the collateral movement direction that is a return only.
 	 * <p>
@@ -146,8 +148,8 @@ public class CollateralMovement8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralProposal#ProposedCollateralMovement
-	 * CollateralProposal.ProposedCollateralMovement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmProposedCollateralMovement
+	 * CollateralProposal.mmProposedCollateralMovement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,48 +171,64 @@ public class CollateralMovement8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralMovement11#Return
-	 * CollateralMovement11.Return}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralMovement11#mmReturn
+	 * CollateralMovement11.mmReturn}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralMovement6#Return
-	 * CollateralMovement6.Return}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralMovement6#mmReturn
+	 * CollateralMovement6.mmReturn}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Return = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturn = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralMovement8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.ProposedCollateralMovement;
 			isDerived = false;
 			xmlTag = "Rtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Return";
 			definition = "Provides the collateral movement direction that is a return only.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralMovement6.Return;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement11.Return);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement11.mmReturn);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralMovement6.mmReturn;
 			maxOccurs = 1;
-			type_lazy = () -> Collateral11.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Collateral11.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement8.Deliver, com.tools20022.repository.msg.CollateralMovement8.Return);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement8.mmDeliver, com.tools20022.repository.msg.CollateralMovement8.mmReturn);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralMovement8";
 				definition = "Provides the collateral movement direction that is a delivery and optionaly a return.";
-				previousVersion_lazy = () -> CollateralMovement6.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CollateralMovement11.mmObject());
+				previousVersion_lazy = () -> CollateralMovement6.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Collateral12 getDeliver() {
+		return deliver;
+	}
+
+	public void setDeliver(com.tools20022.repository.msg.Collateral12 deliver) {
+		this.deliver = deliver;
+	}
+
+	public Collateral11 getReturn() {
+		return return_;
+	}
+
+	public void setReturn(com.tools20022.repository.msg.Collateral11 return_) {
+		this.return_ = return_;
 	}
 }

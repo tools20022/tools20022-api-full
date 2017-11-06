@@ -32,23 +32,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ResponseCode ResponseCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Response1Code#Declined
- * Response1Code.Declined}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response1Code#Approved
- * Response1Code.Approved}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response1Code#mmDeclined
+ * Response1Code.mmDeclined}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response1Code#mmApproved
+ * Response1Code.mmApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Response1Code#PartialApproved
- * Response1Code.PartialApproved}</li>
+ * {@linkplain com.tools20022.repository.codeset.Response1Code#mmPartialApproved
+ * Response1Code.mmPartialApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Response1Code#TechnicalError
- * Response1Code.TechnicalError}</li>
+ * {@linkplain com.tools20022.repository.codeset.Response1Code#mmTechnicalError
+ * Response1Code.mmTechnicalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class Response1Code extends ResponseCode {
 	 * name} = "Declined"</li>
 	 * </ul>
 	 */
-	public static final MMCode Declined = new MMCode() {
+	public static final MMCode mmDeclined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declined";
@@ -107,7 +107,7 @@ public class Response1Code extends ResponseCode {
 	 * name} = "Approved"</li>
 	 * </ul>
 	 */
-	public static final MMCode Approved = new MMCode() {
+	public static final MMCode mmApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
@@ -130,7 +130,7 @@ public class Response1Code extends ResponseCode {
 	 * name} = "PartialApproved"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialApproved = new MMCode() {
+	public static final MMCode mmPartialApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialApproved";
@@ -153,7 +153,7 @@ public class Response1Code extends ResponseCode {
 	 * name} = "TechnicalError"</li>
 	 * </ul>
 	 */
-	public static final MMCode TechnicalError = new MMCode() {
+	public static final MMCode mmTechnicalError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalError";
@@ -164,13 +164,13 @@ public class Response1Code extends ResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DECL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Response1Code";
 				definition = "Response code of a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Response1Code.Declined, com.tools20022.repository.codeset.Response1Code.Approved, com.tools20022.repository.codeset.Response1Code.PartialApproved,
-						com.tools20022.repository.codeset.Response1Code.TechnicalError);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Response1Code.mmDeclined, com.tools20022.repository.codeset.Response1Code.mmApproved, com.tools20022.repository.codeset.Response1Code.mmPartialApproved,
+						com.tools20022.repository.codeset.Response1Code.mmTechnicalError);
 				trace_lazy = () -> ResponseCode.mmObject();
 			}
 		});

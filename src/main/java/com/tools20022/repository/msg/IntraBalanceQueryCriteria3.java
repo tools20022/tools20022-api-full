@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BookEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria based on which information is included.
@@ -38,23 +39,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#ModificationRequestIdentification
- * IntraBalanceQueryCriteria3.ModificationRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#mmModificationRequestIdentification
+ * IntraBalanceQueryCriteria3.mmModificationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#ProcessingStatus
- * IntraBalanceQueryCriteria3.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#mmProcessingStatus
+ * IntraBalanceQueryCriteria3.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#CashAccount
- * IntraBalanceQueryCriteria3.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#mmCashAccount
+ * IntraBalanceQueryCriteria3.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#CashAccountOwner
- * IntraBalanceQueryCriteria3.CashAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#mmCashAccountOwner
+ * IntraBalanceQueryCriteria3.mmCashAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#MessageOriginator
- * IntraBalanceQueryCriteria3.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#mmMessageOriginator
+ * IntraBalanceQueryCriteria3.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#CreationDateTime
- * IntraBalanceQueryCriteria3.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#mmCreationDateTime
+ * IntraBalanceQueryCriteria3.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalanceQueryCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> modificationRequestIdentification;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -104,7 +106,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
@@ -116,6 +118,7 @@ public class IntraBalanceQueryCriteria3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<ModificationProcessingStatus1Choice> processingStatus;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -144,7 +147,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
@@ -156,6 +159,7 @@ public class IntraBalanceQueryCriteria3 {
 			complexType_lazy = () -> ModificationProcessingStatus1Choice.mmObject();
 		}
 	};
+	protected List<AccountIdentificationSearchCriteria2Choice> cashAccount;
 	/**
 	 * Account in which cash is maintained.
 	 * <p>
@@ -169,8 +173,8 @@ public class IntraBalanceQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashAccount
-	 * CashEntry.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashAccount
+	 * CashEntry.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -189,10 +193,10 @@ public class IntraBalanceQueryCriteria3 {
 	 * definition} = "Account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashAccount;
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,6 +206,7 @@ public class IntraBalanceQueryCriteria3 {
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner;
 	/**
 	 * Party that owns the account.
 	 * <p>
@@ -214,8 +219,8 @@ public class IntraBalanceQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#PartyRole
-	 * System.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmPartyRole
+	 * System.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -234,20 +239,21 @@ public class IntraBalanceQueryCriteria3 {
 	 * definition} = "Party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.PartyRole;
 			isDerived = false;
 			xmlTag = "CshAcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountOwner";
 			definition = "Party that owns the account.";
 			minOccurs = 0;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -276,7 +282,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
@@ -285,10 +291,11 @@ public class IntraBalanceQueryCriteria3 {
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			minOccurs = 0;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice creationDateTime;
 	/**
 	 * Specifies the creation date/time of the intra-balance movement.
 	 * <p>
@@ -318,7 +325,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * "Specifies the creation date/time of the intra-balance movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
@@ -326,8 +333,8 @@ public class IntraBalanceQueryCriteria3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-balance movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
@@ -335,16 +342,64 @@ public class IntraBalanceQueryCriteria3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryCriteria3.ModificationRequestIdentification, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.ProcessingStatus,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria3.CashAccount, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.CashAccountOwner,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria3.MessageOriginator, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.CreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmModificationRequestIdentification, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmProcessingStatus,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmCashAccount, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmCashAccountOwner,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmMessageOriginator, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmCreationDateTime);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryCriteria3";
 				definition = "Defines the criteria based on which information is included.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getModificationRequestIdentification() {
+		return modificationRequestIdentification;
+	}
+
+	public void setModificationRequestIdentification(List<Max35Text> modificationRequestIdentification) {
+		this.modificationRequestIdentification = modificationRequestIdentification;
+	}
+
+	public List<ModificationProcessingStatus1Choice> getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(List<ModificationProcessingStatus1Choice> processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public List<AccountIdentificationSearchCriteria2Choice> getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(List<AccountIdentificationSearchCriteria2Choice> cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public List<SystemPartyIdentification5> getCashAccountOwner() {
+		return cashAccountOwner;
+	}
+
+	public void setCashAccountOwner(List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner) {
+		this.cashAccountOwner = cashAccountOwner;
+	}
+
+	public List<SystemPartyIdentification5> getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public DateAndDateTimeSearch2Choice getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(DateAndDateTimeSearch2Choice creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

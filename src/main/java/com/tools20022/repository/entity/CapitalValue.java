@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CapitalValue#Capital
- * CapitalValue.Capital}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CapitalValue#mmCapital
+ * CapitalValue.mmCapital}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +56,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CapitalValue {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Capital capital;
 	/**
 	 * Capital for which a value is provided.
 	 * <p>
@@ -80,15 +81,15 @@ public class CapitalValue {
 	 * definition} = "Capital for which a value is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Capital = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCapital = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CapitalValue.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capital";
 			definition = "Capital for which a value is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.entity.Capital.mmObject();
 		}
 	};
@@ -96,13 +97,21 @@ public class CapitalValue {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CapitalValue";
 				definition = "Value of the capital.";
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CapitalValue.Capital);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CapitalValue.mmCapital);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Capital getCapital() {
+		return capital;
+	}
+
+	public void setCapital(com.tools20022.repository.entity.Capital capital) {
+		this.capital = capital;
 	}
 }

@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#EachPartial
- * BookingUnit1Code.EachPartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#mmEachPartial
+ * BookingUnit1Code.mmEachPartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#AggregatePartial
- * BookingUnit1Code.AggregatePartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#mmAggregatePartial
+ * BookingUnit1Code.mmAggregatePartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#AggregateExecutions
- * BookingUnit1Code.AggregateExecutions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#mmAggregateExecutions
+ * BookingUnit1Code.mmAggregateExecutions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 * name} = "EachPartial"</li>
 	 * </ul>
 	 */
-	public static final MMCode EachPartial = new MMCode() {
+	public static final MMCode mmEachPartial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EachPartial";
@@ -108,7 +108,7 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 * name} = "AggregatePartial"</li>
 	 * </ul>
 	 */
-	public static final MMCode AggregatePartial = new MMCode() {
+	public static final MMCode mmAggregatePartial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatePartial";
@@ -131,7 +131,7 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 * name} = "AggregateExecutions"</li>
 	 * </ul>
 	 */
-	public static final MMCode AggregateExecutions = new MMCode() {
+	public static final MMCode mmAggregateExecutions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateExecutions";
@@ -142,13 +142,13 @@ public class BookingUnit1Code extends BookingUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EACP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BookingUnit1Code";
 				definition = "Description of the method used to book single or grouped executions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingUnit1Code.EachPartial, com.tools20022.repository.codeset.BookingUnit1Code.AggregatePartial,
-						com.tools20022.repository.codeset.BookingUnit1Code.AggregateExecutions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingUnit1Code.mmEachPartial, com.tools20022.repository.codeset.BookingUnit1Code.mmAggregatePartial,
+						com.tools20022.repository.codeset.BookingUnit1Code.mmAggregateExecutions);
 				trace_lazy = () -> BookingUnitCode.mmObject();
 			}
 		});

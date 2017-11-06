@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope <br>
@@ -66,56 +67,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#StatusDetails
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.StatusDetails}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmStatusDetails
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmStatusDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#TradeInformation
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.TradeInformation}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmTradeInformation
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradeInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#TradingSideIdentification
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.TradingSideIdentification
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#CounterpartySideIdentification
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmTradingSideIdentification
  * ForeignExchangeTradeStatusAndDetailsNotificationV04.
- * CounterpartySideIdentification}</li>
+ * mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#TradeAmounts
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.TradeAmounts}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#AgreedRate
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.AgreedRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#NonDeliverableForwardConditions
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmCounterpartySideIdentification
  * ForeignExchangeTradeStatusAndDetailsNotificationV04.
- * NonDeliverableForwardConditions}</li>
+ * mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#TradingSideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmTradeAmounts
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradeAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmAgreedRate
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmAgreedRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmNonDeliverableForwardConditions
  * ForeignExchangeTradeStatusAndDetailsNotificationV04.
- * TradingSideSettlementInstructions}</li>
+ * mmNonDeliverableForwardConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#CounterpartySideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmTradingSideSettlementInstructions
  * ForeignExchangeTradeStatusAndDetailsNotificationV04.
- * CounterpartySideSettlementInstructions}</li>
+ * mmTradingSideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#GeneralInformation
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.GeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmCounterpartySideSettlementInstructions
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.
+ * mmCounterpartySideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#SplitTradeInformation
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.SplitTradeInformation}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmGeneralInformation
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#RegulatoryReporting
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.RegulatoryReporting}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmSplitTradeInformation
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSplitTradeInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#SupplementaryData
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmRegulatoryReporting
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmRegulatoryReporting}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmSupplementaryData
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#identifier
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code fxtr.017.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,6 +130,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradeData14 statusDetails;
 	/**
 	 * Provides information on the status of a foreign exchange trade in the
 	 * central system.
@@ -156,17 +156,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDetails";
 			definition = "Provides information on the status of a foreign exchange trade in the central system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeData14.mmObject();
 		}
 	};
+	protected TradeAgreement12 tradeInformation;
 	/**
 	 * General information related to the foreign exchange trade.
 	 * <p>
@@ -191,17 +192,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * "General information related to the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeInformation";
 			definition = "General information related to the foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement12.mmObject();
 		}
 	};
+	protected TradePartyIdentification6 tradingSideIdentification;
 	/**
 	 * Party(ies) on the trading side of the foreign exchange trade.
 	 * <p>
@@ -226,17 +228,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * "Party(ies) on the trading side of the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Party(ies) on the trading side of the foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification6.mmObject();
 		}
 	};
+	protected TradePartyIdentification6 counterpartySideIdentification;
 	/**
 	 * Party(ies) on the counterparty side of the foreign exchange trade.
 	 * <p>
@@ -261,17 +264,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * "Party(ies) on the counterparty side of the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Party(ies) on the counterparty side of the foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification6.mmObject();
 		}
 	};
+	protected AmountsAndValueDate1 tradeAmounts;
 	/**
 	 * Amounts of the foreign exchange trade.
 	 * <p>
@@ -295,17 +299,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * definition} = "Amounts of the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Amounts of the foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AmountsAndValueDate1.mmObject();
 		}
 	};
+	protected AgreedRate3 agreedRate;
 	/**
 	 * Exchange rate as agreed by the traders.
 	 * <p>
@@ -328,17 +333,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * definition} = "Exchange rate as agreed by the traders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgreedRate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgreedRate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgrdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedRate";
 			definition = "Exchange rate as agreed by the traders.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AgreedRate3.mmObject();
 		}
 	};
+	protected NonDeliverableForwardConditions2 nonDeliverableForwardConditions;
 	/**
 	 * Provides the opening and fixing information for an NDF trade.
 	 * <p>
@@ -363,17 +369,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * "Provides the opening and fixing information for an NDF trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NonDeliverableForwardConditions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNonDeliverableForwardConditions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NDFConds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDeliverableForwardConditions";
 			definition = "Provides the opening and fixing information for an NDF trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> NonDeliverableForwardConditions2.mmObject();
 		}
 	};
+	protected SettlementParties29 tradingSideSettlementInstructions;
 	/**
 	 * Settlement instructions for the amounts received by the trading side.
 	 * <p>
@@ -398,17 +405,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * "Settlement instructions for the amounts received by the trading side."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradingSideSettlementInstructions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradingSideSettlementInstructions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdSttlmInstrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideSettlementInstructions";
 			definition = "Settlement instructions for the amounts received by the trading side.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties29.mmObject();
 		}
 	};
+	protected SettlementParties29 counterpartySideSettlementInstructions;
 	/**
 	 * Settlement instructions for the amounts received by the counterparty.
 	 * <p>
@@ -433,17 +441,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * "Settlement instructions for the amounts received by the counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartySideSettlementInstructions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartySideSettlementInstructions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdSttlmInstrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideSettlementInstructions";
 			definition = "Settlement instructions for the amounts received by the counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties29.mmObject();
 		}
 	};
+	protected GeneralInformation5 generalInformation;
 	/**
 	 * Additional Information about the foreign exchange trade.
 	 * <p>
@@ -467,17 +476,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * definition} = "Additional Information about the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralInformation";
 			definition = "Additional Information about the foreign exchange trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> GeneralInformation5.mmObject();
 		}
 	};
+	protected List<SplitTradeDetails3> splitTradeInformation;
 	/**
 	 * Details of the split trade.
 	 * <p>
@@ -501,7 +511,7 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * definition} = "Details of the split trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SplitTradeInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSplitTradeInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SpltTradInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -511,6 +521,7 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			complexType_lazy = () -> SplitTradeDetails3.mmObject();
 		}
 	};
+	protected RegulatoryReporting6 regulatoryReporting;
 	/**
 	 * Information that is to be provided to trade repositories in the context
 	 * of the regulatory standards around over-the-counter (OTC) derivatives,
@@ -538,17 +549,18 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RegulatoryReporting = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRegulatoryReporting = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RgltryRptg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryReporting";
 			definition = "Information that is to be provided to trade repositories in the context of the regulatory standards around over-the-counter (OTC) derivatives, central counterparties and trade repositories.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RegulatoryReporting6.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -575,7 +587,7 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -583,33 +595,6 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "fxtr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "017"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "fxtr";
-			messageFunctionality = "017";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -623,20 +608,132 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 				rootElement = "Document";
 				xmlTag = "FXTradStsAndDtlsNtfctn";
 				businessArea_lazy = () -> ForeignExchangeTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.StatusDetails,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.TradeInformation,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.TradingSideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.CounterpartySideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.TradeAmounts, com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.AgreedRate,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.NonDeliverableForwardConditions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.CounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.GeneralInformation,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.SplitTradeInformation,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.RegulatoryReporting, com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmStatusDetails,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradeInformation,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradingSideIdentification,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmCounterpartySideIdentification,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradeAmounts, com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmAgreedRate,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmNonDeliverableForwardConditions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmCounterpartySideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmGeneralInformation,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSplitTradeInformation,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmRegulatoryReporting,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "fxtr";
+						messageFunctionality = "017";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeData14 getStatusDetails() {
+		return statusDetails;
+	}
+
+	public void setStatusDetails(TradeData14 statusDetails) {
+		this.statusDetails = statusDetails;
+	}
+
+	public TradeAgreement12 getTradeInformation() {
+		return tradeInformation;
+	}
+
+	public void setTradeInformation(TradeAgreement12 tradeInformation) {
+		this.tradeInformation = tradeInformation;
+	}
+
+	public TradePartyIdentification6 getTradingSideIdentification() {
+		return tradingSideIdentification;
+	}
+
+	public void setTradingSideIdentification(TradePartyIdentification6 tradingSideIdentification) {
+		this.tradingSideIdentification = tradingSideIdentification;
+	}
+
+	public TradePartyIdentification6 getCounterpartySideIdentification() {
+		return counterpartySideIdentification;
+	}
+
+	public void setCounterpartySideIdentification(TradePartyIdentification6 counterpartySideIdentification) {
+		this.counterpartySideIdentification = counterpartySideIdentification;
+	}
+
+	public AmountsAndValueDate1 getTradeAmounts() {
+		return tradeAmounts;
+	}
+
+	public void setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
+		this.tradeAmounts = tradeAmounts;
+	}
+
+	public AgreedRate3 getAgreedRate() {
+		return agreedRate;
+	}
+
+	public void setAgreedRate(AgreedRate3 agreedRate) {
+		this.agreedRate = agreedRate;
+	}
+
+	public NonDeliverableForwardConditions2 getNonDeliverableForwardConditions() {
+		return nonDeliverableForwardConditions;
+	}
+
+	public void setNonDeliverableForwardConditions(NonDeliverableForwardConditions2 nonDeliverableForwardConditions) {
+		this.nonDeliverableForwardConditions = nonDeliverableForwardConditions;
+	}
+
+	public SettlementParties29 getTradingSideSettlementInstructions() {
+		return tradingSideSettlementInstructions;
+	}
+
+	public void setTradingSideSettlementInstructions(SettlementParties29 tradingSideSettlementInstructions) {
+		this.tradingSideSettlementInstructions = tradingSideSettlementInstructions;
+	}
+
+	public SettlementParties29 getCounterpartySideSettlementInstructions() {
+		return counterpartySideSettlementInstructions;
+	}
+
+	public void setCounterpartySideSettlementInstructions(SettlementParties29 counterpartySideSettlementInstructions) {
+		this.counterpartySideSettlementInstructions = counterpartySideSettlementInstructions;
+	}
+
+	public GeneralInformation5 getGeneralInformation() {
+		return generalInformation;
+	}
+
+	public void setGeneralInformation(GeneralInformation5 generalInformation) {
+		this.generalInformation = generalInformation;
+	}
+
+	public List<SplitTradeDetails3> getSplitTradeInformation() {
+		return splitTradeInformation;
+	}
+
+	public void setSplitTradeInformation(List<SplitTradeDetails3> splitTradeInformation) {
+		this.splitTradeInformation = splitTradeInformation;
+	}
+
+	public RegulatoryReporting6 getRegulatoryReporting() {
+		return regulatoryReporting;
+	}
+
+	public void setRegulatoryReporting(RegulatoryReporting6 regulatoryReporting) {
+		this.regulatoryReporting = regulatoryReporting;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

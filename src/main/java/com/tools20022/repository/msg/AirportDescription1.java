@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AirportDescription1#Town
- * AirportDescription1.Town}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AirportDescription1#mmTown
+ * AirportDescription1.mmTown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AirportDescription1#AirportName
- * AirportDescription1.AirportName}</li>
+ * {@linkplain com.tools20022.repository.msg.AirportDescription1#mmAirportName
+ * AirportDescription1.mmAirportName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AirportDescription1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text town;
 	/**
 	 * Identifies the town where the airport is located. For example: London.
 	 * <p>
@@ -72,8 +73,8 @@ public class AirportDescription1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#TownName
-	 * PostalAddress.TownName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmTownName
+	 * PostalAddress.mmTownName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +94,21 @@ public class AirportDescription1 {
 	 * "Identifies the town where the airport is located. For example: London."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Town = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTown = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmTownName;
 			componentContext_lazy = () -> AirportDescription1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.TownName;
 			isDerived = false;
 			xmlTag = "Twn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Town";
 			definition = "Identifies the town where the airport is located. For example: London.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text airportName;
 	/**
 	 * Identifies the airport by its name. For example: Heathrow.
 	 * <p>
@@ -119,8 +121,8 @@ public class AirportDescription1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,17 +142,17 @@ public class AirportDescription1 {
 	 * "Identifies the airport by its name. For example: Heathrow."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AirportName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAirportName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AirportDescription1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AirprtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirportName";
 			definition = "Identifies the airport by its name. For example: Heathrow.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -158,14 +160,30 @@ public class AirportDescription1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AirportDescription1.Town, com.tools20022.repository.msg.AirportDescription1.AirportName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AirportDescription1.mmTown, com.tools20022.repository.msg.AirportDescription1.mmAirportName);
 				trace_lazy = () -> Location.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AirportDescription1";
 				definition = "Identifies an airport by its location and by its name.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTown() {
+		return town;
+	}
+
+	public void setTown(Max35Text town) {
+		this.town = town;
+	}
+
+	public Max35Text getAirportName() {
+		return airportName;
+	}
+
+	public void setAirportName(Max35Text airportName) {
+		this.airportName = airportName;
 	}
 }

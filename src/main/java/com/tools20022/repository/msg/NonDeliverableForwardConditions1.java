@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardConditions1#OpeningIndicator
- * NonDeliverableForwardConditions1.OpeningIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardConditions1#mmOpeningIndicator
+ * NonDeliverableForwardConditions1.mmOpeningIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardConditions1#OpeningFixingConditions
- * NonDeliverableForwardConditions1.OpeningFixingConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardConditions1#mmOpeningFixingConditions
+ * NonDeliverableForwardConditions1.mmOpeningFixingConditions}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,22 +48,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04#NonDeliverableForwardConditions
- * ForeignExchangeTradeInstructionV04.NonDeliverableForwardConditions}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04#mmNonDeliverableForwardConditions
+ * ForeignExchangeTradeInstructionV04.mmNonDeliverableForwardConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04#NonDeliverableForwardConditions
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04#mmNonDeliverableForwardConditions
  * ForeignExchangeTradeInstructionCancellationV04.
- * NonDeliverableForwardConditions}</li>
+ * mmNonDeliverableForwardConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04#NonDeliverableForwardConditions
- * ForeignExchangeTradeInstructionAmendmentV04.NonDeliverableForwardConditions}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04#mmNonDeliverableForwardConditions
+ * ForeignExchangeTradeInstructionAmendmentV04.mmNonDeliverableForwardConditions
+ * }</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NonDeliverableForwardConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator openingIndicator;
 	/**
 	 * Specifies whether the instruction is an NDF opening or fixing.
 	 * <p>
@@ -116,7 +118,7 @@ public class NonDeliverableForwardConditions1 {
 	 * "Specifies whether the instruction is an NDF opening or fixing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NonDeliverableForwardConditions1.mmObject();
 			isDerived = false;
@@ -124,11 +126,12 @@ public class NonDeliverableForwardConditions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningIndicator";
 			definition = "Specifies whether the instruction is an NDF opening or fixing.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected NDFOpeningFixing1Choice openingFixingConditions;
 	/**
 	 * Specifies either the conditions for an NDF oepning or an NDF fixing
 	 * confirmation.
@@ -159,7 +162,7 @@ public class NonDeliverableForwardConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OpeningFixingConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOpeningFixingConditions = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NonDeliverableForwardConditions1.mmObject();
 			isDerived = false;
@@ -167,21 +170,21 @@ public class NonDeliverableForwardConditions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningFixingConditions";
 			definition = "Specifies either the conditions for an NDF oepning or an NDF fixing confirmation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NDFOpeningFixing1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NDFOpeningFixing1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDeliverableForwardConditions1.OpeningIndicator, com.tools20022.repository.msg.NonDeliverableForwardConditions1.OpeningFixingConditions);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.NonDeliverableForwardConditions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.NonDeliverableForwardConditions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.NonDeliverableForwardConditions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDeliverableForwardConditions1.mmOpeningIndicator, com.tools20022.repository.msg.NonDeliverableForwardConditions1.mmOpeningFixingConditions);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmNonDeliverableForwardConditions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.mmNonDeliverableForwardConditions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.mmNonDeliverableForwardConditions);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NonDeliverableForwardConditions1";
 				definition = "Specifies the opening and valuation conditions for the non deliverable forward";
@@ -189,5 +192,21 @@ public class NonDeliverableForwardConditions1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getOpeningIndicator() {
+		return openingIndicator;
+	}
+
+	public void setOpeningIndicator(YesNoIndicator openingIndicator) {
+		this.openingIndicator = openingIndicator;
+	}
+
+	public NDFOpeningFixing1Choice getOpeningFixingConditions() {
+		return openingFixingConditions;
+	}
+
+	public void setOpeningFixingConditions(NDFOpeningFixing1Choice openingFixingConditions) {
+		this.openingFixingConditions = openingFixingConditions;
 	}
 }

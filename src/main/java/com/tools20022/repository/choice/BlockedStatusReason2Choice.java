@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.msg.BlockedStatusReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of formats for a blocked status reason.
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BlockedStatusReason2Choice#NoSpecifiedReason
- * BlockedStatusReason2Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.BlockedStatusReason2Choice#mmNoSpecifiedReason
+ * BlockedStatusReason2Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BlockedStatusReason2Choice#Reason
- * BlockedStatusReason2Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.BlockedStatusReason2Choice#mmReason
+ * BlockedStatusReason2Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BlockedStatusReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * There is no reason available or to report for the closed account status.
 	 * <p>
@@ -89,7 +91,7 @@ public class BlockedStatusReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BlockedStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class BlockedStatusReason2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "There is no reason available or to report for the closed account status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<BlockedStatusReason2> reason;
 	/**
 	 * Transaction type for which the account is blocked and the underlying
 	 * reason.
@@ -131,7 +134,7 @@ public class BlockedStatusReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BlockedStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -140,21 +143,37 @@ public class BlockedStatusReason2Choice {
 			name = "Reason";
 			definition = "Transaction type for which the account is blocked and the underlying reason.";
 			minOccurs = 1;
-			type_lazy = () -> BlockedStatusReason2.mmObject();
 			isComposite = true;
+			type_lazy = () -> BlockedStatusReason2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BlockedStatusReason2Choice.NoSpecifiedReason, com.tools20022.repository.choice.BlockedStatusReason2Choice.Reason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BlockedStatusReason2Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.BlockedStatusReason2Choice.mmReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BlockedStatusReason2Choice";
 				definition = "Choice of formats for a blocked status reason.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<BlockedStatusReason2> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<BlockedStatusReason2> reason) {
+		this.reason = reason;
 	}
 }

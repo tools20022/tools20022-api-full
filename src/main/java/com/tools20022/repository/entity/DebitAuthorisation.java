@@ -45,22 +45,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#ValueDateToDebit
- * DebitAuthorisation.ValueDateToDebit}</li>
+ * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmValueDateToDebit
+ * DebitAuthorisation.mmValueDateToDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#DebitAuthorisationDecision
- * DebitAuthorisation.DebitAuthorisationDecision}</li>
+ * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmDebitAuthorisationDecision
+ * DebitAuthorisation.mmDebitAuthorisationDecision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#AmountToDebit
- * DebitAuthorisation.AmountToDebit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DebitAuthorisation#Reason
- * DebitAuthorisation.Reason}</li>
+ * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmAmountToDebit
+ * DebitAuthorisation.mmAmountToDebit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmReason
+ * DebitAuthorisation.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#AuthorisedReturn
- * DebitAuthorisation.AuthorisedReturn}</li>
+ * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmAuthorisedReturn
+ * DebitAuthorisation.mmAuthorisedReturn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#RelatedInvestigationCaseResolution
- * DebitAuthorisation.RelatedInvestigationCaseResolution}</li>
+ * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmRelatedInvestigationCaseResolution
+ * DebitAuthorisation.mmRelatedInvestigationCaseResolution}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,11 +68,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#RelatedDebitAuthorisation
- * Payment.RelatedDebitAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedDebitAuthorisation
+ * Payment.mmRelatedDebitAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#DebitAuthorisationConfirmation
- * PaymentInvestigationCaseResolution.DebitAuthorisationConfirmation}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmDebitAuthorisationConfirmation
+ * PaymentInvestigationCaseResolution.mmDebitAuthorisationConfirmation}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebitAuthorisation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate valueDateToDebit;
 	/**
 	 * Value date for debiting the amount.
 	 * <p>
@@ -116,37 +117,37 @@ public class DebitAuthorisation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails#ValueDateToDebit
-	 * DebitAuthorisationDetails.ValueDateToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails2#ValueDateToDebit
-	 * DebitAuthorisationDetails2.ValueDateToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation#ValueDateToDebit
-	 * DebitAuthorisationConfirmation.ValueDateToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation2#ValueDateToDebit
-	 * DebitAuthorisationConfirmation2.ValueDateToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#ValueDateToDebit
-	 * DebitAuthorisationDetails3.ValueDateToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisation1#ValueDateToDebit
-	 * DebitAuthorisation1.ValueDateToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisation2#ValueDateToDebit
-	 * DebitAuthorisation2.ValueDateToDebit}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation
 	 * DebitAuthorisation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails#mmValueDateToDebit
+	 * DebitAuthorisationDetails.mmValueDateToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails2#mmValueDateToDebit
+	 * DebitAuthorisationDetails2.mmValueDateToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation#mmValueDateToDebit
+	 * DebitAuthorisationConfirmation.mmValueDateToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation2#mmValueDateToDebit
+	 * DebitAuthorisationConfirmation2.mmValueDateToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#mmValueDateToDebit
+	 * DebitAuthorisationDetails3.mmValueDateToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisation1#mmValueDateToDebit
+	 * DebitAuthorisation1.mmValueDateToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisation2#mmValueDateToDebit
+	 * DebitAuthorisation2.mmValueDateToDebit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -158,21 +159,22 @@ public class DebitAuthorisation {
 	 * definition} = "Value date for debiting the amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ValueDateToDebit = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmValueDateToDebit = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationDetails.ValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisationDetails2.ValueDateToDebit,
-					com.tools20022.repository.msg.DebitAuthorisationConfirmation.ValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.ValueDateToDebit,
-					com.tools20022.repository.msg.DebitAuthorisationDetails3.ValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisation1.ValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisation2.ValueDateToDebit);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationDetails.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisationDetails2.mmValueDateToDebit,
+					com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.mmValueDateToDebit,
+					com.tools20022.repository.msg.DebitAuthorisationDetails3.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisation1.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisation2.mmValueDateToDebit);
 			elementContext_lazy = () -> DebitAuthorisation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValueDateToDebit";
 			definition = "Value date for debiting the amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected YesNoIndicator debitAuthorisationDecision;
 	/**
 	 * Code expressing the decision taken by the account owner relative to the
 	 * request for debit authorization.
@@ -184,22 +186,22 @@ public class DebitAuthorisation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation#DebitAuthorisation
-	 * DebitAuthorisationConfirmation.DebitAuthorisation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation2#DebitAuthorisation
-	 * DebitAuthorisationConfirmation2.DebitAuthorisation}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation
 	 * DebitAuthorisation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation#mmDebitAuthorisation
+	 * DebitAuthorisationConfirmation.mmDebitAuthorisation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation2#mmDebitAuthorisation
+	 * DebitAuthorisationConfirmation2.mmDebitAuthorisation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -213,19 +215,20 @@ public class DebitAuthorisation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DebitAuthorisationDecision = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDebitAuthorisationDecision = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationConfirmation.DebitAuthorisation, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.DebitAuthorisation);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmDebitAuthorisation, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.mmDebitAuthorisation);
 			elementContext_lazy = () -> DebitAuthorisation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebitAuthorisationDecision";
 			definition = "Code expressing the decision taken by the account owner relative to the request for debit authorization.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amountToDebit;
 	/**
 	 * Specifies the amount to debit when the amount is lower than the amount of
 	 * the underlying transaction.
@@ -237,37 +240,37 @@ public class DebitAuthorisation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails#AmountToDebit
-	 * DebitAuthorisationDetails.AmountToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails2#AmountToDebit
-	 * DebitAuthorisationDetails2.AmountToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation#AmountToDebit
-	 * DebitAuthorisationConfirmation.AmountToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation2#AmountToDebit
-	 * DebitAuthorisationConfirmation2.AmountToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#AmountToDebit
-	 * DebitAuthorisationDetails3.AmountToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisation1#AmountToDebit
-	 * DebitAuthorisation1.AmountToDebit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisation2#AmountToDebit
-	 * DebitAuthorisation2.AmountToDebit}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation
 	 * DebitAuthorisation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails#mmAmountToDebit
+	 * DebitAuthorisationDetails.mmAmountToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails2#mmAmountToDebit
+	 * DebitAuthorisationDetails2.mmAmountToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation#mmAmountToDebit
+	 * DebitAuthorisationConfirmation.mmAmountToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation2#mmAmountToDebit
+	 * DebitAuthorisationConfirmation2.mmAmountToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#mmAmountToDebit
+	 * DebitAuthorisationDetails3.mmAmountToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisation1#mmAmountToDebit
+	 * DebitAuthorisation1.mmAmountToDebit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisation2#mmAmountToDebit
+	 * DebitAuthorisation2.mmAmountToDebit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -281,21 +284,22 @@ public class DebitAuthorisation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AmountToDebit = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmountToDebit = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationDetails.AmountToDebit, com.tools20022.repository.msg.DebitAuthorisationDetails2.AmountToDebit,
-					com.tools20022.repository.msg.DebitAuthorisationConfirmation.AmountToDebit, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.AmountToDebit,
-					com.tools20022.repository.msg.DebitAuthorisationDetails3.AmountToDebit, com.tools20022.repository.msg.DebitAuthorisation1.AmountToDebit, com.tools20022.repository.msg.DebitAuthorisation2.AmountToDebit);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationDetails.mmAmountToDebit, com.tools20022.repository.msg.DebitAuthorisationDetails2.mmAmountToDebit,
+					com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmAmountToDebit, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.mmAmountToDebit,
+					com.tools20022.repository.msg.DebitAuthorisationDetails3.mmAmountToDebit, com.tools20022.repository.msg.DebitAuthorisation1.mmAmountToDebit, com.tools20022.repository.msg.DebitAuthorisation2.mmAmountToDebit);
 			elementContext_lazy = () -> DebitAuthorisation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AmountToDebit";
 			definition = "Specifies the amount to debit when the amount is lower than the amount of the underlying transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max140Text reason;
 	/**
 	 * Justification of the (partial) debit authorisation.
 	 * <p>
@@ -305,22 +309,22 @@ public class DebitAuthorisation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation#Reason
-	 * DebitAuthorisationConfirmation.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation2#Reason
-	 * DebitAuthorisationConfirmation2.Reason}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation
 	 * DebitAuthorisation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation#mmReason
+	 * DebitAuthorisationConfirmation.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebitAuthorisationConfirmation2#mmReason
+	 * DebitAuthorisationConfirmation2.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -332,19 +336,20 @@ public class DebitAuthorisation {
 	 * definition} = "Justification of the (partial) debit authorisation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Reason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationConfirmation.Reason, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.Reason);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmReason, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.mmReason);
 			elementContext_lazy = () -> DebitAuthorisation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Reason";
 			definition = "Justification of the (partial) debit authorisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Payment authorisedReturn;
 	/**
 	 * Authorisation given by a credited party to return the payment which was
 	 * the reason for the credit and therefore to debit its account.
@@ -354,8 +359,8 @@ public class DebitAuthorisation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#RelatedDebitAuthorisation
-	 * Payment.RelatedDebitAuthorisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedDebitAuthorisation
+	 * Payment.mmRelatedDebitAuthorisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -380,20 +385,21 @@ public class DebitAuthorisation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AuthorisedReturn = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAuthorisedReturn = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> DebitAuthorisation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AuthorisedReturn";
 			definition = "Authorisation given by a credited party to return the payment which was the reason for the credit and therefore to debit its account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Payment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.RelatedDebitAuthorisation;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmRelatedDebitAuthorisation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
+	protected PaymentInvestigationCaseResolution relatedInvestigationCaseResolution;
 	/**
 	 * Payment investigation case resolution which is the source of the debit
 	 * authorisation.
@@ -403,8 +409,8 @@ public class DebitAuthorisation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#DebitAuthorisationConfirmation
-	 * PaymentInvestigationCaseResolution.DebitAuthorisationConfirmation}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmDebitAuthorisationConfirmation
+	 * PaymentInvestigationCaseResolution.mmDebitAuthorisationConfirmation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -431,35 +437,83 @@ public class DebitAuthorisation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> DebitAuthorisation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCaseResolution";
 			definition = "Payment investigation case resolution which is the source of the debit authorisation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.DebitAuthorisationConfirmation;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDebitAuthorisationConfirmation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisation";
 				definition = "Permission given by an account owner to debit its account as the result of a cancelled payment. The authoriser is the party whose account was credited as the result of a payment instruction.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.RelatedDebitAuthorisation, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.DebitAuthorisationConfirmation);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DebitAuthorisation.ValueDateToDebit, com.tools20022.repository.entity.DebitAuthorisation.DebitAuthorisationDecision,
-						com.tools20022.repository.entity.DebitAuthorisation.AmountToDebit, com.tools20022.repository.entity.DebitAuthorisation.Reason, com.tools20022.repository.entity.DebitAuthorisation.AuthorisedReturn,
-						com.tools20022.repository.entity.DebitAuthorisation.RelatedInvestigationCaseResolution);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmRelatedDebitAuthorisation, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDebitAuthorisationConfirmation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DebitAuthorisation.mmValueDateToDebit, com.tools20022.repository.entity.DebitAuthorisation.mmDebitAuthorisationDecision,
+						com.tools20022.repository.entity.DebitAuthorisation.mmAmountToDebit, com.tools20022.repository.entity.DebitAuthorisation.mmReason, com.tools20022.repository.entity.DebitAuthorisation.mmAuthorisedReturn,
+						com.tools20022.repository.entity.DebitAuthorisation.mmRelatedInvestigationCaseResolution);
 				derivationComponent_lazy = () -> Arrays.asList(DebitAuthorisationDetails.mmObject(), DebitAuthorisationDetails2.mmObject(), DebitAuthorisationDetails3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getValueDateToDebit() {
+		return valueDateToDebit;
+	}
+
+	public void setValueDateToDebit(ISODate valueDateToDebit) {
+		this.valueDateToDebit = valueDateToDebit;
+	}
+
+	public YesNoIndicator getDebitAuthorisationDecision() {
+		return debitAuthorisationDecision;
+	}
+
+	public void setDebitAuthorisationDecision(YesNoIndicator debitAuthorisationDecision) {
+		this.debitAuthorisationDecision = debitAuthorisationDecision;
+	}
+
+	public CurrencyAndAmount getAmountToDebit() {
+		return amountToDebit;
+	}
+
+	public void setAmountToDebit(CurrencyAndAmount amountToDebit) {
+		this.amountToDebit = amountToDebit;
+	}
+
+	public Max140Text getReason() {
+		return reason;
+	}
+
+	public void setReason(Max140Text reason) {
+		this.reason = reason;
+	}
+
+	public Payment getAuthorisedReturn() {
+		return authorisedReturn;
+	}
+
+	public void setAuthorisedReturn(com.tools20022.repository.entity.Payment authorisedReturn) {
+		this.authorisedReturn = authorisedReturn;
+	}
+
+	public PaymentInvestigationCaseResolution getRelatedInvestigationCaseResolution() {
+		return relatedInvestigationCaseResolution;
+	}
+
+	public void setRelatedInvestigationCaseResolution(com.tools20022.repository.entity.PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
+		this.relatedInvestigationCaseResolution = relatedInvestigationCaseResolution;
 	}
 }

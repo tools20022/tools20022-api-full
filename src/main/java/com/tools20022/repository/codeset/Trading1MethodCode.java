@@ -34,19 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Trading1MethodCode#Electronic
- * Trading1MethodCode.Electronic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Trading1MethodCode#Phone
- * Trading1MethodCode.Phone}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Trading1MethodCode#Broker
- * Trading1MethodCode.Broker}</li>
+ * {@linkplain com.tools20022.repository.codeset.Trading1MethodCode#mmElectronic
+ * Trading1MethodCode.mmElectronic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Trading1MethodCode#mmPhone
+ * Trading1MethodCode.mmPhone}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Trading1MethodCode#mmBroker
+ * Trading1MethodCode.mmBroker}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 * name} = "Electronic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Electronic = new MMCode() {
+	public static final MMCode mmElectronic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
@@ -106,7 +107,7 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 * name} = "Phone"</li>
 	 * </ul>
 	 */
-	public static final MMCode Phone = new MMCode() {
+	public static final MMCode mmPhone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phone";
@@ -129,7 +130,7 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 * name} = "Broker"</li>
 	 * </ul>
 	 */
-	public static final MMCode Broker = new MMCode() {
+	public static final MMCode mmBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
@@ -140,12 +141,12 @@ public class Trading1MethodCode extends TradingMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELEC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Trading1MethodCode";
 				definition = "Specifies the method used for the negotiation and execution of the trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Trading1MethodCode.Electronic, com.tools20022.repository.codeset.Trading1MethodCode.Phone, com.tools20022.repository.codeset.Trading1MethodCode.Broker);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Trading1MethodCode.mmElectronic, com.tools20022.repository.codeset.Trading1MethodCode.mmPhone, com.tools20022.repository.codeset.Trading1MethodCode.mmBroker);
 				trace_lazy = () -> TradingMethodCode.mmObject();
 			}
 		});

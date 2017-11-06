@@ -32,11 +32,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode#AssetstoBeDelivered
- * BusinessFlowDirectionTypeCode.AssetstoBeDelivered}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode#mmAssetstoBeDelivered
+ * BusinessFlowDirectionTypeCode.mmAssetstoBeDelivered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode#AssetsToBeReceived
- * BusinessFlowDirectionTypeCode.AssetsToBeReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode#mmAssetsToBeReceived
+ * BusinessFlowDirectionTypeCode.mmAssetsToBeReceived}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class BusinessFlowDirectionTypeCode {
 	 * definition} = "Assets to be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMCode AssetstoBeDelivered = new MMCode() {
+	public static final MMCode mmAssetstoBeDelivered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetstoBeDelivered";
@@ -124,7 +124,7 @@ public class BusinessFlowDirectionTypeCode {
 	 * definition} = "Assets to be received."</li>
 	 * </ul>
 	 */
-	public static final MMCode AssetsToBeReceived = new MMCode() {
+	public static final MMCode mmAssetsToBeReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetsToBeReceived";
@@ -137,12 +137,12 @@ public class BusinessFlowDirectionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADLV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BusinessFlowDirectionTypeCode";
 				definition = "Identifies the business flow, in order to determine the role of the parties in the business process. This indicator is very important when there are multiple intermediaries in the exchange of information process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.AssetstoBeDelivered, com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.AssetsToBeReceived);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.mmAssetstoBeDelivered, com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.mmAssetsToBeReceived);
 				derivation_lazy = () -> Arrays.asList(BusinessFlowDirectionType1Code.mmObject());
 			}
 		});

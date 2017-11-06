@@ -37,19 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin1#ThresholdAmount
- * VariationMargin1.ThresholdAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VariationMargin1#ThresholdType
- * VariationMargin1.ThresholdType}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmThresholdAmount
+ * VariationMargin1.mmThresholdAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin1#MinimumTransferAmount
- * VariationMargin1.MinimumTransferAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmThresholdType
+ * VariationMargin1.mmThresholdType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin1#RoundingAmount
- * VariationMargin1.RoundingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmMinimumTransferAmount
+ * VariationMargin1.mmMinimumTransferAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin1#RoundingMethod
- * VariationMargin1.RoundingMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmRoundingAmount
+ * VariationMargin1.mmRoundingAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmRoundingMethod
+ * VariationMargin1.mmRoundingMethod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VariationMargin1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount thresholdAmount;
 	/**
 	 * Amount of unsecured exposure a counterparty will accept before issuing a
 	 * margin call in the base currency.
@@ -89,8 +91,8 @@ public class VariationMargin1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#ThresholdAmount
-	 * VariationMarginTerm.ThresholdAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#mmThresholdAmount
+	 * VariationMarginTerm.mmThresholdAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +113,21 @@ public class VariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ThresholdAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmThresholdAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.mmThresholdAmount;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.ThresholdAmount;
 			isDerived = false;
 			xmlTag = "ThrshldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdAmount";
 			definition = "Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ThresholdType1Code thresholdType;
 	/**
 	 * Specifies if the threshold amount is secured or unsecured.
 	 * <p>
@@ -138,8 +141,8 @@ public class VariationMargin1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#ThresholdType
-	 * VariationMarginTerm.ThresholdType}</li>
+	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#mmThresholdType
+	 * VariationMarginTerm.mmThresholdType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +162,21 @@ public class VariationMargin1 {
 	 * "Specifies if the threshold amount is secured or unsecured."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ThresholdType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmThresholdType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.mmThresholdType;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.ThresholdType;
 			isDerived = false;
 			xmlTag = "ThrshldTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdType";
 			definition = "Specifies if the threshold amount is secured or unsecured.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ThresholdType1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount minimumTransferAmount;
 	/**
 	 * Minimum amount to pay/receive as specified in the agreement in the base
 	 * currency (to avoid the need to transfer an inconveniently small amount of
@@ -188,8 +192,8 @@ public class VariationMargin1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#MinimumTransferAmount
-	 * ExposureTerm.MinimumTransferAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumTransferAmount
+	 * ExposureTerm.mmMinimumTransferAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +214,21 @@ public class VariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumTransferAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmMinimumTransferAmount;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.MinimumTransferAmount;
 			isDerived = false;
 			xmlTag = "MinTrfAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTransferAmount";
 			definition = "Minimum amount to pay/receive as specified in the agreement in the base currency (to avoid the need to transfer an inconveniently small amount of variation margin).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount roundingAmount;
 	/**
 	 * Amount specified to avoid the need to transfer uneven amounts of
 	 * collateral.
@@ -238,8 +243,8 @@ public class VariationMargin1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#RoundingAmount
-	 * ExposureTerm.RoundingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingAmount
+	 * ExposureTerm.mmRoundingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,20 +265,21 @@ public class VariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRoundingAmount;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.RoundingAmount;
 			isDerived = false;
 			xmlTag = "RndgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingAmount";
 			definition = "Amount specified to avoid the need to transfer uneven amounts of collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected RoundingMethod1Code roundingMethod;
 	/**
 	 * Defines how the rounding amount was applied in the calculation. For
 	 * example, should the amount of collateral required be rounded up, down, to
@@ -289,8 +295,8 @@ public class VariationMargin1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#RoundingMethod
-	 * ExposureTerm.RoundingMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingMethod
+	 * ExposureTerm.mmRoundingMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,17 +317,17 @@ public class VariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundingMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRoundingMethod;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.RoundingMethod;
 			isDerived = false;
 			xmlTag = "RndgMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingMethod";
 			definition = "Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RoundingMethod1Code.mmObject();
 		}
 	};
@@ -329,15 +335,55 @@ public class VariationMargin1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.ThresholdAmount, com.tools20022.repository.msg.VariationMargin1.ThresholdType,
-						com.tools20022.repository.msg.VariationMargin1.MinimumTransferAmount, com.tools20022.repository.msg.VariationMargin1.RoundingAmount, com.tools20022.repository.msg.VariationMargin1.RoundingMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.mmThresholdAmount, com.tools20022.repository.msg.VariationMargin1.mmThresholdType,
+						com.tools20022.repository.msg.VariationMargin1.mmMinimumTransferAmount, com.tools20022.repository.msg.VariationMargin1.mmRoundingAmount, com.tools20022.repository.msg.VariationMargin1.mmRoundingMethod);
 				trace_lazy = () -> VariationMarginTerm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VariationMargin1";
 				definition = "Elements used to calculate the collateral margin call for the variation margin.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getThresholdAmount() {
+		return thresholdAmount;
+	}
+
+	public void setThresholdAmount(ActiveCurrencyAndAmount thresholdAmount) {
+		this.thresholdAmount = thresholdAmount;
+	}
+
+	public ThresholdType1Code getThresholdType() {
+		return thresholdType;
+	}
+
+	public void setThresholdType(ThresholdType1Code thresholdType) {
+		this.thresholdType = thresholdType;
+	}
+
+	public ActiveCurrencyAndAmount getMinimumTransferAmount() {
+		return minimumTransferAmount;
+	}
+
+	public void setMinimumTransferAmount(ActiveCurrencyAndAmount minimumTransferAmount) {
+		this.minimumTransferAmount = minimumTransferAmount;
+	}
+
+	public ActiveCurrencyAndAmount getRoundingAmount() {
+		return roundingAmount;
+	}
+
+	public void setRoundingAmount(ActiveCurrencyAndAmount roundingAmount) {
+		this.roundingAmount = roundingAmount;
+	}
+
+	public RoundingMethod1Code getRoundingMethod() {
+		return roundingMethod;
+	}
+
+	public void setRoundingMethod(RoundingMethod1Code roundingMethod) {
+		this.roundingMethod = roundingMethod;
 	}
 }

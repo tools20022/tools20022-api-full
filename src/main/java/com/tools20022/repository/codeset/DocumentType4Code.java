@@ -35,15 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType4Code#CommercialInvoice
- * DocumentType4Code.CommercialInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType4Code#mmCommercialInvoice
+ * DocumentType4Code.mmCommercialInvoice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class DocumentType4Code extends DocumentTypeCode {
 	 * name} = "CommercialInvoice"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialInvoice = new MMCode() {
+	public static final MMCode mmCommercialInvoice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialInvoice";
@@ -92,12 +92,12 @@ public class DocumentType4Code extends DocumentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CINV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentType4Code";
 				definition = "Specifies the type of the document for example commercial invoice, credit note, debit note.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DocumentType4Code.CommercialInvoice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DocumentType4Code.mmCommercialInvoice);
 				trace_lazy = () -> DocumentTypeCode.mmObject();
 			}
 		});

@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ReportingRecordStatus1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the per record status details.
@@ -35,23 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportRecord3#OriginalRecordIdentification
- * StatusReportRecord3.OriginalRecordIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusReportRecord3#Status
- * StatusReportRecord3.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportRecord3#mmOriginalRecordIdentification
+ * StatusReportRecord3.mmOriginalRecordIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReportRecord3#mmStatus
+ * StatusReportRecord3.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportRecord3#ValidationRule
- * StatusReportRecord3.ValidationRule}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportRecord3#mmValidationRule
+ * StatusReportRecord3.mmValidationRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReportRecord3#SupplementaryData
- * StatusReportRecord3.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportRecord3#mmSupplementaryData
+ * StatusReportRecord3.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReportRecord3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text originalRecordIdentification;
 	/**
 	 * Unique and unambiguous technical identification of the original data for
 	 * which the status is provided.
@@ -95,7 +97,7 @@ public class StatusReportRecord3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalRecordIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusReportRecord3.mmObject();
 			isDerived = false;
@@ -103,11 +105,12 @@ public class StatusReportRecord3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRecordIdentification";
 			definition = "Unique and unambiguous technical identification of the original data for which the status is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ReportingRecordStatus1Code status;
 	/**
 	 * Defines status of the reported transaction.
 	 * <p>
@@ -136,7 +139,7 @@ public class StatusReportRecord3 {
 	 * definition} = "Defines status of the reported transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusReportRecord3.mmObject();
 			isDerived = false;
@@ -144,11 +147,12 @@ public class StatusReportRecord3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines status of the reported transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * Provides the details of the rule which could not be validated.
 	 * <p>
@@ -177,7 +181,7 @@ public class StatusReportRecord3 {
 	 * "Provides the details of the rule which could not be validated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReportRecord3.mmObject();
 			isDerived = false;
@@ -186,10 +190,11 @@ public class StatusReportRecord3 {
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
 			minOccurs = 0;
-			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -219,7 +224,7 @@ public class StatusReportRecord3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReportRecord3.mmObject();
 			isDerived = false;
@@ -228,22 +233,54 @@ public class StatusReportRecord3 {
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportRecord3.OriginalRecordIdentification, com.tools20022.repository.msg.StatusReportRecord3.Status,
-						com.tools20022.repository.msg.StatusReportRecord3.ValidationRule, com.tools20022.repository.msg.StatusReportRecord3.SupplementaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportRecord3.mmOriginalRecordIdentification, com.tools20022.repository.msg.StatusReportRecord3.mmStatus,
+						com.tools20022.repository.msg.StatusReportRecord3.mmValidationRule, com.tools20022.repository.msg.StatusReportRecord3.mmSupplementaryData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusReportRecord3";
 				definition = "Provides the per record status details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getOriginalRecordIdentification() {
+		return originalRecordIdentification;
+	}
+
+	public void setOriginalRecordIdentification(Max140Text originalRecordIdentification) {
+		this.originalRecordIdentification = originalRecordIdentification;
+	}
+
+	public ReportingRecordStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(ReportingRecordStatus1Code status) {
+		this.status = status;
+	}
+
+	public List<GenericValidationRuleIdentification1> getValidationRule() {
+		return validationRule;
+	}
+
+	public void setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+		this.validationRule = validationRule;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

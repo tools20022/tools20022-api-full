@@ -41,19 +41,21 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Statement19#CounterpartyPortfolioTransferNotificationReference
- * Statement19.CounterpartyPortfolioTransferNotificationReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement19#ReportNumber
- * Statement19.ReportNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.Statement19#mmCounterpartyPortfolioTransferNotificationReference
+ * Statement19.mmCounterpartyPortfolioTransferNotificationReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement19#mmReportNumber
+ * Statement19.mmReportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Statement19#StatementIdentification
- * Statement19.StatementIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement19#StatementDateTime
- * Statement19.StatementDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement19#UpdateType
- * Statement19.UpdateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement19#ActivityIndicator
- * Statement19.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Statement19#mmStatementIdentification
+ * Statement19.mmStatementIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Statement19#mmStatementDateTime
+ * Statement19.mmStatementDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement19#mmUpdateType
+ * Statement19.mmUpdateType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Statement19#mmActivityIndicator
+ * Statement19.mmActivityIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -61,21 +63,21 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#StatementGeneralDetails
- * PortfolioTransferNotificationV01.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#mmStatementGeneralDetails
+ * PortfolioTransferNotificationV01.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV02#StatementGeneralDetails
- * PortfolioTransferNotificationV02.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV02#mmStatementGeneralDetails
+ * PortfolioTransferNotificationV02.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#StatementGeneralDetails
- * PortfolioTransferNotificationV03.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#mmStatementGeneralDetails
+ * PortfolioTransferNotificationV03.mmStatementGeneralDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -96,6 +98,7 @@ import java.util.function.Supplier;
 public class Statement19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text counterpartyPortfolioTransferNotificationReference;
 	/**
 	 * Identification assigned by the portfolio transfer counterpart to
 	 * unambiguously identify a portfolio transfer notification.
@@ -127,13 +130,13 @@ public class Statement19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Statement46#CounterpartyPortfolioTransferNotificationReference
-	 * Statement46.CounterpartyPortfolioTransferNotificationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.Statement46#mmCounterpartyPortfolioTransferNotificationReference
+	 * Statement46.mmCounterpartyPortfolioTransferNotificationReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyPortfolioTransferNotificationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyPortfolioTransferNotificationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement19.mmObject();
 			isDerived = false;
@@ -141,12 +144,13 @@ public class Statement19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyPortfolioTransferNotificationReference";
 			definition = "Identification assigned by the portfolio transfer counterpart to unambiguously identify a portfolio transfer notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.CounterpartyPortfolioTransferNotificationReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.mmCounterpartyPortfolioTransferNotificationReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number3Choice reportNumber;
 	/**
 	 * Sequential number of the report.
 	 * <p>
@@ -175,13 +179,13 @@ public class Statement19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Statement46#ReportNumber
-	 * Statement46.ReportNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement46#mmReportNumber
+	 * Statement46.mmReportNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement19.mmObject();
 			isDerived = false;
@@ -189,12 +193,13 @@ public class Statement19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.ReportNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.mmReportNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Number3Choice.mmObject();
 		}
 	};
+	protected Max35Text statementIdentification;
 	/**
 	 * Reference common to all pages of a statement.
 	 * <p>
@@ -223,13 +228,13 @@ public class Statement19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Statement46#StatementIdentification
-	 * Statement46.StatementIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Statement46#mmStatementIdentification
+	 * Statement46.mmStatementIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement19.mmObject();
 			isDerived = false;
@@ -237,12 +242,13 @@ public class Statement19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Reference common to all pages of a statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.StatementIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.mmStatementIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice statementDateTime;
 	/**
 	 * Date and time of the statement.
 	 * <p>
@@ -272,13 +278,13 @@ public class Statement19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Statement46#StatementDateTime
-	 * Statement46.StatementDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.Statement46#mmStatementDateTime
+	 * Statement46.mmStatementDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement19.mmObject();
 			isDerived = false;
@@ -286,12 +292,13 @@ public class Statement19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date and time of the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.StatementDateTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.mmStatementDateTime);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected UpdateType2Choice updateType;
 	/**
 	 * Indicates whether the statement is complete or contains changes only.
 	 * <p>
@@ -319,13 +326,13 @@ public class Statement19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Statement46#UpdateType
-	 * Statement46.UpdateType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement46#mmUpdateType
+	 * Statement46.mmUpdateType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Statement19.mmObject();
 			isDerived = false;
@@ -333,13 +340,14 @@ public class Statement19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.UpdateType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.mmUpdateType);
 			maxOccurs = 1;
-			type_lazy = () -> UpdateType2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> UpdateType2Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -372,13 +380,13 @@ public class Statement19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Statement46#ActivityIndicator
-	 * Statement46.ActivityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.Statement46#mmActivityIndicator
+	 * Statement46.mmActivityIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement19.mmObject();
 			isDerived = false;
@@ -386,9 +394,9 @@ public class Statement19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.ActivityIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.mmActivityIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -396,12 +404,12 @@ public class Statement19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement19.CounterpartyPortfolioTransferNotificationReference, com.tools20022.repository.msg.Statement19.ReportNumber,
-						com.tools20022.repository.msg.Statement19.StatementIdentification, com.tools20022.repository.msg.Statement19.StatementDateTime, com.tools20022.repository.msg.Statement19.UpdateType,
-						com.tools20022.repository.msg.Statement19.ActivityIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.StatementGeneralDetails,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV02.StatementGeneralDetails, com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.StatementGeneralDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement19.mmCounterpartyPortfolioTransferNotificationReference, com.tools20022.repository.msg.Statement19.mmReportNumber,
+						com.tools20022.repository.msg.Statement19.mmStatementIdentification, com.tools20022.repository.msg.Statement19.mmStatementDateTime, com.tools20022.repository.msg.Statement19.mmUpdateType,
+						com.tools20022.repository.msg.Statement19.mmActivityIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmStatementGeneralDetails,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV02.mmStatementGeneralDetails, com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmStatementGeneralDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -416,5 +424,53 @@ public class Statement19 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCounterpartyPortfolioTransferNotificationReference() {
+		return counterpartyPortfolioTransferNotificationReference;
+	}
+
+	public void setCounterpartyPortfolioTransferNotificationReference(Max35Text counterpartyPortfolioTransferNotificationReference) {
+		this.counterpartyPortfolioTransferNotificationReference = counterpartyPortfolioTransferNotificationReference;
+	}
+
+	public Number3Choice getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(Number3Choice reportNumber) {
+		this.reportNumber = reportNumber;
+	}
+
+	public Max35Text getStatementIdentification() {
+		return statementIdentification;
+	}
+
+	public void setStatementIdentification(Max35Text statementIdentification) {
+		this.statementIdentification = statementIdentification;
+	}
+
+	public DateAndDateTimeChoice getStatementDateTime() {
+		return statementDateTime;
+	}
+
+	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = statementDateTime;
+	}
+
+	public UpdateType2Choice getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(UpdateType2Choice updateType) {
+		this.updateType = updateType;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
 	}
 }

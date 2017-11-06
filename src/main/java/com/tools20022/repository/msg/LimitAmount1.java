@@ -32,12 +32,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LimitAmount1#Amount
- * LimitAmount1.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitAmount1#UtilisationAmount
- * LimitAmount1.UtilisationAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitAmount1#AvailableAmount
- * LimitAmount1.AvailableAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitAmount1#mmAmount
+ * LimitAmount1.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.LimitAmount1#mmUtilisationAmount
+ * LimitAmount1.mmUtilisationAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitAmount1#mmAvailableAmount
+ * LimitAmount1.mmAvailableAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditDebitAmount1 amount;
 	/**
 	 * Amount of money of the limit, expressed in an eligible currency.
 	 * <p>
@@ -73,7 +75,8 @@ public class LimitAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Amount Limit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAmount
+	 * Limit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,20 +95,21 @@ public class LimitAmount1 {
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
 			componentContext_lazy = () -> LimitAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> CreditDebitAmount1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.CreditDebitAmount1.mmObject();
 		}
 	};
+	protected CreditDebitAmount1 utilisationAmount;
 	/**
 	 * Utilised amount of money of the limit expressed in an eligible currency.
 	 * <p>
@@ -119,8 +123,8 @@ public class LimitAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#UsedAmount
-	 * Limit.UsedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmUsedAmount
+	 * Limit.mmUsedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,20 +144,21 @@ public class LimitAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UtilisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUtilisationAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmUsedAmount;
 			componentContext_lazy = () -> LimitAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.UsedAmount;
 			isDerived = false;
 			xmlTag = "UtlstnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UtilisationAmount";
 			definition = "Utilised amount of money of the limit expressed in an eligible currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> CreditDebitAmount1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.CreditDebitAmount1.mmObject();
 		}
 	};
+	protected CreditDebitAmount1 availableAmount;
 	/**
 	 * Remaining amount of money of the limit expressed in an eligible currency.
 	 * <p>
@@ -167,8 +172,8 @@ public class LimitAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#AvailableAmount
-	 * Limit.AvailableAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAvailableAmount
+	 * Limit.mmAvailableAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,32 +193,56 @@ public class LimitAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AvailableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAvailableAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAvailableAmount;
 			componentContext_lazy = () -> LimitAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.AvailableAmount;
 			isDerived = false;
 			xmlTag = "AvlblAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableAmount";
 			definition = "Remaining amount of money of the limit expressed in an eligible currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> CreditDebitAmount1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.CreditDebitAmount1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitAmount1.Amount, com.tools20022.repository.msg.LimitAmount1.UtilisationAmount, com.tools20022.repository.msg.LimitAmount1.AvailableAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitAmount1.mmAmount, com.tools20022.repository.msg.LimitAmount1.mmUtilisationAmount, com.tools20022.repository.msg.LimitAmount1.mmAvailableAmount);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitAmount1";
 				definition = "Amount of money characterics used to specify a limit.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditDebitAmount1 getAmount() {
+		return amount;
+	}
+
+	public void setAmount(com.tools20022.repository.msg.CreditDebitAmount1 amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitAmount1 getUtilisationAmount() {
+		return utilisationAmount;
+	}
+
+	public void setUtilisationAmount(com.tools20022.repository.msg.CreditDebitAmount1 utilisationAmount) {
+		this.utilisationAmount = utilisationAmount;
+	}
+
+	public CreditDebitAmount1 getAvailableAmount() {
+		return availableAmount;
+	}
+
+	public void setAvailableAmount(com.tools20022.repository.msg.CreditDebitAmount1 availableAmount) {
+		this.availableAmount = availableAmount;
 	}
 }

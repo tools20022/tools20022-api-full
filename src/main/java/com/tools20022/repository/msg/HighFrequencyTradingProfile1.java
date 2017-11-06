@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HighFrequencyTradingProfile1#Date
- * HighFrequencyTradingProfile1.Date}</li>
+ * {@linkplain com.tools20022.repository.msg.HighFrequencyTradingProfile1#mmDate
+ * HighFrequencyTradingProfile1.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HighFrequencyTradingProfile1#SettlementFrequency
- * HighFrequencyTradingProfile1.SettlementFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.HighFrequencyTradingProfile1#mmSettlementFrequency
+ * HighFrequencyTradingProfile1.mmSettlementFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HighFrequencyTradingProfile1#ConsolidationType
- * HighFrequencyTradingProfile1.ConsolidationType}</li>
+ * {@linkplain com.tools20022.repository.msg.HighFrequencyTradingProfile1#mmConsolidationType
+ * HighFrequencyTradingProfile1.mmConsolidationType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HighFrequencyTradingProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Date on which the investor starts high frequency trading.
 	 * <p>
@@ -92,7 +93,7 @@ public class HighFrequencyTradingProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class HighFrequencyTradingProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date on which the investor starts high frequency trading.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected SettlementFrequency1Choice settlementFrequency;
 	/**
 	 * Frequency of settlement.
 	 * <p>
@@ -132,7 +134,7 @@ public class HighFrequencyTradingProfile1 {
 	 * definition} = "Frequency of settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementFrequency = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
@@ -140,12 +142,13 @@ public class HighFrequencyTradingProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementFrequency";
 			definition = "Frequency of settlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementFrequency1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SettlementFrequency1Choice.mmObject();
 		}
 	};
+	protected ConsolidationType1Choice consolidationType;
 	/**
 	 * Specifies whether consolidation is done generally or at the level of
 	 * segregated account.
@@ -176,7 +179,7 @@ public class HighFrequencyTradingProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ConsolidationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConsolidationType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
@@ -184,24 +187,48 @@ public class HighFrequencyTradingProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidationType";
 			definition = "Specifies whether consolidation is done generally or at the level of segregated account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ConsolidationType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ConsolidationType1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HighFrequencyTradingProfile1.Date, com.tools20022.repository.msg.HighFrequencyTradingProfile1.SettlementFrequency,
-						com.tools20022.repository.msg.HighFrequencyTradingProfile1.ConsolidationType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmDate, com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmSettlementFrequency,
+						com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmConsolidationType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HighFrequencyTradingProfile1";
 				definition = "Information about a high frequency trading profile.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public SettlementFrequency1Choice getSettlementFrequency() {
+		return settlementFrequency;
+	}
+
+	public void setSettlementFrequency(SettlementFrequency1Choice settlementFrequency) {
+		this.settlementFrequency = settlementFrequency;
+	}
+
+	public ConsolidationType1Choice getConsolidationType() {
+		return consolidationType;
+	}
+
+	public void setConsolidationType(ConsolidationType1Choice consolidationType) {
+		this.consolidationType = consolidationType;
 	}
 }

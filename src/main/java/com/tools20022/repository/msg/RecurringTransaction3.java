@@ -36,19 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#StartDate
- * RecurringTransaction3.StartDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmStartDate
+ * RecurringTransaction3.mmStartDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#NumberOfOccurrences
- * RecurringTransaction3.NumberOfOccurrences}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RecurringTransaction3#EndDate
- * RecurringTransaction3.EndDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmNumberOfOccurrences
+ * RecurringTransaction3.mmNumberOfOccurrences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#PeriodUnit
- * RecurringTransaction3.PeriodUnit}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmEndDate
+ * RecurringTransaction3.mmEndDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#IntervalDay
- * RecurringTransaction3.IntervalDay}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmPeriodUnit
+ * RecurringTransaction3.mmPeriodUnit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmIntervalDay
+ * RecurringTransaction3.mmIntervalDay}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RecurringTransaction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate startDate;
 	/**
 	 * Date of first transfer.
 	 * <p>
@@ -83,8 +85,8 @@ public class RecurringTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#FirstPaymentDate
-	 * Instalment.FirstPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmFirstPaymentDate
+	 * Instalment.mmFirstPaymentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class RecurringTransaction3 {
 	 * definition} = "Date of first transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmFirstPaymentDate;
 			componentContext_lazy = () -> RecurringTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.FirstPaymentDate;
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Date of first transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Number numberOfOccurrences;
 	/**
 	 * Number of transfers to perform.
 	 * <p>
@@ -129,8 +132,8 @@ public class RecurringTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#TotalNumberOfInstalment
-	 * Instalment.TotalNumberOfInstalment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmTotalNumberOfInstalment
+	 * Instalment.mmTotalNumberOfInstalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,20 +152,21 @@ public class RecurringTransaction3 {
 	 * definition} = "Number of transfers to perform."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfOccurrences = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfOccurrences = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmTotalNumberOfInstalment;
 			componentContext_lazy = () -> RecurringTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.TotalNumberOfInstalment;
 			isDerived = false;
 			xmlTag = "NbOfOcrncs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfOccurrences";
 			definition = "Number of transfers to perform.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ISODate endDate;
 	/**
 	 * Date of last transfer.
 	 * <p>
@@ -190,7 +194,7 @@ public class RecurringTransaction3 {
 	 * definition} = "Date of last transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecurringTransaction3.mmObject();
 			isDerived = false;
@@ -198,11 +202,12 @@ public class RecurringTransaction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "Date of last transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Frequency3Code periodUnit;
 	/**
 	 * Period of the recurring transfer.
 	 * <p>
@@ -216,8 +221,8 @@ public class RecurringTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#PeriodUnit
-	 * Instalment.PeriodUnit}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmPeriodUnit
+	 * Instalment.mmPeriodUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,20 +241,21 @@ public class RecurringTransaction3 {
 	 * definition} = "Period of the recurring transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PeriodUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPeriodUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmPeriodUnit;
 			componentContext_lazy = () -> RecurringTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.PeriodUnit;
 			isDerived = false;
 			xmlTag = "PrdUnit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodUnit";
 			definition = "Period of the recurring transfer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Frequency3Code.mmObject();
 		}
 	};
+	protected Number intervalDay;
 	/**
 	 * Day of the period when the transfer will be performed.
 	 * <p>
@@ -262,8 +268,8 @@ public class RecurringTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#NumberOfUnits
-	 * Instalment.NumberOfUnits}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmNumberOfUnits
+	 * Instalment.mmNumberOfUnits}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -282,17 +288,17 @@ public class RecurringTransaction3 {
 	 * definition} = "Day of the period when the transfer will be performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntervalDay = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntervalDay = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmNumberOfUnits;
 			componentContext_lazy = () -> RecurringTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.NumberOfUnits;
 			isDerived = false;
 			xmlTag = "IntrvlDay";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntervalDay";
 			definition = "Day of the period when the transfer will be performed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -300,15 +306,55 @@ public class RecurringTransaction3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction3.StartDate, com.tools20022.repository.msg.RecurringTransaction3.NumberOfOccurrences,
-						com.tools20022.repository.msg.RecurringTransaction3.EndDate, com.tools20022.repository.msg.RecurringTransaction3.PeriodUnit, com.tools20022.repository.msg.RecurringTransaction3.IntervalDay);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction3.mmStartDate, com.tools20022.repository.msg.RecurringTransaction3.mmNumberOfOccurrences,
+						com.tools20022.repository.msg.RecurringTransaction3.mmEndDate, com.tools20022.repository.msg.RecurringTransaction3.mmPeriodUnit, com.tools20022.repository.msg.RecurringTransaction3.mmIntervalDay);
 				trace_lazy = () -> Instalment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RecurringTransaction3";
 				definition = "Financial loan (instalment) or a recurring transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public Number getNumberOfOccurrences() {
+		return numberOfOccurrences;
+	}
+
+	public void setNumberOfOccurrences(Number numberOfOccurrences) {
+		this.numberOfOccurrences = numberOfOccurrences;
+	}
+
+	public ISODate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(ISODate endDate) {
+		this.endDate = endDate;
+	}
+
+	public Frequency3Code getPeriodUnit() {
+		return periodUnit;
+	}
+
+	public void setPeriodUnit(Frequency3Code periodUnit) {
+		this.periodUnit = periodUnit;
+	}
+
+	public Number getIntervalDay() {
+		return intervalDay;
+	}
+
+	public void setIntervalDay(Number intervalDay) {
+		this.intervalDay = intervalDay;
 	}
 }

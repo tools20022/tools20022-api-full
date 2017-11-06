@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.InvoiceFinancingStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the business status of a cancellation request message.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusInformation1#Status
- * CancellationStatusInformation1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusInformation1#mmStatus
+ * CancellationStatusInformation1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusInformation1#StatusReason
- * CancellationStatusInformation1.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusInformation1#mmStatusReason
+ * CancellationStatusInformation1.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusInformation1#AdditionalStatusReasonInformation
- * CancellationStatusInformation1.AdditionalStatusReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusInformation1#mmAdditionalStatusReasonInformation
+ * CancellationStatusInformation1.mmAdditionalStatusReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationStatusInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancellationStatus4Code status;
 	/**
 	 * Information on the business status of the cancellation.
 	 * <p>
@@ -81,8 +83,8 @@ public class CancellationStatusInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#CancellationStatus
-	 * InvoiceFinancingStatus.CancellationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#mmCancellationStatus
+	 * InvoiceFinancingStatus.mmCancellationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +103,21 @@ public class CancellationStatusInformation1 {
 	 * definition} = "Information on the business status of the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmCancellationStatus;
 			componentContext_lazy = () -> CancellationStatusInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.CancellationStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Information on the business status of the cancellation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancellationStatus4Code.mmObject();
 		}
 	};
+	protected StatusReason4Choice statusReason;
 	/**
 	 * The reason for the cancellation status.
 	 * <p>
@@ -128,8 +131,8 @@ public class CancellationStatusInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#CancellationStatusReason
-	 * InvoiceFinancingStatus.CancellationStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#mmCancellationStatusReason
+	 * InvoiceFinancingStatus.mmCancellationStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +151,21 @@ public class CancellationStatusInformation1 {
 	 * definition} = "The reason for the cancellation status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmCancellationStatusReason;
 			componentContext_lazy = () -> CancellationStatusInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.CancellationStatusReason;
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "The reason for the cancellation status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatusReason4Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalStatusReasonInformation;
 	/**
 	 * Further details on the cancellation status reason.
 	 * <p>
@@ -174,8 +178,8 @@ public class CancellationStatusInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDescription
-	 * Status.StatusDescription}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDescription
+	 * Status.mmStatusDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,10 +198,10 @@ public class CancellationStatusInformation1 {
 	 * definition} = "Further details on the cancellation status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalStatusReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDescription;
 			componentContext_lazy = () -> CancellationStatusInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDescription;
 			isDerived = false;
 			xmlTag = "AddtlStsRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,15 +215,39 @@ public class CancellationStatusInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusInformation1.Status, com.tools20022.repository.msg.CancellationStatusInformation1.StatusReason,
-						com.tools20022.repository.msg.CancellationStatusInformation1.AdditionalStatusReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusInformation1.mmStatus, com.tools20022.repository.msg.CancellationStatusInformation1.mmStatusReason,
+						com.tools20022.repository.msg.CancellationStatusInformation1.mmAdditionalStatusReasonInformation);
 				trace_lazy = () -> InvoiceFinancingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatusInformation1";
 				definition = "Information about the business status of a cancellation request message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancellationStatus4Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(CancellationStatus4Code status) {
+		this.status = status;
+	}
+
+	public StatusReason4Choice getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(StatusReason4Choice statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public List<Max105Text> getAdditionalStatusReasonInformation() {
+		return additionalStatusReasonInformation;
+	}
+
+	public void setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
+		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
 	}
 }

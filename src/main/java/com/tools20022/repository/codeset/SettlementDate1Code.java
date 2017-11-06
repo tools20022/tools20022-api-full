@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate1Code#AsSoonAsPossible
- * SettlementDate1Code.AsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate1Code#mmAsSoonAsPossible
+ * SettlementDate1Code.mmAsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate1Code#AtEndOfContract
- * SettlementDate1Code.AtEndOfContract}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate1Code#mmAtEndOfContract
+ * SettlementDate1Code.mmAtEndOfContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate1Code#WhenAndIfIssued
- * SettlementDate1Code.WhenAndIfIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate1Code#mmWhenAndIfIssued
+ * SettlementDate1Code.mmWhenAndIfIssued}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class SettlementDate1Code extends SettlementDateCode {
 	 * name} = "AsSoonAsPossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode AsSoonAsPossible = new MMCode() {
+	public static final MMCode mmAsSoonAsPossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsSoonAsPossible";
@@ -107,7 +107,7 @@ public class SettlementDate1Code extends SettlementDateCode {
 	 * name} = "AtEndOfContract"</li>
 	 * </ul>
 	 */
-	public static final MMCode AtEndOfContract = new MMCode() {
+	public static final MMCode mmAtEndOfContract = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtEndOfContract";
@@ -130,7 +130,7 @@ public class SettlementDate1Code extends SettlementDateCode {
 	 * name} = "WhenAndIfIssued"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhenAndIfIssued = new MMCode() {
+	public static final MMCode mmWhenAndIfIssued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenAndIfIssued";
@@ -141,13 +141,13 @@ public class SettlementDate1Code extends SettlementDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ASAP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate1Code";
 				definition = "Indicates the date of settlement in coded form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate1Code.AsSoonAsPossible, com.tools20022.repository.codeset.SettlementDate1Code.AtEndOfContract,
-						com.tools20022.repository.codeset.SettlementDate1Code.WhenAndIfIssued);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate1Code.mmAsSoonAsPossible, com.tools20022.repository.codeset.SettlementDate1Code.mmAtEndOfContract,
+						com.tools20022.repository.codeset.SettlementDate1Code.mmWhenAndIfIssued);
 				trace_lazy = () -> SettlementDateCode.mmObject();
 			}
 		});

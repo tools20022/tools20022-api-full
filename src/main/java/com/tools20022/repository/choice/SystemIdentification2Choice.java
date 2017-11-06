@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SystemIdentification2Choice#MarketInfrastructureIdentification
- * SystemIdentification2Choice.MarketInfrastructureIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SystemIdentification2Choice#mmMarketInfrastructureIdentification
+ * SystemIdentification2Choice.mmMarketInfrastructureIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SystemIdentification2Choice#Country
- * SystemIdentification2Choice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.SystemIdentification2Choice#mmCountry
+ * SystemIdentification2Choice.mmCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarketInfrastructureIdentification1Choice marketInfrastructureIdentification;
 	/**
 	 * Clearing service selected for a transaction.
 	 * <p>
@@ -95,21 +96,22 @@ public class SystemIdentification2Choice {
 	 * definition} = "Clearing service selected for a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketInfrastructureIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketInfrastructureIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemIdentification2Choice.mmObject();
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
+			componentContext_lazy = () -> SystemIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureIdentification";
 			definition = "Clearing service selected for a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarketInfrastructureIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country in which the system is located.
 	 * <p>
@@ -122,7 +124,8 @@ public class SystemIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +144,17 @@ public class SystemIdentification2Choice {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> SystemIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which the system is located.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -159,14 +162,30 @@ public class SystemIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemIdentification2Choice.MarketInfrastructureIdentification, com.tools20022.repository.choice.SystemIdentification2Choice.Country);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemIdentification2Choice.mmMarketInfrastructureIdentification, com.tools20022.repository.choice.SystemIdentification2Choice.mmCountry);
 				trace_lazy = () -> CashClearingSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemIdentification2Choice";
 				definition = "Information used to identify a cash clearing system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarketInfrastructureIdentification1Choice getMarketInfrastructureIdentification() {
+		return marketInfrastructureIdentification;
+	}
+
+	public void setMarketInfrastructureIdentification(com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice marketInfrastructureIdentification) {
+		this.marketInfrastructureIdentification = marketInfrastructureIdentification;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
 	}
 }

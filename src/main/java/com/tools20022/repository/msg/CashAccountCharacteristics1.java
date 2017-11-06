@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CompensationMethod1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,44 +41,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#AccountLevel
- * CashAccountCharacteristics1.AccountLevel}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmAccountLevel
+ * CashAccountCharacteristics1.mmAccountLevel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#CashAccount
- * CashAccountCharacteristics1.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmCashAccount
+ * CashAccountCharacteristics1.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#AccountServicer
- * CashAccountCharacteristics1.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmAccountServicer
+ * CashAccountCharacteristics1.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#ParentAccount
- * CashAccountCharacteristics1.ParentAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmParentAccount
+ * CashAccountCharacteristics1.mmParentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#CompensationMethod
- * CashAccountCharacteristics1.CompensationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmCompensationMethod
+ * CashAccountCharacteristics1.mmCompensationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#DebitAccount
- * CashAccountCharacteristics1.DebitAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmDebitAccount
+ * CashAccountCharacteristics1.mmDebitAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#DelayedDebitDate
- * CashAccountCharacteristics1.DelayedDebitDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmDelayedDebitDate
+ * CashAccountCharacteristics1.mmDelayedDebitDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#SettlementAdvice
- * CashAccountCharacteristics1.SettlementAdvice}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmSettlementAdvice
+ * CashAccountCharacteristics1.mmSettlementAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#AccountBalanceCurrencyCode
- * CashAccountCharacteristics1.AccountBalanceCurrencyCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmAccountBalanceCurrencyCode
+ * CashAccountCharacteristics1.mmAccountBalanceCurrencyCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#SettlementCurrencyCode
- * CashAccountCharacteristics1.SettlementCurrencyCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmSettlementCurrencyCode
+ * CashAccountCharacteristics1.mmSettlementCurrencyCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#HostCurrencyCode
- * CashAccountCharacteristics1.HostCurrencyCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmHostCurrencyCode
+ * CashAccountCharacteristics1.mmHostCurrencyCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#Tax
- * CashAccountCharacteristics1.Tax}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmTax
+ * CashAccountCharacteristics1.mmTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#AccountServicerContact
- * CashAccountCharacteristics1.AccountServicerContact}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmAccountServicerContact
+ * CashAccountCharacteristics1.mmAccountServicerContact}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -86,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountLevel2Code accountLevel;
 	/**
 	 * Defines the account level within an account hierarchy.
 	 * <p>
@@ -121,8 +123,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#Level
-	 * CashAccount.Level}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmLevel
+	 * CashAccount.mmLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,27 +145,28 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#AccountLevel
-	 * CashAccountCharacteristics2.AccountLevel}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmAccountLevel
+	 * CashAccountCharacteristics2.mmAccountLevel}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountLevel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmLevel;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.Level;
 			isDerived = false;
 			xmlTag = "AcctLvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountLevel";
 			definition = "Defines the account level within an account hierarchy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.AccountLevel);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmAccountLevel);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountLevel2Code.mmObject();
 		}
 	};
+	protected CashAccount16 cashAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -196,28 +199,29 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#CashAccount
-	 * CashAccountCharacteristics2.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmCashAccount
+	 * CashAccountCharacteristics2.mmCashAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.CashAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmCashAccount);
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountServicer;
 	/**
 	 * Usage: the account servicer is the domicile agent servicing the local
 	 * account.
@@ -256,27 +260,28 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#AccountServicer
-	 * CashAccountCharacteristics2.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmAccountServicer
+	 * CashAccountCharacteristics2.mmAccountServicer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
+			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Usage: the account servicer is the domicile agent servicing the local account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.AccountServicer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmAccountServicer);
 			maxOccurs = 1;
-			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected ParentCashAccount1 parentAccount;
 	/**
 	 * Defines a parent account to which the cash account is related to.
 	 * <p>
@@ -288,8 +293,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#ParentAccount
-	 * Account.ParentAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmParentAccount
+	 * Account.mmParentAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,28 +316,29 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#ParentAccount
-	 * CashAccountCharacteristics2.ParentAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmParentAccount
+	 * CashAccountCharacteristics2.mmParentAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParentAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmParentAccount;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.ParentAccount;
 			isDerived = false;
 			xmlTag = "PrntAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParentAccount";
 			definition = "Defines a parent account to which the cash account is related to.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.ParentAccount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmParentAccount);
 			maxOccurs = 1;
-			type_lazy = () -> ParentCashAccount1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ParentCashAccount1.mmObject();
 		}
 	};
+	protected CompensationMethod1Code compensationMethod;
 	/**
 	 * Defines if and how charges and taxes due are paid to the financial
 	 * institution.
@@ -347,8 +353,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountService#CompensationMethod
-	 * CashAccountService.CompensationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccountService#mmCompensationMethod
+	 * CashAccountService.mmCompensationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -371,27 +377,28 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#CompensationMethod
-	 * CashAccountCharacteristics2.CompensationMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmCompensationMethod
+	 * CashAccountCharacteristics2.mmCompensationMethod}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CompensationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCompensationMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmCompensationMethod;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.CompensationMethod;
 			isDerived = false;
 			xmlTag = "CompstnMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompensationMethod";
 			definition = "Defines if and how charges and taxes due are paid to the financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.CompensationMethod);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmCompensationMethod);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CompensationMethod1Code.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice debitAccount;
 	/**
 	 * Defines the account debited for charges and taxes due on the cash
 	 * account, if different from the cash account.
@@ -405,8 +412,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -429,28 +436,29 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#DebitAccount
-	 * CashAccountCharacteristics2.DebitAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmDebitAccount
+	 * CashAccountCharacteristics2.mmDebitAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebitAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebitAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "DbtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitAccount";
 			definition = "Defines the account debited for charges and taxes due on the cash account, if different from the cash account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.DebitAccount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmDebitAccount);
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected ISODate delayedDebitDate;
 	/**
 	 * Future date on which the account will be automatically debited for
 	 * charges and taxes due.
@@ -464,8 +472,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#ValueDate
-	 * Entry.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmValueDate
+	 * Entry.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -488,27 +496,28 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#DelayedDebitDate
-	 * CashAccountCharacteristics2.DelayedDebitDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmDelayedDebitDate
+	 * CashAccountCharacteristics2.mmDelayedDebitDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DelayedDebitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelayedDebitDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmValueDate;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.ValueDate;
 			isDerived = false;
 			xmlTag = "DelydDbtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelayedDebitDate";
 			definition = "Future date on which the account will be automatically debited for charges and taxes due.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.DelayedDebitDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmDelayedDebitDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max105Text settlementAdvice;
 	/**
 	 * Free form message advising the customer about the settlement of charges
 	 * and taxes due.
@@ -541,13 +550,13 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#SettlementAdvice
-	 * CashAccountCharacteristics2.SettlementAdvice}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmSettlementAdvice
+	 * CashAccountCharacteristics2.mmSettlementAdvice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementAdvice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementAdvice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
 			isDerived = false;
@@ -555,12 +564,13 @@ public class CashAccountCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAdvice";
 			definition = "Free form message advising the customer about the settlement of charges and taxes due.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.SettlementAdvice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmSettlementAdvice);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode accountBalanceCurrencyCode;
 	/**
 	 * Currency used to specify the account's balance currency.
 	 * <p>
@@ -574,8 +584,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#ReportingCurrency
-	 * Account.ReportingCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmReportingCurrency
+	 * Account.mmReportingCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -596,27 +606,28 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#AccountBalanceCurrencyCode
-	 * CashAccountCharacteristics2.AccountBalanceCurrencyCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmAccountBalanceCurrencyCode
+	 * CashAccountCharacteristics2.mmAccountBalanceCurrencyCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountBalanceCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountBalanceCurrencyCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmReportingCurrency;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.ReportingCurrency;
 			isDerived = false;
 			xmlTag = "AcctBalCcyCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBalanceCurrencyCode";
 			definition = "Currency used to specify the account's balance currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.AccountBalanceCurrencyCode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmAccountBalanceCurrencyCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode settlementCurrencyCode;
 	/**
 	 * Currency used to specify the account's settlement currency
 	 * <p>
@@ -630,8 +641,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#SettlementCurrency
-	 * CashAccount.SettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmSettlementCurrency
+	 * CashAccount.mmSettlementCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -653,27 +664,28 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#SettlementCurrencyCode
-	 * CashAccountCharacteristics2.SettlementCurrencyCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmSettlementCurrencyCode
+	 * CashAccountCharacteristics2.mmSettlementCurrencyCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCurrencyCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmSettlementCurrency;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.SettlementCurrency;
 			isDerived = false;
 			xmlTag = "SttlmCcyCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyCode";
 			definition = "Currency used to specify the account's settlement currency";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.SettlementCurrencyCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmSettlementCurrencyCode);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode hostCurrencyCode;
 	/**
 	 * Currency used to specify the account's taxing host currency.
 	 * <p>
@@ -687,7 +699,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Currency Tax.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmCurrency
+	 * Tax.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -709,27 +722,28 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#HostCurrencyCode
-	 * CashAccountCharacteristics2.HostCurrencyCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmHostCurrencyCode
+	 * CashAccountCharacteristics2.mmHostCurrencyCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostCurrencyCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmCurrency;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Currency;
 			isDerived = false;
 			xmlTag = "HstCcyCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCurrencyCode";
 			definition = "Currency used to specify the account's taxing host currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.HostCurrencyCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmHostCurrencyCode);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected AccountTax1 tax;
 	/**
 	 * Describes account taxing parameters
 	 * <p>
@@ -741,8 +755,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#Tax
-	 * CashAccount.Tax}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmTax
+	 * CashAccount.mmTax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -763,28 +777,29 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#Tax
-	 * CashAccountCharacteristics2.Tax}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmTax
+	 * CashAccountCharacteristics2.mmTax}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Tax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmTax;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.Tax;
 			isDerived = false;
 			xmlTag = "Tax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Describes account taxing parameters";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.Tax);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmTax);
 			maxOccurs = 1;
-			type_lazy = () -> AccountTax1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountTax1.mmObject();
 		}
 	};
+	protected ContactDetails3 accountServicerContact;
 	/**
 	 * Individual to contact at the financial institution's location regarding
 	 * problems of a business nature.
@@ -798,8 +813,8 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#PersonIdentification
-	 * Person.PersonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmPersonIdentification
+	 * Person.mmPersonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -822,40 +837,40 @@ public class CashAccountCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#AccountServicerContact
-	 * CashAccountCharacteristics2.AccountServicerContact}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmAccountServicerContact
+	 * CashAccountCharacteristics2.mmAccountServicerContact}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerContact = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerContact = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPersonIdentification;
 			componentContext_lazy = () -> CashAccountCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.PersonIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcrCtct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerContact";
 			definition = "Individual to contact at the financial institution's location regarding problems of a business nature.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.AccountServicerContact);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics2.mmAccountServicerContact);
 			maxOccurs = 1;
-			complexType_lazy = () -> ContactDetails3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.ContactDetails3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics1.AccountLevel, com.tools20022.repository.msg.CashAccountCharacteristics1.CashAccount,
-						com.tools20022.repository.msg.CashAccountCharacteristics1.AccountServicer, com.tools20022.repository.msg.CashAccountCharacteristics1.ParentAccount,
-						com.tools20022.repository.msg.CashAccountCharacteristics1.CompensationMethod, com.tools20022.repository.msg.CashAccountCharacteristics1.DebitAccount,
-						com.tools20022.repository.msg.CashAccountCharacteristics1.DelayedDebitDate, com.tools20022.repository.msg.CashAccountCharacteristics1.SettlementAdvice,
-						com.tools20022.repository.msg.CashAccountCharacteristics1.AccountBalanceCurrencyCode, com.tools20022.repository.msg.CashAccountCharacteristics1.SettlementCurrencyCode,
-						com.tools20022.repository.msg.CashAccountCharacteristics1.HostCurrencyCode, com.tools20022.repository.msg.CashAccountCharacteristics1.Tax,
-						com.tools20022.repository.msg.CashAccountCharacteristics1.AccountServicerContact);
-				trace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics1.mmAccountLevel, com.tools20022.repository.msg.CashAccountCharacteristics1.mmCashAccount,
+						com.tools20022.repository.msg.CashAccountCharacteristics1.mmAccountServicer, com.tools20022.repository.msg.CashAccountCharacteristics1.mmParentAccount,
+						com.tools20022.repository.msg.CashAccountCharacteristics1.mmCompensationMethod, com.tools20022.repository.msg.CashAccountCharacteristics1.mmDebitAccount,
+						com.tools20022.repository.msg.CashAccountCharacteristics1.mmDelayedDebitDate, com.tools20022.repository.msg.CashAccountCharacteristics1.mmSettlementAdvice,
+						com.tools20022.repository.msg.CashAccountCharacteristics1.mmAccountBalanceCurrencyCode, com.tools20022.repository.msg.CashAccountCharacteristics1.mmSettlementCurrencyCode,
+						com.tools20022.repository.msg.CashAccountCharacteristics1.mmHostCurrencyCode, com.tools20022.repository.msg.CashAccountCharacteristics1.mmTax,
+						com.tools20022.repository.msg.CashAccountCharacteristics1.mmAccountServicerContact);
+				trace_lazy = () -> CashAccount.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccountCharacteristics1";
 				definition = "Specifies the characteristics of the cash account.";
@@ -863,5 +878,109 @@ public class CashAccountCharacteristics1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountLevel2Code getAccountLevel() {
+		return accountLevel;
+	}
+
+	public void setAccountLevel(AccountLevel2Code accountLevel) {
+		this.accountLevel = accountLevel;
+	}
+
+	public CashAccount16 getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(com.tools20022.repository.msg.CashAccount16 cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public ParentCashAccount1 getParentAccount() {
+		return parentAccount;
+	}
+
+	public void setParentAccount(com.tools20022.repository.msg.ParentCashAccount1 parentAccount) {
+		this.parentAccount = parentAccount;
+	}
+
+	public CompensationMethod1Code getCompensationMethod() {
+		return compensationMethod;
+	}
+
+	public void setCompensationMethod(CompensationMethod1Code compensationMethod) {
+		this.compensationMethod = compensationMethod;
+	}
+
+	public AccountIdentification4Choice getDebitAccount() {
+		return debitAccount;
+	}
+
+	public void setDebitAccount(AccountIdentification4Choice debitAccount) {
+		this.debitAccount = debitAccount;
+	}
+
+	public ISODate getDelayedDebitDate() {
+		return delayedDebitDate;
+	}
+
+	public void setDelayedDebitDate(ISODate delayedDebitDate) {
+		this.delayedDebitDate = delayedDebitDate;
+	}
+
+	public Max105Text getSettlementAdvice() {
+		return settlementAdvice;
+	}
+
+	public void setSettlementAdvice(Max105Text settlementAdvice) {
+		this.settlementAdvice = settlementAdvice;
+	}
+
+	public ActiveOrHistoricCurrencyCode getAccountBalanceCurrencyCode() {
+		return accountBalanceCurrencyCode;
+	}
+
+	public void setAccountBalanceCurrencyCode(ActiveOrHistoricCurrencyCode accountBalanceCurrencyCode) {
+		this.accountBalanceCurrencyCode = accountBalanceCurrencyCode;
+	}
+
+	public ActiveOrHistoricCurrencyCode getSettlementCurrencyCode() {
+		return settlementCurrencyCode;
+	}
+
+	public void setSettlementCurrencyCode(ActiveOrHistoricCurrencyCode settlementCurrencyCode) {
+		this.settlementCurrencyCode = settlementCurrencyCode;
+	}
+
+	public ActiveOrHistoricCurrencyCode getHostCurrencyCode() {
+		return hostCurrencyCode;
+	}
+
+	public void setHostCurrencyCode(ActiveOrHistoricCurrencyCode hostCurrencyCode) {
+		this.hostCurrencyCode = hostCurrencyCode;
+	}
+
+	public AccountTax1 getTax() {
+		return tax;
+	}
+
+	public void setTax(com.tools20022.repository.msg.AccountTax1 tax) {
+		this.tax = tax;
+	}
+
+	public ContactDetails3 getAccountServicerContact() {
+		return accountServicerContact;
+	}
+
+	public void setAccountServicerContact(com.tools20022.repository.msg.ContactDetails3 accountServicerContact) {
+		this.accountServicerContact = accountServicerContact;
 	}
 }

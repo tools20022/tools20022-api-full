@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice#AuthorisedBranchIdentifier
+ * {@linkplain com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice#mmAuthorisedBranchIdentifier
  * CentralisedAndAuthorisedBranchIdentification1Choice.
- * AuthorisedBranchIdentifier}</li>
+ * mmAuthorisedBranchIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice#CentralisedBranchIdentifiers
+ * {@linkplain com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice#mmCentralisedBranchIdentifiers
  * CentralisedAndAuthorisedBranchIdentification1Choice.
- * CentralisedBranchIdentifiers}</li>
+ * mmCentralisedBranchIdentifiers}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CentralisedAndAuthorisedBranchIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstitutionIdentification9 authorisedBranchIdentifier;
 	/**
 	 * Identifier of the authorised branch.
 	 * <p>
@@ -88,7 +89,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 	 * definition} = "Identifier of the authorised branch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthorisedBranchIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthorisedBranchIdentifier = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 			isDerived = false;
@@ -96,12 +97,13 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedBranchIdentifier";
 			definition = "Identifier of the authorised branch.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentificationList1 centralisedBranchIdentifiers;
 	/**
 	 * Identifier of the centralised branch.
 	 * <p>
@@ -129,7 +131,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 	 * definition} = "Identifier of the centralised branch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CentralisedBranchIdentifiers = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCentralisedBranchIdentifiers = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 			isDerived = false;
@@ -137,24 +139,40 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralisedBranchIdentifiers";
 			definition = "Identifier of the centralised branch.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentificationList1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstitutionIdentificationList1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.AuthorisedBranchIdentifier,
-						com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.CentralisedBranchIdentifiers);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmAuthorisedBranchIdentifier,
+						com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmCentralisedBranchIdentifiers);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CentralisedAndAuthorisedBranchIdentification1Choice";
 				definition = "Identifiers for the central and authorised branches.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstitutionIdentification9 getAuthorisedBranchIdentifier() {
+		return authorisedBranchIdentifier;
+	}
+
+	public void setAuthorisedBranchIdentifier(FinancialInstitutionIdentification9 authorisedBranchIdentifier) {
+		this.authorisedBranchIdentifier = authorisedBranchIdentifier;
+	}
+
+	public FinancialInstitutionIdentificationList1 getCentralisedBranchIdentifiers() {
+		return centralisedBranchIdentifiers;
+	}
+
+	public void setCentralisedBranchIdentifiers(FinancialInstitutionIdentificationList1 centralisedBranchIdentifiers) {
+		this.centralisedBranchIdentifiers = centralisedBranchIdentifiers;
 	}
 }

@@ -40,14 +40,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Instalment2#SequenceIdentification
- * Instalment2.SequenceIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instalment2#PaymentDueDate
- * Instalment2.PaymentDueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instalment2#Amount
- * Instalment2.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instalment2#PaymentInstrument
- * Instalment2.PaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.Instalment2#mmSequenceIdentification
+ * Instalment2.mmSequenceIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instalment2#mmPaymentDueDate
+ * Instalment2.mmPaymentDueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instalment2#mmAmount
+ * Instalment2.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Instalment2#mmPaymentInstrument
+ * Instalment2.mmPaymentInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Instalment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text sequenceIdentification;
 	/**
 	 * Specifies the progressive number of the single instalment related to an
 	 * invoice.
@@ -85,8 +87,8 @@ public class Instalment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#SequenceIdentification
-	 * Instalment.SequenceIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmSequenceIdentification
+	 * Instalment.mmSequenceIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +108,21 @@ public class Instalment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmSequenceIdentification;
 			componentContext_lazy = () -> Instalment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.SequenceIdentification;
 			isDerived = false;
 			xmlTag = "SeqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceIdentification";
 			definition = "Specifies the progressive number of the single instalment related to an invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected ISODate paymentDueDate;
 	/**
 	 * Due date for the payment of the financing item instalment.
 	 * <p>
@@ -132,8 +135,8 @@ public class Instalment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentDueDate
-	 * PaymentObligation.PaymentDueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentDueDate
+	 * PaymentObligation.mmPaymentDueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,20 +155,21 @@ public class Instalment2 {
 	 * "Due date for the payment of the financing item instalment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> Instalment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentDueDate;
 			isDerived = false;
 			xmlTag = "PmtDueDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDueDate";
 			definition = "Due date for the payment of the financing item instalment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount of a single instalment related to an invoice.
 	 * <p>
@@ -179,8 +183,8 @@ public class Instalment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Amount
-	 * PaymentObligation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAmount
+	 * PaymentObligation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,20 +202,21 @@ public class Instalment2 {
 	 * definition} = "Amount of a single instalment related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
 			componentContext_lazy = () -> Instalment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of a single instalment related to an invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PaymentMeans1 paymentInstrument;
 	/**
 	 * Desired payment instrument to be used for the instalment.
 	 * <p>
@@ -223,8 +228,8 @@ public class Instalment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentOffset
-	 * PaymentObligation.PaymentOffset}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentOffset
+	 * PaymentObligation.mmPaymentOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -243,34 +248,66 @@ public class Instalment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> Instalment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentOffset;
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Desired payment instrument to be used for the instalment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentMeans1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instalment2.SequenceIdentification, com.tools20022.repository.msg.Instalment2.PaymentDueDate, com.tools20022.repository.msg.Instalment2.Amount,
-						com.tools20022.repository.msg.Instalment2.PaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instalment2.mmSequenceIdentification, com.tools20022.repository.msg.Instalment2.mmPaymentDueDate, com.tools20022.repository.msg.Instalment2.mmAmount,
+						com.tools20022.repository.msg.Instalment2.mmPaymentInstrument);
 				trace_lazy = () -> Instalment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Instalment2";
 				definition = "Specifies a single instalment related to an invoice settlement and optional reconciliation information.\r\nReconciliation information is used to indicate the amount to be allocated to a particular instalment of a financial document.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getSequenceIdentification() {
+		return sequenceIdentification;
+	}
+
+	public void setSequenceIdentification(Max70Text sequenceIdentification) {
+		this.sequenceIdentification = sequenceIdentification;
+	}
+
+	public ISODate getPaymentDueDate() {
+		return paymentDueDate;
+	}
+
+	public void setPaymentDueDate(ISODate paymentDueDate) {
+		this.paymentDueDate = paymentDueDate;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PaymentMeans1 getPaymentInstrument() {
+		return paymentInstrument;
+	}
+
+	public void setPaymentInstrument(com.tools20022.repository.msg.PaymentMeans1 paymentInstrument) {
+		this.paymentInstrument = paymentInstrument;
 	}
 }

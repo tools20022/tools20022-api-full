@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ISODate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for system business day information.
@@ -38,27 +39,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#SystemDate
- * BusinessDaySearchCriteria1.SystemDate}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#mmSystemDate
+ * BusinessDaySearchCriteria1.mmSystemDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#SystemIdentification
- * BusinessDaySearchCriteria1.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#mmSystemIdentification
+ * BusinessDaySearchCriteria1.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#SystemCurrency
- * BusinessDaySearchCriteria1.SystemCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#mmSystemCurrency
+ * BusinessDaySearchCriteria1.mmSystemCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#EventType
- * BusinessDaySearchCriteria1.EventType}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#mmEventType
+ * BusinessDaySearchCriteria1.mmEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#ClosurePeriod
- * BusinessDaySearchCriteria1.ClosurePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria1#mmClosurePeriod
+ * BusinessDaySearchCriteria1.mmClosurePeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessDaySearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate systemDate;
 	/**
 	 * Date for which the availability information is provided.
 	 * <p>
@@ -100,7 +102,7 @@ public class BusinessDaySearchCriteria1 {
 	 * definition} = "Date for which the availability information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
@@ -108,11 +110,12 @@ public class BusinessDaySearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the availability information is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<SystemIdentification2Choice> systemIdentification;
 	/**
 	 * Unique and unambiguous identification of the system, as assigned by the
 	 * system administrator.
@@ -143,7 +146,7 @@ public class BusinessDaySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
@@ -152,10 +155,11 @@ public class BusinessDaySearchCriteria1 {
 			name = "SystemIdentification";
 			definition = "Unique and unambiguous identification of the system, as assigned by the system administrator. ";
 			minOccurs = 0;
-			type_lazy = () -> SystemIdentification2Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> SystemIdentification2Choice.mmObject();
 		}
 	};
+	protected List<ActiveCurrencyCode> systemCurrency;
 	/**
 	 * Currency which may be processed by the system. A system may process
 	 * transactions in a single currency or in multiple currencies.
@@ -187,7 +191,7 @@ public class BusinessDaySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
@@ -199,6 +203,7 @@ public class BusinessDaySearchCriteria1 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected SystemEventType2Choice eventType;
 	/**
 	 * Nature of the event that has occurred.
 	 * <p>
@@ -226,7 +231,7 @@ public class BusinessDaySearchCriteria1 {
 	 * definition} = "Nature of the event that has occurred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEventType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
@@ -234,12 +239,13 @@ public class BusinessDaySearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Nature of the event that has occurred.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemEventType2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SystemEventType2Choice.mmObject();
 		}
 	};
+	protected DateTimePeriodChoice closurePeriod;
 	/**
 	 * Period of time when the system is closed/not operating.
 	 * <p>
@@ -268,7 +274,7 @@ public class BusinessDaySearchCriteria1 {
 	 * definition} = "Period of time when the system is closed/not operating."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosurePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosurePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
@@ -276,8 +282,8 @@ public class BusinessDaySearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosurePeriod";
 			definition = "Period of time when the system is closed/not operating.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
@@ -285,14 +291,55 @@ public class BusinessDaySearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDaySearchCriteria1.SystemDate, com.tools20022.repository.msg.BusinessDaySearchCriteria1.SystemIdentification,
-						com.tools20022.repository.msg.BusinessDaySearchCriteria1.SystemCurrency, com.tools20022.repository.msg.BusinessDaySearchCriteria1.EventType, com.tools20022.repository.msg.BusinessDaySearchCriteria1.ClosurePeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmSystemDate, com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmSystemIdentification,
+						com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmSystemCurrency, com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmEventType,
+						com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmClosurePeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDaySearchCriteria1";
 				definition = "Defines the criteria used to search for system business day information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getSystemDate() {
+		return systemDate;
+	}
+
+	public void setSystemDate(ISODate systemDate) {
+		this.systemDate = systemDate;
+	}
+
+	public List<SystemIdentification2Choice> getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(List<SystemIdentification2Choice> systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public List<ActiveCurrencyCode> getSystemCurrency() {
+		return systemCurrency;
+	}
+
+	public void setSystemCurrency(List<ActiveCurrencyCode> systemCurrency) {
+		this.systemCurrency = systemCurrency;
+	}
+
+	public SystemEventType2Choice getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(SystemEventType2Choice eventType) {
+		this.eventType = eventType;
+	}
+
+	public DateTimePeriodChoice getClosurePeriod() {
+		return closurePeriod;
+	}
+
+	public void setClosurePeriod(DateTimePeriodChoice closurePeriod) {
+		this.closurePeriod = closurePeriod;
 	}
 }

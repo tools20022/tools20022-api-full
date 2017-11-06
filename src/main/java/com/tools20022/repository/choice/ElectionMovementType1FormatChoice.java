@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionMovementType1FormatChoice#Code
- * ElectionMovementType1FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionMovementType1FormatChoice#mmCode
+ * ElectionMovementType1FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionMovementType1FormatChoice#Proprietary
- * ElectionMovementType1FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionMovementType1FormatChoice#mmProprietary
+ * ElectionMovementType1FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ElectionMovementType1FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ElectionMovementType1Code code;
 	/**
 	 * Standard code to specify the effect on the holdings of electing a
 	 * Corporate Action option.
@@ -93,7 +94,7 @@ public class ElectionMovementType1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElectionMovementType1FormatChoice.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class ElectionMovementType1FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to  specify the effect on the holdings of electing a Corporate Action option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ElectionMovementType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the effect on the holdings of electing a
 	 * Corporate Action option.
@@ -137,7 +139,7 @@ public class ElectionMovementType1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElectionMovementType1FormatChoice.mmObject();
 			isDerived = false;
@@ -145,8 +147,8 @@ public class ElectionMovementType1FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express the effect on the holdings of electing a Corporate Action option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -154,13 +156,29 @@ public class ElectionMovementType1FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionMovementType1FormatChoice.Code, com.tools20022.repository.choice.ElectionMovementType1FormatChoice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionMovementType1FormatChoice.mmCode, com.tools20022.repository.choice.ElectionMovementType1FormatChoice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ElectionMovementType1FormatChoice";
 				definition = "Choice of formats to  express the effect on the holdings of electing a Corporate Action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ElectionMovementType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ElectionMovementType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

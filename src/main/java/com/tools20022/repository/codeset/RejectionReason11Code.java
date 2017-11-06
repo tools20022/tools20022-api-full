@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#FailedValidation
- * RejectionReason11Code.FailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#mmFailedValidation
+ * RejectionReason11Code.mmFailedValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#RejectedSinceAlreadyCancelled
- * RejectionReason11Code.RejectedSinceAlreadyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#mmRejectedSinceAlreadyCancelled
+ * RejectionReason11Code.mmRejectedSinceAlreadyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#RejectedSinceInProgress
- * RejectionReason11Code.RejectedSinceInProgress}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#mmRejectedSinceInProgress
+ * RejectionReason11Code.mmRejectedSinceInProgress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#InvalidCAIdentification
- * RejectionReason11Code.InvalidCAIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#mmInvalidCAIdentification
+ * RejectionReason11Code.mmInvalidCAIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailedValidation = new MMCode() {
+	public static final MMCode mmFailedValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
@@ -112,7 +112,7 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceAlreadyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedSinceAlreadyCancelled = new MMCode() {
+	public static final MMCode mmRejectedSinceAlreadyCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceAlreadyCancelled";
@@ -135,7 +135,7 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceInProgress"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedSinceInProgress = new MMCode() {
+	public static final MMCode mmRejectedSinceInProgress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceInProgress";
@@ -158,7 +158,7 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 * name} = "InvalidCAIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCAIdentification = new MMCode() {
+	public static final MMCode mmInvalidCAIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCAIdentification";
@@ -169,13 +169,13 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason11Code";
 				definition = "Specifies the reason of a rejection of the notification cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason11Code.FailedValidation, com.tools20022.repository.codeset.RejectionReason11Code.RejectedSinceAlreadyCancelled,
-						com.tools20022.repository.codeset.RejectionReason11Code.RejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason11Code.InvalidCAIdentification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason11Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason11Code.mmRejectedSinceAlreadyCancelled,
+						com.tools20022.repository.codeset.RejectionReason11Code.mmRejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason11Code.mmInvalidCAIdentification);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

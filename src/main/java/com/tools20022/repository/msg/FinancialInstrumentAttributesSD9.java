@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD9#PlaceAndName
- * FinancialInstrumentAttributesSD9.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD9#mmPlaceAndName
+ * FinancialInstrumentAttributesSD9.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD9#OriginatingSecurityIdentification
- * FinancialInstrumentAttributesSD9.OriginatingSecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD9#mmOriginatingSecurityIdentification
+ * FinancialInstrumentAttributesSD9.mmOriginatingSecurityIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAttributesSD9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -87,7 +88,7 @@ public class FinancialInstrumentAttributesSD9 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD9.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class FinancialInstrumentAttributesSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected OtherIdentification2 originatingSecurityIdentification;
 	/**
 	 * Represents the 'original' security identifier of the event. It is used in
 	 * the scenarios like "partial call" where there are 2 events. The first
@@ -133,7 +135,7 @@ public class FinancialInstrumentAttributesSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginatingSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginatingSecurityIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD9.mmObject();
 			isDerived = false;
@@ -141,23 +143,39 @@ public class FinancialInstrumentAttributesSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingSecurityIdentification";
 			definition = "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OtherIdentification2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.PlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.OriginatingSecurityIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.mmOriginatingSecurityIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD9";
 				definition = "Provides additional information regarding underlying security details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public OtherIdentification2 getOriginatingSecurityIdentification() {
+		return originatingSecurityIdentification;
+	}
+
+	public void setOriginatingSecurityIdentification(com.tools20022.repository.msg.OtherIdentification2 originatingSecurityIdentification) {
+		this.originatingSecurityIdentification = originatingSecurityIdentification;
 	}
 }

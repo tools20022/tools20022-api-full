@@ -34,19 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterface3Code#Acquirer
- * UserInterface3Code.Acquirer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterface3Code#Agent
- * UserInterface3Code.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterface3Code#Issuer
- * UserInterface3Code.Issuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterface3Code#mmAcquirer
+ * UserInterface3Code.mmAcquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterface3Code#mmAgent
+ * UserInterface3Code.mmAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterface3Code#mmIssuer
+ * UserInterface3Code.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +77,7 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -99,7 +100,7 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 * name} = "Agent"</li>
 	 * </ul>
 	 */
-	public static final MMCode Agent = new MMCode() {
+	public static final MMCode mmAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
@@ -122,7 +123,7 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 * name} = "Issuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Issuer = new MMCode() {
+	public static final MMCode mmIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
@@ -133,11 +134,11 @@ public class UserInterface3Code extends UserInterfaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UserInterface3Code";
 				definition = "Destination of the message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface3Code.Acquirer, com.tools20022.repository.codeset.UserInterface3Code.Agent, com.tools20022.repository.codeset.UserInterface3Code.Issuer);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface3Code.mmAcquirer, com.tools20022.repository.codeset.UserInterface3Code.mmAgent, com.tools20022.repository.codeset.UserInterface3Code.mmIssuer);
 				trace_lazy = () -> UserInterfaceCode.mmObject();
 			}
 		});

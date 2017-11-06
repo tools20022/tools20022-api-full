@@ -42,21 +42,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Discount#DiscountAppliedAmount
- * Discount.DiscountAppliedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Discount#DiscountType
- * Discount.DiscountType}</li>
+ * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountAppliedAmount
+ * Discount.mmDiscountAppliedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Discount#mmDiscountType
+ * Discount.mmDiscountType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Discount#DiscountBasisAmount
- * Discount.DiscountBasisAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountBasisAmount
+ * Discount.mmDiscountBasisAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DiscountAmountAndType1#Type
- * DiscountAmountAndType1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DiscountAmountAndType1#mmType
+ * DiscountAmountAndType1.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -77,8 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Discount extends Adjustment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount discountAppliedAmount;
 	/**
 	 * Amount of money that results from the application of an agreed discount
 	 * to the amount due and payable to the creditor.
@@ -105,36 +106,36 @@ public class Discount extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReferredDocumentAmount1Choice#DiscountAppliedAmount
-	 * ReferredDocumentAmount1Choice.DiscountAppliedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount1#DiscountAppliedAmount
-	 * RemittanceAmount1.DiscountAppliedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#DiscountAppliedAmount
-	 * RemittanceAmount2.DiscountAppliedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#TotalDiscountAmount
-	 * SettlementMonetarySummation1.TotalDiscountAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#DiscountAppliedAmount
-	 * RemittanceAmount3.DiscountAppliedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerms6#DiscountAmount
-	 * PaymentTerms6.DiscountAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EarlyPayment1#DiscountAmount
-	 * EarlyPayment1.DiscountAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Discount
 	 * Discount}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReferredDocumentAmount1Choice#mmDiscountAppliedAmount
+	 * ReferredDocumentAmount1Choice.mmDiscountAppliedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount1#mmDiscountAppliedAmount
+	 * RemittanceAmount1.mmDiscountAppliedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmDiscountAppliedAmount
+	 * RemittanceAmount2.mmDiscountAppliedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#mmTotalDiscountAmount
+	 * SettlementMonetarySummation1.mmTotalDiscountAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#mmDiscountAppliedAmount
+	 * RemittanceAmount3.mmDiscountAppliedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms6#mmDiscountAmount
+	 * PaymentTerms6.mmDiscountAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EarlyPayment1#mmDiscountAmount
+	 * EarlyPayment1.mmDiscountAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -148,21 +149,22 @@ public class Discount extends Adjustment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DiscountAppliedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDiscountAppliedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReferredDocumentAmount1Choice.DiscountAppliedAmount, com.tools20022.repository.msg.RemittanceAmount1.DiscountAppliedAmount,
-					com.tools20022.repository.msg.RemittanceAmount2.DiscountAppliedAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.TotalDiscountAmount,
-					com.tools20022.repository.msg.RemittanceAmount3.DiscountAppliedAmount, com.tools20022.repository.msg.PaymentTerms6.DiscountAmount, com.tools20022.repository.msg.EarlyPayment1.DiscountAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmDiscountAppliedAmount, com.tools20022.repository.msg.RemittanceAmount1.mmDiscountAppliedAmount,
+					com.tools20022.repository.msg.RemittanceAmount2.mmDiscountAppliedAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmTotalDiscountAmount,
+					com.tools20022.repository.msg.RemittanceAmount3.mmDiscountAppliedAmount, com.tools20022.repository.msg.PaymentTerms6.mmDiscountAmount, com.tools20022.repository.msg.EarlyPayment1.mmDiscountAmount);
 			elementContext_lazy = () -> Discount.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DiscountAppliedAmount";
 			definition = "Amount of money that results from the application of an agreed discount to the amount due and payable to the creditor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected DiscountTypeCode discountType;
 	/**
 	 * Specifies the type of discount applied to the original amount.
 	 * <p>
@@ -173,27 +175,27 @@ public class Discount extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DiscountTypeCode
 	 * DiscountTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DiscountAmountType1Choice#Code
-	 * DiscountAmountType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DiscountTypeFormat1Choice#Code
-	 * DiscountTypeFormat1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DiscountTypeFormat1Choice#Proprietary
-	 * DiscountTypeFormat1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice#DiscountType
-	 * DiscountOrChargeType1Choice.DiscountType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Discount
 	 * Discount}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DiscountAmountType1Choice#mmCode
+	 * DiscountAmountType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DiscountTypeFormat1Choice#mmCode
+	 * DiscountTypeFormat1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DiscountTypeFormat1Choice#mmProprietary
+	 * DiscountTypeFormat1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice#mmDiscountType
+	 * DiscountOrChargeType1Choice.mmDiscountType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -206,20 +208,21 @@ public class Discount extends Adjustment {
 	 * "Specifies the type of discount applied to the original amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DiscountType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDiscountType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountAmountType1Choice.Code, com.tools20022.repository.choice.DiscountTypeFormat1Choice.Code,
-					com.tools20022.repository.choice.DiscountTypeFormat1Choice.Proprietary, com.tools20022.repository.choice.DiscountOrChargeType1Choice.DiscountType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountAmountType1Choice.mmCode, com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmCode,
+					com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmProprietary, com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmDiscountType);
 			elementContext_lazy = () -> Discount.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DiscountType";
 			definition = "Specifies the type of discount applied to the original amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DiscountTypeCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount discountBasisAmount;
 	/**
 	 * Amount used as a basis to calculate the discount amount.
 	 * <p>
@@ -230,20 +233,21 @@ public class Discount extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerms3#DiscountBasisAmount
-	 * PaymentTerms3.DiscountBasisAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#BasisAmount
-	 * PaymentTerms6.BasisAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Discount
 	 * Discount}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms3#mmDiscountBasisAmount
+	 * PaymentTerms3.mmDiscountBasisAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms6#mmBasisAmount
+	 * PaymentTerms6.mmBasisAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -255,16 +259,16 @@ public class Discount extends Adjustment {
 	 * definition} = "Amount used as a basis to calculate the discount amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DiscountBasisAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDiscountBasisAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms3.DiscountBasisAmount, com.tools20022.repository.msg.PaymentTerms6.BasisAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms3.mmDiscountBasisAmount, com.tools20022.repository.msg.PaymentTerms6.mmBasisAmount);
 			elementContext_lazy = () -> Discount.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DiscountBasisAmount";
 			definition = "Amount used as a basis to calculate the discount amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -272,16 +276,41 @@ public class Discount extends Adjustment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Discount";
 				definition = "Decrease of the value of goods and / or services by applying a discount rate to the original amount.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DiscountAmountAndType1.Type);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DiscountAmountAndType1.mmType);
 				superType_lazy = () -> Adjustment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Discount.DiscountAppliedAmount, com.tools20022.repository.entity.Discount.DiscountType, com.tools20022.repository.entity.Discount.DiscountBasisAmount);
+				element_lazy = () -> Arrays
+						.asList(com.tools20022.repository.entity.Discount.mmDiscountAppliedAmount, com.tools20022.repository.entity.Discount.mmDiscountType, com.tools20022.repository.entity.Discount.mmDiscountBasisAmount);
 				derivationComponent_lazy = () -> Arrays.asList(DiscountAmountType1Choice.mmObject(), DiscountAmountAndType1.mmObject(), DiscountTypeFormat1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getDiscountAppliedAmount() {
+		return discountAppliedAmount;
+	}
+
+	public void setDiscountAppliedAmount(CurrencyAndAmount discountAppliedAmount) {
+		this.discountAppliedAmount = discountAppliedAmount;
+	}
+
+	public DiscountTypeCode getDiscountType() {
+		return discountType;
+	}
+
+	public void setDiscountType(DiscountTypeCode discountType) {
+		this.discountType = discountType;
+	}
+
+	public CurrencyAndAmount getDiscountBasisAmount() {
+		return discountBasisAmount;
+	}
+
+	public void setDiscountBasisAmount(CurrencyAndAmount discountBasisAmount) {
+		this.discountBasisAmount = discountBasisAmount;
 	}
 }

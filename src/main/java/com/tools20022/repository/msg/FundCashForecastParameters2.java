@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters2#FinancialInstrumentDetails
- * FundCashForecastParameters2.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters2#mmFinancialInstrumentDetails
+ * FundCashForecastParameters2.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters2#TradeDateTime
- * FundCashForecastParameters2.TradeDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters2#mmTradeDateTime
+ * FundCashForecastParameters2.mmTradeDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters2#DetailedReportParameter
- * FundCashForecastParameters2.DetailedReportParameter}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters2#mmDetailedReportParameter
+ * FundCashForecastParameters2.mmDetailedReportParameter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundCashForecastParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrument17 financialInstrumentDetails;
 	/**
 	 * Financial instrument for which the fund cash forecast report is
 	 * requested.
@@ -91,7 +92,7 @@ public class FundCashForecastParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundCashForecastParameters2.mmObject();
 			isDerived = false;
@@ -99,12 +100,13 @@ public class FundCashForecastParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument for which the fund cash forecast report is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument17.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice tradeDateTime;
 	/**
 	 * Date and, if required, the time, at which the price has been applied.
 	 * <p>
@@ -118,8 +120,8 @@ public class FundCashForecastParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,20 +141,21 @@ public class FundCashForecastParameters2 {
 	 * "Date and, if required, the time, at which the price has been applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> FundCashForecastParameters2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateTime";
 			definition = "Date and, if required, the time, at which the price has been applied.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected ReportParameters detailedReportParameter;
 	/**
 	 * Parameters to be used in the detailed cash forecast report.
 	 * <p>
@@ -180,7 +183,7 @@ public class FundCashForecastParameters2 {
 	 * "Parameters to be used in the detailed cash forecast report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DetailedReportParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDetailedReportParameter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundCashForecastParameters2.mmObject();
 			isDerived = false;
@@ -188,24 +191,48 @@ public class FundCashForecastParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedReportParameter";
 			definition = "Parameters to be used in the detailed cash forecast report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReportParameters.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecastParameters2.FinancialInstrumentDetails, com.tools20022.repository.msg.FundCashForecastParameters2.TradeDateTime,
-						com.tools20022.repository.msg.FundCashForecastParameters2.DetailedReportParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecastParameters2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundCashForecastParameters2.mmTradeDateTime,
+						com.tools20022.repository.msg.FundCashForecastParameters2.mmDetailedReportParameter);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FundCashForecastParameters2";
 				definition = "Report parameters.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrument17 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public DateAndDateTimeChoice getTradeDateTime() {
+		return tradeDateTime;
+	}
+
+	public void setTradeDateTime(DateAndDateTimeChoice tradeDateTime) {
+		this.tradeDateTime = tradeDateTime;
+	}
+
+	public ReportParameters getDetailedReportParameter() {
+		return detailedReportParameter;
+	}
+
+	public void setDetailedReportParameter(com.tools20022.repository.msg.ReportParameters detailedReportParameter) {
+		this.detailedReportParameter = detailedReportParameter;
 	}
 }

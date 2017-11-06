@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice#StatementBasisAsCode
- * StatementBasisCodeAndDSSCodeChoice.StatementBasisAsCode}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice#mmStatementBasisAsCode
+ * StatementBasisCodeAndDSSCodeChoice.mmStatementBasisAsCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice#StatementBasisAsDSS
- * StatementBasisCodeAndDSSCodeChoice.StatementBasisAsDSS}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice#mmStatementBasisAsDSS
+ * StatementBasisCodeAndDSSCodeChoice.mmStatementBasisAsDSS}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementBasisCodeAndDSSCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected StatementBasis1Code statementBasisAsCode;
 	/**
 	 * Statement basis expressed as a code.
 	 * <p>
@@ -87,7 +88,7 @@ public class StatementBasisCodeAndDSSCodeChoice {
 	 * definition} = "Statement basis expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementBasisAsCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementBasisAsCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class StatementBasisCodeAndDSSCodeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasisAsCode";
 			definition = "Statement basis expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatementBasis1Code.mmObject();
 		}
 	};
+	protected GenericIdentification7 statementBasisAsDSS;
 	/**
 	 * Statement basis expressed as a data source scheme and a code used within
 	 * the data source scheme.
@@ -131,7 +133,7 @@ public class StatementBasisCodeAndDSSCodeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementBasisAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementBasisAsDSS = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class StatementBasisCodeAndDSSCodeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasisAsDSS";
 			definition = "Statement basis expressed as a data source scheme and a code used within the data source scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification7.mmObject();
 		}
 	};
@@ -148,13 +150,30 @@ public class StatementBasisCodeAndDSSCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice.StatementBasisAsCode, com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice.StatementBasisAsDSS);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice.mmStatementBasisAsCode, com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice.mmStatementBasisAsDSS);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementBasisCodeAndDSSCodeChoice";
 				definition = "Choice between formats for the statement basis.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StatementBasis1Code getStatementBasisAsCode() {
+		return statementBasisAsCode;
+	}
+
+	public void setStatementBasisAsCode(StatementBasis1Code statementBasisAsCode) {
+		this.statementBasisAsCode = statementBasisAsCode;
+	}
+
+	public GenericIdentification7 getStatementBasisAsDSS() {
+		return statementBasisAsDSS;
+	}
+
+	public void setStatementBasisAsDSS(GenericIdentification7 statementBasisAsDSS) {
+		this.statementBasisAsDSS = statementBasisAsDSS;
 	}
 }

@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#AtTheOpening
- * ExecutionTimeLimit1Code.AtTheOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmAtTheOpening
+ * ExecutionTimeLimit1Code.mmAtTheOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#AtTheClosing
- * ExecutionTimeLimit1Code.AtTheClosing}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmAtTheClosing
+ * ExecutionTimeLimit1Code.mmAtTheClosing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#GoodForTheDay
- * ExecutionTimeLimit1Code.GoodForTheDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmGoodForTheDay
+ * ExecutionTimeLimit1Code.mmGoodForTheDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#GoodUntilCancelled
- * ExecutionTimeLimit1Code.GoodUntilCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmGoodUntilCancelled
+ * ExecutionTimeLimit1Code.mmGoodUntilCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#GoodThroughDate
- * ExecutionTimeLimit1Code.GoodThroughDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmGoodThroughDate
+ * ExecutionTimeLimit1Code.mmGoodThroughDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#GoodForTheMonth
- * ExecutionTimeLimit1Code.GoodForTheMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmGoodForTheMonth
+ * ExecutionTimeLimit1Code.mmGoodForTheMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#FillOrKill
- * ExecutionTimeLimit1Code.FillOrKill}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmFillOrKill
+ * ExecutionTimeLimit1Code.mmFillOrKill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#GoodUntilTheEndOfNextMonth
- * ExecutionTimeLimit1Code.GoodUntilTheEndOfNextMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmGoodUntilTheEndOfNextMonth
+ * ExecutionTimeLimit1Code.mmGoodUntilTheEndOfNextMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#GoodTillCrossed
- * ExecutionTimeLimit1Code.GoodTillCrossed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmGoodTillCrossed
+ * ExecutionTimeLimit1Code.mmGoodTillCrossed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#ImmediateOrCancel
- * ExecutionTimeLimit1Code.ImmediateOrCancel}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExecutionTimeLimit1Code#mmImmediateOrCancel
+ * ExecutionTimeLimit1Code.mmImmediateOrCancel}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "AtTheOpening"</li>
 	 * </ul>
 	 */
-	public static final MMCode AtTheOpening = new MMCode() {
+	public static final MMCode mmAtTheOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtTheOpening";
@@ -128,7 +128,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "AtTheClosing"</li>
 	 * </ul>
 	 */
-	public static final MMCode AtTheClosing = new MMCode() {
+	public static final MMCode mmAtTheClosing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtTheClosing";
@@ -151,7 +151,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "GoodForTheDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode GoodForTheDay = new MMCode() {
+	public static final MMCode mmGoodForTheDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodForTheDay";
@@ -174,7 +174,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "GoodUntilCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode GoodUntilCancelled = new MMCode() {
+	public static final MMCode mmGoodUntilCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodUntilCancelled";
@@ -197,7 +197,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "GoodThroughDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode GoodThroughDate = new MMCode() {
+	public static final MMCode mmGoodThroughDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodThroughDate";
@@ -220,7 +220,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "GoodForTheMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode GoodForTheMonth = new MMCode() {
+	public static final MMCode mmGoodForTheMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodForTheMonth";
@@ -243,7 +243,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "FillOrKill"</li>
 	 * </ul>
 	 */
-	public static final MMCode FillOrKill = new MMCode() {
+	public static final MMCode mmFillOrKill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FillOrKill";
@@ -266,7 +266,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "GoodUntilTheEndOfNextMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode GoodUntilTheEndOfNextMonth = new MMCode() {
+	public static final MMCode mmGoodUntilTheEndOfNextMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodUntilTheEndOfNextMonth";
@@ -289,7 +289,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "GoodTillCrossed"</li>
 	 * </ul>
 	 */
-	public static final MMCode GoodTillCrossed = new MMCode() {
+	public static final MMCode mmGoodTillCrossed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodTillCrossed";
@@ -312,7 +312,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 * name} = "ImmediateOrCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode ImmediateOrCancel = new MMCode() {
+	public static final MMCode mmImmediateOrCancel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImmediateOrCancel";
@@ -323,16 +323,16 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExecutionTimeLimit1Code";
 				definition = "Indicates from/until when an order must be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExecutionTimeLimit1Code.AtTheOpening, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.AtTheClosing,
-						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.GoodForTheDay, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.GoodUntilCancelled,
-						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.GoodThroughDate, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.GoodForTheMonth,
-						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.FillOrKill, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.GoodUntilTheEndOfNextMonth,
-						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.GoodTillCrossed, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.ImmediateOrCancel);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmAtTheOpening, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmAtTheClosing,
+						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodForTheDay, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodUntilCancelled,
+						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodThroughDate, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodForTheMonth,
+						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmFillOrKill, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodUntilTheEndOfNextMonth,
+						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodTillCrossed, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmImmediateOrCancel);
 				trace_lazy = () -> ExecutionTimeLimitCode.mmObject();
 			}
 		});

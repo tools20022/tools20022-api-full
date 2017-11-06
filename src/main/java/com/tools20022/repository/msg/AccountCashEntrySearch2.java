@@ -33,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a cash entry.
@@ -44,29 +45,29 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#AccountIdentification
- * AccountCashEntrySearch2.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmAccountIdentification
+ * AccountCashEntrySearch2.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#EntryAmount
- * AccountCashEntrySearch2.EntryAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmEntryAmount
+ * AccountCashEntrySearch2.mmEntryAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#EntryAmountCurrency
- * AccountCashEntrySearch2.EntryAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmEntryAmountCurrency
+ * AccountCashEntrySearch2.mmEntryAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#CreditDebitIndicator
- * AccountCashEntrySearch2.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmCreditDebitIndicator
+ * AccountCashEntrySearch2.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#EntryStatus
- * AccountCashEntrySearch2.EntryStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmEntryStatus
+ * AccountCashEntrySearch2.mmEntryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#EntryDate
- * AccountCashEntrySearch2.EntryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmEntryDate
+ * AccountCashEntrySearch2.mmEntryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#AccountOwner
- * AccountCashEntrySearch2.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmAccountOwner
+ * AccountCashEntrySearch2.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#AccountServicer
- * AccountCashEntrySearch2.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmAccountServicer
+ * AccountCashEntrySearch2.mmAccountServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,8 +75,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -90,6 +91,7 @@ import java.util.function.Supplier;
 public class AccountCashEntrySearch2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AccountIdentificationSearchCriteriaChoice> accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -104,8 +106,8 @@ public class AccountCashEntrySearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -126,10 +128,10 @@ public class AccountCashEntrySearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> AccountCashEntrySearch2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,6 +141,7 @@ public class AccountCashEntrySearch2 {
 			complexType_lazy = () -> AccountIdentificationSearchCriteriaChoice.mmObject();
 		}
 	};
+	protected List<AmountRangeChoice> entryAmount;
 	/**
 	 * Specifies the entry amount(s) on which the query is performed.
 	 * <p>
@@ -152,8 +155,8 @@ public class AccountCashEntrySearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,10 +176,10 @@ public class AccountCashEntrySearch2 {
 	 * "Specifies the entry amount(s) on which the query is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> AccountCashEntrySearch2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "NtryAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,6 +189,7 @@ public class AccountCashEntrySearch2 {
 			complexType_lazy = () -> AmountRangeChoice.mmObject();
 		}
 	};
+	protected List<CurrencyCode> entryAmountCurrency;
 	/**
 	 * Currency of the entry amount.
 	 * <p>
@@ -213,7 +217,7 @@ public class AccountCashEntrySearch2 {
 	 * definition} = "Currency of the entry amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryAmountCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryAmountCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntrySearch2.mmObject();
 			isDerived = false;
@@ -225,6 +229,7 @@ public class AccountCashEntrySearch2 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether an entry is a credit or a debit.
 	 * <p>
@@ -238,8 +243,8 @@ public class AccountCashEntrySearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#CreditDebitIndicator
-	 * Entry.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmCreditDebitIndicator
+	 * Entry.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -258,20 +263,21 @@ public class AccountCashEntrySearch2 {
 	 * definition} = "Indicates whether an entry is a credit or a debit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> AccountCashEntrySearch2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected List<EntryStatus1Code> entryStatus;
 	/**
 	 * Status of an entry on the books of the account servicer.
 	 * <p>
@@ -285,8 +291,8 @@ public class AccountCashEntrySearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus#EntryStatus
-	 * AccountStatus.EntryStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus#mmEntryStatus
+	 * AccountStatus.mmEntryStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -305,10 +311,10 @@ public class AccountCashEntrySearch2 {
 	 * definition} = "Status of an entry on the books of the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> AccountCashEntrySearch2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.EntryStatus;
 			isDerived = false;
 			xmlTag = "NtrySts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,6 +324,7 @@ public class AccountCashEntrySearch2 {
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
 		}
 	};
+	protected List<DateAndDateTimeSearchChoice> entryDate;
 	/**
 	 * Date and time at which an entry is posted to an account on the account
 	 * servicer's books.
@@ -332,8 +339,8 @@ public class AccountCashEntrySearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -354,10 +361,10 @@ public class AccountCashEntrySearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> AccountCashEntrySearch2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "NtryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,6 +374,7 @@ public class AccountCashEntrySearch2 {
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 		}
 	};
+	protected AnyBICIdentifier accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -380,8 +388,8 @@ public class AccountCashEntrySearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -400,20 +408,21 @@ public class AccountCashEntrySearch2 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> AccountCashEntrySearch2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected BICIdentifier accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -430,8 +439,8 @@ public class AccountCashEntrySearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -452,17 +461,17 @@ public class AccountCashEntrySearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> AccountCashEntrySearch2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
@@ -470,12 +479,12 @@ public class AccountCashEntrySearch2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountCashEntrySearch2.AccountIdentification, com.tools20022.repository.msg.AccountCashEntrySearch2.EntryAmount,
-						com.tools20022.repository.msg.AccountCashEntrySearch2.EntryAmountCurrency, com.tools20022.repository.msg.AccountCashEntrySearch2.CreditDebitIndicator,
-						com.tools20022.repository.msg.AccountCashEntrySearch2.EntryStatus, com.tools20022.repository.msg.AccountCashEntrySearch2.EntryDate, com.tools20022.repository.msg.AccountCashEntrySearch2.AccountOwner,
-						com.tools20022.repository.msg.AccountCashEntrySearch2.AccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountCashEntrySearch2.mmAccountIdentification, com.tools20022.repository.msg.AccountCashEntrySearch2.mmEntryAmount,
+						com.tools20022.repository.msg.AccountCashEntrySearch2.mmEntryAmountCurrency, com.tools20022.repository.msg.AccountCashEntrySearch2.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.AccountCashEntrySearch2.mmEntryStatus, com.tools20022.repository.msg.AccountCashEntrySearch2.mmEntryDate, com.tools20022.repository.msg.AccountCashEntrySearch2.mmAccountOwner,
+						com.tools20022.repository.msg.AccountCashEntrySearch2.mmAccountServicer);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -489,5 +498,69 @@ public class AccountCashEntrySearch2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AccountIdentificationSearchCriteriaChoice> getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(List<AccountIdentificationSearchCriteriaChoice> accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public List<AmountRangeChoice> getEntryAmount() {
+		return entryAmount;
+	}
+
+	public void setEntryAmount(List<AmountRangeChoice> entryAmount) {
+		this.entryAmount = entryAmount;
+	}
+
+	public List<CurrencyCode> getEntryAmountCurrency() {
+		return entryAmountCurrency;
+	}
+
+	public void setEntryAmountCurrency(List<CurrencyCode> entryAmountCurrency) {
+		this.entryAmountCurrency = entryAmountCurrency;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public List<EntryStatus1Code> getEntryStatus() {
+		return entryStatus;
+	}
+
+	public void setEntryStatus(List<EntryStatus1Code> entryStatus) {
+		this.entryStatus = entryStatus;
+	}
+
+	public List<DateAndDateTimeSearchChoice> getEntryDate() {
+		return entryDate;
+	}
+
+	public void setEntryDate(List<DateAndDateTimeSearchChoice> entryDate) {
+		this.entryDate = entryDate;
+	}
+
+	public AnyBICIdentifier getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(AnyBICIdentifier accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public BICIdentifier getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(BICIdentifier accountServicer) {
+		this.accountServicer = accountServicer;
 	}
 }

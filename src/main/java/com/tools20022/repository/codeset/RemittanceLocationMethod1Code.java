@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#Fax
- * RemittanceLocationMethod1Code.Fax}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#mmFax
+ * RemittanceLocationMethod1Code.mmFax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#ElectronicDataInterchange
- * RemittanceLocationMethod1Code.ElectronicDataInterchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#mmElectronicDataInterchange
+ * RemittanceLocationMethod1Code.mmElectronicDataInterchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#UniformResourceIdentifier
- * RemittanceLocationMethod1Code.UniformResourceIdentifier}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#mmUniformResourceIdentifier
+ * RemittanceLocationMethod1Code.mmUniformResourceIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#EMail
- * RemittanceLocationMethod1Code.EMail}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#mmEMail
+ * RemittanceLocationMethod1Code.mmEMail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#Post
- * RemittanceLocationMethod1Code.Post}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code#mmPost
+ * RemittanceLocationMethod1Code.mmPost}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 * name} = "Fax"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fax = new MMCode() {
+	public static final MMCode mmFax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fax";
@@ -114,7 +114,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 * name} = "ElectronicDataInterchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode ElectronicDataInterchange = new MMCode() {
+	public static final MMCode mmElectronicDataInterchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicDataInterchange";
@@ -137,7 +137,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 * name} = "UniformResourceIdentifier"</li>
 	 * </ul>
 	 */
-	public static final MMCode UniformResourceIdentifier = new MMCode() {
+	public static final MMCode mmUniformResourceIdentifier = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformResourceIdentifier";
@@ -160,7 +160,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 * name} = "EMail"</li>
 	 * </ul>
 	 */
-	public static final MMCode EMail = new MMCode() {
+	public static final MMCode mmEMail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMail";
@@ -183,7 +183,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 * name} = "Post"</li>
 	 * </ul>
 	 */
-	public static final MMCode Post = new MMCode() {
+	public static final MMCode mmPost = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Post";
@@ -194,14 +194,14 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAXI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RemittanceLocationMethod1Code";
 				definition = "Specifies the method used to deliver the remittance advice information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RemittanceLocationMethod1Code.Fax, com.tools20022.repository.codeset.RemittanceLocationMethod1Code.ElectronicDataInterchange,
-						com.tools20022.repository.codeset.RemittanceLocationMethod1Code.UniformResourceIdentifier, com.tools20022.repository.codeset.RemittanceLocationMethod1Code.EMail,
-						com.tools20022.repository.codeset.RemittanceLocationMethod1Code.Post);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmFax, com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmElectronicDataInterchange,
+						com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmUniformResourceIdentifier, com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmEMail,
+						com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmPost);
 				trace_lazy = () -> RemittanceLocationMethodCode.mmObject();
 			}
 		});

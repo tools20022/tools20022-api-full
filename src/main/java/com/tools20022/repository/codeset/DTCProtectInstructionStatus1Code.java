@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#PendingApproval
- * DTCProtectInstructionStatus1Code.PendingApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmPendingApproval
+ * DTCProtectInstructionStatus1Code.mmPendingApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#Withdrawn
- * DTCProtectInstructionStatus1Code.Withdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmWithdrawn
+ * DTCProtectInstructionStatus1Code.mmWithdrawn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#FullyCovered
- * DTCProtectInstructionStatus1Code.FullyCovered}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmFullyCovered
+ * DTCProtectInstructionStatus1Code.mmFullyCovered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#Expired
- * DTCProtectInstructionStatus1Code.Expired}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmExpired
+ * DTCProtectInstructionStatus1Code.mmExpired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#Open
- * DTCProtectInstructionStatus1Code.Open}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmOpen
+ * DTCProtectInstructionStatus1Code.mmOpen}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,7 +86,7 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "PendingApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingApproval = new MMCode() {
+	public static final MMCode mmPendingApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingApproval";
@@ -109,7 +109,7 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withdrawn = new MMCode() {
+	public static final MMCode mmWithdrawn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
@@ -132,7 +132,7 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "FullyCovered"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullyCovered = new MMCode() {
+	public static final MMCode mmFullyCovered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyCovered";
@@ -155,7 +155,7 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Expired"</li>
 	 * </ul>
 	 */
-	public static final MMCode Expired = new MMCode() {
+	public static final MMCode mmExpired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
@@ -178,7 +178,7 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode Open = new MMCode() {
+	public static final MMCode mmOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
@@ -189,13 +189,13 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCProtectInstructionStatus1Code";
 				definition = "DTC (The Depository Trust Company) system status code of protect instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.PendingApproval, com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.Withdrawn,
-						com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.FullyCovered, com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.Expired,
-						com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.Open);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmPendingApproval, com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmWithdrawn,
+						com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmFullyCovered, com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmExpired,
+						com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmOpen);
 				trace_lazy = () -> DTCInstructionStatusCode.mmObject();
 			}
 		});

@@ -34,18 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OwnershipBeneficiaryRate1#Rate
- * OwnershipBeneficiaryRate1.Rate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OwnershipBeneficiaryRate1#Fraction
- * OwnershipBeneficiaryRate1.Fraction}</li>
+ * {@linkplain com.tools20022.repository.msg.OwnershipBeneficiaryRate1#mmRate
+ * OwnershipBeneficiaryRate1.mmRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OwnershipBeneficiaryRate1#mmFraction
+ * OwnershipBeneficiaryRate1.mmFraction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OwnershipBeneficiaryRate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rate;
 	/**
 	 * Ownership or beneficial ownership expressed as a percentage.
 	 * <p>
@@ -90,7 +92,7 @@ public class OwnershipBeneficiaryRate1 {
 	 * "Ownership or beneficial ownership expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OwnershipBeneficiaryRate1.mmObject();
 			isDerived = false;
@@ -98,11 +100,12 @@ public class OwnershipBeneficiaryRate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Ownership or beneficial ownership expressed as a percentage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Max35Text fraction;
 	/**
 	 * Ownership or beneficial ownership expressed as a fraction or another
 	 * form.
@@ -133,7 +136,7 @@ public class OwnershipBeneficiaryRate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Fraction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFraction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OwnershipBeneficiaryRate1.mmObject();
 			isDerived = false;
@@ -141,8 +144,8 @@ public class OwnershipBeneficiaryRate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fraction";
 			definition = "Ownership or beneficial ownership expressed as a fraction or another form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -150,13 +153,29 @@ public class OwnershipBeneficiaryRate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OwnershipBeneficiaryRate1.Rate, com.tools20022.repository.msg.OwnershipBeneficiaryRate1.Fraction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OwnershipBeneficiaryRate1.mmRate, com.tools20022.repository.msg.OwnershipBeneficiaryRate1.mmFraction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OwnershipBeneficiaryRate1";
 				definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public Max35Text getFraction() {
+		return fraction;
+	}
+
+	public void setFraction(Max35Text fraction) {
+		this.fraction = fraction;
 	}
 }

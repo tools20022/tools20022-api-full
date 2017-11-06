@@ -39,13 +39,13 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InstructedAmountOrInterbankSettlementAmount
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInstructedAmountOrInterbankSettlementAmount
  * CorrectivePaymentInstructionExtract.
- * InstructedAmountOrInterbankSettlementAmount}</li>
+ * mmInstructedAmountOrInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#RequestedExecutionDateOrInterbankSettlementDate
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmRequestedExecutionDateOrInterbankSettlementDate
  * CorrectivePaymentInstructionExtract.
- * RequestedExecutionDateOrInterbankSettlementDate}</li>
+ * mmRequestedExecutionDateOrInterbankSettlementDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,20 +53,20 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InstructionIdentification
- * CorrectivePaymentInstructionExtract.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInstructionIdentification
+ * CorrectivePaymentInstructionExtract.mmInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InstructedAmount
- * CorrectivePaymentInstructionExtract.InstructedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInstructedAmount
+ * CorrectivePaymentInstructionExtract.mmInstructedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InterbankSettlementAmount
- * CorrectivePaymentInstructionExtract.InterbankSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInterbankSettlementAmount
+ * CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#RequestedExecutionDate
- * CorrectivePaymentInstructionExtract.RequestedExecutionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmRequestedExecutionDate
+ * CorrectivePaymentInstructionExtract.mmRequestedExecutionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InterbankSettlementDate
- * CorrectivePaymentInstructionExtract.InterbankSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInterbankSettlementDate
+ * CorrectivePaymentInstructionExtract.mmInterbankSettlementDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -75,8 +75,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -93,6 +93,7 @@ import java.util.function.Supplier;
 public class CorrectivePaymentInstructionExtract {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text instructionIdentification;
 	/**
 	 * Identification of the corrective payment instruction (eg, field 20 of an
 	 * MT 103) sent to resolve the case.
@@ -106,8 +107,8 @@ public class CorrectivePaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#InstructionIdentification
-	 * PaymentIdentification.InstructionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmInstructionIdentification
+	 * PaymentIdentification.mmInstructionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,20 +129,21 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.InstructionIdentification;
 			isDerived = false;
 			xmlTag = "InstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identification of the corrective payment instruction (eg, field 20 of an MT 103) sent to resolve the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount instructedAmount;
 	/**
 	 * Amount of money to be moved between the debtor and creditor, before
 	 * deduction of charges, expressed in the currency as ordered by the
@@ -157,8 +159,8 @@ public class CorrectivePaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,20 +181,21 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount interbankSettlementAmount;
 	/**
 	 * Amount of money moved between the instructing agent and the instructed
 	 * agent.
@@ -207,8 +210,8 @@ public class CorrectivePaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -229,20 +232,21 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate requestedExecutionDate;
 	/**
 	 * Date the debtor requests the clearing agent to process the payment
 	 * instruction.
@@ -256,8 +260,8 @@ public class CorrectivePaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#RequestedExecutionDate
-	 * PaymentExecution.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmRequestedExecutionDate
+	 * PaymentExecution.mmRequestedExecutionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -278,20 +282,21 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.RequestedExecutionDate;
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date the debtor requests the clearing agent to process the payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate interbankSettlementDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -306,8 +311,8 @@ public class CorrectivePaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -328,17 +333,17 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -353,11 +358,11 @@ public class CorrectivePaymentInstructionExtract {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InstructedAmount
-	 * CorrectivePaymentInstructionExtract.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInstructedAmount
+	 * CorrectivePaymentInstructionExtract.mmInstructedAmount}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InterbankSettlementAmount
-	 * CorrectivePaymentInstructionExtract.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInterbankSettlementAmount
+	 * CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -377,13 +382,13 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor InstructedAmountOrInterbankSettlementAmount = new MMXor() {
+	public static final MMXor mmInstructedAmountOrInterbankSettlementAmount = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountOrInterbankSettlementAmount";
 			definition = "If InstructedAmount is present, then InterbankSettlementAmount is not allowed.\nIf InterbankSettlementAmount is present, then InstructedAmount is not allowed.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InstructedAmount, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InterbankSettlementAmount);
 			messageComponent_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInstructedAmount, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount);
 		}
 	};
 	/**
@@ -397,11 +402,11 @@ public class CorrectivePaymentInstructionExtract {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#RequestedExecutionDate
-	 * CorrectivePaymentInstructionExtract.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmRequestedExecutionDate
+	 * CorrectivePaymentInstructionExtract.mmRequestedExecutionDate}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InterbankSettlementDate
-	 * CorrectivePaymentInstructionExtract.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInterbankSettlementDate
+	 * CorrectivePaymentInstructionExtract.mmInterbankSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -421,24 +426,25 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor RequestedExecutionDateOrInterbankSettlementDate = new MMXor() {
+	public static final MMXor mmRequestedExecutionDateOrInterbankSettlementDate = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDateOrInterbankSettlementDate";
 			definition = "If RequestedExecutionDate is present, then InterbankSettlementDate is not allowed.\nIf InterbankSettlementDate is present, then RequestedExecutionDate is not allowed.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.RequestedExecutionDate, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InterbankSettlementDate);
 			messageComponent_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+			impactedElements_lazy = () -> Arrays
+					.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmRequestedExecutionDate, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementDate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InstructionIdentification, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InstructedAmount,
-						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InterbankSettlementAmount, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.RequestedExecutionDate,
-						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InterbankSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInstructionIdentification, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInstructedAmount,
+						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementDate);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -449,10 +455,50 @@ public class CorrectivePaymentInstructionExtract {
 				})).get();
 				name = "CorrectivePaymentInstructionExtract";
 				definition = "Details of a correction of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InstructedAmountOrInterbankSettlementAmount,
-						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.RequestedExecutionDateOrInterbankSettlementDate);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInstructedAmountOrInterbankSettlementAmount,
+						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmRequestedExecutionDateOrInterbankSettlementDate);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getInstructionIdentification() {
+		return instructionIdentification;
+	}
+
+	public void setInstructionIdentification(Max35Text instructionIdentification) {
+		this.instructionIdentification = instructionIdentification;
+	}
+
+	public CurrencyAndAmount getInstructedAmount() {
+		return instructedAmount;
+	}
+
+	public void setInstructedAmount(CurrencyAndAmount instructedAmount) {
+		this.instructedAmount = instructedAmount;
+	}
+
+	public CurrencyAndAmount getInterbankSettlementAmount() {
+		return interbankSettlementAmount;
+	}
+
+	public void setInterbankSettlementAmount(CurrencyAndAmount interbankSettlementAmount) {
+		this.interbankSettlementAmount = interbankSettlementAmount;
+	}
+
+	public ISODate getRequestedExecutionDate() {
+		return requestedExecutionDate;
+	}
+
+	public void setRequestedExecutionDate(ISODate requestedExecutionDate) {
+		this.requestedExecutionDate = requestedExecutionDate;
+	}
+
+	public ISODate getInterbankSettlementDate() {
+		return interbankSettlementDate;
+	}
+
+	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+		this.interbankSettlementDate = interbankSettlementDate;
 	}
 }

@@ -38,8 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InstructingAgentRole#Previous
- * InstructingAgentRole.Previous}</li>
+ * {@linkplain com.tools20022.repository.entity.InstructingAgentRole#mmPrevious
+ * InstructingAgentRole.mmPrevious}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,11 +47,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails2#InstructingAgentIdentification
- * PaymentInstructionReferenceDetails2.InstructingAgentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails2#mmInstructingAgentIdentification
+ * PaymentInstructionReferenceDetails2.mmInstructingAgentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ShortPaymentIdentification1#InstructingAgent
- * ShortPaymentIdentification1.InstructingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.ShortPaymentIdentification1#mmInstructingAgent
+ * ShortPaymentIdentification1.mmInstructingAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructingAgentRole extends PaymentPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator previous;
 	/**
 	 * Agent immediately prior to the instructing agent.
 	 * <p>
@@ -103,15 +104,15 @@ public class InstructingAgentRole extends PaymentPartyRole {
 	 * definition} = "Agent immediately prior to the instructing agent."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Previous = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPrevious = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> InstructingAgentRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Previous";
 			definition = "Agent immediately prior to the instructing agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -119,15 +120,23 @@ public class InstructingAgentRole extends PaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructingAgentRole";
 				definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReferenceDetails2.InstructingAgentIdentification, com.tools20022.repository.msg.ShortPaymentIdentification1.InstructingAgent);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReferenceDetails2.mmInstructingAgentIdentification, com.tools20022.repository.msg.ShortPaymentIdentification1.mmInstructingAgent);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InstructingAgentRole.Previous);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InstructingAgentRole.mmPrevious);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getPrevious() {
+		return previous;
+	}
+
+	public void setPrevious(YesNoIndicator previous) {
+		this.previous = previous;
 	}
 }

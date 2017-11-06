@@ -34,28 +34,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext11#CardPresent
- * PaymentContext11.CardPresent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext11#mmCardPresent
+ * PaymentContext11.mmCardPresent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext11#CardholderPresent
- * PaymentContext11.CardholderPresent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext11#OnLineContext
- * PaymentContext11.OnLineContext}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext11#mmCardholderPresent
+ * PaymentContext11.mmCardholderPresent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext11#AttendanceContext
- * PaymentContext11.AttendanceContext}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext11#mmOnLineContext
+ * PaymentContext11.mmOnLineContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext11#TransactionEnvironment
- * PaymentContext11.TransactionEnvironment}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext11#mmAttendanceContext
+ * PaymentContext11.mmAttendanceContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext11#TransactionChannel
- * PaymentContext11.TransactionChannel}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext11#mmTransactionEnvironment
+ * PaymentContext11.mmTransactionEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext11#CardDataEntryMode
- * PaymentContext11.CardDataEntryMode}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext11#mmTransactionChannel
+ * PaymentContext11.mmTransactionChannel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext11#FallbackIndicator
- * PaymentContext11.FallbackIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext11#mmCardDataEntryMode
+ * PaymentContext11.mmCardDataEntryMode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext11#mmFallbackIndicator
+ * PaymentContext11.mmFallbackIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentContext11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator cardPresent;
 	/**
 	 * Indicates whether the transaction has been initiated by a card physically
 	 * present or not.
@@ -103,8 +105,8 @@ public class PaymentContext11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardPresent
-	 * CardPaymentAcquiring.CardPresent}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPresent
+	 * CardPaymentAcquiring.mmCardPresent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -127,33 +129,34 @@ public class PaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#CardPresent
-	 * PaymentContext17.CardPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#mmCardPresent
+	 * PaymentContext17.mmCardPresent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#CardPresent
-	 * PaymentContext2.CardPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#mmCardPresent
+	 * PaymentContext2.mmCardPresent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardPresent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardPresent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPresent;
 			componentContext_lazy = () -> PaymentContext11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardPresent;
 			isDerived = false;
 			xmlTag = "CardPres";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardPresent";
 			definition = "Indicates whether the transaction has been initiated by a card physically present or not.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.CardPresent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.CardPresent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.mmCardPresent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmCardPresent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator cardholderPresent;
 	/**
 	 * Indicates whether the transaction has been initiated in presence of the
 	 * cardholder or not.
@@ -168,8 +171,8 @@ public class PaymentContext11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardholderPresent
-	 * CardPaymentAcquiring.CardholderPresent}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardholderPresent
+	 * CardPaymentAcquiring.mmCardholderPresent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,33 +195,34 @@ public class PaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#CardholderPresent
-	 * PaymentContext17.CardholderPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#mmCardholderPresent
+	 * PaymentContext17.mmCardholderPresent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#CardholderPresent
-	 * PaymentContext2.CardholderPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#mmCardholderPresent
+	 * PaymentContext2.mmCardholderPresent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardholderPresent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardholderPresent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardholderPresent;
 			componentContext_lazy = () -> PaymentContext11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardholderPresent;
 			isDerived = false;
 			xmlTag = "CrdhldrPres";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderPresent";
 			definition = "Indicates whether the transaction has been initiated in presence of the cardholder or not.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.CardholderPresent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.CardholderPresent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.mmCardholderPresent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmCardholderPresent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator onLineContext;
 	/**
 	 * On-line or off-line context of the transaction.
 	 * <p>
@@ -232,8 +236,8 @@ public class PaymentContext11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#OnLineContext
-	 * CardPaymentAcquiring.OnLineContext}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmOnLineContext
+	 * CardPaymentAcquiring.mmOnLineContext}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,33 +258,34 @@ public class PaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#OnLineContext
-	 * PaymentContext17.OnLineContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#mmOnLineContext
+	 * PaymentContext17.mmOnLineContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#OnLineContext
-	 * PaymentContext2.OnLineContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#mmOnLineContext
+	 * PaymentContext2.mmOnLineContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OnLineContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOnLineContext = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmOnLineContext;
 			componentContext_lazy = () -> PaymentContext11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.OnLineContext;
 			isDerived = false;
 			xmlTag = "OnLineCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineContext";
 			definition = "On-line or off-line context of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.OnLineContext;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.OnLineContext);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.mmOnLineContext);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmOnLineContext;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected AttendanceContext1Code attendanceContext;
 	/**
 	 * Human attendance at the POI location during the transaction.
 	 * <p>
@@ -294,8 +299,8 @@ public class PaymentContext11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#AttendanceContext
-	 * CardPaymentAcquiring.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendanceContext
+	 * CardPaymentAcquiring.mmAttendanceContext}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -317,33 +322,34 @@ public class PaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#AttendanceContext
-	 * PaymentContext17.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#mmAttendanceContext
+	 * PaymentContext17.mmAttendanceContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#AttendanceContext
-	 * PaymentContext2.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#mmAttendanceContext
+	 * PaymentContext2.mmAttendanceContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> PaymentContext11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.AttendanceContext;
 			isDerived = false;
 			xmlTag = "AttndncCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceContext";
 			definition = "Human attendance at the POI location during the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.AttendanceContext;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.AttendanceContext);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.mmAttendanceContext);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmAttendanceContext;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
 		}
 	};
+	protected TransactionEnvironment1Code transactionEnvironment;
 	/**
 	 * Indicates the environment of the transaction.
 	 * <p>
@@ -357,8 +363,8 @@ public class PaymentContext11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TransactionEnvironment
-	 * CardPaymentAcquiring.TransactionEnvironment}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionEnvironment
+	 * CardPaymentAcquiring.mmTransactionEnvironment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -379,33 +385,34 @@ public class PaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#TransactionEnvironment
-	 * PaymentContext17.TransactionEnvironment}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#mmTransactionEnvironment
+	 * PaymentContext17.mmTransactionEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#TransactionEnvironment
-	 * PaymentContext2.TransactionEnvironment}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#mmTransactionEnvironment
+	 * PaymentContext2.mmTransactionEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionEnvironment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionEnvironment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionEnvironment;
 			componentContext_lazy = () -> PaymentContext11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TransactionEnvironment;
 			isDerived = false;
 			xmlTag = "TxEnvt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionEnvironment";
 			definition = "Indicates the environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.TransactionEnvironment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.TransactionEnvironment);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.mmTransactionEnvironment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmTransactionEnvironment;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment1Code.mmObject();
 		}
 	};
+	protected TransactionChannel3Code transactionChannel;
 	/**
 	 * Identifies the type of the communication channels used by the cardholder
 	 * to the acceptor system.
@@ -420,8 +427,8 @@ public class PaymentContext11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TransactionChannel
-	 * CardPaymentAcquiring.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionChannel
+	 * CardPaymentAcquiring.mmTransactionChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -444,33 +451,34 @@ public class PaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#TransactionChannel
-	 * PaymentContext17.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#mmTransactionChannel
+	 * PaymentContext17.mmTransactionChannel}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#TransactionChannel
-	 * PaymentContext2.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#mmTransactionChannel
+	 * PaymentContext2.mmTransactionChannel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionChannel;
 			componentContext_lazy = () -> PaymentContext11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TransactionChannel;
 			isDerived = false;
 			xmlTag = "TxChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannel";
 			definition = "Identifies the type of the communication channels used by the cardholder to the acceptor system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.TransactionChannel;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.TransactionChannel);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.mmTransactionChannel);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmTransactionChannel;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TransactionChannel3Code.mmObject();
 		}
 	};
+	protected CardDataReading1Code cardDataEntryMode;
 	/**
 	 * Entry mode of the card data.
 	 * <p>
@@ -484,8 +492,8 @@ public class PaymentContext11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardDataEntryMode
-	 * CardPaymentAcquiring.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardDataEntryMode
+	 * CardPaymentAcquiring.mmCardDataEntryMode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -506,33 +514,34 @@ public class PaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#CardDataEntryMode
-	 * PaymentContext17.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#mmCardDataEntryMode
+	 * PaymentContext17.mmCardDataEntryMode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#CardDataEntryMode
-	 * PaymentContext2.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#mmCardDataEntryMode
+	 * PaymentContext2.mmCardDataEntryMode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardDataEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardDataEntryMode;
 			componentContext_lazy = () -> PaymentContext11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardDataEntryMode;
 			isDerived = false;
 			xmlTag = "CardDataNtryMd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataEntryMode";
 			definition = "Entry mode of the card data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.CardDataEntryMode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.CardDataEntryMode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.mmCardDataEntryMode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmCardDataEntryMode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
 		}
 	};
+	protected CardFallback1Code fallbackIndicator;
 	/**
 	 * Indicator of a card entry mode fallback.
 	 * <p>
@@ -563,18 +572,18 @@ public class PaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#FallbackIndicator
-	 * PaymentContext17.FallbackIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext17#mmFallbackIndicator
+	 * PaymentContext17.mmFallbackIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#FallbackIndicator
-	 * PaymentContext2.FallbackIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext2#mmFallbackIndicator
+	 * PaymentContext2.mmFallbackIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FallbackIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFallbackIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentContext11.mmObject();
 			isDerived = false;
@@ -582,10 +591,10 @@ public class PaymentContext11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackIndicator";
 			definition = "Indicator of a card entry mode fallback.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.FallbackIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.FallbackIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext17.mmFallbackIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmFallbackIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardFallback1Code.mmObject();
 		}
 	};
@@ -593,18 +602,82 @@ public class PaymentContext11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext11.CardPresent, com.tools20022.repository.msg.PaymentContext11.CardholderPresent,
-						com.tools20022.repository.msg.PaymentContext11.OnLineContext, com.tools20022.repository.msg.PaymentContext11.AttendanceContext, com.tools20022.repository.msg.PaymentContext11.TransactionEnvironment,
-						com.tools20022.repository.msg.PaymentContext11.TransactionChannel, com.tools20022.repository.msg.PaymentContext11.CardDataEntryMode, com.tools20022.repository.msg.PaymentContext11.FallbackIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext11.mmCardPresent, com.tools20022.repository.msg.PaymentContext11.mmCardholderPresent,
+						com.tools20022.repository.msg.PaymentContext11.mmOnLineContext, com.tools20022.repository.msg.PaymentContext11.mmAttendanceContext, com.tools20022.repository.msg.PaymentContext11.mmTransactionEnvironment,
+						com.tools20022.repository.msg.PaymentContext11.mmTransactionChannel, com.tools20022.repository.msg.PaymentContext11.mmCardDataEntryMode, com.tools20022.repository.msg.PaymentContext11.mmFallbackIndicator);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentContext11";
 				definition = "Payment context in which the transaction is performed.";
-				previousVersion_lazy = () -> PaymentContext2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PaymentContext17.mmObject());
+				previousVersion_lazy = () -> PaymentContext2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getCardPresent() {
+		return cardPresent;
+	}
+
+	public void setCardPresent(TrueFalseIndicator cardPresent) {
+		this.cardPresent = cardPresent;
+	}
+
+	public TrueFalseIndicator getCardholderPresent() {
+		return cardholderPresent;
+	}
+
+	public void setCardholderPresent(TrueFalseIndicator cardholderPresent) {
+		this.cardholderPresent = cardholderPresent;
+	}
+
+	public TrueFalseIndicator getOnLineContext() {
+		return onLineContext;
+	}
+
+	public void setOnLineContext(TrueFalseIndicator onLineContext) {
+		this.onLineContext = onLineContext;
+	}
+
+	public AttendanceContext1Code getAttendanceContext() {
+		return attendanceContext;
+	}
+
+	public void setAttendanceContext(AttendanceContext1Code attendanceContext) {
+		this.attendanceContext = attendanceContext;
+	}
+
+	public TransactionEnvironment1Code getTransactionEnvironment() {
+		return transactionEnvironment;
+	}
+
+	public void setTransactionEnvironment(TransactionEnvironment1Code transactionEnvironment) {
+		this.transactionEnvironment = transactionEnvironment;
+	}
+
+	public TransactionChannel3Code getTransactionChannel() {
+		return transactionChannel;
+	}
+
+	public void setTransactionChannel(TransactionChannel3Code transactionChannel) {
+		this.transactionChannel = transactionChannel;
+	}
+
+	public CardDataReading1Code getCardDataEntryMode() {
+		return cardDataEntryMode;
+	}
+
+	public void setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
+		this.cardDataEntryMode = cardDataEntryMode;
+	}
+
+	public CardFallback1Code getFallbackIndicator() {
+		return fallbackIndicator;
+	}
+
+	public void setFallbackIndicator(CardFallback1Code fallbackIndicator) {
+		this.fallbackIndicator = fallbackIndicator;
 	}
 }

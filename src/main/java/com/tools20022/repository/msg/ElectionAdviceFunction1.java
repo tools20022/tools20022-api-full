@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElectionAdviceFunction1#ElectionType
- * ElectionAdviceFunction1.ElectionType}</li>
+ * {@linkplain com.tools20022.repository.msg.ElectionAdviceFunction1#mmElectionType
+ * ElectionAdviceFunction1.mmElectionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElectionAdviceFunction1#PreviousAgentCAElectionAdviceIdentification
- * ElectionAdviceFunction1.PreviousAgentCAElectionAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ElectionAdviceFunction1#mmPreviousAgentCAElectionAdviceIdentification
+ * ElectionAdviceFunction1.mmPreviousAgentCAElectionAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElectionAdviceFunction1#AgentCAElectionStatusAdviceIdentification
- * ElectionAdviceFunction1.AgentCAElectionStatusAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ElectionAdviceFunction1#mmAgentCAElectionStatusAdviceIdentification
+ * ElectionAdviceFunction1.mmAgentCAElectionStatusAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElectionAdviceFunction1#AgentCAElectionAmendmentRequestIdentification
- * ElectionAdviceFunction1.AgentCAElectionAmendmentRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ElectionAdviceFunction1#mmAgentCAElectionAmendmentRequestIdentification
+ * ElectionAdviceFunction1.mmAgentCAElectionAmendmentRequestIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#ElectionAdviceTypeAndLinkage
- * AgentCAElectionAdviceV01.ElectionAdviceTypeAndLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmElectionAdviceTypeAndLinkage
+ * AgentCAElectionAdviceV01.mmElectionAdviceTypeAndLinkage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ElectionAdviceFunction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ElectionType1Code electionType;
 	/**
 	 * Type of election advice.
 	 * <p>
@@ -103,7 +104,7 @@ public class ElectionAdviceFunction1 {
 	 * definition} = "Type of election advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElectionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElectionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
 			isDerived = false;
@@ -111,11 +112,12 @@ public class ElectionAdviceFunction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionType";
 			definition = "Type of election advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ElectionType1Code.mmObject();
 		}
 	};
+	protected DocumentIdentification8 previousAgentCAElectionAdviceIdentification;
 	/**
 	 * Identification of the previous Agent Corporate Action Election Advice
 	 * that is being amended.
@@ -147,7 +149,7 @@ public class ElectionAdviceFunction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousAgentCAElectionAdviceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousAgentCAElectionAdviceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class ElectionAdviceFunction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousAgentCAElectionAdviceIdentification";
 			definition = "Identification of the previous Agent Corporate Action Election Advice that is being amended.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> DocumentIdentification8.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAElectionStatusAdviceIdentification;
 	/**
 	 * Identification of the Agent Corporate Action Election Status Advice by
 	 * which the issuer (agent) accepts the election amendment request.
@@ -191,7 +194,7 @@ public class ElectionAdviceFunction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentCAElectionStatusAdviceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentCAElectionStatusAdviceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
 			isDerived = false;
@@ -199,11 +202,12 @@ public class ElectionAdviceFunction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionStatusAdviceIdentification";
 			definition = "Identification of the Agent Corporate Action Election Status Advice by which the issuer (agent) accepts the election amendment request.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> DocumentIdentification8.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAElectionAmendmentRequestIdentification;
 	/**
 	 * Identification of the Agent Corporate Action Election Amendment Request
 	 * by which the CSD request the authorisation to amend an election.
@@ -235,7 +239,7 @@ public class ElectionAdviceFunction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentCAElectionAmendmentRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentCAElectionAmendmentRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
 			isDerived = false;
@@ -243,24 +247,56 @@ public class ElectionAdviceFunction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionAmendmentRequestIdentification";
 			definition = "Identification of the Agent Corporate Action Election Amendment Request by which the CSD request the authorisation to amend an election.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> DocumentIdentification8.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElectionAdviceFunction1.ElectionType, com.tools20022.repository.msg.ElectionAdviceFunction1.PreviousAgentCAElectionAdviceIdentification,
-						com.tools20022.repository.msg.ElectionAdviceFunction1.AgentCAElectionStatusAdviceIdentification, com.tools20022.repository.msg.ElectionAdviceFunction1.AgentCAElectionAmendmentRequestIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.ElectionAdviceTypeAndLinkage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElectionAdviceFunction1.mmElectionType, com.tools20022.repository.msg.ElectionAdviceFunction1.mmPreviousAgentCAElectionAdviceIdentification,
+						com.tools20022.repository.msg.ElectionAdviceFunction1.mmAgentCAElectionStatusAdviceIdentification, com.tools20022.repository.msg.ElectionAdviceFunction1.mmAgentCAElectionAmendmentRequestIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmElectionAdviceTypeAndLinkage);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ElectionAdviceFunction1";
 				definition = "Provides information about the type of election advice and linked messages.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ElectionType1Code getElectionType() {
+		return electionType;
+	}
+
+	public void setElectionType(ElectionType1Code electionType) {
+		this.electionType = electionType;
+	}
+
+	public DocumentIdentification8 getPreviousAgentCAElectionAdviceIdentification() {
+		return previousAgentCAElectionAdviceIdentification;
+	}
+
+	public void setPreviousAgentCAElectionAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 previousAgentCAElectionAdviceIdentification) {
+		this.previousAgentCAElectionAdviceIdentification = previousAgentCAElectionAdviceIdentification;
+	}
+
+	public DocumentIdentification8 getAgentCAElectionStatusAdviceIdentification() {
+		return agentCAElectionStatusAdviceIdentification;
+	}
+
+	public void setAgentCAElectionStatusAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 agentCAElectionStatusAdviceIdentification) {
+		this.agentCAElectionStatusAdviceIdentification = agentCAElectionStatusAdviceIdentification;
+	}
+
+	public DocumentIdentification8 getAgentCAElectionAmendmentRequestIdentification() {
+		return agentCAElectionAmendmentRequestIdentification;
+	}
+
+	public void setAgentCAElectionAmendmentRequestIdentification(com.tools20022.repository.msg.DocumentIdentification8 agentCAElectionAmendmentRequestIdentification) {
+		this.agentCAElectionAmendmentRequestIdentification = agentCAElectionAmendmentRequestIdentification;
 	}
 }

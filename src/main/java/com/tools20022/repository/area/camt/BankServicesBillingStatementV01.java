@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.BankServicesBillingISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope The BankServicesBillingStatement message is used to send from a
@@ -82,18 +83,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV01#ReportHeader
- * BankServicesBillingStatementV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV01#mmReportHeader
+ * BankServicesBillingStatementV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV01#BillingStatementGroup
- * BankServicesBillingStatementV01.BillingStatementGroup}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV01#mmBillingStatementGroup
+ * BankServicesBillingStatementV01.mmBillingStatementGroup}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV01#identifier
- * BankServicesBillingStatementV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.086.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankServicesBillingStatementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportHeader3 reportHeader;
 	/**
 	 * Provides header details on the billing statement report.
 	 * <p>
@@ -141,24 +141,25 @@ public class BankServicesBillingStatementV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV02#ReportHeader
-	 * BankServicesBillingStatementV02.ReportHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV02#mmReportHeader
+	 * BankServicesBillingStatementV02.mmReportHeader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "Provides header details on the billing statement report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV02.ReportHeader);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV02.mmReportHeader);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader3.mmObject();
 		}
 	};
+	protected List<StatementGroup1> billingStatementGroup;
 	/**
 	 * Group of bank services billing statements with the same sender and
 	 * receiver characteristics.
@@ -186,48 +187,21 @@ public class BankServicesBillingStatementV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV02#BillingStatementGroup
-	 * BankServicesBillingStatementV02.BillingStatementGroup}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV02#mmBillingStatementGroup
+	 * BankServicesBillingStatementV02.mmBillingStatementGroup}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BillingStatementGroup = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBillingStatementGroup = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BllgStmtGrp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingStatementGroup";
 			definition = "Group of bank services billing statements with the same sender and receiver characteristics.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV02.BillingStatementGroup);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV02.mmBillingStatementGroup);
 			minOccurs = 1;
 			complexType_lazy = () -> StatementGroup1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "086"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "086";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -242,10 +216,34 @@ public class BankServicesBillingStatementV01 {
 				rootElement = "Document";
 				xmlTag = "BkSvcsBllgStmt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV01.ReportHeader, com.tools20022.repository.area.camt.BankServicesBillingStatementV01.BillingStatementGroup);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.BankServicesBillingStatementV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV01.mmReportHeader, com.tools20022.repository.area.camt.BankServicesBillingStatementV01.mmBillingStatementGroup);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "086";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportHeader3 getReportHeader() {
+		return reportHeader;
+	}
+
+	public void setReportHeader(ReportHeader3 reportHeader) {
+		this.reportHeader = reportHeader;
+	}
+
+	public List<StatementGroup1> getBillingStatementGroup() {
+		return billingStatementGroup;
+	}
+
+	public void setBillingStatementGroup(List<StatementGroup1> billingStatementGroup) {
+		this.billingStatementGroup = billingStatementGroup;
 	}
 }

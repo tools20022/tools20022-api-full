@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#AmendmentDate
- * RegisteredContractAmendment1.AmendmentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#mmAmendmentDate
+ * RegisteredContractAmendment1.mmAmendmentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#Document
- * RegisteredContractAmendment1.Document}</li>
+ * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#mmDocument
+ * RegisteredContractAmendment1.mmDocument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#StartDate
- * RegisteredContractAmendment1.StartDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#mmStartDate
+ * RegisteredContractAmendment1.mmStartDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#AmendmentReason
- * RegisteredContractAmendment1.AmendmentReason}</li>
+ * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#mmAmendmentReason
+ * RegisteredContractAmendment1.mmAmendmentReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#AdditionalInformation
- * RegisteredContractAmendment1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#mmAdditionalInformation
+ * RegisteredContractAmendment1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegisteredContractAmendment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate amendmentDate;
 	/**
 	 * Date of the amendment of the registered contract.
 	 * <p>
@@ -87,8 +88,8 @@ public class RegisteredContractAmendment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#SubmissionDate
-	 * RegisteredContract.SubmissionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmSubmissionDate
+	 * RegisteredContract.mmSubmissionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +108,21 @@ public class RegisteredContractAmendment1 {
 	 * definition} = "Date of the amendment of the registered contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmendmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmendmentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmSubmissionDate;
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.SubmissionDate;
 			isDerived = false;
 			xmlTag = "AmdmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentDate";
 			definition = "Date of the amendment of the registered contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DocumentIdentification28 document;
 	/**
 	 * Reference of the amendment document.
 	 * <p>
@@ -133,8 +135,8 @@ public class RegisteredContractAmendment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Document
-	 * Agreement.Document}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDocument
+	 * Agreement.mmDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,21 +155,22 @@ public class RegisteredContractAmendment1 {
 	 * definition} = "Reference of the amendment document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Document = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDocument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDocument;
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Document;
 			isDerived = false;
 			xmlTag = "Doc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Document";
 			definition = "Reference of the amendment document.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification28.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification28.mmObject();
 		}
 	};
+	protected ISODate startDate;
 	/**
 	 * Date from which the amendment is applicable.
 	 * <p>
@@ -180,8 +183,8 @@ public class RegisteredContractAmendment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#DateSigned
-	 * Agreement.DateSigned}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDateSigned
+	 * Agreement.mmDateSigned}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,20 +203,21 @@ public class RegisteredContractAmendment1 {
 	 * definition} = "Date from which the amendment is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.DateSigned;
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Date from which the amendment is applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text amendmentReason;
 	/**
 	 * Reason for the amendment.
 	 * <p>
@@ -226,8 +230,8 @@ public class RegisteredContractAmendment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -246,20 +250,21 @@ public class RegisteredContractAmendment1 {
 	 * definition} = "Reason for the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmendmentReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmendmentReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AmdmntRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentReason";
 			definition = "Reason for the amendment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max1025Text additionalInformation;
 	/**
 	 * Further details on the amendment.
 	 * <p>
@@ -287,7 +292,7 @@ public class RegisteredContractAmendment1 {
 	 * definition} = "Further details on the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
 			isDerived = false;
@@ -295,8 +300,8 @@ public class RegisteredContractAmendment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the amendment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max1025Text.mmObject();
 		}
 	};
@@ -304,16 +309,56 @@ public class RegisteredContractAmendment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegisteredContractAmendment1.AmendmentDate, com.tools20022.repository.msg.RegisteredContractAmendment1.Document,
-						com.tools20022.repository.msg.RegisteredContractAmendment1.StartDate, com.tools20022.repository.msg.RegisteredContractAmendment1.AmendmentReason,
-						com.tools20022.repository.msg.RegisteredContractAmendment1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegisteredContractAmendment1.mmAmendmentDate, com.tools20022.repository.msg.RegisteredContractAmendment1.mmDocument,
+						com.tools20022.repository.msg.RegisteredContractAmendment1.mmStartDate, com.tools20022.repository.msg.RegisteredContractAmendment1.mmAmendmentReason,
+						com.tools20022.repository.msg.RegisteredContractAmendment1.mmAdditionalInformation);
 				trace_lazy = () -> RegisteredContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegisteredContractAmendment1";
 				definition = "Amendment details and reason related to the registered contract.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getAmendmentDate() {
+		return amendmentDate;
+	}
+
+	public void setAmendmentDate(ISODate amendmentDate) {
+		this.amendmentDate = amendmentDate;
+	}
+
+	public DocumentIdentification28 getDocument() {
+		return document;
+	}
+
+	public void setDocument(com.tools20022.repository.msg.DocumentIdentification28 document) {
+		this.document = document;
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public Max35Text getAmendmentReason() {
+		return amendmentReason;
+	}
+
+	public void setAmendmentReason(Max35Text amendmentReason) {
+		this.amendmentReason = amendmentReason;
+	}
+
+	public Max1025Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max1025Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

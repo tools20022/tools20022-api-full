@@ -34,12 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral6#PostHaircutValue
- * Collateral6.PostHaircutValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral6#MarketValue
- * Collateral6.MarketValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral6#CollateralType
- * Collateral6.CollateralType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral6#mmPostHaircutValue
+ * Collateral6.mmPostHaircutValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral6#mmMarketValue
+ * Collateral6.mmMarketValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral6#mmCollateralType
+ * Collateral6.mmCollateralType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Collateral6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount postHaircutValue;
 	/**
 	 * Value of the collateral after deduction of a percentage (the haircut)
 	 * that reflects the perceived risk associated with holding this collateral.
@@ -77,8 +78,8 @@ public class Collateral6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#PostHaircutValue
-	 * AssetHolding.PostHaircutValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmPostHaircutValue
+	 * AssetHolding.mmPostHaircutValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class Collateral6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostHaircutValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostHaircutValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmPostHaircutValue;
 			componentContext_lazy = () -> Collateral6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.PostHaircutValue;
 			isDerived = false;
 			xmlTag = "PstHrcutVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostHaircutValue";
 			definition = "Value of the collateral after deduction of a percentage (the haircut) that reflects the perceived risk associated with holding this collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount marketValue;
 	/**
 	 * Value of the underlying collateral (cash, securities, Letter of credit..)
 	 * based on current market prices.
@@ -126,8 +128,8 @@ public class Collateral6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#MarketValue
-	 * AssetHolding.MarketValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmMarketValue
+	 * AssetHolding.mmMarketValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,20 +149,21 @@ public class Collateral6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> Collateral6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.MarketValue;
 			isDerived = false;
 			xmlTag = "MktVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketValue";
 			definition = "Value of the underlying collateral (cash, securities, Letter of credit..) based on current market prices.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CollateralType1Code collateralType;
 	/**
 	 * Provides the type of collateral, such as securities or cash.
 	 * <p>
@@ -174,8 +177,8 @@ public class Collateral6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#CollateralType
-	 * Collateral.CollateralType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralType
+	 * Collateral.mmCollateralType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,17 +197,17 @@ public class Collateral6 {
 	 * "Provides the type of collateral, such as securities or cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralType;
 			componentContext_lazy = () -> Collateral6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.CollateralType;
 			isDerived = false;
 			xmlTag = "CollTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralType";
 			definition = "Provides the type of collateral, such as securities or cash.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
 		}
 	};
@@ -212,14 +215,38 @@ public class Collateral6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral6.PostHaircutValue, com.tools20022.repository.msg.Collateral6.MarketValue, com.tools20022.repository.msg.Collateral6.CollateralType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral6.mmPostHaircutValue, com.tools20022.repository.msg.Collateral6.mmMarketValue, com.tools20022.repository.msg.Collateral6.mmCollateralType);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Collateral6";
 				definition = "Provides the current and market value of the collateral held.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getPostHaircutValue() {
+		return postHaircutValue;
+	}
+
+	public void setPostHaircutValue(ActiveCurrencyAndAmount postHaircutValue) {
+		this.postHaircutValue = postHaircutValue;
+	}
+
+	public ActiveCurrencyAndAmount getMarketValue() {
+		return marketValue;
+	}
+
+	public void setMarketValue(ActiveCurrencyAndAmount marketValue) {
+		this.marketValue = marketValue;
+	}
+
+	public CollateralType1Code getCollateralType() {
+		return collateralType;
+	}
+
+	public void setCollateralType(CollateralType1Code collateralType) {
+		this.collateralType = collateralType;
 	}
 }

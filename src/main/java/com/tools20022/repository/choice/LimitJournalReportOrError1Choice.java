@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.LimitJournalReport1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the limit report as either an operational error or a business report.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError1Choice#BusinessReport
- * LimitJournalReportOrError1Choice.BusinessReport}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError1Choice#mmBusinessReport
+ * LimitJournalReportOrError1Choice.mmBusinessReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError1Choice#OperationalError
- * LimitJournalReportOrError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError1Choice#mmOperationalError
+ * LimitJournalReportOrError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitJournalReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<LimitJournalReport1> businessReport;
 	/**
 	 * Specifies the business report either as a limit utilisation journal or a
 	 * business error.
@@ -90,7 +92,7 @@ public class LimitJournalReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitJournalReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -99,10 +101,11 @@ public class LimitJournalReportOrError1Choice {
 			name = "BusinessReport";
 			definition = "Specifies the business report either as a limit utilisation journal or a business error.";
 			minOccurs = 1;
-			type_lazy = () -> LimitJournalReport1.mmObject();
 			isComposite = true;
+			type_lazy = () -> LimitJournalReport1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Specifies the operational error resulting from the processing of a
 	 * request.
@@ -132,7 +135,7 @@ public class LimitJournalReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitJournalReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -141,21 +144,37 @@ public class LimitJournalReportOrError1Choice {
 			name = "OperationalError";
 			definition = "Specifies the operational error resulting from the processing of a request.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitJournalReportOrError1Choice.BusinessReport, com.tools20022.repository.choice.LimitJournalReportOrError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitJournalReportOrError1Choice.mmBusinessReport, com.tools20022.repository.choice.LimitJournalReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalReportOrError1Choice";
 				definition = "Defines the limit report as either an operational error or a business report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<LimitJournalReport1> getBusinessReport() {
+		return businessReport;
+	}
+
+	public void setBusinessReport(List<LimitJournalReport1> businessReport) {
+		this.businessReport = businessReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

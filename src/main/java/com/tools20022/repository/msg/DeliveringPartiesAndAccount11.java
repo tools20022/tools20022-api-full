@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.PartyIdentification34Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
+import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,17 +40,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#Depository
- * DeliveringPartiesAndAccount11.Depository}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#mmDepository
+ * DeliveringPartiesAndAccount11.mmDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#Party1
- * DeliveringPartiesAndAccount11.Party1}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#mmParty1
+ * DeliveringPartiesAndAccount11.mmParty1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#Party2
- * DeliveringPartiesAndAccount11.Party2}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#mmParty2
+ * DeliveringPartiesAndAccount11.mmParty2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount11.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount11.mmSecuritiesSettlementSystem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeliveringPartiesAndAccount11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification34Choice depository;
 	/**
 	 * First party in the settlement chain. In a plain vanilla settlement, it is
 	 * the Central Securities Depository where the counterparty requests to
@@ -95,8 +97,8 @@ public class DeliveringPartiesAndAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,26 +120,27 @@ public class DeliveringPartiesAndAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#Depository
-	 * DeliveringPartiesAndAccount7.Depository}</li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#mmDepository
+	 * DeliveringPartiesAndAccount7.mmDepository}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Depository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DeliveringPartiesAndAccount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dpstry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount7.Depository;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount7.mmDepository;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification34Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification34Choice.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount102 party1;
 	/**
 	 * Party that, in a settlement chain interacts with the depository.
 	 * <p>
@@ -150,8 +153,8 @@ public class DeliveringPartiesAndAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -172,26 +175,27 @@ public class DeliveringPartiesAndAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#Party1
-	 * DeliveringPartiesAndAccount7.Party1}</li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#mmParty1
+	 * DeliveringPartiesAndAccount7.mmParty1}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty1 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DeliveringPartiesAndAccount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty1";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party1";
 			definition = "Party that, in a settlement chain interacts with the depository.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount7.Party1;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount7.mmParty1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount102.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount102.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount102 party2;
 	/**
 	 * Party that, in a settlement chain interacts with the party 1.
 	 * <p>
@@ -204,8 +208,8 @@ public class DeliveringPartiesAndAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,26 +230,27 @@ public class DeliveringPartiesAndAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#Party2
-	 * DeliveringPartiesAndAccount7.Party2}</li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#mmParty2
+	 * DeliveringPartiesAndAccount7.mmParty2}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party2 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DeliveringPartiesAndAccount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty2";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party2";
 			definition = "Party that, in a settlement chain interacts with the party 1.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount7.Party2;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount7.mmParty2;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount102.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount102.mmObject();
 		}
 	};
+	protected Max35Text securitiesSettlementSystem;
 	/**
 	 * Identifies the securities settlement system to be used.
 	 * <p>
@@ -279,22 +284,22 @@ public class DeliveringPartiesAndAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#SecuritiesSettlementSystem
-	 * DeliveringPartiesAndAccount7.SecuritiesSettlementSystem}</li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#mmSecuritiesSettlementSystem
+	 * DeliveringPartiesAndAccount7.mmSecuritiesSettlementSystem}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesSettlementSystem = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesSettlementSystem = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> SecuritiesSettlementSystem.mmObject();
 			componentContext_lazy = () -> DeliveringPartiesAndAccount11.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmSys";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementSystem";
 			definition = "Identifies the securities settlement system to be used.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount7.SecuritiesSettlementSystem;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount7.mmSecuritiesSettlementSystem;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -302,10 +307,10 @@ public class DeliveringPartiesAndAccount11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveringPartiesAndAccount11.Depository, com.tools20022.repository.msg.DeliveringPartiesAndAccount11.Party1,
-						com.tools20022.repository.msg.DeliveringPartiesAndAccount11.Party2, com.tools20022.repository.msg.DeliveringPartiesAndAccount11.SecuritiesSettlementSystem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveringPartiesAndAccount11.mmDepository, com.tools20022.repository.msg.DeliveringPartiesAndAccount11.mmParty1,
+						com.tools20022.repository.msg.DeliveringPartiesAndAccount11.mmParty2, com.tools20022.repository.msg.DeliveringPartiesAndAccount11.mmSecuritiesSettlementSystem);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveringPartiesAndAccount11";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
@@ -313,5 +318,37 @@ public class DeliveringPartiesAndAccount11 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification34Choice getDepository() {
+		return depository;
+	}
+
+	public void setDepository(PartyIdentification34Choice depository) {
+		this.depository = depository;
+	}
+
+	public PartyIdentificationAndAccount102 getParty1() {
+		return party1;
+	}
+
+	public void setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount102 party1) {
+		this.party1 = party1;
+	}
+
+	public PartyIdentificationAndAccount102 getParty2() {
+		return party2;
+	}
+
+	public void setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount102 party2) {
+		this.party2 = party2;
+	}
+
+	public Max35Text getSecuritiesSettlementSystem() {
+		return securitiesSettlementSystem;
+	}
+
+	public void setSecuritiesSettlementSystem(Max35Text securitiesSettlementSystem) {
+		this.securitiesSettlementSystem = securitiesSettlementSystem;
 	}
 }

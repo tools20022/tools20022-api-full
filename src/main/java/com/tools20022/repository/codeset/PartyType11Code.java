@@ -32,31 +32,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType11Code#Acceptor
- * PartyType11Code.Acceptor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType11Code#Acquirer
- * PartyType11Code.Acquirer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType11Code#CardIssuer
- * PartyType11Code.CardIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType11Code#mmAcceptor
+ * PartyType11Code.mmAcceptor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType11Code#mmAcquirer
+ * PartyType11Code.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType11Code#DelegateIssuer
- * PartyType11Code.DelegateIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType11Code#mmCardIssuer
+ * PartyType11Code.mmCardIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType11Code#IntermediaryAgent
- * PartyType11Code.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType11Code#mmDelegateIssuer
+ * PartyType11Code.mmDelegateIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType11Code#OriginatingTerminal
- * PartyType11Code.OriginatingTerminal}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType11Code#mmIntermediaryAgent
+ * PartyType11Code.mmIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType11Code#CardApplication
- * PartyType11Code.CardApplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType11Code#mmOriginatingTerminal
+ * PartyType11Code.mmOriginatingTerminal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType11Code#mmCardApplication
+ * PartyType11Code.mmCardApplication}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,7 +87,7 @@ public class PartyType11Code extends PartyTypeCode {
 	 * name} = "Acceptor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acceptor = new MMCode() {
+	public static final MMCode mmAcceptor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acceptor";
@@ -109,7 +110,7 @@ public class PartyType11Code extends PartyTypeCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -132,7 +133,7 @@ public class PartyType11Code extends PartyTypeCode {
 	 * name} = "CardIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardIssuer = new MMCode() {
+	public static final MMCode mmCardIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardIssuer";
@@ -155,7 +156,7 @@ public class PartyType11Code extends PartyTypeCode {
 	 * name} = "DelegateIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode DelegateIssuer = new MMCode() {
+	public static final MMCode mmDelegateIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegateIssuer";
@@ -178,7 +179,7 @@ public class PartyType11Code extends PartyTypeCode {
 	 * name} = "IntermediaryAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntermediaryAgent = new MMCode() {
+	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
@@ -201,7 +202,7 @@ public class PartyType11Code extends PartyTypeCode {
 	 * name} = "OriginatingTerminal"</li>
 	 * </ul>
 	 */
-	public static final MMCode OriginatingTerminal = new MMCode() {
+	public static final MMCode mmOriginatingTerminal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingTerminal";
@@ -224,7 +225,7 @@ public class PartyType11Code extends PartyTypeCode {
 	 * name} = "CardApplication"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardApplication = new MMCode() {
+	public static final MMCode mmCardApplication = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardApplication";
@@ -235,13 +236,13 @@ public class PartyType11Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyType11Code";
 				definition = "Type of entity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType11Code.Acceptor, com.tools20022.repository.codeset.PartyType11Code.Acquirer, com.tools20022.repository.codeset.PartyType11Code.CardIssuer,
-						com.tools20022.repository.codeset.PartyType11Code.DelegateIssuer, com.tools20022.repository.codeset.PartyType11Code.IntermediaryAgent, com.tools20022.repository.codeset.PartyType11Code.OriginatingTerminal,
-						com.tools20022.repository.codeset.PartyType11Code.CardApplication);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType11Code.mmAcceptor, com.tools20022.repository.codeset.PartyType11Code.mmAcquirer, com.tools20022.repository.codeset.PartyType11Code.mmCardIssuer,
+						com.tools20022.repository.codeset.PartyType11Code.mmDelegateIssuer, com.tools20022.repository.codeset.PartyType11Code.mmIntermediaryAgent, com.tools20022.repository.codeset.PartyType11Code.mmOriginatingTerminal,
+						com.tools20022.repository.codeset.PartyType11Code.mmCardApplication);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesOrCash1Choice#SecuritiesDetails
- * SecuritiesOrCash1Choice.SecuritiesDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesOrCash1Choice#mmSecuritiesDetails
+ * SecuritiesOrCash1Choice.mmSecuritiesDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesOrCash1Choice#CashPartiesDetails
- * SecuritiesOrCash1Choice.CashPartiesDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesOrCash1Choice#mmCashPartiesDetails
+ * SecuritiesOrCash1Choice.mmCashPartiesDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#SettlementDetails
- * StandingSettlementInstructionV01.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmSettlementDetails
+ * StandingSettlementInstructionV01.mmSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesOrCash1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementParties35 securitiesDetails;
 	/**
 	 * Securities settlement chain parties, accounts and other details.
 	 * <p>
@@ -95,7 +96,7 @@ public class SecuritiesOrCash1Choice {
 	 * "Securities settlement chain parties, accounts and other details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesOrCash1Choice.mmObject();
 			isDerived = false;
@@ -103,12 +104,13 @@ public class SecuritiesOrCash1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesDetails";
 			definition = "Securities settlement chain parties, accounts and other details.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties35.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SettlementParties35.mmObject();
 		}
 	};
+	protected CashParties24 cashPartiesDetails;
 	/**
 	 * Cash settlement chain parties and accounts.
 	 * <p>
@@ -135,7 +137,7 @@ public class SecuritiesOrCash1Choice {
 	 * definition} = "Cash settlement chain parties and accounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashPartiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashPartiesDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesOrCash1Choice.mmObject();
 			isDerived = false;
@@ -143,24 +145,40 @@ public class SecuritiesOrCash1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiesDetails";
 			definition = "Cash settlement chain parties and accounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashParties24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CashParties24.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesOrCash1Choice.SecuritiesDetails, com.tools20022.repository.choice.SecuritiesOrCash1Choice.CashPartiesDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.SettlementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmSecuritiesDetails, com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmCashPartiesDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmSettlementDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOrCash1Choice";
 				definition = "Choice of securities or cash parties.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementParties35 getSecuritiesDetails() {
+		return securitiesDetails;
+	}
+
+	public void setSecuritiesDetails(SettlementParties35 securitiesDetails) {
+		this.securitiesDetails = securitiesDetails;
+	}
+
+	public CashParties24 getCashPartiesDetails() {
+		return cashPartiesDetails;
+	}
+
+	public void setCashPartiesDetails(CashParties24 cashPartiesDetails) {
+		this.cashPartiesDetails = cashPartiesDetails;
 	}
 }

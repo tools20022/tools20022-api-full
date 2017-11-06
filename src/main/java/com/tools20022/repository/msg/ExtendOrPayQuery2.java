@@ -35,13 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExtendOrPayQuery2#UndertakingIdentification
- * ExtendOrPayQuery2.UndertakingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ExtendOrPayQuery2#mmUndertakingIdentification
+ * ExtendOrPayQuery2.mmUndertakingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExtendOrPayQuery2#DemandDetails
- * ExtendOrPayQuery2.DemandDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendOrPayQuery2#Status
- * ExtendOrPayQuery2.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.ExtendOrPayQuery2#mmDemandDetails
+ * ExtendOrPayQuery2.mmDemandDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendOrPayQuery2#mmStatus
+ * ExtendOrPayQuery2.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,15 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#ExtendOrPayResponseDetails
- * ExtendOrPayResponseV01.ExtendOrPayResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#mmExtendOrPayResponseDetails
+ * ExtendOrPayResponseV01.mmExtendOrPayResponseDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExtendOrPayQuery2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Undertaking9 undertakingIdentification;
 	/**
 	 * Details related to the identification of the undertaking.
 	 * <p>
@@ -85,8 +86,8 @@ public class ExtendOrPayQuery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#Undertaking
-	 * UndertakingStatus.Undertaking}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmUndertaking
+	 * UndertakingStatus.mmUndertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,21 +107,22 @@ public class ExtendOrPayQuery2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> ExtendOrPayQuery2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.Undertaking;
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Undertaking9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
 		}
 	};
+	protected Demand4 demandDetails;
 	/**
 	 * Details related to the demand.
 	 * <p>
@@ -131,8 +133,8 @@ public class ExtendOrPayQuery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Demand
-	 * Undertaking.Demand}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmDemand
+	 * Undertaking.mmDemand}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,21 +153,22 @@ public class ExtendOrPayQuery2 {
 	 * definition} = "Details related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DemandDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmDemand;
 			componentContext_lazy = () -> ExtendOrPayQuery2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Demand;
 			isDerived = false;
 			xmlTag = "DmndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandDetails";
 			definition = "Details related to the demand.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Demand4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Demand4.mmObject();
 		}
 	};
+	protected DemandStatus1Code status;
 	/**
 	 * Processing status reported by the applicant.
 	 * <p>
@@ -179,8 +182,8 @@ public class ExtendOrPayQuery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#DemandStatus
-	 * UndertakingStatus.DemandStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmDemandStatus
+	 * UndertakingStatus.mmDemandStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -199,17 +202,17 @@ public class ExtendOrPayQuery2 {
 	 * definition} = "Processing status reported by the applicant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmDemandStatus;
 			componentContext_lazy = () -> ExtendOrPayQuery2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.DemandStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Processing status reported by the applicant.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DemandStatus1Code.mmObject();
 		}
 	};
@@ -217,16 +220,40 @@ public class ExtendOrPayQuery2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendOrPayQuery2.UndertakingIdentification, com.tools20022.repository.msg.ExtendOrPayQuery2.DemandDetails,
-						com.tools20022.repository.msg.ExtendOrPayQuery2.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendOrPayQuery2.mmUndertakingIdentification, com.tools20022.repository.msg.ExtendOrPayQuery2.mmDemandDetails,
+						com.tools20022.repository.msg.ExtendOrPayQuery2.mmStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.mmExtendOrPayResponseDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.ExtendOrPayResponseDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExtendOrPayQuery2";
 				definition = "Undertaking extend or pay query details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Undertaking9 getUndertakingIdentification() {
+		return undertakingIdentification;
+	}
+
+	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
+		this.undertakingIdentification = undertakingIdentification;
+	}
+
+	public Demand4 getDemandDetails() {
+		return demandDetails;
+	}
+
+	public void setDemandDetails(com.tools20022.repository.msg.Demand4 demandDetails) {
+		this.demandDetails = demandDetails;
+	}
+
+	public DemandStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(DemandStatus1Code status) {
+		this.status = status;
 	}
 }

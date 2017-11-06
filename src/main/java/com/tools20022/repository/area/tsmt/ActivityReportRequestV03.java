@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -70,21 +71,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#RequestIdentification
- * ActivityReportRequestV03.RequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#mmRequestIdentification
+ * ActivityReportRequestV03.mmRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#EntitiesToBeReported
- * ActivityReportRequestV03.EntitiesToBeReported}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#mmEntitiesToBeReported
+ * ActivityReportRequestV03.mmEntitiesToBeReported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#ReportPeriod
- * ActivityReportRequestV03.ReportPeriod}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#mmReportPeriod
+ * ActivityReportRequestV03.mmReportPeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#identifier
- * ActivityReportRequestV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.003.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ActivityReportRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 requestIdentification;
 	/**
 	 * Identifies the request message.
 	 * <p>
@@ -123,17 +123,18 @@ public class ActivityReportRequestV03 {
 	 * definition} = "Identifies the request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the request message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<BICIdentification1> entitiesToBeReported;
 	/**
 	 * Specifies the entities of the submitter for which the activities have to
 	 * be reported.
@@ -160,7 +161,7 @@ public class ActivityReportRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EntitiesToBeReported = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEntitiesToBeReported = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NttiesToBeRptd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,6 +171,7 @@ public class ActivityReportRequestV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected DateTimePeriodDetails1 reportPeriod;
 	/**
 	 * Specifies the period for which activities have to be reported.
 	 * <p>
@@ -194,42 +196,15 @@ public class ActivityReportRequestV03 {
 	 * "Specifies the period for which activities have to be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportPeriod = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportPeriod = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPeriod";
 			definition = "Specifies the period for which activities have to be reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateTimePeriodDetails1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "003";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -243,11 +218,42 @@ public class ActivityReportRequestV03 {
 				rootElement = "Document";
 				xmlTag = "ActvtyReqRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportRequestV03.RequestIdentification, com.tools20022.repository.area.tsmt.ActivityReportRequestV03.EntitiesToBeReported,
-						com.tools20022.repository.area.tsmt.ActivityReportRequestV03.ReportPeriod);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.ActivityReportRequestV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmRequestIdentification, com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmEntitiesToBeReported,
+						com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmReportPeriod);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "003";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getRequestIdentification() {
+		return requestIdentification;
+	}
+
+	public void setRequestIdentification(MessageIdentification1 requestIdentification) {
+		this.requestIdentification = requestIdentification;
+	}
+
+	public List<BICIdentification1> getEntitiesToBeReported() {
+		return entitiesToBeReported;
+	}
+
+	public void setEntitiesToBeReported(List<BICIdentification1> entitiesToBeReported) {
+		this.entitiesToBeReported = entitiesToBeReported;
+	}
+
+	public DateTimePeriodDetails1 getReportPeriod() {
+		return reportPeriod;
+	}
+
+	public void setReportPeriod(DateTimePeriodDetails1 reportPeriod) {
+		this.reportPeriod = reportPeriod;
 	}
 }

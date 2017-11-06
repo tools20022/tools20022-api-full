@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryStatus1#Type
- * SettlementInstructionQueryStatus1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryStatus1#mmType
+ * SettlementInstructionQueryStatus1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryStatus1#DatePeriod
- * SettlementInstructionQueryStatus1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryStatus1#mmDatePeriod
+ * SettlementInstructionQueryStatus1.mmDatePeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementInstructionQueryStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementTransactionStatusType1 type;
 	/**
 	 * Defines the status type of query criteria.
 	 * <p>
@@ -88,7 +89,7 @@ public class SettlementInstructionQueryStatus1 {
 	 * definition} = "Defines the status type of query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryStatus1.mmObject();
 			isDerived = false;
@@ -96,12 +97,13 @@ public class SettlementInstructionQueryStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Defines the status type of query criteria.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementTransactionStatusType1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice datePeriod;
 	/**
 	 * Specified date period of the status.
 	 * <p>
@@ -129,7 +131,7 @@ public class SettlementInstructionQueryStatus1 {
 	 * definition} = "Specified date period of the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DatePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryStatus1.mmObject();
 			isDerived = false;
@@ -137,23 +139,39 @@ public class SettlementInstructionQueryStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Specified date period of the status.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryStatus1.Type, com.tools20022.repository.msg.SettlementInstructionQueryStatus1.DatePeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmType, com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmDatePeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInstructionQueryStatus1";
 				definition = "Defines the settlement instruction status query criteria including the status period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementTransactionStatusType1 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.SettlementTransactionStatusType1 type) {
+		this.type = type;
+	}
+
+	public DateAndDateTimeSearch2Choice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateAndDateTimeSearch2Choice datePeriod) {
+		this.datePeriod = datePeriod;
 	}
 }

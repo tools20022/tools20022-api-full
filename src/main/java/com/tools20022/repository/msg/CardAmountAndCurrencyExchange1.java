@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#Amount
- * CardAmountAndCurrencyExchange1.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#mmAmount
+ * CardAmountAndCurrencyExchange1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#CurrencyExchange
- * CardAmountAndCurrencyExchange1.CurrencyExchange}</li>
+ * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#mmCurrencyExchange
+ * CardAmountAndCurrencyExchange1.mmCurrencyExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#Type
- * CardAmountAndCurrencyExchange1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#mmType
+ * CardAmountAndCurrencyExchange1.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardAmountAndCurrencyExchange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount of money to be moved between the debtor and creditor, before
 	 * deduction of charges, expressed in the currency as ordered by the
@@ -83,8 +84,8 @@ public class CardAmountAndCurrencyExchange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class CardAmountAndCurrencyExchange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> CardAmountAndCurrencyExchange1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyExchange3 currencyExchange;
 	/**
 	 * Reports on currency exchange information.
 	 * <p>
@@ -130,8 +132,8 @@ public class CardAmountAndCurrencyExchange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CurrencyExchange
-	 * CashEntry.CurrencyExchange}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCurrencyExchange
+	 * CashEntry.mmCurrencyExchange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,21 +152,22 @@ public class CardAmountAndCurrencyExchange1 {
 	 * definition} = "Reports on currency exchange information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCurrencyExchange;
 			componentContext_lazy = () -> CardAmountAndCurrencyExchange1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CurrencyExchange;
 			isDerived = false;
 			xmlTag = "CcyXchg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Reports on currency exchange information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyExchange3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchange3.mmObject();
 		}
 	};
+	protected TypeOfAmount3Code type;
 	/**
 	 * Identification or qualification of the type of amount.
 	 * <p>
@@ -178,8 +181,8 @@ public class CardAmountAndCurrencyExchange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#AmountQualifier
-	 * CardPayment.AmountQualifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmAmountQualifier
+	 * CardPayment.mmAmountQualifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,17 +201,17 @@ public class CardAmountAndCurrencyExchange1 {
 	 * definition} = "Identification or qualification of the type of amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> CardAmountAndCurrencyExchange1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.AmountQualifier;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identification or qualification of the type of amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfAmount3Code.mmObject();
 		}
 	};
@@ -216,15 +219,39 @@ public class CardAmountAndCurrencyExchange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.Amount, com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.CurrencyExchange,
-						com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmAmount, com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmCurrencyExchange,
+						com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmType);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardAmountAndCurrencyExchange1";
 				definition = "Provides details on the detailed or original amount and currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public CurrencyExchange3 getCurrencyExchange() {
+		return currencyExchange;
+	}
+
+	public void setCurrencyExchange(com.tools20022.repository.msg.CurrencyExchange3 currencyExchange) {
+		this.currencyExchange = currencyExchange;
+	}
+
+	public TypeOfAmount3Code getType() {
+		return type;
+	}
+
+	public void setType(TypeOfAmount3Code type) {
+		this.type = type;
 	}
 }

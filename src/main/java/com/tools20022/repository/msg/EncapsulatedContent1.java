@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EncapsulatedContent1#ContentType
- * EncapsulatedContent1.ContentType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EncapsulatedContent1#Content
- * EncapsulatedContent1.Content}</li>
+ * {@linkplain com.tools20022.repository.msg.EncapsulatedContent1#mmContentType
+ * EncapsulatedContent1.mmContentType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EncapsulatedContent1#mmContent
+ * EncapsulatedContent1.mmContent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EncapsulatedContent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentType1Code contentType;
 	/**
 	 * Type of data which have been authenticated.
 	 * <p>
@@ -95,13 +96,13 @@ public class EncapsulatedContent1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent2#ContentType
-	 * EncapsulatedContent2.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent2#mmContentType
+	 * EncapsulatedContent2.mmContentType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EncapsulatedContent1.mmObject();
 			isDerived = false;
@@ -109,12 +110,13 @@ public class EncapsulatedContent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data which have been authenticated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.ContentType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.mmContentType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
+	protected Max10000Binary content;
 	/**
 	 * Actual data to authenticate.
 	 * <p>
@@ -145,13 +147,13 @@ public class EncapsulatedContent1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent2#Content
-	 * EncapsulatedContent2.Content}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent2#mmContent
+	 * EncapsulatedContent2.mmContent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Content = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContent = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EncapsulatedContent1.mmObject();
 			isDerived = false;
@@ -159,9 +161,9 @@ public class EncapsulatedContent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Actual data to authenticate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.Content);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.mmContent);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
@@ -169,8 +171,8 @@ public class EncapsulatedContent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent1.ContentType, com.tools20022.repository.msg.EncapsulatedContent1.Content);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent1.mmContentType, com.tools20022.repository.msg.EncapsulatedContent1.mmContent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EncapsulatedContent1";
 				definition = "Data to authenticate.";
@@ -178,5 +180,21 @@ public class EncapsulatedContent1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentType1Code getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(ContentType1Code contentType) {
+		this.contentType = contentType;
+	}
+
+	public Max10000Binary getContent() {
+		return content;
+	}
+
+	public void setContent(Max10000Binary content) {
+		this.content = content;
 	}
 }

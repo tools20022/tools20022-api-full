@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice#Amount
- * AmountOrCoefficientPrice1Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice#mmAmount
+ * AmountOrCoefficientPrice1Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice#Coefficient
- * AmountOrCoefficientPrice1Choice.Coefficient}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice#mmCoefficient
+ * AmountOrCoefficientPrice1Choice.mmCoefficient}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountOrCoefficientPrice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmount amount;
 	/**
 	 * Provides details of the price when expressed with an amount.
 	 * <p>
@@ -88,7 +89,7 @@ public class AmountOrCoefficientPrice1Choice {
 	 * "Provides details of the price when expressed with an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountOrCoefficientPrice1Choice.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class AmountOrCoefficientPrice1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Provides details of the price when expressed with an amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DecimalNumber coefficient;
 	/**
 	 * Provides details of the price when expressed with a coefficient.
 	 * <p>
@@ -130,7 +132,7 @@ public class AmountOrCoefficientPrice1Choice {
 	 * "Provides details of the price when expressed with a coefficient."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Coefficient = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCoefficient = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountOrCoefficientPrice1Choice.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class AmountOrCoefficientPrice1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coefficient";
 			definition = "Provides details of the price when expressed with a coefficient.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class AmountOrCoefficientPrice1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.Amount, com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.Coefficient);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.mmAmount, com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.mmCoefficient);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountOrCoefficientPrice1Choice";
 				definition = "Choice between an amount and a coefficient.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public DecimalNumber getCoefficient() {
+		return coefficient;
+	}
+
+	public void setCoefficient(DecimalNumber coefficient) {
+		this.coefficient = coefficient;
 	}
 }

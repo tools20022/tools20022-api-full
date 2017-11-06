@@ -37,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.QuoteRequestor#RequestorEligibility
- * QuoteRequestor.RequestorEligibility}</li>
+ * {@linkplain com.tools20022.repository.entity.QuoteRequestor#mmRequestorEligibility
+ * QuoteRequestor.mmRequestorEligibility}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuoteRequestor extends InformationPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected EligibilityCode requestorEligibility;
 	/**
 	 * Identifies if the requestor of the quote is an elligible counterparty.
 	 * <p>
@@ -73,28 +74,28 @@ public class QuoteRequestor extends InformationPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.EligibilityCode
 	 * EligibilityCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quote3#RequestorEligibility
-	 * Quote3.RequestorEligibility}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quote1#RequestorEligibility
-	 * Quote1.RequestorEligibility}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quote2#RequestorEligibility
-	 * Quote2.RequestorEligibility}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quote4#RequestorEligibility
-	 * Quote4.RequestorEligibility}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.QuoteRequestor
 	 * QuoteRequestor}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quote3#mmRequestorEligibility
+	 * Quote3.mmRequestorEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quote1#mmRequestorEligibility
+	 * Quote1.mmRequestorEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quote2#mmRequestorEligibility
+	 * Quote2.mmRequestorEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quote4#mmRequestorEligibility
+	 * Quote4.mmRequestorEligibility}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -107,17 +108,17 @@ public class QuoteRequestor extends InformationPartyRole {
 	 * "Identifies if the requestor of the quote is an elligible counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RequestorEligibility = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRequestorEligibility = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.RequestorEligibility, com.tools20022.repository.msg.Quote1.RequestorEligibility, com.tools20022.repository.msg.Quote2.RequestorEligibility,
-					com.tools20022.repository.msg.Quote4.RequestorEligibility);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.mmRequestorEligibility, com.tools20022.repository.msg.Quote1.mmRequestorEligibility, com.tools20022.repository.msg.Quote2.mmRequestorEligibility,
+					com.tools20022.repository.msg.Quote4.mmRequestorEligibility);
 			elementContext_lazy = () -> QuoteRequestor.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RequestorEligibility";
 			definition = "Identifies if the requestor of the quote is an elligible counterparty.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EligibilityCode.mmObject();
 		}
 	};
@@ -125,14 +126,22 @@ public class QuoteRequestor extends InformationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuoteRequestor";
 				definition = "Requestor of the quote";
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteRequestor.RequestorEligibility);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteRequestor.mmRequestorEligibility);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EligibilityCode getRequestorEligibility() {
+		return requestorEligibility;
+	}
+
+	public void setRequestorEligibility(EligibilityCode requestorEligibility) {
+		this.requestorEligibility = requestorEligibility;
 	}
 }

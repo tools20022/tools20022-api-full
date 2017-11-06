@@ -32,24 +32,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria2#PaymentToReturnCriteria
- * TransactionReturnCriteria2.PaymentToReturnCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria2#mmPaymentToReturnCriteria
+ * TransactionReturnCriteria2.mmPaymentToReturnCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria2#PaymentFromReturnCriteria
- * TransactionReturnCriteria2.PaymentFromReturnCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria2#mmPaymentFromReturnCriteria
+ * TransactionReturnCriteria2.mmPaymentFromReturnCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria2#AccountCashEntryReturnCriteria
- * TransactionReturnCriteria2.AccountCashEntryReturnCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria2#mmAccountCashEntryReturnCriteria
+ * TransactionReturnCriteria2.mmAccountCashEntryReturnCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria2#PaymentReturnCriteria
- * TransactionReturnCriteria2.PaymentReturnCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria2#mmPaymentReturnCriteria
+ * TransactionReturnCriteria2.mmPaymentReturnCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemReturnCriteria2 paymentToReturnCriteria;
 	/**
 	 * Destination of the payment (be it a member or a system or both).
 	 * <p>
@@ -91,7 +92,7 @@ public class TransactionReturnCriteria2 {
 	 * "Destination of the payment (be it a member or a system or both)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentToReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentToReturnCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
 			isDerived = false;
@@ -99,12 +100,13 @@ public class TransactionReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentToReturnCriteria";
 			definition = "Destination of the payment (be it a member or a system or both).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemReturnCriteria2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 		}
 	};
+	protected SystemReturnCriteria2 paymentFromReturnCriteria;
 	/**
 	 * Origin of the payment (be it a member or a system or both).
 	 * <p>
@@ -132,7 +134,7 @@ public class TransactionReturnCriteria2 {
 	 * "Origin of the payment (be it a member or a system or both)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentFromReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentFromReturnCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
 			isDerived = false;
@@ -140,12 +142,13 @@ public class TransactionReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFromReturnCriteria";
 			definition = "Origin of the payment (be it a member or a system or both).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemReturnCriteria2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 		}
 	};
+	protected AccountCashEntryReturnCriteria2 accountCashEntryReturnCriteria;
 	/**
 	 * Defines the criteria used to report on the cash entry.
 	 * <p>
@@ -173,7 +176,7 @@ public class TransactionReturnCriteria2 {
 	 * definition} = "Defines the criteria used to report on the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountCashEntryReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountCashEntryReturnCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
 			isDerived = false;
@@ -181,12 +184,13 @@ public class TransactionReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCashEntryReturnCriteria";
 			definition = "Defines the criteria used to report on the cash entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 		}
 	};
+	protected PaymentReturnCriteria2 paymentReturnCriteria;
 	/**
 	 * Defines the criteria used to report on the payment.
 	 * <p>
@@ -213,7 +217,7 @@ public class TransactionReturnCriteria2 {
 	 * definition} = "Defines the criteria used to report on the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentReturnCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
 			isDerived = false;
@@ -221,24 +225,56 @@ public class TransactionReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReturnCriteria";
 			definition = "Defines the criteria used to report on the payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentReturnCriteria2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReturnCriteria2.PaymentToReturnCriteria, com.tools20022.repository.msg.TransactionReturnCriteria2.PaymentFromReturnCriteria,
-						com.tools20022.repository.msg.TransactionReturnCriteria2.AccountCashEntryReturnCriteria, com.tools20022.repository.msg.TransactionReturnCriteria2.PaymentReturnCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentToReturnCriteria, com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentFromReturnCriteria,
+						com.tools20022.repository.msg.TransactionReturnCriteria2.mmAccountCashEntryReturnCriteria, com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentReturnCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionReturnCriteria2";
 				definition = "Defines the criteria used to report on a payment transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemReturnCriteria2 getPaymentToReturnCriteria() {
+		return paymentToReturnCriteria;
+	}
+
+	public void setPaymentToReturnCriteria(com.tools20022.repository.msg.SystemReturnCriteria2 paymentToReturnCriteria) {
+		this.paymentToReturnCriteria = paymentToReturnCriteria;
+	}
+
+	public SystemReturnCriteria2 getPaymentFromReturnCriteria() {
+		return paymentFromReturnCriteria;
+	}
+
+	public void setPaymentFromReturnCriteria(com.tools20022.repository.msg.SystemReturnCriteria2 paymentFromReturnCriteria) {
+		this.paymentFromReturnCriteria = paymentFromReturnCriteria;
+	}
+
+	public AccountCashEntryReturnCriteria2 getAccountCashEntryReturnCriteria() {
+		return accountCashEntryReturnCriteria;
+	}
+
+	public void setAccountCashEntryReturnCriteria(com.tools20022.repository.msg.AccountCashEntryReturnCriteria2 accountCashEntryReturnCriteria) {
+		this.accountCashEntryReturnCriteria = accountCashEntryReturnCriteria;
+	}
+
+	public PaymentReturnCriteria2 getPaymentReturnCriteria() {
+		return paymentReturnCriteria;
+	}
+
+	public void setPaymentReturnCriteria(com.tools20022.repository.msg.PaymentReturnCriteria2 paymentReturnCriteria) {
+		this.paymentReturnCriteria = paymentReturnCriteria;
 	}
 }

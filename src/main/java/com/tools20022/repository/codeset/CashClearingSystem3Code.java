@@ -35,237 +35,237 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#EBAEuro1Step1
- * CashClearingSystem3Code.EBAEuro1Step1}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmEBAEuro1Step1
+ * CashClearingSystem3Code.mmEBAEuro1Step1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Austrian
- * CashClearingSystem3Code.Austrian}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmAustrian
+ * CashClearingSystem3Code.mmAustrian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#NewZealand
- * CashClearingSystem3Code.NewZealand}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmNewZealand
+ * CashClearingSystem3Code.mmNewZealand}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Azerbaijan
- * CashClearingSystem3Code.Azerbaijan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmAzerbaijan
+ * CashClearingSystem3Code.mmAzerbaijan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#BosniaHerzegovina
- * CashClearingSystem3Code.BosniaHerzegovina}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmBosniaHerzegovina
+ * CashClearingSystem3Code.mmBosniaHerzegovina}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Belgium
- * CashClearingSystem3Code.Belgium}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmBelgium
+ * CashClearingSystem3Code.mmBelgium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Finland
- * CashClearingSystem3Code.Finland}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmFinland
+ * CashClearingSystem3Code.mmFinland}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Italy
- * CashClearingSystem3Code.Italy}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmItaly
+ * CashClearingSystem3Code.mmItaly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Canada
- * CashClearingSystem3Code.Canada}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmCanada
+ * CashClearingSystem3Code.mmCanada}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#SpainCAM
- * CashClearingSystem3Code.SpainCAM}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSpainCAM
+ * CashClearingSystem3Code.mmSpainCAM}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Ireland
- * CashClearingSystem3Code.Ireland}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmIreland
+ * CashClearingSystem3Code.mmIreland}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#UnitedKingdom
- * CashClearingSystem3Code.UnitedKingdom}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmUnitedKingdom
+ * CashClearingSystem3Code.mmUnitedKingdom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Denmark
- * CashClearingSystem3Code.Denmark}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmDenmark
+ * CashClearingSystem3Code.mmDenmark}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#GermanyRTGSPlus
- * CashClearingSystem3Code.GermanyRTGSPlus}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmGermanyRTGSPlus
+ * CashClearingSystem3Code.mmGermanyRTGSPlus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#EBAEuro1
- * CashClearingSystem3Code.EBAEuro1}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmEBAEuro1
+ * CashClearingSystem3Code.mmEBAEuro1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#GermanyELS
- * CashClearingSystem3Code.GermanyELS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmGermanyELS
+ * CashClearingSystem3Code.mmGermanyELS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#EBAStep1
- * CashClearingSystem3Code.EBAStep1}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmEBAStep1
+ * CashClearingSystem3Code.mmEBAStep1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#EBAStep2
- * CashClearingSystem3Code.EBAStep2}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmEBAStep2
+ * CashClearingSystem3Code.mmEBAStep2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Croatia
- * CashClearingSystem3Code.Croatia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmCroatia
+ * CashClearingSystem3Code.mmCroatia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Greece
- * CashClearingSystem3Code.Greece}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmGreece
+ * CashClearingSystem3Code.mmGreece}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Hungary
- * CashClearingSystem3Code.Hungary}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmHungary
+ * CashClearingSystem3Code.mmHungary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Luxemburg
- * CashClearingSystem3Code.Luxemburg}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmLuxemburg
+ * CashClearingSystem3Code.mmLuxemburg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Latvia
- * CashClearingSystem3Code.Latvia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmLatvia
+ * CashClearingSystem3Code.mmLatvia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Mauritius
- * CashClearingSystem3Code.Mauritius}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmMauritius
+ * CashClearingSystem3Code.mmMauritius}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Norway
- * CashClearingSystem3Code.Norway}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmNorway
+ * CashClearingSystem3Code.mmNorway}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Switzerland
- * CashClearingSystem3Code.Switzerland}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSwitzerland
+ * CashClearingSystem3Code.mmSwitzerland}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Australia
- * CashClearingSystem3Code.Australia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmAustralia
+ * CashClearingSystem3Code.mmAustralia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Egypt
- * CashClearingSystem3Code.Egypt}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmEgypt
+ * CashClearingSystem3Code.mmEgypt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#FrancePNS
- * CashClearingSystem3Code.FrancePNS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmFrancePNS
+ * CashClearingSystem3Code.mmFrancePNS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Venezuela
- * CashClearingSystem3Code.Venezuela}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmVenezuela
+ * CashClearingSystem3Code.mmVenezuela}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#SwedenSEC
- * CashClearingSystem3Code.SwedenSEC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSwedenSEC
+ * CashClearingSystem3Code.mmSwedenSEC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Slovania
- * CashClearingSystem3Code.Slovania}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSlovania
+ * CashClearingSystem3Code.mmSlovania}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#SpainES
- * CashClearingSystem3Code.SpainES}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSpainES
+ * CashClearingSystem3Code.mmSpainES}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Portugal
- * CashClearingSystem3Code.Portugal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmPortugal
+ * CashClearingSystem3Code.mmPortugal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#SwedenSSK
- * CashClearingSystem3Code.SwedenSSK}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSwedenSSK
+ * CashClearingSystem3Code.mmSwedenSSK}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#FranceFR
- * CashClearingSystem3Code.FranceFR}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmFranceFR
+ * CashClearingSystem3Code.mmFranceFR}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Target
- * CashClearingSystem3Code.Target}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmTarget
+ * CashClearingSystem3Code.mmTarget}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Netherlands
- * CashClearingSystem3Code.Netherlands}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmNetherlands
+ * CashClearingSystem3Code.mmNetherlands}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Fedwire
- * CashClearingSystem3Code.Fedwire}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmFedwire
+ * CashClearingSystem3Code.mmFedwire}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#BankOfJapanNet
- * CashClearingSystem3Code.BankOfJapanNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmBankOfJapanNet
+ * CashClearingSystem3Code.mmBankOfJapanNet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#ForeignExchangeYenClearing
- * CashClearingSystem3Code.ForeignExchangeYenClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmForeignExchangeYenClearing
+ * CashClearingSystem3Code.mmForeignExchangeYenClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Zengin
- * CashClearingSystem3Code.Zengin}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmZengin
+ * CashClearingSystem3Code.mmZengin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#DenmarkDDK
- * CashClearingSystem3Code.DenmarkDDK}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmDenmarkDDK
+ * CashClearingSystem3Code.mmDenmarkDDK}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Albania
- * CashClearingSystem3Code.Albania}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmAlbania
+ * CashClearingSystem3Code.mmAlbania}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#SwedenBGC
- * CashClearingSystem3Code.SwedenBGC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSwedenBGC
+ * CashClearingSystem3Code.mmSwedenBGC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Barbados
- * CashClearingSystem3Code.Barbados}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmBarbados
+ * CashClearingSystem3Code.mmBarbados}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Bulgaria
- * CashClearingSystem3Code.Bulgaria}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmBulgaria
+ * CashClearingSystem3Code.mmBulgaria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Bahamas
- * CashClearingSystem3Code.Bahamas}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmBahamas
+ * CashClearingSystem3Code.mmBahamas}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Botswana
- * CashClearingSystem3Code.Botswana}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmBotswana
+ * CashClearingSystem3Code.mmBotswana}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Philippines
- * CashClearingSystem3Code.Philippines}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmPhilippines
+ * CashClearingSystem3Code.mmPhilippines}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#ECB
- * CashClearingSystem3Code.ECB}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmECB
+ * CashClearingSystem3Code.mmECB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#USChipsACH
- * CashClearingSystem3Code.USChipsACH}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmUSChipsACH
+ * CashClearingSystem3Code.mmUSChipsACH}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#USFedACH
- * CashClearingSystem3Code.USFedACH}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmUSFedACH
+ * CashClearingSystem3Code.mmUSFedACH}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Ghana
- * CashClearingSystem3Code.Ghana}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmGhana
+ * CashClearingSystem3Code.mmGhana}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#NetherlandsIP
- * CashClearingSystem3Code.NetherlandsIP}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmNetherlandsIP
+ * CashClearingSystem3Code.mmNetherlandsIP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Jordan
- * CashClearingSystem3Code.Jordan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmJordan
+ * CashClearingSystem3Code.mmJordan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Kenya
- * CashClearingSystem3Code.Kenya}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmKenya
+ * CashClearingSystem3Code.mmKenya}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#SriLanka
- * CashClearingSystem3Code.SriLanka}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSriLanka
+ * CashClearingSystem3Code.mmSriLanka}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Singapore
- * CashClearingSystem3Code.Singapore}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSingapore
+ * CashClearingSystem3Code.mmSingapore}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Malta
- * CashClearingSystem3Code.Malta}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmMalta
+ * CashClearingSystem3Code.mmMalta}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Namibia
- * CashClearingSystem3Code.Namibia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmNamibia
+ * CashClearingSystem3Code.mmNamibia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Angola
- * CashClearingSystem3Code.Angola}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmAngola
+ * CashClearingSystem3Code.mmAngola}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#RomaniaEPO
- * CashClearingSystem3Code.RomaniaEPO}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmRomaniaEPO
+ * CashClearingSystem3Code.mmRomaniaEPO}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#RomaniaGSRS
- * CashClearingSystem3Code.RomaniaGSRS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmRomaniaGSRS
+ * CashClearingSystem3Code.mmRomaniaGSRS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Chili
- * CashClearingSystem3Code.Chili}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmChili
+ * CashClearingSystem3Code.mmChili}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#UnitedKingdomGBP
- * CashClearingSystem3Code.UnitedKingdomGBP}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmUnitedKingdomGBP
+ * CashClearingSystem3Code.mmUnitedKingdomGBP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Thailand
- * CashClearingSystem3Code.Thailand}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmThailand
+ * CashClearingSystem3Code.mmThailand}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Tanzania
- * CashClearingSystem3Code.Tanzania}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmTanzania
+ * CashClearingSystem3Code.mmTanzania}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#TrinidadAndTobago
- * CashClearingSystem3Code.TrinidadAndTobago}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmTrinidadAndTobago
+ * CashClearingSystem3Code.mmTrinidadAndTobago}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Uganda
- * CashClearingSystem3Code.Uganda}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmUganda
+ * CashClearingSystem3Code.mmUganda}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#SouthAfrica
- * CashClearingSystem3Code.SouthAfrica}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmSouthAfrica
+ * CashClearingSystem3Code.mmSouthAfrica}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Zimbabwe
- * CashClearingSystem3Code.Zimbabwe}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmZimbabwe
+ * CashClearingSystem3Code.mmZimbabwe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Zambia
- * CashClearingSystem3Code.Zambia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmZambia
+ * CashClearingSystem3Code.mmZambia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#USChips
- * CashClearingSystem3Code.USChips}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmUSChips
+ * CashClearingSystem3Code.mmUSChips}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#Columbia
- * CashClearingSystem3Code.Columbia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem3Code#mmColumbia
+ * CashClearingSystem3Code.mmColumbia}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -303,7 +303,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "EBAEuro1Step1"</li>
 	 * </ul>
 	 */
-	public static final MMCode EBAEuro1Step1 = new MMCode() {
+	public static final MMCode mmEBAEuro1Step1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAEuro1Step1";
@@ -326,7 +326,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Austrian"</li>
 	 * </ul>
 	 */
-	public static final MMCode Austrian = new MMCode() {
+	public static final MMCode mmAustrian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Austrian";
@@ -349,7 +349,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "NewZealand"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewZealand = new MMCode() {
+	public static final MMCode mmNewZealand = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealand";
@@ -372,7 +372,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Azerbaijan"</li>
 	 * </ul>
 	 */
-	public static final MMCode Azerbaijan = new MMCode() {
+	public static final MMCode mmAzerbaijan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Azerbaijan";
@@ -395,7 +395,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "BosniaHerzegovina"</li>
 	 * </ul>
 	 */
-	public static final MMCode BosniaHerzegovina = new MMCode() {
+	public static final MMCode mmBosniaHerzegovina = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BosniaHerzegovina";
@@ -418,7 +418,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Belgium"</li>
 	 * </ul>
 	 */
-	public static final MMCode Belgium = new MMCode() {
+	public static final MMCode mmBelgium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Belgium";
@@ -441,7 +441,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Finland"</li>
 	 * </ul>
 	 */
-	public static final MMCode Finland = new MMCode() {
+	public static final MMCode mmFinland = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Finland";
@@ -464,7 +464,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Italy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Italy = new MMCode() {
+	public static final MMCode mmItaly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Italy";
@@ -487,7 +487,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Canada"</li>
 	 * </ul>
 	 */
-	public static final MMCode Canada = new MMCode() {
+	public static final MMCode mmCanada = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Canada";
@@ -510,7 +510,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "SpainCAM"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpainCAM = new MMCode() {
+	public static final MMCode mmSpainCAM = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpainCAM";
@@ -533,7 +533,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Ireland"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ireland = new MMCode() {
+	public static final MMCode mmIreland = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ireland";
@@ -556,7 +556,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "UnitedKingdom"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitedKingdom = new MMCode() {
+	public static final MMCode mmUnitedKingdom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitedKingdom";
@@ -579,7 +579,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Denmark"</li>
 	 * </ul>
 	 */
-	public static final MMCode Denmark = new MMCode() {
+	public static final MMCode mmDenmark = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denmark";
@@ -602,7 +602,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "GermanyRTGSPlus"</li>
 	 * </ul>
 	 */
-	public static final MMCode GermanyRTGSPlus = new MMCode() {
+	public static final MMCode mmGermanyRTGSPlus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanyRTGSPlus";
@@ -625,7 +625,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "EBAEuro1"</li>
 	 * </ul>
 	 */
-	public static final MMCode EBAEuro1 = new MMCode() {
+	public static final MMCode mmEBAEuro1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAEuro1";
@@ -648,7 +648,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "GermanyELS"</li>
 	 * </ul>
 	 */
-	public static final MMCode GermanyELS = new MMCode() {
+	public static final MMCode mmGermanyELS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanyELS";
@@ -671,7 +671,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "EBAStep1"</li>
 	 * </ul>
 	 */
-	public static final MMCode EBAStep1 = new MMCode() {
+	public static final MMCode mmEBAStep1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAStep1";
@@ -694,7 +694,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "EBAStep2"</li>
 	 * </ul>
 	 */
-	public static final MMCode EBAStep2 = new MMCode() {
+	public static final MMCode mmEBAStep2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAStep2";
@@ -717,7 +717,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Croatia"</li>
 	 * </ul>
 	 */
-	public static final MMCode Croatia = new MMCode() {
+	public static final MMCode mmCroatia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Croatia";
@@ -740,7 +740,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Greece"</li>
 	 * </ul>
 	 */
-	public static final MMCode Greece = new MMCode() {
+	public static final MMCode mmGreece = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Greece";
@@ -763,7 +763,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Hungary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Hungary = new MMCode() {
+	public static final MMCode mmHungary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hungary";
@@ -786,7 +786,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Luxemburg"</li>
 	 * </ul>
 	 */
-	public static final MMCode Luxemburg = new MMCode() {
+	public static final MMCode mmLuxemburg = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Luxemburg";
@@ -809,7 +809,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Latvia"</li>
 	 * </ul>
 	 */
-	public static final MMCode Latvia = new MMCode() {
+	public static final MMCode mmLatvia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Latvia";
@@ -832,7 +832,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Mauritius"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mauritius = new MMCode() {
+	public static final MMCode mmMauritius = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mauritius";
@@ -855,7 +855,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Norway"</li>
 	 * </ul>
 	 */
-	public static final MMCode Norway = new MMCode() {
+	public static final MMCode mmNorway = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Norway";
@@ -878,7 +878,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Switzerland"</li>
 	 * </ul>
 	 */
-	public static final MMCode Switzerland = new MMCode() {
+	public static final MMCode mmSwitzerland = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switzerland";
@@ -901,7 +901,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Australia"</li>
 	 * </ul>
 	 */
-	public static final MMCode Australia = new MMCode() {
+	public static final MMCode mmAustralia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Australia";
@@ -924,7 +924,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Egypt"</li>
 	 * </ul>
 	 */
-	public static final MMCode Egypt = new MMCode() {
+	public static final MMCode mmEgypt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Egypt";
@@ -947,7 +947,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "FrancePNS"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrancePNS = new MMCode() {
+	public static final MMCode mmFrancePNS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrancePNS";
@@ -970,7 +970,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Venezuela"</li>
 	 * </ul>
 	 */
-	public static final MMCode Venezuela = new MMCode() {
+	public static final MMCode mmVenezuela = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Venezuela";
@@ -993,7 +993,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "SwedenSEC"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwedenSEC = new MMCode() {
+	public static final MMCode mmSwedenSEC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwedenSEC";
@@ -1016,7 +1016,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Slovania"</li>
 	 * </ul>
 	 */
-	public static final MMCode Slovania = new MMCode() {
+	public static final MMCode mmSlovania = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Slovania";
@@ -1039,7 +1039,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "SpainES"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpainES = new MMCode() {
+	public static final MMCode mmSpainES = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpainES";
@@ -1062,7 +1062,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Portugal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Portugal = new MMCode() {
+	public static final MMCode mmPortugal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Portugal";
@@ -1085,7 +1085,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "SwedenSSK"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwedenSSK = new MMCode() {
+	public static final MMCode mmSwedenSSK = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwedenSSK";
@@ -1108,7 +1108,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "FranceFR"</li>
 	 * </ul>
 	 */
-	public static final MMCode FranceFR = new MMCode() {
+	public static final MMCode mmFranceFR = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FranceFR";
@@ -1131,7 +1131,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Target"</li>
 	 * </ul>
 	 */
-	public static final MMCode Target = new MMCode() {
+	public static final MMCode mmTarget = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Target";
@@ -1154,7 +1154,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Netherlands"</li>
 	 * </ul>
 	 */
-	public static final MMCode Netherlands = new MMCode() {
+	public static final MMCode mmNetherlands = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Netherlands";
@@ -1177,7 +1177,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Fedwire"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fedwire = new MMCode() {
+	public static final MMCode mmFedwire = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fedwire";
@@ -1200,7 +1200,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "BankOfJapanNet"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankOfJapanNet = new MMCode() {
+	public static final MMCode mmBankOfJapanNet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfJapanNet";
@@ -1223,7 +1223,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "ForeignExchangeYenClearing"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchangeYenClearing = new MMCode() {
+	public static final MMCode mmForeignExchangeYenClearing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeYenClearing";
@@ -1246,7 +1246,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Zengin"</li>
 	 * </ul>
 	 */
-	public static final MMCode Zengin = new MMCode() {
+	public static final MMCode mmZengin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zengin";
@@ -1269,7 +1269,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "DenmarkDDK"</li>
 	 * </ul>
 	 */
-	public static final MMCode DenmarkDDK = new MMCode() {
+	public static final MMCode mmDenmarkDDK = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenmarkDDK";
@@ -1292,7 +1292,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Albania"</li>
 	 * </ul>
 	 */
-	public static final MMCode Albania = new MMCode() {
+	public static final MMCode mmAlbania = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Albania";
@@ -1315,7 +1315,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "SwedenBGC"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwedenBGC = new MMCode() {
+	public static final MMCode mmSwedenBGC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwedenBGC";
@@ -1338,7 +1338,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Barbados"</li>
 	 * </ul>
 	 */
-	public static final MMCode Barbados = new MMCode() {
+	public static final MMCode mmBarbados = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Barbados";
@@ -1361,7 +1361,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Bulgaria"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bulgaria = new MMCode() {
+	public static final MMCode mmBulgaria = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bulgaria";
@@ -1384,7 +1384,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Bahamas"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bahamas = new MMCode() {
+	public static final MMCode mmBahamas = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bahamas";
@@ -1407,7 +1407,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Botswana"</li>
 	 * </ul>
 	 */
-	public static final MMCode Botswana = new MMCode() {
+	public static final MMCode mmBotswana = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Botswana";
@@ -1430,7 +1430,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Philippines"</li>
 	 * </ul>
 	 */
-	public static final MMCode Philippines = new MMCode() {
+	public static final MMCode mmPhilippines = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Philippines";
@@ -1453,7 +1453,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "ECB"</li>
 	 * </ul>
 	 */
-	public static final MMCode ECB = new MMCode() {
+	public static final MMCode mmECB = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ECB";
@@ -1476,7 +1476,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "USChipsACH"</li>
 	 * </ul>
 	 */
-	public static final MMCode USChipsACH = new MMCode() {
+	public static final MMCode mmUSChipsACH = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USChipsACH";
@@ -1499,7 +1499,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "USFedACH"</li>
 	 * </ul>
 	 */
-	public static final MMCode USFedACH = new MMCode() {
+	public static final MMCode mmUSFedACH = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USFedACH";
@@ -1522,7 +1522,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Ghana"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ghana = new MMCode() {
+	public static final MMCode mmGhana = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ghana";
@@ -1545,7 +1545,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "NetherlandsIP"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetherlandsIP = new MMCode() {
+	public static final MMCode mmNetherlandsIP = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetherlandsIP";
@@ -1568,7 +1568,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Jordan"</li>
 	 * </ul>
 	 */
-	public static final MMCode Jordan = new MMCode() {
+	public static final MMCode mmJordan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Jordan";
@@ -1591,7 +1591,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Kenya"</li>
 	 * </ul>
 	 */
-	public static final MMCode Kenya = new MMCode() {
+	public static final MMCode mmKenya = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Kenya";
@@ -1614,7 +1614,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "SriLanka"</li>
 	 * </ul>
 	 */
-	public static final MMCode SriLanka = new MMCode() {
+	public static final MMCode mmSriLanka = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SriLanka";
@@ -1637,7 +1637,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Singapore"</li>
 	 * </ul>
 	 */
-	public static final MMCode Singapore = new MMCode() {
+	public static final MMCode mmSingapore = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Singapore";
@@ -1660,7 +1660,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Malta"</li>
 	 * </ul>
 	 */
-	public static final MMCode Malta = new MMCode() {
+	public static final MMCode mmMalta = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Malta";
@@ -1683,7 +1683,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Namibia"</li>
 	 * </ul>
 	 */
-	public static final MMCode Namibia = new MMCode() {
+	public static final MMCode mmNamibia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Namibia";
@@ -1706,7 +1706,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Angola"</li>
 	 * </ul>
 	 */
-	public static final MMCode Angola = new MMCode() {
+	public static final MMCode mmAngola = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Angola";
@@ -1729,7 +1729,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "RomaniaEPO"</li>
 	 * </ul>
 	 */
-	public static final MMCode RomaniaEPO = new MMCode() {
+	public static final MMCode mmRomaniaEPO = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RomaniaEPO";
@@ -1752,7 +1752,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "RomaniaGSRS"</li>
 	 * </ul>
 	 */
-	public static final MMCode RomaniaGSRS = new MMCode() {
+	public static final MMCode mmRomaniaGSRS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RomaniaGSRS";
@@ -1775,7 +1775,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Chili"</li>
 	 * </ul>
 	 */
-	public static final MMCode Chili = new MMCode() {
+	public static final MMCode mmChili = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Chili";
@@ -1798,7 +1798,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "UnitedKingdomGBP"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitedKingdomGBP = new MMCode() {
+	public static final MMCode mmUnitedKingdomGBP = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitedKingdomGBP";
@@ -1821,7 +1821,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Thailand"</li>
 	 * </ul>
 	 */
-	public static final MMCode Thailand = new MMCode() {
+	public static final MMCode mmThailand = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Thailand";
@@ -1844,7 +1844,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Tanzania"</li>
 	 * </ul>
 	 */
-	public static final MMCode Tanzania = new MMCode() {
+	public static final MMCode mmTanzania = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tanzania";
@@ -1867,7 +1867,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "TrinidadAndTobago"</li>
 	 * </ul>
 	 */
-	public static final MMCode TrinidadAndTobago = new MMCode() {
+	public static final MMCode mmTrinidadAndTobago = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrinidadAndTobago";
@@ -1890,7 +1890,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Uganda"</li>
 	 * </ul>
 	 */
-	public static final MMCode Uganda = new MMCode() {
+	public static final MMCode mmUganda = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Uganda";
@@ -1913,7 +1913,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "SouthAfrica"</li>
 	 * </ul>
 	 */
-	public static final MMCode SouthAfrica = new MMCode() {
+	public static final MMCode mmSouthAfrica = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SouthAfrica";
@@ -1936,7 +1936,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Zimbabwe"</li>
 	 * </ul>
 	 */
-	public static final MMCode Zimbabwe = new MMCode() {
+	public static final MMCode mmZimbabwe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zimbabwe";
@@ -1959,7 +1959,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Zambia"</li>
 	 * </ul>
 	 */
-	public static final MMCode Zambia = new MMCode() {
+	public static final MMCode mmZambia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zambia";
@@ -1982,7 +1982,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "USChips"</li>
 	 * </ul>
 	 */
-	public static final MMCode USChips = new MMCode() {
+	public static final MMCode mmUSChips = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USChips";
@@ -2005,7 +2005,7 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	 * name} = "Columbia"</li>
 	 * </ul>
 	 */
-	public static final MMCode Columbia = new MMCode() {
+	public static final MMCode mmColumbia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Columbia";
@@ -2016,37 +2016,38 @@ public class CashClearingSystem3Code extends CashClearingSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ABE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashClearingSystem3Code";
 				definition = "Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is to be processed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashClearingSystem3Code.EBAEuro1Step1, com.tools20022.repository.codeset.CashClearingSystem3Code.Austrian,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.NewZealand, com.tools20022.repository.codeset.CashClearingSystem3Code.Azerbaijan,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.BosniaHerzegovina, com.tools20022.repository.codeset.CashClearingSystem3Code.Belgium, com.tools20022.repository.codeset.CashClearingSystem3Code.Finland,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Italy, com.tools20022.repository.codeset.CashClearingSystem3Code.Canada, com.tools20022.repository.codeset.CashClearingSystem3Code.SpainCAM,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Ireland, com.tools20022.repository.codeset.CashClearingSystem3Code.UnitedKingdom, com.tools20022.repository.codeset.CashClearingSystem3Code.Denmark,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.GermanyRTGSPlus, com.tools20022.repository.codeset.CashClearingSystem3Code.EBAEuro1, com.tools20022.repository.codeset.CashClearingSystem3Code.GermanyELS,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.EBAStep1, com.tools20022.repository.codeset.CashClearingSystem3Code.EBAStep2, com.tools20022.repository.codeset.CashClearingSystem3Code.Croatia,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Greece, com.tools20022.repository.codeset.CashClearingSystem3Code.Hungary, com.tools20022.repository.codeset.CashClearingSystem3Code.Luxemburg,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Latvia, com.tools20022.repository.codeset.CashClearingSystem3Code.Mauritius, com.tools20022.repository.codeset.CashClearingSystem3Code.Norway,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Switzerland, com.tools20022.repository.codeset.CashClearingSystem3Code.Australia, com.tools20022.repository.codeset.CashClearingSystem3Code.Egypt,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.FrancePNS, com.tools20022.repository.codeset.CashClearingSystem3Code.Venezuela, com.tools20022.repository.codeset.CashClearingSystem3Code.SwedenSEC,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Slovania, com.tools20022.repository.codeset.CashClearingSystem3Code.SpainES, com.tools20022.repository.codeset.CashClearingSystem3Code.Portugal,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.SwedenSSK, com.tools20022.repository.codeset.CashClearingSystem3Code.FranceFR, com.tools20022.repository.codeset.CashClearingSystem3Code.Target,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Netherlands, com.tools20022.repository.codeset.CashClearingSystem3Code.Fedwire, com.tools20022.repository.codeset.CashClearingSystem3Code.BankOfJapanNet,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.ForeignExchangeYenClearing, com.tools20022.repository.codeset.CashClearingSystem3Code.Zengin,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.DenmarkDDK, com.tools20022.repository.codeset.CashClearingSystem3Code.Albania, com.tools20022.repository.codeset.CashClearingSystem3Code.SwedenBGC,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Barbados, com.tools20022.repository.codeset.CashClearingSystem3Code.Bulgaria, com.tools20022.repository.codeset.CashClearingSystem3Code.Bahamas,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Botswana, com.tools20022.repository.codeset.CashClearingSystem3Code.Philippines, com.tools20022.repository.codeset.CashClearingSystem3Code.ECB,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.USChipsACH, com.tools20022.repository.codeset.CashClearingSystem3Code.USFedACH, com.tools20022.repository.codeset.CashClearingSystem3Code.Ghana,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.NetherlandsIP, com.tools20022.repository.codeset.CashClearingSystem3Code.Jordan, com.tools20022.repository.codeset.CashClearingSystem3Code.Kenya,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.SriLanka, com.tools20022.repository.codeset.CashClearingSystem3Code.Singapore, com.tools20022.repository.codeset.CashClearingSystem3Code.Malta,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Namibia, com.tools20022.repository.codeset.CashClearingSystem3Code.Angola, com.tools20022.repository.codeset.CashClearingSystem3Code.RomaniaEPO,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.RomaniaGSRS, com.tools20022.repository.codeset.CashClearingSystem3Code.Chili, com.tools20022.repository.codeset.CashClearingSystem3Code.UnitedKingdomGBP,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Thailand, com.tools20022.repository.codeset.CashClearingSystem3Code.Tanzania, com.tools20022.repository.codeset.CashClearingSystem3Code.TrinidadAndTobago,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Uganda, com.tools20022.repository.codeset.CashClearingSystem3Code.SouthAfrica, com.tools20022.repository.codeset.CashClearingSystem3Code.Zimbabwe,
-						com.tools20022.repository.codeset.CashClearingSystem3Code.Zambia, com.tools20022.repository.codeset.CashClearingSystem3Code.USChips, com.tools20022.repository.codeset.CashClearingSystem3Code.Columbia);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashClearingSystem3Code.mmEBAEuro1Step1, com.tools20022.repository.codeset.CashClearingSystem3Code.mmAustrian,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmNewZealand, com.tools20022.repository.codeset.CashClearingSystem3Code.mmAzerbaijan,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmBosniaHerzegovina, com.tools20022.repository.codeset.CashClearingSystem3Code.mmBelgium,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmFinland, com.tools20022.repository.codeset.CashClearingSystem3Code.mmItaly, com.tools20022.repository.codeset.CashClearingSystem3Code.mmCanada,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmSpainCAM, com.tools20022.repository.codeset.CashClearingSystem3Code.mmIreland, com.tools20022.repository.codeset.CashClearingSystem3Code.mmUnitedKingdom,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmDenmark, com.tools20022.repository.codeset.CashClearingSystem3Code.mmGermanyRTGSPlus, com.tools20022.repository.codeset.CashClearingSystem3Code.mmEBAEuro1,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmGermanyELS, com.tools20022.repository.codeset.CashClearingSystem3Code.mmEBAStep1, com.tools20022.repository.codeset.CashClearingSystem3Code.mmEBAStep2,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmCroatia, com.tools20022.repository.codeset.CashClearingSystem3Code.mmGreece, com.tools20022.repository.codeset.CashClearingSystem3Code.mmHungary,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmLuxemburg, com.tools20022.repository.codeset.CashClearingSystem3Code.mmLatvia, com.tools20022.repository.codeset.CashClearingSystem3Code.mmMauritius,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmNorway, com.tools20022.repository.codeset.CashClearingSystem3Code.mmSwitzerland, com.tools20022.repository.codeset.CashClearingSystem3Code.mmAustralia,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmEgypt, com.tools20022.repository.codeset.CashClearingSystem3Code.mmFrancePNS, com.tools20022.repository.codeset.CashClearingSystem3Code.mmVenezuela,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmSwedenSEC, com.tools20022.repository.codeset.CashClearingSystem3Code.mmSlovania, com.tools20022.repository.codeset.CashClearingSystem3Code.mmSpainES,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmPortugal, com.tools20022.repository.codeset.CashClearingSystem3Code.mmSwedenSSK, com.tools20022.repository.codeset.CashClearingSystem3Code.mmFranceFR,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmTarget, com.tools20022.repository.codeset.CashClearingSystem3Code.mmNetherlands, com.tools20022.repository.codeset.CashClearingSystem3Code.mmFedwire,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmBankOfJapanNet, com.tools20022.repository.codeset.CashClearingSystem3Code.mmForeignExchangeYenClearing,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmZengin, com.tools20022.repository.codeset.CashClearingSystem3Code.mmDenmarkDDK, com.tools20022.repository.codeset.CashClearingSystem3Code.mmAlbania,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmSwedenBGC, com.tools20022.repository.codeset.CashClearingSystem3Code.mmBarbados, com.tools20022.repository.codeset.CashClearingSystem3Code.mmBulgaria,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmBahamas, com.tools20022.repository.codeset.CashClearingSystem3Code.mmBotswana, com.tools20022.repository.codeset.CashClearingSystem3Code.mmPhilippines,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmECB, com.tools20022.repository.codeset.CashClearingSystem3Code.mmUSChipsACH, com.tools20022.repository.codeset.CashClearingSystem3Code.mmUSFedACH,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmGhana, com.tools20022.repository.codeset.CashClearingSystem3Code.mmNetherlandsIP, com.tools20022.repository.codeset.CashClearingSystem3Code.mmJordan,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmKenya, com.tools20022.repository.codeset.CashClearingSystem3Code.mmSriLanka, com.tools20022.repository.codeset.CashClearingSystem3Code.mmSingapore,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmMalta, com.tools20022.repository.codeset.CashClearingSystem3Code.mmNamibia, com.tools20022.repository.codeset.CashClearingSystem3Code.mmAngola,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmRomaniaEPO, com.tools20022.repository.codeset.CashClearingSystem3Code.mmRomaniaGSRS, com.tools20022.repository.codeset.CashClearingSystem3Code.mmChili,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmUnitedKingdomGBP, com.tools20022.repository.codeset.CashClearingSystem3Code.mmThailand,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmTanzania, com.tools20022.repository.codeset.CashClearingSystem3Code.mmTrinidadAndTobago,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmUganda, com.tools20022.repository.codeset.CashClearingSystem3Code.mmSouthAfrica, com.tools20022.repository.codeset.CashClearingSystem3Code.mmZimbabwe,
+						com.tools20022.repository.codeset.CashClearingSystem3Code.mmZambia, com.tools20022.repository.codeset.CashClearingSystem3Code.mmUSChips, com.tools20022.repository.codeset.CashClearingSystem3Code.mmColumbia);
 				trace_lazy = () -> CashClearingSystemCode.mmObject();
 			}
 		});

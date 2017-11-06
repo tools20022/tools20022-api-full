@@ -36,11 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Case2#Identification
- * Case2.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Case2#Creator Case2.Creator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Case2#ReopenCaseIndication
- * Case2.ReopenCaseIndication}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Case2#mmIdentification
+ * Case2.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Case2#mmCreator
+ * Case2.mmCreator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Case2#mmReopenCaseIndication
+ * Case2.mmReopenCaseIndication}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,59 +52,61 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01#Case
- * CustomerPaymentCancellationRequestV01.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01#mmCase
+ * CustomerPaymentCancellationRequestV01.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01#Case
- * FIToFIPaymentCancellationRequestV01.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01#mmCase
+ * FIToFIPaymentCancellationRequestV01.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#Case
- * RequestToModifyPaymentV03.Case}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#Case
- * UnableToApplyV03.Case}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV03#Case
- * ClaimNonReceiptV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmCase
+ * RequestToModifyPaymentV03.mmCase}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#mmCase
+ * UnableToApplyV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#Case
- * AdditionalPaymentInformationV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV03#mmCase
+ * ClaimNonReceiptV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#ResolvedCase
- * ResolutionOfInvestigationV03.ResolvedCase}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#mmCase
+ * AdditionalPaymentInformationV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03#Case
- * NotificationOfCaseAssignmentV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmResolvedCase
+ * ResolutionOfInvestigationV03.mmResolvedCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#Case
- * RejectInvestigationV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03#mmCase
+ * NotificationOfCaseAssignmentV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#Case
- * CancelCaseAssignmentV02.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#mmCase
+ * RejectInvestigationV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestForDuplicateV03#Case
- * RequestForDuplicateV03.Case}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#Case
- * DuplicateV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#mmCase
+ * CancelCaseAssignmentV02.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#Case
- * ProprietaryFormatInvestigationV02.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestForDuplicateV03#mmCase
+ * RequestForDuplicateV03.mmCase}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#mmCase
+ * DuplicateV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#Case
- * DebitAuthorisationResponseV02.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#mmCase
+ * ProprietaryFormatInvestigationV02.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV03#Case
- * DebitAuthorisationRequestV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#mmCase
+ * DebitAuthorisationResponseV02.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV02#Case
- * CaseStatusReportRequestV02.Case}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#Case
- * CaseStatusReportV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV03#mmCase
+ * DebitAuthorisationRequestV03.mmCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV02#mmCase
+ * CaseStatusReportRequestV02.mmCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#mmCase
+ * CaseStatusReportV03.mmCase}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +120,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Case2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Uniquely identifies the case.
 	 * <p>
@@ -129,8 +133,8 @@ public class Case2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#Identification
-	 * InvestigationCase.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmIdentification
+	 * InvestigationCase.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Case2
@@ -148,20 +152,21 @@ public class Case2 {
 	 * definition} = "Uniquely identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmIdentification;
 			componentContext_lazy = () -> Case2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Party7Choice creator;
 	/**
 	 * Party that created the investigation case.
 	 * <p>
@@ -173,8 +178,8 @@ public class Case2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Case2
@@ -192,21 +197,22 @@ public class Case2 {
 	 * definition} = "Party that created the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Creator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Case2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Cretr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creator";
 			definition = "Party that created the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Party7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Party7Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator reopenCaseIndication;
 	/**
 	 * Indicates whether or not the case was previously closed and is now
 	 * re-opened.
@@ -237,7 +243,7 @@ public class Case2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReopenCaseIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReopenCaseIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Case2.mmObject();
 			isDerived = false;
@@ -245,8 +251,8 @@ public class Case2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReopenCaseIndication";
 			definition = "Indicates whether or not the case was previously closed and is now re-opened.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -254,21 +260,45 @@ public class Case2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Case2.Identification, com.tools20022.repository.msg.Case2.Creator, com.tools20022.repository.msg.Case2.ReopenCaseIndication);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Case2.mmIdentification, com.tools20022.repository.msg.Case2.mmCreator, com.tools20022.repository.msg.Case2.mmReopenCaseIndication);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.mmCase, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01.mmCase,
+						com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmCase, com.tools20022.repository.area.camt.UnableToApplyV03.mmCase, com.tools20022.repository.area.camt.ClaimNonReceiptV03.mmCase,
+						com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.mmCase, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmResolvedCase,
+						com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.mmCase, com.tools20022.repository.area.camt.RejectInvestigationV03.mmCase, com.tools20022.repository.area.camt.CancelCaseAssignmentV02.mmCase,
+						com.tools20022.repository.area.camt.RequestForDuplicateV03.mmCase, com.tools20022.repository.area.camt.DuplicateV03.mmCase, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmCase,
+						com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.mmCase, com.tools20022.repository.area.camt.DebitAuthorisationRequestV03.mmCase,
+						com.tools20022.repository.area.camt.CaseStatusReportRequestV02.mmCase, com.tools20022.repository.area.camt.CaseStatusReportV03.mmCase);
 				trace_lazy = () -> InvestigationCase.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.Case, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01.Case,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV03.Case, com.tools20022.repository.area.camt.UnableToApplyV03.Case, com.tools20022.repository.area.camt.ClaimNonReceiptV03.Case,
-						com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.Case, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.ResolvedCase,
-						com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.Case, com.tools20022.repository.area.camt.RejectInvestigationV03.Case, com.tools20022.repository.area.camt.CancelCaseAssignmentV02.Case,
-						com.tools20022.repository.area.camt.RequestForDuplicateV03.Case, com.tools20022.repository.area.camt.DuplicateV03.Case, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.Case,
-						com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.Case, com.tools20022.repository.area.camt.DebitAuthorisationRequestV03.Case, com.tools20022.repository.area.camt.CaseStatusReportRequestV02.Case,
-						com.tools20022.repository.area.camt.CaseStatusReportV03.Case);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Case2";
 				definition = "Set of elements used to identify a case.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Party7Choice getCreator() {
+		return creator;
+	}
+
+	public void setCreator(Party7Choice creator) {
+		this.creator = creator;
+	}
+
+	public YesNoIndicator getReopenCaseIndication() {
+		return reopenCaseIndication;
+	}
+
+	public void setReopenCaseIndication(YesNoIndicator reopenCaseIndication) {
+		this.reopenCaseIndication = reopenCaseIndication;
 	}
 }

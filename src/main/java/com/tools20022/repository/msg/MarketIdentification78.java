@@ -39,10 +39,10 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification78#Identification
- * MarketIdentification78.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification78#Type
- * MarketIdentification78.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification78#mmIdentification
+ * MarketIdentification78.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification78#mmType
+ * MarketIdentification78.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -73,6 +73,7 @@ import java.util.function.Supplier;
 public class MarketIdentification78 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarketIdentification1Choice identification;
 	/**
 	 * Code allocated to places of trade, ie, stock exchanges, regulated
 	 * markets, eg, Electronic Trading Platforms (ECN), and unregulated markets,
@@ -111,26 +112,27 @@ public class MarketIdentification78 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MarketIdentification4#Identification
-	 * MarketIdentification4.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MarketIdentification4#mmIdentification
+	 * MarketIdentification4.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarketIdentification78.mmObject();
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
+			componentContext_lazy = () -> MarketIdentification78.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Code allocated to places of trade, ie, stock exchanges, regulated markets, eg, Electronic Trading Platforms (ECN), and unregulated markets, eg, Automated Trading Systems (ATS), as sources of prices and related information, in order to facilitate automated processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MarketIdentification4.Identification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MarketIdentification4.mmIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MarketIdentification1Choice.mmObject();
 		}
 	};
+	protected MarketType3Choice type;
 	/**
 	 * Nature of a market in which transactions take place.
 	 * <p>
@@ -142,8 +144,8 @@ public class MarketIdentification78 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#Type
-	 * TradingMarket.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmType
+	 * TradingMarket.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,33 +165,33 @@ public class MarketIdentification78 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MarketIdentification4#Type
-	 * MarketIdentification4.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.MarketIdentification4#mmType
+	 * MarketIdentification4.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmType;
 			componentContext_lazy = () -> MarketIdentification78.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of a market in which transactions take place.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MarketIdentification4.Type;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MarketIdentification4.mmType;
 			maxOccurs = 1;
-			type_lazy = () -> MarketType3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarketType3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification78.Identification, com.tools20022.repository.msg.MarketIdentification78.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification78.mmIdentification, com.tools20022.repository.msg.MarketIdentification78.mmType);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -204,5 +206,21 @@ public class MarketIdentification78 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarketIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(MarketIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public MarketType3Choice getType() {
+		return type;
+	}
+
+	public void setType(MarketType3Choice type) {
+		this.type = type;
 	}
 }

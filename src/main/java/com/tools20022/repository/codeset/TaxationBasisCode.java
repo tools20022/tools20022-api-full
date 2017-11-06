@@ -29,33 +29,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasisCode#Flat
- * TaxationBasisCode.Flat}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasisCode#PerUnit
- * TaxationBasisCode.PerUnit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmFlat
+ * TaxationBasisCode.mmFlat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#Percentage
- * TaxationBasisCode.Percentage}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmPerUnit
+ * TaxationBasisCode.mmPerUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#RatePerBrackets
- * TaxationBasisCode.RatePerBrackets}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmPercentage
+ * TaxationBasisCode.mmPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#RateWithMinimumAmount
- * TaxationBasisCode.RateWithMinimumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmRatePerBrackets
+ * TaxationBasisCode.mmRatePerBrackets}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#RateWithMaximumAmount
- * TaxationBasisCode.RateWithMaximumAmount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasisCode#Other
- * TaxationBasisCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmRateWithMinimumAmount
+ * TaxationBasisCode.mmRateWithMinimumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#GrossAmount
- * TaxationBasisCode.GrossAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmRateWithMaximumAmount
+ * TaxationBasisCode.mmRateWithMaximumAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmOther
+ * TaxationBasisCode.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#NetAmount
- * TaxationBasisCode.NetAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmGrossAmount
+ * TaxationBasisCode.mmGrossAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#NetAssetValuePrice
- * TaxationBasisCode.NetAssetValuePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmNetAmount
+ * TaxationBasisCode.mmNetAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode#mmNetAssetValuePrice
+ * TaxationBasisCode.mmNetAssetValuePrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -74,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -116,7 +117,7 @@ public class TaxationBasisCode {
 	 * definition} = "Charge/tax basis is a lump sum."</li>
 	 * </ul>
 	 */
-	public static final MMCode Flat = new MMCode() {
+	public static final MMCode mmFlat = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Flat";
@@ -146,7 +147,7 @@ public class TaxationBasisCode {
 	 * definition} = "Charges/tax basis is per unit of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMCode PerUnit = new MMCode() {
+	public static final MMCode mmPerUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PerUnit";
@@ -176,7 +177,7 @@ public class TaxationBasisCode {
 	 * definition} = "Charge/tax basis is a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMCode Percentage = new MMCode() {
+	public static final MMCode mmPercentage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
@@ -207,7 +208,7 @@ public class TaxationBasisCode {
 	 * "Charge/tax basis is a percentage which depends on the tax brackets."</li>
 	 * </ul>
 	 */
-	public static final MMCode RatePerBrackets = new MMCode() {
+	public static final MMCode mmRatePerBrackets = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RatePerBrackets";
@@ -237,7 +238,7 @@ public class TaxationBasisCode {
 	 * definition} = "Rate with a minimum amount."</li>
 	 * </ul>
 	 */
-	public static final MMCode RateWithMinimumAmount = new MMCode() {
+	public static final MMCode mmRateWithMinimumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RateWithMinimumAmount";
@@ -267,7 +268,7 @@ public class TaxationBasisCode {
 	 * definition} = "Rate with a maximum amount."</li>
 	 * </ul>
 	 */
-	public static final MMCode RateWithMaximumAmount = new MMCode() {
+	public static final MMCode mmRateWithMaximumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RateWithMaximumAmount";
@@ -297,7 +298,7 @@ public class TaxationBasisCode {
 	 * definition} = "Another type of taxation basis."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -328,7 +329,7 @@ public class TaxationBasisCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GrossAmount = new MMCode() {
+	public static final MMCode mmGrossAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GrossAmount";
@@ -358,7 +359,7 @@ public class TaxationBasisCode {
 	 * definition} = "Charge/commission/tax basis is based on the net amount."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetAmount = new MMCode() {
+	public static final MMCode mmNetAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetAmount";
@@ -388,7 +389,7 @@ public class TaxationBasisCode {
 	 * definition} = "Charge/tax basis is the price."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetAssetValuePrice = new MMCode() {
+	public static final MMCode mmNetAssetValuePrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValuePrice";
@@ -401,15 +402,15 @@ public class TaxationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FLAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxationBasisCode";
 				definition = "Specifies the tax basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasisCode.Flat, com.tools20022.repository.codeset.TaxationBasisCode.PerUnit, com.tools20022.repository.codeset.TaxationBasisCode.Percentage,
-						com.tools20022.repository.codeset.TaxationBasisCode.RatePerBrackets, com.tools20022.repository.codeset.TaxationBasisCode.RateWithMinimumAmount,
-						com.tools20022.repository.codeset.TaxationBasisCode.RateWithMaximumAmount, com.tools20022.repository.codeset.TaxationBasisCode.Other, com.tools20022.repository.codeset.TaxationBasisCode.GrossAmount,
-						com.tools20022.repository.codeset.TaxationBasisCode.NetAmount, com.tools20022.repository.codeset.TaxationBasisCode.NetAssetValuePrice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasisCode.mmFlat, com.tools20022.repository.codeset.TaxationBasisCode.mmPerUnit, com.tools20022.repository.codeset.TaxationBasisCode.mmPercentage,
+						com.tools20022.repository.codeset.TaxationBasisCode.mmRatePerBrackets, com.tools20022.repository.codeset.TaxationBasisCode.mmRateWithMinimumAmount,
+						com.tools20022.repository.codeset.TaxationBasisCode.mmRateWithMaximumAmount, com.tools20022.repository.codeset.TaxationBasisCode.mmOther, com.tools20022.repository.codeset.TaxationBasisCode.mmGrossAmount,
+						com.tools20022.repository.codeset.TaxationBasisCode.mmNetAmount, com.tools20022.repository.codeset.TaxationBasisCode.mmNetAssetValuePrice);
 				derivation_lazy = () -> Arrays.asList(TaxationBasis2Code.mmObject(), TaxationBasis4Code.mmObject(), TaxationBasis3Code.mmObject(), TaxationBasis5Code.mmObject());
 			}
 		});

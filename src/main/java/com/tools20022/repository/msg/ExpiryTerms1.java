@@ -36,15 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms1#DateTime
- * ExpiryTerms1.DateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms1#AutoExtension
- * ExpiryTerms1.AutoExtension}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms1#Condition
- * ExpiryTerms1.Condition}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms1#mmDateTime
+ * ExpiryTerms1.mmDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms1#mmAutoExtension
+ * ExpiryTerms1.mmAutoExtension}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms1#mmCondition
+ * ExpiryTerms1.mmCondition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpiryTerms1#OpenEndedIndicator
- * ExpiryTerms1.OpenEndedIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpiryTerms1#mmOpenEndedIndicator
+ * ExpiryTerms1.mmOpenEndedIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExpiryTerms1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice dateTime;
 	/**
 	 * Date and time when the undertaking will cease to be available.
 	 * <p>
@@ -80,8 +81,8 @@ public class ExpiryTerms1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Expiry#ExpiryDateTime
-	 * Expiry.ExpiryDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Expiry#mmExpiryDateTime
+	 * Expiry.mmExpiryDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class ExpiryTerms1 {
 	 * "Date and time when the undertaking will cease to be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.mmExpiryDateTime;
 			componentContext_lazy = () -> ExpiryTerms1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.ExpiryDateTime;
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time when the undertaking will cease to be available.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected AutoExtension1 autoExtension;
 	/**
 	 * Details related to the automatic extension of the undertaking.
 	 * <p>
@@ -125,8 +127,8 @@ public class ExpiryTerms1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingExtension
-	 * Undertaking.UndertakingExtension}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingExtension
+	 * Undertaking.mmUndertakingExtension}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,21 +147,22 @@ public class ExpiryTerms1 {
 	 * "Details related to the automatic extension of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AutoExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAutoExtension = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingExtension;
 			componentContext_lazy = () -> ExpiryTerms1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.UndertakingExtension;
 			isDerived = false;
 			xmlTag = "AutoXtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoExtension";
 			definition = "Details related to the automatic extension of the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AutoExtension1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AutoExtension1.mmObject();
 		}
 	};
+	protected Max2000Text condition;
 	/**
 	 * Documentary condition that indicates when the undertaking will cease to
 	 * be available.
@@ -173,8 +176,8 @@ public class ExpiryTerms1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Expiry#ExpiryCondition
-	 * Expiry.ExpiryCondition}</li>
+	 * {@linkplain com.tools20022.repository.entity.Expiry#mmExpiryCondition
+	 * Expiry.mmExpiryCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,20 +197,21 @@ public class ExpiryTerms1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Condition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCondition = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.mmExpiryCondition;
 			componentContext_lazy = () -> ExpiryTerms1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.ExpiryCondition;
 			isDerived = false;
 			xmlTag = "Cond";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Condition";
 			definition = "Documentary condition that indicates when the undertaking will cease to be available. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected YesNoIndicator openEndedIndicator;
 	/**
 	 * Indicates whether the expiry terms are without a fixed expiry date.
 	 * <p>
@@ -221,8 +225,8 @@ public class ExpiryTerms1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Expiry#OpenEndedIndicator
-	 * Expiry.OpenEndedIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Expiry#mmOpenEndedIndicator
+	 * Expiry.mmOpenEndedIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,17 +245,17 @@ public class ExpiryTerms1 {
 	 * "Indicates whether the expiry terms are without a fixed expiry date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpenEndedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpenEndedIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.mmOpenEndedIndicator;
 			componentContext_lazy = () -> ExpiryTerms1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.OpenEndedIndicator;
 			isDerived = false;
 			xmlTag = "OpnEnddInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenEndedIndicator";
 			definition = "Indicates whether the expiry terms are without a fixed expiry date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -259,15 +263,47 @@ public class ExpiryTerms1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpiryTerms1.DateTime, com.tools20022.repository.msg.ExpiryTerms1.AutoExtension, com.tools20022.repository.msg.ExpiryTerms1.Condition,
-						com.tools20022.repository.msg.ExpiryTerms1.OpenEndedIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpiryTerms1.mmDateTime, com.tools20022.repository.msg.ExpiryTerms1.mmAutoExtension, com.tools20022.repository.msg.ExpiryTerms1.mmCondition,
+						com.tools20022.repository.msg.ExpiryTerms1.mmOpenEndedIndicator);
 				trace_lazy = () -> Expiry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExpiryTerms1";
 				definition = "Expiry conditions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(DateAndDateTimeChoice dateTime) {
+		this.dateTime = dateTime;
+	}
+
+	public AutoExtension1 getAutoExtension() {
+		return autoExtension;
+	}
+
+	public void setAutoExtension(com.tools20022.repository.msg.AutoExtension1 autoExtension) {
+		this.autoExtension = autoExtension;
+	}
+
+	public Max2000Text getCondition() {
+		return condition;
+	}
+
+	public void setCondition(Max2000Text condition) {
+		this.condition = condition;
+	}
+
+	public YesNoIndicator getOpenEndedIndicator() {
+		return openEndedIndicator;
+	}
+
+	public void setOpenEndedIndicator(YesNoIndicator openEndedIndicator) {
+		this.openEndedIndicator = openEndedIndicator;
 	}
 }

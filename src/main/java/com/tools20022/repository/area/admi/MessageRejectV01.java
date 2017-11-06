@@ -61,17 +61,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.MessageRejectV01#RelatedReference
- * MessageRejectV01.RelatedReference}</li>
- * <li>{@linkplain com.tools20022.repository.area.admi.MessageRejectV01#Reason
- * MessageRejectV01.Reason}</li>
+ * {@linkplain com.tools20022.repository.area.admi.MessageRejectV01#mmRelatedReference
+ * MessageRejectV01.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.admi.MessageRejectV01#mmReason
+ * MessageRejectV01.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.admi.MessageRejectV01#identifier
- * MessageRejectV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code admi.002.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageRejectV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageReference relatedReference;
 	/**
 	 * Refers to the identification of the message previously received and for
 	 * which the rejection is notified.
@@ -113,17 +113,18 @@ public class MessageRejectV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Refers to the identification of the message previously received and for which the rejection is notified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageReference.mmObject();
 		}
 	};
+	protected RejectionReason2 reason;
 	/**
 	 * General information about the reason of the message rejection.
 	 * <p>
@@ -148,42 +149,15 @@ public class MessageRejectV01 {
 	 * "General information about the reason of the message rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "General information about the reason of the message rejection.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "admi"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "admi";
-			messageFunctionality = "002";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -197,10 +171,33 @@ public class MessageRejectV01 {
 				rootElement = "Document";
 				xmlTag = "admi.002.001.01";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.MessageRejectV01.RelatedReference, com.tools20022.repository.area.admi.MessageRejectV01.Reason);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.admi.MessageRejectV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.MessageRejectV01.mmRelatedReference, com.tools20022.repository.area.admi.MessageRejectV01.mmReason);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "admi";
+						messageFunctionality = "002";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageReference getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(MessageReference relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public RejectionReason2 getReason() {
+		return reason;
+	}
+
+	public void setReason(RejectionReason2 reason) {
+		this.reason = reason;
 	}
 }

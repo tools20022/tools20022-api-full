@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.msg.UnmatchedReason17;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies whether the status is provided with a reason or not.
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnmatchedStatus18Choice#NoSpecifiedReason
- * UnmatchedStatus18Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.UnmatchedStatus18Choice#mmNoSpecifiedReason
+ * UnmatchedStatus18Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnmatchedStatus18Choice#Reason
- * UnmatchedStatus18Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.UnmatchedStatus18Choice#mmReason
+ * UnmatchedStatus18Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnmatchedStatus18Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -82,8 +84,8 @@ public class UnmatchedStatus18Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,25 +106,26 @@ public class UnmatchedStatus18Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.UnmatchedStatus13Choice#NoSpecifiedReason
-	 * UnmatchedStatus13Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnmatchedStatus13Choice#mmNoSpecifiedReason
+	 * UnmatchedStatus13Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> UnmatchedStatus18Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus13Choice.NoSpecifiedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus13Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<UnmatchedReason17> reason;
 	/**
 	 * Specifies the reason of the unmatched status.
 	 * <p>
@@ -155,32 +158,32 @@ public class UnmatchedStatus18Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.UnmatchedStatus13Choice#Reason
-	 * UnmatchedStatus13Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnmatchedStatus13Choice#mmReason
+	 * UnmatchedStatus13Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnmatchedStatus18Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> UnmatchedStatus18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the unmatched status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus13Choice.Reason;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus13Choice.mmReason;
 			minOccurs = 1;
-			type_lazy = () -> UnmatchedReason17.mmObject();
 			isComposite = true;
+			type_lazy = () -> UnmatchedReason17.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedStatus18Choice.NoSpecifiedReason, com.tools20022.repository.choice.UnmatchedStatus18Choice.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedStatus18Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.UnmatchedStatus18Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedStatus18Choice";
 				definition = "Specifies whether the status is provided with a reason or not.";
@@ -188,5 +191,21 @@ public class UnmatchedStatus18Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<UnmatchedReason17> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<UnmatchedReason17> reason) {
+		this.reason = reason;
 	}
 }

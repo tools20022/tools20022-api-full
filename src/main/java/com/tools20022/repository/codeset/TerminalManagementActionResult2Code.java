@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#ConnectionError
- * TerminalManagementActionResult2Code.ConnectionError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmConnectionError
+ * TerminalManagementActionResult2Code.mmConnectionError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#FormatError
- * TerminalManagementActionResult2Code.FormatError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmFormatError
+ * TerminalManagementActionResult2Code.mmFormatError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#Hardware
- * TerminalManagementActionResult2Code.Hardware}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmHardware
+ * TerminalManagementActionResult2Code.mmHardware}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#NotSupported
- * TerminalManagementActionResult2Code.NotSupported}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmNotSupported
+ * TerminalManagementActionResult2Code.mmNotSupported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#Security
- * TerminalManagementActionResult2Code.Security}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmSecurity
+ * TerminalManagementActionResult2Code.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#Success
- * TerminalManagementActionResult2Code.Success}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmSuccess
+ * TerminalManagementActionResult2Code.mmSuccess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#SyntaxError
- * TerminalManagementActionResult2Code.SyntaxError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmSyntaxError
+ * TerminalManagementActionResult2Code.mmSyntaxError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#Timeout
- * TerminalManagementActionResult2Code.Timeout}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmTimeout
+ * TerminalManagementActionResult2Code.mmTimeout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#UnknownKeyReference
- * TerminalManagementActionResult2Code.UnknownKeyReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmUnknownKeyReference
+ * TerminalManagementActionResult2Code.mmUnknownKeyReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "ConnectionError"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConnectionError = new MMCode() {
+	public static final MMCode mmConnectionError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConnectionError";
@@ -119,7 +119,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "FormatError"</li>
 	 * </ul>
 	 */
-	public static final MMCode FormatError = new MMCode() {
+	public static final MMCode mmFormatError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatError";
@@ -142,7 +142,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "Hardware"</li>
 	 * </ul>
 	 */
-	public static final MMCode Hardware = new MMCode() {
+	public static final MMCode mmHardware = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hardware";
@@ -165,7 +165,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "NotSupported"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotSupported = new MMCode() {
+	public static final MMCode mmNotSupported = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupported";
@@ -188,7 +188,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "Security"</li>
 	 * </ul>
 	 */
-	public static final MMCode Security = new MMCode() {
+	public static final MMCode mmSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
@@ -211,7 +211,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "Success"</li>
 	 * </ul>
 	 */
-	public static final MMCode Success = new MMCode() {
+	public static final MMCode mmSuccess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
@@ -234,7 +234,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "SyntaxError"</li>
 	 * </ul>
 	 */
-	public static final MMCode SyntaxError = new MMCode() {
+	public static final MMCode mmSyntaxError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyntaxError";
@@ -257,7 +257,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "Timeout"</li>
 	 * </ul>
 	 */
-	public static final MMCode Timeout = new MMCode() {
+	public static final MMCode mmTimeout = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Timeout";
@@ -280,7 +280,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "UnknownKeyReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownKeyReference = new MMCode() {
+	public static final MMCode mmUnknownKeyReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownKeyReference";
@@ -291,15 +291,15 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionResult2Code";
 				definition = "Final result of the processed command at the ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionResult2Code.ConnectionError, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.FormatError,
-						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.Hardware, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.NotSupported,
-						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.Security, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.Success,
-						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.SyntaxError, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.Timeout,
-						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.UnknownKeyReference);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmConnectionError, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmFormatError,
+						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmHardware, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmNotSupported,
+						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmSecurity, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmSuccess,
+						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmSyntaxError, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmTimeout,
+						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmUnknownKeyReference);
 				trace_lazy = () -> TerminalManagementActionResultCode.mmObject();
 			}
 		});

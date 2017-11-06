@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#ModificationReason
- * InvestmentAccountModification1.ModificationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#mmModificationReason
+ * InvestmentAccountModification1.mmModificationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#AccountApplicationIdentification
- * InvestmentAccountModification1.AccountApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#mmAccountApplicationIdentification
+ * InvestmentAccountModification1.mmAccountApplicationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#ClientReference
- * InvestmentAccountModification1.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#mmClientReference
+ * InvestmentAccountModification1.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#CounterpartyReference
- * InvestmentAccountModification1.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#mmCounterpartyReference
+ * InvestmentAccountModification1.mmCounterpartyReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,15 +53,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#InstructionDetails
- * AccountModificationInstructionV05.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#mmInstructionDetails
+ * AccountModificationInstructionV05.mmInstructionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentAccountModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text modificationReason;
 	/**
 	 * Reason for the modification brought to the investment account
 	 * information.
@@ -120,18 +121,18 @@ public class InvestmentAccountModification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification2#ModificationReason
-	 * InvestmentAccountModification2.ModificationReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification2#mmModificationReason
+	 * InvestmentAccountModification2.mmModificationReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModificationDetails#ModificationReason
-	 * InvestmentAccountModificationDetails.ModificationReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModificationDetails#mmModificationReason
+	 * InvestmentAccountModificationDetails.mmModificationReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountModification1.mmObject();
 			isDerived = false;
@@ -139,13 +140,14 @@ public class InvestmentAccountModification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationReason";
 			definition = "Reason for the modification brought to the investment account information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountModificationDetails.ModificationReason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.ModificationReason);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.mmModificationReason);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmModificationReason;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text accountApplicationIdentification;
 	/**
 	 * Unique and unambiguous identifier of the account modification request.
 	 * <p>
@@ -176,18 +178,18 @@ public class InvestmentAccountModification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification2#AccountApplicationIdentification
-	 * InvestmentAccountModification2.AccountApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification2#mmAccountApplicationIdentification
+	 * InvestmentAccountModification2.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModificationDetails#AccountApplicationIdentification
-	 * InvestmentAccountModificationDetails.AccountApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModificationDetails#mmAccountApplicationIdentification
+	 * InvestmentAccountModificationDetails.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountModification1.mmObject();
 			isDerived = false;
@@ -195,13 +197,14 @@ public class InvestmentAccountModification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account modification request.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountModificationDetails.AccountApplicationIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.AccountApplicationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.mmAccountApplicationIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmAccountApplicationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of a transfer.
 	 * <p>
@@ -214,8 +217,8 @@ public class InvestmentAccountModification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -237,27 +240,28 @@ public class InvestmentAccountModification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification2#ClientReference
-	 * InvestmentAccountModification2.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification2#mmClientReference
+	 * InvestmentAccountModification2.mmClientReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> InvestmentAccountModification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.ClientReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.mmClientReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AdditionalReference2 counterpartyReference;
 	/**
 	 * Unambiguous identification of the transfer as allocated by the
 	 * counterparty.
@@ -272,8 +276,8 @@ public class InvestmentAccountModification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CounterpartyReference
-	 * TradeIdentification.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCounterpartyReference
+	 * TradeIdentification.mmCounterpartyReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -296,42 +300,74 @@ public class InvestmentAccountModification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification2#CounterpartyReference
-	 * InvestmentAccountModification2.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification2#mmCounterpartyReference
+	 * InvestmentAccountModification2.mmCounterpartyReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> InvestmentAccountModification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CounterpartyReference;
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer as allocated by the counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.CounterpartyReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.mmCounterpartyReference);
 			maxOccurs = 1;
-			complexType_lazy = () -> AdditionalReference2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.ModificationReason, com.tools20022.repository.msg.InvestmentAccountModification1.AccountApplicationIdentification,
-						com.tools20022.repository.msg.InvestmentAccountModification1.ClientReference, com.tools20022.repository.msg.InvestmentAccountModification1.CounterpartyReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV05.InstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.mmModificationReason, com.tools20022.repository.msg.InvestmentAccountModification1.mmAccountApplicationIdentification,
+						com.tools20022.repository.msg.InvestmentAccountModification1.mmClientReference, com.tools20022.repository.msg.InvestmentAccountModification1.mmCounterpartyReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmInstructionDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountModification1";
 				definition = "Provide information about the reason for the modification and about the application request which triggered this modification.";
-				previousVersion_lazy = () -> InvestmentAccountModificationDetails.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification2.mmObject());
+				previousVersion_lazy = () -> InvestmentAccountModificationDetails.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getModificationReason() {
+		return modificationReason;
+	}
+
+	public void setModificationReason(Max350Text modificationReason) {
+		this.modificationReason = modificationReason;
+	}
+
+	public Max35Text getAccountApplicationIdentification() {
+		return accountApplicationIdentification;
+	}
+
+	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+		this.accountApplicationIdentification = accountApplicationIdentification;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public AdditionalReference2 getCounterpartyReference() {
+		return counterpartyReference;
+	}
+
+	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
+		this.counterpartyReference = counterpartyReference;
 	}
 }

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of one or several keys of the request.
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails4#Key
- * RequestDetails4.Key}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails4#ReportData
- * RequestDetails4.ReportData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails4#mmKey
+ * RequestDetails4.mmKey}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails4#mmReportData
+ * RequestDetails4.mmReportData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text key;
 	/**
 	 * Key for which the specific data is returned, for example, a BIC.
 	 * <p>
@@ -85,7 +87,7 @@ public class RequestDetails4 {
 	 * "Key for which the specific data is returned, for example, a BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Key = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails4.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class RequestDetails4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Key for which the specific data is returned, for example, a BIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ReportParameter1> reportData;
 	/**
 	 * Data being returned.
 	 * <p>
@@ -124,7 +127,7 @@ public class RequestDetails4 {
 	 * definition} = "Data being returned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestDetails4.mmObject();
 			isDerived = false;
@@ -133,21 +136,37 @@ public class RequestDetails4 {
 			name = "ReportData";
 			definition = "Data being returned.";
 			minOccurs = 0;
-			type_lazy = () -> ReportParameter1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportParameter1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails4.Key, com.tools20022.repository.msg.RequestDetails4.ReportData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails4.mmKey, com.tools20022.repository.msg.RequestDetails4.mmReportData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails4";
 				definition = "Details of one or several keys of the request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getKey() {
+		return key;
+	}
+
+	public void setKey(Max35Text key) {
+		this.key = key;
+	}
+
+	public List<ReportParameter1> getReportData() {
+		return reportData;
+	}
+
+	public void setReportData(List<com.tools20022.repository.msg.ReportParameter1> reportData) {
+		this.reportData = reportData;
 	}
 }

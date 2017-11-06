@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ExchangePayload1#Any
- * ExchangePayload1.Any}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExchangePayload1#mmAny
+ * ExchangePayload1.mmAny}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +54,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExchangePayload1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LaxProcessing any;
 	/**
 	 * The respective ISO 20022 standard document.
 	 * <p>
@@ -81,7 +82,7 @@ public class ExchangePayload1 {
 	 * definition} = "The respective ISO 20022 standard document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Any = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAny = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ExchangePayload1.mmObject();
 			isDerived = false;
@@ -89,8 +90,8 @@ public class ExchangePayload1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Any";
 			definition = "The respective ISO 20022 standard document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> LaxProcessing.mmObject();
 		}
 	};
@@ -98,13 +99,21 @@ public class ExchangePayload1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangePayload1.Any);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangePayload1.mmAny);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangePayload1";
 				definition = "This component includes the exchanged ISO20022 documents.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LaxProcessing getAny() {
+		return any;
+	}
+
+	public void setAny(LaxProcessing any) {
+		this.any = any;
 	}
 }

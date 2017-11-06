@@ -34,22 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * AssuredTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredType1Code#Buyer
- * AssuredType1Code.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredType1Code#Seller
- * AssuredType1Code.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredType1Code#BuyerBank
- * AssuredType1Code.BuyerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredType1Code#mmBuyer
+ * AssuredType1Code.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredType1Code#mmSeller
+ * AssuredType1Code.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssuredType1Code#SellerBank
- * AssuredType1Code.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssuredType1Code#mmBuyerBank
+ * AssuredType1Code.mmBuyerBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssuredType1Code#mmSellerBank
+ * AssuredType1Code.mmSellerBank}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +88,7 @@ public class AssuredType1Code extends AssuredTypeCode {
 	 * name} = "Buyer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Buyer = new MMCode() {
+	public static final MMCode mmBuyer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
@@ -110,7 +111,7 @@ public class AssuredType1Code extends AssuredTypeCode {
 	 * name} = "Seller"</li>
 	 * </ul>
 	 */
-	public static final MMCode Seller = new MMCode() {
+	public static final MMCode mmSeller = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
@@ -133,7 +134,7 @@ public class AssuredType1Code extends AssuredTypeCode {
 	 * name} = "BuyerBank"</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyerBank = new MMCode() {
+	public static final MMCode mmBuyerBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
@@ -156,7 +157,7 @@ public class AssuredType1Code extends AssuredTypeCode {
 	 * name} = "SellerBank"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellerBank = new MMCode() {
+	public static final MMCode mmSellerBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
@@ -167,13 +168,13 @@ public class AssuredType1Code extends AssuredTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssuredType1Code";
 				definition = "Specifies which type of party should be the assured on the insurance certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssuredType1Code.Buyer, com.tools20022.repository.codeset.AssuredType1Code.Seller, com.tools20022.repository.codeset.AssuredType1Code.BuyerBank,
-						com.tools20022.repository.codeset.AssuredType1Code.SellerBank);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssuredType1Code.mmBuyer, com.tools20022.repository.codeset.AssuredType1Code.mmSeller, com.tools20022.repository.codeset.AssuredType1Code.mmBuyerBank,
+						com.tools20022.repository.codeset.AssuredType1Code.mmSellerBank);
 				trace_lazy = () -> AssuredTypeCode.mmObject();
 			}
 		});

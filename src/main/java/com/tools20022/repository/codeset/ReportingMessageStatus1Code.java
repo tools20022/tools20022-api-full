@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#Accepted
- * ReportingMessageStatus1Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmAccepted
+ * ReportingMessageStatus1Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#AcceptedTechnicalValidation
- * ReportingMessageStatus1Code.AcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmAcceptedTechnicalValidation
+ * ReportingMessageStatus1Code.mmAcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#PartiallyAccepted
- * ReportingMessageStatus1Code.PartiallyAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmPartiallyAccepted
+ * ReportingMessageStatus1Code.mmPartiallyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#Received
- * ReportingMessageStatus1Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmReceived
+ * ReportingMessageStatus1Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#Rejected
- * ReportingMessageStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmRejected
+ * ReportingMessageStatus1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#Reminder
- * ReportingMessageStatus1Code.Reminder}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmReminder
+ * ReportingMessageStatus1Code.mmReminder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#Warning
- * ReportingMessageStatus1Code.Warning}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmWarning
+ * ReportingMessageStatus1Code.mmWarning}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#IncorrectFilename
- * ReportingMessageStatus1Code.IncorrectFilename}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmIncorrectFilename
+ * ReportingMessageStatus1Code.mmIncorrectFilename}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#CorruptedFile
- * ReportingMessageStatus1Code.CorruptedFile}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingMessageStatus1Code#mmCorruptedFile
+ * ReportingMessageStatus1Code.mmCorruptedFile}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -119,7 +119,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedTechnicalValidation = new MMCode() {
+	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
@@ -142,7 +142,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "PartiallyAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyAccepted = new MMCode() {
+	public static final MMCode mmPartiallyAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
@@ -165,7 +165,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -188,7 +188,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -211,7 +211,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "Reminder"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reminder = new MMCode() {
+	public static final MMCode mmReminder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
@@ -234,7 +234,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "Warning"</li>
 	 * </ul>
 	 */
-	public static final MMCode Warning = new MMCode() {
+	public static final MMCode mmWarning = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warning";
@@ -257,7 +257,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "IncorrectFilename"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectFilename = new MMCode() {
+	public static final MMCode mmIncorrectFilename = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFilename";
@@ -280,7 +280,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 * name} = "CorruptedFile"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorruptedFile = new MMCode() {
+	public static final MMCode mmCorruptedFile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedFile";
@@ -291,14 +291,15 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportingMessageStatus1Code";
 				definition = "Specifies the status of a whole message processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportingMessageStatus1Code.Accepted, com.tools20022.repository.codeset.ReportingMessageStatus1Code.AcceptedTechnicalValidation,
-						com.tools20022.repository.codeset.ReportingMessageStatus1Code.PartiallyAccepted, com.tools20022.repository.codeset.ReportingMessageStatus1Code.Received,
-						com.tools20022.repository.codeset.ReportingMessageStatus1Code.Rejected, com.tools20022.repository.codeset.ReportingMessageStatus1Code.Reminder, com.tools20022.repository.codeset.ReportingMessageStatus1Code.Warning,
-						com.tools20022.repository.codeset.ReportingMessageStatus1Code.IncorrectFilename, com.tools20022.repository.codeset.ReportingMessageStatus1Code.CorruptedFile);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmAccepted, com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmAcceptedTechnicalValidation,
+						com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmPartiallyAccepted, com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmReceived,
+						com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmRejected, com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmReminder,
+						com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmWarning, com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmIncorrectFilename,
+						com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmCorruptedFile);
 				trace_lazy = () -> MessageStatusCode.mmObject();
 			}
 		});

@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity12Choice#Unit
- * Quantity12Choice.Unit}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity12Choice#mmUnit
+ * Quantity12Choice.mmUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity12Choice#PercentageRate
- * Quantity12Choice.PercentageRate}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity12Choice#mmPercentageRate
+ * Quantity12Choice.mmPercentageRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quantity12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber unit;
 	/**
 	 * Quantity of assets to be transferred.
 	 * <p>
@@ -83,8 +85,8 @@ public class Quantity12Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class Quantity12Choice {
 	 * definition} = "Quantity of assets to be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Quantity12Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "Unit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Quantity of assets to be transferred.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected PercentageRate percentageRate;
 	/**
 	 * Percentage rate of assets to be transferred.
 	 * <p>
@@ -145,7 +148,7 @@ public class Quantity12Choice {
 	 * definition} = "Percentage rate of assets to be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Quantity12Choice.mmObject();
 			isDerived = false;
@@ -153,18 +156,18 @@ public class Quantity12Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageRate";
 			definition = "Percentage rate of assets to be transferred.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.PercentageRate.mmObject();
+			minOccurs = 0;
+			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity12Choice.Unit, com.tools20022.repository.choice.Quantity12Choice.PercentageRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity12Choice.mmUnit, com.tools20022.repository.choice.Quantity12Choice.mmPercentageRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Quantity12Choice";
 				definition = "Choice of quantity of assets to be transferred in percentage rate or units.";
@@ -172,5 +175,21 @@ public class Quantity12Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getUnit() {
+		return unit;
+	}
+
+	public void setUnit(DecimalNumber unit) {
+		this.unit = unit;
+	}
+
+	public PercentageRate getPercentageRate() {
+		return percentageRate;
+	}
+
+	public void setPercentageRate(PercentageRate percentageRate) {
+		this.percentageRate = percentageRate;
 	}
 }

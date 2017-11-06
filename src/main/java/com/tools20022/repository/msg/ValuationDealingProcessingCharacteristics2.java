@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Valuation dealing processing characteristics linked to the instrument, ie,
@@ -40,26 +41,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#ValuationFrequency
- * ValuationDealingProcessingCharacteristics2.ValuationFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#mmValuationFrequency
+ * ValuationDealingProcessingCharacteristics2.mmValuationFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#ValuationFrequencyDescription
- * ValuationDealingProcessingCharacteristics2.ValuationFrequencyDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#mmValuationFrequencyDescription
+ * ValuationDealingProcessingCharacteristics2.mmValuationFrequencyDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#DecimalisationUnits
- * ValuationDealingProcessingCharacteristics2.DecimalisationUnits}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#mmDecimalisationUnits
+ * ValuationDealingProcessingCharacteristics2.mmDecimalisationUnits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#DecimalisationPrice
- * ValuationDealingProcessingCharacteristics2.DecimalisationPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#mmDecimalisationPrice
+ * ValuationDealingProcessingCharacteristics2.mmDecimalisationPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#DualFundIndicator
- * ValuationDealingProcessingCharacteristics2.DualFundIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#mmDualFundIndicator
+ * ValuationDealingProcessingCharacteristics2.mmDualFundIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#PriceMethod
- * ValuationDealingProcessingCharacteristics2.PriceMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#mmPriceMethod
+ * ValuationDealingProcessingCharacteristics2.mmPriceMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#PriceCurrency
- * ValuationDealingProcessingCharacteristics2.PriceCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2#mmPriceCurrency
+ * ValuationDealingProcessingCharacteristics2.mmPriceCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ValuationDealingProcessingCharacteristics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EventFrequency5Code valuationFrequency;
 	/**
 	 * Frequency of the valuation.
 	 * <p>
@@ -99,8 +101,8 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#ValuationFrequency
-	 * NetAssetValueCalculation.ValuationFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmValuationFrequency
+	 * NetAssetValueCalculation.mmValuationFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,20 +121,21 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * definition} = "Frequency of the valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationFrequency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationFrequency;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.ValuationFrequency;
 			isDerived = false;
 			xmlTag = "ValtnFrqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationFrequency";
 			definition = "Frequency of the valuation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency5Code.mmObject();
 		}
 	};
+	protected Max350Text valuationFrequencyDescription;
 	/**
 	 * Further details regarding the dealing frequency, eg, Tuesday (for weekly
 	 * dealing) or last business day of the month.
@@ -163,7 +166,7 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationFrequencyDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationFrequencyDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
 			isDerived = false;
@@ -171,11 +174,12 @@ public class ValuationDealingProcessingCharacteristics2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationFrequencyDescription";
 			definition = "Further details regarding the dealing frequency, eg, Tuesday (for weekly dealing) or last business day of the month.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Number decimalisationUnits;
 	/**
 	 * Number of decimal places to which quantities of units/shares are rounded.
 	 * <p>
@@ -188,8 +192,8 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#Decimalisation
-	 * InvestmentFundClassProcessingCharacteristics.Decimalisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmDecimalisation
+	 * InvestmentFundClassProcessingCharacteristics.mmDecimalisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +214,21 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DecimalisationUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDecimalisationUnits = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.Decimalisation;
 			isDerived = false;
 			xmlTag = "DcmlstnUnits";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecimalisationUnits";
 			definition = "Number of decimal places to which quantities of units/shares are rounded.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number decimalisationPrice;
 	/**
 	 * Number of decimal places to which quantities of units/shares are rounded.
 	 * <p>
@@ -236,8 +241,8 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#Decimalisation
-	 * InvestmentFundClassProcessingCharacteristics.Decimalisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmDecimalisation
+	 * InvestmentFundClassProcessingCharacteristics.mmDecimalisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -258,20 +263,21 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DecimalisationPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDecimalisationPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.Decimalisation;
 			isDerived = false;
 			xmlTag = "DcmlstnPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecimalisationPrice";
 			definition = "Number of decimal places to which quantities of units/shares are rounded.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected YesNoIndicator dualFundIndicator;
 	/**
 	 * Indicates whether the fund has two prices.
 	 * <p>
@@ -285,8 +291,8 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#DualFundIndicator
-	 * InvestmentFundClass.DualFundIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDualFundIndicator
+	 * InvestmentFundClass.mmDualFundIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -305,20 +311,21 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * definition} = "Indicates whether the fund has two prices."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DualFundIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDualFundIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDualFundIndicator;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.DualFundIndicator;
 			isDerived = false;
 			xmlTag = "DualFndInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DualFundIndicator";
 			definition = "Indicates whether the fund has two prices.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PriceMethod1Code priceMethod;
 	/**
 	 * Type of pricing calculation method.
 	 * <p>
@@ -332,8 +339,8 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceMethod
-	 * SecuritiesPricing.PriceMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceMethod
+	 * SecuritiesPricing.mmPriceMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -352,20 +359,21 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * definition} = "Type of pricing calculation method."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceMethod;
 			isDerived = false;
 			xmlTag = "PricMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMethod";
 			definition = "Type of pricing calculation method.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
 		}
 	};
+	protected List<ActiveCurrencyCode> priceCurrency;
 	/**
 	 * Currencies in which the prices for the investment fund class are
 	 * published by the fund management company.
@@ -380,8 +388,8 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#RequestedNAVCurrency
-	 * InvestmentFundClass.RequestedNAVCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmRequestedNAVCurrency
+	 * InvestmentFundClass.mmRequestedNAVCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -402,10 +410,10 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.RequestedNAVCurrency;
 			isDerived = false;
 			xmlTag = "PricCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -419,17 +427,73 @@ public class ValuationDealingProcessingCharacteristics2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.ValuationFrequency,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.ValuationFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.DecimalisationUnits,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.DecimalisationPrice, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.DualFundIndicator,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.PriceMethod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.PriceCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmValuationFrequency,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmValuationFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmDecimalisationUnits,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmDecimalisationPrice, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmDualFundIndicator,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmPriceMethod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmPriceCurrency);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ValuationDealingProcessingCharacteristics2";
 				definition = "Valuation dealing processing characteristics linked to the instrument, ie, not to  the market.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EventFrequency5Code getValuationFrequency() {
+		return valuationFrequency;
+	}
+
+	public void setValuationFrequency(EventFrequency5Code valuationFrequency) {
+		this.valuationFrequency = valuationFrequency;
+	}
+
+	public Max350Text getValuationFrequencyDescription() {
+		return valuationFrequencyDescription;
+	}
+
+	public void setValuationFrequencyDescription(Max350Text valuationFrequencyDescription) {
+		this.valuationFrequencyDescription = valuationFrequencyDescription;
+	}
+
+	public Number getDecimalisationUnits() {
+		return decimalisationUnits;
+	}
+
+	public void setDecimalisationUnits(Number decimalisationUnits) {
+		this.decimalisationUnits = decimalisationUnits;
+	}
+
+	public Number getDecimalisationPrice() {
+		return decimalisationPrice;
+	}
+
+	public void setDecimalisationPrice(Number decimalisationPrice) {
+		this.decimalisationPrice = decimalisationPrice;
+	}
+
+	public YesNoIndicator getDualFundIndicator() {
+		return dualFundIndicator;
+	}
+
+	public void setDualFundIndicator(YesNoIndicator dualFundIndicator) {
+		this.dualFundIndicator = dualFundIndicator;
+	}
+
+	public PriceMethod1Code getPriceMethod() {
+		return priceMethod;
+	}
+
+	public void setPriceMethod(PriceMethod1Code priceMethod) {
+		this.priceMethod = priceMethod;
+	}
+
+	public List<ActiveCurrencyCode> getPriceCurrency() {
+		return priceCurrency;
+	}
+
+	public void setPriceCurrency(List<ActiveCurrencyCode> priceCurrency) {
+		this.priceCurrency = priceCurrency;
 	}
 }

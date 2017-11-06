@@ -72,30 +72,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#Identification
- * AgentCAElectionAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmIdentification
+ * AgentCAElectionAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#ElectionAdviceTypeAndLinkage
- * AgentCAElectionAdviceV01.ElectionAdviceTypeAndLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmElectionAdviceTypeAndLinkage
+ * AgentCAElectionAdviceV01.mmElectionAdviceTypeAndLinkage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#CorporateActionGeneralInformation
- * AgentCAElectionAdviceV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmCorporateActionGeneralInformation
+ * AgentCAElectionAdviceV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#ElectionDetails
- * AgentCAElectionAdviceV01.ElectionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmElectionDetails
+ * AgentCAElectionAdviceV01.mmElectionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#AdditionalInformation
- * AgentCAElectionAdviceV01.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmAdditionalInformation
+ * AgentCAElectionAdviceV01.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#ContactDetails
- * AgentCAElectionAdviceV01.ContactDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmContactDetails
+ * AgentCAElectionAdviceV01.mmContactDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#identifier
- * AgentCAElectionAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.012.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCAElectionAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * advice.
@@ -137,17 +136,18 @@ public class AgentCAElectionAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected ElectionAdviceFunction1 electionAdviceTypeAndLinkage;
 	/**
 	 * Provides information about the type of election advice and linked
 	 * messages.
@@ -174,17 +174,18 @@ public class AgentCAElectionAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ElectionAdviceTypeAndLinkage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmElectionAdviceTypeAndLinkage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ElctnAdvcTpAndLkg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAdviceTypeAndLinkage";
 			definition = "Provides information about the type of election advice and linked messages.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ElectionAdviceFunction1.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -208,17 +209,18 @@ public class AgentCAElectionAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected CorporateActionElection3 electionDetails;
 	/**
 	 * Provides information about the election(s).
 	 * <p>
@@ -242,17 +244,18 @@ public class AgentCAElectionAdviceV01 {
 	 * definition} = "Provides information about the election(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ElectionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmElectionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ElctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionDetails";
 			definition = "Provides information about the election(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionElection3.mmObject();
 		}
 	};
+	protected CorporateActionAdditionalInformation1 additionalInformation;
 	/**
 	 * Provides additional information about the delivery details, beneficial
 	 * owner details, etc.
@@ -279,17 +282,18 @@ public class AgentCAElectionAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information about the delivery details, beneficial owner details, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 		}
 	};
+	protected ContactPerson1 contactDetails;
 	/**
 	 * Contact responsible for the transaction identified in the message.
 	 * <p>
@@ -313,42 +317,15 @@ public class AgentCAElectionAdviceV01 {
 	 * "Contact responsible for the transaction identified in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ContactDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmContactDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactDetails";
 			definition = "Contact responsible for the transaction identified in the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContactPerson1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "012";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -362,12 +339,67 @@ public class AgentCAElectionAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAElctnAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.Identification, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.ElectionAdviceTypeAndLinkage,
-						com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.CorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.ElectionDetails,
-						com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.AdditionalInformation, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.ContactDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmElectionAdviceTypeAndLinkage,
+						com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmElectionDetails,
+						com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmAdditionalInformation, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmContactDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "012";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public ElectionAdviceFunction1 getElectionAdviceTypeAndLinkage() {
+		return electionAdviceTypeAndLinkage;
+	}
+
+	public void setElectionAdviceTypeAndLinkage(ElectionAdviceFunction1 electionAdviceTypeAndLinkage) {
+		this.electionAdviceTypeAndLinkage = electionAdviceTypeAndLinkage;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public CorporateActionElection3 getElectionDetails() {
+		return electionDetails;
+	}
+
+	public void setElectionDetails(CorporateActionElection3 electionDetails) {
+		this.electionDetails = electionDetails;
+	}
+
+	public CorporateActionAdditionalInformation1 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(CorporateActionAdditionalInformation1 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public ContactPerson1 getContactDetails() {
+		return contactDetails;
+	}
+
+	public void setContactDetails(ContactPerson1 contactDetails) {
+		this.contactDetails = contactDetails;
 	}
 }

@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Frequency21Choice#Type
- * Frequency21Choice.Type}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Frequency21Choice#Period
- * Frequency21Choice.Period}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Frequency21Choice#mmType
+ * Frequency21Choice.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Frequency21Choice#mmPeriod
+ * Frequency21Choice.mmPeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Frequency21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Frequency6Code type;
 	/**
 	 * Frequency expressed as an ISO 20022 code.
 	 * <p>
@@ -98,18 +99,19 @@ public class Frequency21Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Frequency36Choice#Type
-	 * Frequency36Choice.Type}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Frequency36Choice#mmType
+	 * Frequency36Choice.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Frequency11Choice#Code
-	 * Frequency11Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.Frequency11Choice#mmCode
+	 * Frequency11Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Frequency21Choice.mmObject();
 			isDerived = false;
@@ -117,13 +119,14 @@ public class Frequency21Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Frequency expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency11Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency36Choice.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency36Choice.mmType);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency11Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Frequency6Code.mmObject();
 		}
 	};
+	protected FrequencyPeriod1 period;
 	/**
 	 * Frequency expressed as a proprietary code.
 	 * <p>
@@ -154,18 +157,18 @@ public class Frequency21Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Frequency36Choice#Period
-	 * Frequency36Choice.Period}</li>
+	 * {@linkplain com.tools20022.repository.choice.Frequency36Choice#mmPeriod
+	 * Frequency36Choice.mmPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Frequency11Choice#Proprietary
-	 * Frequency11Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.Frequency11Choice#mmProprietary
+	 * Frequency11Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Period = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Frequency21Choice.mmObject();
 			isDerived = false;
@@ -173,10 +176,10 @@ public class Frequency21Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Frequency expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency11Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency36Choice.Period);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency36Choice.mmPeriod);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency11Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FrequencyPeriod1.mmObject();
 		}
 	};
@@ -184,15 +187,31 @@ public class Frequency21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency21Choice.Type, com.tools20022.repository.choice.Frequency21Choice.Period);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency21Choice.mmType, com.tools20022.repository.choice.Frequency21Choice.mmPeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Frequency21Choice";
 				definition = "Choice of format for a frequency, for example, the frequency of payment.";
-				previousVersion_lazy = () -> Frequency11Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Frequency36Choice.mmObject());
+				previousVersion_lazy = () -> Frequency11Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Frequency6Code getType() {
+		return type;
+	}
+
+	public void setType(Frequency6Code type) {
+		this.type = type;
+	}
+
+	public FrequencyPeriod1 getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(FrequencyPeriod1 period) {
+		this.period = period;
 	}
 }

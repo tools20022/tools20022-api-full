@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryDefinition1#QueryType
- * SettlementInstructionQueryDefinition1.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryDefinition1#mmQueryType
+ * SettlementInstructionQueryDefinition1.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryDefinition1#SearchCriteria
- * SettlementInstructionQueryDefinition1.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryDefinition1#mmSearchCriteria
+ * SettlementInstructionQueryDefinition1.mmSearchCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementInstructionQueryDefinition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementQueryType1Code queryType;
 	/**
 	 * Defines the type of query.
 	 * <p>
@@ -89,7 +90,7 @@ public class SettlementInstructionQueryDefinition1 {
 	 * definition} = "Defines the type of query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryDefinition1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class SettlementInstructionQueryDefinition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Defines the type of query.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementQueryType1Code.mmObject();
 		}
 	};
+	protected SettlementInstructionQueryCriteria1 searchCriteria;
 	/**
 	 * Defines the criteria to extract the securities settlement instruction
 	 * information.
@@ -133,7 +135,7 @@ public class SettlementInstructionQueryDefinition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SearchCriteria = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSearchCriteria = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryDefinition1.mmObject();
 			isDerived = false;
@@ -141,22 +143,38 @@ public class SettlementInstructionQueryDefinition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to extract the securities settlement instruction information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryDefinition1.QueryType, com.tools20022.repository.msg.SettlementInstructionQueryDefinition1.SearchCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryDefinition1.mmQueryType, com.tools20022.repository.msg.SettlementInstructionQueryDefinition1.mmSearchCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInstructionQueryDefinition1";
 				definition = "Defines the information that is searched through the definition of specific criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementQueryType1Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(SettlementQueryType1Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public SettlementInstructionQueryCriteria1 getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(com.tools20022.repository.msg.SettlementInstructionQueryCriteria1 searchCriteria) {
+		this.searchCriteria = searchCriteria;
 	}
 }

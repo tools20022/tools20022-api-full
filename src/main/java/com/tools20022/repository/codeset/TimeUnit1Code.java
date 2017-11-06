@@ -32,27 +32,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.TimeUnitCode TimeUnitCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#CalendarDay
- * TimeUnit1Code.CalendarDay}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Hour
- * TimeUnit1Code.Hour}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Minute
- * TimeUnit1Code.Minute}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Month
- * TimeUnit1Code.Month}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Second
- * TimeUnit1Code.Second}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Week
- * TimeUnit1Code.Week}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Year
- * TimeUnit1Code.Year}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmCalendarDay
+ * TimeUnit1Code.mmCalendarDay}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmHour
+ * TimeUnit1Code.mmHour}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmMinute
+ * TimeUnit1Code.mmMinute}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmMonth
+ * TimeUnit1Code.mmMonth}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmSecond
+ * TimeUnit1Code.mmSecond}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmWeek
+ * TimeUnit1Code.mmWeek}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmYear
+ * TimeUnit1Code.mmYear}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +89,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "CalendarDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode CalendarDay = new MMCode() {
+	public static final MMCode mmCalendarDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalendarDay";
@@ -111,7 +112,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Hour"</li>
 	 * </ul>
 	 */
-	public static final MMCode Hour = new MMCode() {
+	public static final MMCode mmHour = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hour";
@@ -134,7 +135,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Minute"</li>
 	 * </ul>
 	 */
-	public static final MMCode Minute = new MMCode() {
+	public static final MMCode mmMinute = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Minute";
@@ -157,7 +158,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Month"</li>
 	 * </ul>
 	 */
-	public static final MMCode Month = new MMCode() {
+	public static final MMCode mmMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Month";
@@ -180,7 +181,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Second"</li>
 	 * </ul>
 	 */
-	public static final MMCode Second = new MMCode() {
+	public static final MMCode mmSecond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Second";
@@ -203,7 +204,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Week"</li>
 	 * </ul>
 	 */
-	public static final MMCode Week = new MMCode() {
+	public static final MMCode mmWeek = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Week";
@@ -226,7 +227,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Year"</li>
 	 * </ul>
 	 */
-	public static final MMCode Year = new MMCode() {
+	public static final MMCode mmYear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
@@ -237,14 +238,14 @@ public class TimeUnit1Code extends TimeUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DAYC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TimeUnit1Code";
 				definition = "Unit of time associated with the contract.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeUnit1Code.CalendarDay, com.tools20022.repository.codeset.TimeUnit1Code.Hour, com.tools20022.repository.codeset.TimeUnit1Code.Minute,
-						com.tools20022.repository.codeset.TimeUnit1Code.Month, com.tools20022.repository.codeset.TimeUnit1Code.Second, com.tools20022.repository.codeset.TimeUnit1Code.Week,
-						com.tools20022.repository.codeset.TimeUnit1Code.Year);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeUnit1Code.mmCalendarDay, com.tools20022.repository.codeset.TimeUnit1Code.mmHour, com.tools20022.repository.codeset.TimeUnit1Code.mmMinute,
+						com.tools20022.repository.codeset.TimeUnit1Code.mmMonth, com.tools20022.repository.codeset.TimeUnit1Code.mmSecond, com.tools20022.repository.codeset.TimeUnit1Code.mmWeek,
+						com.tools20022.repository.codeset.TimeUnit1Code.mmYear);
 				trace_lazy = () -> TimeUnitCode.mmObject();
 			}
 		});

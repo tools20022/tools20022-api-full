@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to the response of a diagnostic from an ATM manager.
@@ -32,10 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDiagnosticResponse2#Environment
- * ATMDiagnosticResponse2.Environment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDiagnosticResponse2#Command
- * ATMDiagnosticResponse2.Command}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDiagnosticResponse2#mmEnvironment
+ * ATMDiagnosticResponse2.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMDiagnosticResponse2#mmCommand
+ * ATMDiagnosticResponse2.mmCommand}</li>
  * </ul>
  * </li>
  * <li>
@@ -43,15 +45,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#ATMDiagnosticResponse
- * ATMDiagnosticResponseV02.ATMDiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#mmATMDiagnosticResponse
+ * ATMDiagnosticResponseV02.mmATMDiagnosticResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDiagnosticResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment6 environment;
 	/**
 	 * Environment of the ATM.
 	 * <p>
@@ -92,7 +95,7 @@ public class ATMDiagnosticResponse2 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDiagnosticResponse2.mmObject();
 			isDerived = false;
@@ -100,12 +103,13 @@ public class ATMDiagnosticResponse2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment6.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMCommand7> command;
 	/**
 	 * Maintenance command to perform on the ATM.
 	 * <p>
@@ -132,7 +136,7 @@ public class ATMDiagnosticResponse2 {
 	 * definition} = "Maintenance command to perform on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Command = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDiagnosticResponse2.mmObject();
 			isDerived = false;
@@ -141,22 +145,38 @@ public class ATMDiagnosticResponse2 {
 			name = "Command";
 			definition = "Maintenance command to perform on the ATM.";
 			minOccurs = 0;
-			type_lazy = () -> ATMCommand7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommand7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDiagnosticResponse2.Environment, com.tools20022.repository.msg.ATMDiagnosticResponse2.Command);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.ATMDiagnosticResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDiagnosticResponse2.mmEnvironment, com.tools20022.repository.msg.ATMDiagnosticResponse2.mmCommand);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmATMDiagnosticResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMDiagnosticResponse2";
 				definition = "Information related to the response of a diagnostic from an ATM manager.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment6 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment6 environment) {
+		this.environment = environment;
+	}
+
+	public List<ATMCommand7> getCommand() {
+		return command;
+	}
+
+	public void setCommand(List<com.tools20022.repository.msg.ATMCommand7> command) {
+		this.command = command;
 	}
 }

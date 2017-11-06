@@ -33,28 +33,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PegTypeCode PegTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Fixed
- * PegType1Code.Fixed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Last
- * PegType1Code.Last}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Market
- * PegType1Code.Market}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#MidPrice
- * PegType1Code.MidPrice}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Opening
- * PegType1Code.Opening}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Primary
- * PegType1Code.Primary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmFixed
+ * PegType1Code.mmFixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmLast
+ * PegType1Code.mmLast}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmMarket
+ * PegType1Code.mmMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmMidPrice
+ * PegType1Code.mmMidPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmOpening
+ * PegType1Code.mmOpening}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmPrimary
+ * PegType1Code.mmPrimary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PegType1Code#VolumeWeightAveragePrice
- * PegType1Code.VolumeWeightAveragePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PegType1Code#mmVolumeWeightAveragePrice
+ * PegType1Code.mmVolumeWeightAveragePrice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Fixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fixed = new MMCode() {
+	public static final MMCode mmFixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
@@ -113,7 +113,7 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Last"</li>
 	 * </ul>
 	 */
-	public static final MMCode Last = new MMCode() {
+	public static final MMCode mmLast = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Last";
@@ -135,7 +135,7 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Market"</li>
 	 * </ul>
 	 */
-	public static final MMCode Market = new MMCode() {
+	public static final MMCode mmMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
@@ -157,7 +157,7 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "MidPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode MidPrice = new MMCode() {
+	public static final MMCode mmMidPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidPrice";
@@ -179,7 +179,7 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Opening"</li>
 	 * </ul>
 	 */
-	public static final MMCode Opening = new MMCode() {
+	public static final MMCode mmOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
@@ -201,7 +201,7 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Primary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Primary = new MMCode() {
+	public static final MMCode mmPrimary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Primary";
@@ -223,7 +223,7 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "VolumeWeightAveragePrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode VolumeWeightAveragePrice = new MMCode() {
+	public static final MMCode mmVolumeWeightAveragePrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolumeWeightAveragePrice";
@@ -234,14 +234,14 @@ public class PegType1Code extends PegTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PegType1Code";
 				definition = "Indicates a type of instruction to a broker or dealer to buy or sell a financial instrument which is pegged against a certain value.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PegType1Code.Fixed, com.tools20022.repository.codeset.PegType1Code.Last, com.tools20022.repository.codeset.PegType1Code.Market,
-						com.tools20022.repository.codeset.PegType1Code.MidPrice, com.tools20022.repository.codeset.PegType1Code.Opening, com.tools20022.repository.codeset.PegType1Code.Primary,
-						com.tools20022.repository.codeset.PegType1Code.VolumeWeightAveragePrice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PegType1Code.mmFixed, com.tools20022.repository.codeset.PegType1Code.mmLast, com.tools20022.repository.codeset.PegType1Code.mmMarket,
+						com.tools20022.repository.codeset.PegType1Code.mmMidPrice, com.tools20022.repository.codeset.PegType1Code.mmOpening, com.tools20022.repository.codeset.PegType1Code.mmPrimary,
+						com.tools20022.repository.codeset.PegType1Code.mmVolumeWeightAveragePrice);
 				trace_lazy = () -> PegTypeCode.mmObject();
 			}
 		});

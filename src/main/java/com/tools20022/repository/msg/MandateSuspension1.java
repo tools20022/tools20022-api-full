@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.OriginalMandate4Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the mandate, which is being suspended.
@@ -35,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateSuspension1#SuspensionRequestIdentification
- * MandateSuspension1.SuspensionRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateSuspension1#mmSuspensionRequestIdentification
+ * MandateSuspension1.mmSuspensionRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateSuspension1#OriginalMessageInformation
- * MandateSuspension1.OriginalMessageInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateSuspension1#mmOriginalMessageInformation
+ * MandateSuspension1.mmOriginalMessageInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateSuspension1#SuspensionReason
- * MandateSuspension1.SuspensionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateSuspension1#mmSuspensionReason
+ * MandateSuspension1.mmSuspensionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateSuspension1#OriginalMandate
- * MandateSuspension1.OriginalMandate}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateSuspension1#mmOriginalMandate
+ * MandateSuspension1.mmOriginalMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateSuspension1#SupplementaryData
- * MandateSuspension1.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateSuspension1#mmSupplementaryData
+ * MandateSuspension1.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,15 +57,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#UnderlyingSuspensionDetails
- * MandateSuspensionRequestV01.UnderlyingSuspensionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#mmUnderlyingSuspensionDetails
+ * MandateSuspensionRequestV01.mmUnderlyingSuspensionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateSuspension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text suspensionRequestIdentification;
 	/**
 	 * Unique identification, as assigned by the initiating party, to
 	 * unambiguously identify the suspension request.
@@ -108,7 +110,7 @@ public class MandateSuspension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SuspensionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSuspensionRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MandateSuspension1.mmObject();
 			isDerived = false;
@@ -116,11 +118,12 @@ public class MandateSuspension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspensionRequestIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the suspension request. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OriginalMessageInformation1 originalMessageInformation;
 	/**
 	 * Provides information on the original message.
 	 * <p>
@@ -148,7 +151,7 @@ public class MandateSuspension1 {
 	 * definition} = "Provides information on the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateSuspension1.mmObject();
 			isDerived = false;
@@ -156,12 +159,13 @@ public class MandateSuspension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageInformation";
 			definition = "Provides information on the original message.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMessageInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
 		}
 	};
+	protected MandateSuspensionReason1 suspensionReason;
 	/**
 	 * Provides detailed information on the suspension reason.
 	 * <p>
@@ -189,7 +193,7 @@ public class MandateSuspension1 {
 	 * definition} = "Provides detailed information on the suspension reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SuspensionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSuspensionReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateSuspension1.mmObject();
 			isDerived = false;
@@ -197,12 +201,13 @@ public class MandateSuspension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspensionReason";
 			definition = "Provides detailed information on the suspension reason.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MandateSuspensionReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MandateSuspensionReason1.mmObject();
 		}
 	};
+	protected OriginalMandate4Choice originalMandate;
 	/**
 	 * Provides the original mandate data.
 	 * <p>
@@ -230,7 +235,7 @@ public class MandateSuspension1 {
 	 * definition} = "Provides the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateSuspension1.mmObject();
 			isDerived = false;
@@ -238,12 +243,13 @@ public class MandateSuspension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Provides the original mandate data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMandate4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OriginalMandate4Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -273,7 +279,7 @@ public class MandateSuspension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateSuspension1.mmObject();
 			isDerived = false;
@@ -282,23 +288,63 @@ public class MandateSuspension1 {
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateSuspension1.SuspensionRequestIdentification, com.tools20022.repository.msg.MandateSuspension1.OriginalMessageInformation,
-						com.tools20022.repository.msg.MandateSuspension1.SuspensionReason, com.tools20022.repository.msg.MandateSuspension1.OriginalMandate, com.tools20022.repository.msg.MandateSuspension1.SupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateSuspensionRequestV01.UnderlyingSuspensionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateSuspension1.mmSuspensionRequestIdentification, com.tools20022.repository.msg.MandateSuspension1.mmOriginalMessageInformation,
+						com.tools20022.repository.msg.MandateSuspension1.mmSuspensionReason, com.tools20022.repository.msg.MandateSuspension1.mmOriginalMandate, com.tools20022.repository.msg.MandateSuspension1.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateSuspensionRequestV01.mmUnderlyingSuspensionDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateSuspension1";
 				definition = "Identifies the mandate, which is being suspended.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSuspensionRequestIdentification() {
+		return suspensionRequestIdentification;
+	}
+
+	public void setSuspensionRequestIdentification(Max35Text suspensionRequestIdentification) {
+		this.suspensionRequestIdentification = suspensionRequestIdentification;
+	}
+
+	public OriginalMessageInformation1 getOriginalMessageInformation() {
+		return originalMessageInformation;
+	}
+
+	public void setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+		this.originalMessageInformation = originalMessageInformation;
+	}
+
+	public MandateSuspensionReason1 getSuspensionReason() {
+		return suspensionReason;
+	}
+
+	public void setSuspensionReason(com.tools20022.repository.msg.MandateSuspensionReason1 suspensionReason) {
+		this.suspensionReason = suspensionReason;
+	}
+
+	public OriginalMandate4Choice getOriginalMandate() {
+		return originalMandate;
+	}
+
+	public void setOriginalMandate(OriginalMandate4Choice originalMandate) {
+		this.originalMandate = originalMandate;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

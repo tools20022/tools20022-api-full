@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of formats for a reason for an instruction to change the status of an
@@ -36,18 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice#NoSpecifiedReason
- * AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice#mmNoSpecifiedReason
+ * AccountStatusUpdateInstructionReason1Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice#Reason
- * AccountStatusUpdateInstructionReason1Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice#mmReason
+ * AccountStatusUpdateInstructionReason1Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountStatusUpdateInstructionReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * There is no reason available or to report for the instruction to change
 	 * the account status.
@@ -98,11 +100,11 @@ public class AccountStatusUpdateInstructionReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#NoSpecifiedReason
-	 * EnabledStatusReason1Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#mmNoSpecifiedReason
+	 * EnabledStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatusUpdateInstructionReason1Choice.mmObject();
 			isDerived = false;
@@ -110,12 +112,13 @@ public class AccountStatusUpdateInstructionReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "There is no reason available or to report for the instruction to change the account status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.NoSpecifiedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<AccountStatusUpdateInstructionReason1> reason;
 	/**
 	 * Reason for the instruction to change the account status.
 	 * <p>
@@ -144,11 +147,11 @@ public class AccountStatusUpdateInstructionReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#Reason
-	 * EnabledStatusReason1Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#mmReason
+	 * EnabledStatusReason1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountStatusUpdateInstructionReason1Choice.mmObject();
 			isDerived = false;
@@ -156,18 +159,19 @@ public class AccountStatusUpdateInstructionReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the instruction to change the account status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.Reason;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.mmReason;
 			minOccurs = 1;
-			type_lazy = () -> AccountStatusUpdateInstructionReason1.mmObject();
 			isComposite = true;
+			type_lazy = () -> AccountStatusUpdateInstructionReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason, com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.Reason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.mmNoSpecifiedReason,
+						com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.mmReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstructionReason1Choice";
 				definition = "Choice of formats for a reason for an instruction to change the status of an account.";
@@ -175,5 +179,21 @@ public class AccountStatusUpdateInstructionReason1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<AccountStatusUpdateInstructionReason1> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<AccountStatusUpdateInstructionReason1> reason) {
+		this.reason = reason;
 	}
 }

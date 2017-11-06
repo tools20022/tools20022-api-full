@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument2#Identification
- * FinancialInstrument2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument2#mmIdentification
+ * FinancialInstrument2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument2#Attributes
- * FinancialInstrument2.Attributes}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument2#mmAttributes
+ * FinancialInstrument2.mmAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument2#AdditionalDerivativeAttributes
- * FinancialInstrument2.AdditionalDerivativeAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument2#mmAdditionalDerivativeAttributes
+ * FinancialInstrument2.mmAdditionalDerivativeAttributes}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification11 identification;
 	/**
 	 * Identification of a security.
 	 * <p>
@@ -78,8 +79,8 @@ public class FinancialInstrument2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +99,22 @@ public class FinancialInstrument2 {
 	 * definition} = "Identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification11.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes2 attributes;
 	/**
 	 * Elements characterising a financial instrument.
 	 * <p>
@@ -144,21 +146,22 @@ public class FinancialInstrument2 {
 	 * definition} = "Elements characterising a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Attributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrument2.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> FinancialInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "Attrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attributes";
 			definition = "Elements characterising a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmObject();
 		}
 	};
+	protected DerivativeBasicAttributes1 additionalDerivativeAttributes;
 	/**
 	 * Details of the swap contract.
 	 * <p>
@@ -171,8 +174,8 @@ public class FinancialInstrument2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#Derivative
-	 * Asset.Derivative}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmDerivative
+	 * Asset.mmDerivative}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,34 +194,58 @@ public class FinancialInstrument2 {
 	 * definition} = "Details of the swap contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalDerivativeAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalDerivativeAttributes = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
 			componentContext_lazy = () -> FinancialInstrument2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.Derivative;
 			isDerived = false;
 			xmlTag = "AddtlDerivAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDerivativeAttributes";
 			definition = "Details of the swap contract.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DerivativeBasicAttributes1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DerivativeBasicAttributes1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument2.Identification, com.tools20022.repository.msg.FinancialInstrument2.Attributes,
-						com.tools20022.repository.msg.FinancialInstrument2.AdditionalDerivativeAttributes);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument2.mmIdentification, com.tools20022.repository.msg.FinancialInstrument2.mmAttributes,
+						com.tools20022.repository.msg.FinancialInstrument2.mmAdditionalDerivativeAttributes);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument2";
 				definition = "Identification and attributes of a financial instrument for an accounting process.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification11 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
+		this.identification = identification;
+	}
+
+	public FinancialInstrumentAttributes2 getAttributes() {
+		return attributes;
+	}
+
+	public void setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes2 attributes) {
+		this.attributes = attributes;
+	}
+
+	public DerivativeBasicAttributes1 getAdditionalDerivativeAttributes() {
+		return additionalDerivativeAttributes;
+	}
+
+	public void setAdditionalDerivativeAttributes(com.tools20022.repository.msg.DerivativeBasicAttributes1 additionalDerivativeAttributes) {
+		this.additionalDerivativeAttributes = additionalDerivativeAttributes;
 	}
 }

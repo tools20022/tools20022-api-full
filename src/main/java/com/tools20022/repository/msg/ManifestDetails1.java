@@ -34,18 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ManifestDetails1#DocumentType
- * ManifestDetails1.DocumentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ManifestDetails1#NumberOfDocuments
- * ManifestDetails1.NumberOfDocuments}</li>
+ * {@linkplain com.tools20022.repository.msg.ManifestDetails1#mmDocumentType
+ * ManifestDetails1.mmDocumentType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ManifestDetails1#mmNumberOfDocuments
+ * ManifestDetails1.mmNumberOfDocuments}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ManifestDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text documentType;
 	/**
 	 * Specifies the type of items contained in the document set. An initial
 	 * list of values can be found in the ISO20022 message type catalogue such
@@ -92,7 +94,7 @@ public class ManifestDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ManifestDetails1.mmObject();
 			isDerived = false;
@@ -100,11 +102,12 @@ public class ManifestDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentType";
 			definition = "Specifies the type of items contained in the document set. An initial list of values can be found in the ISO20022 message type catalogue such as admi, camt, pacs , sese, semt etc. ISO messages.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number numberOfDocuments;
 	/**
 	 * Gives the number of instances (messages) for each declared type.
 	 * <p>
@@ -133,7 +136,7 @@ public class ManifestDetails1 {
 	 * "Gives the number of instances (messages) for each declared type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDocuments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDocuments = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ManifestDetails1.mmObject();
 			isDerived = false;
@@ -141,8 +144,8 @@ public class ManifestDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDocuments";
 			definition = "Gives the number of instances (messages) for each declared type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -150,13 +153,29 @@ public class ManifestDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManifestDetails1.DocumentType, com.tools20022.repository.msg.ManifestDetails1.NumberOfDocuments);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManifestDetails1.mmDocumentType, com.tools20022.repository.msg.ManifestDetails1.mmNumberOfDocuments);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ManifestDetails1";
 				definition = "Describes the related items or attachments (such as message types and number of messages types) within the file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getDocumentType() {
+		return documentType;
+	}
+
+	public void setDocumentType(Max35Text documentType) {
+		this.documentType = documentType;
+	}
+
+	public Number getNumberOfDocuments() {
+		return numberOfDocuments;
+	}
+
+	public void setNumberOfDocuments(Number numberOfDocuments) {
+		this.numberOfDocuments = numberOfDocuments;
 	}
 }

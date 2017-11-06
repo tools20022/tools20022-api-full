@@ -35,16 +35,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount11#Type
- * DetailedAmount11.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount11#mmType
+ * DetailedAmount11.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedAmount11#AdditionalType
- * DetailedAmount11.AdditionalType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount11#Amount
- * DetailedAmount11.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount11#mmAdditionalType
+ * DetailedAmount11.mmAdditionalType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount11#mmAmount
+ * DetailedAmount11.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedAmount11#OriginalAmount
- * DetailedAmount11.OriginalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount11#mmOriginalAmount
+ * DetailedAmount11.mmOriginalAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DetailedAmount11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TypeOfAmount7Code type;
 	/**
 	 * Type or class of amount.
 	 * <p>
@@ -91,8 +92,8 @@ public class DetailedAmount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#AmountQualifier
-	 * CardPayment.AmountQualifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmAmountQualifier
+	 * CardPayment.mmAmountQualifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +112,21 @@ public class DetailedAmount11 {
 	 * definition} = "Type or class of amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> DetailedAmount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.AmountQualifier;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type or class of amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfAmount7Code.mmObject();
 		}
 	};
+	protected Max35Text additionalType;
 	/**
 	 * Additional information to specify the type of amount.
 	 * <p>
@@ -137,8 +139,8 @@ public class DetailedAmount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#AmountQualifier
-	 * CardPayment.AmountQualifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmAmountQualifier
+	 * CardPayment.mmAmountQualifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,25 +160,26 @@ public class DetailedAmount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount10#AdditionalType
-	 * DetailedAmount10.AdditionalType}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount10#mmAdditionalType
+	 * DetailedAmount10.mmAdditionalType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> DetailedAmount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.AmountQualifier;
 			isDerived = false;
 			xmlTag = "AddtlTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalType";
 			definition = "Additional information to specify the type of amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount10.AdditionalType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount10.mmAdditionalType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AmountAndDirection41 amount;
 	/**
 	 * Amount value.
 	 * <p>
@@ -188,8 +191,8 @@ public class DetailedAmount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,34 +213,35 @@ public class DetailedAmount11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#AmountToDispense
-	 * DetailedAmount12.AmountToDispense}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#mmAmountToDispense
+	 * DetailedAmount12.mmAmountToDispense}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount10#Amount
-	 * DetailedAmount10.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount10#mmAmount
+	 * DetailedAmount10.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Amount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount10.Amount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount12.AmountToDispense);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount12.mmAmountToDispense);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount10.mmAmount;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection41.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
 		}
 	};
+	protected AmountAndDirection41 originalAmount;
 	/**
 	 * Original value of the amount.
 	 * <p>
@@ -249,8 +253,8 @@ public class DetailedAmount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -269,36 +273,68 @@ public class DetailedAmount11 {
 	 * definition} = "Original value of the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "OrgnlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAmount";
 			definition = "Original value of the amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection41.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount11.Type, com.tools20022.repository.msg.DetailedAmount11.AdditionalType, com.tools20022.repository.msg.DetailedAmount11.Amount,
-						com.tools20022.repository.msg.DetailedAmount11.OriginalAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount11.mmType, com.tools20022.repository.msg.DetailedAmount11.mmAdditionalType, com.tools20022.repository.msg.DetailedAmount11.mmAmount,
+						com.tools20022.repository.msg.DetailedAmount11.mmOriginalAmount);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount11";
 				definition = "Fees between acquirer and issuer.";
-				previousVersion_lazy = () -> DetailedAmount10.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(DetailedAmount12.mmObject());
+				previousVersion_lazy = () -> DetailedAmount10.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TypeOfAmount7Code getType() {
+		return type;
+	}
+
+	public void setType(TypeOfAmount7Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getAdditionalType() {
+		return additionalType;
+	}
+
+	public void setAdditionalType(Max35Text additionalType) {
+		this.additionalType = additionalType;
+	}
+
+	public AmountAndDirection41 getAmount() {
+		return amount;
+	}
+
+	public void setAmount(com.tools20022.repository.msg.AmountAndDirection41 amount) {
+		this.amount = amount;
+	}
+
+	public AmountAndDirection41 getOriginalAmount() {
+		return originalAmount;
+	}
+
+	public void setOriginalAmount(com.tools20022.repository.msg.AmountAndDirection41 originalAmount) {
+		this.originalAmount = originalAmount;
 	}
 }

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails3#Type
- * ChargesDetails3.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails3#mmType
+ * ChargesDetails3.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ChargesDetails3#AmountOrPercentage
- * ChargesDetails3.AmountOrPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.ChargesDetails3#mmAmountOrPercentage
+ * ChargesDetails3.mmAmountOrPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChargesDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChargesType1Choice type;
 	/**
 	 * Specifies the type of charges as a code or free text.
 	 * <p>
@@ -75,8 +76,8 @@ public class ChargesDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,21 +96,22 @@ public class ChargesDetails3 {
 	 * definition} = "Specifies the type of charges as a code or free text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> ChargesDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of charges as a code or free text.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ChargesType1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ChargesType1Choice.mmObject();
 		}
 	};
+	protected AmountOrPercentage2Choice amountOrPercentage;
 	/**
 	 * Specifies if it is a fixed amount or a percentage.
 	 * <p>
@@ -137,7 +139,7 @@ public class ChargesDetails3 {
 	 * definition} = "Specifies if it is a fixed amount or a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountOrPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountOrPercentage = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ChargesDetails3.mmObject();
 			isDerived = false;
@@ -145,19 +147,19 @@ public class ChargesDetails3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrPercentage";
 			definition = "Specifies if it is a fixed amount or a percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails3.Type, com.tools20022.repository.msg.ChargesDetails3.AmountOrPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails3.mmType, com.tools20022.repository.msg.ChargesDetails3.mmAmountOrPercentage);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargesDetails3";
 				definition = "Amount of money associated with a service.";
@@ -165,5 +167,21 @@ public class ChargesDetails3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChargesType1Choice getType() {
+		return type;
+	}
+
+	public void setType(ChargesType1Choice type) {
+		this.type = type;
+	}
+
+	public AmountOrPercentage2Choice getAmountOrPercentage() {
+		return amountOrPercentage;
+	}
+
+	public void setAmountOrPercentage(AmountOrPercentage2Choice amountOrPercentage) {
+		this.amountOrPercentage = amountOrPercentage;
 	}
 }

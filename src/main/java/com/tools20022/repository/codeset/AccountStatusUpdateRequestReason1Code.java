@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateRequestReason1Code#AccountClosureInstructionError
- * AccountStatusUpdateRequestReason1Code.AccountClosureInstructionError}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateRequestReason1Code#mmAccountClosureInstructionError
+ * AccountStatusUpdateRequestReason1Code.mmAccountClosureInstructionError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class AccountStatusUpdateRequestReason1Code extends AccountStatusUpdateRe
 	 * name} = "AccountClosureInstructionError"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountClosureInstructionError = new MMCode() {
+	public static final MMCode mmAccountClosureInstructionError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosureInstructionError";
@@ -84,11 +84,11 @@ public class AccountStatusUpdateRequestReason1Code extends AccountStatusUpdateRe
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateRequestReason1Code";
 				definition = "Sepcifes the reason for a request for a change to an account status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateRequestReason1Code.AccountClosureInstructionError);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateRequestReason1Code.mmAccountClosureInstructionError);
 				trace_lazy = () -> AccountStatusUpdateRequestReasonCode.mmObject();
 			}
 		});

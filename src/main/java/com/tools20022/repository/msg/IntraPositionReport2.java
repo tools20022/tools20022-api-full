@@ -36,35 +36,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#ReportNumber
- * IntraPositionReport2.ReportNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#mmReportNumber
+ * IntraPositionReport2.mmReportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#QueryReference
- * IntraPositionReport2.QueryReference}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#mmQueryReference
+ * IntraPositionReport2.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#ReportIdentification
- * IntraPositionReport2.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#mmReportIdentification
+ * IntraPositionReport2.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#ReportDateTime
- * IntraPositionReport2.ReportDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#mmReportDateTime
+ * IntraPositionReport2.mmReportDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#ReportPeriod
- * IntraPositionReport2.ReportPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraPositionReport2#Frequency
- * IntraPositionReport2.Frequency}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#mmReportPeriod
+ * IntraPositionReport2.mmReportPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#UpdateType
- * IntraPositionReport2.UpdateType}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#mmFrequency
+ * IntraPositionReport2.mmFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#ActivityIndicator
- * IntraPositionReport2.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#mmUpdateType
+ * IntraPositionReport2.mmUpdateType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport2#mmActivityIndicator
+ * IntraPositionReport2.mmActivityIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number3Choice reportNumber;
 	/**
 	 * Sequential number of the report.
 	 * <p>
@@ -106,7 +108,7 @@ public class IntraPositionReport2 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport2.mmObject();
 			isDerived = false;
@@ -114,11 +116,12 @@ public class IntraPositionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Number3Choice.mmObject();
 		}
 	};
+	protected Max35Text queryReference;
 	/**
 	 * Identification of the query message sent to request this statement.
 	 * <p>
@@ -147,7 +150,7 @@ public class IntraPositionReport2 {
 	 * "Identification of the query message sent to request this statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport2.mmObject();
 			isDerived = false;
@@ -155,11 +158,12 @@ public class IntraPositionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the query message sent to request this statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text reportIdentification;
 	/**
 	 * Reference common to all pages of a statement.
 	 * <p>
@@ -187,7 +191,7 @@ public class IntraPositionReport2 {
 	 * definition} = "Reference common to all pages of a statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport2.mmObject();
 			isDerived = false;
@@ -195,11 +199,12 @@ public class IntraPositionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference common to all pages of a statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice reportDateTime;
 	/**
 	 * Date and time when the report was created.
 	 * <p>
@@ -228,7 +233,7 @@ public class IntraPositionReport2 {
 	 * definition} = "Date and time when the report was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport2.mmObject();
 			isDerived = false;
@@ -236,11 +241,12 @@ public class IntraPositionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateTime";
 			definition = "Date and time when the report was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Period2Choice reportPeriod;
 	/**
 	 * Period for the statement.
 	 * <p>
@@ -269,7 +275,7 @@ public class IntraPositionReport2 {
 	 * definition} = "Period for the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport2.mmObject();
 			isDerived = false;
@@ -277,11 +283,12 @@ public class IntraPositionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPeriod";
 			definition = "Period for the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Period2Choice.mmObject();
 		}
 	};
+	protected Frequency9Choice frequency;
 	/**
 	 * Frequency of the statement.
 	 * <p>
@@ -308,7 +315,7 @@ public class IntraPositionReport2 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Frequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFrequency = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionReport2.mmObject();
 			isDerived = false;
@@ -316,12 +323,13 @@ public class IntraPositionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Frequency9Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Frequency9Choice.mmObject();
 		}
 	};
+	protected UpdateType2Choice updateType;
 	/**
 	 * Indicates whether the statement is complete or contains changes only.
 	 * <p>
@@ -349,7 +357,7 @@ public class IntraPositionReport2 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionReport2.mmObject();
 			isDerived = false;
@@ -357,12 +365,13 @@ public class IntraPositionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UpdateType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UpdateType2Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -394,7 +403,7 @@ public class IntraPositionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport2.mmObject();
 			isDerived = false;
@@ -402,8 +411,8 @@ public class IntraPositionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -411,15 +420,79 @@ public class IntraPositionReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionReport2.ReportNumber, com.tools20022.repository.msg.IntraPositionReport2.QueryReference,
-						com.tools20022.repository.msg.IntraPositionReport2.ReportIdentification, com.tools20022.repository.msg.IntraPositionReport2.ReportDateTime, com.tools20022.repository.msg.IntraPositionReport2.ReportPeriod,
-						com.tools20022.repository.msg.IntraPositionReport2.Frequency, com.tools20022.repository.msg.IntraPositionReport2.UpdateType, com.tools20022.repository.msg.IntraPositionReport2.ActivityIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionReport2.mmReportNumber, com.tools20022.repository.msg.IntraPositionReport2.mmQueryReference,
+						com.tools20022.repository.msg.IntraPositionReport2.mmReportIdentification, com.tools20022.repository.msg.IntraPositionReport2.mmReportDateTime, com.tools20022.repository.msg.IntraPositionReport2.mmReportPeriod,
+						com.tools20022.repository.msg.IntraPositionReport2.mmFrequency, com.tools20022.repository.msg.IntraPositionReport2.mmUpdateType, com.tools20022.repository.msg.IntraPositionReport2.mmActivityIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionReport2";
 				definition = "Characteristics of the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number3Choice getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(Number3Choice reportNumber) {
+		this.reportNumber = reportNumber;
+	}
+
+	public Max35Text getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(Max35Text queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public DateAndDateTimeChoice getReportDateTime() {
+		return reportDateTime;
+	}
+
+	public void setReportDateTime(DateAndDateTimeChoice reportDateTime) {
+		this.reportDateTime = reportDateTime;
+	}
+
+	public Period2Choice getReportPeriod() {
+		return reportPeriod;
+	}
+
+	public void setReportPeriod(Period2Choice reportPeriod) {
+		this.reportPeriod = reportPeriod;
+	}
+
+	public Frequency9Choice getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency9Choice frequency) {
+		this.frequency = frequency;
+	}
+
+	public UpdateType2Choice getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(UpdateType2Choice updateType) {
+		this.updateType = updateType;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
 	}
 }

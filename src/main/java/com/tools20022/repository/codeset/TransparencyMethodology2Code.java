@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#Year
- * TransparencyMethodology2Code.Year}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#mmYear
+ * TransparencyMethodology2Code.mmYear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#SystematicInternaliser
- * TransparencyMethodology2Code.SystematicInternaliser}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#mmSystematicInternaliser
+ * TransparencyMethodology2Code.mmSystematicInternaliser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#FirstFourWeeks
- * TransparencyMethodology2Code.FirstFourWeeks}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#mmFirstFourWeeks
+ * TransparencyMethodology2Code.mmFirstFourWeeks}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#Estimated
- * TransparencyMethodology2Code.Estimated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#mmEstimated
+ * TransparencyMethodology2Code.mmEstimated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 * name} = "Year"</li>
 	 * </ul>
 	 */
-	public static final MMCode Year = new MMCode() {
+	public static final MMCode mmYear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
@@ -104,7 +104,7 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 * name} = "SystematicInternaliser"</li>
 	 * </ul>
 	 */
-	public static final MMCode SystematicInternaliser = new MMCode() {
+	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
@@ -127,7 +127,7 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 * name} = "FirstFourWeeks"</li>
 	 * </ul>
 	 */
-	public static final MMCode FirstFourWeeks = new MMCode() {
+	public static final MMCode mmFirstFourWeeks = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstFourWeeks";
@@ -150,7 +150,7 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 * name} = "Estimated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Estimated = new MMCode() {
+	public static final MMCode mmEstimated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
@@ -161,12 +161,12 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransparencyMethodology2Code";
 				definition = "Specifies the methodology used for a transparency operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransparencyMethodology2Code.Year, com.tools20022.repository.codeset.TransparencyMethodology2Code.SystematicInternaliser,
-						com.tools20022.repository.codeset.TransparencyMethodology2Code.FirstFourWeeks, com.tools20022.repository.codeset.TransparencyMethodology2Code.Estimated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransparencyMethodology2Code.mmYear, com.tools20022.repository.codeset.TransparencyMethodology2Code.mmSystematicInternaliser,
+						com.tools20022.repository.codeset.TransparencyMethodology2Code.mmFirstFourWeeks, com.tools20022.repository.codeset.TransparencyMethodology2Code.mmEstimated);
 				trace_lazy = () -> TransparencyMethodologyCode.mmObject();
 			}
 		});

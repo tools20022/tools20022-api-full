@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountAndRateFormat2Choice#Amount
- * AmountAndRateFormat2Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountAndRateFormat2Choice#mmAmount
+ * AmountAndRateFormat2Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountAndRateFormat2Choice#NotSpecifiedRate
- * AmountAndRateFormat2Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountAndRateFormat2Choice#mmNotSpecifiedRate
+ * AmountAndRateFormat2Choice.mmNotSpecifiedRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountAndRateFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Number of monetary units specified in a currency.
 	 * <p>
@@ -86,7 +87,7 @@ public class AmountAndRateFormat2Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountAndRateFormat2Choice.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class AmountAndRateFormat2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected RateType12FormatChoice notSpecifiedRate;
 	/**
 	 * The rate is not specified.
 	 * <p>
@@ -127,7 +129,7 @@ public class AmountAndRateFormat2Choice {
 	 * definition} = "The rate is not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountAndRateFormat2Choice.mmObject();
 			isDerived = false;
@@ -135,22 +137,38 @@ public class AmountAndRateFormat2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "The rate is not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> RateType12FormatChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.RateType12FormatChoice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountAndRateFormat2Choice.Amount, com.tools20022.repository.choice.AmountAndRateFormat2Choice.NotSpecifiedRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountAndRateFormat2Choice.mmAmount, com.tools20022.repository.choice.AmountAndRateFormat2Choice.mmNotSpecifiedRate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountAndRateFormat2Choice";
 				definition = "Choice of rate formats.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public RateType12FormatChoice getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(com.tools20022.repository.choice.RateType12FormatChoice notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
 	}
 }

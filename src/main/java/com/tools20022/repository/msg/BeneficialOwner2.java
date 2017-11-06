@@ -37,28 +37,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#BeneficialOwnerIdentification
- * BeneficialOwner2.BeneficialOwnerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmBeneficialOwnerIdentification
+ * BeneficialOwner2.mmBeneficialOwnerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#AdditionalIdentification
- * BeneficialOwner2.AdditionalIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BeneficialOwner2#Nationality
- * BeneficialOwner2.Nationality}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmAdditionalIdentification
+ * BeneficialOwner2.mmAdditionalIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmNationality
+ * BeneficialOwner2.mmNationality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#DomicileCountry
- * BeneficialOwner2.DomicileCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmDomicileCountry
+ * BeneficialOwner2.mmDomicileCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#NonDomicileCountry
- * BeneficialOwner2.NonDomicileCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmNonDomicileCountry
+ * BeneficialOwner2.mmNonDomicileCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#CertificationIndicator
- * BeneficialOwner2.CertificationIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmCertificationIndicator
+ * BeneficialOwner2.mmCertificationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#CertificationType
- * BeneficialOwner2.CertificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmCertificationType
+ * BeneficialOwner2.mmCertificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#DeclarationDetails
- * BeneficialOwner2.DeclarationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmDeclarationDetails
+ * BeneficialOwner2.mmDeclarationDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BeneficialOwner2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification100 beneficialOwnerIdentification;
 	/**
 	 * Identification of the party that is the beneficial owner of the specified
 	 * financial instrument.
@@ -100,8 +101,8 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -123,25 +124,26 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#BeneficialOwnerIdentification
-	 * BeneficialOwner1.BeneficialOwnerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmBeneficialOwnerIdentification
+	 * BeneficialOwner1.mmBeneficialOwnerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficialOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficialOwnerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BeneficialOwner2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "BnfclOwnrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerIdentification";
 			definition = "Identification of the party that is the beneficial owner of the specified financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.BeneficialOwnerIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmBeneficialOwnerIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification100.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
 		}
 	};
+	protected AlternateIdentification4 additionalIdentification;
 	/**
 	 * Additional identification of the party that is the beneficial owner of
 	 * the specified financial instrument.
@@ -156,8 +158,8 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,25 +181,26 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#AdditionalIdentification
-	 * BeneficialOwner1.AdditionalIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmAdditionalIdentification
+	 * BeneficialOwner1.mmAdditionalIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> BeneficialOwner2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "AddtlId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "Additional identification of the party that is the beneficial owner of the specified financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.AdditionalIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmAdditionalIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> AlternateIdentification4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AlternateIdentification4.mmObject();
 		}
 	};
+	protected CountryCode nationality;
 	/**
 	 * Nationality of the beneficial owner.
 	 * <p>
@@ -210,7 +213,8 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,25 +234,26 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#Nationality
-	 * BeneficialOwner1.Nationality}</li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmNationality
+	 * BeneficialOwner1.mmNationality}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Nationality = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNationality = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> BeneficialOwner2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ntlty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nationality";
 			definition = "Nationality of the beneficial owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.Nationality;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmNationality;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountryCode domicileCountry;
 	/**
 	 * Country in which the person is permanently domiciled (the place of a
 	 * person's permanent home).
@@ -262,8 +267,8 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Domicile
-	 * Party.Domicile}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmDomicile
+	 * Party.mmDomicile}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -285,25 +290,26 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#DomicileCountry
-	 * BeneficialOwner1.DomicileCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmDomicileCountry
+	 * BeneficialOwner1.mmDomicileCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DomicileCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDomicileCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmDomicile;
 			componentContext_lazy = () -> BeneficialOwner2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Domicile;
 			isDerived = false;
 			xmlTag = "DmclCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomicileCountry";
 			definition = "Country in which the person is permanently domiciled (the place of a person's permanent home).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.DomicileCountry;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmDomicileCountry;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountryCode nonDomicileCountry;
 	/**
 	 * Country for which the holder of the financial instrument must specify
 	 * that it is not domiciled. (The holder must certify, in line with the
@@ -319,8 +325,8 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#NonDomicileCountry
-	 * BeneficialOwner.NonDomicileCountry}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmNonDomicileCountry
+	 * BeneficialOwner.mmNonDomicileCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -342,25 +348,26 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#NonDomicileCountry
-	 * BeneficialOwner1.NonDomicileCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmNonDomicileCountry
+	 * BeneficialOwner1.mmNonDomicileCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonDomicileCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonDomicileCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmNonDomicileCountry;
 			componentContext_lazy = () -> BeneficialOwner2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.NonDomicileCountry;
 			isDerived = false;
 			xmlTag = "NonDmclCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDomicileCountry";
 			definition = "Country for which the holder of the financial instrument must specify that it is not domiciled. (The holder must certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.)";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.NonDomicileCountry;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmNonDomicileCountry;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected YesNoIndicator certificationIndicator;
 	/**
 	 * Indicates whether certification is required from the account owner. (Yes
 	 * means that certification is required. No means certification is not
@@ -376,8 +383,8 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#CertificationIndicator
-	 * BeneficialOwner.CertificationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationIndicator
+	 * BeneficialOwner.mmCertificationIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -399,25 +406,26 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#CertificationIndicator
-	 * BeneficialOwner1.CertificationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmCertificationIndicator
+	 * BeneficialOwner1.mmCertificationIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationIndicator;
 			componentContext_lazy = () -> BeneficialOwner2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.CertificationIndicator;
 			isDerived = false;
 			xmlTag = "CertfctnInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
 			definition = "Indicates whether certification is required from the account owner. (Yes means that certification is required. No means certification is not required.)";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.CertificationIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmCertificationIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected BeneficiaryCertificationType9Choice certificationType;
 	/**
 	 * Type of beneficial owner certification that is required.
 	 * <p>
@@ -431,8 +439,8 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#CertificationType
-	 * BeneficialOwner.CertificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationType
+	 * BeneficialOwner.mmCertificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -452,25 +460,26 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#CertificationType
-	 * BeneficialOwner1.CertificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmCertificationType
+	 * BeneficialOwner1.mmCertificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> BeneficialOwner2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.CertificationType;
 			isDerived = false;
 			xmlTag = "CertfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationType";
 			definition = "Type of beneficial owner certification that is required.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.CertificationType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmCertificationType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BeneficiaryCertificationType9Choice.mmObject();
 		}
 	};
+	protected Max350Text declarationDetails;
 	/**
 	 * Declaration details related to the financial instrument, for example,
 	 * beneficial ownership.
@@ -484,8 +493,8 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#DeclarationDetails
-	 * Security.DeclarationDetails}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmDeclarationDetails
+	 * Security.mmDeclarationDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -507,22 +516,22 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#DeclarationDetails
-	 * BeneficialOwner1.DeclarationDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmDeclarationDetails
+	 * BeneficialOwner1.mmDeclarationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDeclarationDetails;
 			componentContext_lazy = () -> BeneficialOwner2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.DeclarationDetails;
 			isDerived = false;
 			xmlTag = "DclrtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetails";
 			definition = "Declaration details related to the financial instrument, for example, beneficial ownership.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.DeclarationDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmDeclarationDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -530,11 +539,11 @@ public class BeneficialOwner2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.BeneficialOwnerIdentification, com.tools20022.repository.msg.BeneficialOwner2.AdditionalIdentification,
-						com.tools20022.repository.msg.BeneficialOwner2.Nationality, com.tools20022.repository.msg.BeneficialOwner2.DomicileCountry, com.tools20022.repository.msg.BeneficialOwner2.NonDomicileCountry,
-						com.tools20022.repository.msg.BeneficialOwner2.CertificationIndicator, com.tools20022.repository.msg.BeneficialOwner2.CertificationType, com.tools20022.repository.msg.BeneficialOwner2.DeclarationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmBeneficialOwnerIdentification, com.tools20022.repository.msg.BeneficialOwner2.mmAdditionalIdentification,
+						com.tools20022.repository.msg.BeneficialOwner2.mmNationality, com.tools20022.repository.msg.BeneficialOwner2.mmDomicileCountry, com.tools20022.repository.msg.BeneficialOwner2.mmNonDomicileCountry,
+						com.tools20022.repository.msg.BeneficialOwner2.mmCertificationIndicator, com.tools20022.repository.msg.BeneficialOwner2.mmCertificationType, com.tools20022.repository.msg.BeneficialOwner2.mmDeclarationDetails);
 				trace_lazy = () -> BeneficialOwner.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BeneficialOwner2";
 				definition = "Provides information about the beneficial owner of the securities.";
@@ -542,5 +551,69 @@ public class BeneficialOwner2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification100 getBeneficialOwnerIdentification() {
+		return beneficialOwnerIdentification;
+	}
+
+	public void setBeneficialOwnerIdentification(com.tools20022.repository.msg.PartyIdentification100 beneficialOwnerIdentification) {
+		this.beneficialOwnerIdentification = beneficialOwnerIdentification;
+	}
+
+	public AlternateIdentification4 getAdditionalIdentification() {
+		return additionalIdentification;
+	}
+
+	public void setAdditionalIdentification(com.tools20022.repository.msg.AlternateIdentification4 additionalIdentification) {
+		this.additionalIdentification = additionalIdentification;
+	}
+
+	public CountryCode getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(CountryCode nationality) {
+		this.nationality = nationality;
+	}
+
+	public CountryCode getDomicileCountry() {
+		return domicileCountry;
+	}
+
+	public void setDomicileCountry(CountryCode domicileCountry) {
+		this.domicileCountry = domicileCountry;
+	}
+
+	public CountryCode getNonDomicileCountry() {
+		return nonDomicileCountry;
+	}
+
+	public void setNonDomicileCountry(CountryCode nonDomicileCountry) {
+		this.nonDomicileCountry = nonDomicileCountry;
+	}
+
+	public YesNoIndicator getCertificationIndicator() {
+		return certificationIndicator;
+	}
+
+	public void setCertificationIndicator(YesNoIndicator certificationIndicator) {
+		this.certificationIndicator = certificationIndicator;
+	}
+
+	public BeneficiaryCertificationType9Choice getCertificationType() {
+		return certificationType;
+	}
+
+	public void setCertificationType(BeneficiaryCertificationType9Choice certificationType) {
+		this.certificationType = certificationType;
+	}
+
+	public Max350Text getDeclarationDetails() {
+		return declarationDetails;
+	}
+
+	public void setDeclarationDetails(Max350Text declarationDetails) {
+		this.declarationDetails = declarationDetails;
 	}
 }

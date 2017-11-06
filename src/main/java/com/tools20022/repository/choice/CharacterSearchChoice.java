@@ -32,24 +32,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.CharacterSearchChoice#Equal
- * CharacterSearchChoice.Equal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CharacterSearchChoice#NotEqual
- * CharacterSearchChoice.NotEqual}</li>
+ * {@linkplain com.tools20022.repository.choice.CharacterSearchChoice#mmEqual
+ * CharacterSearchChoice.mmEqual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CharacterSearchChoice#Contain
- * CharacterSearchChoice.Contain}</li>
+ * {@linkplain com.tools20022.repository.choice.CharacterSearchChoice#mmNotEqual
+ * CharacterSearchChoice.mmNotEqual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CharacterSearchChoice#NotContain
- * CharacterSearchChoice.NotContain}</li>
+ * {@linkplain com.tools20022.repository.choice.CharacterSearchChoice#mmContain
+ * CharacterSearchChoice.mmContain}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CharacterSearchChoice#mmNotContain
+ * CharacterSearchChoice.mmNotContain}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CharacterSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text equal;
 	/**
 	 * Exact set of characters to be matched to be considered valid.
 	 * <p>
@@ -91,7 +93,7 @@ public class CharacterSearchChoice {
 	 * "Exact set of characters to be matched to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Equal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
 			isDerived = false;
@@ -99,11 +101,12 @@ public class CharacterSearchChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equal";
 			definition = "Exact set of characters to be matched to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text notEqual;
 	/**
 	 * Exact set of characters that cannot match to be considered valid.
 	 * <p>
@@ -132,7 +135,7 @@ public class CharacterSearchChoice {
 	 * "Exact set of characters that cannot match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotEqual = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotEqual = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
 			isDerived = false;
@@ -140,11 +143,12 @@ public class CharacterSearchChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqual";
 			definition = "Exact set of characters that cannot match to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text contain;
 	/**
 	 * Set of characters to be matched to be considered valid.
 	 * <p>
@@ -172,7 +176,7 @@ public class CharacterSearchChoice {
 	 * definition} = "Set of characters to be matched to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Contain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContain = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
 			isDerived = false;
@@ -180,11 +184,12 @@ public class CharacterSearchChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contain";
 			definition = "Set of characters to be matched to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text notContain;
 	/**
 	 * Set of characters that cannot match to be considered valid.
 	 * <p>
@@ -213,7 +218,7 @@ public class CharacterSearchChoice {
 	 * "Set of characters that cannot match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotContain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotContain = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
 			isDerived = false;
@@ -221,8 +226,8 @@ public class CharacterSearchChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotContain";
 			definition = "Set of characters that cannot match to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -230,14 +235,46 @@ public class CharacterSearchChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CharacterSearchChoice.Equal, com.tools20022.repository.choice.CharacterSearchChoice.NotEqual,
-						com.tools20022.repository.choice.CharacterSearchChoice.Contain, com.tools20022.repository.choice.CharacterSearchChoice.NotContain);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CharacterSearchChoice.mmEqual, com.tools20022.repository.choice.CharacterSearchChoice.mmNotEqual,
+						com.tools20022.repository.choice.CharacterSearchChoice.mmContain, com.tools20022.repository.choice.CharacterSearchChoice.mmNotContain);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CharacterSearchChoice";
 				definition = "Set of characters to be matched to be considered as valid.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getEqual() {
+		return equal;
+	}
+
+	public void setEqual(Max35Text equal) {
+		this.equal = equal;
+	}
+
+	public Max35Text getNotEqual() {
+		return notEqual;
+	}
+
+	public void setNotEqual(Max35Text notEqual) {
+		this.notEqual = notEqual;
+	}
+
+	public Max35Text getContain() {
+		return contain;
+	}
+
+	public void setContain(Max35Text contain) {
+		this.contain = contain;
+	}
+
+	public Max35Text getNotContain() {
+		return notContain;
+	}
+
+	public void setNotContain(Max35Text notContain) {
+		this.notContain = notContain;
 	}
 }

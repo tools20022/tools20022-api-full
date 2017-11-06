@@ -23,11 +23,13 @@ import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesManagementPreviousVersion;
 import com.tools20022.repository.choice.PartyIdentification92Choice;
 import com.tools20022.repository.msg.FinancialInstrumentDetails21;
+import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.SecuritiesAccount24;
 import com.tools20022.repository.msg.Statement43;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -76,27 +78,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#Pagination
- * IntraPositionMovementPostingReportV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#mmPagination
+ * IntraPositionMovementPostingReportV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#StatementGeneralDetails
- * IntraPositionMovementPostingReportV05.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#mmStatementGeneralDetails
+ * IntraPositionMovementPostingReportV05.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#AccountOwner
- * IntraPositionMovementPostingReportV05.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#mmAccountOwner
+ * IntraPositionMovementPostingReportV05.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#SafekeepingAccount
- * IntraPositionMovementPostingReportV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#mmSafekeepingAccount
+ * IntraPositionMovementPostingReportV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#FinancialInstrument
- * IntraPositionMovementPostingReportV05.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#mmFinancialInstrument
+ * IntraPositionMovementPostingReportV05.mmFinancialInstrument}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#identifier
- * IntraPositionMovementPostingReportV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.016.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,6 +124,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionMovementPostingReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -152,30 +153,31 @@ public class IntraPositionMovementPostingReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#Pagination
-	 * IntraPositionMovementPostingReportV06.Pagination}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#mmPagination
+	 * IntraPositionMovementPostingReportV06.mmPagination}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#Pagination
-	 * IntraPositionMovementPostingReportV04.Pagination}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#mmPagination
+	 * IntraPositionMovementPostingReportV04.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.Pagination;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.Pagination);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmPagination);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmPagination;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement43 statementGeneralDetails;
 	/**
 	 * General information related to report.
 	 * <p>
@@ -200,30 +202,31 @@ public class IntraPositionMovementPostingReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#StatementGeneralDetails
-	 * IntraPositionMovementPostingReportV06.StatementGeneralDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#mmStatementGeneralDetails
+	 * IntraPositionMovementPostingReportV06.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#StatementGeneralDetails
-	 * IntraPositionMovementPostingReportV04.StatementGeneralDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#mmStatementGeneralDetails
+	 * IntraPositionMovementPostingReportV04.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.StatementGeneralDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.StatementGeneralDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmStatementGeneralDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmStatementGeneralDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement43.mmObject();
 		}
 	};
+	protected PartyIdentification92Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -249,30 +252,31 @@ public class IntraPositionMovementPostingReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#AccountOwner
-	 * IntraPositionMovementPostingReportV06.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#mmAccountOwner
+	 * IntraPositionMovementPostingReportV06.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#AccountOwner
-	 * IntraPositionMovementPostingReportV04.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#mmAccountOwner
+	 * IntraPositionMovementPostingReportV04.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.AccountOwner;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.AccountOwner);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmAccountOwner);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmAccountOwner;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification92Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount24 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -298,30 +302,31 @@ public class IntraPositionMovementPostingReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#SafekeepingAccount
-	 * IntraPositionMovementPostingReportV06.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#mmSafekeepingAccount
+	 * IntraPositionMovementPostingReportV06.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#SafekeepingAccount
-	 * IntraPositionMovementPostingReportV04.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#mmSafekeepingAccount
+	 * IntraPositionMovementPostingReportV04.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.SafekeepingAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.SafekeepingAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmSafekeepingAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
 		}
 	};
+	protected List<FinancialInstrumentDetails21> financialInstrument;
 	/**
 	 * Reporting per financial instrument.
 	 * <p>
@@ -347,54 +352,27 @@ public class IntraPositionMovementPostingReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#FinancialInstrument
-	 * IntraPositionMovementPostingReportV06.FinancialInstrument}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#mmFinancialInstrument
+	 * IntraPositionMovementPostingReportV06.mmFinancialInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#FinancialInstrument
-	 * IntraPositionMovementPostingReportV04.FinancialInstrument}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#mmFinancialInstrument
+	 * IntraPositionMovementPostingReportV04.mmFinancialInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrument = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrument = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Reporting per financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.FinancialInstrument;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.FinancialInstrument);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmFinancialInstrument);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmFinancialInstrument;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentDetails21.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "016"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "016";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -404,18 +382,65 @@ public class IntraPositionMovementPostingReportV05 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionMovementPostingReportV05";
 				definition = "Scope\r\nAn account servicer sends an IntraPositionMovementPostingReport to an account owner to provide the details of increases and decreases in securities with a given status within a holding, that is, intra-position transfers, which occurred during a specified period, for all or selected securities in a specified safekeeping account which the account servicer holds for the account owner. \r\n\r\n\rThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or \r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\n:\r\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information \nusing the relevant elements in the Business Application Header.";
-				previousVersion_lazy = () -> IntraPositionMovementPostingReportV04.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementPostingReportV06.mmObject());
+				previousVersion_lazy = () -> IntraPositionMovementPostingReportV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntPstngRpt";
 				businessArea_lazy = () -> SecuritiesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.Pagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.StatementGeneralDetails, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.AccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.FinancialInstrument);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmPagination,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmStatementGeneralDetails, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmAccountOwner,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmFinancialInstrument);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "016";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Statement43 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement43 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public PartyIdentification92Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification92Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount24 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount24 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<FinancialInstrumentDetails21> getFinancialInstrument() {
+		return financialInstrument;
+	}
+
+	public void setFinancialInstrument(List<FinancialInstrumentDetails21> financialInstrument) {
+		this.financialInstrument = financialInstrument;
 	}
 }

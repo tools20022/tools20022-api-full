@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingInstructionType1Code#CashDistribution
- * StandingInstructionType1Code.CashDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingInstructionType1Code#mmCashDistribution
+ * StandingInstructionType1Code.mmCashDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingInstructionType1Code#GrossNet
- * StandingInstructionType1Code.GrossNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingInstructionType1Code#mmGrossNet
+ * StandingInstructionType1Code.mmGrossNet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingInstructionType1Code#SecuritiesDistribution
- * StandingInstructionType1Code.SecuritiesDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingInstructionType1Code#mmSecuritiesDistribution
+ * StandingInstructionType1Code.mmSecuritiesDistribution}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class StandingInstructionType1Code extends StandingInstructionTypeCode {
 	 * name} = "CashDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDistribution = new MMCode() {
+	public static final MMCode mmCashDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDistribution";
@@ -107,7 +107,7 @@ public class StandingInstructionType1Code extends StandingInstructionTypeCode {
 	 * name} = "GrossNet"</li>
 	 * </ul>
 	 */
-	public static final MMCode GrossNet = new MMCode() {
+	public static final MMCode mmGrossNet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossNet";
@@ -130,7 +130,7 @@ public class StandingInstructionType1Code extends StandingInstructionTypeCode {
 	 * name} = "SecuritiesDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesDistribution = new MMCode() {
+	public static final MMCode mmSecuritiesDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesDistribution";
@@ -141,13 +141,13 @@ public class StandingInstructionType1Code extends StandingInstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandingInstructionType1Code";
 				definition = "Specifies the type of standing instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingInstructionType1Code.CashDistribution, com.tools20022.repository.codeset.StandingInstructionType1Code.GrossNet,
-						com.tools20022.repository.codeset.StandingInstructionType1Code.SecuritiesDistribution);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingInstructionType1Code.mmCashDistribution, com.tools20022.repository.codeset.StandingInstructionType1Code.mmGrossNet,
+						com.tools20022.repository.codeset.StandingInstructionType1Code.mmSecuritiesDistribution);
 				trace_lazy = () -> StandingInstructionTypeCode.mmObject();
 			}
 		});

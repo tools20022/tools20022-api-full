@@ -30,13 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode#Ordinary
- * ResolutionTypeCode.Ordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode#mmOrdinary
+ * ResolutionTypeCode.mmOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode#Extraordinary
- * ResolutionTypeCode.Extraordinary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResolutionTypeCode#Special
- * ResolutionTypeCode.Special}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode#mmExtraordinary
+ * ResolutionTypeCode.mmExtraordinary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode#mmSpecial
+ * ResolutionTypeCode.mmSpecial}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +97,7 @@ public class ResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Ordinary = new MMCode() {
+	public static final MMCode mmOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Ordinary";
@@ -129,7 +130,7 @@ public class ResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Extraordinary = new MMCode() {
+	public static final MMCode mmExtraordinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Extraordinary";
@@ -162,7 +163,7 @@ public class ResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Special = new MMCode() {
+	public static final MMCode mmSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Special";
@@ -175,13 +176,13 @@ public class ResolutionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORDI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResolutionTypeCode";
 				definition = "Specifies the type of resolution.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.ResolutionTypeCode.Ordinary, com.tools20022.repository.codeset.ResolutionTypeCode.Extraordinary, com.tools20022.repository.codeset.ResolutionTypeCode.Special);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionTypeCode.mmOrdinary, com.tools20022.repository.codeset.ResolutionTypeCode.mmExtraordinary,
+						com.tools20022.repository.codeset.ResolutionTypeCode.mmSpecial);
 				derivation_lazy = () -> Arrays.asList(ResolutionType1Code.mmObject(), ResolutionType2Code.mmObject());
 			}
 		});

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.DataModification1Code;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope of the modification to be applied on an identified set of information.
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope35#ModificationScopeIndication
- * ModificationScope35.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope35#mmModificationScopeIndication
+ * ModificationScope35.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope35#AdditionalInformation
- * ModificationScope35.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope35#mmAdditionalInformation
+ * ModificationScope35.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#ModifiedAdditionalInformation
- * AccountModificationInstructionV07.ModifiedAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#mmModifiedAdditionalInformation
+ * AccountModificationInstructionV07.mmModifiedAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope35 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification1Code modificationScopeIndication;
 	/**
 	 * Type of modification to be applied.
 	 * <p>
@@ -103,11 +105,11 @@ public class ModificationScope35 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope30#ModificationScopeIndication
-	 * ModificationScope30.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope30#mmModificationScopeIndication
+	 * ModificationScope30.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope35.mmObject();
 			isDerived = false;
@@ -115,12 +117,13 @@ public class ModificationScope35 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope30.ModificationScopeIndication;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope30.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AdditiononalInformation12> additionalInformation;
 	/**
 	 * Additional information such as remarks or notes that must be conveyed
 	 * about the party and or limitations and restrictions.
@@ -152,11 +155,11 @@ public class ModificationScope35 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope30#AdditionalInformation
-	 * ModificationScope30.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope30#mmAdditionalInformation
+	 * ModificationScope30.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope35.mmObject();
 			isDerived = false;
@@ -164,19 +167,19 @@ public class ModificationScope35 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information such as remarks or notes that must be conveyed about the party and or  limitations and restrictions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope30.AdditionalInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope30.mmAdditionalInformation;
 			minOccurs = 1;
-			type_lazy = () -> AdditiononalInformation12.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditiononalInformation12.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope35.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope35.AdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.ModifiedAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope35.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope35.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope35";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -184,5 +187,21 @@ public class ModificationScope35 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification1Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public List<AdditiononalInformation12> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<com.tools20022.repository.msg.AdditiononalInformation12> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

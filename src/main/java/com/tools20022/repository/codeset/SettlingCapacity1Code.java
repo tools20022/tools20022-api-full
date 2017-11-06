@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlingCapacity1Code#SettlingCustodian
- * SettlingCapacity1Code.SettlingCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlingCapacity1Code#mmSettlingCustodian
+ * SettlingCapacity1Code.mmSettlingCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlingCapacity1Code#SettlingAgent
- * SettlingCapacity1Code.SettlingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlingCapacity1Code#mmSettlingAgent
+ * SettlingCapacity1Code.mmSettlingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlingCapacity1Code#SettlingPrincipal
- * SettlingCapacity1Code.SettlingPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlingCapacity1Code#mmSettlingPrincipal
+ * SettlingCapacity1Code.mmSettlingPrincipal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class SettlingCapacity1Code extends SettlingCapacityCode {
 	 * name} = "SettlingCustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlingCustodian = new MMCode() {
+	public static final MMCode mmSettlingCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingCustodian";
@@ -108,7 +108,7 @@ public class SettlingCapacity1Code extends SettlingCapacityCode {
 	 * name} = "SettlingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlingAgent = new MMCode() {
+	public static final MMCode mmSettlingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingAgent";
@@ -131,7 +131,7 @@ public class SettlingCapacity1Code extends SettlingCapacityCode {
 	 * name} = "SettlingPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlingPrincipal = new MMCode() {
+	public static final MMCode mmSettlingPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingPrincipal";
@@ -142,13 +142,13 @@ public class SettlingCapacity1Code extends SettlingCapacityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlingCapacity1Code";
 				definition = "Specifies the role of the party in the settlement of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlingCapacity1Code.SettlingCustodian, com.tools20022.repository.codeset.SettlingCapacity1Code.SettlingAgent,
-						com.tools20022.repository.codeset.SettlingCapacity1Code.SettlingPrincipal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlingCapacity1Code.mmSettlingCustodian, com.tools20022.repository.codeset.SettlingCapacity1Code.mmSettlingAgent,
+						com.tools20022.repository.codeset.SettlingCapacity1Code.mmSettlingPrincipal);
 				trace_lazy = () -> SettlingCapacityCode.mmObject();
 			}
 		});

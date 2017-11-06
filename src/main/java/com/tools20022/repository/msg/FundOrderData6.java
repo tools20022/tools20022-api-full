@@ -37,18 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundOrderData6#SettlementAmount
- * FundOrderData6.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.FundOrderData6#mmSettlementAmount
+ * FundOrderData6.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundOrderData6#SettlementMethod
- * FundOrderData6.SettlementMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.FundOrderData6#mmSettlementMethod
+ * FundOrderData6.mmSettlementMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundOrderData6#AdditionalAmount
- * FundOrderData6.AdditionalAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundOrderData6#UnitCurrency
- * FundOrderData6.UnitCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundOrderData6#QuotedCurrency
- * FundOrderData6.QuotedCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.FundOrderData6#mmAdditionalAmount
+ * FundOrderData6.mmAdditionalAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundOrderData6#mmUnitCurrency
+ * FundOrderData6.mmUnitCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FundOrderData6#mmQuotedCurrency
+ * FundOrderData6.mmQuotedCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundOrderData6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
 	 * Total amount of money paid /to be paid or received in exchange for the
 	 * financial instrument in the individual order.
@@ -89,8 +91,8 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,25 +113,26 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#SettlementAmount
-	 * FundOrderData2.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#mmSettlementAmount
+	 * FundOrderData2.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> FundOrderData6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundOrderData2.SettlementAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmSettlementAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code settlementMethod;
 	/**
 	 * Method by which the transaction is settled.
 	 * <p>
@@ -143,8 +146,8 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,25 +166,26 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#SettlementMethod
-	 * FundOrderData2.SettlementMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#mmSettlementMethod
+	 * FundOrderData2.mmSettlementMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> FundOrderData6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "SttlmMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod";
 			definition = "Method by which the transaction is settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundOrderData2.SettlementMethod;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmSettlementMethod;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected AdditionalAmount1Choice additionalAmount;
 	/**
 	 * Choice between additional cash in or resulting cash out.
 	 * <p>
@@ -195,8 +199,8 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#AdditionalCashIn
-	 * SwitchOrder.AdditionalCashIn}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmAdditionalCashIn
+	 * SwitchOrder.mmAdditionalCashIn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -214,20 +218,21 @@ public class FundOrderData6 {
 	 * definition} = "Choice between additional cash in or resulting cash out."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmAdditionalCashIn;
 			componentContext_lazy = () -> FundOrderData6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.AdditionalCashIn;
 			isDerived = false;
 			xmlTag = "AddtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalAmount";
 			definition = "Choice between additional cash in or resulting cash out.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalAmount1Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode unitCurrency;
 	/**
 	 * Currency from which the quoted currency is converted in an exchange rate
 	 * calculation.<br>
@@ -243,8 +248,8 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#UnitCurrency
-	 * CurrencyExchange.UnitCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmUnitCurrency
+	 * CurrencyExchange.mmUnitCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -265,25 +270,26 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#UnitCurrency
-	 * FundOrderData2.UnitCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#mmUnitCurrency
+	 * FundOrderData2.mmUnitCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> FundOrderData6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.UnitCurrency;
 			isDerived = false;
 			xmlTag = "UnitCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency from which the quoted currency is converted in an exchange rate calculation.\r\n1 x <UnitCcy> = <XchgRate> x <QtdCcy>.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundOrderData2.UnitCurrency;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmUnitCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode quotedCurrency;
 	/**
 	 * Currency into which the unit currency is converted in an exchange rate
 	 * calculation.<br>
@@ -299,8 +305,8 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#QuotedCurrency
-	 * CurrencyExchange.QuotedCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmQuotedCurrency
+	 * CurrencyExchange.mmQuotedCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -321,22 +327,22 @@ public class FundOrderData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#QuotedCurrency
-	 * FundOrderData2.QuotedCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#mmQuotedCurrency
+	 * FundOrderData2.mmQuotedCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> FundOrderData6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.QuotedCurrency;
 			isDerived = false;
 			xmlTag = "QtdCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the unit currency is converted in an exchange rate calculation.\r\n1 x <UnitCcy> = <XchgRate> x <QtdCcy>.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundOrderData2.QuotedCurrency;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmQuotedCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
@@ -344,10 +350,10 @@ public class FundOrderData6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData6.SettlementAmount, com.tools20022.repository.msg.FundOrderData6.SettlementMethod,
-						com.tools20022.repository.msg.FundOrderData6.AdditionalAmount, com.tools20022.repository.msg.FundOrderData6.UnitCurrency, com.tools20022.repository.msg.FundOrderData6.QuotedCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData6.mmSettlementAmount, com.tools20022.repository.msg.FundOrderData6.mmSettlementMethod,
+						com.tools20022.repository.msg.FundOrderData6.mmAdditionalAmount, com.tools20022.repository.msg.FundOrderData6.mmUnitCurrency, com.tools20022.repository.msg.FundOrderData6.mmQuotedCurrency);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundOrderData6";
 				definition = "Extract of trade data for an investment fund switch order.";
@@ -355,5 +361,45 @@ public class FundOrderData6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public DeliveryReceiptType2Code getSettlementMethod() {
+		return settlementMethod;
+	}
+
+	public void setSettlementMethod(DeliveryReceiptType2Code settlementMethod) {
+		this.settlementMethod = settlementMethod;
+	}
+
+	public AdditionalAmount1Choice getAdditionalAmount() {
+		return additionalAmount;
+	}
+
+	public void setAdditionalAmount(AdditionalAmount1Choice additionalAmount) {
+		this.additionalAmount = additionalAmount;
+	}
+
+	public ActiveCurrencyCode getUnitCurrency() {
+		return unitCurrency;
+	}
+
+	public void setUnitCurrency(ActiveCurrencyCode unitCurrency) {
+		this.unitCurrency = unitCurrency;
+	}
+
+	public ActiveCurrencyCode getQuotedCurrency() {
+		return quotedCurrency;
+	}
+
+	public void setQuotedCurrency(ActiveCurrencyCode quotedCurrency) {
+		this.quotedCurrency = quotedCurrency;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.entity.TradeCertificate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the details relative to the submission of the certificate data set.
@@ -35,11 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission5#Submitter
- * RequiredSubmission5.Submitter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission5#CertificateType
- * RequiredSubmission5.CertificateType}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission5#mmSubmitter
+ * RequiredSubmission5.mmSubmitter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission5#mmCertificateType
+ * RequiredSubmission5.mmCertificateType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequiredSubmission5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.BICIdentification1> submitter;
 	/**
 	 * Specifies with party(ies) is authorised to submit the data set as part of
 	 * the transaction.
@@ -108,27 +111,28 @@ public class RequiredSubmission5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequiredSubmission6#Submitter
-	 * RequiredSubmission6.Submitter}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequiredSubmission6#mmSubmitter
+	 * RequiredSubmission6.mmSubmitter}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Submitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequiredSubmission5.mmObject();
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
+			componentContext_lazy = () -> RequiredSubmission5.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Specifies with party(ies) is authorised to submit the data set as part of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission6.Submitter);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission6.mmSubmitter);
 			minOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	protected TradeCertificateType2Code certificateType;
 	/**
 	 * Specifies the type of the certificate.
 	 * <p>
@@ -142,8 +146,8 @@ public class RequiredSubmission5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeCertificate#CertificateType
-	 * TradeCertificate.CertificateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmCertificateType
+	 * TradeCertificate.mmCertificateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,24 +168,24 @@ public class RequiredSubmission5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequiredSubmission6#CertificateType
-	 * RequiredSubmission6.CertificateType}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequiredSubmission6#mmCertificateType
+	 * RequiredSubmission6.mmCertificateType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmCertificateType;
 			componentContext_lazy = () -> RequiredSubmission5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeCertificate.CertificateType;
 			isDerived = false;
 			xmlTag = "CertTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateType";
 			definition = "Specifies the type of the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission6.CertificateType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission6.mmCertificateType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TradeCertificateType2Code.mmObject();
 		}
 	};
@@ -189,9 +193,9 @@ public class RequiredSubmission5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission5.Submitter, com.tools20022.repository.msg.RequiredSubmission5.CertificateType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission5.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission5.mmCertificateType);
 				trace_lazy = () -> TradeCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequiredSubmission5";
 				definition = "Specifies the details relative to the submission of the certificate data set.";
@@ -199,5 +203,21 @@ public class RequiredSubmission5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BICIdentification1> getSubmitter() {
+		return submitter;
+	}
+
+	public void setSubmitter(List<com.tools20022.repository.msg.BICIdentification1> submitter) {
+		this.submitter = submitter;
+	}
+
+	public TradeCertificateType2Code getCertificateType() {
+		return certificateType;
+	}
+
+	public void setCertificateType(TradeCertificateType2Code certificateType) {
+		this.certificateType = certificateType;
 	}
 }

@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReportData#Data
- * ProprietaryReportData.Data}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReportData#mmData
+ * ProprietaryReportData.mmData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryReportData {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text data;
 	/**
 	 * IMPLEMENTORS WARNING - This element is replaced by the ANY XML type in
 	 * the schema. Therefore, the XML tag &lt;Data&gt; does not appear in an
@@ -86,7 +87,7 @@ public class ProprietaryReportData {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Data = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryReportData.mmObject();
 			isDerived = false;
@@ -94,8 +95,8 @@ public class ProprietaryReportData {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
 			definition = "IMPLEMENTORS WARNING - This element is replaced by the ANY XML type in the schema. Therefore, the XML tag <Data> does not appear in an actual XML instance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -103,13 +104,21 @@ public class ProprietaryReportData {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryReportData.Data);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryReportData.mmData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProprietaryReportData";
 				definition = "Full report data or reporting data of a single tranche of the full report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getData() {
+		return data;
+	}
+
+	public void setData(Max35Text data) {
+		this.data = data;
 	}
 }

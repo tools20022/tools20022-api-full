@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a transfer instruction.
@@ -36,38 +37,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#PrimaryIndividualInvestor
- * PEPISATransfer11.PrimaryIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmPrimaryIndividualInvestor
+ * PEPISATransfer11.mmPrimaryIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#SecondaryIndividualInvestor
- * PEPISATransfer11.SecondaryIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmSecondaryIndividualInvestor
+ * PEPISATransfer11.mmSecondaryIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#OtherIndividualInvestor
- * PEPISATransfer11.OtherIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmOtherIndividualInvestor
+ * PEPISATransfer11.mmOtherIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#PrimaryCorporateInvestor
- * PEPISATransfer11.PrimaryCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmPrimaryCorporateInvestor
+ * PEPISATransfer11.mmPrimaryCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#SecondaryCorporateInvestor
- * PEPISATransfer11.SecondaryCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmSecondaryCorporateInvestor
+ * PEPISATransfer11.mmSecondaryCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#OtherCorporateInvestor
- * PEPISATransfer11.OtherCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmOtherCorporateInvestor
+ * PEPISATransfer11.mmOtherCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#TransferorAccount
- * PEPISATransfer11.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmTransferorAccount
+ * PEPISATransfer11.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#NomineeAccount
- * PEPISATransfer11.NomineeAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer11#Transferee
- * PEPISATransfer11.Transferee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer11#CashAccount
- * PEPISATransfer11.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmNomineeAccount
+ * PEPISATransfer11.mmNomineeAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmTransferee
+ * PEPISATransfer11.mmTransferee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmCashAccount
+ * PEPISATransfer11.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#ProductTransfer
- * PEPISATransfer11.ProductTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer11#Extension
- * PEPISATransfer11.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmProductTransfer
+ * PEPISATransfer11.mmProductTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmExtension
+ * PEPISATransfer11.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -78,16 +79,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#CancellationByTransferInstructionDetails
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#mmCancellationByTransferInstructionDetails
  * PortfolioTransferCancellationRequestV03.
- * CancellationByTransferInstructionDetails}</li>
+ * mmCancellationByTransferInstructionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PEPISATransfer11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IndividualPerson8 primaryIndividualInvestor;
 	/**
 	 * Information identifying the primary individual investor, eg, name,
 	 * address, social security number and date of birth.
@@ -143,21 +145,22 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrimaryIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrimaryIndividualInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			isDerived = false;
 			xmlTag = "PmryIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, eg, name, address, social security number and date of birth.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
 	 * Information identifying the secondary individual investor, eg, name,
 	 * address, social security number and date of birth.
@@ -191,21 +194,22 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondaryIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondaryIndividualInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, eg, name, address, social security number and date of birth.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor;
 	/**
 	 * Information identifying the other individual investors, eg, name,
 	 * address, social security number and date of birth.
@@ -239,20 +243,21 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherIndividualInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			isDerived = false;
 			xmlTag = "OthrIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying the other individual investors, eg, name, address, social security number and date of birth.";
 			minOccurs = 0;
-			type_lazy = () -> IndividualPerson8.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	protected Organisation4 primaryCorporateInvestor;
 	/**
 	 * Information identifying the primary corporate investor, eg, name and
 	 * address.
@@ -286,21 +291,22 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrimaryCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrimaryCorporateInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			isDerived = false;
 			xmlTag = "PmryCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, eg, name and address.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
 		}
 	};
+	protected Organisation4 secondaryCorporateInvestor;
 	/**
 	 * Information identifying the secondary corporate investor, eg, name and
 	 * address.
@@ -334,21 +340,22 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondaryCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondaryCorporateInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, eg, name and address.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Organisation4> otherCorporateInvestor;
 	/**
 	 * Information identifying the other corporate investors, eg, name and
 	 * address.
@@ -382,20 +389,21 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherCorporateInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, eg, name and address.";
 			minOccurs = 0;
-			type_lazy = () -> Organisation4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
 		}
 	};
+	protected Account5 transferorAccount;
 	/**
 	 * Identification of an account owned by the investor at the old plan
 	 * manager (account servicer).
@@ -407,8 +415,8 @@ public class PEPISATransfer11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#AccountFrom
-	 * PortfolioTransfer.AccountFrom}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmAccountFrom
+	 * PortfolioTransfer.mmAccountFrom}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -429,21 +437,22 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferorAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmAccountFrom;
 			componentContext_lazy = () -> PEPISATransfer11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.AccountFrom;
 			isDerived = false;
 			xmlTag = "TrfrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Account5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account5.mmObject();
 		}
 	};
+	protected Account6 nomineeAccount;
 	/**
 	 * Account held in the name of a party that is not the name of the
 	 * beneficial owner of the shares.
@@ -455,8 +464,8 @@ public class PEPISATransfer11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#NomineeAccount
-	 * PortfolioTransfer.NomineeAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmNomineeAccount
+	 * PortfolioTransfer.mmNomineeAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -477,21 +486,22 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NomineeAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNomineeAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmNomineeAccount;
 			componentContext_lazy = () -> PEPISATransfer11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.NomineeAccount;
 			isDerived = false;
 			xmlTag = "NmneeAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Account6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account6.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice transferee;
 	/**
 	 * Information related to the institution to which the financial instrument
 	 * is to be transferred.
@@ -505,8 +515,8 @@ public class PEPISATransfer11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -527,21 +537,22 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transferee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferee = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> PEPISATransfer11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Trfee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected CashAccount11 cashAccount;
 	/**
 	 * Identification of an account owned by the investor to which a cash entry
 	 * is made based on the transfer of asset(s).
@@ -554,8 +565,8 @@ public class PEPISATransfer11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#CashAccount
-	 * InvestmentAccount.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCashAccount
+	 * InvestmentAccount.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -576,21 +587,22 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> PEPISATransfer11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.CashAccount;
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Identification of an account owned by the investor to which a cash entry is made based on the transfer of asset(s).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount11.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount11.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ISATransfer3> productTransfer;
 	/**
 	 * Provides information related to the asset(s) transferred.
 	 * <p>
@@ -623,20 +635,21 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProductTransfer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProductTransfer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
 			minOccurs = 1;
-			type_lazy = () -> ISATransfer3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ISATransfer3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -665,7 +678,7 @@ public class PEPISATransfer11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PEPISATransfer11.mmObject();
 			isDerived = false;
@@ -674,29 +687,125 @@ public class PEPISATransfer11 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer11.PrimaryIndividualInvestor, com.tools20022.repository.msg.PEPISATransfer11.SecondaryIndividualInvestor,
-						com.tools20022.repository.msg.PEPISATransfer11.OtherIndividualInvestor, com.tools20022.repository.msg.PEPISATransfer11.PrimaryCorporateInvestor,
-						com.tools20022.repository.msg.PEPISATransfer11.SecondaryCorporateInvestor, com.tools20022.repository.msg.PEPISATransfer11.OtherCorporateInvestor, com.tools20022.repository.msg.PEPISATransfer11.TransferorAccount,
-						com.tools20022.repository.msg.PEPISATransfer11.NomineeAccount, com.tools20022.repository.msg.PEPISATransfer11.Transferee, com.tools20022.repository.msg.PEPISATransfer11.CashAccount,
-						com.tools20022.repository.msg.PEPISATransfer11.ProductTransfer, com.tools20022.repository.msg.PEPISATransfer11.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer11.mmPrimaryIndividualInvestor, com.tools20022.repository.msg.PEPISATransfer11.mmSecondaryIndividualInvestor,
+						com.tools20022.repository.msg.PEPISATransfer11.mmOtherIndividualInvestor, com.tools20022.repository.msg.PEPISATransfer11.mmPrimaryCorporateInvestor,
+						com.tools20022.repository.msg.PEPISATransfer11.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.PEPISATransfer11.mmOtherCorporateInvestor,
+						com.tools20022.repository.msg.PEPISATransfer11.mmTransferorAccount, com.tools20022.repository.msg.PEPISATransfer11.mmNomineeAccount, com.tools20022.repository.msg.PEPISATransfer11.mmTransferee,
+						com.tools20022.repository.msg.PEPISATransfer11.mmCashAccount, com.tools20022.repository.msg.PEPISATransfer11.mmProductTransfer, com.tools20022.repository.msg.PEPISATransfer11.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmCancellationByTransferInstructionDetails);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.CancellationByTransferInstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PEPISATransfer11";
 				definition = "Information about a transfer instruction.";
-				previousVersion_lazy = () -> PEPISATransfer7.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ISATransfer9.mmObject());
+				previousVersion_lazy = () -> PEPISATransfer7.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IndividualPerson8 getPrimaryIndividualInvestor() {
+		return primaryIndividualInvestor;
+	}
+
+	public void setPrimaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 primaryIndividualInvestor) {
+		this.primaryIndividualInvestor = primaryIndividualInvestor;
+	}
+
+	public IndividualPerson8 getSecondaryIndividualInvestor() {
+		return secondaryIndividualInvestor;
+	}
+
+	public void setSecondaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 secondaryIndividualInvestor) {
+		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
+	}
+
+	public List<IndividualPerson8> getOtherIndividualInvestor() {
+		return otherIndividualInvestor;
+	}
+
+	public void setOtherIndividualInvestor(List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor) {
+		this.otherIndividualInvestor = otherIndividualInvestor;
+	}
+
+	public Organisation4 getPrimaryCorporateInvestor() {
+		return primaryCorporateInvestor;
+	}
+
+	public void setPrimaryCorporateInvestor(com.tools20022.repository.msg.Organisation4 primaryCorporateInvestor) {
+		this.primaryCorporateInvestor = primaryCorporateInvestor;
+	}
+
+	public Organisation4 getSecondaryCorporateInvestor() {
+		return secondaryCorporateInvestor;
+	}
+
+	public void setSecondaryCorporateInvestor(com.tools20022.repository.msg.Organisation4 secondaryCorporateInvestor) {
+		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
+	}
+
+	public List<Organisation4> getOtherCorporateInvestor() {
+		return otherCorporateInvestor;
+	}
+
+	public void setOtherCorporateInvestor(List<com.tools20022.repository.msg.Organisation4> otherCorporateInvestor) {
+		this.otherCorporateInvestor = otherCorporateInvestor;
+	}
+
+	public Account5 getTransferorAccount() {
+		return transferorAccount;
+	}
+
+	public void setTransferorAccount(com.tools20022.repository.msg.Account5 transferorAccount) {
+		this.transferorAccount = transferorAccount;
+	}
+
+	public Account6 getNomineeAccount() {
+		return nomineeAccount;
+	}
+
+	public void setNomineeAccount(com.tools20022.repository.msg.Account6 nomineeAccount) {
+		this.nomineeAccount = nomineeAccount;
+	}
+
+	public PartyIdentification2Choice getTransferee() {
+		return transferee;
+	}
+
+	public void setTransferee(PartyIdentification2Choice transferee) {
+		this.transferee = transferee;
+	}
+
+	public CashAccount11 getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(com.tools20022.repository.msg.CashAccount11 cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public List<ISATransfer3> getProductTransfer() {
+		return productTransfer;
+	}
+
+	public void setProductTransfer(List<com.tools20022.repository.msg.ISATransfer3> productTransfer) {
+		this.productTransfer = productTransfer;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max105Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the details of each individual secured market transaction.
@@ -36,23 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#UniqueTransactionIdentifier
- * MoneyMarketTransactionStatus2.UniqueTransactionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmUniqueTransactionIdentifier
+ * MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#ProprietaryTransactionIdentification
- * MoneyMarketTransactionStatus2.ProprietaryTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmProprietaryTransactionIdentification
+ * MoneyMarketTransactionStatus2.mmProprietaryTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#BranchIdentification
- * MoneyMarketTransactionStatus2.BranchIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmBranchIdentification
+ * MoneyMarketTransactionStatus2.mmBranchIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#Status
- * MoneyMarketTransactionStatus2.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmStatus
+ * MoneyMarketTransactionStatus2.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#ValidationRule
- * MoneyMarketTransactionStatus2.ValidationRule}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmValidationRule
+ * MoneyMarketTransactionStatus2.mmValidationRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#SupplementaryData
- * MoneyMarketTransactionStatus2.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmSupplementaryData
+ * MoneyMarketTransactionStatus2.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,15 +61,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01#TransactionStatus
- * MoneyMarketStatisticalReportStatusAdviceV01.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01#mmTransactionStatus
+ * MoneyMarketStatisticalReportStatusAdviceV01.mmTransactionStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MoneyMarketTransactionStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max105Text uniqueTransactionIdentifier;
 	/**
 	 * Unique transaction identifier will be created at the time a transaction
 	 * is first executed, shared with all registered entities and counterparties
@@ -129,18 +131,18 @@ public class MoneyMarketTransactionStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#TaxReportIdentification
-	 * InvoiceTaxReportTransactionStatus1.TaxReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#mmTaxReportIdentification
+	 * InvoiceTaxReportTransactionStatus1.mmTaxReportIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#UniqueTransactionIdentifier
-	 * MoneyMarketTransactionStatus1.UniqueTransactionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#mmUniqueTransactionIdentifier
+	 * MoneyMarketTransactionStatus1.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -148,13 +150,14 @@ public class MoneyMarketTransactionStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniqueTransactionIdentifier";
 			definition = "Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.UniqueTransactionIdentifier;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.TaxReportIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmTaxReportIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmUniqueTransactionIdentifier;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected Max105Text proprietaryTransactionIdentification;
 	/**
 	 * Internal unique transaction identifier used by the reporting agent for
 	 * each transaction.
@@ -186,11 +189,11 @@ public class MoneyMarketTransactionStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#ProprietaryTransactionIdentification
-	 * MoneyMarketTransactionStatus1.ProprietaryTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#mmProprietaryTransactionIdentification
+	 * MoneyMarketTransactionStatus1.mmProprietaryTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -198,12 +201,13 @@ public class MoneyMarketTransactionStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryTransactionIdentification";
 			definition = "Internal unique transaction identifier used by the reporting agent for each transaction. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.ProprietaryTransactionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmProprietaryTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected LEIIdentifier branchIdentification;
 	/**
 	 * Unique and unambiguous legal entity identification of the branch of the
 	 * reporting agent in which the transaction has been booked.<br>
@@ -225,8 +229,8 @@ public class MoneyMarketTransactionStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
-	 * PartyIdentificationInformation.LEI}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,20 +251,21 @@ public class MoneyMarketTransactionStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BranchIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBranchIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.LEI;
 			isDerived = false;
 			xmlTag = "BrnchId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BranchIdentification";
 			definition = "Unique and unambiguous legal entity identification of  the branch of the reporting agent in which the transaction has been booked.\r\n\r\nUsage: This field must only be provided if the transaction has been conducted and booked by a branch of the reporting agent and only if this branch has its own LEI that the reporting agent can clearly identify. \r\nWhere the transaction has been booked by the head office or the reporting agent cannot be identified by a unique branch-specific LEI, the reporting agent must provide the LEI of the head office.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected StatisticalReportingStatus2Code status;
 	/**
 	 * Defines status of the reported transaction.
 	 * <p>
@@ -291,18 +296,18 @@ public class MoneyMarketTransactionStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#Status
-	 * InvoiceTaxReportTransactionStatus1.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#mmStatus
+	 * InvoiceTaxReportTransactionStatus1.mmStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#Status
-	 * MoneyMarketTransactionStatus1.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#mmStatus
+	 * MoneyMarketTransactionStatus1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -310,13 +315,14 @@ public class MoneyMarketTransactionStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines status of the reported transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.Status;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.Status);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatisticalReportingStatus2Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * Provides the details of the rule which could not be validated.
 	 * <p>
@@ -347,18 +353,18 @@ public class MoneyMarketTransactionStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#ValidationRule
-	 * InvoiceTaxReportTransactionStatus1.ValidationRule}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#mmValidationRule
+	 * InvoiceTaxReportTransactionStatus1.mmValidationRule}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#ValidationRule
-	 * MoneyMarketTransactionStatus1.ValidationRule}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#mmValidationRule
+	 * MoneyMarketTransactionStatus1.mmValidationRule}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -366,13 +372,14 @@ public class MoneyMarketTransactionStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.ValidationRule;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.ValidationRule);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmValidationRule);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmValidationRule;
 			minOccurs = 0;
-			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -404,18 +411,18 @@ public class MoneyMarketTransactionStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#SupplementaryData
-	 * InvoiceTaxReportTransactionStatus1.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#mmSupplementaryData
+	 * InvoiceTaxReportTransactionStatus1.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#SupplementaryData
-	 * MoneyMarketTransactionStatus1.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus1#mmSupplementaryData
+	 * MoneyMarketTransactionStatus1.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -423,30 +430,78 @@ public class MoneyMarketTransactionStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmSupplementaryData;
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus2.UniqueTransactionIdentifier,
-						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.ProprietaryTransactionIdentification, com.tools20022.repository.msg.MoneyMarketTransactionStatus2.BranchIdentification,
-						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.Status, com.tools20022.repository.msg.MoneyMarketTransactionStatus2.ValidationRule,
-						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.SupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.TransactionStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier,
+						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmProprietaryTransactionIdentification, com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmBranchIdentification,
+						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmStatus, com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmValidationRule,
+						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.mmTransactionStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketTransactionStatus2";
 				definition = "Provides the details of each individual secured market transaction.";
-				previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(InvoiceTaxReportTransactionStatus1.mmObject());
+				previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max105Text getUniqueTransactionIdentifier() {
+		return uniqueTransactionIdentifier;
+	}
+
+	public void setUniqueTransactionIdentifier(Max105Text uniqueTransactionIdentifier) {
+		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
+	}
+
+	public Max105Text getProprietaryTransactionIdentification() {
+		return proprietaryTransactionIdentification;
+	}
+
+	public void setProprietaryTransactionIdentification(Max105Text proprietaryTransactionIdentification) {
+		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
+	}
+
+	public LEIIdentifier getBranchIdentification() {
+		return branchIdentification;
+	}
+
+	public void setBranchIdentification(LEIIdentifier branchIdentification) {
+		this.branchIdentification = branchIdentification;
+	}
+
+	public StatisticalReportingStatus2Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatisticalReportingStatus2Code status) {
+		this.status = status;
+	}
+
+	public List<GenericValidationRuleIdentification1> getValidationRule() {
+		return validationRule;
+	}
+
+	public void setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+		this.validationRule = validationRule;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

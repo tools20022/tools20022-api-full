@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Number1Choice#NumberIdentification
- * Number1Choice.NumberIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Number1Choice#Proprietary
- * Number1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Number1Choice#mmNumberIdentification
+ * Number1Choice.mmNumberIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Number1Choice#mmProprietary
+ * Number1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Number1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max3NumericText numberIdentification;
 	/**
 	 * Number of maximum 3 numeric text.
 	 * <p>
@@ -86,7 +87,7 @@ public class Number1Choice {
 	 * definition} = "Number of maximum 3 numeric text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number1Choice.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class Number1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberIdentification";
 			definition = "Number of maximum 3 numeric text.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected GenericIdentification7 proprietary;
 	/**
 	 * Proprietary number format.
 	 * <p>
@@ -127,7 +129,7 @@ public class Number1Choice {
 	 * definition} = "Proprietary number format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number1Choice.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class Number1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary number format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification7.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class Number1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number1Choice.NumberIdentification, com.tools20022.repository.choice.Number1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number1Choice.mmNumberIdentification, com.tools20022.repository.choice.Number1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Number1Choice";
 				definition = "Choice of format for the number.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max3NumericText getNumberIdentification() {
+		return numberIdentification;
+	}
+
+	public void setNumberIdentification(Max3NumericText numberIdentification) {
+		this.numberIdentification = numberIdentification;
+	}
+
+	public GenericIdentification7 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification7 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

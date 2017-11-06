@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Describes the type of product and the assets to be transferred.
@@ -36,37 +37,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#PrimaryIndividualInvestor
- * ISATransfer12.PrimaryIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmPrimaryIndividualInvestor
+ * ISATransfer12.mmPrimaryIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#SecondaryIndividualInvestor
- * ISATransfer12.SecondaryIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmSecondaryIndividualInvestor
+ * ISATransfer12.mmSecondaryIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#OtherIndividualInvestor
- * ISATransfer12.OtherIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmOtherIndividualInvestor
+ * ISATransfer12.mmOtherIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#PrimaryCorporateInvestor
- * ISATransfer12.PrimaryCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmPrimaryCorporateInvestor
+ * ISATransfer12.mmPrimaryCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#SecondaryCorporateInvestor
- * ISATransfer12.SecondaryCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmSecondaryCorporateInvestor
+ * ISATransfer12.mmSecondaryCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#OtherCorporateInvestor
- * ISATransfer12.OtherCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmOtherCorporateInvestor
+ * ISATransfer12.mmOtherCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#TransferorAccount
- * ISATransfer12.TransferorAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer12#NomineeAccount
- * ISATransfer12.NomineeAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer12#Transferee
- * ISATransfer12.Transferee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer12#CashAccount
- * ISATransfer12.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmTransferorAccount
+ * ISATransfer12.mmTransferorAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ISATransfer12#mmNomineeAccount
+ * ISATransfer12.mmNomineeAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ISATransfer12#mmTransferee
+ * ISATransfer12.mmTransferee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ISATransfer12#mmCashAccount
+ * ISATransfer12.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#ProductTransferAndReference
- * ISATransfer12.ProductTransferAndReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer12#Extension
- * ISATransfer12.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmProductTransferAndReference
+ * ISATransfer12.mmProductTransferAndReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ISATransfer12#mmExtension
+ * ISATransfer12.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -75,8 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ISATransfer12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IndividualPerson8 primaryIndividualInvestor;
 	/**
 	 * Information identifying the primary individual investor, eg, name,
 	 * address, social security number and date of birth.
@@ -134,34 +136,35 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#PrimaryIndividualInvestor
-	 * ISATransfer19.PrimaryIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmPrimaryIndividualInvestor
+	 * ISATransfer19.mmPrimaryIndividualInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#PrimaryIndividualInvestor
-	 * ISATransfer9.PrimaryIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmPrimaryIndividualInvestor
+	 * ISATransfer9.mmPrimaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrimaryIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrimaryIndividualInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer12.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> ISATransfer12.mmObject();
 			isDerived = false;
 			xmlTag = "PmryIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, eg, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.PrimaryIndividualInvestor;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.PrimaryIndividualInvestor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmPrimaryIndividualInvestor);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmPrimaryIndividualInvestor;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
 	 * Information identifying the secondary individual investor, eg, name,
 	 * address, social security number and date of birth.
@@ -196,34 +199,35 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#SecondaryIndividualInvestor
-	 * ISATransfer19.SecondaryIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmSecondaryIndividualInvestor
+	 * ISATransfer19.mmSecondaryIndividualInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#SecondaryIndividualInvestor
-	 * ISATransfer9.SecondaryIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmSecondaryIndividualInvestor
+	 * ISATransfer9.mmSecondaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondaryIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondaryIndividualInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer12.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> ISATransfer12.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, eg, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.SecondaryIndividualInvestor;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.SecondaryIndividualInvestor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmSecondaryIndividualInvestor);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmSecondaryIndividualInvestor;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor;
 	/**
 	 * Information identifying the other individual investors, eg, name,
 	 * address, social security number and date of birth.
@@ -258,33 +262,34 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#OtherIndividualInvestor
-	 * ISATransfer19.OtherIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmOtherIndividualInvestor
+	 * ISATransfer19.mmOtherIndividualInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#OtherIndividualInvestor
-	 * ISATransfer9.OtherIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmOtherIndividualInvestor
+	 * ISATransfer9.mmOtherIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherIndividualInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer12.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> ISATransfer12.mmObject();
 			isDerived = false;
 			xmlTag = "OthrIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying the other individual investors, eg, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.OtherIndividualInvestor;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.OtherIndividualInvestor);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmOtherIndividualInvestor);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmOtherIndividualInvestor;
 			minOccurs = 0;
-			type_lazy = () -> IndividualPerson8.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	protected Organisation4 primaryCorporateInvestor;
 	/**
 	 * Information identifying the primary corporate investor, eg, name and
 	 * address.
@@ -319,34 +324,35 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#PrimaryCorporateInvestor
-	 * ISATransfer19.PrimaryCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmPrimaryCorporateInvestor
+	 * ISATransfer19.mmPrimaryCorporateInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#PrimaryCorporateInvestor
-	 * ISATransfer9.PrimaryCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmPrimaryCorporateInvestor
+	 * ISATransfer9.mmPrimaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrimaryCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrimaryCorporateInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer12.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> ISATransfer12.mmObject();
 			isDerived = false;
 			xmlTag = "PmryCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, eg, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.PrimaryCorporateInvestor;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.PrimaryCorporateInvestor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmPrimaryCorporateInvestor);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmPrimaryCorporateInvestor;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
 		}
 	};
+	protected Organisation4 secondaryCorporateInvestor;
 	/**
 	 * Information identifying the secondary corporate investor, eg, name and
 	 * address.
@@ -381,34 +387,35 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#SecondaryCorporateInvestor
-	 * ISATransfer19.SecondaryCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmSecondaryCorporateInvestor
+	 * ISATransfer19.mmSecondaryCorporateInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#SecondaryCorporateInvestor
-	 * ISATransfer9.SecondaryCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmSecondaryCorporateInvestor
+	 * ISATransfer9.mmSecondaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondaryCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondaryCorporateInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer12.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> ISATransfer12.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, eg, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.SecondaryCorporateInvestor;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.SecondaryCorporateInvestor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmSecondaryCorporateInvestor);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmSecondaryCorporateInvestor;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Organisation4> otherCorporateInvestor;
 	/**
 	 * Information identifying the other corporate investors, eg, name and
 	 * address.
@@ -443,33 +450,34 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#OtherCorporateInvestor
-	 * ISATransfer19.OtherCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmOtherCorporateInvestor
+	 * ISATransfer19.mmOtherCorporateInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#OtherCorporateInvestor
-	 * ISATransfer9.OtherCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmOtherCorporateInvestor
+	 * ISATransfer9.mmOtherCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherCorporateInvestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer12.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> ISATransfer12.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, eg, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.OtherCorporateInvestor;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.OtherCorporateInvestor);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmOtherCorporateInvestor);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmOtherCorporateInvestor;
 			minOccurs = 0;
-			type_lazy = () -> Organisation4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
 		}
 	};
+	protected Account15 transferorAccount;
 	/**
 	 * Identification of an account owned by the investor at the old plan
 	 * manager (account servicer).
@@ -481,8 +489,8 @@ public class ISATransfer12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#AccountFrom
-	 * PortfolioTransfer.AccountFrom}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmAccountFrom
+	 * PortfolioTransfer.mmAccountFrom}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -504,34 +512,35 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#TransferorAccount
-	 * ISATransfer19.TransferorAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmTransferorAccount
+	 * ISATransfer19.mmTransferorAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#TransferorAccount
-	 * ISATransfer9.TransferorAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmTransferorAccount
+	 * ISATransfer9.mmTransferorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferorAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmAccountFrom;
 			componentContext_lazy = () -> ISATransfer12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.AccountFrom;
 			isDerived = false;
 			xmlTag = "TrfrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.TransferorAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.TransferorAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmTransferorAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmTransferorAccount;
 			maxOccurs = 1;
-			type_lazy = () -> Account15.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account15.mmObject();
 		}
 	};
+	protected Account16 nomineeAccount;
 	/**
 	 * Account held in the name of a party that is not the name of the
 	 * beneficial owner of the shares.
@@ -543,8 +552,8 @@ public class ISATransfer12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#NomineeAccount
-	 * PortfolioTransfer.NomineeAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmNomineeAccount
+	 * PortfolioTransfer.mmNomineeAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -566,34 +575,35 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#NomineeAccount
-	 * ISATransfer19.NomineeAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmNomineeAccount
+	 * ISATransfer19.mmNomineeAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#NomineeAccount
-	 * ISATransfer9.NomineeAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmNomineeAccount
+	 * ISATransfer9.mmNomineeAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NomineeAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNomineeAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmNomineeAccount;
 			componentContext_lazy = () -> ISATransfer12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.NomineeAccount;
 			isDerived = false;
 			xmlTag = "NmneeAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.NomineeAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.NomineeAccount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmNomineeAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmNomineeAccount;
 			maxOccurs = 1;
-			type_lazy = () -> Account16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account16.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice transferee;
 	/**
 	 * Information related to the institution to which the financial instrument
 	 * is to be transferred.
@@ -607,8 +617,8 @@ public class ISATransfer12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -629,34 +639,35 @@ public class ISATransfer12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer19#Transferee
-	 * ISATransfer19.Transferee}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer19#mmTransferee
+	 * ISATransfer19.mmTransferee}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#Transferee
-	 * ISATransfer9.Transferee}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmTransferee
+	 * ISATransfer9.mmTransferee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transferee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferee = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ISATransfer12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Trfee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.Transferee;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.Transferee);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmTransferee);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmTransferee;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected CashAccount29 cashAccount;
 	/**
 	 * Identification of an account owned by the investor to which a cash entry
 	 * is made based on the transfer of asset(s).
@@ -669,8 +680,8 @@ public class ISATransfer12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#CashAccount
-	 * InvestmentAccount.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCashAccount
+	 * InvestmentAccount.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -691,34 +702,36 @@ public class ISATransfer12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer19#CashAccount
-	 * ISATransfer19.CashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmCashAccount
+	 * ISATransfer19.mmCashAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#CashAccount
-	 * ISATransfer9.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmCashAccount
+	 * ISATransfer9.mmCashAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> ISATransfer12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.CashAccount;
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Identification of an account owned by the investor to which a cash entry is made based on the transfer of asset(s).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.CashAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.CashAccount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmCashAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmCashAccount;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount29.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount29.mmObject();
 		}
 	};
+	protected ISATransfer17 productTransferAndReference;
 	/**
 	 * Details of the transfer to be cancelled.
 	 * <p>
@@ -751,28 +764,29 @@ public class ISATransfer12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#ProductTransferAndReference
-	 * ISATransfer19.ProductTransferAndReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmProductTransferAndReference
+	 * ISATransfer19.mmProductTransferAndReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProductTransferAndReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProductTransferAndReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer12.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> ISATransfer12.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrfAndRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransferAndReference";
 			definition = "Details of the transfer to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.ProductTransferAndReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmProductTransferAndReference);
 			maxOccurs = 1;
-			type_lazy = () -> ISATransfer17.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ISATransfer17.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -801,18 +815,18 @@ public class ISATransfer12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer19#Extension
-	 * ISATransfer19.Extension}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer19#mmExtension
+	 * ISATransfer19.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#Extension
-	 * ISATransfer9.Extension}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmExtension
+	 * ISATransfer9.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ISATransfer12.mmObject();
 			isDerived = false;
@@ -820,31 +834,127 @@ public class ISATransfer12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.Extension;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer19.mmExtension);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer9.mmExtension;
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.PrimaryIndividualInvestor, com.tools20022.repository.msg.ISATransfer12.SecondaryIndividualInvestor,
-						com.tools20022.repository.msg.ISATransfer12.OtherIndividualInvestor, com.tools20022.repository.msg.ISATransfer12.PrimaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer12.SecondaryCorporateInvestor,
-						com.tools20022.repository.msg.ISATransfer12.OtherCorporateInvestor, com.tools20022.repository.msg.ISATransfer12.TransferorAccount, com.tools20022.repository.msg.ISATransfer12.NomineeAccount,
-						com.tools20022.repository.msg.ISATransfer12.Transferee, com.tools20022.repository.msg.ISATransfer12.CashAccount, com.tools20022.repository.msg.ISATransfer12.ProductTransferAndReference,
-						com.tools20022.repository.msg.ISATransfer12.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmPrimaryIndividualInvestor, com.tools20022.repository.msg.ISATransfer12.mmSecondaryIndividualInvestor,
+						com.tools20022.repository.msg.ISATransfer12.mmOtherIndividualInvestor, com.tools20022.repository.msg.ISATransfer12.mmPrimaryCorporateInvestor,
+						com.tools20022.repository.msg.ISATransfer12.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer12.mmOtherCorporateInvestor, com.tools20022.repository.msg.ISATransfer12.mmTransferorAccount,
+						com.tools20022.repository.msg.ISATransfer12.mmNomineeAccount, com.tools20022.repository.msg.ISATransfer12.mmTransferee, com.tools20022.repository.msg.ISATransfer12.mmCashAccount,
+						com.tools20022.repository.msg.ISATransfer12.mmProductTransferAndReference, com.tools20022.repository.msg.ISATransfer12.mmExtension);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ISATransfer12";
 				definition = "Describes the type of product and the assets to be transferred.";
-				previousVersion_lazy = () -> ISATransfer9.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ISATransfer19.mmObject());
+				previousVersion_lazy = () -> ISATransfer9.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IndividualPerson8 getPrimaryIndividualInvestor() {
+		return primaryIndividualInvestor;
+	}
+
+	public void setPrimaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 primaryIndividualInvestor) {
+		this.primaryIndividualInvestor = primaryIndividualInvestor;
+	}
+
+	public IndividualPerson8 getSecondaryIndividualInvestor() {
+		return secondaryIndividualInvestor;
+	}
+
+	public void setSecondaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 secondaryIndividualInvestor) {
+		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
+	}
+
+	public List<IndividualPerson8> getOtherIndividualInvestor() {
+		return otherIndividualInvestor;
+	}
+
+	public void setOtherIndividualInvestor(List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor) {
+		this.otherIndividualInvestor = otherIndividualInvestor;
+	}
+
+	public Organisation4 getPrimaryCorporateInvestor() {
+		return primaryCorporateInvestor;
+	}
+
+	public void setPrimaryCorporateInvestor(com.tools20022.repository.msg.Organisation4 primaryCorporateInvestor) {
+		this.primaryCorporateInvestor = primaryCorporateInvestor;
+	}
+
+	public Organisation4 getSecondaryCorporateInvestor() {
+		return secondaryCorporateInvestor;
+	}
+
+	public void setSecondaryCorporateInvestor(com.tools20022.repository.msg.Organisation4 secondaryCorporateInvestor) {
+		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
+	}
+
+	public List<Organisation4> getOtherCorporateInvestor() {
+		return otherCorporateInvestor;
+	}
+
+	public void setOtherCorporateInvestor(List<com.tools20022.repository.msg.Organisation4> otherCorporateInvestor) {
+		this.otherCorporateInvestor = otherCorporateInvestor;
+	}
+
+	public Account15 getTransferorAccount() {
+		return transferorAccount;
+	}
+
+	public void setTransferorAccount(com.tools20022.repository.msg.Account15 transferorAccount) {
+		this.transferorAccount = transferorAccount;
+	}
+
+	public Account16 getNomineeAccount() {
+		return nomineeAccount;
+	}
+
+	public void setNomineeAccount(com.tools20022.repository.msg.Account16 nomineeAccount) {
+		this.nomineeAccount = nomineeAccount;
+	}
+
+	public PartyIdentification2Choice getTransferee() {
+		return transferee;
+	}
+
+	public void setTransferee(PartyIdentification2Choice transferee) {
+		this.transferee = transferee;
+	}
+
+	public CashAccount29 getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(com.tools20022.repository.msg.CashAccount29 cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public ISATransfer17 getProductTransferAndReference() {
+		return productTransferAndReference;
+	}
+
+	public void setProductTransferAndReference(com.tools20022.repository.msg.ISATransfer17 productTransferAndReference) {
+		this.productTransferAndReference = productTransferAndReference;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

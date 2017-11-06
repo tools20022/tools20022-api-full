@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -125,27 +126,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#Assignment
- * CustomerPaymentCancellationRequestV06.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#mmAssignment
+ * CustomerPaymentCancellationRequestV06.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#Case
- * CustomerPaymentCancellationRequestV06.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#mmCase
+ * CustomerPaymentCancellationRequestV06.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#ControlData
- * CustomerPaymentCancellationRequestV06.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#mmControlData
+ * CustomerPaymentCancellationRequestV06.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#Underlying
- * CustomerPaymentCancellationRequestV06.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#mmUnderlying
+ * CustomerPaymentCancellationRequestV06.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#SupplementaryData
- * CustomerPaymentCancellationRequestV06.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#mmSupplementaryData
+ * CustomerPaymentCancellationRequestV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#identifier
- * CustomerPaymentCancellationRequestV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.055.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -165,6 +164,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustomerPaymentCancellationRequestV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment3 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -192,22 +192,23 @@ public class CustomerPaymentCancellationRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#Assignment
-	 * CustomerPaymentCancellationRequestV05.Assignment}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#mmAssignment
+	 * CustomerPaymentCancellationRequestV05.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.Assignment;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.mmAssignment;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 	};
+	protected Case3 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -230,22 +231,23 @@ public class CustomerPaymentCancellationRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#Case
-	 * CustomerPaymentCancellationRequestV05.Case}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#mmCase
+	 * CustomerPaymentCancellationRequestV05.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.Case;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.mmCase;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected ControlData1 controlData;
 	/**
 	 * Provides details on the number of transactions and the control sum of the
 	 * message.
@@ -272,22 +274,23 @@ public class CustomerPaymentCancellationRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#ControlData
-	 * CustomerPaymentCancellationRequestV05.ControlData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#mmControlData
+	 * CustomerPaymentCancellationRequestV05.mmControlData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ControlData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmControlData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrlData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlData";
 			definition = "Provides details on the number of transactions and the control sum of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.ControlData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.mmControlData;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ControlData1.mmObject();
 		}
 	};
+	protected List<UnderlyingTransaction15> underlying;
 	/**
 	 * Identifies the payment instruction to be cancelled.
 	 * <p>
@@ -312,21 +315,22 @@ public class CustomerPaymentCancellationRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#Underlying
-	 * CustomerPaymentCancellationRequestV05.Underlying}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#mmUnderlying
+	 * CustomerPaymentCancellationRequestV05.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment instruction to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.Underlying;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.mmUnderlying;
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction15.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -354,46 +358,19 @@ public class CustomerPaymentCancellationRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#SupplementaryData
-	 * CustomerPaymentCancellationRequestV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#mmSupplementaryData
+	 * CustomerPaymentCancellationRequestV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "055"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "055";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -408,12 +385,59 @@ public class CustomerPaymentCancellationRequestV06 {
 				rootElement = "Document";
 				xmlTag = "CstmrPmtCxlReq";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.Assignment, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.Case,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.ControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.Underlying,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmAssignment, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmCase,
+						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmUnderlying,
+						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "055";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment3 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment3 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case3 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case3 case_) {
+		this.case_ = case_;
+	}
+
+	public ControlData1 getControlData() {
+		return controlData;
+	}
+
+	public void setControlData(ControlData1 controlData) {
+		this.controlData = controlData;
+	}
+
+	public List<UnderlyingTransaction15> getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(List<UnderlyingTransaction15> underlying) {
+		this.underlying = underlying;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

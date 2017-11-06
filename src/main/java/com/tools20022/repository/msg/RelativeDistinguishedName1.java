@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelativeDistinguishedName1#AttributeType
- * RelativeDistinguishedName1.AttributeType}</li>
+ * {@linkplain com.tools20022.repository.msg.RelativeDistinguishedName1#mmAttributeType
+ * RelativeDistinguishedName1.mmAttributeType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelativeDistinguishedName1#AttributeValue
- * RelativeDistinguishedName1.AttributeValue}</li>
+ * {@linkplain com.tools20022.repository.msg.RelativeDistinguishedName1#mmAttributeValue
+ * RelativeDistinguishedName1.mmAttributeValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RelativeDistinguishedName1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AttributeType1Code attributeType;
 	/**
 	 * Type of attribute of a distinguished name (see X.500).
 	 * <p>
@@ -96,13 +97,13 @@ public class RelativeDistinguishedName1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RelativeDistinguishedName2#AttributeType
-	 * RelativeDistinguishedName2.AttributeType}</li>
+	 * {@linkplain com.tools20022.repository.msg.RelativeDistinguishedName2#mmAttributeType
+	 * RelativeDistinguishedName2.mmAttributeType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttributeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttributeType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelativeDistinguishedName1.mmObject();
 			isDerived = false;
@@ -110,12 +111,13 @@ public class RelativeDistinguishedName1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttributeType";
 			definition = "Type of attribute of a distinguished name (see X.500).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelativeDistinguishedName2.AttributeType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelativeDistinguishedName2.mmAttributeType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AttributeType1Code.mmObject();
 		}
 	};
+	protected Max140Text attributeValue;
 	/**
 	 * Value of the attribute of a distinguished name (see X.500).
 	 * <p>
@@ -146,13 +148,13 @@ public class RelativeDistinguishedName1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RelativeDistinguishedName2#AttributeValue
-	 * RelativeDistinguishedName2.AttributeValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.RelativeDistinguishedName2#mmAttributeValue
+	 * RelativeDistinguishedName2.mmAttributeValue}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttributeValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttributeValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RelativeDistinguishedName1.mmObject();
 			isDerived = false;
@@ -160,9 +162,9 @@ public class RelativeDistinguishedName1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttributeValue";
 			definition = "Value of the attribute of a distinguished name (see X.500).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelativeDistinguishedName2.AttributeValue);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelativeDistinguishedName2.mmAttributeValue);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -170,8 +172,8 @@ public class RelativeDistinguishedName1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelativeDistinguishedName1.AttributeType, com.tools20022.repository.msg.RelativeDistinguishedName1.AttributeValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelativeDistinguishedName1.mmAttributeType, com.tools20022.repository.msg.RelativeDistinguishedName1.mmAttributeValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RelativeDistinguishedName1";
 				definition = "Relative distinguished name defined by X.500 and X.509.";
@@ -179,5 +181,21 @@ public class RelativeDistinguishedName1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AttributeType1Code getAttributeType() {
+		return attributeType;
+	}
+
+	public void setAttributeType(AttributeType1Code attributeType) {
+		this.attributeType = attributeType;
+	}
+
+	public Max140Text getAttributeValue() {
+		return attributeValue;
+	}
+
+	public void setAttributeValue(Max140Text attributeValue) {
+		this.attributeValue = attributeValue;
 	}
 }

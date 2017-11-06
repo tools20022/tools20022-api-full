@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about an accounting statement of holdings.
@@ -33,26 +34,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#MessagePagination
- * AccountingStatementOfHoldings1.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#mmMessagePagination
+ * AccountingStatementOfHoldings1.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#StatementGeneralDetails
- * AccountingStatementOfHoldings1.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#mmStatementGeneralDetails
+ * AccountingStatementOfHoldings1.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#AccountDetails
- * AccountingStatementOfHoldings1.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#mmAccountDetails
+ * AccountingStatementOfHoldings1.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#BalanceForAccount
- * AccountingStatementOfHoldings1.BalanceForAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#mmBalanceForAccount
+ * AccountingStatementOfHoldings1.mmBalanceForAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#SubAccountDetails
- * AccountingStatementOfHoldings1.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#mmSubAccountDetails
+ * AccountingStatementOfHoldings1.mmSubAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#TotalValues
- * AccountingStatementOfHoldings1.TotalValues}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#mmTotalValues
+ * AccountingStatementOfHoldings1.mmTotalValues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#Extension
- * AccountingStatementOfHoldings1.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountingStatementOfHoldings1#mmExtension
+ * AccountingStatementOfHoldings1.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,15 +64,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation#StatementToBeCancelled
- * AccountingStatementOfHoldingsCancellation.StatementToBeCancelled}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation#mmStatementToBeCancelled
+ * AccountingStatementOfHoldingsCancellation.mmStatementToBeCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountingStatementOfHoldings1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * <p>
@@ -110,7 +112,7 @@ public class AccountingStatementOfHoldings1 {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
@@ -118,12 +120,13 @@ public class AccountingStatementOfHoldings1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Pagination.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	protected Statement4 statementGeneralDetails;
 	/**
 	 * General information related to the custody statement of holdings that is
 	 * being cancelled.
@@ -152,7 +155,7 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatementGeneralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatementGeneralDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
@@ -160,12 +163,13 @@ public class AccountingStatementOfHoldings1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to the custody statement of holdings that is being cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Statement4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Statement4.mmObject();
 		}
 	};
+	protected SafekeepingAccount1 accountDetails;
 	/**
 	 * The safekeeping or investment account of the statement that is being
 	 * cancelled.
@@ -178,8 +182,8 @@ public class AccountingStatementOfHoldings1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesAccount
-	 * SecuritiesBalance.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesAccount
+	 * SecuritiesBalance.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,21 +204,22 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesAccount;
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "The safekeeping or investment account of the statement that is being cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingAccount1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AggregateBalanceInformation2> balanceForAccount;
 	/**
 	 * Net position of a segregated holding, in a single security, within the
 	 * overall position held in a securities account.
@@ -250,20 +255,21 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceForAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceForAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
 			xmlTag = "BalForAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			minOccurs = 0;
-			type_lazy = () -> AggregateBalanceInformation2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SubAccountIdentification2> subAccountDetails;
 	/**
 	 * The sub-account of the safekeeping or investment account.
 	 * <p>
@@ -276,8 +282,8 @@ public class AccountingStatementOfHoldings1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -297,20 +303,21 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "The sub-account of the safekeeping or investment account.";
 			minOccurs = 0;
-			type_lazy = () -> SubAccountIdentification2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification2.mmObject();
 		}
 	};
+	protected TotalValueInPageAndStatement totalValues;
 	/**
 	 * Value of total holdings reported.
 	 * <p>
@@ -338,7 +345,7 @@ public class AccountingStatementOfHoldings1 {
 	 * definition} = "Value of total holdings reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalValues = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalValues = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
@@ -346,12 +353,13 @@ public class AccountingStatementOfHoldings1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalValues";
 			definition = "Value of total holdings reported.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TotalValueInPageAndStatement.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -380,7 +388,7 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
@@ -389,26 +397,82 @@ public class AccountingStatementOfHoldings1 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountingStatementOfHoldings1.MessagePagination, com.tools20022.repository.msg.AccountingStatementOfHoldings1.StatementGeneralDetails,
-						com.tools20022.repository.msg.AccountingStatementOfHoldings1.AccountDetails, com.tools20022.repository.msg.AccountingStatementOfHoldings1.BalanceForAccount,
-						com.tools20022.repository.msg.AccountingStatementOfHoldings1.SubAccountDetails, com.tools20022.repository.msg.AccountingStatementOfHoldings1.TotalValues,
-						com.tools20022.repository.msg.AccountingStatementOfHoldings1.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmMessagePagination, com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmStatementGeneralDetails,
+						com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmAccountDetails, com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmBalanceForAccount,
+						com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmSubAccountDetails, com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmTotalValues,
+						com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmStatementToBeCancelled);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.StatementToBeCancelled);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountingStatementOfHoldings1";
 				definition = "Information about an accounting statement of holdings.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public Statement4 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(com.tools20022.repository.msg.Statement4 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public SafekeepingAccount1 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(com.tools20022.repository.msg.SafekeepingAccount1 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public List<AggregateBalanceInformation2> getBalanceForAccount() {
+		return balanceForAccount;
+	}
+
+	public void setBalanceForAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation2> balanceForAccount) {
+		this.balanceForAccount = balanceForAccount;
+	}
+
+	public List<SubAccountIdentification2> getSubAccountDetails() {
+		return subAccountDetails;
+	}
+
+	public void setSubAccountDetails(List<com.tools20022.repository.msg.SubAccountIdentification2> subAccountDetails) {
+		this.subAccountDetails = subAccountDetails;
+	}
+
+	public TotalValueInPageAndStatement getTotalValues() {
+		return totalValues;
+	}
+
+	public void setTotalValues(com.tools20022.repository.msg.TotalValueInPageAndStatement totalValues) {
+		this.totalValues = totalValues;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

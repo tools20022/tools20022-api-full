@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NettingIdentification1Choice#TradeParty
- * NettingIdentification1Choice.TradeParty}</li>
+ * {@linkplain com.tools20022.repository.choice.NettingIdentification1Choice#mmTradeParty
+ * NettingIdentification1Choice.mmTradeParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NettingIdentification1Choice#NettingGroupIdentification
- * NettingIdentification1Choice.NettingGroupIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.NettingIdentification1Choice#mmNettingGroupIdentification
+ * NettingIdentification1Choice.mmNettingGroupIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NettingIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification73Choice tradeParty;
 	/**
 	 * Describes the individual trading party.
 	 * <p>
@@ -88,7 +89,7 @@ public class NettingIdentification1Choice {
 	 * definition} = "Describes the individual trading party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NettingIdentification1Choice.mmObject();
 			isDerived = false;
@@ -96,12 +97,13 @@ public class NettingIdentification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeParty";
 			definition = "Describes the individual trading party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected Max35Text nettingGroupIdentification;
 	/**
 	 * Describes the netting group.
 	 * <p>
@@ -129,7 +131,7 @@ public class NettingIdentification1Choice {
 	 * definition} = "Describes the netting group."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NettingGroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNettingGroupIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NettingIdentification1Choice.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class NettingIdentification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettingGroupIdentification";
 			definition = "Describes the netting group.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class NettingIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NettingIdentification1Choice.TradeParty, com.tools20022.repository.choice.NettingIdentification1Choice.NettingGroupIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NettingIdentification1Choice.mmTradeParty, com.tools20022.repository.choice.NettingIdentification1Choice.mmNettingGroupIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NettingIdentification1Choice";
 				definition = "Choice between netting group identification of an individual trading party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification73Choice getTradeParty() {
+		return tradeParty;
+	}
+
+	public void setTradeParty(com.tools20022.repository.choice.PartyIdentification73Choice tradeParty) {
+		this.tradeParty = tradeParty;
+	}
+
+	public Max35Text getNettingGroupIdentification() {
+		return nettingGroupIdentification;
+	}
+
+	public void setNettingGroupIdentification(Max35Text nettingGroupIdentification) {
+		this.nettingGroupIdentification = nettingGroupIdentification;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestmentParty1Choice#Person
- * InvestmentParty1Choice.Person}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestmentParty1Choice#mmPerson
+ * InvestmentParty1Choice.mmPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestmentParty1Choice#Algorithm
- * InvestmentParty1Choice.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestmentParty1Choice#mmAlgorithm
+ * InvestmentParty1Choice.mmAlgorithm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentParty1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PersonIdentification12 person;
 	/**
 	 * Identification of a person.
 	 * <p>
@@ -95,13 +96,13 @@ public class InvestmentParty1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#Person
-	 * ExecutingParty1Choice.Person}</li>
+	 * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#mmPerson
+	 * ExecutingParty1Choice.mmPerson}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Person = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPerson = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvestmentParty1Choice.mmObject();
 			isDerived = false;
@@ -109,13 +110,14 @@ public class InvestmentParty1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Person";
 			definition = "Identification of a person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.Person);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.mmPerson);
 			maxOccurs = 1;
-			type_lazy = () -> PersonIdentification12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PersonIdentification12.mmObject();
 		}
 	};
+	protected Max50Text algorithm;
 	/**
 	 * Identification of an algorithm.
 	 * <p>
@@ -145,13 +147,13 @@ public class InvestmentParty1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#Algorithm
-	 * ExecutingParty1Choice.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#mmAlgorithm
+	 * ExecutingParty1Choice.mmAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentParty1Choice.mmObject();
 			isDerived = false;
@@ -159,9 +161,9 @@ public class InvestmentParty1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of an algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.Algorithm);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.mmAlgorithm);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
 		}
 	};
@@ -169,8 +171,8 @@ public class InvestmentParty1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentParty1Choice.Person, com.tools20022.repository.choice.InvestmentParty1Choice.Algorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentParty1Choice.mmPerson, com.tools20022.repository.choice.InvestmentParty1Choice.mmAlgorithm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentParty1Choice";
 				definition = "Identification of the investment party.";
@@ -178,5 +180,21 @@ public class InvestmentParty1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PersonIdentification12 getPerson() {
+		return person;
+	}
+
+	public void setPerson(PersonIdentification12 person) {
+		this.person = person;
+	}
+
+	public Max50Text getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Max50Text algorithm) {
+		this.algorithm = algorithm;
 	}
 }

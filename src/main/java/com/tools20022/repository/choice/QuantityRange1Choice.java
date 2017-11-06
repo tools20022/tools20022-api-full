@@ -37,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#FromQuantity
- * QuantityRange1Choice.FromQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#mmFromQuantity
+ * QuantityRange1Choice.mmFromQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#ToQuantity
- * QuantityRange1Choice.ToQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#mmToQuantity
+ * QuantityRange1Choice.mmToQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#FromToQuantity
- * QuantityRange1Choice.FromToQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#mmFromToQuantity
+ * QuantityRange1Choice.mmFromToQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#EqualQuantity
- * QuantityRange1Choice.EqualQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#mmEqualQuantity
+ * QuantityRange1Choice.mmEqualQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#NotEqualQuantity
- * QuantityRange1Choice.NotEqualQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.QuantityRange1Choice#mmNotEqualQuantity
+ * QuantityRange1Choice.mmNotEqualQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuantityRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuantityRangeBoundary1 fromQuantity;
 	/**
 	 * Lower boundary of a range of quantity values.
 	 * <p>
@@ -99,7 +100,7 @@ public class QuantityRange1Choice {
 	 * definition} = "Lower boundary of a range of quantity values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FromQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFromQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -107,12 +108,13 @@ public class QuantityRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromQuantity";
 			definition = "Lower boundary of a range of quantity values.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QuantityRangeBoundary1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> QuantityRangeBoundary1.mmObject();
 		}
 	};
+	protected QuantityRangeBoundary1 toQuantity;
 	/**
 	 * Upper boundary of a range of quantity values.
 	 * <p>
@@ -139,7 +141,7 @@ public class QuantityRange1Choice {
 	 * definition} = "Upper boundary of a range of quantity values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmToQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -147,12 +149,13 @@ public class QuantityRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToQuantity";
 			definition = "Upper boundary of a range of quantity values.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QuantityRangeBoundary1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> QuantityRangeBoundary1.mmObject();
 		}
 	};
+	protected FromToQuantityRange1 fromToQuantity;
 	/**
 	 * Range of valid quantity values.
 	 * <p>
@@ -181,7 +184,7 @@ public class QuantityRange1Choice {
 	 * definition} = "Range of valid quantity values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromToQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -189,11 +192,12 @@ public class QuantityRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToQuantity";
 			definition = "Range of valid quantity values.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FromToQuantityRange1.mmObject();
 		}
 	};
+	protected DecimalNumber equalQuantity;
 	/**
 	 * Exact value a quantity must match to be considered valid.
 	 * <p>
@@ -223,7 +227,7 @@ public class QuantityRange1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EqualQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEqualQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -231,11 +235,12 @@ public class QuantityRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualQuantity";
 			definition = "Exact value a quantity must match to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber notEqualQuantity;
 	/**
 	 * Value that a quantity must not match to be considered valid.
 	 * <p>
@@ -265,7 +270,7 @@ public class QuantityRange1Choice {
 	 * "Value that a quantity must not match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotEqualQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotEqualQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -273,8 +278,8 @@ public class QuantityRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqualQuantity";
 			definition = "Value that a quantity must not match to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -282,14 +287,56 @@ public class QuantityRange1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuantityRange1Choice.FromQuantity, com.tools20022.repository.choice.QuantityRange1Choice.ToQuantity,
-						com.tools20022.repository.choice.QuantityRange1Choice.FromToQuantity, com.tools20022.repository.choice.QuantityRange1Choice.EqualQuantity, com.tools20022.repository.choice.QuantityRange1Choice.NotEqualQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.QuantityRange1Choice.mmFromQuantity, com.tools20022.repository.choice.QuantityRange1Choice.mmToQuantity,
+								com.tools20022.repository.choice.QuantityRange1Choice.mmFromToQuantity, com.tools20022.repository.choice.QuantityRange1Choice.mmEqualQuantity,
+								com.tools20022.repository.choice.QuantityRange1Choice.mmNotEqualQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuantityRange1Choice";
 				definition = "Choice between ranges of values in which a quantity is considered valid or a specified quantity value which has to be matched or unmatched to be valid.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuantityRangeBoundary1 getFromQuantity() {
+		return fromQuantity;
+	}
+
+	public void setFromQuantity(QuantityRangeBoundary1 fromQuantity) {
+		this.fromQuantity = fromQuantity;
+	}
+
+	public QuantityRangeBoundary1 getToQuantity() {
+		return toQuantity;
+	}
+
+	public void setToQuantity(QuantityRangeBoundary1 toQuantity) {
+		this.toQuantity = toQuantity;
+	}
+
+	public FromToQuantityRange1 getFromToQuantity() {
+		return fromToQuantity;
+	}
+
+	public void setFromToQuantity(FromToQuantityRange1 fromToQuantity) {
+		this.fromToQuantity = fromToQuantity;
+	}
+
+	public DecimalNumber getEqualQuantity() {
+		return equalQuantity;
+	}
+
+	public void setEqualQuantity(DecimalNumber equalQuantity) {
+		this.equalQuantity = equalQuantity;
+	}
+
+	public DecimalNumber getNotEqualQuantity() {
+		return notEqualQuantity;
+	}
+
+	public void setNotEqualQuantity(DecimalNumber notEqualQuantity) {
+		this.notEqualQuantity = notEqualQuantity;
 	}
 }

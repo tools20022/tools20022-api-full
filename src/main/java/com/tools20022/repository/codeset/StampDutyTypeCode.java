@@ -30,19 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#OutsideCSD
- * StampDutyTypeCode.OutsideCSD}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#Paid
- * StampDutyTypeCode.Paid}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#mmOutsideCSD
+ * StampDutyTypeCode.mmOutsideCSD}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#mmPaid
+ * StampDutyTypeCode.mmPaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#NotApplicable
- * StampDutyTypeCode.NotApplicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#mmNotApplicable
+ * StampDutyTypeCode.mmNotApplicable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#Exemption
- * StampDutyTypeCode.Exemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#mmExemption
+ * StampDutyTypeCode.mmExemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#Applicable
- * StampDutyTypeCode.Applicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode#mmApplicable
+ * StampDutyTypeCode.mmApplicable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +99,7 @@ public class StampDutyTypeCode {
 	 * definition} = "SDRT paid outside of CSD on corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMCode OutsideCSD = new MMCode() {
+	public static final MMCode mmOutsideCSD = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OutsideCSD";
@@ -129,7 +129,7 @@ public class StampDutyTypeCode {
 	 * definition} = "SDRT paid on another transaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode Paid = new MMCode() {
+	public static final MMCode mmPaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Paid";
@@ -159,7 +159,7 @@ public class StampDutyTypeCode {
 	 * definition} = "Stamp duty not applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotApplicable = new MMCode() {
+	public static final MMCode mmNotApplicable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotApplicable";
@@ -189,7 +189,7 @@ public class StampDutyTypeCode {
 	 * definition} = "Exempt, for any other reason."</li>
 	 * </ul>
 	 */
-	public static final MMCode Exemption = new MMCode() {
+	public static final MMCode mmExemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Exemption";
@@ -219,7 +219,7 @@ public class StampDutyTypeCode {
 	 * definition} = "Stamps duty is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode Applicable = new MMCode() {
+	public static final MMCode mmApplicable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicable";
@@ -232,13 +232,13 @@ public class StampDutyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SDRU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StampDutyTypeCode";
 				definition = "Specifies if the stamp duty is applicable";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyTypeCode.OutsideCSD, com.tools20022.repository.codeset.StampDutyTypeCode.Paid, com.tools20022.repository.codeset.StampDutyTypeCode.NotApplicable,
-						com.tools20022.repository.codeset.StampDutyTypeCode.Exemption, com.tools20022.repository.codeset.StampDutyTypeCode.Applicable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyTypeCode.mmOutsideCSD, com.tools20022.repository.codeset.StampDutyTypeCode.mmPaid,
+						com.tools20022.repository.codeset.StampDutyTypeCode.mmNotApplicable, com.tools20022.repository.codeset.StampDutyTypeCode.mmExemption, com.tools20022.repository.codeset.StampDutyTypeCode.mmApplicable);
 				derivation_lazy = () -> Arrays.asList(StampDutyType2Code.mmObject(), StampDutyType1Code.mmObject());
 			}
 		});

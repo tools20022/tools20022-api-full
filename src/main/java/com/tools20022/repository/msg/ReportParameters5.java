@@ -37,19 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters5#ReportIdentification
- * ReportParameters5.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters5#mmReportIdentification
+ * ReportParameters5.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters5#ReportDateAndTime
- * ReportParameters5.ReportDateAndTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportParameters5#Frequency
- * ReportParameters5.Frequency}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters5#mmReportDateAndTime
+ * ReportParameters5.mmReportDateAndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportParameters5#mmFrequency
+ * ReportParameters5.mmFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters5#ReportCurrency
- * ReportParameters5.ReportCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters5#mmReportCurrency
+ * ReportParameters5.mmReportCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters5#CalculationDate
- * ReportParameters5.CalculationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters5#mmCalculationDate
+ * ReportParameters5.mmCalculationDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -57,15 +57,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#ReportParameters
- * CollateralAndExposureReportV03.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmReportParameters
+ * CollateralAndExposureReportV03.mmReportParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reportIdentification;
 	/**
 	 * Unique identification of the report.
 	 * <p>
@@ -111,11 +112,11 @@ public class ReportParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#ReportIdentification
-	 * ReportParameters2.ReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#mmReportIdentification
+	 * ReportParameters2.mmReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
@@ -123,12 +124,13 @@ public class ReportParameters5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification of the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.ReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice reportDateAndTime;
 	/**
 	 * Date (and time) at which the report was created.
 	 * <p>
@@ -158,11 +160,11 @@ public class ReportParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#ReportDateAndTime
-	 * ReportParameters2.ReportDateAndTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#mmReportDateAndTime
+	 * ReportParameters2.mmReportDateAndTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
@@ -170,12 +172,13 @@ public class ReportParameters5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateAndTime";
 			definition = "Date (and time) at which the report was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.ReportDateAndTime;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmReportDateAndTime;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected EventFrequency6Code frequency;
 	/**
 	 * Frequency of the report.
 	 * <p>
@@ -205,11 +208,11 @@ public class ReportParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#Frequency
-	 * ReportParameters2.Frequency}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#mmFrequency
+	 * ReportParameters2.mmFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
@@ -217,12 +220,13 @@ public class ReportParameters5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.Frequency;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmFrequency;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency6Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode reportCurrency;
 	/**
 	 * Indicates the currency used for the calculation of the guarantee fund.
 	 * <p>
@@ -253,11 +257,11 @@ public class ReportParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#ReportCurrency
-	 * ReportParameters2.ReportCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#mmReportCurrency
+	 * ReportParameters2.mmReportCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
@@ -265,12 +269,13 @@ public class ReportParameters5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCurrency";
 			definition = "Indicates the currency used for the calculation of the guarantee fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.ReportCurrency;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmReportCurrency;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ISODateTime calculationDate;
 	/**
 	 * Indicates the date of calculation of the deficit (if any).
 	 * <p>
@@ -300,11 +305,11 @@ public class ReportParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#CalculationDate
-	 * ReportParameters2.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportParameters2#mmCalculationDate
+	 * ReportParameters2.mmCalculationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
@@ -312,9 +317,9 @@ public class ReportParameters5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Indicates the date of calculation of the deficit (if any).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.CalculationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmCalculationDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -322,10 +327,10 @@ public class ReportParameters5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters5.ReportIdentification, com.tools20022.repository.msg.ReportParameters5.ReportDateAndTime,
-						com.tools20022.repository.msg.ReportParameters5.Frequency, com.tools20022.repository.msg.ReportParameters5.ReportCurrency, com.tools20022.repository.msg.ReportParameters5.CalculationDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.ReportParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters5.mmReportIdentification, com.tools20022.repository.msg.ReportParameters5.mmReportDateAndTime,
+						com.tools20022.repository.msg.ReportParameters5.mmFrequency, com.tools20022.repository.msg.ReportParameters5.mmReportCurrency, com.tools20022.repository.msg.ReportParameters5.mmCalculationDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmReportParameters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportParameters5";
 				definition = "Provides the parameters of the report.";
@@ -333,5 +338,45 @@ public class ReportParameters5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public DateAndDateTimeChoice getReportDateAndTime() {
+		return reportDateAndTime;
+	}
+
+	public void setReportDateAndTime(DateAndDateTimeChoice reportDateAndTime) {
+		this.reportDateAndTime = reportDateAndTime;
+	}
+
+	public EventFrequency6Code getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(EventFrequency6Code frequency) {
+		this.frequency = frequency;
+	}
+
+	public ActiveCurrencyCode getReportCurrency() {
+		return reportCurrency;
+	}
+
+	public void setReportCurrency(ActiveCurrencyCode reportCurrency) {
+		this.reportCurrency = reportCurrency;
+	}
+
+	public ISODateTime getCalculationDate() {
+		return calculationDate;
+	}
+
+	public void setCalculationDate(ISODateTime calculationDate) {
+		this.calculationDate = calculationDate;
 	}
 }

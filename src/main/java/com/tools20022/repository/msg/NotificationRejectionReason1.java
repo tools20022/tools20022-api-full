@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.RejectionReason6FormatChoice;
 import com.tools20022.repository.datatype.Max350Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides reason of the rejection of a notification advice.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationRejectionReason1#Reason
- * NotificationRejectionReason1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationRejectionReason1#mmReason
+ * NotificationRejectionReason1.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationRejectionReason1#AdditionalInformation
- * NotificationRejectionReason1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationRejectionReason1#mmAdditionalInformation
+ * NotificationRejectionReason1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationRejectionReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<RejectionReason6FormatChoice> reason;
 	/**
 	 * The rejection reason.
 	 * <p>
@@ -87,7 +89,7 @@ public class NotificationRejectionReason1 {
 	 * definition} = "The rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationRejectionReason1.mmObject();
 			isDerived = false;
@@ -99,6 +101,7 @@ public class NotificationRejectionReason1 {
 			complexType_lazy = () -> RejectionReason6FormatChoice.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the status.
 	 * <p>
@@ -126,7 +129,7 @@ public class NotificationRejectionReason1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationRejectionReason1.mmObject();
 			isDerived = false;
@@ -134,8 +137,8 @@ public class NotificationRejectionReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -143,13 +146,29 @@ public class NotificationRejectionReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationRejectionReason1.Reason, com.tools20022.repository.msg.NotificationRejectionReason1.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationRejectionReason1.mmReason, com.tools20022.repository.msg.NotificationRejectionReason1.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationRejectionReason1";
 				definition = "Provides reason of the rejection of a notification advice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<RejectionReason6FormatChoice> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<RejectionReason6FormatChoice> reason) {
+		this.reason = reason;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.MarginCall;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Margin required to cover the risk because of the price fluctuations occurred
@@ -34,22 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin2#TotalVariationMargin
- * VariationMargin2.TotalVariationMargin}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin2#mmTotalVariationMargin
+ * VariationMargin2.mmTotalVariationMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin2#TotalMarkToMarket
- * VariationMargin2.TotalMarkToMarket}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin2#mmTotalMarkToMarket
+ * VariationMargin2.mmTotalMarkToMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin2#MarkToMarketNetted
- * VariationMargin2.MarkToMarketNetted}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin2#mmMarkToMarketNetted
+ * VariationMargin2.mmMarkToMarketNetted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin2#MarkToMarketGross
- * VariationMargin2.MarkToMarketGross}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin2#mmMarkToMarketGross
+ * VariationMargin2.mmMarkToMarketGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariationMargin2#MarkToMarketFails
- * VariationMargin2.MarkToMarketFails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VariationMargin2#FailsHaircut
- * VariationMargin2.FailsHaircut}</li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin2#mmMarkToMarketFails
+ * VariationMargin2.mmMarkToMarketFails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VariationMargin2#mmFailsHaircut
+ * VariationMargin2.mmFailsHaircut}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VariationMargin2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.TotalVariationMargin1> totalVariationMargin;
 	/**
 	 * Margin required to cover the risk because of the price fluctuations
 	 * occurred on the unsettled exposures towards the central counterparty.
@@ -103,7 +106,7 @@ public class VariationMargin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalVariationMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalVariationMargin = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> VariationMargin2.mmObject();
 			isDerived = false;
@@ -112,10 +115,11 @@ public class VariationMargin2 {
 			name = "TotalVariationMargin";
 			definition = "Margin required to cover the risk because of the price fluctuations occurred on the unsettled exposures towards the central counterparty.";
 			minOccurs = 1;
-			type_lazy = () -> TotalVariationMargin1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalVariationMargin1.mmObject();
 		}
 	};
+	protected Amount2 totalMarkToMarket;
 	/**
 	 * Net unrealised profit or loss on the value of the netted, gross and
 	 * failing positions.
@@ -127,8 +131,8 @@ public class VariationMargin2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#TotalMarkToMarket
-	 * MarginCall.TotalMarkToMarket}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmTotalMarkToMarket
+	 * MarginCall.mmTotalMarkToMarket}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,21 +153,22 @@ public class VariationMargin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalMarkToMarket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalMarkToMarket = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmTotalMarkToMarket;
 			componentContext_lazy = () -> VariationMargin2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.TotalMarkToMarket;
 			isDerived = false;
 			xmlTag = "TtlMrkToMkt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalMarkToMarket";
 			definition = "Net unrealised profit or loss on the value of the netted, gross and failing positions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amount2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Amount2> markToMarketNetted;
 	/**
 	 * Unrealised net loss calculated at the participant portfolio level.
 	 * <p>
@@ -174,8 +179,8 @@ public class VariationMargin2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#MarkToMarketNetted
-	 * MarginCall.MarkToMarketNetted}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketNetted
+	 * MarginCall.mmMarkToMarketNetted}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,20 +200,21 @@ public class VariationMargin2 {
 	 * "Unrealised net loss calculated at the participant portfolio level."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarkToMarketNetted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarkToMarketNetted = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmMarkToMarketNetted;
 			componentContext_lazy = () -> VariationMargin2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.MarkToMarketNetted;
 			isDerived = false;
 			xmlTag = "MrkToMktNetd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarketNetted";
 			definition = "Unrealised net loss calculated at the participant portfolio level.";
 			minOccurs = 0;
-			type_lazy = () -> Amount2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Amount2> markToMarketGross;
 	/**
 	 * Unrealised net loss calculated in that market/boundary.
 	 * <p>
@@ -219,8 +225,8 @@ public class VariationMargin2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#MarkToMarketGross
-	 * MarginCall.MarkToMarketGross}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketGross
+	 * MarginCall.mmMarkToMarketGross}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,20 +245,21 @@ public class VariationMargin2 {
 	 * definition} = "Unrealised net loss calculated in that market/boundary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarkToMarketGross = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarkToMarketGross = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmMarkToMarketGross;
 			componentContext_lazy = () -> VariationMargin2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.MarkToMarketGross;
 			isDerived = false;
 			xmlTag = "MrkToMktGrss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarketGross";
 			definition = "Unrealised net loss calculated in that market/boundary.";
 			minOccurs = 0;
-			type_lazy = () -> Amount2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Amount2> markToMarketFails;
 	/**
 	 * Sum of the unrealised loss without taking profit into consideration.
 	 * <p>
@@ -263,8 +270,8 @@ public class VariationMargin2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#MarkToMarketFails
-	 * MarginCall.MarkToMarketFails}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketFails
+	 * MarginCall.mmMarkToMarketFails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -284,20 +291,21 @@ public class VariationMargin2 {
 	 * "Sum of the unrealised loss without taking profit into consideration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarkToMarketFails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarkToMarketFails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmMarkToMarketFails;
 			componentContext_lazy = () -> VariationMargin2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.MarkToMarketFails;
 			isDerived = false;
 			xmlTag = "MrkToMktFls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarketFails";
 			definition = "Sum of the unrealised loss without taking profit into consideration.";
 			minOccurs = 0;
-			type_lazy = () -> Amount2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
+	protected Amount2 failsHaircut;
 	/**
 	 * Haircut applied to the absolute value of the participants net positions.
 	 * Calculation depends on a participants credit rating.
@@ -309,8 +317,8 @@ public class VariationMargin2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#FailsHaircut
-	 * MarginCall.FailsHaircut}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmFailsHaircut
+	 * MarginCall.mmFailsHaircut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -331,35 +339,83 @@ public class VariationMargin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FailsHaircut = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFailsHaircut = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmFailsHaircut;
 			componentContext_lazy = () -> VariationMargin2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.FailsHaircut;
 			isDerived = false;
 			xmlTag = "FlsHrcut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailsHaircut";
 			definition = "Haircut applied to the absolute value of the participants net positions. Calculation depends on a participants credit rating.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amount2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin2.TotalVariationMargin, com.tools20022.repository.msg.VariationMargin2.TotalMarkToMarket,
-						com.tools20022.repository.msg.VariationMargin2.MarkToMarketNetted, com.tools20022.repository.msg.VariationMargin2.MarkToMarketGross, com.tools20022.repository.msg.VariationMargin2.MarkToMarketFails,
-						com.tools20022.repository.msg.VariationMargin2.FailsHaircut);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin2.mmTotalVariationMargin, com.tools20022.repository.msg.VariationMargin2.mmTotalMarkToMarket,
+						com.tools20022.repository.msg.VariationMargin2.mmMarkToMarketNetted, com.tools20022.repository.msg.VariationMargin2.mmMarkToMarketGross, com.tools20022.repository.msg.VariationMargin2.mmMarkToMarketFails,
+						com.tools20022.repository.msg.VariationMargin2.mmFailsHaircut);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VariationMargin2";
 				definition = "Margin required to cover the risk because of the price fluctuations occurred on the unsettled exposures towards central counterparty.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<TotalVariationMargin1> getTotalVariationMargin() {
+		return totalVariationMargin;
+	}
+
+	public void setTotalVariationMargin(List<com.tools20022.repository.msg.TotalVariationMargin1> totalVariationMargin) {
+		this.totalVariationMargin = totalVariationMargin;
+	}
+
+	public Amount2 getTotalMarkToMarket() {
+		return totalMarkToMarket;
+	}
+
+	public void setTotalMarkToMarket(com.tools20022.repository.msg.Amount2 totalMarkToMarket) {
+		this.totalMarkToMarket = totalMarkToMarket;
+	}
+
+	public List<Amount2> getMarkToMarketNetted() {
+		return markToMarketNetted;
+	}
+
+	public void setMarkToMarketNetted(List<com.tools20022.repository.msg.Amount2> markToMarketNetted) {
+		this.markToMarketNetted = markToMarketNetted;
+	}
+
+	public List<Amount2> getMarkToMarketGross() {
+		return markToMarketGross;
+	}
+
+	public void setMarkToMarketGross(List<com.tools20022.repository.msg.Amount2> markToMarketGross) {
+		this.markToMarketGross = markToMarketGross;
+	}
+
+	public List<Amount2> getMarkToMarketFails() {
+		return markToMarketFails;
+	}
+
+	public void setMarkToMarketFails(List<com.tools20022.repository.msg.Amount2> markToMarketFails) {
+		this.markToMarketFails = markToMarketFails;
+	}
+
+	public Amount2 getFailsHaircut() {
+		return failsHaircut;
+	}
+
+	public void setFailsHaircut(com.tools20022.repository.msg.Amount2 failsHaircut) {
+		this.failsHaircut = failsHaircut;
 	}
 }

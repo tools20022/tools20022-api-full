@@ -29,15 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionRightCode#Exercise
- * OptionRightCode.Exercise}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionRightCode#Assignment
- * OptionRightCode.Assignment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionRightCode#mmExercise
+ * OptionRightCode.mmExercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionRightCode#Renouncement
- * OptionRightCode.Renouncement}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionRightCode#Expiration
- * OptionRightCode.Expiration}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionRightCode#mmAssignment
+ * OptionRightCode.mmAssignment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionRightCode#mmRenouncement
+ * OptionRightCode.mmRenouncement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionRightCode#mmExpiration
+ * OptionRightCode.mmExpiration}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +94,7 @@ public class OptionRightCode {
 	 * definition} = "Exercise option right."</li>
 	 * </ul>
 	 */
-	public static final MMCode Exercise = new MMCode() {
+	public static final MMCode mmExercise = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercise";
@@ -122,7 +124,7 @@ public class OptionRightCode {
 	 * definition} = "Option right assignment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Assignment = new MMCode() {
+	public static final MMCode mmAssignment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
@@ -152,7 +154,7 @@ public class OptionRightCode {
 	 * definition} = "The option right is renounced."</li>
 	 * </ul>
 	 */
-	public static final MMCode Renouncement = new MMCode() {
+	public static final MMCode mmRenouncement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Renouncement";
@@ -182,7 +184,7 @@ public class OptionRightCode {
 	 * definition} = "Option right expires."</li>
 	 * </ul>
 	 */
-	public static final MMCode Expiration = new MMCode() {
+	public static final MMCode mmExpiration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expiration";
@@ -195,13 +197,13 @@ public class OptionRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionRightCode";
 				definition = "Specifies the option rights.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionRightCode.Exercise, com.tools20022.repository.codeset.OptionRightCode.Assignment, com.tools20022.repository.codeset.OptionRightCode.Renouncement,
-						com.tools20022.repository.codeset.OptionRightCode.Expiration);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionRightCode.mmExercise, com.tools20022.repository.codeset.OptionRightCode.mmAssignment, com.tools20022.repository.codeset.OptionRightCode.mmRenouncement,
+						com.tools20022.repository.codeset.OptionRightCode.mmExpiration);
 				derivation_lazy = () -> Arrays.asList(OptionRight1Code.mmObject());
 			}
 		});

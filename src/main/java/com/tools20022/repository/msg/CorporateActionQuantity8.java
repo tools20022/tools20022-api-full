@@ -35,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#MaximumQuantity
- * CorporateActionQuantity8.MaximumQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmMaximumQuantity
+ * CorporateActionQuantity8.mmMaximumQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#MinimumQuantitySought
- * CorporateActionQuantity8.MinimumQuantitySought}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmMinimumQuantitySought
+ * CorporateActionQuantity8.mmMinimumQuantitySought}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#NewBoardLotQuantity
- * CorporateActionQuantity8.NewBoardLotQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmNewBoardLotQuantity
+ * CorporateActionQuantity8.mmNewBoardLotQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#NewDenominationQuantity
- * CorporateActionQuantity8.NewDenominationQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmNewDenominationQuantity
+ * CorporateActionQuantity8.mmNewDenominationQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#BaseDenomination
- * CorporateActionQuantity8.BaseDenomination}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmBaseDenomination
+ * CorporateActionQuantity8.mmBaseDenomination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#IncrementalDenomination
- * CorporateActionQuantity8.IncrementalDenomination}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmIncrementalDenomination
+ * CorporateActionQuantity8.mmIncrementalDenomination}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionQuantity8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity21Choice maximumQuantity;
 	/**
 	 * The maximum number of securities the offeror/issuer is ready to purchase
 	 * or redeem. This can be a number or the term "any and all".
@@ -95,8 +96,8 @@ public class CorporateActionQuantity8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#MaximumQuantity
-	 * BiddingConditions.MaximumQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumQuantity
+	 * BiddingConditions.mmMaximumQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,21 +118,22 @@ public class CorporateActionQuantity8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MaximumQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMaximumQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmMaximumQuantity;
 			componentContext_lazy = () -> CorporateActionQuantity8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.MaximumQuantity;
 			isDerived = false;
 			xmlTag = "MaxQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumQuantity";
 			definition = "The maximum number of securities the offeror/issuer is ready to purchase or redeem. This can be a number or the term \"any and all\".";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity21Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity21Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity21Choice minimumQuantitySought;
 	/**
 	 * Minimum quantity of securities the offeror/issuer is ready to purchase or
 	 * redeem under the terms of the event. This can be a number or the term
@@ -146,8 +148,8 @@ public class CorporateActionQuantity8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#MinimumQuantitySought
-	 * BiddingConditions.MinimumQuantitySought}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMinimumQuantitySought
+	 * BiddingConditions.mmMinimumQuantitySought}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,21 +170,22 @@ public class CorporateActionQuantity8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MinimumQuantitySought = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMinimumQuantitySought = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmMinimumQuantitySought;
 			componentContext_lazy = () -> CorporateActionQuantity8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.MinimumQuantitySought;
 			isDerived = false;
 			xmlTag = "MinQtySght";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumQuantitySought";
 			definition = "Minimum quantity of securities the offeror/issuer is ready to purchase or redeem under the terms of the event. This can be a number or the term \"any and all\".";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity21Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity21Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity22Choice newBoardLotQuantity;
 	/**
 	 * Quantity of equity that makes up the new board lot.
 	 * <p>
@@ -195,8 +198,8 @@ public class CorporateActionQuantity8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#BoardLotSecuritiesQuantity
-	 * SecuritiesProceedsDefinition.BoardLotSecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmBoardLotSecuritiesQuantity
+	 * SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,21 +218,22 @@ public class CorporateActionQuantity8 {
 	 * definition} = "Quantity of equity that makes up the new board lot."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewBoardLotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewBoardLotQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
 			componentContext_lazy = () -> CorporateActionQuantity8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.BoardLotSecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "NewBrdLotQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBoardLotQuantity";
 			definition = "Quantity of equity that makes up the new board lot.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity22Choice newDenominationQuantity;
 	/**
 	 * New denomination of the equity following, for example, an increase or
 	 * decrease in nominal value.
@@ -243,8 +247,8 @@ public class CorporateActionQuantity8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#NewDenominationSecuritiesQuantity
-	 * SecuritiesProceedsDefinition.NewDenominationSecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewDenominationSecuritiesQuantity
+	 * SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -265,21 +269,22 @@ public class CorporateActionQuantity8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewDenominationQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewDenominationQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
 			componentContext_lazy = () -> CorporateActionQuantity8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.NewDenominationSecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "NewDnmtnQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDenominationQuantity";
 			definition = "New denomination of the equity following, for example, an increase or decrease in nominal value.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity22Choice baseDenomination;
 	/**
 	 * Minimum integral amount of securities that each account owner must have
 	 * remaining after the called amounts are applied.
@@ -293,8 +298,8 @@ public class CorporateActionQuantity8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#BaseDenomination
-	 * BiddingConditions.BaseDenomination}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmBaseDenomination
+	 * BiddingConditions.mmBaseDenomination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -317,28 +322,29 @@ public class CorporateActionQuantity8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD2#BaseDenomination
-	 * CorporateActionQuantitySD2.BaseDenomination}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD2#mmBaseDenomination
+	 * CorporateActionQuantitySD2.mmBaseDenomination}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BaseDenomination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBaseDenomination = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmBaseDenomination;
 			componentContext_lazy = () -> CorporateActionQuantity8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.BaseDenomination;
 			isDerived = false;
 			xmlTag = "BaseDnmtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseDenomination";
 			definition = "Minimum integral amount of securities that each account owner must have remaining after the called amounts are applied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantitySD2.BaseDenomination);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantitySD2.mmBaseDenomination);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity22Choice incrementalDenomination;
 	/**
 	 * Amount used when the called amount is not met by running the lottery with
 	 * the base denomination.
@@ -352,8 +358,8 @@ public class CorporateActionQuantity8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Lottery#IncrementalDenomination
-	 * Lottery.IncrementalDenomination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Lottery#mmIncrementalDenomination
+	 * Lottery.mmIncrementalDenomination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -376,37 +382,37 @@ public class CorporateActionQuantity8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD2#IncrementalDenomination
-	 * CorporateActionQuantitySD2.IncrementalDenomination}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD2#mmIncrementalDenomination
+	 * CorporateActionQuantitySD2.mmIncrementalDenomination}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IncrementalDenomination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIncrementalDenomination = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmIncrementalDenomination;
 			componentContext_lazy = () -> CorporateActionQuantity8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.IncrementalDenomination;
 			isDerived = false;
 			xmlTag = "IncrmtlDnmtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncrementalDenomination";
 			definition = "Amount used when the called amount is not met by running the lottery with the base denomination.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantitySD2.IncrementalDenomination);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantitySD2.mmIncrementalDenomination);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity8.MaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity8.MinimumQuantitySought,
-						com.tools20022.repository.msg.CorporateActionQuantity8.NewBoardLotQuantity, com.tools20022.repository.msg.CorporateActionQuantity8.NewDenominationQuantity,
-						com.tools20022.repository.msg.CorporateActionQuantity8.BaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity8.IncrementalDenomination);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity8.mmMaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity8.mmMinimumQuantitySought,
+						com.tools20022.repository.msg.CorporateActionQuantity8.mmNewBoardLotQuantity, com.tools20022.repository.msg.CorporateActionQuantity8.mmNewDenominationQuantity,
+						com.tools20022.repository.msg.CorporateActionQuantity8.mmBaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity8.mmIncrementalDenomination);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionQuantity8";
 				definition = "Specifies corporate action quantities.";
@@ -414,5 +420,53 @@ public class CorporateActionQuantity8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity21Choice getMaximumQuantity() {
+		return maximumQuantity;
+	}
+
+	public void setMaximumQuantity(FinancialInstrumentQuantity21Choice maximumQuantity) {
+		this.maximumQuantity = maximumQuantity;
+	}
+
+	public FinancialInstrumentQuantity21Choice getMinimumQuantitySought() {
+		return minimumQuantitySought;
+	}
+
+	public void setMinimumQuantitySought(FinancialInstrumentQuantity21Choice minimumQuantitySought) {
+		this.minimumQuantitySought = minimumQuantitySought;
+	}
+
+	public FinancialInstrumentQuantity22Choice getNewBoardLotQuantity() {
+		return newBoardLotQuantity;
+	}
+
+	public void setNewBoardLotQuantity(FinancialInstrumentQuantity22Choice newBoardLotQuantity) {
+		this.newBoardLotQuantity = newBoardLotQuantity;
+	}
+
+	public FinancialInstrumentQuantity22Choice getNewDenominationQuantity() {
+		return newDenominationQuantity;
+	}
+
+	public void setNewDenominationQuantity(FinancialInstrumentQuantity22Choice newDenominationQuantity) {
+		this.newDenominationQuantity = newDenominationQuantity;
+	}
+
+	public FinancialInstrumentQuantity22Choice getBaseDenomination() {
+		return baseDenomination;
+	}
+
+	public void setBaseDenomination(FinancialInstrumentQuantity22Choice baseDenomination) {
+		this.baseDenomination = baseDenomination;
+	}
+
+	public FinancialInstrumentQuantity22Choice getIncrementalDenomination() {
+		return incrementalDenomination;
+	}
+
+	public void setIncrementalDenomination(FinancialInstrumentQuantity22Choice incrementalDenomination) {
+		this.incrementalDenomination = incrementalDenomination;
 	}
 }

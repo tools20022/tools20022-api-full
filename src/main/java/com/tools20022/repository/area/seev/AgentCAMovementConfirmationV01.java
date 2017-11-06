@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -80,9 +81,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#MovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmMovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule
  * AgentCAMovementConfirmationV01.
- * MovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule
+ * mmMovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule
  * }</li>
  * </ul>
  * </li>
@@ -93,34 +94,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#Identification
- * AgentCAMovementConfirmationV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmIdentification
+ * AgentCAMovementConfirmationV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAMovementInstructionIdentification
- * AgentCAMovementConfirmationV01.AgentCAMovementInstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAMovementInstructionIdentification
+ * AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAElectionStatusAdviceIdentification
- * AgentCAMovementConfirmationV01.AgentCAElectionStatusAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAElectionStatusAdviceIdentification
+ * AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAGlobalDistributionStatusAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAGlobalDistributionStatusAdviceIdentification
  * AgentCAMovementConfirmationV01.
- * AgentCAGlobalDistributionStatusAdviceIdentification}</li>
+ * mmAgentCAGlobalDistributionStatusAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#CorporateActionGeneralInformation
- * AgentCAMovementConfirmationV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmCorporateActionGeneralInformation
+ * AgentCAMovementConfirmationV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#SecuritiesMovementDetails
- * AgentCAMovementConfirmationV01.SecuritiesMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmSecuritiesMovementDetails
+ * AgentCAMovementConfirmationV01.mmSecuritiesMovementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#CashMovementDetails
- * AgentCAMovementConfirmationV01.CashMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmCashMovementDetails
+ * AgentCAMovementConfirmationV01.mmCashMovementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#identifier
- * AgentCAMovementConfirmationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.021.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -148,16 +147,17 @@ public class AgentCAMovementConfirmationV01 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAMovementInstructionIdentification
-	 * AgentCAMovementConfirmationV01.AgentCAMovementInstructionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAMovementInstructionIdentification
+	 * AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification
+	 * }</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAElectionStatusAdviceIdentification
-	 * AgentCAMovementConfirmationV01.AgentCAElectionStatusAdviceIdentification}
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAGlobalDistributionStatusAdviceIdentification
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAElectionStatusAdviceIdentification
 	 * AgentCAMovementConfirmationV01.
-	 * AgentCAGlobalDistributionStatusAdviceIdentification}</li>
+	 * mmAgentCAElectionStatusAdviceIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAGlobalDistributionStatusAdviceIdentification
+	 * AgentCAMovementConfirmationV01.
+	 * mmAgentCAGlobalDistributionStatusAdviceIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -179,17 +179,18 @@ public class AgentCAMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor MovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule = new MMXor() {
+	public static final MMXor mmMovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule";
 			definition = "Either AgentCAMovementInstructionIdentification or AgentCAElectionStatusAdviceIdentification or AgentCAGlobalDistributionStatusAdviceIdentification must be present.";
 			messageDefinition_lazy = () -> AgentCAMovementConfirmationV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAMovementInstructionIdentification,
-					com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAElectionStatusAdviceIdentification,
-					com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAGlobalDistributionStatusAdviceIdentification);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification,
+					com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
+					com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification);
 		}
 	};
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * confirmation.
@@ -216,17 +217,18 @@ public class AgentCAMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the confirmation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAMovementInstructionIdentification;
 	/**
 	 * Identification of the Agent CA Movement Instruction that triggered the
 	 * movement(s).
@@ -253,17 +255,18 @@ public class AgentCAMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAMovementInstructionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAMovementInstructionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAMvmntInstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAMovementInstructionIdentification";
 			definition = "Identification of the Agent CA Movement Instruction that triggered the movement(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAElectionStatusAdviceIdentification;
 	/**
 	 * Identification of the Agent CA Election Status Advice that triggered the
 	 * movement(s).
@@ -290,17 +293,18 @@ public class AgentCAMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAElectionStatusAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAElectionStatusAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAElctnStsAdvcId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionStatusAdviceIdentification";
 			definition = "Identification of the Agent CA Election Status Advice that triggered the movement(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAGlobalDistributionStatusAdviceIdentification;
 	/**
 	 * Identification of the Agent CA Global Distribution Status Advice that
 	 * triggered the movement(s).
@@ -327,17 +331,18 @@ public class AgentCAMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAGlobalDistributionStatusAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAGlobalDistributionStatusAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAGblDstrbtnStsAdvcId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAGlobalDistributionStatusAdviceIdentification";
 			definition = "Identification of the Agent CA Global Distribution Status Advice that triggered the movement(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -361,17 +366,18 @@ public class AgentCAMovementConfirmationV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected List<CorporateActionSecuritiesMovement1> securitiesMovementDetails;
 	/**
 	 * Information about the securities movements.
 	 * <p>
@@ -395,7 +401,7 @@ public class AgentCAMovementConfirmationV01 {
 	 * definition} = "Information about the securities movements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecuritiesMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecuritiesMovementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctiesMvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,6 +411,7 @@ public class AgentCAMovementConfirmationV01 {
 			complexType_lazy = () -> CorporateActionSecuritiesMovement1.mmObject();
 		}
 	};
+	protected List<CashMovement3> cashMovementDetails;
 	/**
 	 * Information about the cash movement.
 	 * <p>
@@ -427,7 +434,7 @@ public class AgentCAMovementConfirmationV01 {
 	 * definition} = "Information about the cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CashMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCashMovementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshMvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -435,33 +442,6 @@ public class AgentCAMovementConfirmationV01 {
 			definition = "Information about the cash movement.";
 			minOccurs = 0;
 			complexType_lazy = () -> CashMovement3.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "021"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "021";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -472,19 +452,82 @@ public class AgentCAMovementConfirmationV01 {
 				name = "AgentCAMovementConfirmationV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to confirm the settlement of resource movements.\r\nUsage\r\nThis message is used to confirm the settlement of the movements resulting from an:\r\n- Agent Corporate Action Movement Instruction message. It confirms the settlement of the exercised resources and/or proceeds movements in which case the building block Agent Corporate Action Movement Instruction Identification must be present. An Agent Corporate Action Movement Instruction message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.\r\n- Agent Corporate Action Global Distribution Status Advice authorising the global distribution. It confirms the settlement of the exercised resources and/or proceeds movements. The building block Agent Corporate Action Global Distribution Status Advice Identification must be present. An Agent Corporate Action Global Distribution Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.\r\n- Agent Corporate Action Election Status Advice that rejects an election advice. It confirms the return of the exercised resources. The building block Agent Corporate Action Election Status Advice Identification must be present. An Agent Corporate Action Election Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.\r\n- Agent Corporate Action Election Status Advice where an election cancellation request has been accepted. It confirms the return of the exercised resources. The building block Agent Corporate Action Election Status Advice Identification must be present. An Agent Corporate Action Election Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.MovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmMovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAMvmntConf";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAElectionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAGlobalDistributionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.CorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.SecuritiesMovementDetails,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.CashMovementDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmSecuritiesMovementDetails,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmCashMovementDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "021";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentIdentification8 getAgentCAMovementInstructionIdentification() {
+		return agentCAMovementInstructionIdentification;
+	}
+
+	public void setAgentCAMovementInstructionIdentification(DocumentIdentification8 agentCAMovementInstructionIdentification) {
+		this.agentCAMovementInstructionIdentification = agentCAMovementInstructionIdentification;
+	}
+
+	public DocumentIdentification8 getAgentCAElectionStatusAdviceIdentification() {
+		return agentCAElectionStatusAdviceIdentification;
+	}
+
+	public void setAgentCAElectionStatusAdviceIdentification(DocumentIdentification8 agentCAElectionStatusAdviceIdentification) {
+		this.agentCAElectionStatusAdviceIdentification = agentCAElectionStatusAdviceIdentification;
+	}
+
+	public DocumentIdentification8 getAgentCAGlobalDistributionStatusAdviceIdentification() {
+		return agentCAGlobalDistributionStatusAdviceIdentification;
+	}
+
+	public void setAgentCAGlobalDistributionStatusAdviceIdentification(DocumentIdentification8 agentCAGlobalDistributionStatusAdviceIdentification) {
+		this.agentCAGlobalDistributionStatusAdviceIdentification = agentCAGlobalDistributionStatusAdviceIdentification;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public List<CorporateActionSecuritiesMovement1> getSecuritiesMovementDetails() {
+		return securitiesMovementDetails;
+	}
+
+	public void setSecuritiesMovementDetails(List<CorporateActionSecuritiesMovement1> securitiesMovementDetails) {
+		this.securitiesMovementDetails = securitiesMovementDetails;
+	}
+
+	public List<CashMovement3> getCashMovementDetails() {
+		return cashMovementDetails;
+	}
+
+	public void setCashMovementDetails(List<CashMovement3> cashMovementDetails) {
+		this.cashMovementDetails = cashMovementDetails;
 	}
 }

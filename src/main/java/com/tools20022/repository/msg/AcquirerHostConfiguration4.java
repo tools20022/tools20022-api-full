@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Acquirer configuration parameters for a host.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration4#HostIdentification
- * AcquirerHostConfiguration4.HostIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration4#mmHostIdentification
+ * AcquirerHostConfiguration4.mmHostIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration4#MessageToSend
- * AcquirerHostConfiguration4.MessageToSend}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration4#mmMessageToSend
+ * AcquirerHostConfiguration4.mmMessageToSend}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerHostConfiguration4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text hostIdentification;
 	/**
 	 * Identification of a host.
 	 * <p>
@@ -80,8 +82,8 @@ public class AcquirerHostConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemIdentification
-	 * System.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,25 +103,26 @@ public class AcquirerHostConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration3#HostIdentification
-	 * AcquirerHostConfiguration3.HostIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration3#mmHostIdentification
+	 * AcquirerHostConfiguration3.mmHostIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
 			componentContext_lazy = () -> AcquirerHostConfiguration4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.SystemIdentification;
 			isDerived = false;
 			xmlTag = "HstId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostIdentification";
 			definition = "Identification of a host.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration3.HostIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration3.mmHostIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<MessageFunction12Code> messageToSend;
 	/**
 	 * Types of message to sent to this host.
 	 * <p>
@@ -149,11 +152,11 @@ public class AcquirerHostConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration3#MessageToSend
-	 * AcquirerHostConfiguration3.MessageToSend}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration3#mmMessageToSend
+	 * AcquirerHostConfiguration3.mmMessageToSend}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageToSend = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageToSend = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcquirerHostConfiguration4.mmObject();
 			isDerived = false;
@@ -161,7 +164,7 @@ public class AcquirerHostConfiguration4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageToSend";
 			definition = "Types of message to sent to this host.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration3.MessageToSend;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration3.mmMessageToSend;
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageFunction12Code.mmObject();
 		}
@@ -170,9 +173,9 @@ public class AcquirerHostConfiguration4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerHostConfiguration4.HostIdentification, com.tools20022.repository.msg.AcquirerHostConfiguration4.MessageToSend);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerHostConfiguration4.mmHostIdentification, com.tools20022.repository.msg.AcquirerHostConfiguration4.mmMessageToSend);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcquirerHostConfiguration4";
 				definition = "Acquirer configuration parameters for a host.";
@@ -180,5 +183,21 @@ public class AcquirerHostConfiguration4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getHostIdentification() {
+		return hostIdentification;
+	}
+
+	public void setHostIdentification(Max35Text hostIdentification) {
+		this.hostIdentification = hostIdentification;
+	}
+
+	public List<MessageFunction12Code> getMessageToSend() {
+		return messageToSend;
+	}
+
+	public void setMessageToSend(List<MessageFunction12Code> messageToSend) {
+		this.messageToSend = messageToSend;
 	}
 }

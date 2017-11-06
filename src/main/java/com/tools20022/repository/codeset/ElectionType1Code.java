@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionType1Code#NewElection
- * ElectionType1Code.NewElection}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionType1Code#mmNewElection
+ * ElectionType1Code.mmNewElection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionType1Code#OptionChange
- * ElectionType1Code.OptionChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionType1Code#mmOptionChange
+ * ElectionType1Code.mmOptionChange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class ElectionType1Code extends ElectionTypeCode {
 	 * name} = "NewElection"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewElection = new MMCode() {
+	public static final MMCode mmNewElection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewElection";
@@ -104,7 +104,7 @@ public class ElectionType1Code extends ElectionTypeCode {
 	 * name} = "OptionChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionChange = new MMCode() {
+	public static final MMCode mmOptionChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionChange";
@@ -115,12 +115,12 @@ public class ElectionType1Code extends ElectionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ElectionType1Code";
 				definition = "Specifies the type of election.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionType1Code.NewElection, com.tools20022.repository.codeset.ElectionType1Code.OptionChange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionType1Code.mmNewElection, com.tools20022.repository.codeset.ElectionType1Code.mmOptionChange);
 				trace_lazy = () -> ElectionTypeCode.mmObject();
 			}
 		});

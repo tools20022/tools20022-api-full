@@ -34,36 +34,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#UndertakingAmendment
- * SettlementAdviceType1Code.UndertakingAmendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmUndertakingAmendment
+ * SettlementAdviceType1Code.mmUndertakingAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#AutomaticChargesBooking
- * SettlementAdviceType1Code.AutomaticChargesBooking}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmAutomaticChargesBooking
+ * SettlementAdviceType1Code.mmAutomaticChargesBooking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#PaymentClaim
- * SettlementAdviceType1Code.PaymentClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmPaymentClaim
+ * SettlementAdviceType1Code.mmPaymentClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#CorrespondentBankCharges
- * SettlementAdviceType1Code.CorrespondentBankCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmCorrespondentBankCharges
+ * SettlementAdviceType1Code.mmCorrespondentBankCharges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#UndertakingIssuance
- * SettlementAdviceType1Code.UndertakingIssuance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmUndertakingIssuance
+ * SettlementAdviceType1Code.mmUndertakingIssuance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#ManualChargesBooking
- * SettlementAdviceType1Code.ManualChargesBooking}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmManualChargesBooking
+ * SettlementAdviceType1Code.mmManualChargesBooking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#Refund
- * SettlementAdviceType1Code.Refund}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmRefund
+ * SettlementAdviceType1Code.mmRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#Termination
- * SettlementAdviceType1Code.Termination}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmTermination
+ * SettlementAdviceType1Code.mmTermination}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +99,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "UndertakingAmendment"</li>
 	 * </ul>
 	 */
-	public static final MMCode UndertakingAmendment = new MMCode() {
+	public static final MMCode mmUndertakingAmendment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendment";
@@ -122,7 +122,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "AutomaticChargesBooking"</li>
 	 * </ul>
 	 */
-	public static final MMCode AutomaticChargesBooking = new MMCode() {
+	public static final MMCode mmAutomaticChargesBooking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticChargesBooking";
@@ -145,7 +145,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "PaymentClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentClaim = new MMCode() {
+	public static final MMCode mmPaymentClaim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentClaim";
@@ -168,7 +168,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "CorrespondentBankCharges"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorrespondentBankCharges = new MMCode() {
+	public static final MMCode mmCorrespondentBankCharges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankCharges";
@@ -191,7 +191,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "UndertakingIssuance"</li>
 	 * </ul>
 	 */
-	public static final MMCode UndertakingIssuance = new MMCode() {
+	public static final MMCode mmUndertakingIssuance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuance";
@@ -214,7 +214,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "ManualChargesBooking"</li>
 	 * </ul>
 	 */
-	public static final MMCode ManualChargesBooking = new MMCode() {
+	public static final MMCode mmManualChargesBooking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualChargesBooking";
@@ -237,7 +237,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "Refund"</li>
 	 * </ul>
 	 */
-	public static final MMCode Refund = new MMCode() {
+	public static final MMCode mmRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refund";
@@ -260,7 +260,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "Termination"</li>
 	 * </ul>
 	 */
-	public static final MMCode Termination = new MMCode() {
+	public static final MMCode mmTermination = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
@@ -271,15 +271,15 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementAdviceType1Code";
 				definition = "Specifies the type of settlement advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementAdviceType1Code.UndertakingAmendment, com.tools20022.repository.codeset.SettlementAdviceType1Code.AutomaticChargesBooking,
-						com.tools20022.repository.codeset.SettlementAdviceType1Code.PaymentClaim, com.tools20022.repository.codeset.SettlementAdviceType1Code.CorrespondentBankCharges,
-						com.tools20022.repository.codeset.SettlementAdviceType1Code.UndertakingIssuance, com.tools20022.repository.codeset.SettlementAdviceType1Code.ManualChargesBooking,
-						com.tools20022.repository.codeset.SettlementAdviceType1Code.Refund, com.tools20022.repository.codeset.SettlementAdviceType1Code.Termination);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementAdviceType1Code.mmUndertakingAmendment, com.tools20022.repository.codeset.SettlementAdviceType1Code.mmAutomaticChargesBooking,
+						com.tools20022.repository.codeset.SettlementAdviceType1Code.mmPaymentClaim, com.tools20022.repository.codeset.SettlementAdviceType1Code.mmCorrespondentBankCharges,
+						com.tools20022.repository.codeset.SettlementAdviceType1Code.mmUndertakingIssuance, com.tools20022.repository.codeset.SettlementAdviceType1Code.mmManualChargesBooking,
+						com.tools20022.repository.codeset.SettlementAdviceType1Code.mmRefund, com.tools20022.repository.codeset.SettlementAdviceType1Code.mmTermination);
 				trace_lazy = () -> SettlementAdviceTypeCode.mmObject();
 			}
 		});

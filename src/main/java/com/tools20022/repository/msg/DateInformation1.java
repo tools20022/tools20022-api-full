@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.ExternalDateFrequency1Code;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,19 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DateInformation1#StartDate
- * DateInformation1.StartDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DateInformation1#Frequency
- * DateInformation1.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DateInformation1#Number
- * DateInformation1.Number}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateInformation1#mmStartDate
+ * DateInformation1.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateInformation1#mmFrequency
+ * DateInformation1.mmFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateInformation1#mmNumber
+ * DateInformation1.mmNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate startDate;
 	/**
 	 * Date on which a recurrent date will commence.
 	 * <p>
@@ -86,7 +88,7 @@ public class DateInformation1 {
 	 * definition} = "Date on which a recurrent date will commence."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateInformation1.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class DateInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Date on which a recurrent date will commence.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ExternalDateFrequency1Code frequency;
 	/**
 	 * Specifies the regularity of the trigger date.
 	 * <p>
@@ -127,7 +130,7 @@ public class DateInformation1 {
 	 * definition} = "Specifies the regularity of the trigger date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateInformation1.mmObject();
 			isDerived = false;
@@ -135,11 +138,12 @@ public class DateInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Specifies the regularity of the trigger date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDateFrequency1Code.mmObject();
 		}
 	};
+	protected Number number;
 	/**
 	 * Maximum number of trigger date occurrence cycles.
 	 * <p>
@@ -167,7 +171,7 @@ public class DateInformation1 {
 	 * definition} = "Maximum number of trigger date occurrence cycles."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateInformation1.mmObject();
 			isDerived = false;
@@ -175,22 +179,46 @@ public class DateInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Maximum number of trigger date occurrence cycles.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.Number.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateInformation1.StartDate, com.tools20022.repository.msg.DateInformation1.Frequency, com.tools20022.repository.msg.DateInformation1.Number);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateInformation1.mmStartDate, com.tools20022.repository.msg.DateInformation1.mmFrequency, com.tools20022.repository.msg.DateInformation1.mmNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateInformation1";
 				definition = "Date parameters.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public ExternalDateFrequency1Code getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(ExternalDateFrequency1Code frequency) {
+		this.frequency = frequency;
+	}
+
+	public Number getNumber() {
+		return number;
+	}
+
+	public void setNumber(Number number) {
+		this.number = number;
 	}
 }

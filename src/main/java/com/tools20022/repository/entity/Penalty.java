@@ -36,8 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Penalty#PenaltyBasisAmount
- * Penalty.PenaltyBasisAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Penalty#mmPenaltyBasisAmount
+ * Penalty.mmPenaltyBasisAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Penalty extends Adjustment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount penaltyBasisAmount;
 	/**
 	 * Amount used as a basis to calculate the penalty amount.
 	 * <p>
@@ -71,18 +73,18 @@ public class Penalty extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerms3#PenaltyBasisAmount
-	 * PaymentTerms3.PenaltyBasisAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Penalty
 	 * Penalty}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms3#mmPenaltyBasisAmount
+	 * PaymentTerms3.mmPenaltyBasisAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -94,16 +96,16 @@ public class Penalty extends Adjustment {
 	 * definition} = "Amount used as a basis to calculate the penalty amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PenaltyBasisAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPenaltyBasisAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms3.PenaltyBasisAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms3.mmPenaltyBasisAmount);
 			elementContext_lazy = () -> Penalty.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PenaltyBasisAmount";
 			definition = "Amount used as a basis to calculate the penalty amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -111,14 +113,22 @@ public class Penalty extends Adjustment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Penalty";
 				definition = "Fee charged when the conditions of a contract are not met.";
 				superType_lazy = () -> Adjustment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Penalty.PenaltyBasisAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Penalty.mmPenaltyBasisAmount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getPenaltyBasisAmount() {
+		return penaltyBasisAmount;
+	}
+
+	public void setPenaltyBasisAmount(CurrencyAndAmount penaltyBasisAmount) {
+		this.penaltyBasisAmount = penaltyBasisAmount;
 	}
 }

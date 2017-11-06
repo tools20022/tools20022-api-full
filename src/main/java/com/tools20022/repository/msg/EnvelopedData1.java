@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.Recipient1Choice;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Encrypted data with encryption key.
@@ -34,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EnvelopedData1#Version
- * EnvelopedData1.Version}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EnvelopedData1#Recipient
- * EnvelopedData1.Recipient}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EnvelopedData1#mmVersion
+ * EnvelopedData1.mmVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EnvelopedData1#mmRecipient
+ * EnvelopedData1.mmRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EnvelopedData1#EncryptedContent
- * EnvelopedData1.EncryptedContent}</li>
+ * {@linkplain com.tools20022.repository.msg.EnvelopedData1#mmEncryptedContent
+ * EnvelopedData1.mmEncryptedContent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EnvelopedData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number version;
 	/**
 	 * Version of the data structure.
 	 * <p>
@@ -93,7 +95,7 @@ public class EnvelopedData1 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EnvelopedData1.mmObject();
 			isDerived = false;
@@ -101,11 +103,12 @@ public class EnvelopedData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<Recipient1Choice> recipient;
 	/**
 	 * Transport key or key encryption key (KEK) identification for the
 	 * recipient.
@@ -134,7 +137,7 @@ public class EnvelopedData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Recipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> EnvelopedData1.mmObject();
 			isDerived = false;
@@ -143,10 +146,11 @@ public class EnvelopedData1 {
 			name = "Recipient";
 			definition = "Transport key or key encryption key (KEK) identification for the recipient.";
 			minOccurs = 1;
-			type_lazy = () -> Recipient1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> Recipient1Choice.mmObject();
 		}
 	};
+	protected EncryptedContent1 encryptedContent;
 	/**
 	 * Encrypted data with an encryption key.
 	 * <p>
@@ -172,7 +176,7 @@ public class EnvelopedData1 {
 	 * definition} = "Encrypted data with an encryption key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncryptedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncryptedContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> EnvelopedData1.mmObject();
 			isDerived = false;
@@ -180,18 +184,18 @@ public class EnvelopedData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedContent";
 			definition = "Encrypted data with an encryption key.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> EncryptedContent1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EncryptedContent1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvelopedData1.Version, com.tools20022.repository.msg.EnvelopedData1.Recipient, com.tools20022.repository.msg.EnvelopedData1.EncryptedContent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvelopedData1.mmVersion, com.tools20022.repository.msg.EnvelopedData1.mmRecipient, com.tools20022.repository.msg.EnvelopedData1.mmEncryptedContent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EnvelopedData1";
 				definition = "Encrypted data with encryption key.";
@@ -199,5 +203,29 @@ public class EnvelopedData1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public List<Recipient1Choice> getRecipient() {
+		return recipient;
+	}
+
+	public void setRecipient(List<Recipient1Choice> recipient) {
+		this.recipient = recipient;
+	}
+
+	public EncryptedContent1 getEncryptedContent() {
+		return encryptedContent;
+	}
+
+	public void setEncryptedContent(com.tools20022.repository.msg.EncryptedContent1 encryptedContent) {
+		this.encryptedContent = encryptedContent;
 	}
 }

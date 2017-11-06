@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.MatchingDenied4Choice#Code
- * MatchingDenied4Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingDenied4Choice#Proprietary
- * MatchingDenied4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingDenied4Choice#mmCode
+ * MatchingDenied4Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.MatchingDenied4Choice#mmProprietary
+ * MatchingDenied4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MatchingDenied4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MatchingProcess1Code code;
 	/**
 	 * Specifies the execution of a matching denial process.
 	 * <p>
@@ -89,7 +91,7 @@ public class MatchingDenied4Choice {
 	 * definition} = "Specifies the execution of a matching denial process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MatchingDenied4Choice.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class MatchingDenied4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the execution of a matching denial process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MatchingProcess1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Specifies the execution of a matching denial process.
 	 * <p>
@@ -130,7 +133,7 @@ public class MatchingDenied4Choice {
 	 * definition} = "Specifies the execution of a matching denial process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MatchingDenied4Choice.mmObject();
 			isDerived = false;
@@ -138,8 +141,8 @@ public class MatchingDenied4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the execution of a matching denial process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -147,14 +150,30 @@ public class MatchingDenied4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingDenied4Choice.Code, com.tools20022.repository.choice.MatchingDenied4Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingDenied4Choice.mmCode, com.tools20022.repository.choice.MatchingDenied4Choice.mmProprietary);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MatchingDenied4Choice";
 				definition = "Specifies the matching processing change requested.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MatchingProcess1Code getCode() {
+		return code;
+	}
+
+	public void setCode(MatchingProcess1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -39,10 +39,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TransportByAir#AirportName
- * TransportByAir.AirportName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransportByAir#FlightNumber
- * TransportByAir.FlightNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransportByAir#mmAirportName
+ * TransportByAir.mmAirportName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransportByAir#mmFlightNumber
+ * TransportByAir.mmFlightNumber}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,29 +52,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport1#TransportByAir
- * SingleTransport1.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport1#mmTransportByAir
+ * SingleTransport1.mmTransportByAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport4#TransportByAir
- * SingleTransport4.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport4#mmTransportByAir
+ * SingleTransport4.mmTransportByAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport2#TransportByAir
- * SingleTransport2.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport2#mmTransportByAir
+ * SingleTransport2.mmTransportByAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport5#TransportByAir
- * SingleTransport5.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport5#mmTransportByAir
+ * SingleTransport5.mmTransportByAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport3#TransportByAir
- * SingleTransport3.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport3#mmTransportByAir
+ * SingleTransport3.mmTransportByAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport6#TransportByAir
- * SingleTransport6.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport6#mmTransportByAir
+ * SingleTransport6.mmTransportByAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport7#TransportByAir
- * SingleTransport7.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport7#mmTransportByAir
+ * SingleTransport7.mmTransportByAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport8#TransportByAir
- * SingleTransport8.TransportByAir}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport8#mmTransportByAir
+ * SingleTransport8.mmTransportByAir}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -99,8 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportByAir extends Transport {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max6Text airportName;
 	/**
 	 * Identifies an airport by means of its IATA identification code. Example:
 	 * LHR.
@@ -124,22 +127,22 @@ public class TransportByAir extends Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max6Text
 	 * Max6Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AirportName1Choice#AirportCode
-	 * AirportName1Choice.AirportCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AirportName1Choice#OtherAirportDescription
-	 * AirportName1Choice.OtherAirportDescription}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransportByAir
 	 * TransportByAir}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AirportName1Choice#mmAirportCode
+	 * AirportName1Choice.mmAirportCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AirportName1Choice#mmOtherAirportDescription
+	 * AirportName1Choice.mmOtherAirportDescription}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -153,19 +156,20 @@ public class TransportByAir extends Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AirportName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAirportName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AirportName1Choice.AirportCode, com.tools20022.repository.choice.AirportName1Choice.OtherAirportDescription);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AirportName1Choice.mmAirportCode, com.tools20022.repository.choice.AirportName1Choice.mmOtherAirportDescription);
 			elementContext_lazy = () -> TransportByAir.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AirportName";
 			definition = "Identifies an airport by means of its IATA identification code. Example: LHR.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	protected Max35Text flightNumber;
 	/**
 	 * Identifies the flight and the carrier.
 	 * <p>
@@ -175,19 +179,19 @@ public class TransportByAir extends Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir4#FlightNumber
-	 * TransportByAir4.FlightNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransportByAir
 	 * TransportByAir}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmFlightNumber
+	 * TransportByAir4.mmFlightNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -199,16 +203,16 @@ public class TransportByAir extends Transport {
 	 * definition} = "Identifies the flight and the carrier."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FlightNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFlightNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir4.FlightNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir4.mmFlightNumber);
 			elementContext_lazy = () -> TransportByAir.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FlightNumber";
 			definition = "Identifies the flight and the carrier.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -216,18 +220,34 @@ public class TransportByAir extends Transport {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransportByAir";
 				definition = "Information related to the transportation of goods by air.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.TransportByAir, com.tools20022.repository.msg.SingleTransport4.TransportByAir,
-						com.tools20022.repository.msg.SingleTransport2.TransportByAir, com.tools20022.repository.msg.SingleTransport5.TransportByAir, com.tools20022.repository.msg.SingleTransport3.TransportByAir,
-						com.tools20022.repository.msg.SingleTransport6.TransportByAir, com.tools20022.repository.msg.SingleTransport7.TransportByAir, com.tools20022.repository.msg.SingleTransport8.TransportByAir);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.mmTransportByAir, com.tools20022.repository.msg.SingleTransport4.mmTransportByAir,
+						com.tools20022.repository.msg.SingleTransport2.mmTransportByAir, com.tools20022.repository.msg.SingleTransport5.mmTransportByAir, com.tools20022.repository.msg.SingleTransport3.mmTransportByAir,
+						com.tools20022.repository.msg.SingleTransport6.mmTransportByAir, com.tools20022.repository.msg.SingleTransport7.mmTransportByAir, com.tools20022.repository.msg.SingleTransport8.mmTransportByAir);
 				superType_lazy = () -> Transport.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportByAir.AirportName, com.tools20022.repository.entity.TransportByAir.FlightNumber);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportByAir.mmAirportName, com.tools20022.repository.entity.TransportByAir.mmFlightNumber);
 				derivationComponent_lazy = () -> Arrays.asList(AirportName1Choice.mmObject(), TransportByAir1.mmObject(), TransportByAir3.mmObject(), TransportByAir2.mmObject(), TransportByAir4.mmObject(), TransportByAir5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max6Text getAirportName() {
+		return airportName;
+	}
+
+	public void setAirportName(Max6Text airportName) {
+		this.airportName = airportName;
+	}
+
+	public Max35Text getFlightNumber() {
+		return flightNumber;
+	}
+
+	public void setFlightNumber(Max35Text flightNumber) {
+		this.flightNumber = flightNumber;
 	}
 }

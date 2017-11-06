@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CaseAssignmentRejectionJustification2#RejectionReason
- * CaseAssignmentRejectionJustification2.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CaseAssignmentRejectionJustification2#mmRejectionReason
+ * CaseAssignmentRejectionJustification2.mmRejectionReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CaseAssignmentRejectionJustification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignmentRejection2Code rejectionReason;
 	/**
 	 * Reason for the rejection of a case assignment, in a coded form.
 	 * <p>
@@ -73,8 +74,8 @@ public class CaseAssignmentRejectionJustification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#RejectionReason
-	 * PaymentInvestigationCaseRejection.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#mmRejectionReason
+	 * PaymentInvestigationCaseRejection.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,17 +95,17 @@ public class CaseAssignmentRejectionJustification2 {
 	 * "Reason for the rejection of a case assignment, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectionReason;
 			componentContext_lazy = () -> CaseAssignmentRejectionJustification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.RejectionReason;
 			isDerived = false;
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason for the rejection of a case assignment, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CaseAssignmentRejection2Code.mmObject();
 		}
 	};
@@ -112,14 +113,22 @@ public class CaseAssignmentRejectionJustification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignmentRejectionJustification2.RejectionReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignmentRejectionJustification2.mmRejectionReason);
 				trace_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CaseAssignmentRejectionJustification2";
 				definition = "Provides the reason for rejecting the case assignment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignmentRejection2Code getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(CaseAssignmentRejection2Code rejectionReason) {
+		this.rejectionReason = rejectionReason;
 	}
 }

@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryReportingType1Code#Credit
- * RegulatoryReportingType1Code.Credit}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryReportingType1Code#mmCredit
+ * RegulatoryReportingType1Code.mmCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryReportingType1Code#Debit
- * RegulatoryReportingType1Code.Debit}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryReportingType1Code#mmDebit
+ * RegulatoryReportingType1Code.mmDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryReportingType1Code#Both
- * RegulatoryReportingType1Code.Both}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryReportingType1Code#mmBoth
+ * RegulatoryReportingType1Code.mmBoth}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class RegulatoryReportingType1Code extends RegulatoryReportingTypeCode {
 	 * name} = "Credit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Credit = new MMCode() {
+	public static final MMCode mmCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
@@ -111,7 +111,7 @@ public class RegulatoryReportingType1Code extends RegulatoryReportingTypeCode {
 	 * name} = "Debit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Debit = new MMCode() {
+	public static final MMCode mmDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debit";
@@ -134,7 +134,7 @@ public class RegulatoryReportingType1Code extends RegulatoryReportingTypeCode {
 	 * name} = "Both"</li>
 	 * </ul>
 	 */
-	public static final MMCode Both = new MMCode() {
+	public static final MMCode mmBoth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Both";
@@ -145,13 +145,13 @@ public class RegulatoryReportingType1Code extends RegulatoryReportingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRED");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryReportingType1Code";
 				definition = "Identifies whether the regulatory reporting information applies to the debit side, to the credit side or to both debit and credit sides of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegulatoryReportingType1Code.Credit, com.tools20022.repository.codeset.RegulatoryReportingType1Code.Debit,
-						com.tools20022.repository.codeset.RegulatoryReportingType1Code.Both);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegulatoryReportingType1Code.mmCredit, com.tools20022.repository.codeset.RegulatoryReportingType1Code.mmDebit,
+						com.tools20022.repository.codeset.RegulatoryReportingType1Code.mmBoth);
 				trace_lazy = () -> RegulatoryReportingTypeCode.mmObject();
 			}
 		});

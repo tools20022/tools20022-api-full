@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification1#MarketTypeAndIdentification
- * PlaceOfTradeIdentification1.MarketTypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification1#mmMarketTypeAndIdentification
+ * PlaceOfTradeIdentification1.mmMarketTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification1#LEI
- * PlaceOfTradeIdentification1.LEI}</li>
+ * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification1#mmLEI
+ * PlaceOfTradeIdentification1.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PlaceOfTradeIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarketIdentification84 marketTypeAndIdentification;
 	/**
 	 * Identification and type of the place of trade.
 	 * <p>
@@ -98,28 +99,29 @@ public class PlaceOfTradeIdentification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification2#MarketTypeAndIdentification
-	 * PlaceOfTradeIdentification2.MarketTypeAndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification2#mmMarketTypeAndIdentification
+	 * PlaceOfTradeIdentification2.mmMarketTypeAndIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketTypeAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketTypeAndIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PlaceOfTradeIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PlaceOfTradeIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "MktTpAndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentification";
 			definition = "Identification and type of the place of trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfTradeIdentification2.MarketTypeAndIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfTradeIdentification2.mmMarketTypeAndIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification84.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification84.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal entity identification as an alternate identification for a place of
 	 * trade.
@@ -153,13 +155,13 @@ public class PlaceOfTradeIdentification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification2#LEI
-	 * PlaceOfTradeIdentification2.LEI}</li>
+	 * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification2#mmLEI
+	 * PlaceOfTradeIdentification2.mmLEI}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PlaceOfTradeIdentification1.mmObject();
 			isDerived = false;
@@ -167,9 +169,9 @@ public class PlaceOfTradeIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a place of trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfTradeIdentification2.LEI);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfTradeIdentification2.mmLEI);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -177,14 +179,30 @@ public class PlaceOfTradeIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfTradeIdentification1.MarketTypeAndIdentification, com.tools20022.repository.msg.PlaceOfTradeIdentification1.LEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmMarketTypeAndIdentification, com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmLEI);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlaceOfTradeIdentification1";
 				definition = "Identification of market in which a trade transaction has been executed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarketIdentification84 getMarketTypeAndIdentification() {
+		return marketTypeAndIdentification;
+	}
+
+	public void setMarketTypeAndIdentification(com.tools20022.repository.msg.MarketIdentification84 marketTypeAndIdentification) {
+		this.marketTypeAndIdentification = marketTypeAndIdentification;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

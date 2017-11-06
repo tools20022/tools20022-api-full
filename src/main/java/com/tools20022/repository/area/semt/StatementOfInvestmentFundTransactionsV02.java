@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,39 +66,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#MessageIdentification
- * StatementOfInvestmentFundTransactionsV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmMessageIdentification
+ * StatementOfInvestmentFundTransactionsV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#PreviousReference
- * StatementOfInvestmentFundTransactionsV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmPreviousReference
+ * StatementOfInvestmentFundTransactionsV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#RelatedReference
- * StatementOfInvestmentFundTransactionsV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmRelatedReference
+ * StatementOfInvestmentFundTransactionsV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#MessagePagination
- * StatementOfInvestmentFundTransactionsV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmMessagePagination
+ * StatementOfInvestmentFundTransactionsV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#StatementGeneralDetails
- * StatementOfInvestmentFundTransactionsV02.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmStatementGeneralDetails
+ * StatementOfInvestmentFundTransactionsV02.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#InvestmentAccountDetails
- * StatementOfInvestmentFundTransactionsV02.InvestmentAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmInvestmentAccountDetails
+ * StatementOfInvestmentFundTransactionsV02.mmInvestmentAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#TransactionOnAccount
- * StatementOfInvestmentFundTransactionsV02.TransactionOnAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmTransactionOnAccount
+ * StatementOfInvestmentFundTransactionsV02.mmTransactionOnAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#SubAccountDetails
- * StatementOfInvestmentFundTransactionsV02.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmSubAccountDetails
+ * StatementOfInvestmentFundTransactionsV02.mmSubAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#Extension
- * StatementOfInvestmentFundTransactionsV02.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmExtension
+ * StatementOfInvestmentFundTransactionsV02.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#identifier
- * StatementOfInvestmentFundTransactionsV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.006.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,6 +124,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementOfInvestmentFundTransactionsV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -153,24 +153,25 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#MessageIdentification
-	 * StatementOfInvestmentFundTransactionsV03.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmMessageIdentification
+	 * StatementOfInvestmentFundTransactionsV03.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<AdditionalReference2> previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -196,23 +197,24 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#PreviousReference
-	 * StatementOfInvestmentFundTransactionsV03.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmPreviousReference
+	 * StatementOfInvestmentFundTransactionsV03.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.PreviousReference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmPreviousReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected List<AdditionalReference2> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -239,23 +241,24 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#RelatedReference
-	 * StatementOfInvestmentFundTransactionsV03.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmRelatedReference
+	 * StatementOfInvestmentFundTransactionsV03.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.RelatedReference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmRelatedReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * <p>
@@ -280,24 +283,25 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#MessagePagination
-	 * StatementOfInvestmentFundTransactionsV03.MessagePagination}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmMessagePagination
+	 * StatementOfInvestmentFundTransactionsV03.mmMessagePagination}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.MessagePagination);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmMessagePagination);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement8 statementGeneralDetails;
 	/**
 	 * General information related to the investment fund statement of
 	 * transactions.
@@ -325,24 +329,25 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#StatementGeneralDetails
-	 * StatementOfInvestmentFundTransactionsV03.StatementGeneralDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmStatementGeneralDetails
+	 * StatementOfInvestmentFundTransactionsV03.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to the investment fund statement of transactions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.StatementGeneralDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmStatementGeneralDetails);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement8.mmObject();
 		}
 	};
+	protected InvestmentAccount25 investmentAccountDetails;
 	/**
 	 * Information related to an investment account.
 	 * <p>
@@ -368,24 +373,25 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#InvestmentAccountDetails
-	 * StatementOfInvestmentFundTransactionsV03.InvestmentAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmInvestmentAccountDetails
+	 * StatementOfInvestmentFundTransactionsV03.mmInvestmentAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InvestmentAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInvestmentAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Information related to an investment account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.InvestmentAccountDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmInvestmentAccountDetails);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount25.mmObject();
 		}
 	};
+	protected List<InvestmentFundTransactionsByFund2> transactionOnAccount;
 	/**
 	 * Creation/cancellation of investment units on the books of the fund or its
 	 * designated agent, as a result of executing an investment fund order.
@@ -414,23 +420,24 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#TransactionOnAccount
-	 * StatementOfInvestmentFundTransactionsV03.TransactionOnAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmTransactionOnAccount
+	 * StatementOfInvestmentFundTransactionsV03.mmTransactionOnAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionOnAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionOnAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxOnAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnAccount";
 			definition = "Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.TransactionOnAccount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmTransactionOnAccount);
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundTransactionsByFund2.mmObject();
 		}
 	};
+	protected List<SubAccountIdentification6> subAccountDetails;
 	/**
 	 * The sub-account of the safekeeping or investment account.
 	 * <p>
@@ -457,23 +464,24 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#SubAccountDetails
-	 * StatementOfInvestmentFundTransactionsV03.SubAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmSubAccountDetails
+	 * StatementOfInvestmentFundTransactionsV03.mmSubAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "The sub-account of the safekeeping or investment account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.SubAccountDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmSubAccountDetails);
 			minOccurs = 0;
 			complexType_lazy = () -> SubAccountIdentification6.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -501,48 +509,21 @@ public class StatementOfInvestmentFundTransactionsV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#Extension
-	 * StatementOfInvestmentFundTransactionsV03.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmExtension
+	 * StatementOfInvestmentFundTransactionsV03.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "006";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -552,20 +533,99 @@ public class StatementOfInvestmentFundTransactionsV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementOfInvestmentFundTransactionsV02";
 				definition = "Scope\r\nAn account servicer, for example, a transfer agent sends the StatementOfInvestmentFundTransactions message to the account owner, for example, an investment manager or its authorised representative to provide detailed transactions (increases and decreases) of holdings which occurred during a specified period of time.\r\nUsage\r\nThe StatementOfInvestmentFundTransactions message is used to list the holdings transactions of a single (master) account or several sub-accounts.\r\nThis message should be used at a frequency agreed bi-laterally between the account servicer and the account owner.\r\nThis message must not be used in place of confirmation messages.";
-				previousVersion_lazy = () -> StatementOfInvestmentFundTransactions.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactionsV03.mmObject());
+				previousVersion_lazy = () -> StatementOfInvestmentFundTransactions.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "StmtOfInvstmtFndTxsV02";
 				businessArea_lazy = () -> SecuritiesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.MessageIdentification,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.PreviousReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.RelatedReference,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.MessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.StatementGeneralDetails,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.InvestmentAccountDetails, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.TransactionOnAccount,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.SubAccountDetails, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmMessageIdentification,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmPreviousReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmRelatedReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmMessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmStatementGeneralDetails,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmInvestmentAccountDetails, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmTransactionOnAccount,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmSubAccountDetails, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "006";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public List<AdditionalReference2> getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(List<AdditionalReference2> previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public List<AdditionalReference2> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference2> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public Statement8 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement8 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public InvestmentAccount25 getInvestmentAccountDetails() {
+		return investmentAccountDetails;
+	}
+
+	public void setInvestmentAccountDetails(InvestmentAccount25 investmentAccountDetails) {
+		this.investmentAccountDetails = investmentAccountDetails;
+	}
+
+	public List<InvestmentFundTransactionsByFund2> getTransactionOnAccount() {
+		return transactionOnAccount;
+	}
+
+	public void setTransactionOnAccount(List<InvestmentFundTransactionsByFund2> transactionOnAccount) {
+		this.transactionOnAccount = transactionOnAccount;
+	}
+
+	public List<SubAccountIdentification6> getSubAccountDetails() {
+		return subAccountDetails;
+	}
+
+	public void setSubAccountDetails(List<SubAccountIdentification6> subAccountDetails) {
+		this.subAccountDetails = subAccountDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

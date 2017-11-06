@@ -40,71 +40,71 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RevocabilityPeriod
- * CorporateActionDeadline.RevocabilityPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRevocabilityPeriod
+ * CorporateActionDeadline.mmRevocabilityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ProtectDate
- * CorporateActionDeadline.ProtectDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmProtectDate
+ * CorporateActionDeadline.mmProtectDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#TradingSuspendedDate
- * CorporateActionDeadline.TradingSuspendedDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmTradingSuspendedDate
+ * CorporateActionDeadline.mmTradingSuspendedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ThirdPartyDeadline
- * CorporateActionDeadline.ThirdPartyDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmThirdPartyDeadline
+ * CorporateActionDeadline.mmThirdPartyDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#CertificationDeadline
- * CorporateActionDeadline.CertificationDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmCertificationDeadline
+ * CorporateActionDeadline.mmCertificationDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#DeadlineToSplit
- * CorporateActionDeadline.DeadlineToSplit}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmDeadlineToSplit
+ * CorporateActionDeadline.mmDeadlineToSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#SpecialExDate
- * CorporateActionDeadline.SpecialExDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmSpecialExDate
+ * CorporateActionDeadline.mmSpecialExDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#DeadlineForTaxBreakdownInstruction
- * CorporateActionDeadline.DeadlineForTaxBreakdownInstruction}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmDeadlineForTaxBreakdownInstruction
+ * CorporateActionDeadline.mmDeadlineForTaxBreakdownInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#EarlyClosingDate
- * CorporateActionDeadline.EarlyClosingDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmEarlyClosingDate
+ * CorporateActionDeadline.mmEarlyClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RecordDate
- * CorporateActionDeadline.RecordDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRecordDate
+ * CorporateActionDeadline.mmRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#CoverExpirationDate
- * CorporateActionDeadline.CoverExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmCoverExpirationDate
+ * CorporateActionDeadline.mmCoverExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ElectionToCounterpartyDeadline
- * CorporateActionDeadline.ElectionToCounterpartyDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmElectionToCounterpartyDeadline
+ * CorporateActionDeadline.mmElectionToCounterpartyDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ExpiryDate
- * CorporateActionDeadline.ExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmExpiryDate
+ * CorporateActionDeadline.mmExpiryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#EarlyThirdPartyDeadline
- * CorporateActionDeadline.EarlyThirdPartyDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmEarlyThirdPartyDeadline
+ * CorporateActionDeadline.mmEarlyThirdPartyDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#DepositoryCoverExpirationDate
- * CorporateActionDeadline.DepositoryCoverExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmDepositoryCoverExpirationDate
+ * CorporateActionDeadline.mmDepositoryCoverExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ResponseDeadline
- * CorporateActionDeadline.ResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmResponseDeadline
+ * CorporateActionDeadline.mmResponseDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ConsentExpirationDate
- * CorporateActionDeadline.ConsentExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmConsentExpirationDate
+ * CorporateActionDeadline.mmConsentExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RegistrationDeadline
- * CorporateActionDeadline.RegistrationDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRegistrationDeadline
+ * CorporateActionDeadline.mmRegistrationDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#StockLendingDeadline
- * CorporateActionDeadline.StockLendingDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmStockLendingDeadline
+ * CorporateActionDeadline.mmStockLendingDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ConsentRecordDate
- * CorporateActionDeadline.ConsentRecordDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmConsentRecordDate
+ * CorporateActionDeadline.mmConsentRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#EarlyResponseDeadline
- * CorporateActionDeadline.EarlyResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmEarlyResponseDeadline
+ * CorporateActionDeadline.mmEarlyResponseDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#GuaranteedParticipationDate
- * CorporateActionDeadline.GuaranteedParticipationDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmGuaranteedParticipationDate
+ * CorporateActionDeadline.mmGuaranteedParticipationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -122,8 +122,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,6 +137,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDeadline extends Deadline {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateTimePeriod revocabilityPeriod;
 	/**
 	 * Period during which the shareholder can revoke, change or withdraw its
 	 * instruction.
@@ -148,31 +149,31 @@ public class CorporateActionDeadline extends Deadline {
 	 * complexType} =
 	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod5#RevocabilityPeriod
-	 * CorporateActionPeriod5.RevocabilityPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod5#AccountServicerRevocabilityPeriod
-	 * CorporateActionPeriod5.AccountServicerRevocabilityPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#RevocabilityPeriod
-	 * CorporateActionPeriod7.RevocabilityPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#AccountServicerRevocabilityPeriod
-	 * CorporateActionPeriod7.AccountServicerRevocabilityPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod2#RevocabilityPeriod
-	 * CorporateActionPeriod2.RevocabilityPeriod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod5#mmRevocabilityPeriod
+	 * CorporateActionPeriod5.mmRevocabilityPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod5#mmAccountServicerRevocabilityPeriod
+	 * CorporateActionPeriod5.mmAccountServicerRevocabilityPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmRevocabilityPeriod
+	 * CorporateActionPeriod7.mmRevocabilityPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmAccountServicerRevocabilityPeriod
+	 * CorporateActionPeriod7.mmAccountServicerRevocabilityPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod2#mmRevocabilityPeriod
+	 * CorporateActionPeriod2.mmRevocabilityPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -186,21 +187,22 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RevocabilityPeriod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRevocabilityPeriod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod5.RevocabilityPeriod, com.tools20022.repository.msg.CorporateActionPeriod5.AccountServicerRevocabilityPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod7.RevocabilityPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.AccountServicerRevocabilityPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod2.RevocabilityPeriod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod5.mmRevocabilityPeriod, com.tools20022.repository.msg.CorporateActionPeriod5.mmAccountServicerRevocabilityPeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod7.mmRevocabilityPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.mmAccountServicerRevocabilityPeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod2.mmRevocabilityPeriod);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RevocabilityPeriod";
 			definition = "Period during which the shareholder can revoke, change or withdraw its instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateTimePeriod.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected ISODateTime protectDate;
 	/**
 	 * Last date a holder can request to defer delivery of securities pursuant
 	 * to a notice of guaranteed delivery or other required documentation.
@@ -211,61 +213,61 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#ProtectDate
-	 * CorporateActionDate6.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#ProtectDate
-	 * CorporateActionDate10.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#ProtectDate
-	 * CorporateActionDate18.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#ProtectDate
-	 * CorporateActionDate19.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#ProtectDate
-	 * CorporateActionDate8.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#ProtectDate
-	 * CorporateActionDate11.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#ProtectDate
-	 * CorporateActionDate15.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#ProtectDate
-	 * CorporateActionDate16.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#ProtectDate
-	 * CorporateActionDate2.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#ProtectDate
-	 * CorporateActionDate29.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#ProtectDate
-	 * CorporateActionDate33.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#ProtectDate
-	 * CorporateActionDate46.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#ProtectDate
-	 * CorporateActionDate48.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#ProtectDate
-	 * CorporateActionDate52.ProtectDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#ProtectDate
-	 * CorporateActionDate55.ProtectDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#mmProtectDate
+	 * CorporateActionDate6.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#mmProtectDate
+	 * CorporateActionDate10.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#mmProtectDate
+	 * CorporateActionDate18.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#mmProtectDate
+	 * CorporateActionDate19.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#mmProtectDate
+	 * CorporateActionDate8.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#mmProtectDate
+	 * CorporateActionDate11.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#mmProtectDate
+	 * CorporateActionDate15.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#mmProtectDate
+	 * CorporateActionDate16.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmProtectDate
+	 * CorporateActionDate2.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#mmProtectDate
+	 * CorporateActionDate29.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#mmProtectDate
+	 * CorporateActionDate33.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#mmProtectDate
+	 * CorporateActionDate46.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#mmProtectDate
+	 * CorporateActionDate48.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#mmProtectDate
+	 * CorporateActionDate52.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmProtectDate
+	 * CorporateActionDate55.mmProtectDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -279,24 +281,25 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProtectDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProtectDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.ProtectDate, com.tools20022.repository.msg.CorporateActionDate10.ProtectDate,
-					com.tools20022.repository.msg.CorporateActionDate18.ProtectDate, com.tools20022.repository.msg.CorporateActionDate19.ProtectDate, com.tools20022.repository.msg.CorporateActionDate8.ProtectDate,
-					com.tools20022.repository.msg.CorporateActionDate11.ProtectDate, com.tools20022.repository.msg.CorporateActionDate15.ProtectDate, com.tools20022.repository.msg.CorporateActionDate16.ProtectDate,
-					com.tools20022.repository.msg.CorporateActionDate2.ProtectDate, com.tools20022.repository.msg.CorporateActionDate29.ProtectDate, com.tools20022.repository.msg.CorporateActionDate33.ProtectDate,
-					com.tools20022.repository.msg.CorporateActionDate46.ProtectDate, com.tools20022.repository.msg.CorporateActionDate48.ProtectDate, com.tools20022.repository.msg.CorporateActionDate52.ProtectDate,
-					com.tools20022.repository.msg.CorporateActionDate55.ProtectDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate10.mmProtectDate,
+					com.tools20022.repository.msg.CorporateActionDate18.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate19.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate8.mmProtectDate,
+					com.tools20022.repository.msg.CorporateActionDate11.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate15.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate16.mmProtectDate,
+					com.tools20022.repository.msg.CorporateActionDate2.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate29.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate33.mmProtectDate,
+					com.tools20022.repository.msg.CorporateActionDate46.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate48.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate52.mmProtectDate,
+					com.tools20022.repository.msg.CorporateActionDate55.mmProtectDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProtectDate";
 			definition = "Last date a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime tradingSuspendedDate;
 	/**
 	 * Date on which trading of a security is suspended as the result of an
 	 * event.
@@ -307,49 +310,49 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#TradingSuspendedDate
-	 * CorporateActionDate1.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#TradingSuspendedDate
-	 * CorporateActionDate13.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#TradingSuspendedDate
-	 * CorporateActionDate14.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#TradingSuspendedDate
-	 * CorporateActionDate21.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#TradingSuspendedDate
-	 * CorporateActionDate22.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#TradingSuspendedDate
-	 * CorporateActionDate25.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#TradingSuspendedDate
-	 * CorporateActionDate27.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#TradingSuspendedDate
-	 * CorporateActionDate28.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#TradingSuspendedDate
-	 * CorporateActionDate2.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#TradingSuspendedDate
-	 * CorporateActionDate44.TradingSuspendedDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#TradingSuspendedDate
-	 * CorporateActionDate58.TradingSuspendedDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmTradingSuspendedDate
+	 * CorporateActionDate1.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmTradingSuspendedDate
+	 * CorporateActionDate13.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmTradingSuspendedDate
+	 * CorporateActionDate14.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmTradingSuspendedDate
+	 * CorporateActionDate21.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmTradingSuspendedDate
+	 * CorporateActionDate22.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmTradingSuspendedDate
+	 * CorporateActionDate25.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmTradingSuspendedDate
+	 * CorporateActionDate27.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmTradingSuspendedDate
+	 * CorporateActionDate28.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmTradingSuspendedDate
+	 * CorporateActionDate2.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmTradingSuspendedDate
+	 * CorporateActionDate44.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmTradingSuspendedDate
+	 * CorporateActionDate58.mmTradingSuspendedDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -363,25 +366,25 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TradingSuspendedDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTradingSuspendedDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(com.tools20022.repository.msg.CorporateActionDate1.TradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate13.TradingSuspendedDate,
-							com.tools20022.repository.msg.CorporateActionDate14.TradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate21.TradingSuspendedDate,
-							com.tools20022.repository.msg.CorporateActionDate22.TradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate25.TradingSuspendedDate,
-							com.tools20022.repository.msg.CorporateActionDate27.TradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate28.TradingSuspendedDate,
-							com.tools20022.repository.msg.CorporateActionDate2.TradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate44.TradingSuspendedDate,
-							com.tools20022.repository.msg.CorporateActionDate58.TradingSuspendedDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmTradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate13.mmTradingSuspendedDate,
+					com.tools20022.repository.msg.CorporateActionDate14.mmTradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate21.mmTradingSuspendedDate,
+					com.tools20022.repository.msg.CorporateActionDate22.mmTradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate25.mmTradingSuspendedDate,
+					com.tools20022.repository.msg.CorporateActionDate27.mmTradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate28.mmTradingSuspendedDate,
+					com.tools20022.repository.msg.CorporateActionDate2.mmTradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate44.mmTradingSuspendedDate,
+					com.tools20022.repository.msg.CorporateActionDate58.mmTradingSuspendedDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradingSuspendedDate";
 			definition = "Date on which trading of a security is suspended as the result of an event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime thirdPartyDeadline;
 	/**
 	 * Date/Time by which the account owner must instruct directly another
 	 * party, for example to provide documentation to an issuer agent.
@@ -392,46 +395,46 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#ThirdPartyDeadline
-	 * CorporateActionDate1.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#ThirdPartyDeadline
-	 * CorporateActionDate13.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#ThirdPartyDeadline
-	 * CorporateActionDate14.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#ThirdPartyDeadline
-	 * CorporateActionDate21.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#ThirdPartyDeadline
-	 * CorporateActionDate22.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#ThirdPartyDeadline
-	 * CorporateActionDate25.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#ThirdPartyDeadline
-	 * CorporateActionDate27.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#ThirdPartyDeadline
-	 * CorporateActionDate28.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ThirdPartyDeadline
-	 * CorporateActionDate44.ThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#ThirdPartyDeadline
-	 * CorporateActionDate58.ThirdPartyDeadline}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmThirdPartyDeadline
+	 * CorporateActionDate1.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmThirdPartyDeadline
+	 * CorporateActionDate13.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmThirdPartyDeadline
+	 * CorporateActionDate14.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmThirdPartyDeadline
+	 * CorporateActionDate21.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmThirdPartyDeadline
+	 * CorporateActionDate22.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmThirdPartyDeadline
+	 * CorporateActionDate25.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmThirdPartyDeadline
+	 * CorporateActionDate27.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmThirdPartyDeadline
+	 * CorporateActionDate28.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmThirdPartyDeadline
+	 * CorporateActionDate44.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmThirdPartyDeadline
+	 * CorporateActionDate58.mmThirdPartyDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -445,22 +448,24 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ThirdPartyDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmThirdPartyDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.ThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate13.ThirdPartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate14.ThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate21.ThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate22.ThirdPartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate25.ThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate27.ThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate28.ThirdPartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate44.ThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate58.ThirdPartyDeadline);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate13.mmThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate14.mmThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate21.mmThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate22.mmThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate25.mmThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate27.mmThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate28.mmThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate44.mmThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate58.mmThirdPartyDeadline);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ThirdPartyDeadline";
 			definition = "Date/Time by which the account owner must instruct directly another party, for example to provide documentation to an issuer agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime certificationDeadline;
 	/**
 	 * Deadline by which the beneficial ownership of securities must be
 	 * declared.
@@ -471,49 +476,49 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#CertificationDeadline
-	 * CorporateActionDate1.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#CertificationDeadline
-	 * CorporateActionDate13.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#CertificationDeadline
-	 * CorporateActionDate14.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#CertificationDeadline
-	 * CorporateActionDate21.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#CertificationDeadline
-	 * CorporateActionDate22.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#CertificationDeadline
-	 * CorporateActionDate25.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#CertificationDeadline
-	 * CorporateActionDate27.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#CertificationDeadline
-	 * CorporateActionDate28.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#CertificationDeadline
-	 * CorporateActionDate2.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#CertificationDeadline
-	 * CorporateActionDate44.CertificationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#CertificationDeadline
-	 * CorporateActionDate58.CertificationDeadline}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmCertificationDeadline
+	 * CorporateActionDate1.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmCertificationDeadline
+	 * CorporateActionDate13.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmCertificationDeadline
+	 * CorporateActionDate14.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmCertificationDeadline
+	 * CorporateActionDate21.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmCertificationDeadline
+	 * CorporateActionDate22.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmCertificationDeadline
+	 * CorporateActionDate25.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmCertificationDeadline
+	 * CorporateActionDate27.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmCertificationDeadline
+	 * CorporateActionDate28.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmCertificationDeadline
+	 * CorporateActionDate2.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmCertificationDeadline
+	 * CorporateActionDate44.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmCertificationDeadline
+	 * CorporateActionDate58.mmCertificationDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -527,24 +532,25 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CertificationDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCertificationDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.CertificationDeadline, com.tools20022.repository.msg.CorporateActionDate13.CertificationDeadline,
-					com.tools20022.repository.msg.CorporateActionDate14.CertificationDeadline, com.tools20022.repository.msg.CorporateActionDate21.CertificationDeadline,
-					com.tools20022.repository.msg.CorporateActionDate22.CertificationDeadline, com.tools20022.repository.msg.CorporateActionDate25.CertificationDeadline,
-					com.tools20022.repository.msg.CorporateActionDate27.CertificationDeadline, com.tools20022.repository.msg.CorporateActionDate28.CertificationDeadline,
-					com.tools20022.repository.msg.CorporateActionDate2.CertificationDeadline, com.tools20022.repository.msg.CorporateActionDate44.CertificationDeadline,
-					com.tools20022.repository.msg.CorporateActionDate58.CertificationDeadline);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmCertificationDeadline, com.tools20022.repository.msg.CorporateActionDate13.mmCertificationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate14.mmCertificationDeadline, com.tools20022.repository.msg.CorporateActionDate21.mmCertificationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate22.mmCertificationDeadline, com.tools20022.repository.msg.CorporateActionDate25.mmCertificationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate27.mmCertificationDeadline, com.tools20022.repository.msg.CorporateActionDate28.mmCertificationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate2.mmCertificationDeadline, com.tools20022.repository.msg.CorporateActionDate44.mmCertificationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate58.mmCertificationDeadline);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CertificationDeadline";
 			definition = "Deadline by which the beneficial ownership of securities must be declared.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime deadlineToSplit;
 	/**
 	 * Deadline by which instructions must be received to split securities, that
 	 * is, of physical certificates.
@@ -555,49 +561,49 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#DeadlineToSplit
-	 * CorporateActionDate1.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#DeadlineToSplit
-	 * CorporateActionDate13.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#DeadlineToSplit
-	 * CorporateActionDate14.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#DeadlineToSplit
-	 * CorporateActionDate21.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#DeadlineToSplit
-	 * CorporateActionDate22.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#DeadlineToSplit
-	 * CorporateActionDate25.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#DeadlineToSplit
-	 * CorporateActionDate27.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#DeadlineToSplit
-	 * CorporateActionDate28.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#DeadlineToSplit
-	 * CorporateActionDate4.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#DeadlineToSplit
-	 * CorporateActionDate44.DeadlineToSplit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#DeadlineToSplit
-	 * CorporateActionDate58.DeadlineToSplit}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmDeadlineToSplit
+	 * CorporateActionDate1.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmDeadlineToSplit
+	 * CorporateActionDate13.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmDeadlineToSplit
+	 * CorporateActionDate14.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmDeadlineToSplit
+	 * CorporateActionDate21.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmDeadlineToSplit
+	 * CorporateActionDate22.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmDeadlineToSplit
+	 * CorporateActionDate25.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmDeadlineToSplit
+	 * CorporateActionDate27.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmDeadlineToSplit
+	 * CorporateActionDate28.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmDeadlineToSplit
+	 * CorporateActionDate4.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmDeadlineToSplit
+	 * CorporateActionDate44.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmDeadlineToSplit
+	 * CorporateActionDate58.mmDeadlineToSplit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -611,22 +617,23 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DeadlineToSplit = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDeadlineToSplit = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.DeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate13.DeadlineToSplit,
-					com.tools20022.repository.msg.CorporateActionDate14.DeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate21.DeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate22.DeadlineToSplit,
-					com.tools20022.repository.msg.CorporateActionDate25.DeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate27.DeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate28.DeadlineToSplit,
-					com.tools20022.repository.msg.CorporateActionDate4.DeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate44.DeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate58.DeadlineToSplit);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmDeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate13.mmDeadlineToSplit,
+					com.tools20022.repository.msg.CorporateActionDate14.mmDeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate21.mmDeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate22.mmDeadlineToSplit,
+					com.tools20022.repository.msg.CorporateActionDate25.mmDeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate27.mmDeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate28.mmDeadlineToSplit,
+					com.tools20022.repository.msg.CorporateActionDate4.mmDeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate44.mmDeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate58.mmDeadlineToSplit);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeadlineToSplit";
 			definition = "Deadline by which instructions must be received to split securities, that is, of physical certificates.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime specialExDate;
 	/**
 	 * Date/time as from which 'special processing' can start to be used by
 	 * participants for that event. Special processing is a means of marking a
@@ -641,49 +648,49 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#SpecialExDate
-	 * CorporateActionDate1.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#SpecialExDate
-	 * CorporateActionDate13.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#SpecialExDate
-	 * CorporateActionDate14.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#SpecialExDate
-	 * CorporateActionDate21.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#SpecialExDate
-	 * CorporateActionDate22.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#SpecialExDate
-	 * CorporateActionDate25.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#SpecialExDate
-	 * CorporateActionDate27.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#SpecialExDate
-	 * CorporateActionDate28.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#SpecialExDate
-	 * CorporateActionDate2.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#SpecialExDate
-	 * CorporateActionDate44.SpecialExDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#SpecialExDate
-	 * CorporateActionDate58.SpecialExDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmSpecialExDate
+	 * CorporateActionDate1.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmSpecialExDate
+	 * CorporateActionDate13.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmSpecialExDate
+	 * CorporateActionDate14.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmSpecialExDate
+	 * CorporateActionDate21.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmSpecialExDate
+	 * CorporateActionDate22.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmSpecialExDate
+	 * CorporateActionDate25.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmSpecialExDate
+	 * CorporateActionDate27.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmSpecialExDate
+	 * CorporateActionDate28.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmSpecialExDate
+	 * CorporateActionDate2.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmSpecialExDate
+	 * CorporateActionDate44.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmSpecialExDate
+	 * CorporateActionDate58.mmSpecialExDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -697,22 +704,23 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SpecialExDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSpecialExDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.SpecialExDate, com.tools20022.repository.msg.CorporateActionDate13.SpecialExDate,
-					com.tools20022.repository.msg.CorporateActionDate14.SpecialExDate, com.tools20022.repository.msg.CorporateActionDate21.SpecialExDate, com.tools20022.repository.msg.CorporateActionDate22.SpecialExDate,
-					com.tools20022.repository.msg.CorporateActionDate25.SpecialExDate, com.tools20022.repository.msg.CorporateActionDate27.SpecialExDate, com.tools20022.repository.msg.CorporateActionDate28.SpecialExDate,
-					com.tools20022.repository.msg.CorporateActionDate2.SpecialExDate, com.tools20022.repository.msg.CorporateActionDate44.SpecialExDate, com.tools20022.repository.msg.CorporateActionDate58.SpecialExDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmSpecialExDate, com.tools20022.repository.msg.CorporateActionDate13.mmSpecialExDate,
+					com.tools20022.repository.msg.CorporateActionDate14.mmSpecialExDate, com.tools20022.repository.msg.CorporateActionDate21.mmSpecialExDate, com.tools20022.repository.msg.CorporateActionDate22.mmSpecialExDate,
+					com.tools20022.repository.msg.CorporateActionDate25.mmSpecialExDate, com.tools20022.repository.msg.CorporateActionDate27.mmSpecialExDate, com.tools20022.repository.msg.CorporateActionDate28.mmSpecialExDate,
+					com.tools20022.repository.msg.CorporateActionDate2.mmSpecialExDate, com.tools20022.repository.msg.CorporateActionDate44.mmSpecialExDate, com.tools20022.repository.msg.CorporateActionDate58.mmSpecialExDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialExDate";
 			definition = "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively,  for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime deadlineForTaxBreakdownInstruction;
 	/**
 	 * Date until which tax breakdown instructions will be accepted.
 	 * <p>
@@ -722,49 +730,49 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate1.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate13.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate14.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate21.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate22.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate25.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate27.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate28.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate2.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate44.DeadlineForTaxBreakdownInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate58.DeadlineForTaxBreakdownInstruction}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate1.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate13.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate14.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate21.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate22.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate25.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate27.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate28.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate2.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate44.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate58.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -777,24 +785,25 @@ public class CorporateActionDeadline extends Deadline {
 	 * "Date until which tax breakdown instructions will be accepted."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DeadlineForTaxBreakdownInstruction = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDeadlineForTaxBreakdownInstruction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.DeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate13.DeadlineForTaxBreakdownInstruction,
-					com.tools20022.repository.msg.CorporateActionDate14.DeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate21.DeadlineForTaxBreakdownInstruction,
-					com.tools20022.repository.msg.CorporateActionDate22.DeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate25.DeadlineForTaxBreakdownInstruction,
-					com.tools20022.repository.msg.CorporateActionDate27.DeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate28.DeadlineForTaxBreakdownInstruction,
-					com.tools20022.repository.msg.CorporateActionDate2.DeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate44.DeadlineForTaxBreakdownInstruction,
-					com.tools20022.repository.msg.CorporateActionDate58.DeadlineForTaxBreakdownInstruction);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmDeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate13.mmDeadlineForTaxBreakdownInstruction,
+					com.tools20022.repository.msg.CorporateActionDate14.mmDeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate21.mmDeadlineForTaxBreakdownInstruction,
+					com.tools20022.repository.msg.CorporateActionDate22.mmDeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate25.mmDeadlineForTaxBreakdownInstruction,
+					com.tools20022.repository.msg.CorporateActionDate27.mmDeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate28.mmDeadlineForTaxBreakdownInstruction,
+					com.tools20022.repository.msg.CorporateActionDate2.mmDeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate44.mmDeadlineForTaxBreakdownInstruction,
+					com.tools20022.repository.msg.CorporateActionDate58.mmDeadlineForTaxBreakdownInstruction);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeadlineForTaxBreakdownInstruction";
 			definition = "Date until which tax breakdown instructions will be accepted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime earlyClosingDate;
 	/**
 	 * First possible early closing date of an offer if different from the
 	 * expiry date.
@@ -805,49 +814,49 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#EarlyClosingDate
-	 * CorporateActionDate1.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#EarlyClosingDate
-	 * CorporateActionDate13.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#EarlyClosingDate
-	 * CorporateActionDate14.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#EarlyClosingDate
-	 * CorporateActionDate21.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#EarlyClosingDate
-	 * CorporateActionDate22.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#EarlyClosingDate
-	 * CorporateActionDate25.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#EarlyClosingDate
-	 * CorporateActionDate27.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#EarlyClosingDate
-	 * CorporateActionDate28.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#EarlyClosingDate
-	 * CorporateActionDate2.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#EarlyClosingDate
-	 * CorporateActionDate44.EarlyClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#EarlyClosingDate
-	 * CorporateActionDate58.EarlyClosingDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmEarlyClosingDate
+	 * CorporateActionDate1.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmEarlyClosingDate
+	 * CorporateActionDate13.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmEarlyClosingDate
+	 * CorporateActionDate14.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmEarlyClosingDate
+	 * CorporateActionDate21.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmEarlyClosingDate
+	 * CorporateActionDate22.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmEarlyClosingDate
+	 * CorporateActionDate25.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmEarlyClosingDate
+	 * CorporateActionDate27.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmEarlyClosingDate
+	 * CorporateActionDate28.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmEarlyClosingDate
+	 * CorporateActionDate2.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmEarlyClosingDate
+	 * CorporateActionDate44.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmEarlyClosingDate
+	 * CorporateActionDate58.mmEarlyClosingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -861,22 +870,23 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EarlyClosingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEarlyClosingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.EarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate13.EarlyClosingDate,
-					com.tools20022.repository.msg.CorporateActionDate14.EarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate21.EarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate22.EarlyClosingDate,
-					com.tools20022.repository.msg.CorporateActionDate25.EarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate27.EarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate28.EarlyClosingDate,
-					com.tools20022.repository.msg.CorporateActionDate2.EarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate44.EarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate58.EarlyClosingDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmEarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate13.mmEarlyClosingDate,
+					com.tools20022.repository.msg.CorporateActionDate14.mmEarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate21.mmEarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate22.mmEarlyClosingDate,
+					com.tools20022.repository.msg.CorporateActionDate25.mmEarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate27.mmEarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate28.mmEarlyClosingDate,
+					com.tools20022.repository.msg.CorporateActionDate2.mmEarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate44.mmEarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate58.mmEarlyClosingDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EarlyClosingDate";
 			definition = "First possible early closing date of an offer if different from the expiry date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime recordDate;
 	/**
 	 * Date at which the positions are struck to note which parties will receive
 	 * the entitlement.
@@ -887,88 +897,88 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#RecordDate
-	 * CorporateActionDate1.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#RecordDate
-	 * CorporateActionDate13.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#RecordDate
-	 * CorporateActionDate14.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#RecordDate
-	 * CorporateActionDate21.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#RecordDate
-	 * CorporateActionDate22.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#RecordDate
-	 * CorporateActionDate25.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#RecordDate
-	 * CorporateActionDate27.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#RecordDate
-	 * CorporateActionDate28.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntitlementAssessment#RecordDate
-	 * EntitlementAssessment.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EligibilityDates#RecordDate
-	 * EligibilityDates.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#RecordDate
-	 * CorporateActionDate2.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#RecordDate
-	 * EntitlementAdvice1.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#RecordDate
-	 * GlobalDistributionRequest1.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#RecordDate
-	 * CommonFinancialInstrumentAttributes1.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate30#RecordDate
-	 * CorporateActionDate30.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate34#RecordDate
-	 * CorporateActionDate34.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate41#RecordDate
-	 * CorporateActionDate41.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate43#RecordDate
-	 * CorporateActionDate43.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate49#RecordDate
-	 * CorporateActionDate49.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate45#RecordDate
-	 * CorporateActionDate45.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#RecordDate
-	 * CorporateActionDate44.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate54#RecordDate
-	 * CorporateActionDate54.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate50#RecordDate
-	 * CorporateActionDate50.RecordDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#RecordDate
-	 * CorporateActionDate58.RecordDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmRecordDate
+	 * CorporateActionDate1.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmRecordDate
+	 * CorporateActionDate13.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmRecordDate
+	 * CorporateActionDate14.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmRecordDate
+	 * CorporateActionDate21.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmRecordDate
+	 * CorporateActionDate22.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmRecordDate
+	 * CorporateActionDate25.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmRecordDate
+	 * CorporateActionDate27.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmRecordDate
+	 * CorporateActionDate28.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntitlementAssessment#mmRecordDate
+	 * EntitlementAssessment.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibilityDates#mmRecordDate
+	 * EligibilityDates.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmRecordDate
+	 * CorporateActionDate2.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#mmRecordDate
+	 * EntitlementAdvice1.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmRecordDate
+	 * GlobalDistributionRequest1.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmRecordDate
+	 * CommonFinancialInstrumentAttributes1.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate30#mmRecordDate
+	 * CorporateActionDate30.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate34#mmRecordDate
+	 * CorporateActionDate34.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate41#mmRecordDate
+	 * CorporateActionDate41.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate43#mmRecordDate
+	 * CorporateActionDate43.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate49#mmRecordDate
+	 * CorporateActionDate49.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate45#mmRecordDate
+	 * CorporateActionDate45.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmRecordDate
+	 * CorporateActionDate44.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate54#mmRecordDate
+	 * CorporateActionDate54.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate50#mmRecordDate
+	 * CorporateActionDate50.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmRecordDate
+	 * CorporateActionDate58.mmRecordDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -982,27 +992,28 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RecordDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRecordDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.RecordDate, com.tools20022.repository.msg.CorporateActionDate13.RecordDate,
-					com.tools20022.repository.msg.CorporateActionDate14.RecordDate, com.tools20022.repository.msg.CorporateActionDate21.RecordDate, com.tools20022.repository.msg.CorporateActionDate22.RecordDate,
-					com.tools20022.repository.msg.CorporateActionDate25.RecordDate, com.tools20022.repository.msg.CorporateActionDate27.RecordDate, com.tools20022.repository.msg.CorporateActionDate28.RecordDate,
-					com.tools20022.repository.msg.EntitlementAssessment.RecordDate, com.tools20022.repository.msg.EligibilityDates.RecordDate, com.tools20022.repository.msg.CorporateActionDate2.RecordDate,
-					com.tools20022.repository.msg.EntitlementAdvice1.RecordDate, com.tools20022.repository.msg.GlobalDistributionRequest1.RecordDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.RecordDate,
-					com.tools20022.repository.msg.CorporateActionDate30.RecordDate, com.tools20022.repository.msg.CorporateActionDate34.RecordDate, com.tools20022.repository.msg.CorporateActionDate41.RecordDate,
-					com.tools20022.repository.msg.CorporateActionDate43.RecordDate, com.tools20022.repository.msg.CorporateActionDate49.RecordDate, com.tools20022.repository.msg.CorporateActionDate45.RecordDate,
-					com.tools20022.repository.msg.CorporateActionDate44.RecordDate, com.tools20022.repository.msg.CorporateActionDate54.RecordDate, com.tools20022.repository.msg.CorporateActionDate50.RecordDate,
-					com.tools20022.repository.msg.CorporateActionDate58.RecordDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate13.mmRecordDate,
+					com.tools20022.repository.msg.CorporateActionDate14.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate21.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate22.mmRecordDate,
+					com.tools20022.repository.msg.CorporateActionDate25.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate27.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate28.mmRecordDate,
+					com.tools20022.repository.msg.EntitlementAssessment.mmRecordDate, com.tools20022.repository.msg.EligibilityDates.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate2.mmRecordDate,
+					com.tools20022.repository.msg.EntitlementAdvice1.mmRecordDate, com.tools20022.repository.msg.GlobalDistributionRequest1.mmRecordDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRecordDate,
+					com.tools20022.repository.msg.CorporateActionDate30.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate34.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate41.mmRecordDate,
+					com.tools20022.repository.msg.CorporateActionDate43.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate49.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate45.mmRecordDate,
+					com.tools20022.repository.msg.CorporateActionDate44.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate54.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate50.mmRecordDate,
+					com.tools20022.repository.msg.CorporateActionDate58.mmRecordDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which the positions are struck to note which parties will receive the entitlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime coverExpirationDate;
 	/**
 	 * Last day a holder can deliver the securities that it had previously
 	 * protected.
@@ -1013,61 +1024,61 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#CoverExpirationDate
-	 * CorporateActionDate6.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#CoverExpirationDate
-	 * CorporateActionDate10.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#CoverExpirationDate
-	 * CorporateActionDate18.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#CoverExpirationDate
-	 * CorporateActionDate19.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#CoverExpirationDate
-	 * CorporateActionDate8.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#CoverExpirationDate
-	 * CorporateActionDate11.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#CoverExpirationDate
-	 * CorporateActionDate15.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#CoverExpirationDate
-	 * CorporateActionDate16.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#CoverExpirationDate
-	 * CorporateActionDate2.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#CoverExpirationDate
-	 * CorporateActionDate29.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#CoverExpirationDate
-	 * CorporateActionDate33.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#CoverExpirationDate
-	 * CorporateActionDate46.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#CoverExpirationDate
-	 * CorporateActionDate48.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#CoverExpirationDate
-	 * CorporateActionDate52.CoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#CoverExpirationDate
-	 * CorporateActionDate55.CoverExpirationDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#mmCoverExpirationDate
+	 * CorporateActionDate6.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#mmCoverExpirationDate
+	 * CorporateActionDate10.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#mmCoverExpirationDate
+	 * CorporateActionDate18.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#mmCoverExpirationDate
+	 * CorporateActionDate19.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#mmCoverExpirationDate
+	 * CorporateActionDate8.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#mmCoverExpirationDate
+	 * CorporateActionDate11.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#mmCoverExpirationDate
+	 * CorporateActionDate15.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#mmCoverExpirationDate
+	 * CorporateActionDate16.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmCoverExpirationDate
+	 * CorporateActionDate2.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#mmCoverExpirationDate
+	 * CorporateActionDate29.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#mmCoverExpirationDate
+	 * CorporateActionDate33.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#mmCoverExpirationDate
+	 * CorporateActionDate46.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#mmCoverExpirationDate
+	 * CorporateActionDate48.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#mmCoverExpirationDate
+	 * CorporateActionDate52.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmCoverExpirationDate
+	 * CorporateActionDate55.mmCoverExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1081,24 +1092,27 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CoverExpirationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCoverExpirationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate10.CoverExpirationDate,
-					com.tools20022.repository.msg.CorporateActionDate18.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate19.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate8.CoverExpirationDate,
-					com.tools20022.repository.msg.CorporateActionDate11.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate15.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate16.CoverExpirationDate,
-					com.tools20022.repository.msg.CorporateActionDate2.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate29.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate33.CoverExpirationDate,
-					com.tools20022.repository.msg.CorporateActionDate46.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate48.CoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate52.CoverExpirationDate,
-					com.tools20022.repository.msg.CorporateActionDate55.CoverExpirationDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.mmCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate10.mmCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate18.mmCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate19.mmCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate8.mmCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate11.mmCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate15.mmCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate16.mmCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate2.mmCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate29.mmCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate33.mmCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate46.mmCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate48.mmCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate52.mmCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate55.mmCoverExpirationDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CoverExpirationDate";
 			definition = "Last day a holder can deliver the securities that it had previously protected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime electionToCounterpartyDeadline;
 	/**
 	 * Deadline by which an entitled holder needs to advise their counterparty
 	 * to a transaction of their election for a corporate action event.
@@ -1109,55 +1123,55 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#ElectionToCounterpartyDeadline
-	 * CorporateActionDate1.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#ElectionToCounterpartyDeadline
-	 * CorporateActionDate13.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#ElectionToCounterpartyDeadline
-	 * CorporateActionDate14.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#ElectionToCounterpartyDeadline
-	 * CorporateActionDate21.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#ElectionToCounterpartyDeadline
-	 * CorporateActionDate22.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#ElectionToCounterpartyDeadline
-	 * CorporateActionDate25.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#ElectionToCounterpartyDeadline
-	 * CorporateActionDate27.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#ElectionToCounterpartyDeadline
-	 * CorporateActionDate28.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#ElectionToCounterpartyDeadline
-	 * CorporateActionDate2.ElectionToCounterpartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ElectionToCounterpartyMarketDeadline
-	 * CorporateActionDate44.ElectionToCounterpartyMarketDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ElectionToCounterpartyResponseDeadline
-	 * CorporateActionDate44.ElectionToCounterpartyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#ElectionToCounterpartyMarketDeadline
-	 * CorporateActionDate58.ElectionToCounterpartyMarketDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#ElectionToCounterpartyResponseDeadline
-	 * CorporateActionDate58.ElectionToCounterpartyResponseDeadline}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate1.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate13.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate14.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate21.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate22.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate25.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate27.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate28.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate2.mmElectionToCounterpartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmElectionToCounterpartyMarketDeadline
+	 * CorporateActionDate44.mmElectionToCounterpartyMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmElectionToCounterpartyResponseDeadline
+	 * CorporateActionDate44.mmElectionToCounterpartyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmElectionToCounterpartyMarketDeadline
+	 * CorporateActionDate58.mmElectionToCounterpartyMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmElectionToCounterpartyResponseDeadline
+	 * CorporateActionDate58.mmElectionToCounterpartyResponseDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1171,25 +1185,26 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ElectionToCounterpartyDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmElectionToCounterpartyDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.ElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate13.ElectionToCounterpartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate14.ElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate21.ElectionToCounterpartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate22.ElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate25.ElectionToCounterpartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate27.ElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate28.ElectionToCounterpartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate2.ElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate44.ElectionToCounterpartyMarketDeadline,
-					com.tools20022.repository.msg.CorporateActionDate44.ElectionToCounterpartyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate58.ElectionToCounterpartyMarketDeadline,
-					com.tools20022.repository.msg.CorporateActionDate58.ElectionToCounterpartyResponseDeadline);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate13.mmElectionToCounterpartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate14.mmElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate21.mmElectionToCounterpartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate22.mmElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate25.mmElectionToCounterpartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate27.mmElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate28.mmElectionToCounterpartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate2.mmElectionToCounterpartyDeadline, com.tools20022.repository.msg.CorporateActionDate44.mmElectionToCounterpartyMarketDeadline,
+					com.tools20022.repository.msg.CorporateActionDate44.mmElectionToCounterpartyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate58.mmElectionToCounterpartyMarketDeadline,
+					com.tools20022.repository.msg.CorporateActionDate58.mmElectionToCounterpartyResponseDeadline);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ElectionToCounterpartyDeadline";
 			definition = "Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime expiryDate;
 	/**
 	 * Date on which the offer terminates.
 	 * <p>
@@ -1199,61 +1214,61 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#ExpiryDate
-	 * CorporateActionDate6.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#ExpiryDate
-	 * CorporateActionDate10.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#ExpiryDate
-	 * CorporateActionDate18.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#ExpiryDate
-	 * CorporateActionDate19.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#ExpiryDate
-	 * CorporateActionDate8.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#ExpiryDate
-	 * CorporateActionDate11.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#ExpiryDate
-	 * CorporateActionDate15.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#ExpiryDate
-	 * CorporateActionDate16.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#ExpiryDate
-	 * CorporateActionDate4.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#ExpiryDate
-	 * CorporateActionDate29.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#ExpiryDate
-	 * CorporateActionDate33.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#ExpiryDate
-	 * CorporateActionDate46.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#ExpiryDate
-	 * CorporateActionDate48.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#ExpiryDate
-	 * CorporateActionDate52.ExpiryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#ExpiryDate
-	 * CorporateActionDate55.ExpiryDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#mmExpiryDate
+	 * CorporateActionDate6.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#mmExpiryDate
+	 * CorporateActionDate10.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#mmExpiryDate
+	 * CorporateActionDate18.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#mmExpiryDate
+	 * CorporateActionDate19.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#mmExpiryDate
+	 * CorporateActionDate8.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#mmExpiryDate
+	 * CorporateActionDate11.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#mmExpiryDate
+	 * CorporateActionDate15.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#mmExpiryDate
+	 * CorporateActionDate16.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmExpiryDate
+	 * CorporateActionDate4.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#mmExpiryDate
+	 * CorporateActionDate29.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#mmExpiryDate
+	 * CorporateActionDate33.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#mmExpiryDate
+	 * CorporateActionDate46.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#mmExpiryDate
+	 * CorporateActionDate48.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#mmExpiryDate
+	 * CorporateActionDate52.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmExpiryDate
+	 * CorporateActionDate55.mmExpiryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1265,24 +1280,25 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} = "Date on which the offer terminates."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExpiryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate10.ExpiryDate,
-					com.tools20022.repository.msg.CorporateActionDate18.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate19.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate8.ExpiryDate,
-					com.tools20022.repository.msg.CorporateActionDate11.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate15.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate16.ExpiryDate,
-					com.tools20022.repository.msg.CorporateActionDate4.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate29.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate33.ExpiryDate,
-					com.tools20022.repository.msg.CorporateActionDate46.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate48.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate52.ExpiryDate,
-					com.tools20022.repository.msg.CorporateActionDate55.ExpiryDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate10.mmExpiryDate,
+					com.tools20022.repository.msg.CorporateActionDate18.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate19.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate8.mmExpiryDate,
+					com.tools20022.repository.msg.CorporateActionDate11.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate15.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate16.mmExpiryDate,
+					com.tools20022.repository.msg.CorporateActionDate4.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate29.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate33.mmExpiryDate,
+					com.tools20022.repository.msg.CorporateActionDate46.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate48.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate52.mmExpiryDate,
+					com.tools20022.repository.msg.CorporateActionDate55.mmExpiryDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which the offer terminates.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime earlyThirdPartyDeadline;
 	/**
 	 * Date/Time set by the issuer agent as a first early deadline by which the
 	 * account owner must instruct directly another party, possibly giving the
@@ -1313,18 +1329,19 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EarlyThirdPartyDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEarlyThirdPartyDeadline = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EarlyThirdPartyDeadline";
 			definition = "Date/Time set by the issuer agent as a first early deadline by which the account owner must instruct directly another party, possibly giving the holder eligibility to incentives. For example, to provide documentation to an issuer agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime depositoryCoverExpirationDate;
 	/**
 	 * The last date/tiime that a participant of the depository can deliver
 	 * securities that it had elected on and/or previously protected.
@@ -1335,40 +1352,40 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#DepositoryCoverExpirationDate
-	 * CorporateActionDate8.DepositoryCoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#DepositoryCoverExpirationDate
-	 * CorporateActionDate11.DepositoryCoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#DepositoryCoverExpirationDate
-	 * CorporateActionDate15.DepositoryCoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#DepositoryCoverExpirationDate
-	 * CorporateActionDate16.DepositoryCoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#DepositoryCoverExpirationDate
-	 * CorporateActionDate29.DepositoryCoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#DepositoryCoverExpirationDate
-	 * CorporateActionDate33.DepositoryCoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#DepositoryCoverExpirationDate
-	 * CorporateActionDate48.DepositoryCoverExpirationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#DepositoryCoverExpirationDate
-	 * CorporateActionDate55.DepositoryCoverExpirationDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate8.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate11.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate15.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate16.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate29.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate33.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate48.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate55.mmDepositoryCoverExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1382,22 +1399,23 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DepositoryCoverExpirationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDepositoryCoverExpirationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate8.DepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate11.DepositoryCoverExpirationDate,
-					com.tools20022.repository.msg.CorporateActionDate15.DepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate16.DepositoryCoverExpirationDate,
-					com.tools20022.repository.msg.CorporateActionDate29.DepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate33.DepositoryCoverExpirationDate,
-					com.tools20022.repository.msg.CorporateActionDate48.DepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate55.DepositoryCoverExpirationDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate8.mmDepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate11.mmDepositoryCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate15.mmDepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate16.mmDepositoryCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate29.mmDepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate33.mmDepositoryCoverExpirationDate,
+					com.tools20022.repository.msg.CorporateActionDate48.mmDepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate55.mmDepositoryCoverExpirationDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DepositoryCoverExpirationDate";
 			definition = "The last date/tiime that a participant of the depository can deliver securities that it had elected on and/or previously protected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime responseDeadline;
 	/**
 	 * Date on which the account servicer has set as the deadline to respond,
 	 * with instructions, to an outstanding event. This time is dependent on the
@@ -1409,64 +1427,64 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#ResponseDeadline
-	 * CorporateActionDate6.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#ResponseDeadline
-	 * CorporateActionDate10.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#ResponseDeadline
-	 * CorporateActionDate18.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#ResponseDeadline
-	 * CorporateActionDate19.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#ResponseDeadline
-	 * CorporateActionDate8.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#ResponseDeadline
-	 * CorporateActionDate11.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#ResponseDeadline
-	 * CorporateActionDate15.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#ResponseDeadline
-	 * CorporateActionDate16.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#ResponseDeadline
-	 * CorporateActionDate4.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption11#ResponseDeadline
-	 * CorporateActionOption11.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#ResponseDeadline
-	 * CorporateActionDate29.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#ResponseDeadline
-	 * CorporateActionDate33.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#ResponseDeadline
-	 * CorporateActionDate46.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#ResponseDeadline
-	 * CorporateActionDate48.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#ResponseDeadline
-	 * CorporateActionDate52.ResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#ResponseDeadline
-	 * CorporateActionDate55.ResponseDeadline}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#mmResponseDeadline
+	 * CorporateActionDate6.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#mmResponseDeadline
+	 * CorporateActionDate10.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#mmResponseDeadline
+	 * CorporateActionDate18.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#mmResponseDeadline
+	 * CorporateActionDate19.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#mmResponseDeadline
+	 * CorporateActionDate8.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#mmResponseDeadline
+	 * CorporateActionDate11.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#mmResponseDeadline
+	 * CorporateActionDate15.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#mmResponseDeadline
+	 * CorporateActionDate16.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmResponseDeadline
+	 * CorporateActionDate4.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption11#mmResponseDeadline
+	 * CorporateActionOption11.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#mmResponseDeadline
+	 * CorporateActionDate29.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#mmResponseDeadline
+	 * CorporateActionDate33.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#mmResponseDeadline
+	 * CorporateActionDate46.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#mmResponseDeadline
+	 * CorporateActionDate48.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#mmResponseDeadline
+	 * CorporateActionDate52.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmResponseDeadline
+	 * CorporateActionDate55.mmResponseDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1480,24 +1498,25 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ResponseDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmResponseDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate10.ResponseDeadline,
-					com.tools20022.repository.msg.CorporateActionDate18.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate19.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate8.ResponseDeadline,
-					com.tools20022.repository.msg.CorporateActionDate11.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate15.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate16.ResponseDeadline,
-					com.tools20022.repository.msg.CorporateActionDate4.ResponseDeadline, com.tools20022.repository.msg.CorporateActionOption11.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate29.ResponseDeadline,
-					com.tools20022.repository.msg.CorporateActionDate33.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate46.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate48.ResponseDeadline,
-					com.tools20022.repository.msg.CorporateActionDate52.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate55.ResponseDeadline);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate10.mmResponseDeadline,
+					com.tools20022.repository.msg.CorporateActionDate18.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate19.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate8.mmResponseDeadline,
+					com.tools20022.repository.msg.CorporateActionDate11.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate15.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate16.mmResponseDeadline,
+					com.tools20022.repository.msg.CorporateActionDate4.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionOption11.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate29.mmResponseDeadline,
+					com.tools20022.repository.msg.CorporateActionDate33.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate46.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate48.mmResponseDeadline,
+					com.tools20022.repository.msg.CorporateActionDate52.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate55.mmResponseDeadline);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ResponseDeadline";
 			definition = "Date on which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in an SLA.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime consentExpirationDate;
 	/**
 	 * Last date on which a holder can consent to the changes sought by the
 	 * corporation.
@@ -1508,19 +1527,19 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#ConsentExpirationDate
-	 * CorporateActionDate4.ConsentExpirationDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmConsentExpirationDate
+	 * CorporateActionDate4.mmConsentExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1534,19 +1553,20 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ConsentExpirationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmConsentExpirationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate4.ConsentExpirationDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate4.mmConsentExpirationDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConsentExpirationDate";
 			definition = "Last date on which a holder can consent to the changes sought by the corporation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime registrationDeadline;
 	/**
 	 * Date on which instructions to register or registration details will be
 	 * accepted.
@@ -1557,49 +1577,49 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#RegistrationDeadline
-	 * CorporateActionDate1.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#RegistrationDeadline
-	 * CorporateActionDate13.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#RegistrationDeadline
-	 * CorporateActionDate14.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#RegistrationDeadline
-	 * CorporateActionDate21.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#RegistrationDeadline
-	 * CorporateActionDate22.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#RegistrationDeadline
-	 * CorporateActionDate25.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#RegistrationDeadline
-	 * CorporateActionDate27.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#RegistrationDeadline
-	 * CorporateActionDate28.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#RegistrationDeadline
-	 * CorporateActionDate2.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#RegistrationDeadline
-	 * CorporateActionDate44.RegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#RegistrationDeadline
-	 * CorporateActionDate58.RegistrationDeadline}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmRegistrationDeadline
+	 * CorporateActionDate1.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmRegistrationDeadline
+	 * CorporateActionDate13.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmRegistrationDeadline
+	 * CorporateActionDate14.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmRegistrationDeadline
+	 * CorporateActionDate21.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmRegistrationDeadline
+	 * CorporateActionDate22.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmRegistrationDeadline
+	 * CorporateActionDate25.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmRegistrationDeadline
+	 * CorporateActionDate27.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmRegistrationDeadline
+	 * CorporateActionDate28.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmRegistrationDeadline
+	 * CorporateActionDate2.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmRegistrationDeadline
+	 * CorporateActionDate44.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmRegistrationDeadline
+	 * CorporateActionDate58.mmRegistrationDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1613,25 +1633,25 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RegistrationDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRegistrationDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(com.tools20022.repository.msg.CorporateActionDate1.RegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate13.RegistrationDeadline,
-							com.tools20022.repository.msg.CorporateActionDate14.RegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate21.RegistrationDeadline,
-							com.tools20022.repository.msg.CorporateActionDate22.RegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate25.RegistrationDeadline,
-							com.tools20022.repository.msg.CorporateActionDate27.RegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate28.RegistrationDeadline,
-							com.tools20022.repository.msg.CorporateActionDate2.RegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate44.RegistrationDeadline,
-							com.tools20022.repository.msg.CorporateActionDate58.RegistrationDeadline);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmRegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate13.mmRegistrationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate14.mmRegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate21.mmRegistrationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate22.mmRegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate25.mmRegistrationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate27.mmRegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate28.mmRegistrationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate2.mmRegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate44.mmRegistrationDeadline,
+					com.tools20022.repository.msg.CorporateActionDate58.mmRegistrationDeadline);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDeadline";
 			definition = "Date on which instructions to register or registration details will be accepted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime stockLendingDeadline;
 	/**
 	 * Date or date and time that the account servicer has set as the deadline
 	 * to respond with instructions to an event for which the underlying
@@ -1643,34 +1663,34 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#StockLendingDeadline
-	 * CorporateActionDate29.StockLendingDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#StockLendingDeadline
-	 * CorporateActionDate33.StockLendingDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#StockLendingDeadline
-	 * CorporateActionDate48.StockLendingDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline1#StockLendingDeadline
-	 * BorrowerLendingDeadline1.StockLendingDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#StockLendingDeadline
-	 * CorporateActionDate55.StockLendingDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline2#StockLendingDeadline
-	 * BorrowerLendingDeadline2.StockLendingDeadline}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#mmStockLendingDeadline
+	 * CorporateActionDate29.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#mmStockLendingDeadline
+	 * CorporateActionDate33.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#mmStockLendingDeadline
+	 * CorporateActionDate48.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline1#mmStockLendingDeadline
+	 * BorrowerLendingDeadline1.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmStockLendingDeadline
+	 * CorporateActionDate55.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline2#mmStockLendingDeadline
+	 * BorrowerLendingDeadline2.mmStockLendingDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1684,21 +1704,22 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StockLendingDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStockLendingDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate29.StockLendingDeadline, com.tools20022.repository.msg.CorporateActionDate33.StockLendingDeadline,
-					com.tools20022.repository.msg.CorporateActionDate48.StockLendingDeadline, com.tools20022.repository.msg.BorrowerLendingDeadline1.StockLendingDeadline,
-					com.tools20022.repository.msg.CorporateActionDate55.StockLendingDeadline, com.tools20022.repository.msg.BorrowerLendingDeadline2.StockLendingDeadline);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate29.mmStockLendingDeadline, com.tools20022.repository.msg.CorporateActionDate33.mmStockLendingDeadline,
+					com.tools20022.repository.msg.CorporateActionDate48.mmStockLendingDeadline, com.tools20022.repository.msg.BorrowerLendingDeadline1.mmStockLendingDeadline,
+					com.tools20022.repository.msg.CorporateActionDate55.mmStockLendingDeadline, com.tools20022.repository.msg.BorrowerLendingDeadline2.mmStockLendingDeadline);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StockLendingDeadline";
 			definition = "Date or date and time that the account servicer has set as the deadline to respond with instructions to an event for which the underlying security is out on loan. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime consentRecordDate;
 	/**
 	 * Date used by the offeror to determine the beneficiary eligible to
 	 * participate in a consent based on the registered owner of the securities,
@@ -1714,19 +1735,19 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#ConsentRecordDate
-	 * CorporateActionDate4.ConsentRecordDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmConsentRecordDate
+	 * CorporateActionDate4.mmConsentRecordDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1740,19 +1761,20 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ConsentRecordDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmConsentRecordDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate4.ConsentRecordDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate4.mmConsentRecordDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConsentRecordDate";
 			definition = "Date used by the offeror to determine the beneficiary eligible to participate in a consent based on the registered owner of the securities, eg, beneficial owner of consent record. The consent record date qualifier is used to indicate that a record date only applies to a certain part of the offer, not the entire offer.\r\nThe consent record date is used to indicate that a record date only applies to a certain part of the offer, not the entire offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime earlyResponseDeadline;
 	/**
 	 * Date/time that the account servicer has set as the deadline to respond,
 	 * with instructions, to an outstanding event, giving the holder eligibility
@@ -1765,70 +1787,70 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#EarlyResponseDeadline
-	 * CorporateActionDate8.EarlyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#EarlyResponseDeadline
-	 * CorporateActionDate11.EarlyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#EarlyResponseDeadline
-	 * CorporateActionDate15.EarlyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#EarlyResponseDeadline
-	 * CorporateActionDate16.EarlyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#EarlyThirdPartyDeadline
-	 * CorporateActionDate1.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#EarlyThirdPartyDeadline
-	 * CorporateActionDate13.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#EarlyThirdPartyDeadline
-	 * CorporateActionDate14.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#EarlyThirdPartyDeadline
-	 * CorporateActionDate21.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#EarlyThirdPartyDeadline
-	 * CorporateActionDate22.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#EarlyThirdPartyDeadline
-	 * CorporateActionDate25.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#EarlyThirdPartyDeadline
-	 * CorporateActionDate27.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#EarlyThirdPartyDeadline
-	 * CorporateActionDate28.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#EarlyResponseDeadline
-	 * CorporateActionDate29.EarlyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#EarlyResponseDeadline
-	 * CorporateActionDate33.EarlyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#EarlyResponseDeadline
-	 * CorporateActionDate48.EarlyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#EarlyThirdPartyDeadline
-	 * CorporateActionDate44.EarlyThirdPartyDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#EarlyResponseDeadline
-	 * CorporateActionDate55.EarlyResponseDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#EarlyThirdPartyDeadline
-	 * CorporateActionDate58.EarlyThirdPartyDeadline}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#mmEarlyResponseDeadline
+	 * CorporateActionDate8.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#mmEarlyResponseDeadline
+	 * CorporateActionDate11.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#mmEarlyResponseDeadline
+	 * CorporateActionDate15.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#mmEarlyResponseDeadline
+	 * CorporateActionDate16.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate1.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate13.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate14.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate21.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate22.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate25.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate27.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate28.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#mmEarlyResponseDeadline
+	 * CorporateActionDate29.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#mmEarlyResponseDeadline
+	 * CorporateActionDate33.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#mmEarlyResponseDeadline
+	 * CorporateActionDate48.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate44.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmEarlyResponseDeadline
+	 * CorporateActionDate55.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate58.mmEarlyThirdPartyDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1842,27 +1864,28 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EarlyResponseDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEarlyResponseDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate8.EarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate11.EarlyResponseDeadline,
-					com.tools20022.repository.msg.CorporateActionDate15.EarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate16.EarlyResponseDeadline,
-					com.tools20022.repository.msg.CorporateActionDate1.EarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate13.EarlyThirdPartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate14.EarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate21.EarlyThirdPartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate22.EarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate25.EarlyThirdPartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate27.EarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate28.EarlyThirdPartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate29.EarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate33.EarlyResponseDeadline,
-					com.tools20022.repository.msg.CorporateActionDate48.EarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate44.EarlyThirdPartyDeadline,
-					com.tools20022.repository.msg.CorporateActionDate55.EarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate58.EarlyThirdPartyDeadline);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate8.mmEarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate11.mmEarlyResponseDeadline,
+					com.tools20022.repository.msg.CorporateActionDate15.mmEarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate16.mmEarlyResponseDeadline,
+					com.tools20022.repository.msg.CorporateActionDate1.mmEarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate13.mmEarlyThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate14.mmEarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate21.mmEarlyThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate22.mmEarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate25.mmEarlyThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate27.mmEarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate28.mmEarlyThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate29.mmEarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate33.mmEarlyResponseDeadline,
+					com.tools20022.repository.msg.CorporateActionDate48.mmEarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate44.mmEarlyThirdPartyDeadline,
+					com.tools20022.repository.msg.CorporateActionDate55.mmEarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate58.mmEarlyThirdPartyDeadline);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EarlyResponseDeadline";
 			definition = "Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in an SLA.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime guaranteedParticipationDate;
 	/**
 	 * Last date/time by which a buying counterparty to a trade can be sure that
 	 * it will have the right to participate in an event.
@@ -1873,49 +1896,49 @@ public class CorporateActionDeadline extends Deadline {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#GuaranteedParticipationDate
-	 * CorporateActionDate1.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#GuaranteedParticipationDate
-	 * CorporateActionDate13.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#GuaranteedParticipationDate
-	 * CorporateActionDate14.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#GuaranteedParticipationDate
-	 * CorporateActionDate21.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#GuaranteedParticipationDate
-	 * CorporateActionDate22.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#GuaranteedParticipationDate
-	 * CorporateActionDate25.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#GuaranteedParticipationDate
-	 * CorporateActionDate27.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#GuaranteedParticipationDate
-	 * CorporateActionDate28.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#GuaranteedParticipationDate
-	 * CorporateActionDate2.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#GuaranteedParticipationDate
-	 * CorporateActionDate44.GuaranteedParticipationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#GuaranteedParticipationDate
-	 * CorporateActionDate58.GuaranteedParticipationDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmGuaranteedParticipationDate
+	 * CorporateActionDate1.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmGuaranteedParticipationDate
+	 * CorporateActionDate13.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmGuaranteedParticipationDate
+	 * CorporateActionDate14.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmGuaranteedParticipationDate
+	 * CorporateActionDate21.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmGuaranteedParticipationDate
+	 * CorporateActionDate22.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmGuaranteedParticipationDate
+	 * CorporateActionDate25.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmGuaranteedParticipationDate
+	 * CorporateActionDate27.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmGuaranteedParticipationDate
+	 * CorporateActionDate28.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmGuaranteedParticipationDate
+	 * CorporateActionDate2.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmGuaranteedParticipationDate
+	 * CorporateActionDate44.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmGuaranteedParticipationDate
+	 * CorporateActionDate58.mmGuaranteedParticipationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1929,21 +1952,21 @@ public class CorporateActionDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute GuaranteedParticipationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmGuaranteedParticipationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.GuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate13.GuaranteedParticipationDate,
-					com.tools20022.repository.msg.CorporateActionDate14.GuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate21.GuaranteedParticipationDate,
-					com.tools20022.repository.msg.CorporateActionDate22.GuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate25.GuaranteedParticipationDate,
-					com.tools20022.repository.msg.CorporateActionDate27.GuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate28.GuaranteedParticipationDate,
-					com.tools20022.repository.msg.CorporateActionDate2.GuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate44.GuaranteedParticipationDate,
-					com.tools20022.repository.msg.CorporateActionDate58.GuaranteedParticipationDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmGuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate13.mmGuaranteedParticipationDate,
+					com.tools20022.repository.msg.CorporateActionDate14.mmGuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate21.mmGuaranteedParticipationDate,
+					com.tools20022.repository.msg.CorporateActionDate22.mmGuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate25.mmGuaranteedParticipationDate,
+					com.tools20022.repository.msg.CorporateActionDate27.mmGuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate28.mmGuaranteedParticipationDate,
+					com.tools20022.repository.msg.CorporateActionDate2.mmGuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate44.mmGuaranteedParticipationDate,
+					com.tools20022.repository.msg.CorporateActionDate58.mmGuaranteedParticipationDate);
 			elementContext_lazy = () -> CorporateActionDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedParticipationDate";
 			definition = "Last date/time by which a buying counterparty to a trade can be sure that it will have the right to participate in an event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -1951,25 +1974,201 @@ public class CorporateActionDeadline extends Deadline {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeadline";
 				definition = "Time constraints for processing corporate actions.";
 				superType_lazy = () -> Deadline.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionDeadline.RevocabilityPeriod, com.tools20022.repository.entity.CorporateActionDeadline.ProtectDate,
-						com.tools20022.repository.entity.CorporateActionDeadline.TradingSuspendedDate, com.tools20022.repository.entity.CorporateActionDeadline.ThirdPartyDeadline,
-						com.tools20022.repository.entity.CorporateActionDeadline.CertificationDeadline, com.tools20022.repository.entity.CorporateActionDeadline.DeadlineToSplit,
-						com.tools20022.repository.entity.CorporateActionDeadline.SpecialExDate, com.tools20022.repository.entity.CorporateActionDeadline.DeadlineForTaxBreakdownInstruction,
-						com.tools20022.repository.entity.CorporateActionDeadline.EarlyClosingDate, com.tools20022.repository.entity.CorporateActionDeadline.RecordDate,
-						com.tools20022.repository.entity.CorporateActionDeadline.CoverExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.ElectionToCounterpartyDeadline,
-						com.tools20022.repository.entity.CorporateActionDeadline.ExpiryDate, com.tools20022.repository.entity.CorporateActionDeadline.EarlyThirdPartyDeadline,
-						com.tools20022.repository.entity.CorporateActionDeadline.DepositoryCoverExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.ResponseDeadline,
-						com.tools20022.repository.entity.CorporateActionDeadline.ConsentExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.RegistrationDeadline,
-						com.tools20022.repository.entity.CorporateActionDeadline.StockLendingDeadline, com.tools20022.repository.entity.CorporateActionDeadline.ConsentRecordDate,
-						com.tools20022.repository.entity.CorporateActionDeadline.EarlyResponseDeadline, com.tools20022.repository.entity.CorporateActionDeadline.GuaranteedParticipationDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionDeadline.mmRevocabilityPeriod, com.tools20022.repository.entity.CorporateActionDeadline.mmProtectDate,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmTradingSuspendedDate, com.tools20022.repository.entity.CorporateActionDeadline.mmThirdPartyDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmCertificationDeadline, com.tools20022.repository.entity.CorporateActionDeadline.mmDeadlineToSplit,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmSpecialExDate, com.tools20022.repository.entity.CorporateActionDeadline.mmDeadlineForTaxBreakdownInstruction,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyClosingDate, com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmCoverExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.mmElectionToCounterpartyDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmExpiryDate, com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyThirdPartyDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmDepositoryCoverExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.mmResponseDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmConsentExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.mmRegistrationDeadline,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmStockLendingDeadline, com.tools20022.repository.entity.CorporateActionDeadline.mmConsentRecordDate,
+						com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyResponseDeadline, com.tools20022.repository.entity.CorporateActionDeadline.mmGuaranteedParticipationDate);
 				derivationComponent_lazy = () -> Arrays.asList(BorrowerLendingDeadline1.mmObject(), BorrowerLendingDeadline2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateTimePeriod getRevocabilityPeriod() {
+		return revocabilityPeriod;
+	}
+
+	public void setRevocabilityPeriod(com.tools20022.repository.entity.DateTimePeriod revocabilityPeriod) {
+		this.revocabilityPeriod = revocabilityPeriod;
+	}
+
+	public ISODateTime getProtectDate() {
+		return protectDate;
+	}
+
+	public void setProtectDate(ISODateTime protectDate) {
+		this.protectDate = protectDate;
+	}
+
+	public ISODateTime getTradingSuspendedDate() {
+		return tradingSuspendedDate;
+	}
+
+	public void setTradingSuspendedDate(ISODateTime tradingSuspendedDate) {
+		this.tradingSuspendedDate = tradingSuspendedDate;
+	}
+
+	public ISODateTime getThirdPartyDeadline() {
+		return thirdPartyDeadline;
+	}
+
+	public void setThirdPartyDeadline(ISODateTime thirdPartyDeadline) {
+		this.thirdPartyDeadline = thirdPartyDeadline;
+	}
+
+	public ISODateTime getCertificationDeadline() {
+		return certificationDeadline;
+	}
+
+	public void setCertificationDeadline(ISODateTime certificationDeadline) {
+		this.certificationDeadline = certificationDeadline;
+	}
+
+	public ISODateTime getDeadlineToSplit() {
+		return deadlineToSplit;
+	}
+
+	public void setDeadlineToSplit(ISODateTime deadlineToSplit) {
+		this.deadlineToSplit = deadlineToSplit;
+	}
+
+	public ISODateTime getSpecialExDate() {
+		return specialExDate;
+	}
+
+	public void setSpecialExDate(ISODateTime specialExDate) {
+		this.specialExDate = specialExDate;
+	}
+
+	public ISODateTime getDeadlineForTaxBreakdownInstruction() {
+		return deadlineForTaxBreakdownInstruction;
+	}
+
+	public void setDeadlineForTaxBreakdownInstruction(ISODateTime deadlineForTaxBreakdownInstruction) {
+		this.deadlineForTaxBreakdownInstruction = deadlineForTaxBreakdownInstruction;
+	}
+
+	public ISODateTime getEarlyClosingDate() {
+		return earlyClosingDate;
+	}
+
+	public void setEarlyClosingDate(ISODateTime earlyClosingDate) {
+		this.earlyClosingDate = earlyClosingDate;
+	}
+
+	public ISODateTime getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(ISODateTime recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public ISODateTime getCoverExpirationDate() {
+		return coverExpirationDate;
+	}
+
+	public void setCoverExpirationDate(ISODateTime coverExpirationDate) {
+		this.coverExpirationDate = coverExpirationDate;
+	}
+
+	public ISODateTime getElectionToCounterpartyDeadline() {
+		return electionToCounterpartyDeadline;
+	}
+
+	public void setElectionToCounterpartyDeadline(ISODateTime electionToCounterpartyDeadline) {
+		this.electionToCounterpartyDeadline = electionToCounterpartyDeadline;
+	}
+
+	public ISODateTime getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(ISODateTime expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public ISODateTime getEarlyThirdPartyDeadline() {
+		return earlyThirdPartyDeadline;
+	}
+
+	public void setEarlyThirdPartyDeadline(ISODateTime earlyThirdPartyDeadline) {
+		this.earlyThirdPartyDeadline = earlyThirdPartyDeadline;
+	}
+
+	public ISODateTime getDepositoryCoverExpirationDate() {
+		return depositoryCoverExpirationDate;
+	}
+
+	public void setDepositoryCoverExpirationDate(ISODateTime depositoryCoverExpirationDate) {
+		this.depositoryCoverExpirationDate = depositoryCoverExpirationDate;
+	}
+
+	public ISODateTime getResponseDeadline() {
+		return responseDeadline;
+	}
+
+	public void setResponseDeadline(ISODateTime responseDeadline) {
+		this.responseDeadline = responseDeadline;
+	}
+
+	public ISODateTime getConsentExpirationDate() {
+		return consentExpirationDate;
+	}
+
+	public void setConsentExpirationDate(ISODateTime consentExpirationDate) {
+		this.consentExpirationDate = consentExpirationDate;
+	}
+
+	public ISODateTime getRegistrationDeadline() {
+		return registrationDeadline;
+	}
+
+	public void setRegistrationDeadline(ISODateTime registrationDeadline) {
+		this.registrationDeadline = registrationDeadline;
+	}
+
+	public ISODateTime getStockLendingDeadline() {
+		return stockLendingDeadline;
+	}
+
+	public void setStockLendingDeadline(ISODateTime stockLendingDeadline) {
+		this.stockLendingDeadline = stockLendingDeadline;
+	}
+
+	public ISODateTime getConsentRecordDate() {
+		return consentRecordDate;
+	}
+
+	public void setConsentRecordDate(ISODateTime consentRecordDate) {
+		this.consentRecordDate = consentRecordDate;
+	}
+
+	public ISODateTime getEarlyResponseDeadline() {
+		return earlyResponseDeadline;
+	}
+
+	public void setEarlyResponseDeadline(ISODateTime earlyResponseDeadline) {
+		this.earlyResponseDeadline = earlyResponseDeadline;
+	}
+
+	public ISODateTime getGuaranteedParticipationDate() {
+		return guaranteedParticipationDate;
+	}
+
+	public void setGuaranteedParticipationDate(ISODateTime guaranteedParticipationDate) {
+		this.guaranteedParticipationDate = guaranteedParticipationDate;
 	}
 }

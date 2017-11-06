@@ -43,15 +43,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails#SystemIdentification
- * RiskManagementLimitIdentificationDetails.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails#mmSystemIdentification
+ * RiskManagementLimitIdentificationDetails.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails#Type
- * RiskManagementLimitIdentificationDetails.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails#mmType
+ * RiskManagementLimitIdentificationDetails.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails#BilateralLimitCounterpartyIdentification
+ * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails#mmBilateralLimitCounterpartyIdentification
  * RiskManagementLimitIdentificationDetails.
- * BilateralLimitCounterpartyIdentification}</li>
+ * mmBilateralLimitCounterpartyIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RiskManagementLimitIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemIdentificationChoice systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -90,8 +91,8 @@ public class RiskManagementLimitIdentificationDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CashClearingSystem
-	 * TransactionAdministrator.CashClearingSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashClearingSystem
+	 * TransactionAdministrator.mmCashClearingSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class RiskManagementLimitIdentificationDetails {
 	 * definition} = "Identification of a particular cash clearing system. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.CashClearingSystem;
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	protected RiskLimitType1Code type;
 	/**
 	 * Nature of the risk management limit.
 	 * <p>
@@ -137,7 +139,7 @@ public class RiskManagementLimitIdentificationDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Type Limit.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmType Limit.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +158,21 @@ public class RiskManagementLimitIdentificationDetails {
 	 * definition} = "Nature of the risk management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmType;
 			componentContext_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of the risk management limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RiskLimitType1Code.mmObject();
 		}
 	};
+	protected MemberIdentificationChoice bilateralLimitCounterpartyIdentification;
 	/**
 	 * Identification of the system member for which the limit is established.
 	 * <p>
@@ -183,8 +186,8 @@ public class RiskManagementLimitIdentificationDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,17 +208,17 @@ public class RiskManagementLimitIdentificationDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BilateralLimitCounterpartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterpartyIdentification";
 			definition = "Identification of the system member for which the limit is established.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
 		}
 	};
@@ -223,15 +226,39 @@ public class RiskManagementLimitIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.SystemIdentification, com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.Type,
-						com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.BilateralLimitCounterpartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmSystemIdentification, com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmType,
+						com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmBilateralLimitCounterpartyIdentification);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RiskManagementLimitIdentificationDetails";
 				definition = "Cash management feature limiting the maximum risk a party accepts to take with respect to a counterparty or a set of counterparties. A risk management limit is either bilateral, ie, for a counterparty, or multilateral, ie, for a set of counterparties or all other members in a system.The limit may also apply to sponsored members, ie, indirect members. In principle, a risk management limit is calculated on the net position between two members and is expressed as a credit or debit limit, from the point of view of the party setting the limit.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemIdentificationChoice getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(SystemIdentificationChoice systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public RiskLimitType1Code getType() {
+		return type;
+	}
+
+	public void setType(RiskLimitType1Code type) {
+		this.type = type;
+	}
+
+	public MemberIdentificationChoice getBilateralLimitCounterpartyIdentification() {
+		return bilateralLimitCounterpartyIdentification;
+	}
+
+	public void setBilateralLimitCounterpartyIdentification(MemberIdentificationChoice bilateralLimitCounterpartyIdentification) {
+		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
 	}
 }

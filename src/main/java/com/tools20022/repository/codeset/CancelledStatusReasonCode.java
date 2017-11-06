@@ -31,38 +31,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledByYourself
- * CancelledStatusReasonCode.CancelledByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByYourself
+ * CancelledStatusReasonCode.mmCancelledByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledBySystem
- * CancelledStatusReasonCode.CancelledBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledBySystem
+ * CancelledStatusReasonCode.mmCancelledBySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledByAgent
- * CancelledStatusReasonCode.CancelledByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByAgent
+ * CancelledStatusReasonCode.mmCancelledByAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#Other
- * CancelledStatusReasonCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmOther
+ * CancelledStatusReasonCode.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledByHub
- * CancelledStatusReasonCode.CancelledByHub}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByHub
+ * CancelledStatusReasonCode.mmCancelledByHub}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledByInstructingParty
- * CancelledStatusReasonCode.CancelledByInstructingParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByInstructingParty
+ * CancelledStatusReasonCode.mmCancelledByInstructingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#EndOfLife
- * CancelledStatusReasonCode.EndOfLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmEndOfLife
+ * CancelledStatusReasonCode.mmEndOfLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledByOther
- * CancelledStatusReasonCode.CancelledByOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByOther
+ * CancelledStatusReasonCode.mmCancelledByOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledByTransferAgent
- * CancelledStatusReasonCode.CancelledByTransferAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByTransferAgent
+ * CancelledStatusReasonCode.mmCancelledByTransferAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledByClient
- * CancelledStatusReasonCode.CancelledByClient}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByClient
+ * CancelledStatusReasonCode.mmCancelledByClient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#CancelledByIntermediary
- * CancelledStatusReasonCode.CancelledByIntermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode#mmCancelledByIntermediary
+ * CancelledStatusReasonCode.mmCancelledByIntermediary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -84,8 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -128,7 +128,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Transaction is cancelled by yourself."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByYourself = new MMCode() {
+	public static final MMCode mmCancelledByYourself = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancelledByYourself";
@@ -158,7 +158,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Transaction is cancelled by the system."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledBySystem = new MMCode() {
+	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancelledBySystem";
@@ -188,7 +188,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Transaction is cancelled by the agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByAgent = new MMCode() {
+	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancelledByAgent";
@@ -218,7 +218,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Other (see additional information)."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -248,7 +248,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Transaction is cancelled by the hub."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByHub = new MMCode() {
+	public static final MMCode mmCancelledByHub = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByHub";
@@ -278,7 +278,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Transaction is cancelled by the instructing party."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByInstructingParty = new MMCode() {
+	public static final MMCode mmCancelledByInstructingParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByInstructingParty";
@@ -311,7 +311,7 @@ public class CancelledStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfLife = new MMCode() {
+	public static final MMCode mmEndOfLife = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfLife";
@@ -344,7 +344,7 @@ public class CancelledStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByOther = new MMCode() {
+	public static final MMCode mmCancelledByOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByOther";
@@ -374,7 +374,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Transaction is cancelled by the transfer agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByTransferAgent = new MMCode() {
+	public static final MMCode mmCancelledByTransferAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByTransferAgent";
@@ -404,7 +404,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Transaction is cancelled by the client."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByClient = new MMCode() {
+	public static final MMCode mmCancelledByClient = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByClient";
@@ -434,7 +434,7 @@ public class CancelledStatusReasonCode {
 	 * definition} = "Transaction is cancelled by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByIntermediary = new MMCode() {
+	public static final MMCode mmCancelledByIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByIntermediary";
@@ -447,17 +447,17 @@ public class CancelledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReasonCode";
 				definition = "Specifies the underlying reason for the cancellation of the associated transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledBySystem,
-						com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledByAgent, com.tools20022.repository.codeset.CancelledStatusReasonCode.Other,
-						com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledByHub, com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledByInstructingParty,
-						com.tools20022.repository.codeset.CancelledStatusReasonCode.EndOfLife, com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledByOther,
-						com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledByTransferAgent, com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledByClient,
-						com.tools20022.repository.codeset.CancelledStatusReasonCode.CancelledByIntermediary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledBySystem,
+						com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledByAgent, com.tools20022.repository.codeset.CancelledStatusReasonCode.mmOther,
+						com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledByHub, com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledByInstructingParty,
+						com.tools20022.repository.codeset.CancelledStatusReasonCode.mmEndOfLife, com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledByOther,
+						com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledByTransferAgent, com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledByClient,
+						com.tools20022.repository.codeset.CancelledStatusReasonCode.mmCancelledByIntermediary);
 				derivation_lazy = () -> Arrays.asList(CancelledStatusReason1Code.mmObject(), CancelledStatusReason2Code.mmObject(), CancellationCompleteStatusReason1Code.mmObject(), CancelledStatusReason3Code.mmObject(),
 						CancelledStatusReason8Code.mmObject());
 			}

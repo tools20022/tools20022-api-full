@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSActionIdentification3#ActionType
- * TMSActionIdentification3.ActionType}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSActionIdentification3#mmActionType
+ * TMSActionIdentification3.mmActionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSActionIdentification3#DataSetIdentification
- * TMSActionIdentification3.DataSetIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSActionIdentification3#mmDataSetIdentification
+ * TMSActionIdentification3.mmDataSetIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TMSActionIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TerminalManagementAction1Code actionType;
 	/**
 	 * Types of terminal management action performed by a point of interaction.
 	 * <p>
@@ -91,8 +92,8 @@ public class TMSActionIdentification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#Type
-	 * TerminalManagementAction.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmType
+	 * TerminalManagementAction.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,33 +116,34 @@ public class TMSActionIdentification3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification4#ActionType
-	 * TMSActionIdentification4.ActionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification4#mmActionType
+	 * TMSActionIdentification4.mmActionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification2#ActionType
-	 * TMSActionIdentification2.ActionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification2#mmActionType
+	 * TMSActionIdentification2.mmActionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmType;
 			componentContext_lazy = () -> TMSActionIdentification3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.Type;
 			isDerived = false;
 			xmlTag = "ActnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Types of terminal management action performed by a point of interaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification2.ActionType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSActionIdentification4.ActionType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSActionIdentification4.mmActionType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification2.mmActionType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
+	protected DataSetIdentification4 dataSetIdentification;
 	/**
 	 * Data set on which the action has been performed.
 	 * <p>
@@ -170,18 +172,18 @@ public class TMSActionIdentification3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification4#DataSetIdentification
-	 * TMSActionIdentification4.DataSetIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification4#mmDataSetIdentification
+	 * TMSActionIdentification4.mmDataSetIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification2#DataSetIdentification
-	 * TMSActionIdentification2.DataSetIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification2#mmDataSetIdentification
+	 * TMSActionIdentification2.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TMSActionIdentification3.mmObject();
 			isDerived = false;
@@ -189,28 +191,44 @@ public class TMSActionIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Data set on which the action has been performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification2.DataSetIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSActionIdentification4.DataSetIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSActionIdentification4.mmDataSetIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification2.mmDataSetIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> DataSetIdentification4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSActionIdentification3.ActionType, com.tools20022.repository.msg.TMSActionIdentification3.DataSetIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSActionIdentification3.mmActionType, com.tools20022.repository.msg.TMSActionIdentification3.mmDataSetIdentification);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TMSActionIdentification3";
 				definition = "Result of an individual terminal management action by the point of interaction.";
-				previousVersion_lazy = () -> TMSActionIdentification2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TMSActionIdentification4.mmObject());
+				previousVersion_lazy = () -> TMSActionIdentification2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TerminalManagementAction1Code getActionType() {
+		return actionType;
+	}
+
+	public void setActionType(TerminalManagementAction1Code actionType) {
+		this.actionType = actionType;
+	}
+
+	public DataSetIdentification4 getDataSetIdentification() {
+		return dataSetIdentification;
+	}
+
+	public void setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification4 dataSetIdentification) {
+		this.dataSetIdentification = dataSetIdentification;
 	}
 }

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemStatusDetails1#Status
- * SystemStatusDetails1.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemStatusDetails1#mmStatus
+ * SystemStatusDetails1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemStatusDetails1#ValidityTime
- * SystemStatusDetails1.ValidityTime}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemStatusDetails1#mmValidityTime
+ * SystemStatusDetails1.mmValidityTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemStatusDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemStatus2Code status;
 	/**
 	 * Current status of a system.
 	 * <p>
@@ -77,8 +78,8 @@ public class SystemStatusDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemStatus#Status
-	 * SystemStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemStatus#mmStatus
+	 * SystemStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class SystemStatusDetails1 {
 	 * definition} = "Current status of a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmStatus;
 			componentContext_lazy = () -> SystemStatusDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Current status of a system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SystemStatus2Code.mmObject();
 		}
 	};
+	protected DateTimePeriodChoice validityTime;
 	/**
 	 * Period of time during which the status of the system is valid.
 	 * <p>
@@ -124,8 +126,8 @@ public class SystemStatusDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#ValidityTime
-	 * Status.ValidityTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmValidityTime
+	 * Status.mmValidityTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class SystemStatusDetails1 {
 	 * "Period of time during which the status of the system is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidityTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmValidityTime;
 			componentContext_lazy = () -> SystemStatusDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.ValidityTime;
 			isDerived = false;
 			xmlTag = "VldtyTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityTime";
 			definition = "Period of time during which the status of the system is valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class SystemStatusDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemStatusDetails1.Status, com.tools20022.repository.msg.SystemStatusDetails1.ValidityTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemStatusDetails1.mmStatus, com.tools20022.repository.msg.SystemStatusDetails1.mmValidityTime);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemStatusDetails1";
 				definition = "Status of a system and the period of time during which the status is valid.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemStatus2Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(SystemStatus2Code status) {
+		this.status = status;
+	}
+
+	public DateTimePeriodChoice getValidityTime() {
+		return validityTime;
+	}
+
+	public void setValidityTime(DateTimePeriodChoice validityTime) {
+		this.validityTime = validityTime;
 	}
 }

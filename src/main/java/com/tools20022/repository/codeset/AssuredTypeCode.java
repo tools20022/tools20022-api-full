@@ -30,14 +30,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#Buyer
- * AssuredTypeCode.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#Seller
- * AssuredTypeCode.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#BuyerBank
- * AssuredTypeCode.BuyerBank}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#SellerBank
- * AssuredTypeCode.SellerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmBuyer
+ * AssuredTypeCode.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmSeller
+ * AssuredTypeCode.mmSeller}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmBuyerBank
+ * AssuredTypeCode.mmBuyerBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmSellerBank
+ * AssuredTypeCode.mmSellerBank}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +96,7 @@ public class AssuredTypeCode {
 	 * definition} = "The buyer should be the assured."</li>
 	 * </ul>
 	 */
-	public static final MMCode Buyer = new MMCode() {
+	public static final MMCode mmBuyer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
@@ -124,7 +126,7 @@ public class AssuredTypeCode {
 	 * definition} = "The seller should be the assured."</li>
 	 * </ul>
 	 */
-	public static final MMCode Seller = new MMCode() {
+	public static final MMCode mmSeller = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
@@ -154,7 +156,7 @@ public class AssuredTypeCode {
 	 * definition} = "The buyer's bank should be the assured."</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyerBank = new MMCode() {
+	public static final MMCode mmBuyerBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
@@ -184,7 +186,7 @@ public class AssuredTypeCode {
 	 * definition} = "The seller's bank should be the assured."</li>
 	 * </ul>
 	 */
-	public static final MMCode SellerBank = new MMCode() {
+	public static final MMCode mmSellerBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
@@ -197,13 +199,13 @@ public class AssuredTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssuredTypeCode";
 				definition = "Specifies which type of party should be the assured on the insurance certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssuredTypeCode.Buyer, com.tools20022.repository.codeset.AssuredTypeCode.Seller, com.tools20022.repository.codeset.AssuredTypeCode.BuyerBank,
-						com.tools20022.repository.codeset.AssuredTypeCode.SellerBank);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssuredTypeCode.mmBuyer, com.tools20022.repository.codeset.AssuredTypeCode.mmSeller, com.tools20022.repository.codeset.AssuredTypeCode.mmBuyerBank,
+						com.tools20022.repository.codeset.AssuredTypeCode.mmSellerBank);
 				derivation_lazy = () -> Arrays.asList(AssuredType1Code.mmObject());
 			}
 		});

@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAvailability2#Quantity
- * QuantityAndAvailability2.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAvailability2#mmQuantity
+ * QuantityAndAvailability2.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAvailability2#AvailabilityIndicator
- * QuantityAndAvailability2.AvailabilityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAvailability2#mmAvailabilityIndicator
+ * QuantityAndAvailability2.mmAvailabilityIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuantityAndAvailability2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity15Choice quantity;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -90,7 +91,7 @@ public class QuantityAndAvailability2 {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> QuantityAndAvailability2.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class QuantityAndAvailability2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of securities in the sub-balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator availabilityIndicator;
 	/**
 	 * Indicates whether the quantity of securities on the sub-balance is
 	 * available.
@@ -135,7 +137,7 @@ public class QuantityAndAvailability2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AvailabilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAvailabilityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuantityAndAvailability2.mmObject();
 			isDerived = false;
@@ -143,8 +145,8 @@ public class QuantityAndAvailability2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailabilityIndicator";
 			definition = "Indicates whether the quantity of securities on the sub-balance is available.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -152,13 +154,29 @@ public class QuantityAndAvailability2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAvailability2.Quantity, com.tools20022.repository.msg.QuantityAndAvailability2.AvailabilityIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAvailability2.mmQuantity, com.tools20022.repository.msg.QuantityAndAvailability2.mmAvailabilityIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuantityAndAvailability2";
 				definition = "Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity15Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantity15Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public YesNoIndicator getAvailabilityIndicator() {
+		return availabilityIndicator;
+	}
+
+	public void setAvailabilityIndicator(YesNoIndicator availabilityIndicator) {
+		this.availabilityIndicator = availabilityIndicator;
 	}
 }

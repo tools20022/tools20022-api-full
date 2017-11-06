@@ -29,12 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CILPaymentTypeCode#Fixed
- * CILPaymentTypeCode.Fixed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CILPaymentTypeCode#Hold
- * CILPaymentTypeCode.Hold}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CILPaymentTypeCode#PayCIL
- * CILPaymentTypeCode.PayCIL}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CILPaymentTypeCode#mmFixed
+ * CILPaymentTypeCode.mmFixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CILPaymentTypeCode#mmHold
+ * CILPaymentTypeCode.mmHold}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CILPaymentTypeCode#mmPayCIL
+ * CILPaymentTypeCode.mmPayCIL}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +90,7 @@ public class CILPaymentTypeCode {
 	 * definition} = "Event pays daily at fixed rate."</li>
 	 * </ul>
 	 */
-	public static final MMCode Fixed = new MMCode() {
+	public static final MMCode mmFixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
@@ -119,7 +120,7 @@ public class CILPaymentTypeCode {
 	 * definition} = "Price can fluctuate. Payment is held until released."</li>
 	 * </ul>
 	 */
-	public static final MMCode Hold = new MMCode() {
+	public static final MMCode mmHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hold";
@@ -149,7 +150,7 @@ public class CILPaymentTypeCode {
 	 * definition} = "Pays on same day as convert/exercise instructions."</li>
 	 * </ul>
 	 */
-	public static final MMCode PayCIL = new MMCode() {
+	public static final MMCode mmPayCIL = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayCIL";
@@ -162,12 +163,12 @@ public class CILPaymentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CILPaymentTypeCode";
 				definition = "Specifies cash in lieu payment type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CILPaymentTypeCode.Fixed, com.tools20022.repository.codeset.CILPaymentTypeCode.Hold, com.tools20022.repository.codeset.CILPaymentTypeCode.PayCIL);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CILPaymentTypeCode.mmFixed, com.tools20022.repository.codeset.CILPaymentTypeCode.mmHold, com.tools20022.repository.codeset.CILPaymentTypeCode.mmPayCIL);
 				derivation_lazy = () -> Arrays.asList(CILPaymentType1Code.mmObject());
 			}
 		});

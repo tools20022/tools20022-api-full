@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ErrorHandling4#Error
- * ErrorHandling4.Error}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ErrorHandling4#Description
- * ErrorHandling4.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorHandling4#mmError
+ * ErrorHandling4.mmError}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorHandling4#mmDescription
+ * ErrorHandling4.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ErrorHandling4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ErrorHandling2Choice error;
 	/**
 	 * Specification of the error, in coded or proprietary form.
 	 * <p>
@@ -90,11 +91,11 @@ public class ErrorHandling4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ErrorHandling3#Error
-	 * ErrorHandling3.Error}</li>
+	 * {@linkplain com.tools20022.repository.msg.ErrorHandling3#mmError
+	 * ErrorHandling3.mmError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Error = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ErrorHandling4.mmObject();
 			isDerived = false;
@@ -102,13 +103,14 @@ public class ErrorHandling4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Error";
 			definition = "Specification of the error, in coded or proprietary form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.Error;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmError;
 			maxOccurs = 1;
-			type_lazy = () -> ErrorHandling2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ErrorHandling2Choice.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Specification of the error, in free format.
 	 * <p>
@@ -136,11 +138,11 @@ public class ErrorHandling4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ErrorHandling3#Description
-	 * ErrorHandling3.Description}</li>
+	 * {@linkplain com.tools20022.repository.msg.ErrorHandling3#mmDescription
+	 * ErrorHandling3.mmDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ErrorHandling4.mmObject();
 			isDerived = false;
@@ -148,9 +150,9 @@ public class ErrorHandling4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Specification of the error, in free format.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.Description;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmDescription;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -158,8 +160,8 @@ public class ErrorHandling4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling4.Error, com.tools20022.repository.msg.ErrorHandling4.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling4.mmError, com.tools20022.repository.msg.ErrorHandling4.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ErrorHandling4";
 				definition = "Specifies the error resulting from the processing of a request.";
@@ -167,5 +169,21 @@ public class ErrorHandling4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ErrorHandling2Choice getError() {
+		return error;
+	}
+
+	public void setError(ErrorHandling2Choice error) {
+		this.error = error;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionPartyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code#Seller
- * OptionParty1Code.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code#Buyer
- * OptionParty1Code.Buyer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code#mmSeller
+ * OptionParty1Code.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code#mmBuyer
+ * OptionParty1Code.mmBuyer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class OptionParty1Code extends OptionPartyCode {
 	 * name} = "Seller"</li>
 	 * </ul>
 	 */
-	public static final MMCode Seller = new MMCode() {
+	public static final MMCode mmSeller = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
@@ -102,7 +102,7 @@ public class OptionParty1Code extends OptionPartyCode {
 	 * name} = "Buyer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Buyer = new MMCode() {
+	public static final MMCode mmBuyer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
@@ -113,12 +113,12 @@ public class OptionParty1Code extends OptionPartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SLLR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionParty1Code";
 				definition = "Specifies if a trade party is a buyer or a seller.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionParty1Code.Seller, com.tools20022.repository.codeset.OptionParty1Code.Buyer);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionParty1Code.mmSeller, com.tools20022.repository.codeset.OptionParty1Code.mmBuyer);
 				trace_lazy = () -> OptionPartyCode.mmObject();
 			}
 		});

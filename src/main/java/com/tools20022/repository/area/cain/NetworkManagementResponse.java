@@ -55,21 +55,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#Header
- * NetworkManagementResponse.Header}</li>
+ * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#mmHeader
+ * NetworkManagementResponse.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#NetworkManagementResponse
- * NetworkManagementResponse.NetworkManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#mmNetworkManagementResponse
+ * NetworkManagementResponse.mmNetworkManagementResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#SecurityTrailer
- * NetworkManagementResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#mmSecurityTrailer
+ * NetworkManagementResponse.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#identifier
- * NetworkManagementResponse.identifier}</li>
+ * messageDefinitionIdentifier} = {@code cain.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetworkManagementResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header17 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -107,17 +106,18 @@ public class NetworkManagementResponse {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
 	};
+	protected AcquirerNetworkManagementResponse1 networkManagementResponse;
 	/**
 	 * Information related to the response to the network management.
 	 * <p>
@@ -142,17 +142,18 @@ public class NetworkManagementResponse {
 	 * "Information related to the response to the network management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NetworkManagementResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNetworkManagementResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtwkMgmtRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementResponse";
 			definition = "Information related to the response to the network management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcquirerNetworkManagementResponse1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -176,42 +177,15 @@ public class NetworkManagementResponse {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "cain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "cain";
-			messageFunctionality = "010";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -225,11 +199,42 @@ public class NetworkManagementResponse {
 				rootElement = "Document";
 				xmlTag = "NtwkMgmtRspn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.NetworkManagementResponse.Header, com.tools20022.repository.area.cain.NetworkManagementResponse.NetworkManagementResponse,
-						com.tools20022.repository.area.cain.NetworkManagementResponse.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.cain.NetworkManagementResponse.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.NetworkManagementResponse.mmHeader, com.tools20022.repository.area.cain.NetworkManagementResponse.mmNetworkManagementResponse,
+						com.tools20022.repository.area.cain.NetworkManagementResponse.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "cain";
+						messageFunctionality = "010";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header17 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header17 header) {
+		this.header = header;
+	}
+
+	public AcquirerNetworkManagementResponse1 getNetworkManagementResponse() {
+		return networkManagementResponse;
+	}
+
+	public void setNetworkManagementResponse(AcquirerNetworkManagementResponse1 networkManagementResponse) {
+		this.networkManagementResponse = networkManagementResponse;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

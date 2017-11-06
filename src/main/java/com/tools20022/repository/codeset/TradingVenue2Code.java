@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenue2Code#ApprovedPublicationArrangement
- * TradingVenue2Code.ApprovedPublicationArrangement}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenue2Code#mmApprovedPublicationArrangement
+ * TradingVenue2Code.mmApprovedPublicationArrangement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenue2Code#ConsolidatedTapeProvider
- * TradingVenue2Code.ConsolidatedTapeProvider}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenue2Code#mmConsolidatedTapeProvider
+ * TradingVenue2Code.mmConsolidatedTapeProvider}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +76,7 @@ public class TradingVenue2Code extends TradingVenueCode {
 	 * name} = "ApprovedPublicationArrangement"</li>
 	 * </ul>
 	 */
-	public static final MMCode ApprovedPublicationArrangement = new MMCode() {
+	public static final MMCode mmApprovedPublicationArrangement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedPublicationArrangement";
@@ -99,7 +99,7 @@ public class TradingVenue2Code extends TradingVenueCode {
 	 * name} = "ConsolidatedTapeProvider"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsolidatedTapeProvider = new MMCode() {
+	public static final MMCode mmConsolidatedTapeProvider = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedTapeProvider";
@@ -110,11 +110,11 @@ public class TradingVenue2Code extends TradingVenueCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingVenue2Code";
 				definition = "Specifies the type of a trading venue which can submit the report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenue2Code.ApprovedPublicationArrangement, com.tools20022.repository.codeset.TradingVenue2Code.ConsolidatedTapeProvider);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenue2Code.mmApprovedPublicationArrangement, com.tools20022.repository.codeset.TradingVenue2Code.mmConsolidatedTapeProvider);
 				trace_lazy = () -> TradingVenueCode.mmObject();
 			}
 		});

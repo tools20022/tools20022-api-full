@@ -38,19 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral2#MarginCallRequestIdentification
- * Collateral2.MarginCallRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral2#mmMarginCallRequestIdentification
+ * Collateral2.mmMarginCallRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral2#MarginCallResponseIdentification
- * Collateral2.MarginCallResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral2#mmMarginCallResponseIdentification
+ * Collateral2.mmMarginCallResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral2#StandardSettlementInstructions
- * Collateral2.StandardSettlementInstructions}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral2#ProposalType
- * Collateral2.ProposalType}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral2#mmStandardSettlementInstructions
+ * Collateral2.mmStandardSettlementInstructions}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral2#mmProposalType
+ * Collateral2.mmProposalType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral2#CollateralProposalResponseIdentification
- * Collateral2.CollateralProposalResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral2#mmCollateralProposalResponseIdentification
+ * Collateral2.mmCollateralProposalResponseIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Collateral2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text marginCallRequestIdentification;
 	/**
 	 * Reference to the unambiguous identification of the margin call request.
 	 * <p>
@@ -103,7 +104,7 @@ public class Collateral2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Collateral2.mmObject();
 			isDerived = false;
@@ -111,11 +112,12 @@ public class Collateral2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Reference to the unambiguous identification of the margin call request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text marginCallResponseIdentification;
 	/**
 	 * Reference to the unambiguous identification of the margin call response.
 	 * <p>
@@ -144,7 +146,7 @@ public class Collateral2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Collateral2.mmObject();
 			isDerived = false;
@@ -152,11 +154,12 @@ public class Collateral2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResponseIdentification";
 			definition = "Reference to the unambiguous identification of the margin call response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max140Text standardSettlementInstructions;
 	/**
 	 * Identifies the standard settlement instructions.
 	 * <p>
@@ -169,8 +172,8 @@ public class Collateral2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#StandingSettlementInstructions
-	 * CollateralAgreement.StandingSettlementInstructions}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmStandingSettlementInstructions
+	 * CollateralAgreement.mmStandingSettlementInstructions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,20 +191,21 @@ public class Collateral2 {
 	 * definition} = "Identifies the standard settlement instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandardSettlementInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandardSettlementInstructions = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmStandingSettlementInstructions;
 			componentContext_lazy = () -> Collateral2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.StandingSettlementInstructions;
 			isDerived = false;
 			xmlTag = "StdSttlmInstrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardSettlementInstructions";
 			definition = "Identifies the standard settlement instructions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ProposalType1Choice proposalType;
 	/**
 	 * Indicates the type of collateral that is proposed.
 	 * <p>
@@ -213,8 +217,8 @@ public class Collateral2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralManagement#CollateralProposal
-	 * CollateralManagement.CollateralProposal}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmCollateralProposal
+	 * CollateralManagement.mmCollateralProposal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -232,21 +236,22 @@ public class Collateral2 {
 	 * definition} = "Indicates the type of collateral that is proposed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProposalType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProposalType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmCollateralProposal;
 			componentContext_lazy = () -> Collateral2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralManagement.CollateralProposal;
 			isDerived = false;
 			xmlTag = "PrpslTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalType";
 			definition = "Indicates the type of collateral that is proposed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProposalType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProposalType1Choice.mmObject();
 		}
 	};
+	protected Max35Text collateralProposalResponseIdentification;
 	/**
 	 * Reference to the unambiguous identification of the collateral proposal
 	 * response (in case of counter proposal).
@@ -276,7 +281,7 @@ public class Collateral2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralProposalResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralProposalResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Collateral2.mmObject();
 			isDerived = false;
@@ -284,8 +289,8 @@ public class Collateral2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalResponseIdentification";
 			definition = "Reference to the unambiguous identification of the collateral proposal response (in case of counter proposal).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -293,15 +298,56 @@ public class Collateral2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral2.MarginCallRequestIdentification, com.tools20022.repository.msg.Collateral2.MarginCallResponseIdentification,
-						com.tools20022.repository.msg.Collateral2.StandardSettlementInstructions, com.tools20022.repository.msg.Collateral2.ProposalType, com.tools20022.repository.msg.Collateral2.CollateralProposalResponseIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral2.mmMarginCallRequestIdentification, com.tools20022.repository.msg.Collateral2.mmMarginCallResponseIdentification,
+						com.tools20022.repository.msg.Collateral2.mmStandardSettlementInstructions, com.tools20022.repository.msg.Collateral2.mmProposalType,
+						com.tools20022.repository.msg.Collateral2.mmCollateralProposalResponseIdentification);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Collateral2";
 				definition = "Provides details on the collateral that will be either delivered, returned or both.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMarginCallRequestIdentification() {
+		return marginCallRequestIdentification;
+	}
+
+	public void setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
+		this.marginCallRequestIdentification = marginCallRequestIdentification;
+	}
+
+	public Max35Text getMarginCallResponseIdentification() {
+		return marginCallResponseIdentification;
+	}
+
+	public void setMarginCallResponseIdentification(Max35Text marginCallResponseIdentification) {
+		this.marginCallResponseIdentification = marginCallResponseIdentification;
+	}
+
+	public Max140Text getStandardSettlementInstructions() {
+		return standardSettlementInstructions;
+	}
+
+	public void setStandardSettlementInstructions(Max140Text standardSettlementInstructions) {
+		this.standardSettlementInstructions = standardSettlementInstructions;
+	}
+
+	public ProposalType1Choice getProposalType() {
+		return proposalType;
+	}
+
+	public void setProposalType(ProposalType1Choice proposalType) {
+		this.proposalType = proposalType;
+	}
+
+	public Max35Text getCollateralProposalResponseIdentification() {
+		return collateralProposalResponseIdentification;
+	}
+
+	public void setCollateralProposalResponseIdentification(Max35Text collateralProposalResponseIdentification) {
+		this.collateralProposalResponseIdentification = collateralProposalResponseIdentification;
 	}
 }

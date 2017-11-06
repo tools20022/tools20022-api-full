@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide reference and status information on the
@@ -40,32 +41,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#PaymentCancellationIdentification
- * OriginalPaymentInformation4.PaymentCancellationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmPaymentCancellationIdentification
+ * OriginalPaymentInformation4.mmPaymentCancellationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#Case
- * OriginalPaymentInformation4.Case}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmCase
+ * OriginalPaymentInformation4.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#OriginalPaymentInformationIdentification
- * OriginalPaymentInformation4.OriginalPaymentInformationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmOriginalPaymentInformationIdentification
+ * OriginalPaymentInformation4.mmOriginalPaymentInformationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#OriginalGroupInformation
- * OriginalPaymentInformation4.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmOriginalGroupInformation
+ * OriginalPaymentInformation4.mmOriginalGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#NumberOfTransactions
- * OriginalPaymentInformation4.NumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmNumberOfTransactions
+ * OriginalPaymentInformation4.mmNumberOfTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#ControlSum
- * OriginalPaymentInformation4.ControlSum}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmControlSum
+ * OriginalPaymentInformation4.mmControlSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#PaymentInformationCancellation
- * OriginalPaymentInformation4.PaymentInformationCancellation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmPaymentInformationCancellation
+ * OriginalPaymentInformation4.mmPaymentInformationCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#CancellationReasonInformation
- * OriginalPaymentInformation4.CancellationReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmCancellationReasonInformation
+ * OriginalPaymentInformation4.mmCancellationReasonInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#TransactionInformation
- * OriginalPaymentInformation4.TransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmTransactionInformation
+ * OriginalPaymentInformation4.mmTransactionInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalPaymentInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text paymentCancellationIdentification;
 	/**
 	 * Unique identification, as assigned by the assigner, to unambiguously
 	 * identify the cancellation request.
@@ -123,7 +125,7 @@ public class OriginalPaymentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentCancellationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentCancellationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
 			isDerived = false;
@@ -131,11 +133,12 @@ public class OriginalPaymentInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCancellationIdentification";
 			definition = "Unique identification, as assigned by the assigner, to unambiguously identify the cancellation request.\n\nUsage: The cancellation request identification can be used for reconciliation or to link tasks relating to the cancellation request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Case2 case_;
 	/**
 	 * Identifies the case.
 	 * <p>
@@ -146,8 +149,8 @@ public class OriginalPaymentInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#RelatedInvestigationCase
-	 * Payment.RelatedInvestigationCase}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCase
+	 * Payment.mmRelatedInvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,21 +169,22 @@ public class OriginalPaymentInformation4 {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Case = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCase = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmRelatedInvestigationCase;
 			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.RelatedInvestigationCase;
 			isDerived = false;
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Case2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Case2.mmObject();
 		}
 	};
+	protected Max35Text originalPaymentInformationIdentification;
 	/**
 	 * Unique and unambiguous identifier of the original payment information
 	 * block, as assigned by the original sending party.
@@ -194,8 +198,8 @@ public class OriginalPaymentInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,20 +220,21 @@ public class OriginalPaymentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationIdentification";
 			definition = "Unique and unambiguous identifier of the original payment information block, as assigned by the original sending party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OriginalGroupInformation3 originalGroupInformation;
 	/**
 	 * Information concerning the original group of transactions, to which the
 	 * message refers.
@@ -264,21 +269,22 @@ public class OriginalPaymentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalGroupInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalGroupInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalGroupInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmObject();
 		}
 	};
+	protected Max15NumericText numberOfTransactions;
 	/**
 	 * Number of individual transactions contained in the cancellation payment
 	 * information group.
@@ -310,7 +316,7 @@ public class OriginalPaymentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
 			isDerived = false;
@@ -318,11 +324,12 @@ public class OriginalPaymentInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions contained in the cancellation payment information group.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber controlSum;
 	/**
 	 * Total of all individual amounts included in the cancellation payment
 	 * information group, irrespective of currencies.
@@ -354,7 +361,7 @@ public class OriginalPaymentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
 			isDerived = false;
@@ -362,11 +369,12 @@ public class OriginalPaymentInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the cancellation payment information group, irrespective of currencies.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected GroupCancellationIndicator paymentInformationCancellation;
 	/**
 	 * Indicates whether or not the cancellation applies to a whole group of
 	 * transactions or to individual transactions within the original group.
@@ -398,7 +406,7 @@ public class OriginalPaymentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInformationCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInformationCancellation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
 			isDerived = false;
@@ -406,11 +414,12 @@ public class OriginalPaymentInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellation";
 			definition = "Indicates whether or not the cancellation applies to a whole group of transactions or to individual transactions within the original group.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CancellationReasonInformation3> cancellationReasonInformation;
 	/**
 	 * Detailed information on the cancellation reason.
 	 * <p>
@@ -423,8 +432,8 @@ public class OriginalPaymentInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentStatus
-	 * Payment.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
+	 * Payment.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -443,20 +452,21 @@ public class OriginalPaymentInformation4 {
 	 * definition} = "Detailed information on the cancellation reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationReasonInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
 			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentStatus;
 			isDerived = false;
 			xmlTag = "CxlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReasonInformation";
 			definition = "Detailed information on the cancellation reason.";
 			minOccurs = 0;
-			type_lazy = () -> CancellationReasonInformation3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CancellationReasonInformation3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PaymentTransactionInformation30> transactionInformation;
 	/**
 	 * Information concerning the original transactions, to which the
 	 * cancellation request message refers.
@@ -491,36 +501,108 @@ public class OriginalPaymentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> OriginalPaymentInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "TxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformation";
 			definition = "Information concerning the original transactions, to which the cancellation request message refers.";
 			minOccurs = 0;
-			type_lazy = () -> PaymentTransactionInformation30.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation30.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInformation4.PaymentCancellationIdentification, com.tools20022.repository.msg.OriginalPaymentInformation4.Case,
-						com.tools20022.repository.msg.OriginalPaymentInformation4.OriginalPaymentInformationIdentification, com.tools20022.repository.msg.OriginalPaymentInformation4.OriginalGroupInformation,
-						com.tools20022.repository.msg.OriginalPaymentInformation4.NumberOfTransactions, com.tools20022.repository.msg.OriginalPaymentInformation4.ControlSum,
-						com.tools20022.repository.msg.OriginalPaymentInformation4.PaymentInformationCancellation, com.tools20022.repository.msg.OriginalPaymentInformation4.CancellationReasonInformation,
-						com.tools20022.repository.msg.OriginalPaymentInformation4.TransactionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInformation4.mmPaymentCancellationIdentification, com.tools20022.repository.msg.OriginalPaymentInformation4.mmCase,
+						com.tools20022.repository.msg.OriginalPaymentInformation4.mmOriginalPaymentInformationIdentification, com.tools20022.repository.msg.OriginalPaymentInformation4.mmOriginalGroupInformation,
+						com.tools20022.repository.msg.OriginalPaymentInformation4.mmNumberOfTransactions, com.tools20022.repository.msg.OriginalPaymentInformation4.mmControlSum,
+						com.tools20022.repository.msg.OriginalPaymentInformation4.mmPaymentInformationCancellation, com.tools20022.repository.msg.OriginalPaymentInformation4.mmCancellationReasonInformation,
+						com.tools20022.repository.msg.OriginalPaymentInformation4.mmTransactionInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalPaymentInformation4";
 				definition = "Set of elements used to provide reference and status information on the original transactions, included in the original instruction, to which the cancellation request message applies.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPaymentCancellationIdentification() {
+		return paymentCancellationIdentification;
+	}
+
+	public void setPaymentCancellationIdentification(Max35Text paymentCancellationIdentification) {
+		this.paymentCancellationIdentification = paymentCancellationIdentification;
+	}
+
+	public Case2 getCase() {
+		return case_;
+	}
+
+	public void setCase(com.tools20022.repository.msg.Case2 case_) {
+		this.case_ = case_;
+	}
+
+	public Max35Text getOriginalPaymentInformationIdentification() {
+		return originalPaymentInformationIdentification;
+	}
+
+	public void setOriginalPaymentInformationIdentification(Max35Text originalPaymentInformationIdentification) {
+		this.originalPaymentInformationIdentification = originalPaymentInformationIdentification;
+	}
+
+	public OriginalGroupInformation3 getOriginalGroupInformation() {
+		return originalGroupInformation;
+	}
+
+	public void setOriginalGroupInformation(com.tools20022.repository.msg.OriginalGroupInformation3 originalGroupInformation) {
+		this.originalGroupInformation = originalGroupInformation;
+	}
+
+	public Max15NumericText getNumberOfTransactions() {
+		return numberOfTransactions;
+	}
+
+	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = numberOfTransactions;
+	}
+
+	public DecimalNumber getControlSum() {
+		return controlSum;
+	}
+
+	public void setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
+	}
+
+	public GroupCancellationIndicator getPaymentInformationCancellation() {
+		return paymentInformationCancellation;
+	}
+
+	public void setPaymentInformationCancellation(GroupCancellationIndicator paymentInformationCancellation) {
+		this.paymentInformationCancellation = paymentInformationCancellation;
+	}
+
+	public List<CancellationReasonInformation3> getCancellationReasonInformation() {
+		return cancellationReasonInformation;
+	}
+
+	public void setCancellationReasonInformation(List<com.tools20022.repository.msg.CancellationReasonInformation3> cancellationReasonInformation) {
+		this.cancellationReasonInformation = cancellationReasonInformation;
+	}
+
+	public List<PaymentTransactionInformation30> getTransactionInformation() {
+		return transactionInformation;
+	}
+
+	public void setTransactionInformation(List<com.tools20022.repository.msg.PaymentTransactionInformation30> transactionInformation) {
+		this.transactionInformation = transactionInformation;
 	}
 }

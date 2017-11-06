@@ -38,12 +38,12 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LegDetails1#RatioQuantity
- * LegDetails1.RatioQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LegDetails1#Side
- * LegDetails1.Side}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LegDetails1#Currency
- * LegDetails1.Currency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LegDetails1#mmRatioQuantity
+ * LegDetails1.mmRatioQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LegDetails1#mmSide
+ * LegDetails1.mmSide}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LegDetails1#mmCurrency
+ * LegDetails1.mmCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +67,7 @@ import java.util.function.Supplier;
 public class LegDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate ratioQuantity;
 	/**
 	 * Only for multileg instrument - Ratio of quantity for an individual leg
 	 * relative to the entire multileg security.
@@ -81,8 +82,8 @@ public class LegDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Leg#RatioQuantity
-	 * Leg.RatioQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Leg#mmRatioQuantity
+	 * Leg.mmRatioQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class LegDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RatioQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRatioQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmRatioQuantity;
 			componentContext_lazy = () -> LegDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.RatioQuantity;
 			isDerived = false;
 			xmlTag = "RatioQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RatioQuantity";
 			definition = "Only for multileg instrument - Ratio of quantity for an individual leg relative to the entire multileg security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Side1Code side;
 	/**
 	 * Only for multileg instrument- Side of an individual leg (multileg
 	 * security).
@@ -129,8 +131,8 @@ public class LegDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class LegDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> LegDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Only for multileg instrument- Side of an individual leg (multileg security).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected CurrencyCode currency;
 	/**
 	 * Only for multileg instrument - Currency associated with a particular
 	 * Leg's quantity .
@@ -177,7 +180,8 @@ public class LegDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Leg#Currency Leg.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Leg#mmCurrency
+	 * Leg.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,17 +201,17 @@ public class LegDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmCurrency;
 			componentContext_lazy = () -> LegDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Only for multileg instrument - Currency associated with a particular Leg's quantity .";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
@@ -215,9 +219,9 @@ public class LegDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LegDetails1.RatioQuantity, com.tools20022.repository.msg.LegDetails1.Side, com.tools20022.repository.msg.LegDetails1.Currency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LegDetails1.mmRatioQuantity, com.tools20022.repository.msg.LegDetails1.mmSide, com.tools20022.repository.msg.LegDetails1.mmCurrency);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -231,5 +235,29 @@ public class LegDetails1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRatioQuantity() {
+		return ratioQuantity;
+	}
+
+	public void setRatioQuantity(PercentageRate ratioQuantity) {
+		this.ratioQuantity = ratioQuantity;
+	}
+
+	public Side1Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side1Code side) {
+		this.side = side;
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
 	}
 }

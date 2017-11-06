@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm4Code#SHA256WithRSA
- * Algorithm4Code.SHA256WithRSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm4Code#mmSHA256WithRSA
+ * Algorithm4Code.mmSHA256WithRSA}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,17 +86,17 @@ public class Algorithm4Code extends AlgorithmCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#SHA256WithRSA
-	 * Algorithm14Code.SHA256WithRSA}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#mmSHA256WithRSA
+	 * Algorithm14Code.mmSHA256WithRSA}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SHA256WithRSA = new MMCode() {
+	public static final MMCode mmSHA256WithRSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256WithRSA";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm14Code.SHA256WithRSA);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm14Code.mmSHA256WithRSA);
 			owner_lazy = () -> Algorithm4Code.mmObject();
 		}
 	};
@@ -104,13 +104,13 @@ public class Algorithm4Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ERS2");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm4Code";
 				definition = "Cryptographic algorithms for digital signatures.";
 				nextVersions_lazy = () -> Arrays.asList(Algorithm14Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm4Code.SHA256WithRSA);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm4Code.mmSHA256WithRSA);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionValueType1Code#PerUnit
- * CommissionValueType1Code.PerUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionValueType1Code#mmPerUnit
+ * CommissionValueType1Code.mmPerUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionValueType1Code#Absolute
- * CommissionValueType1Code.Absolute}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionValueType1Code#mmAbsolute
+ * CommissionValueType1Code.mmAbsolute}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class CommissionValueType1Code extends PriceValueTypeCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode PerUnit = new MMCode() {
+	public static final MMCode mmPerUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
@@ -104,7 +104,7 @@ public class CommissionValueType1Code extends PriceValueTypeCode {
 	 * name} = "Absolute"</li>
 	 * </ul>
 	 */
-	public static final MMCode Absolute = new MMCode() {
+	public static final MMCode mmAbsolute = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Absolute";
@@ -115,12 +115,12 @@ public class CommissionValueType1Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PEUN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommissionValueType1Code";
 				definition = "Specifies a type of value of the commission.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionValueType1Code.PerUnit, com.tools20022.repository.codeset.CommissionValueType1Code.Absolute);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionValueType1Code.mmPerUnit, com.tools20022.repository.codeset.CommissionValueType1Code.mmAbsolute);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

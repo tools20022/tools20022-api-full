@@ -30,30 +30,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#CourtDecision
- * MeetingEventClassificationCode.CourtDecision}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#mmCourtDecision
+ * MeetingEventClassificationCode.mmCourtDecision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#IssuerInitiated
- * MeetingEventClassificationCode.IssuerInitiated}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#mmIssuerInitiated
+ * MeetingEventClassificationCode.mmIssuerInitiated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#VotingRightHolderInitiated
- * MeetingEventClassificationCode.VotingRightHolderInitiated}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#mmVotingRightHolderInitiated
+ * MeetingEventClassificationCode.mmVotingRightHolderInitiated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#Annual
- * MeetingEventClassificationCode.Annual}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#mmAnnual
+ * MeetingEventClassificationCode.mmAnnual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#Ordinary
- * MeetingEventClassificationCode.Ordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#mmOrdinary
+ * MeetingEventClassificationCode.mmOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#Class
- * MeetingEventClassificationCode.Class}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingEventClassificationCode#mmClass_
+ * MeetingEventClassificationCode.mmClass_}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class MeetingEventClassificationCode {
 	 * "Specifies that the meeting is the result of a legal proceeding."</li>
 	 * </ul>
 	 */
-	public static final MMCode CourtDecision = new MMCode() {
+	public static final MMCode mmCourtDecision = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CourtDecision";
@@ -128,7 +128,7 @@ public class MeetingEventClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerInitiated = new MMCode() {
+	public static final MMCode mmIssuerInitiated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "IssuerInitiated";
@@ -161,7 +161,7 @@ public class MeetingEventClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode VotingRightHolderInitiated = new MMCode() {
+	public static final MMCode mmVotingRightHolderInitiated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "VotingRightHolderInitiated";
@@ -194,7 +194,7 @@ public class MeetingEventClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Annual = new MMCode() {
+	public static final MMCode mmAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Annual";
@@ -224,7 +224,7 @@ public class MeetingEventClassificationCode {
 	 * definition} = "Specifies a meeting which is planned in the by-laws."</li>
 	 * </ul>
 	 */
-	public static final MMCode Ordinary = new MMCode() {
+	public static final MMCode mmOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Ordinary";
@@ -257,7 +257,7 @@ public class MeetingEventClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Class = new MMCode() {
+	public static final MMCode mmClass_ = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Class";
@@ -270,14 +270,14 @@ public class MeetingEventClassificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRTD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "MeetingEventClassificationCode";
 				definition = "Specifies information about the originator of the meeting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingEventClassificationCode.CourtDecision, com.tools20022.repository.codeset.MeetingEventClassificationCode.IssuerInitiated,
-						com.tools20022.repository.codeset.MeetingEventClassificationCode.VotingRightHolderInitiated, com.tools20022.repository.codeset.MeetingEventClassificationCode.Annual,
-						com.tools20022.repository.codeset.MeetingEventClassificationCode.Ordinary, com.tools20022.repository.codeset.MeetingEventClassificationCode.Class);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingEventClassificationCode.mmCourtDecision, com.tools20022.repository.codeset.MeetingEventClassificationCode.mmIssuerInitiated,
+						com.tools20022.repository.codeset.MeetingEventClassificationCode.mmVotingRightHolderInitiated, com.tools20022.repository.codeset.MeetingEventClassificationCode.mmAnnual,
+						com.tools20022.repository.codeset.MeetingEventClassificationCode.mmOrdinary, com.tools20022.repository.codeset.MeetingEventClassificationCode.mmClass_);
 			}
 		});
 		return mmObject_lazy.get();

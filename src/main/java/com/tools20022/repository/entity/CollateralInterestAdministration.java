@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#CollateralManagement
- * CollateralInterestAdministration.CollateralManagement}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmCollateralManagement
+ * CollateralInterestAdministration.mmCollateralManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#ClosingCollateralBalance
- * CollateralInterestAdministration.ClosingCollateralBalance}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmClosingCollateralBalance
+ * CollateralInterestAdministration.mmClosingCollateralBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#OpeningCollateralBalance
- * CollateralInterestAdministration.OpeningCollateralBalance}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration#mmOpeningCollateralBalance
+ * CollateralInterestAdministration.mmOpeningCollateralBalance}</li>
  * </ul>
  * </li>
  * <li>
@@ -52,14 +52,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralManagement#InterestManagement
- * CollateralManagement.InterestManagement}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmInterestManagement
+ * CollateralManagement.mmInterestManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralBalance#RelatedCollateralInterestManagement
- * CollateralBalance.RelatedCollateralInterestManagement}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmRelatedCollateralInterestManagement
+ * CollateralBalance.mmRelatedCollateralInterestManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralBalance#CollateralInterestManagement
- * CollateralBalance.CollateralInterestManagement}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmCollateralInterestManagement
+ * CollateralBalance.mmCollateralInterestManagement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -68,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralInterestAdministration extends InterestManagement {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CollateralManagement collateralManagement;
 	/**
 	 * Collateral processes that interest management is part of.
 	 * <p>
@@ -91,8 +92,8 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralManagement#InterestManagement
-	 * CollateralManagement.InterestManagement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmInterestManagement
+	 * CollateralManagement.mmInterestManagement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -118,20 +119,21 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CollateralManagement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateralManagement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CollateralInterestAdministration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
 			definition = "Collateral processes that interest management is part of.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.InterestManagement;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmInterestManagement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
 		}
 	};
+	protected CollateralBalance closingCollateralBalance;
 	/**
 	 * Specifies the opening collateral balance for the calculation of interest.
 	 * <p>
@@ -140,8 +142,8 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#CollateralInterestManagement
-	 * CollateralBalance.CollateralInterestManagement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmCollateralInterestManagement
+	 * CollateralBalance.mmCollateralInterestManagement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -149,19 +151,19 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralBalance
 	 * CollateralBalance}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestResult1#ClosingCollateralBalance
-	 * InterestResult1.ClosingCollateralBalance}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration
 	 * CollateralInterestAdministration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestResult1#mmClosingCollateralBalance
+	 * InterestResult1.mmClosingCollateralBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -175,21 +177,22 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ClosingCollateralBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmClosingCollateralBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestResult1.ClosingCollateralBalance);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestResult1.mmClosingCollateralBalance);
 			elementContext_lazy = () -> CollateralInterestAdministration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingCollateralBalance";
 			definition = "Specifies the opening collateral balance for the calculation of interest.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralBalance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralBalance.CollateralInterestManagement;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmCollateralInterestManagement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmObject();
 		}
 	};
+	protected CollateralBalance openingCollateralBalance;
 	/**
 	 * Specifies the opening collateral balance for the calculation of interest.
 	 * <p>
@@ -198,8 +201,8 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#RelatedCollateralInterestManagement
-	 * CollateralBalance.RelatedCollateralInterestManagement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmRelatedCollateralInterestManagement
+	 * CollateralBalance.mmRelatedCollateralInterestManagement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -207,19 +210,19 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralBalance
 	 * CollateralBalance}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestResult1#OpeningCollateralBalance
-	 * InterestResult1.OpeningCollateralBalance}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CollateralInterestAdministration
 	 * CollateralInterestAdministration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestResult1#mmOpeningCollateralBalance
+	 * InterestResult1.mmOpeningCollateralBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -233,36 +236,60 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OpeningCollateralBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOpeningCollateralBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestResult1.OpeningCollateralBalance);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestResult1.mmOpeningCollateralBalance);
 			elementContext_lazy = () -> CollateralInterestAdministration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningCollateralBalance";
 			definition = "Specifies the opening collateral balance for the calculation of interest.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralBalance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralBalance.RelatedCollateralInterestManagement;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmRelatedCollateralInterestManagement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralInterestAdministration";
 				definition = "Calculation and request of interest linked to collateral.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralManagement.InterestManagement, com.tools20022.repository.entity.CollateralBalance.RelatedCollateralInterestManagement,
-						com.tools20022.repository.entity.CollateralBalance.CollateralInterestManagement);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralManagement.mmInterestManagement, com.tools20022.repository.entity.CollateralBalance.mmRelatedCollateralInterestManagement,
+						com.tools20022.repository.entity.CollateralBalance.mmCollateralInterestManagement);
 				superType_lazy = () -> InterestManagement.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralInterestAdministration.CollateralManagement, com.tools20022.repository.entity.CollateralInterestAdministration.ClosingCollateralBalance,
-						com.tools20022.repository.entity.CollateralInterestAdministration.OpeningCollateralBalance);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralInterestAdministration.mmCollateralManagement, com.tools20022.repository.entity.CollateralInterestAdministration.mmClosingCollateralBalance,
+						com.tools20022.repository.entity.CollateralInterestAdministration.mmOpeningCollateralBalance);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CollateralManagement getCollateralManagement() {
+		return collateralManagement;
+	}
+
+	public void setCollateralManagement(com.tools20022.repository.entity.CollateralManagement collateralManagement) {
+		this.collateralManagement = collateralManagement;
+	}
+
+	public CollateralBalance getClosingCollateralBalance() {
+		return closingCollateralBalance;
+	}
+
+	public void setClosingCollateralBalance(com.tools20022.repository.entity.CollateralBalance closingCollateralBalance) {
+		this.closingCollateralBalance = closingCollateralBalance;
+	}
+
+	public CollateralBalance getOpeningCollateralBalance() {
+		return openingCollateralBalance;
+	}
+
+	public void setOpeningCollateralBalance(com.tools20022.repository.entity.CollateralBalance openingCollateralBalance) {
+		this.openingCollateralBalance = openingCollateralBalance;
 	}
 }

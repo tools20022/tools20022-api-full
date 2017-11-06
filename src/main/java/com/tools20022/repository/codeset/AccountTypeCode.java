@@ -29,10 +29,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountTypeCode#Cash
- * AccountTypeCode.Cash}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountTypeCode#Securities
- * AccountTypeCode.Securities}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountTypeCode#mmCash
+ * AccountTypeCode.mmCash}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountTypeCode#mmSecurities
+ * AccountTypeCode.mmSecurities}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +88,7 @@ public class AccountTypeCode {
 	 * definition} = "Cash account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Cash";
@@ -117,7 +118,7 @@ public class AccountTypeCode {
 	 * definition} = "Securities account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Securities = new MMCode() {
+	public static final MMCode mmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Securities";
@@ -130,12 +131,12 @@ public class AccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountTypeCode";
 				definition = "Specifies the type of account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountTypeCode.Cash, com.tools20022.repository.codeset.AccountTypeCode.Securities);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountTypeCode.mmCash, com.tools20022.repository.codeset.AccountTypeCode.mmSecurities);
 				derivation_lazy = () -> Arrays.asList(AccountType1Code.mmObject());
 			}
 		});

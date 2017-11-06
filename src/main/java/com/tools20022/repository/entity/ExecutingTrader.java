@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.SecuritiesTradePartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Trader that executes a trade for an organisation.
@@ -36,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExecutingTrader#ExecutingBroker
- * ExecutingTrader.ExecutingBroker}</li>
+ * {@linkplain com.tools20022.repository.entity.ExecutingTrader#mmExecutingBroker
+ * ExecutingTrader.mmExecutingBroker}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExecutingBrokerRole#ExecutingTrader
- * ExecutingBrokerRole.ExecutingTrader}</li>
+ * {@linkplain com.tools20022.repository.entity.ExecutingBrokerRole#mmExecutingTrader
+ * ExecutingBrokerRole.mmExecutingTrader}</li>
  * </ul>
  * </li>
  * <li>
@@ -54,11 +55,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#ExecutingParty
- * SecuritiesTransactionReport2.ExecutingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#mmExecutingParty
+ * SecuritiesTransactionReport2.mmExecutingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#ExecutingParty
- * SecuritiesTransactionReport4.ExecutingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmExecutingParty
+ * SecuritiesTransactionReport4.mmExecutingParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -68,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExecutingTrader extends SecuritiesTradePartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.ExecutingBrokerRole> executingBroker;
 	/**
 	 * Executing broker which employs the trade
 	 * <p>
@@ -91,8 +93,8 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ExecutingBrokerRole#ExecutingTrader
-	 * ExecutingBrokerRole.ExecutingTrader}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExecutingBrokerRole#mmExecutingTrader
+	 * ExecutingBrokerRole.mmExecutingTrader}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -116,7 +118,7 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 	 * definition} = "Executing broker which employs the trade"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ExecutingBroker = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmExecutingBroker = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ExecutingTrader.mmObject();
 			isDerived = false;
@@ -124,25 +126,33 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 			name = "ExecutingBroker";
 			definition = "Executing broker which employs the trade";
 			minOccurs = 0;
-			type_lazy = () -> ExecutingBrokerRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ExecutingBrokerRole.ExecutingTrader;
+			opposite_lazy = () -> com.tools20022.repository.entity.ExecutingBrokerRole.mmExecutingTrader;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ExecutingBrokerRole.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExecutingTrader";
 				definition = "Trader that executes a trade for an organisation.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingBrokerRole.ExecutingTrader);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport2.ExecutingParty, com.tools20022.repository.msg.SecuritiesTransactionReport4.ExecutingParty);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingBrokerRole.mmExecutingTrader);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport2.mmExecutingParty, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmExecutingParty);
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingTrader.ExecutingBroker);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingTrader.mmExecutingBroker);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ExecutingBrokerRole> getExecutingBroker() {
+		return executingBroker;
+	}
+
+	public void setExecutingBroker(List<com.tools20022.repository.entity.ExecutingBrokerRole> executingBroker) {
+		this.executingBroker = executingBroker;
 	}
 }

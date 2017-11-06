@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification20#Identification
- * DocumentIdentification20.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification20#mmIdentification
+ * DocumentIdentification20.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification20#DocumentNumber
- * DocumentIdentification20.DocumentNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification20#mmDocumentNumber
+ * DocumentIdentification20.mmDocumentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification20#LinkageType
- * DocumentIdentification20.LinkageType}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification20#mmLinkageType
+ * DocumentIdentification20.mmLinkageType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification2Choice identification;
 	/**
 	 * Unique identifier of the document (message) assigned either by the
 	 * account servicer or the account owner.
@@ -81,8 +82,8 @@ public class DocumentIdentification20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,21 +104,22 @@ public class DocumentIdentification20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned either by the account servicer or the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentIdentification2Choice.mmObject();
 		}
 	};
+	protected DocumentNumber2Choice documentNumber;
 	/**
 	 * Identification of the type of document.
 	 * <p>
@@ -145,7 +147,7 @@ public class DocumentIdentification20 {
 	 * definition} = "Identification of the type of document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DocumentNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDocumentNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentIdentification20.mmObject();
 			isDerived = false;
@@ -153,12 +155,13 @@ public class DocumentIdentification20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Identification of the type of document.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber2Choice.mmObject();
 		}
 	};
+	protected ProcessingPosition3Choice linkageType;
 	/**
 	 * Specifies when this document is to be processed relative to an other
 	 * referred document.
@@ -189,7 +192,7 @@ public class DocumentIdentification20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentIdentification20.mmObject();
 			isDerived = false;
@@ -197,25 +200,49 @@ public class DocumentIdentification20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when this document is to be processed relative to an other referred document.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingPosition3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProcessingPosition3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification20.Identification, com.tools20022.repository.msg.DocumentIdentification20.DocumentNumber,
-						com.tools20022.repository.msg.DocumentIdentification20.LinkageType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification20.mmIdentification, com.tools20022.repository.msg.DocumentIdentification20.mmDocumentNumber,
+						com.tools20022.repository.msg.DocumentIdentification20.mmLinkageType);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification20";
 				definition = "Identification of a document as well as the document number and type of link.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification2Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification2Choice identification) {
+		this.identification = identification;
+	}
+
+	public DocumentNumber2Choice getDocumentNumber() {
+		return documentNumber;
+	}
+
+	public void setDocumentNumber(DocumentNumber2Choice documentNumber) {
+		this.documentNumber = documentNumber;
+	}
+
+	public ProcessingPosition3Choice getLinkageType() {
+		return linkageType;
+	}
+
+	public void setLinkageType(ProcessingPosition3Choice linkageType) {
+		this.linkageType = linkageType;
 	}
 }

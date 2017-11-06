@@ -31,35 +31,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#ProgramTrade
- * OrderClassificationCode.ProgramTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmProgramTrade
+ * OrderClassificationCode.mmProgramTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#IndexArbitrage
- * OrderClassificationCode.IndexArbitrage}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmIndexArbitrage
+ * OrderClassificationCode.mmIndexArbitrage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#NonIndexArbitrage
- * OrderClassificationCode.NonIndexArbitrage}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmNonIndexArbitrage
+ * OrderClassificationCode.mmNonIndexArbitrage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#CompetingMarketMaker
- * OrderClassificationCode.CompetingMarketMaker}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmCompetingMarketMaker
+ * OrderClassificationCode.mmCompetingMarketMaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#SpecialistInSecurity
- * OrderClassificationCode.SpecialistInSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmSpecialistInSecurity
+ * OrderClassificationCode.mmSpecialistInSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#SpecialistInUnderlyingSecurity
- * OrderClassificationCode.SpecialistInUnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmSpecialistInUnderlyingSecurity
+ * OrderClassificationCode.mmSpecialistInUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#ForeignEntity
- * OrderClassificationCode.ForeignEntity}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmForeignEntity
+ * OrderClassificationCode.mmForeignEntity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#ExternalMarketParticipant
- * OrderClassificationCode.ExternalMarketParticipant}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmExternalMarketParticipant
+ * OrderClassificationCode.mmExternalMarketParticipant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#ExternalInterConnectedMarketLinkage
- * OrderClassificationCode.ExternalInterConnectedMarketLinkage}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmExternalInterConnectedMarketLinkage
+ * OrderClassificationCode.mmExternalInterConnectedMarketLinkage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#RisklessArbitrage
- * OrderClassificationCode.RisklessArbitrage}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderClassificationCode#mmRisklessArbitrage
+ * OrderClassificationCode.mmRisklessArbitrage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -72,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -123,7 +123,7 @@ public class OrderClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ProgramTrade = new MMCode() {
+	public static final MMCode mmProgramTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgramTrade";
@@ -157,7 +157,7 @@ public class OrderClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IndexArbitrage = new MMCode() {
+	public static final MMCode mmIndexArbitrage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexArbitrage";
@@ -191,7 +191,7 @@ public class OrderClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NonIndexArbitrage = new MMCode() {
+	public static final MMCode mmNonIndexArbitrage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonIndexArbitrage";
@@ -224,7 +224,7 @@ public class OrderClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CompetingMarketMaker = new MMCode() {
+	public static final MMCode mmCompetingMarketMaker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetingMarketMaker";
@@ -258,7 +258,7 @@ public class OrderClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialistInSecurity = new MMCode() {
+	public static final MMCode mmSpecialistInSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialistInSecurity";
@@ -292,7 +292,7 @@ public class OrderClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialistInUnderlyingSecurity = new MMCode() {
+	public static final MMCode mmSpecialistInUnderlyingSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialistInUnderlyingSecurity";
@@ -325,7 +325,7 @@ public class OrderClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignEntity = new MMCode() {
+	public static final MMCode mmForeignEntity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignEntity";
@@ -355,7 +355,7 @@ public class OrderClassificationCode {
 	 * definition} = "Participating entity not registered on an exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExternalMarketParticipant = new MMCode() {
+	public static final MMCode mmExternalMarketParticipant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalMarketParticipant";
@@ -386,7 +386,7 @@ public class OrderClassificationCode {
 	 * "Participating entity linked but not registered on an exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExternalInterConnectedMarketLinkage = new MMCode() {
+	public static final MMCode mmExternalInterConnectedMarketLinkage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalInterConnectedMarketLinkage";
@@ -420,7 +420,7 @@ public class OrderClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RisklessArbitrage = new MMCode() {
+	public static final MMCode mmRisklessArbitrage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RisklessArbitrage";
@@ -433,16 +433,16 @@ public class OrderClassificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderClassificationCode";
 				definition = "Identifies the classification and thus the restrictions associated with an order (for regulatory purposes).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderClassificationCode.ProgramTrade, com.tools20022.repository.codeset.OrderClassificationCode.IndexArbitrage,
-						com.tools20022.repository.codeset.OrderClassificationCode.NonIndexArbitrage, com.tools20022.repository.codeset.OrderClassificationCode.CompetingMarketMaker,
-						com.tools20022.repository.codeset.OrderClassificationCode.SpecialistInSecurity, com.tools20022.repository.codeset.OrderClassificationCode.SpecialistInUnderlyingSecurity,
-						com.tools20022.repository.codeset.OrderClassificationCode.ForeignEntity, com.tools20022.repository.codeset.OrderClassificationCode.ExternalMarketParticipant,
-						com.tools20022.repository.codeset.OrderClassificationCode.ExternalInterConnectedMarketLinkage, com.tools20022.repository.codeset.OrderClassificationCode.RisklessArbitrage);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderClassificationCode.mmProgramTrade, com.tools20022.repository.codeset.OrderClassificationCode.mmIndexArbitrage,
+						com.tools20022.repository.codeset.OrderClassificationCode.mmNonIndexArbitrage, com.tools20022.repository.codeset.OrderClassificationCode.mmCompetingMarketMaker,
+						com.tools20022.repository.codeset.OrderClassificationCode.mmSpecialistInSecurity, com.tools20022.repository.codeset.OrderClassificationCode.mmSpecialistInUnderlyingSecurity,
+						com.tools20022.repository.codeset.OrderClassificationCode.mmForeignEntity, com.tools20022.repository.codeset.OrderClassificationCode.mmExternalMarketParticipant,
+						com.tools20022.repository.codeset.OrderClassificationCode.mmExternalInterConnectedMarketLinkage, com.tools20022.repository.codeset.OrderClassificationCode.mmRisklessArbitrage);
 				derivation_lazy = () -> Arrays.asList(OrderRestrictions1Code.mmObject());
 			}
 		});

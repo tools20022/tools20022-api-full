@@ -33,34 +33,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * CollateralTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralType3Code#Cash
- * CollateralType3Code.Cash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralType3Code#mmCash
+ * CollateralType3Code.mmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#Securities
- * CollateralType3Code.Securities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#mmSecurities
+ * CollateralType3Code.mmSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#PhysicalEntities
- * CollateralType3Code.PhysicalEntities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#mmPhysicalEntities
+ * CollateralType3Code.mmPhysicalEntities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#Insurance
- * CollateralType3Code.Insurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#mmInsurance
+ * CollateralType3Code.mmInsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#StockCertificate
- * CollateralType3Code.StockCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralType3Code#Bond
- * CollateralType3Code.Bond}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#mmStockCertificate
+ * CollateralType3Code.mmStockCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralType3Code#mmBond
+ * CollateralType3Code.mmBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#BankGuarantee
- * CollateralType3Code.BankGuarantee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralType3Code#Other
- * CollateralType3Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#mmBankGuarantee
+ * CollateralType3Code.mmBankGuarantee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralType3Code#mmOther
+ * CollateralType3Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +97,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -119,7 +120,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 * name} = "Securities"</li>
 	 * </ul>
 	 */
-	public static final MMCode Securities = new MMCode() {
+	public static final MMCode mmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
@@ -142,7 +143,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 * name} = "PhysicalEntities"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalEntities = new MMCode() {
+	public static final MMCode mmPhysicalEntities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalEntities";
@@ -165,7 +166,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 * name} = "Insurance"</li>
 	 * </ul>
 	 */
-	public static final MMCode Insurance = new MMCode() {
+	public static final MMCode mmInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Insurance";
@@ -188,7 +189,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 * name} = "StockCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockCertificate = new MMCode() {
+	public static final MMCode mmStockCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockCertificate";
@@ -211,7 +212,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 * name} = "Bond"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bond = new MMCode() {
+	public static final MMCode mmBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
@@ -234,7 +235,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 * name} = "BankGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankGuarantee = new MMCode() {
+	public static final MMCode mmBankGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankGuarantee";
@@ -257,7 +258,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -268,14 +269,14 @@ public class CollateralType3Code extends CollateralTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralType3Code";
 				definition = "Specifies the type of collateral.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralType3Code.Cash, com.tools20022.repository.codeset.CollateralType3Code.Securities,
-						com.tools20022.repository.codeset.CollateralType3Code.PhysicalEntities, com.tools20022.repository.codeset.CollateralType3Code.Insurance, com.tools20022.repository.codeset.CollateralType3Code.StockCertificate,
-						com.tools20022.repository.codeset.CollateralType3Code.Bond, com.tools20022.repository.codeset.CollateralType3Code.BankGuarantee, com.tools20022.repository.codeset.CollateralType3Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralType3Code.mmCash, com.tools20022.repository.codeset.CollateralType3Code.mmSecurities,
+						com.tools20022.repository.codeset.CollateralType3Code.mmPhysicalEntities, com.tools20022.repository.codeset.CollateralType3Code.mmInsurance, com.tools20022.repository.codeset.CollateralType3Code.mmStockCertificate,
+						com.tools20022.repository.codeset.CollateralType3Code.mmBond, com.tools20022.repository.codeset.CollateralType3Code.mmBankGuarantee, com.tools20022.repository.codeset.CollateralType3Code.mmOther);
 				trace_lazy = () -> CollateralTypeCode.mmObject();
 			}
 		});

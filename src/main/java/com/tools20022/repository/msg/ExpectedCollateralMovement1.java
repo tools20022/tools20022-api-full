@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.CollateralType1Code;
 import com.tools20022.repository.entity.ExpectedCollateralType;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the expected collateral type and direction.
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement1#Delivery
- * ExpectedCollateralMovement1.Delivery}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement1#mmDelivery
+ * ExpectedCollateralMovement1.mmDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement1#Return
- * ExpectedCollateralMovement1.Return}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement1#mmReturn
+ * ExpectedCollateralMovement1.mmReturn}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExpectedCollateralMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CollateralType1Code> delivery;
 	/**
 	 * Type of collateral that will be delivered.
 	 * <p>
@@ -82,8 +84,8 @@ public class ExpectedCollateralMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#Delivery
-	 * ExpectedCollateralType.Delivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmDelivery
+	 * ExpectedCollateralType.mmDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,26 +106,27 @@ public class ExpectedCollateralMovement1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement2#Delivery
-	 * ExpectedCollateralMovement2.Delivery}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement2#mmDelivery
+	 * ExpectedCollateralMovement2.mmDelivery}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Delivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelivery = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExpectedCollateralType.mmDelivery;
 			componentContext_lazy = () -> ExpectedCollateralMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExpectedCollateralType.Delivery;
 			isDerived = false;
 			xmlTag = "Dlvry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delivery";
 			definition = "Type of collateral that will be delivered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateralMovement2.Delivery);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateralMovement2.mmDelivery);
 			minOccurs = 0;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
 		}
 	};
+	protected List<CollateralType1Code> return_;
 	/**
 	 * Type of collateral that will be returned.
 	 * <p>
@@ -137,8 +140,8 @@ public class ExpectedCollateralMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#Return
-	 * ExpectedCollateralType.Return}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmReturn
+	 * ExpectedCollateralType.mmReturn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,22 +162,22 @@ public class ExpectedCollateralMovement1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement2#Return
-	 * ExpectedCollateralMovement2.Return}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement2#mmReturn
+	 * ExpectedCollateralMovement2.mmReturn}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Return = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReturn = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExpectedCollateralType.mmReturn;
 			componentContext_lazy = () -> ExpectedCollateralMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExpectedCollateralType.Return;
 			isDerived = false;
 			xmlTag = "Rtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Return";
 			definition = "Type of collateral that will be returned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateralMovement2.Return);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateralMovement2.mmReturn);
 			minOccurs = 0;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
 		}
@@ -183,9 +186,9 @@ public class ExpectedCollateralMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateralMovement1.Delivery, com.tools20022.repository.msg.ExpectedCollateralMovement1.Return);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateralMovement1.mmDelivery, com.tools20022.repository.msg.ExpectedCollateralMovement1.mmReturn);
 				trace_lazy = () -> ExpectedCollateralType.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExpectedCollateralMovement1";
 				definition = "Specifies the expected collateral type and direction.";
@@ -193,5 +196,21 @@ public class ExpectedCollateralMovement1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CollateralType1Code> getDelivery() {
+		return delivery;
+	}
+
+	public void setDelivery(List<CollateralType1Code> delivery) {
+		this.delivery = delivery;
+	}
+
+	public List<CollateralType1Code> getReturn() {
+		return return_;
+	}
+
+	public void setReturn(List<CollateralType1Code> return_) {
+		this.return_ = return_;
 	}
 }

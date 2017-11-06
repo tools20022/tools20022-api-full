@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#RequestedByCustomer
- * CancellationReason1Code.RequestedByCustomer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#mmRequestedByCustomer
+ * CancellationReason1Code.mmRequestedByCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#DuplicatePayment
- * CancellationReason1Code.DuplicatePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#mmDuplicatePayment
+ * CancellationReason1Code.mmDuplicatePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#IncorrectAgent
- * CancellationReason1Code.IncorrectAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#mmIncorrectAgent
+ * CancellationReason1Code.mmIncorrectAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#IncorrectCurrency
- * CancellationReason1Code.IncorrectCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#mmIncorrectCurrency
+ * CancellationReason1Code.mmIncorrectCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#UnduePayment
- * CancellationReason1Code.UnduePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason1Code#mmUnduePayment
+ * CancellationReason1Code.mmUnduePayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class CancellationReason1Code extends CancellationReasonCode {
 	 * name} = "RequestedByCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestedByCustomer = new MMCode() {
+	public static final MMCode mmRequestedByCustomer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedByCustomer";
@@ -116,7 +116,7 @@ public class CancellationReason1Code extends CancellationReasonCode {
 	 * name} = "DuplicatePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DuplicatePayment = new MMCode() {
+	public static final MMCode mmDuplicatePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicatePayment";
@@ -139,7 +139,7 @@ public class CancellationReason1Code extends CancellationReasonCode {
 	 * name} = "IncorrectAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectAgent = new MMCode() {
+	public static final MMCode mmIncorrectAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAgent";
@@ -162,7 +162,7 @@ public class CancellationReason1Code extends CancellationReasonCode {
 	 * name} = "IncorrectCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCurrency = new MMCode() {
+	public static final MMCode mmIncorrectCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCurrency";
@@ -185,7 +185,7 @@ public class CancellationReason1Code extends CancellationReasonCode {
 	 * name} = "UnduePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnduePayment = new MMCode() {
+	public static final MMCode mmUnduePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnduePayment";
@@ -196,14 +196,14 @@ public class CancellationReason1Code extends CancellationReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationReason1Code";
 				definition = "Specifies the reason for requesting the cancellation of a payment instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationReason1Code.RequestedByCustomer, com.tools20022.repository.codeset.CancellationReason1Code.DuplicatePayment,
-						com.tools20022.repository.codeset.CancellationReason1Code.IncorrectAgent, com.tools20022.repository.codeset.CancellationReason1Code.IncorrectCurrency,
-						com.tools20022.repository.codeset.CancellationReason1Code.UnduePayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationReason1Code.mmRequestedByCustomer, com.tools20022.repository.codeset.CancellationReason1Code.mmDuplicatePayment,
+						com.tools20022.repository.codeset.CancellationReason1Code.mmIncorrectAgent, com.tools20022.repository.codeset.CancellationReason1Code.mmIncorrectCurrency,
+						com.tools20022.repository.codeset.CancellationReason1Code.mmUnduePayment);
 				trace_lazy = () -> CancellationReasonCode.mmObject();
 			}
 		});

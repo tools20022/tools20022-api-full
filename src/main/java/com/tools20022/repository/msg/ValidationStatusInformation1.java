@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.InvoiceFinancingStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the status of a specific message.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationStatusInformation1#Status
- * ValidationStatusInformation1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationStatusInformation1#mmStatus
+ * ValidationStatusInformation1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationStatusInformation1#StatusReason
- * ValidationStatusInformation1.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationStatusInformation1#mmStatusReason
+ * ValidationStatusInformation1.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationStatusInformation1#AdditionalStatusReasonInformation
- * ValidationStatusInformation1.AdditionalStatusReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationStatusInformation1#mmAdditionalStatusReasonInformation
+ * ValidationStatusInformation1.mmAdditionalStatusReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ValidationStatusInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TechnicalValidationStatus1Code status;
 	/**
 	 * The result of the technical validation (e.g. Accepted, Reception error)
 	 * executed on the request message.
@@ -81,8 +83,8 @@ public class ValidationStatusInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#ValidationStatus
-	 * InvoiceFinancingStatus.ValidationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#mmValidationStatus
+	 * InvoiceFinancingStatus.mmValidationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class ValidationStatusInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmValidationStatus;
 			componentContext_lazy = () -> ValidationStatusInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.ValidationStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "The result of the technical validation (e.g. Accepted, Reception error) executed on the  request message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TechnicalValidationStatus1Code.mmObject();
 		}
 	};
+	protected StatusReason4Choice statusReason;
 	/**
 	 * The reason for the validation status.
 	 * <p>
@@ -130,8 +133,8 @@ public class ValidationStatusInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#ValidationStatusReason
-	 * InvoiceFinancingStatus.ValidationStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#mmValidationStatusReason
+	 * InvoiceFinancingStatus.mmValidationStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +153,21 @@ public class ValidationStatusInformation1 {
 	 * definition} = "The reason for the validation status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmValidationStatusReason;
 			componentContext_lazy = () -> ValidationStatusInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.ValidationStatusReason;
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "The reason for the validation status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatusReason4Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalStatusReasonInformation;
 	/**
 	 * Further details on the validation status reason.
 	 * <p>
@@ -191,7 +195,7 @@ public class ValidationStatusInformation1 {
 	 * definition} = "Further details on the validation status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalStatusReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValidationStatusInformation1.mmObject();
 			isDerived = false;
@@ -207,15 +211,39 @@ public class ValidationStatusInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationStatusInformation1.Status, com.tools20022.repository.msg.ValidationStatusInformation1.StatusReason,
-						com.tools20022.repository.msg.ValidationStatusInformation1.AdditionalStatusReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationStatusInformation1.mmStatus, com.tools20022.repository.msg.ValidationStatusInformation1.mmStatusReason,
+						com.tools20022.repository.msg.ValidationStatusInformation1.mmAdditionalStatusReasonInformation);
 				trace_lazy = () -> InvoiceFinancingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ValidationStatusInformation1";
 				definition = "Information about the status of a specific message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TechnicalValidationStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(TechnicalValidationStatus1Code status) {
+		this.status = status;
+	}
+
+	public StatusReason4Choice getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(StatusReason4Choice statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public List<Max105Text> getAdditionalStatusReasonInformation() {
+		return additionalStatusReasonInformation;
+	}
+
+	public void setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
+		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
 	}
 }

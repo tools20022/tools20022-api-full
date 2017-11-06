@@ -30,24 +30,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountRelationship1Code#Beneficiary
- * AccountRelationship1Code.Beneficiary}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountRelationship1Code#mmBeneficiary
+ * AccountRelationship1Code.mmBeneficiary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountRelationship1Code#PowerOfAttorney
- * AccountRelationship1Code.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountRelationship1Code#mmPowerOfAttorney
+ * AccountRelationship1Code.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountRelationship1Code#LegalGuardian
- * AccountRelationship1Code.LegalGuardian}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountRelationship1Code#mmLegalGuardian
+ * AccountRelationship1Code.mmLegalGuardian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountRelationship1Code#SuccessorOnDeath
- * AccountRelationship1Code.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountRelationship1Code#mmSuccessorOnDeath
+ * AccountRelationship1Code.mmSuccessorOnDeath}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class AccountRelationship1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Beneficiary = new MMCode() {
+	public static final MMCode mmBeneficiary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Beneficiary";
@@ -124,7 +124,7 @@ public class AccountRelationship1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PowerOfAttorney = new MMCode() {
+	public static final MMCode mmPowerOfAttorney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "PowerOfAttorney";
@@ -157,7 +157,7 @@ public class AccountRelationship1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LegalGuardian = new MMCode() {
+	public static final MMCode mmLegalGuardian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "LegalGuardian";
@@ -190,7 +190,7 @@ public class AccountRelationship1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SuccessorOnDeath = new MMCode() {
+	public static final MMCode mmSuccessorOnDeath = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "SuccessorOnDeath";
@@ -203,13 +203,13 @@ public class AccountRelationship1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BENF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "AccountRelationship1Code";
 				definition = "Specifies the role of a party with respect to an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountRelationship1Code.Beneficiary, com.tools20022.repository.codeset.AccountRelationship1Code.PowerOfAttorney,
-						com.tools20022.repository.codeset.AccountRelationship1Code.LegalGuardian, com.tools20022.repository.codeset.AccountRelationship1Code.SuccessorOnDeath);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountRelationship1Code.mmBeneficiary, com.tools20022.repository.codeset.AccountRelationship1Code.mmPowerOfAttorney,
+						com.tools20022.repository.codeset.AccountRelationship1Code.mmLegalGuardian, com.tools20022.repository.codeset.AccountRelationship1Code.mmSuccessorOnDeath);
 			}
 		});
 		return mmObject_lazy.get();

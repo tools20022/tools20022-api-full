@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Identification16#Identification
- * Identification16.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.Identification16#mmIdentification
+ * Identification16.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,48 +47,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04#ModificationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04#mmModificationRequestReference
  * SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.
- * ModificationRequestReference}</li>
+ * mmModificationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementTransactionAllegementNotification002V05.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05#ConfirmationReference
- * SecuritiesSettlementTransactionReversalAdvice002V05.ConfirmationReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05#mmConfirmationReference
+ * SecuritiesSettlementTransactionReversalAdvice002V05.mmConfirmationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#QueryReference
- * SecuritiesSettlementTransactionAuditTrailReport002V03.QueryReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmQueryReference
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementAllegementRemovalAdvice002V04.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdvice002V05#CancellationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdvice002V05#mmCancellationRequestReference
  * SecuritiesTransactionCancellationRequestStatusAdvice002V05.
- * CancellationRequestReference}</li>
+ * mmCancellationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04#CorporateActionEventIdentification
- * IntraPositionMovementInstruction002V04.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04#mmCorporateActionEventIdentification
+ * IntraPositionMovementInstruction002V04.mmCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#RequestReference
- * SecuritiesSettlementConditionModificationStatusAdvice002V07.RequestReference}
- * </li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#mmRequestReference
+ * SecuritiesSettlementConditionModificationStatusAdvice002V07.
+ * mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementTransactionAllegementNotification002V06.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06#ConfirmationReference
- * SecuritiesSettlementTransactionReversalAdvice002V06.ConfirmationReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06#mmConfirmationReference
+ * SecuritiesSettlementTransactionReversalAdvice002V06.mmConfirmationReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Identification16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax16Text identification;
 	/**
 	 * Unique identifier of a document, message or transaction.
 	 * <p>
@@ -135,17 +136,17 @@ public class Identification16 {
 	 * definition} = "Unique identifier of a document, message or transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Identification16.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
+			componentContext_lazy = () -> Identification16.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of a document, message or transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
@@ -153,24 +154,32 @@ public class Identification16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification16.Identification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification16.mmIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmModificationRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05.mmConfirmationReference,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmQueryReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmCancellationRequestReference,
+						com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.mmCorporateActionEventIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.mmConfirmationReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.ModificationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05.ConfirmationReference,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.QueryReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdvice002V05.CancellationRequestReference,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.CorporateActionEventIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.RequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.ConfirmationReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Identification16";
 				definition = "Unique identifier of a document, message or transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax16Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(RestrictedFINXMax16Text identification) {
+		this.identification = identification;
 	}
 }

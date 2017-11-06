@@ -34,22 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#Original
- * SignatureType1Code.Original}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SignatureType1Code#Digital
- * SignatureType1Code.Digital}</li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#mmOriginal
+ * SignatureType1Code.mmOriginal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#Electronic
- * SignatureType1Code.Electronic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SignatureType1Code#None
- * SignatureType1Code.None}</li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#mmDigital
+ * SignatureType1Code.mmDigital}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#mmElectronic
+ * SignatureType1Code.mmElectronic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SignatureType1Code#mmNone
+ * SignatureType1Code.mmNone}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +86,7 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 * name} = "Original"</li>
 	 * </ul>
 	 */
-	public static final MMCode Original = new MMCode() {
+	public static final MMCode mmOriginal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
@@ -108,7 +109,7 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 * name} = "Digital"</li>
 	 * </ul>
 	 */
-	public static final MMCode Digital = new MMCode() {
+	public static final MMCode mmDigital = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digital";
@@ -131,7 +132,7 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 * name} = "Electronic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Electronic = new MMCode() {
+	public static final MMCode mmElectronic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
@@ -154,7 +155,7 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode None = new MMCode() {
+	public static final MMCode mmNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
@@ -165,13 +166,13 @@ public class SignatureType1Code extends SignatureTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORIG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SignatureType1Code";
 				definition = "Type of signature form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureType1Code.Original, com.tools20022.repository.codeset.SignatureType1Code.Digital, com.tools20022.repository.codeset.SignatureType1Code.Electronic,
-						com.tools20022.repository.codeset.SignatureType1Code.None);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureType1Code.mmOriginal, com.tools20022.repository.codeset.SignatureType1Code.mmDigital,
+						com.tools20022.repository.codeset.SignatureType1Code.mmElectronic, com.tools20022.repository.codeset.SignatureType1Code.mmNone);
 				trace_lazy = () -> SignatureTypeCode.mmObject();
 			}
 		});

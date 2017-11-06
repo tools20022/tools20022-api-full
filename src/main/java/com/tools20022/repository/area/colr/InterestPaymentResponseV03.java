@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -71,33 +72,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#TransactionIdentification
- * InterestPaymentResponseV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmTransactionIdentification
+ * InterestPaymentResponseV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#Obligation
- * InterestPaymentResponseV03.Obligation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmObligation
+ * InterestPaymentResponseV03.mmObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#Agreement
- * InterestPaymentResponseV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmAgreement
+ * InterestPaymentResponseV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#InterestDueToA
- * InterestPaymentResponseV03.InterestDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmInterestDueToA
+ * InterestPaymentResponseV03.mmInterestDueToA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#InterestDueToB
- * InterestPaymentResponseV03.InterestDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmInterestDueToB
+ * InterestPaymentResponseV03.mmInterestDueToB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#InterestResponse
- * InterestPaymentResponseV03.InterestResponse}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmInterestResponse
+ * InterestPaymentResponseV03.mmInterestResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#SupplementaryData
- * InterestPaymentResponseV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmSupplementaryData
+ * InterestPaymentResponseV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#identifier
- * InterestPaymentResponseV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code colr.014.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,6 +120,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InterestPaymentResponseV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as know by the instructing
 	 * party.
@@ -148,24 +148,25 @@ public class InterestPaymentResponseV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#TransactionIdentification
-	 * InterestPaymentResponseV04.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#mmTransactionIdentification
+	 * InterestPaymentResponseV04.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmTransactionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Obligation3 obligation;
 	/**
 	 * Provides information like the identification of the party or parties
 	 * associated with the collateral agreement, the exposure type and the
@@ -194,24 +195,25 @@ public class InterestPaymentResponseV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#Obligation
-	 * InterestPaymentResponseV04.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#mmObligation
+	 * InterestPaymentResponseV04.mmObligation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Obligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.Obligation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmObligation);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Obligation3.mmObject();
 		}
 	};
+	protected Agreement2 agreement;
 	/**
 	 * Agreement details for the over the counter market.
 	 * <p>
@@ -236,24 +238,25 @@ public class InterestPaymentResponseV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#Agreement
-	 * InterestPaymentResponseV04.Agreement}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#mmAgreement
+	 * InterestPaymentResponseV04.mmAgreement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Agreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Agrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreement";
 			definition = "Agreement details for the over the counter market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.Agreement);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmAgreement);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Agreement2.mmObject();
 		}
 	};
+	protected InterestAmount2 interestDueToA;
 	/**
 	 * Provides details on the interest amount due to party A.
 	 * <p>
@@ -278,24 +281,25 @@ public class InterestPaymentResponseV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#InterestDueToA
-	 * InterestPaymentResponseV04.InterestDueToA}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#mmInterestDueToA
+	 * InterestPaymentResponseV04.mmInterestDueToA}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InterestDueToA = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInterestDueToA = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrstDueToA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestDueToA";
 			definition = "Provides details on the interest amount due to party A.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.InterestDueToA);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmInterestDueToA);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InterestAmount2.mmObject();
 		}
 	};
+	protected InterestAmount2 interestDueToB;
 	/**
 	 * Provides details on the interest amount due to party B.
 	 * <p>
@@ -320,24 +324,25 @@ public class InterestPaymentResponseV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#InterestDueToB
-	 * InterestPaymentResponseV04.InterestDueToB}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#mmInterestDueToB
+	 * InterestPaymentResponseV04.mmInterestDueToB}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InterestDueToB = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInterestDueToB = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrstDueToB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestDueToB";
 			definition = "Provides details on the interest amount due to party B.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.InterestDueToB);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmInterestDueToB);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InterestAmount2.mmObject();
 		}
 	};
+	protected InterestResponse1 interestResponse;
 	/**
 	 * Provides details on the response to the interest payment request.
 	 * <p>
@@ -364,24 +369,25 @@ public class InterestPaymentResponseV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#InterestResponse
-	 * InterestPaymentResponseV04.InterestResponse}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#mmInterestResponse
+	 * InterestPaymentResponseV04.mmInterestResponse}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InterestResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInterestResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrstRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestResponse";
 			definition = "Provides details on the response to the interest payment request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.InterestResponse);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmInterestResponse);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InterestResponse1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -410,48 +416,21 @@ public class InterestPaymentResponseV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#SupplementaryData
-	 * InterestPaymentResponseV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#mmSupplementaryData
+	 * InterestPaymentResponseV04.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "colr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "014"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "colr";
-			messageFunctionality = "014";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -466,13 +445,76 @@ public class InterestPaymentResponseV03 {
 				rootElement = "Document";
 				xmlTag = "IntrstPmtRspn";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV03.TransactionIdentification, com.tools20022.repository.area.colr.InterestPaymentResponseV03.Obligation,
-						com.tools20022.repository.area.colr.InterestPaymentResponseV03.Agreement, com.tools20022.repository.area.colr.InterestPaymentResponseV03.InterestDueToA,
-						com.tools20022.repository.area.colr.InterestPaymentResponseV03.InterestDueToB, com.tools20022.repository.area.colr.InterestPaymentResponseV03.InterestResponse,
-						com.tools20022.repository.area.colr.InterestPaymentResponseV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.colr.InterestPaymentResponseV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmTransactionIdentification, com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmObligation,
+						com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmAgreement, com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestDueToA,
+						com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestDueToB, com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestResponse,
+						com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "colr";
+						messageFunctionality = "014";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Obligation3 getObligation() {
+		return obligation;
+	}
+
+	public void setObligation(Obligation3 obligation) {
+		this.obligation = obligation;
+	}
+
+	public Agreement2 getAgreement() {
+		return agreement;
+	}
+
+	public void setAgreement(Agreement2 agreement) {
+		this.agreement = agreement;
+	}
+
+	public InterestAmount2 getInterestDueToA() {
+		return interestDueToA;
+	}
+
+	public void setInterestDueToA(InterestAmount2 interestDueToA) {
+		this.interestDueToA = interestDueToA;
+	}
+
+	public InterestAmount2 getInterestDueToB() {
+		return interestDueToB;
+	}
+
+	public void setInterestDueToB(InterestAmount2 interestDueToB) {
+		this.interestDueToB = interestDueToB;
+	}
+
+	public InterestResponse1 getInterestResponse() {
+		return interestResponse;
+	}
+
+	public void setInterestResponse(InterestResponse1 interestResponse) {
+		this.interestResponse = interestResponse;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.OtherCollateral1;
 import com.tools20022.repository.msg.SecuritiesCollateral1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between the type of collateral proposed for the margin call.
@@ -38,14 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#SecuritiesCollateral
- * ProposalType1Choice.SecuritiesCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#mmSecuritiesCollateral
+ * ProposalType1Choice.mmSecuritiesCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#CashCollateral
- * ProposalType1Choice.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#mmCashCollateral
+ * ProposalType1Choice.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#OtherCollateral
- * ProposalType1Choice.OtherCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#mmOtherCollateral
+ * ProposalType1Choice.mmOtherCollateral}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProposalType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<SecuritiesCollateral1> securitiesCollateral;
 	/**
 	 * Collateral type is securities.
 	 * <p>
@@ -100,20 +102,21 @@ public class ProposalType1Choice {
 	 * definition} = "Collateral type is securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ProposalType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> ProposalType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCollateral";
 			definition = "Collateral type is securities.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesCollateral1.mmObject();
 			isComposite = true;
+			type_lazy = () -> SecuritiesCollateral1.mmObject();
 		}
 	};
+	protected List<CashCollateral1> cashCollateral;
 	/**
 	 * Collateral type is cash.
 	 * <p>
@@ -144,20 +147,21 @@ public class ProposalType1Choice {
 	 * definition} = "Collateral type is cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ProposalType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> Money.mmObject();
+			componentContext_lazy = () -> ProposalType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashCollateral";
 			definition = "Collateral type is cash.";
 			minOccurs = 0;
-			type_lazy = () -> CashCollateral1.mmObject();
 			isComposite = true;
+			type_lazy = () -> CashCollateral1.mmObject();
 		}
 	};
+	protected List<OtherCollateral1> otherCollateral;
 	/**
 	 * Collateral type is other than securities or cash for example letter of
 	 * credit.
@@ -170,8 +174,8 @@ public class ProposalType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#Asset
-	 * AssetHolding.Asset}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmAsset
+	 * AssetHolding.mmAsset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,33 +196,57 @@ public class ProposalType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAsset;
 			componentContext_lazy = () -> ProposalType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.Asset;
 			isDerived = false;
 			xmlTag = "OthrColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCollateral";
 			definition = "Collateral type is other than securities or cash for example letter of credit.";
 			minOccurs = 0;
-			type_lazy = () -> OtherCollateral1.mmObject();
 			isComposite = true;
+			type_lazy = () -> OtherCollateral1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProposalType1Choice.SecuritiesCollateral, com.tools20022.repository.choice.ProposalType1Choice.CashCollateral,
-						com.tools20022.repository.choice.ProposalType1Choice.OtherCollateral);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProposalType1Choice.mmSecuritiesCollateral, com.tools20022.repository.choice.ProposalType1Choice.mmCashCollateral,
+						com.tools20022.repository.choice.ProposalType1Choice.mmOtherCollateral);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProposalType1Choice";
 				definition = "Choice between the type of collateral proposed for the margin call.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesCollateral1> getSecuritiesCollateral() {
+		return securitiesCollateral;
+	}
+
+	public void setSecuritiesCollateral(List<SecuritiesCollateral1> securitiesCollateral) {
+		this.securitiesCollateral = securitiesCollateral;
+	}
+
+	public List<CashCollateral1> getCashCollateral() {
+		return cashCollateral;
+	}
+
+	public void setCashCollateral(List<CashCollateral1> cashCollateral) {
+		this.cashCollateral = cashCollateral;
+	}
+
+	public List<OtherCollateral1> getOtherCollateral() {
+		return otherCollateral;
+	}
+
+	public void setOtherCollateral(List<OtherCollateral1> otherCollateral) {
+		this.otherCollateral = otherCollateral;
 	}
 }

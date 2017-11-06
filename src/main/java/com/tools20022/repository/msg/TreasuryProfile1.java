@@ -37,12 +37,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#Date
- * TreasuryProfile1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#TraderType
- * TreasuryProfile1.TraderType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#Rate
- * TreasuryProfile1.Rate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#mmDate
+ * TreasuryProfile1.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#mmTraderType
+ * TreasuryProfile1.mmTraderType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TreasuryProfile1#mmRate
+ * TreasuryProfile1.mmRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TreasuryProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Execution date of treasury bond trade.
 	 * <p>
@@ -78,8 +79,8 @@ public class TreasuryProfile1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class TreasuryProfile1 {
 	 * definition} = "Execution date of treasury bond trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TreasuryProfile1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Execution date of treasury bond trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PartyRole5Choice traderType;
 	/**
 	 * Type of party that performs trading operations, for example, investor or
 	 * custodian.
@@ -146,21 +148,22 @@ public class TreasuryProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TraderType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTraderType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TreasuryProfile1.mmObject();
 			businessComponentTrace_lazy = () -> TreasuryTradingParty.mmObject();
+			componentContext_lazy = () -> TreasuryProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "TradrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraderType";
 			definition = "Type of party that performs trading operations, for example, investor or custodian.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyRole5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyRole5Choice.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Tax rate.
 	 * <p>
@@ -174,7 +177,7 @@ public class TreasuryProfile1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,17 +196,17 @@ public class TreasuryProfile1 {
 	 * definition} = "Tax rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> TreasuryProfile1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Tax rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -211,14 +214,38 @@ public class TreasuryProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TreasuryProfile1.Date, com.tools20022.repository.msg.TreasuryProfile1.TraderType, com.tools20022.repository.msg.TreasuryProfile1.Rate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TreasuryProfile1.mmDate, com.tools20022.repository.msg.TreasuryProfile1.mmTraderType, com.tools20022.repository.msg.TreasuryProfile1.mmRate);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TreasuryProfile1";
 				definition = "Treasury trading profile.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public PartyRole5Choice getTraderType() {
+		return traderType;
+	}
+
+	public void setTraderType(PartyRole5Choice traderType) {
+		this.traderType = traderType;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
 	}
 }

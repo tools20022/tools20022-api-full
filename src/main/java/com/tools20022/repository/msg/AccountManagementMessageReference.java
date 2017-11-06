@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#PreviousReferenceOrOtherReferenceRule
- * AccountManagementMessageReference.PreviousReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#mmPreviousReferenceOrOtherReferenceRule
+ * AccountManagementMessageReference.mmPreviousReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,27 +44,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#OtherReference
- * AccountManagementMessageReference.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#mmOtherReference
+ * AccountManagementMessageReference.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#PreviousReference
- * AccountManagementMessageReference.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#mmPreviousReference
+ * AccountManagementMessageReference.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#StatusRequestType
- * AccountManagementMessageReference.StatusRequestType}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#mmStatusRequestType
+ * AccountManagementMessageReference.mmStatusRequestType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#AccountApplicationIdentification
- * AccountManagementMessageReference.AccountApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#mmAccountApplicationIdentification
+ * AccountManagementMessageReference.mmAccountApplicationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#InvestmentAccount
- * AccountManagementMessageReference.InvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#mmInvestmentAccount
+ * AccountManagementMessageReference.mmInvestmentAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountManagementMessageReference {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReference3 otherReference;
 	/**
 	 * Reference to a linked message sent in a proprietary way or reference of a
 	 * system.
@@ -109,7 +110,7 @@ public class AccountManagementMessageReference {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountManagementMessageReference.mmObject();
 			isDerived = false;
@@ -117,12 +118,13 @@ public class AccountManagementMessageReference {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked message sent in a proprietary way or reference of a system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReference3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -149,7 +151,7 @@ public class AccountManagementMessageReference {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountManagementMessageReference.mmObject();
 			isDerived = false;
@@ -157,12 +159,13 @@ public class AccountManagementMessageReference {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReference3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
 		}
 	};
+	protected AccountManagementType1Code statusRequestType;
 	/**
 	 * Specifies if the status request refers to an earlier account opening or
 	 * modification instruction message.
@@ -194,7 +197,7 @@ public class AccountManagementMessageReference {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusRequestType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountManagementMessageReference.mmObject();
 			isDerived = false;
@@ -202,11 +205,12 @@ public class AccountManagementMessageReference {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRequestType";
 			definition = "Specifies if the status request refers to an earlier account opening or modification instruction message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType1Code.mmObject();
 		}
 	};
+	protected Max35Text accountApplicationIdentification;
 	/**
 	 * Unique and unambiguous identifier of the account opening or account
 	 * modification instruction at application level.
@@ -237,7 +241,7 @@ public class AccountManagementMessageReference {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountManagementMessageReference.mmObject();
 			isDerived = false;
@@ -245,11 +249,12 @@ public class AccountManagementMessageReference {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or account modification instruction at application level.\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected InvestmentAccount14 investmentAccount;
 	/**
 	 * Account information for which the status of an account management
 	 * instruction is requested.
@@ -279,7 +284,7 @@ public class AccountManagementMessageReference {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountManagementMessageReference.mmObject();
 			isDerived = false;
@@ -287,10 +292,10 @@ public class AccountManagementMessageReference {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Account information for which the status of an account management instruction is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount14.mmObject();
 		}
 	};
 	/**
@@ -303,11 +308,11 @@ public class AccountManagementMessageReference {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#OtherReference
-	 * AccountManagementMessageReference.OtherReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#mmOtherReference
+	 * AccountManagementMessageReference.mmOtherReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#PreviousReference
-	 * AccountManagementMessageReference.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference#mmPreviousReference
+	 * AccountManagementMessageReference.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -327,29 +332,69 @@ public class AccountManagementMessageReference {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor PreviousReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor mmPreviousReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceOrOtherReferenceRule";
 			definition = "Either PreviousReference or Other Reference must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference.OtherReference, com.tools20022.repository.msg.AccountManagementMessageReference.PreviousReference);
 			messageComponent_lazy = () -> AccountManagementMessageReference.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference.mmOtherReference, com.tools20022.repository.msg.AccountManagementMessageReference.mmPreviousReference);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference.OtherReference, com.tools20022.repository.msg.AccountManagementMessageReference.PreviousReference,
-						com.tools20022.repository.msg.AccountManagementMessageReference.StatusRequestType, com.tools20022.repository.msg.AccountManagementMessageReference.AccountApplicationIdentification,
-						com.tools20022.repository.msg.AccountManagementMessageReference.InvestmentAccount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference.mmOtherReference, com.tools20022.repository.msg.AccountManagementMessageReference.mmPreviousReference,
+						com.tools20022.repository.msg.AccountManagementMessageReference.mmStatusRequestType, com.tools20022.repository.msg.AccountManagementMessageReference.mmAccountApplicationIdentification,
+						com.tools20022.repository.msg.AccountManagementMessageReference.mmInvestmentAccount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountManagementMessageReference";
 				definition = "Information about the message reference of the account management instruction message for which the status is requested .";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference.PreviousReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference.mmPreviousReferenceOrOtherReferenceRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReference3 getOtherReference() {
+		return otherReference;
+	}
+
+	public void setOtherReference(com.tools20022.repository.msg.AdditionalReference3 otherReference) {
+		this.otherReference = otherReference;
+	}
+
+	public AdditionalReference3 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(com.tools20022.repository.msg.AdditionalReference3 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AccountManagementType1Code getStatusRequestType() {
+		return statusRequestType;
+	}
+
+	public void setStatusRequestType(AccountManagementType1Code statusRequestType) {
+		this.statusRequestType = statusRequestType;
+	}
+
+	public Max35Text getAccountApplicationIdentification() {
+		return accountApplicationIdentification;
+	}
+
+	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+		this.accountApplicationIdentification = accountApplicationIdentification;
+	}
+
+	public InvestmentAccount14 getInvestmentAccount() {
+		return investmentAccount;
+	}
+
+	public void setInvestmentAccount(com.tools20022.repository.msg.InvestmentAccount14 investmentAccount) {
+		this.investmentAccount = investmentAccount;
 	}
 }

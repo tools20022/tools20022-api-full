@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialInstruction3Code#HoldCashForCreditor
- * PartialInstruction3Code.HoldCashForCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialInstruction3Code#mmHoldCashForCreditor
+ * PartialInstruction3Code.mmHoldCashForCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialInstruction3Code#PhoneBeneficiary
- * PartialInstruction3Code.PhoneBeneficiary}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialInstruction3Code#mmPhoneBeneficiary
+ * PartialInstruction3Code.mmPhoneBeneficiary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialInstruction3Code#Telecom
- * PartialInstruction3Code.Telecom}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialInstruction3Code#mmTelecom
+ * PartialInstruction3Code.mmTelecom}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class PartialInstruction3Code extends InstructionCode {
 	 * name} = "HoldCashForCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode HoldCashForCreditor = new MMCode() {
+	public static final MMCode mmHoldCashForCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldCashForCreditor";
@@ -110,7 +110,7 @@ public class PartialInstruction3Code extends InstructionCode {
 	 * name} = "PhoneBeneficiary"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhoneBeneficiary = new MMCode() {
+	public static final MMCode mmPhoneBeneficiary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneBeneficiary";
@@ -133,7 +133,7 @@ public class PartialInstruction3Code extends InstructionCode {
 	 * name} = "Telecom"</li>
 	 * </ul>
 	 */
-	public static final MMCode Telecom = new MMCode() {
+	public static final MMCode mmTelecom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Telecom";
@@ -144,13 +144,13 @@ public class PartialInstruction3Code extends InstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HOLD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartialInstruction3Code";
 				definition = "Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialInstruction3Code.HoldCashForCreditor, com.tools20022.repository.codeset.PartialInstruction3Code.PhoneBeneficiary,
-						com.tools20022.repository.codeset.PartialInstruction3Code.Telecom);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialInstruction3Code.mmHoldCashForCreditor, com.tools20022.repository.codeset.PartialInstruction3Code.mmPhoneBeneficiary,
+						com.tools20022.repository.codeset.PartialInstruction3Code.mmTelecom);
 				trace_lazy = () -> InstructionCode.mmObject();
 			}
 		});

@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.OrderStatus5Code;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of status.
@@ -34,22 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.OrderStatus1Choice#Status
- * OrderStatus1Choice.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmStatus
+ * OrderStatus1Choice.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#Cancelled
- * OrderStatus1Choice.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmCancelled
+ * OrderStatus1Choice.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#ConditionallyAccepted
- * OrderStatus1Choice.ConditionallyAccepted}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OrderStatus1Choice#Rejected
- * OrderStatus1Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmConditionallyAccepted
+ * OrderStatus1Choice.mmConditionallyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#Suspended
- * OrderStatus1Choice.Suspended}</li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmRejected
+ * OrderStatus1Choice.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#PartiallySettled
- * OrderStatus1Choice.PartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmSuspended
+ * OrderStatus1Choice.mmSuspended}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmPartiallySettled
+ * OrderStatus1Choice.mmPartiallySettled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrderStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrderStatus5Code status;
 	/**
 	 * Status of the order.
 	 * <p>
@@ -86,8 +89,8 @@ public class OrderStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#OrderStatus
-	 * SecuritiesOrderStatus.OrderStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmOrderStatus
+	 * SecuritiesOrderStatus.mmOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +109,21 @@ public class OrderStatus1Choice {
 	 * definition} = "Status of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> OrderStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.OrderStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OrderStatus5Code.mmObject();
 		}
 	};
+	protected CancelledStatusReason1Choice cancelled;
 	/**
 	 * Status of the individual order is cancelled. This status is used for an
 	 * order that has been accepted or that has been entered in an order book
@@ -134,8 +138,8 @@ public class OrderStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,21 +160,22 @@ public class OrderStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Cancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> OrderStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Canc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Status of the individual order is cancelled. This status is used for an order that has been accepted or that has been entered in an order book but that cannot be executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancelledStatusReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CancelledStatusReason1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice> conditionallyAccepted;
 	/**
 	 * Status of the order is conditionally accepted.
 	 * <p>
@@ -183,8 +188,8 @@ public class OrderStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConditionallyAcceptedStatus
-	 * SecuritiesOrderStatus.ConditionallyAcceptedStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConditionallyAcceptedStatus
+	 * SecuritiesOrderStatus.mmConditionallyAcceptedStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,21 +208,22 @@ public class OrderStatus1Choice {
 	 * definition} = "Status of the order is conditionally accepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ConditionallyAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConditionallyAccepted = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> OrderStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.ConditionallyAcceptedStatus;
 			isDerived = false;
 			xmlTag = "CondlyAccptd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyAccepted";
 			definition = "Status of the order is conditionally accepted.";
-			minOccurs = 1;
 			maxOccurs = 5;
-			type_lazy = () -> ConditionallyAcceptedStatusReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.choice.RejectedStatusReason1Choice> rejected;
 	/**
 	 * Status of the order is rejected. This status is used for an order that
 	 * has not been accepted or entered in an order book.
@@ -253,21 +259,22 @@ public class OrderStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OrderStatus1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
+			componentContext_lazy = () -> OrderStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the order is rejected. This status is used for an order that has not been accepted or entered in an order book.";
-			minOccurs = 1;
 			maxOccurs = 10;
-			type_lazy = () -> RejectedStatusReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RejectedStatusReason1Choice.mmObject();
 		}
 	};
+	protected SuspendedStatusReasonChoice suspended;
 	/**
 	 * Status of the order is suspended.
 	 * <p>
@@ -280,8 +287,8 @@ public class OrderStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#SuspendedStatusReason
-	 * SecuritiesOrderStatus.SuspendedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmSuspendedStatusReason
+	 * SecuritiesOrderStatus.mmSuspendedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,21 +307,22 @@ public class OrderStatus1Choice {
 	 * definition} = "Status of the order is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Suspended = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSuspended = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> OrderStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.SuspendedStatusReason;
 			isDerived = false;
 			xmlTag = "Sspd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			definition = "Status of the order is suspended.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SuspendedStatusReasonChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReasonChoice.mmObject();
 		}
 	};
+	protected PartiallySettledStatus2 partiallySettled;
 	/**
 	 * Status of the order is partially settled.
 	 * <p>
@@ -327,8 +335,8 @@ public class OrderStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#PartiallySettledStatusReason
-	 * SecuritiesOrderStatus.PartiallySettledStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmPartiallySettledStatusReason
+	 * SecuritiesOrderStatus.mmPartiallySettledStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -347,35 +355,83 @@ public class OrderStatus1Choice {
 	 * definition} = "Status of the order is partially settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartiallySettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartiallySettled = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> OrderStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.PartiallySettledStatusReason;
 			isDerived = false;
 			xmlTag = "PrtlySttld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySettled";
 			definition = "Status of the order is partially settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartiallySettledStatus2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PartiallySettledStatus2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderStatus1Choice.Status, com.tools20022.repository.choice.OrderStatus1Choice.Cancelled,
-						com.tools20022.repository.choice.OrderStatus1Choice.ConditionallyAccepted, com.tools20022.repository.choice.OrderStatus1Choice.Rejected, com.tools20022.repository.choice.OrderStatus1Choice.Suspended,
-						com.tools20022.repository.choice.OrderStatus1Choice.PartiallySettled);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderStatus1Choice.mmStatus, com.tools20022.repository.choice.OrderStatus1Choice.mmCancelled,
+						com.tools20022.repository.choice.OrderStatus1Choice.mmConditionallyAccepted, com.tools20022.repository.choice.OrderStatus1Choice.mmRejected, com.tools20022.repository.choice.OrderStatus1Choice.mmSuspended,
+						com.tools20022.repository.choice.OrderStatus1Choice.mmPartiallySettled);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderStatus1Choice";
 				definition = "Choice of status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrderStatus5Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(OrderStatus5Code status) {
+		this.status = status;
+	}
+
+	public CancelledStatusReason1Choice getCancelled() {
+		return cancelled;
+	}
+
+	public void setCancelled(com.tools20022.repository.choice.CancelledStatusReason1Choice cancelled) {
+		this.cancelled = cancelled;
+	}
+
+	public List<ConditionallyAcceptedStatusReason1Choice> getConditionallyAccepted() {
+		return conditionallyAccepted;
+	}
+
+	public void setConditionallyAccepted(List<com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice> conditionallyAccepted) {
+		this.conditionallyAccepted = conditionallyAccepted;
+	}
+
+	public List<RejectedStatusReason1Choice> getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(List<com.tools20022.repository.choice.RejectedStatusReason1Choice> rejected) {
+		this.rejected = rejected;
+	}
+
+	public SuspendedStatusReasonChoice getSuspended() {
+		return suspended;
+	}
+
+	public void setSuspended(com.tools20022.repository.choice.SuspendedStatusReasonChoice suspended) {
+		this.suspended = suspended;
+	}
+
+	public PartiallySettledStatus2 getPartiallySettled() {
+		return partiallySettled;
+	}
+
+	public void setPartiallySettled(com.tools20022.repository.choice.PartiallySettledStatus2 partiallySettled) {
+		this.partiallySettled = partiallySettled;
 	}
 }

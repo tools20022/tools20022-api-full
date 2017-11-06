@@ -32,21 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandardisationCode#Standardised
- * StandardisationCode.Standardised}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandardisationCode#mmStandardised
+ * StandardisationCode.mmStandardised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandardisationCode#NonStandardised
- * StandardisationCode.NonStandardised}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandardisationCode#mmNonStandardised
+ * StandardisationCode.mmNonStandardised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandardisationCode#Flexible
- * StandardisationCode.Flexible}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandardisationCode#mmFlexible
+ * StandardisationCode.mmFlexible}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class StandardisationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Standardised = new MMCode() {
+	public static final MMCode mmStandardised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Standardised";
@@ -126,7 +126,7 @@ public class StandardisationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NonStandardised = new MMCode() {
+	public static final MMCode mmNonStandardised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NonStandardised";
@@ -159,7 +159,7 @@ public class StandardisationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Flexible = new MMCode() {
+	public static final MMCode mmFlexible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Flexible";
@@ -172,13 +172,13 @@ public class StandardisationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandardisationCode";
 				definition = "Specifies whether the terms of the security (underlying instruments, expiration date, contract size) are defined according to the exchange specifications or whether they can be user defined.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandardisationCode.Standardised, com.tools20022.repository.codeset.StandardisationCode.NonStandardised,
-						com.tools20022.repository.codeset.StandardisationCode.Flexible);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandardisationCode.mmStandardised, com.tools20022.repository.codeset.StandardisationCode.mmNonStandardised,
+						com.tools20022.repository.codeset.StandardisationCode.mmFlexible);
 			}
 		});
 		return mmObject_lazy.get();

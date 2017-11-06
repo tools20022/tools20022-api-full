@@ -34,12 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat1Choice#Date
- * DateFormat1Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat1Choice#Code
- * DateFormat1Choice.Code}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat1Choice#DateTime
- * DateFormat1Choice.DateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat1Choice#mmDate
+ * DateFormat1Choice.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat1Choice#mmCode
+ * DateFormat1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat1Choice#mmDateTime
+ * DateFormat1Choice.mmDateTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,27 +48,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#RequestedTransferDate
- * TransferOutInstructionV03.RequestedTransferDate}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#mmRequestedTransferDate
+ * TransferOutInstructionV03.mmRequestedTransferDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#RequestedTransferDate
- * TransferOutInstructionV04.RequestedTransferDate}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#mmRequestedTransferDate
+ * TransferOutInstructionV04.mmRequestedTransferDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#RequestedTransferDate
- * TransferOutInstructionV05.RequestedTransferDate}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmRequestedTransferDate
+ * TransferOutInstructionV05.mmRequestedTransferDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#RequestedTransferDate
- * TransferOutInstructionV06.RequestedTransferDate}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmRequestedTransferDate
+ * TransferOutInstructionV06.mmRequestedTransferDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#RequestedTransferDate
- * TransferOutInstructionV07.RequestedTransferDate}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmRequestedTransferDate
+ * TransferOutInstructionV07.mmRequestedTransferDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Date expressed as a calendar date.
 	 * <p>
@@ -108,7 +110,7 @@ public class DateFormat1Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat1Choice.mmObject();
 			isDerived = false;
@@ -116,11 +118,12 @@ public class DateFormat1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected SettlementDate1Code code;
 	/**
 	 * Date expressed as a code.
 	 * <p>
@@ -149,7 +152,7 @@ public class DateFormat1Choice {
 	 * definition} = "Date expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat1Choice.mmObject();
 			isDerived = false;
@@ -157,11 +160,12 @@ public class DateFormat1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Date expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDate1Code.mmObject();
 		}
 	};
+	protected ISODateTime dateTime;
 	/**
 	 * Date expressed as a calendar date and time.
 	 * <p>
@@ -189,7 +193,7 @@ public class DateFormat1Choice {
 	 * definition} = "Date expressed as a calendar date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat1Choice.mmObject();
 			isDerived = false;
@@ -197,8 +201,8 @@ public class DateFormat1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date expressed as a calendar date and time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -206,16 +210,40 @@ public class DateFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat1Choice.Date, com.tools20022.repository.choice.DateFormat1Choice.Code, com.tools20022.repository.choice.DateFormat1Choice.DateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV03.RequestedTransferDate, com.tools20022.repository.area.sese.TransferOutInstructionV04.RequestedTransferDate,
-						com.tools20022.repository.area.sese.TransferOutInstructionV05.RequestedTransferDate, com.tools20022.repository.area.sese.TransferOutInstructionV06.RequestedTransferDate,
-						com.tools20022.repository.area.sese.TransferOutInstructionV07.RequestedTransferDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat1Choice.mmDate, com.tools20022.repository.choice.DateFormat1Choice.mmCode, com.tools20022.repository.choice.DateFormat1Choice.mmDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV03.mmRequestedTransferDate, com.tools20022.repository.area.sese.TransferOutInstructionV04.mmRequestedTransferDate,
+						com.tools20022.repository.area.sese.TransferOutInstructionV05.mmRequestedTransferDate, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmRequestedTransferDate,
+						com.tools20022.repository.area.sese.TransferOutInstructionV07.mmRequestedTransferDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateFormat1Choice";
 				definition = "Choice between the formats to express a date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public SettlementDate1Code getCode() {
+		return code;
+	}
+
+	public void setCode(SettlementDate1Code code) {
+		this.code = code;
+	}
+
+	public ISODateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(ISODateTime dateTime) {
+		this.dateTime = dateTime;
 	}
 }

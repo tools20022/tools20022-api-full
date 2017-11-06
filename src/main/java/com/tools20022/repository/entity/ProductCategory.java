@@ -39,26 +39,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ProductCategory#Product
- * ProductCategory.Product}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductCategory#Type
- * ProductCategory.Type}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductCategory#Category
- * ProductCategory.Category}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductCategory#mmProduct
+ * ProductCategory.mmProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductCategory#mmType
+ * ProductCategory.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductCategory#mmCategory
+ * ProductCategory.mmCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ProductCategory#RelatedCardPaymentValidation
- * ProductCategory.RelatedCardPaymentValidation}</li>
+ * {@linkplain com.tools20022.repository.entity.ProductCategory#mmRelatedCardPaymentValidation
+ * ProductCategory.mmRelatedCardPaymentValidation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Product#ProductCategory
- * Product.ProductCategory}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmProductCategory
+ * Product.mmProductCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#DeclinedProductCode
- * CardPaymentValidation.DeclinedProductCode}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#mmDeclinedProductCode
+ * CardPaymentValidation.mmDeclinedProductCode}</li>
  * </ul>
  * </li>
  * <li>
@@ -66,11 +66,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProductCategory1Choice#StructuredProductCategory
- * ProductCategory1Choice.StructuredProductCategory}</li>
+ * {@linkplain com.tools20022.repository.choice.ProductCategory1Choice#mmStructuredProductCategory
+ * ProductCategory1Choice.mmStructuredProductCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProductCategory1Choice#OtherProductCategory
- * ProductCategory1Choice.OtherProductCategory}</li>
+ * {@linkplain com.tools20022.repository.choice.ProductCategory1Choice#mmOtherProductCategory
+ * ProductCategory1Choice.mmOtherProductCategory}</li>
  * </ul>
  * </li>
  * <li>
@@ -86,8 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProductCategory {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Product product;
 	/**
 	 * Specifies the product for which a category is specified.
 	 * <p>
@@ -109,8 +110,8 @@ public class ProductCategory {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Product#ProductCategory
-	 * Product.ProductCategory}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmProductCategory
+	 * Product.mmProductCategory}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -133,20 +134,21 @@ public class ProductCategory {
 	 * definition} = "Specifies the product for which a category is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Product = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ProductCategory.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Product";
 			definition = "Specifies the product for which a category is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Product.ProductCategory;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmProductCategory;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 		}
 	};
+	protected ProductCategoryCode type;
 	/**
 	 * Specifies the type of product category by means of a code.
 	 * <p>
@@ -157,21 +159,21 @@ public class ProductCategory {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode
 	 * ProductCategoryCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ProductCategory1#Type
-	 * ProductCategory1.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ServiceItemTotals1#ItemType
-	 * ServiceItemTotals1.ItemType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ProductCategory
 	 * ProductCategory}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ProductCategory1#mmType
+	 * ProductCategory1.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceItemTotals1#mmItemType
+	 * ServiceItemTotals1.mmItemType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -184,19 +186,20 @@ public class ProductCategory {
 	 * "Specifies the type of product category by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCategory1.Type, com.tools20022.repository.msg.ServiceItemTotals1.ItemType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCategory1.mmType, com.tools20022.repository.msg.ServiceItemTotals1.mmItemType);
 			elementContext_lazy = () -> ProductCategory.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of product category by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProductCategoryCode.mmObject();
 		}
 	};
+	protected Max35Text category;
 	/**
 	 * Specifies the category of a product.
 	 * <p>
@@ -206,18 +209,19 @@ public class ProductCategory {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ProductCategory1#Category
-	 * ProductCategory1.Category}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ProductCategory
 	 * ProductCategory}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCategory1#mmCategory
+	 * ProductCategory1.mmCategory}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -229,19 +233,20 @@ public class ProductCategory {
 	 * definition} = "Specifies the category of a product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Category = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCategory = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCategory1.Category);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCategory1.mmCategory);
 			elementContext_lazy = () -> ProductCategory.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Category";
 			definition = "Specifies the category of a product.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CardPaymentValidation relatedCardPaymentValidation;
 	/**
 	 * Validation process which declined a product code.
 	 * <p>
@@ -250,8 +255,8 @@ public class ProductCategory {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#DeclinedProductCode
-	 * CardPaymentValidation.DeclinedProductCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#mmDeclinedProductCode
+	 * CardPaymentValidation.mmDeclinedProductCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -276,35 +281,67 @@ public class ProductCategory {
 	 * definition} = "Validation process which declined a product code."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedCardPaymentValidation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedCardPaymentValidation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ProductCategory.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedCardPaymentValidation";
 			definition = "Validation process which declined a product code.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentValidation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.DeclinedProductCode;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmDeclinedProductCode;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductCategory";
 				definition = "Specifies the category of the product.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.ProductCategory, com.tools20022.repository.entity.CardPaymentValidation.DeclinedProductCode);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductCategory1Choice.StructuredProductCategory, com.tools20022.repository.choice.ProductCategory1Choice.OtherProductCategory);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductCategory.Product, com.tools20022.repository.entity.ProductCategory.Type, com.tools20022.repository.entity.ProductCategory.Category,
-						com.tools20022.repository.entity.ProductCategory.RelatedCardPaymentValidation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmProductCategory, com.tools20022.repository.entity.CardPaymentValidation.mmDeclinedProductCode);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductCategory1Choice.mmStructuredProductCategory, com.tools20022.repository.choice.ProductCategory1Choice.mmOtherProductCategory);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductCategory.mmProduct, com.tools20022.repository.entity.ProductCategory.mmType, com.tools20022.repository.entity.ProductCategory.mmCategory,
+						com.tools20022.repository.entity.ProductCategory.mmRelatedCardPaymentValidation);
 				derivationComponent_lazy = () -> Arrays.asList(ProductCategory1.mmObject(), ProductCategory1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(com.tools20022.repository.entity.Product product) {
+		this.product = product;
+	}
+
+	public ProductCategoryCode getType() {
+		return type;
+	}
+
+	public void setType(ProductCategoryCode type) {
+		this.type = type;
+	}
+
+	public Max35Text getCategory() {
+		return category;
+	}
+
+	public void setCategory(Max35Text category) {
+		this.category = category;
+	}
+
+	public CardPaymentValidation getRelatedCardPaymentValidation() {
+		return relatedCardPaymentValidation;
+	}
+
+	public void setRelatedCardPaymentValidation(com.tools20022.repository.entity.CardPaymentValidation relatedCardPaymentValidation) {
+		this.relatedCardPaymentValidation = relatedCardPaymentValidation;
 	}
 }

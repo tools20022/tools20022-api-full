@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information that locates and identifies a specific address, as defined by
@@ -35,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress4#AddressLine
- * PostalAddress4.AddressLine}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress4#Country
- * PostalAddress4.Country}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress4#mmAddressLine
+ * PostalAddress4.mmAddressLine}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress4#mmCountry
+ * PostalAddress4.mmCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PostalAddress4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max70Text> addressLine;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services, that is presented in free format text.
@@ -93,7 +95,7 @@ public class PostalAddress4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AddressLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddressLine = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PostalAddress4.mmObject();
 			isDerived = false;
@@ -101,11 +103,12 @@ public class PostalAddress4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressLine";
 			definition = "Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Nation with its own government.
 	 * <p>
@@ -118,7 +121,8 @@ public class PostalAddress4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -136,17 +140,17 @@ public class PostalAddress4 {
 	 * definition} = "Nation with its own government."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> PostalAddress4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Nation with its own government.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -154,14 +158,30 @@ public class PostalAddress4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress4.AddressLine, com.tools20022.repository.msg.PostalAddress4.Country);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress4.mmAddressLine, com.tools20022.repository.msg.PostalAddress4.mmCountry);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PostalAddress4";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max70Text> getAddressLine() {
+		return addressLine;
+	}
+
+	public void setAddressLine(List<Max70Text> addressLine) {
+		this.addressLine = addressLine;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
 	}
 }

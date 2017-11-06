@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevel4Code#SingleEuroPaymentsArea
- * ServiceLevel4Code.SingleEuroPaymentsArea}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevel4Code#mmSingleEuroPaymentsArea
+ * ServiceLevel4Code.mmSingleEuroPaymentsArea}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class ServiceLevel4Code extends ServiceLevelCode {
 	 * name} = "SingleEuroPaymentsArea"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleEuroPaymentsArea = new MMCode() {
+	public static final MMCode mmSingleEuroPaymentsArea = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleEuroPaymentsArea";
@@ -90,12 +90,12 @@ public class ServiceLevel4Code extends ServiceLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SEPA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel4Code";
 				definition = "Specifies the pre-agreed level of service between the parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel4Code.SingleEuroPaymentsArea);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel4Code.mmSingleEuroPaymentsArea);
 				trace_lazy = () -> ServiceLevelCode.mmObject();
 			}
 		});

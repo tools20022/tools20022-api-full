@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Configuration parameters of the TMS protocol between a POI and a terminal
@@ -39,41 +40,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#ActionType
- * TMSProtocolParameters2.ActionType}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmActionType
+ * TMSProtocolParameters2.mmActionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#TerminalManagerIdentification
- * TMSProtocolParameters2.TerminalManagerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmTerminalManagerIdentification
+ * TMSProtocolParameters2.mmTerminalManagerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#MaintenanceService
- * TMSProtocolParameters2.MaintenanceService}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#Version
- * TMSProtocolParameters2.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmMaintenanceService
+ * TMSProtocolParameters2.mmMaintenanceService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#ApplicationIdentification
- * TMSProtocolParameters2.ApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmVersion
+ * TMSProtocolParameters2.mmVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#HostIdentification
- * TMSProtocolParameters2.HostIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmApplicationIdentification
+ * TMSProtocolParameters2.mmApplicationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#POIIdentification
- * TMSProtocolParameters2.POIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmHostIdentification
+ * TMSProtocolParameters2.mmHostIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#InitiatingPartyIdentification
- * TMSProtocolParameters2.InitiatingPartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmPOIIdentification
+ * TMSProtocolParameters2.mmPOIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#RecipientPartyIdentification
- * TMSProtocolParameters2.RecipientPartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmInitiatingPartyIdentification
+ * TMSProtocolParameters2.mmInitiatingPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#FileTransfer
- * TMSProtocolParameters2.FileTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmRecipientPartyIdentification
+ * TMSProtocolParameters2.mmRecipientPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters2#mmFileTransfer
+ * TMSProtocolParameters2.mmFileTransfer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TMSProtocolParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TerminalManagementAction3Code actionType;
 	/**
 	 * Type of action for the configuration parameters.
 	 * <p>
@@ -121,7 +124,7 @@ public class TMSProtocolParameters2 {
 	 * definition} = "Type of action for the configuration parameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -129,11 +132,12 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
 	};
+	protected GenericIdentification71 terminalManagerIdentification;
 	/**
 	 * Identification of the master terminal manager or the terminal manager.
 	 * <p>
@@ -163,11 +167,11 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#TerminalManagerIdentification
-	 * TMSProtocolParameters1.TerminalManagerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#mmTerminalManagerIdentification
+	 * TMSProtocolParameters1.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -175,13 +179,14 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the master terminal manager or the terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.TerminalManagerIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmTerminalManagerIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification71.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	protected List<DataSetCategory10Code> maintenanceService;
 	/**
 	 * Maintenance services provided by the terminal manager.
 	 * <p>
@@ -211,11 +216,11 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#MaintenanceService
-	 * TMSProtocolParameters1.MaintenanceService}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#mmMaintenanceService
+	 * TMSProtocolParameters1.mmMaintenanceService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaintenanceService = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaintenanceService = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -223,11 +228,12 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceService";
 			definition = "Maintenance services provided by the terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.MaintenanceService;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmMaintenanceService;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
+	protected Max256Text version;
 	/**
 	 * Version of the TMS protocol parameters.
 	 * <p>
@@ -256,11 +262,11 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#Version
-	 * TMSProtocolParameters1.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#mmVersion
+	 * TMSProtocolParameters1.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -268,12 +274,13 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the TMS protocol parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.Version;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmVersion;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected List<Max35Text> applicationIdentification;
 	/**
 	 * Identification of applications which may be managed by the TM, partially
 	 * or globally.
@@ -305,11 +312,11 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#ApplicationIdentification
-	 * TMSProtocolParameters1.ApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#mmApplicationIdentification
+	 * TMSProtocolParameters1.mmApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -317,11 +324,12 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of applications which may be managed by the TM, partially or globally.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.ApplicationIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmApplicationIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text hostIdentification;
 	/**
 	 * Identification of the terminal manager host.
 	 * <p>
@@ -349,7 +357,7 @@ public class TMSProtocolParameters2 {
 	 * definition} = "Identification of the terminal manager host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -357,11 +365,12 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostIdentification";
 			definition = "Identification of the terminal manager host.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text pOIIdentification;
 	/**
 	 * New identification of the POI for the terminal manager.
 	 * <p>
@@ -390,11 +399,11 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#POIIdentification
-	 * TMSProtocolParameters1.POIIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#mmPOIIdentification
+	 * TMSProtocolParameters1.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute POIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPOIIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -402,12 +411,13 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "New identification of the POI for the terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.POIIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmPOIIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text initiatingPartyIdentification;
 	/**
 	 * New identification of the initiating party to set in TMS messages with
 	 * this terminal manager.
@@ -439,11 +449,11 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#InitiatingPartyIdentification
-	 * TMSProtocolParameters1.InitiatingPartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#mmInitiatingPartyIdentification
+	 * TMSProtocolParameters1.mmInitiatingPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitiatingPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitiatingPartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -451,12 +461,13 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyIdentification";
 			definition = "New identification of the initiating party to set in TMS messages with this terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.InitiatingPartyIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmInitiatingPartyIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text recipientPartyIdentification;
 	/**
 	 * New identification of the recipient party to set in TMS messages with
 	 * this terminal manager
@@ -488,11 +499,11 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#RecipientPartyIdentification
-	 * TMSProtocolParameters1.RecipientPartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1#mmRecipientPartyIdentification
+	 * TMSProtocolParameters1.mmRecipientPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecipientPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecipientPartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -500,12 +511,13 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientPartyIdentification";
 			definition = "New identification of the recipient party to set in TMS messages with this terminal manager";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.RecipientPartyIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmRecipientPartyIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TrueFalseIndicator fileTransfer;
 	/**
 	 * Configuration parameters are exchanged per file transfer protocol rather
 	 * than per message.
@@ -537,7 +549,7 @@ public class TMSProtocolParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FileTransfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFileTransfer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -545,8 +557,8 @@ public class TMSProtocolParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileTransfer";
 			definition = "Configuration parameters are exchanged per file transfer protocol rather than per message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -554,12 +566,12 @@ public class TMSProtocolParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSProtocolParameters2.ActionType, com.tools20022.repository.msg.TMSProtocolParameters2.TerminalManagerIdentification,
-						com.tools20022.repository.msg.TMSProtocolParameters2.MaintenanceService, com.tools20022.repository.msg.TMSProtocolParameters2.Version, com.tools20022.repository.msg.TMSProtocolParameters2.ApplicationIdentification,
-						com.tools20022.repository.msg.TMSProtocolParameters2.HostIdentification, com.tools20022.repository.msg.TMSProtocolParameters2.POIIdentification,
-						com.tools20022.repository.msg.TMSProtocolParameters2.InitiatingPartyIdentification, com.tools20022.repository.msg.TMSProtocolParameters2.RecipientPartyIdentification,
-						com.tools20022.repository.msg.TMSProtocolParameters2.FileTransfer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSProtocolParameters2.mmActionType, com.tools20022.repository.msg.TMSProtocolParameters2.mmTerminalManagerIdentification,
+						com.tools20022.repository.msg.TMSProtocolParameters2.mmMaintenanceService, com.tools20022.repository.msg.TMSProtocolParameters2.mmVersion,
+						com.tools20022.repository.msg.TMSProtocolParameters2.mmApplicationIdentification, com.tools20022.repository.msg.TMSProtocolParameters2.mmHostIdentification,
+						com.tools20022.repository.msg.TMSProtocolParameters2.mmPOIIdentification, com.tools20022.repository.msg.TMSProtocolParameters2.mmInitiatingPartyIdentification,
+						com.tools20022.repository.msg.TMSProtocolParameters2.mmRecipientPartyIdentification, com.tools20022.repository.msg.TMSProtocolParameters2.mmFileTransfer);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TMSProtocolParameters2";
 				definition = "Configuration parameters of the TMS protocol between a POI and a terminal manager.";
@@ -567,5 +579,85 @@ public class TMSProtocolParameters2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TerminalManagementAction3Code getActionType() {
+		return actionType;
+	}
+
+	public void setActionType(TerminalManagementAction3Code actionType) {
+		this.actionType = actionType;
+	}
+
+	public GenericIdentification71 getTerminalManagerIdentification() {
+		return terminalManagerIdentification;
+	}
+
+	public void setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+		this.terminalManagerIdentification = terminalManagerIdentification;
+	}
+
+	public List<DataSetCategory10Code> getMaintenanceService() {
+		return maintenanceService;
+	}
+
+	public void setMaintenanceService(List<DataSetCategory10Code> maintenanceService) {
+		this.maintenanceService = maintenanceService;
+	}
+
+	public Max256Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max256Text version) {
+		this.version = version;
+	}
+
+	public List<Max35Text> getApplicationIdentification() {
+		return applicationIdentification;
+	}
+
+	public void setApplicationIdentification(List<Max35Text> applicationIdentification) {
+		this.applicationIdentification = applicationIdentification;
+	}
+
+	public Max35Text getHostIdentification() {
+		return hostIdentification;
+	}
+
+	public void setHostIdentification(Max35Text hostIdentification) {
+		this.hostIdentification = hostIdentification;
+	}
+
+	public Max35Text getPOIIdentification() {
+		return pOIIdentification;
+	}
+
+	public void setPOIIdentification(Max35Text pOIIdentification) {
+		this.pOIIdentification = pOIIdentification;
+	}
+
+	public Max35Text getInitiatingPartyIdentification() {
+		return initiatingPartyIdentification;
+	}
+
+	public void setInitiatingPartyIdentification(Max35Text initiatingPartyIdentification) {
+		this.initiatingPartyIdentification = initiatingPartyIdentification;
+	}
+
+	public Max35Text getRecipientPartyIdentification() {
+		return recipientPartyIdentification;
+	}
+
+	public void setRecipientPartyIdentification(Max35Text recipientPartyIdentification) {
+		this.recipientPartyIdentification = recipientPartyIdentification;
+	}
+
+	public TrueFalseIndicator getFileTransfer() {
+		return fileTransfer;
+	}
+
+	public void setFileTransfer(TrueFalseIndicator fileTransfer) {
+		this.fileTransfer = fileTransfer;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectedElement1#ElementSequenceNumber
- * RejectedElement1.ElementSequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectedElement1#mmElementSequenceNumber
+ * RejectedElement1.mmElementSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectedElement1#IndividualRejectionReason
- * RejectedElement1.IndividualRejectionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectedElement1#mmIndividualRejectionReason
+ * RejectedElement1.mmIndividualRejectionReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectedElement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number elementSequenceNumber;
 	/**
 	 * Sequence number that allows to easily identify the element that is
 	 * rejected.
@@ -90,7 +91,7 @@ public class RejectedElement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RejectedElement1.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class RejectedElement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementSequenceNumber";
 			definition = "Sequence number that allows to easily identify the element that is rejected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max140Text individualRejectionReason;
 	/**
 	 * Reason for rejecting an individual element.
 	 * <p>
@@ -130,7 +132,7 @@ public class RejectedElement1 {
 	 * definition} = "Reason for rejecting an individual element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IndividualRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndividualRejectionReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RejectedElement1.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class RejectedElement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualRejectionReason";
 			definition = "Reason for rejecting an individual element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class RejectedElement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedElement1.ElementSequenceNumber, com.tools20022.repository.msg.RejectedElement1.IndividualRejectionReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedElement1.mmElementSequenceNumber, com.tools20022.repository.msg.RejectedElement1.mmIndividualRejectionReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectedElement1";
 				definition = "Provides information on the rejection reason of an individual element.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getElementSequenceNumber() {
+		return elementSequenceNumber;
+	}
+
+	public void setElementSequenceNumber(Number elementSequenceNumber) {
+		this.elementSequenceNumber = elementSequenceNumber;
+	}
+
+	public Max140Text getIndividualRejectionReason() {
+		return individualRejectionReason;
+	}
+
+	public void setIndividualRejectionReason(Max140Text individualRejectionReason) {
+		this.individualRejectionReason = individualRejectionReason;
 	}
 }

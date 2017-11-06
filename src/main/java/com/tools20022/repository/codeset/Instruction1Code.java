@@ -35,19 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Instruction1Code#PayTheBeneficiary
- * Instruction1Code.PayTheBeneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Instruction1Code#TimeTill
- * Instruction1Code.TimeTill}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Instruction1Code#TimeFrom
- * Instruction1Code.TimeFrom}</li>
+ * {@linkplain com.tools20022.repository.codeset.Instruction1Code#mmPayTheBeneficiary
+ * Instruction1Code.mmPayTheBeneficiary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Instruction1Code#mmTimeTill
+ * Instruction1Code.mmTimeTill}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Instruction1Code#mmTimeFrom
+ * Instruction1Code.mmTimeFrom}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +87,7 @@ public class Instruction1Code extends InstructionCode {
 	 * name} = "PayTheBeneficiary"</li>
 	 * </ul>
 	 */
-	public static final MMCode PayTheBeneficiary = new MMCode() {
+	public static final MMCode mmPayTheBeneficiary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayTheBeneficiary";
@@ -108,7 +110,7 @@ public class Instruction1Code extends InstructionCode {
 	 * name} = "TimeTill"</li>
 	 * </ul>
 	 */
-	public static final MMCode TimeTill = new MMCode() {
+	public static final MMCode mmTimeTill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeTill";
@@ -131,7 +133,7 @@ public class Instruction1Code extends InstructionCode {
 	 * name} = "TimeFrom"</li>
 	 * </ul>
 	 */
-	public static final MMCode TimeFrom = new MMCode() {
+	public static final MMCode mmTimeFrom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeFrom";
@@ -142,12 +144,13 @@ public class Instruction1Code extends InstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PBEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Instruction1Code";
 				definition = "Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction1Code.PayTheBeneficiary, com.tools20022.repository.codeset.Instruction1Code.TimeTill, com.tools20022.repository.codeset.Instruction1Code.TimeFrom);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction1Code.mmPayTheBeneficiary, com.tools20022.repository.codeset.Instruction1Code.mmTimeTill,
+						com.tools20022.repository.codeset.Instruction1Code.mmTimeFrom);
 				trace_lazy = () -> InstructionCode.mmObject();
 			}
 		});

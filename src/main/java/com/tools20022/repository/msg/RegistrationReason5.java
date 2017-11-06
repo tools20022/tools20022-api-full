@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RegistrationReason5#Code
- * RegistrationReason5.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RegistrationReason5#mmCode
+ * RegistrationReason5.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationReason5#AdditionalInformation
- * RegistrationReason5.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationReason5#mmAdditionalInformation
+ * RegistrationReason5.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegistrationReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Registration10Choice code;
 	/**
 	 * Specifies the reaoson of the holding status.
 	 * <p>
@@ -80,8 +81,8 @@ public class RegistrationReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#RegistrationInstruction
-	 * BasicSecuritiesRegistration.RegistrationInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmRegistrationInstruction
+	 * BasicSecuritiesRegistration.mmRegistrationInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,26 +102,27 @@ public class RegistrationReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RegistrationReason3#Code
-	 * RegistrationReason3.Code}</li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationReason3#mmCode
+	 * RegistrationReason3.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmRegistrationInstruction;
 			componentContext_lazy = () -> RegistrationReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.RegistrationInstruction;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reaoson of the holding status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RegistrationReason3.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RegistrationReason3.mmCode;
 			maxOccurs = 1;
-			type_lazy = () -> Registration10Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Registration10Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalInformation;
 	/**
 	 * Provides additional reason information that cannot be provided in a
 	 * structured field.
@@ -152,11 +154,11 @@ public class RegistrationReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RegistrationReason3#AdditionalInformation
-	 * RegistrationReason3.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationReason3#mmAdditionalInformation
+	 * RegistrationReason3.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RegistrationReason5.mmObject();
 			isDerived = false;
@@ -164,9 +166,9 @@ public class RegistrationReason5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional reason information that cannot be provided in a structured field.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RegistrationReason3.AdditionalInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RegistrationReason3.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -174,9 +176,9 @@ public class RegistrationReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationReason5.Code, com.tools20022.repository.msg.RegistrationReason5.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationReason5.mmCode, com.tools20022.repository.msg.RegistrationReason5.mmAdditionalInformation);
 				trace_lazy = () -> BasicSecuritiesRegistration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegistrationReason5";
 				definition = "Reason of registration.";
@@ -184,5 +186,21 @@ public class RegistrationReason5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Registration10Choice getCode() {
+		return code;
+	}
+
+	public void setCode(Registration10Choice code) {
+		this.code = code;
+	}
+
+	public Max210Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max210Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

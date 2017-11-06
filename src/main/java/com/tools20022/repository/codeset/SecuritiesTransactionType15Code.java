@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code#Buy
- * SecuritiesTransactionType15Code.Buy}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code#mmBuy
+ * SecuritiesTransactionType15Code.mmBuy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code#Sell
- * SecuritiesTransactionType15Code.Sell}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code#mmSell
+ * SecuritiesTransactionType15Code.mmSell}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class SecuritiesTransactionType15Code extends SecuritiesTransactionTypeV3
 	 * name} = "Buy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Buy = new MMCode() {
+	public static final MMCode mmBuy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
@@ -98,7 +98,7 @@ public class SecuritiesTransactionType15Code extends SecuritiesTransactionTypeV3
 	 * name} = "Sell"</li>
 	 * </ul>
 	 */
-	public static final MMCode Sell = new MMCode() {
+	public static final MMCode mmSell = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
@@ -109,11 +109,11 @@ public class SecuritiesTransactionType15Code extends SecuritiesTransactionTypeV3
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionType15Code";
 				definition = "Specifies the type of securities transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionType15Code.Buy, com.tools20022.repository.codeset.SecuritiesTransactionType15Code.Sell);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionType15Code.mmBuy, com.tools20022.repository.codeset.SecuritiesTransactionType15Code.mmSell);
 				trace_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
 			}
 		});

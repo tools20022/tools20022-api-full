@@ -57,18 +57,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#UndertakingStatusReportDetails
- * UndertakingStatusReportV01.UndertakingStatusReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#mmUndertakingStatusReportDetails
+ * UndertakingStatusReportV01.mmUndertakingStatusReportDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#DigitalSignature
- * UndertakingStatusReportV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#mmDigitalSignature
+ * UndertakingStatusReportV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#identifier
- * UndertakingStatusReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.019.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingStatusReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingStatusAdvice1 undertakingStatusReportDetails;
 	/**
 	 * Details of the undertaking status report
 	 * <p>
@@ -107,17 +106,18 @@ public class UndertakingStatusReportV01 {
 	 * definition} = "Details of the undertaking status report"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UndertakingStatusReportDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUndertakingStatusReportDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgStsRptDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingStatusReportDetails";
 			definition = "Details of the undertaking status report";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UndertakingStatusAdvice1.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the report.
 	 * <p>
@@ -141,42 +141,15 @@ public class UndertakingStatusReportV01 {
 	 * definition} = "Digital signature of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "019"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "019";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -190,10 +163,34 @@ public class UndertakingStatusReportV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgStsRpt";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.UndertakingStatusReportDetails, com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.mmUndertakingStatusReportDetails,
+						com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "019";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingStatusAdvice1 getUndertakingStatusReportDetails() {
+		return undertakingStatusReportDetails;
+	}
+
+	public void setUndertakingStatusReportDetails(UndertakingStatusAdvice1 undertakingStatusReportDetails) {
+		this.undertakingStatusReportDetails = undertakingStatusReportDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

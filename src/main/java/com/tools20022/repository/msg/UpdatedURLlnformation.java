@@ -38,21 +38,21 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation#UpdateDescription
- * UpdatedURLlnformation.UpdateDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation#mmUpdateDescription
+ * UpdatedURLlnformation.mmUpdateDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation#UpdateDate
- * UpdatedURLlnformation.UpdateDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation#mmUpdateDate
+ * UpdatedURLlnformation.mmUpdateDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation#URLAddress
- * UpdatedURLlnformation.URLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation#mmURLAddress
+ * UpdatedURLlnformation.mmURLAddress}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -74,6 +74,7 @@ import java.util.function.Supplier;
 public class UpdatedURLlnformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text updateDescription;
 	/**
 	 * Specifies the amendments made to the narrative since the last message.
 	 * <p>
@@ -104,13 +105,13 @@ public class UpdatedURLlnformation {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation2#UpdateDescription
-	 * UpdatedURLlnformation2.UpdateDescription}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation2#mmUpdateDescription
+	 * UpdatedURLlnformation2.mmUpdateDescription}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedURLlnformation.mmObject();
 			isDerived = false;
@@ -118,12 +119,13 @@ public class UpdatedURLlnformation {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDescription";
 			definition = "Specifies the amendments made to the narrative since the last message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation2.UpdateDescription);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation2.mmUpdateDescription);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ISODate updateDate;
 	/**
 	 * Specifies the date at which the narrative has been updated.
 	 * <p>
@@ -154,13 +156,13 @@ public class UpdatedURLlnformation {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation2#UpdateDate
-	 * UpdatedURLlnformation2.UpdateDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation2#mmUpdateDate
+	 * UpdatedURLlnformation2.mmUpdateDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedURLlnformation.mmObject();
 			isDerived = false;
@@ -168,12 +170,13 @@ public class UpdatedURLlnformation {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDate";
 			definition = "Specifies the date at which the narrative has been updated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation2.UpdateDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation2.mmUpdateDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max256Text uRLAddress;
 	/**
 	 * Provides the web address, that is, the address for the Universal Resource
 	 * Locator (URL), to use over the www (HTTP) service where additional
@@ -207,13 +210,13 @@ public class UpdatedURLlnformation {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation2#URLAddress
-	 * UpdatedURLlnformation2.URLAddress}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation2#mmURLAddress
+	 * UpdatedURLlnformation2.mmURLAddress}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute URLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedURLlnformation.mmObject();
 			isDerived = false;
@@ -221,9 +224,9 @@ public class UpdatedURLlnformation {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Provides the web address, that is, the address for the Universal Resource Locator (URL), to use over the www (HTTP) service where additional information may be found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation2.URLAddress);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation2.mmURLAddress);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -231,9 +234,9 @@ public class UpdatedURLlnformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation.UpdateDescription, com.tools20022.repository.msg.UpdatedURLlnformation.UpdateDate,
-						com.tools20022.repository.msg.UpdatedURLlnformation.URLAddress);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation.mmUpdateDescription, com.tools20022.repository.msg.UpdatedURLlnformation.mmUpdateDate,
+						com.tools20022.repository.msg.UpdatedURLlnformation.mmURLAddress);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -248,5 +251,29 @@ public class UpdatedURLlnformation {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getUpdateDescription() {
+		return updateDescription;
+	}
+
+	public void setUpdateDescription(Max140Text updateDescription) {
+		this.updateDescription = updateDescription;
+	}
+
+	public ISODate getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(ISODate updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public Max256Text getURLAddress() {
+		return uRLAddress;
+	}
+
+	public void setURLAddress(Max256Text uRLAddress) {
+		this.uRLAddress = uRLAddress;
 	}
 }

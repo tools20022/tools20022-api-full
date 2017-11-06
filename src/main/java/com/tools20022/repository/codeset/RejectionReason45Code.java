@@ -35,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#AccountServicerDeadlineMissed
- * RejectionReason45Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#mmAccountServicerDeadlineMissed
+ * RejectionReason45Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#InvalidReference
- * RejectionReason45Code.InvalidReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#mmInvalidReference
+ * RejectionReason45Code.mmInvalidReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#Other
- * RejectionReason45Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#mmOther
+ * RejectionReason45Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#RejectedSinceAlreadyCancelled
- * RejectionReason45Code.RejectedSinceAlreadyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#mmRejectedSinceAlreadyCancelled
+ * RejectionReason45Code.mmRejectedSinceAlreadyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#RejectedSinceInProgress
- * RejectionReason45Code.RejectedSinceInProgress}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#mmRejectedSinceInProgress
+ * RejectionReason45Code.mmRejectedSinceInProgress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#InstructionIrrevocable
- * RejectionReason45Code.InstructionIrrevocable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#mmInstructionIrrevocable
+ * RejectionReason45Code.mmInstructionIrrevocable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#MarketDeadlineMissed
- * RejectionReason45Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason45Code#mmMarketDeadlineMissed
+ * RejectionReason45Code.mmMarketDeadlineMissed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,7 +93,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -116,7 +116,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 * name} = "InvalidReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidReference = new MMCode() {
+	public static final MMCode mmInvalidReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidReference";
@@ -139,7 +139,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -162,7 +162,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceAlreadyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedSinceAlreadyCancelled = new MMCode() {
+	public static final MMCode mmRejectedSinceAlreadyCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceAlreadyCancelled";
@@ -185,7 +185,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceInProgress"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedSinceInProgress = new MMCode() {
+	public static final MMCode mmRejectedSinceInProgress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceInProgress";
@@ -208,7 +208,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 * name} = "InstructionIrrevocable"</li>
 	 * </ul>
 	 */
-	public static final MMCode InstructionIrrevocable = new MMCode() {
+	public static final MMCode mmInstructionIrrevocable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIrrevocable";
@@ -231,7 +231,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -242,14 +242,14 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason45Code";
 				definition = "Specify  the reason why the instruction cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason45Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason45Code.InvalidReference,
-						com.tools20022.repository.codeset.RejectionReason45Code.Other, com.tools20022.repository.codeset.RejectionReason45Code.RejectedSinceAlreadyCancelled,
-						com.tools20022.repository.codeset.RejectionReason45Code.RejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason45Code.InstructionIrrevocable,
-						com.tools20022.repository.codeset.RejectionReason45Code.MarketDeadlineMissed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason45Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason45Code.mmInvalidReference,
+						com.tools20022.repository.codeset.RejectionReason45Code.mmOther, com.tools20022.repository.codeset.RejectionReason45Code.mmRejectedSinceAlreadyCancelled,
+						com.tools20022.repository.codeset.RejectionReason45Code.mmRejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason45Code.mmInstructionIrrevocable,
+						com.tools20022.repository.codeset.RejectionReason45Code.mmMarketDeadlineMissed);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

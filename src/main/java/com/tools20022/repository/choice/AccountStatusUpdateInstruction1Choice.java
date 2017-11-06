@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice#Code
- * AccountStatusUpdateInstruction1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice#mmCode
+ * AccountStatusUpdateInstruction1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice#Proprietary
- * AccountStatusUpdateInstruction1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice#mmProprietary
+ * AccountStatusUpdateInstruction1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountStatusUpdateInstruction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountStatusUpdateInstruction1Code code;
 	/**
 	 * Type of change to the account status expressed as a code.<br>
 	 * <p>
@@ -89,7 +90,7 @@ public class AccountStatusUpdateInstruction1Choice {
 	 * "Type of change to the account status expressed as a code.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatusUpdateInstruction1Choice.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class AccountStatusUpdateInstruction1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of change to the account status expressed as a code.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatusUpdateInstruction1Code.mmObject();
 		}
 	};
+	protected GenericIdentification36 proprietary;
 	/**
 	 * Type of change to the account status expressed as a proprietary code.
 	 * <p>
@@ -130,7 +132,7 @@ public class AccountStatusUpdateInstruction1Choice {
 	 * "Type of change to the account status expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountStatusUpdateInstruction1Choice.mmObject();
 			isDerived = false;
@@ -138,23 +140,39 @@ public class AccountStatusUpdateInstruction1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of change to the account status expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification36.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice.Code, com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice.mmCode, com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstruction1Choice";
 				definition = "Choice of formats for an account status update instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountStatusUpdateInstruction1Code getCode() {
+		return code;
+	}
+
+	public void setCode(AccountStatusUpdateInstruction1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification36 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification36 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

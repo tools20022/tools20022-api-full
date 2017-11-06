@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestType2Code#CumInterest
- * InterestType2Code.CumInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestType2Code#mmCumInterest
+ * InterestType2Code.mmCumInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestType2Code#ExInterest
- * InterestType2Code.ExInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestType2Code#mmExInterest
+ * InterestType2Code.mmExInterest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class InterestType2Code extends InterestTypeCode {
 	 * name} = "CumInterest"</li>
 	 * </ul>
 	 */
-	public static final MMCode CumInterest = new MMCode() {
+	public static final MMCode mmCumInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumInterest";
@@ -106,7 +106,7 @@ public class InterestType2Code extends InterestTypeCode {
 	 * name} = "ExInterest"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExInterest = new MMCode() {
+	public static final MMCode mmExInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExInterest";
@@ -117,12 +117,12 @@ public class InterestType2Code extends InterestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CINT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestType2Code";
 				definition = "Indicates if the deal price is excluding or including the accrued interest.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestType2Code.CumInterest, com.tools20022.repository.codeset.InterestType2Code.ExInterest);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestType2Code.mmCumInterest, com.tools20022.repository.codeset.InterestType2Code.mmExInterest);
 				trace_lazy = () -> InterestTypeCode.mmObject();
 			}
 		});

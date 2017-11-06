@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesPosition1#Type
- * SecuritiesPosition1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesPosition1#Quantity
- * SecuritiesPosition1.Quantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesPosition1#mmType
+ * SecuritiesPosition1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesPosition1#mmQuantity
+ * SecuritiesPosition1.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesPosition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText type;
 	/**
 	 * Specifies the type of a position or a balance, such as earmarked or
 	 * delivered.
@@ -89,7 +90,7 @@ public class SecuritiesPosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesPosition1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class SecuritiesPosition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of a position or a balance, such as earmarked or delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected SubBalanceQuantity2Choice quantity;
 	/**
 	 * Specifies the quantity of a position or a balance.
 	 * <p>
@@ -129,7 +131,7 @@ public class SecuritiesPosition1 {
 	 * definition} = "Specifies the quantity of a position or a balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesPosition1.mmObject();
 			isDerived = false;
@@ -137,23 +139,39 @@ public class SecuritiesPosition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity of a position or a balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SubBalanceQuantity2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SubBalanceQuantity2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesPosition1.Type, com.tools20022.repository.msg.SecuritiesPosition1.Quantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesPosition1.mmType, com.tools20022.repository.msg.SecuritiesPosition1.mmQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesPosition1";
 				definition = "Set of elements used to provide security position details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getType() {
+		return type;
+	}
+
+	public void setType(Max4AlphaNumericText type) {
+		this.type = type;
+	}
+
+	public SubBalanceQuantity2Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(SubBalanceQuantity2Choice quantity) {
+		this.quantity = quantity;
 	}
 }

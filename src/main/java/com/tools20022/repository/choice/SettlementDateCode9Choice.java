@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementDateCode9Choice#Code
- * SettlementDateCode9Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementDateCode9Choice#mmCode
+ * SettlementDateCode9Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementDateCode9Choice#Proprietary
- * SettlementDateCode9Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementDateCode9Choice#mmProprietary
+ * SettlementDateCode9Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementDateCode9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementDate4Code code;
 	/**
 	 * Settlement date expressed as an ISO 20022 code.
 	 * <p>
@@ -87,7 +88,7 @@ public class SettlementDateCode9Choice {
 	 * definition} = "Settlement date expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementDateCode9Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class SettlementDateCode9Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Settlement date expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDate4Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Settlement date expressed as a proprietary code.
 	 * <p>
@@ -128,7 +130,7 @@ public class SettlementDateCode9Choice {
 	 * definition} = "Settlement date expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementDateCode9Choice.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class SettlementDateCode9Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Settlement date expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class SettlementDateCode9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDateCode9Choice.Code, com.tools20022.repository.choice.SettlementDateCode9Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDateCode9Choice.mmCode, com.tools20022.repository.choice.SettlementDateCode9Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDateCode9Choice";
 				definition = "Choice of format for the settlement date code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementDate4Code getCode() {
+		return code;
+	}
+
+	public void setCode(SettlementDate4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code#MatchedPrincipal
- * RegulatoryTradingCapacity1Code.MatchedPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code#mmMatchedPrincipal
+ * RegulatoryTradingCapacity1Code.mmMatchedPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code#DealOnOwnAccount
- * RegulatoryTradingCapacity1Code.DealOnOwnAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code#mmDealOnOwnAccount
+ * RegulatoryTradingCapacity1Code.mmDealOnOwnAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code#AnyOtherCapacity
- * RegulatoryTradingCapacity1Code.AnyOtherCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code#mmAnyOtherCapacity
+ * RegulatoryTradingCapacity1Code.mmAnyOtherCapacity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class RegulatoryTradingCapacity1Code extends RegulatoryTradingCapacityCod
 	 * name} = "MatchedPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode MatchedPrincipal = new MMCode() {
+	public static final MMCode mmMatchedPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedPrincipal";
@@ -101,7 +101,7 @@ public class RegulatoryTradingCapacity1Code extends RegulatoryTradingCapacityCod
 	 * name} = "DealOnOwnAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode DealOnOwnAccount = new MMCode() {
+	public static final MMCode mmDealOnOwnAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealOnOwnAccount";
@@ -124,7 +124,7 @@ public class RegulatoryTradingCapacity1Code extends RegulatoryTradingCapacityCod
 	 * name} = "AnyOtherCapacity"</li>
 	 * </ul>
 	 */
-	public static final MMCode AnyOtherCapacity = new MMCode() {
+	public static final MMCode mmAnyOtherCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyOtherCapacity";
@@ -135,12 +135,12 @@ public class RegulatoryTradingCapacity1Code extends RegulatoryTradingCapacityCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryTradingCapacity1Code";
 				definition = "Specifies the regulatory trading capacity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code.MatchedPrincipal, com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code.DealOnOwnAccount,
-						com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code.AnyOtherCapacity);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code.mmMatchedPrincipal, com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code.mmDealOnOwnAccount,
+						com.tools20022.repository.codeset.RegulatoryTradingCapacity1Code.mmAnyOtherCapacity);
 				trace_lazy = () -> RegulatoryTradingCapacityCode.mmObject();
 			}
 		});

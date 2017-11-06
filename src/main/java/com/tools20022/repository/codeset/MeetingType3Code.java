@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingType3Code#Extraordinary
- * MeetingType3Code.Extraordinary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MeetingType3Code#General
- * MeetingType3Code.General}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MeetingType3Code#Mixed
- * MeetingType3Code.Mixed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MeetingType3Code#Special
- * MeetingType3Code.Special}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingType3Code#mmExtraordinary
+ * MeetingType3Code.mmExtraordinary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MeetingType3Code#mmGeneral
+ * MeetingType3Code.mmGeneral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MeetingType3Code#mmMixed
+ * MeetingType3Code.mmMixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MeetingType3Code#mmSpecial
+ * MeetingType3Code.mmSpecial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingType3Code#BondHolderMeeting
- * MeetingType3Code.BondHolderMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingType3Code#mmBondHolderMeeting
+ * MeetingType3Code.mmBondHolderMeeting}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 * name} = "Extraordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Extraordinary = new MMCode() {
+	public static final MMCode mmExtraordinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
@@ -104,7 +104,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 * name} = "General"</li>
 	 * </ul>
 	 */
-	public static final MMCode General = new MMCode() {
+	public static final MMCode mmGeneral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
@@ -127,7 +127,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 * name} = "Mixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mixed = new MMCode() {
+	public static final MMCode mmMixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mixed";
@@ -150,7 +150,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 * name} = "Special"</li>
 	 * </ul>
 	 */
-	public static final MMCode Special = new MMCode() {
+	public static final MMCode mmSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
@@ -173,7 +173,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 * name} = "BondHolderMeeting"</li>
 	 * </ul>
 	 */
-	public static final MMCode BondHolderMeeting = new MMCode() {
+	public static final MMCode mmBondHolderMeeting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondHolderMeeting";
@@ -184,12 +184,12 @@ public class MeetingType3Code extends MeetingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingType3Code";
 				definition = "Specifies the type of security holders meeting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingType3Code.Extraordinary, com.tools20022.repository.codeset.MeetingType3Code.General, com.tools20022.repository.codeset.MeetingType3Code.Mixed,
-						com.tools20022.repository.codeset.MeetingType3Code.Special, com.tools20022.repository.codeset.MeetingType3Code.BondHolderMeeting);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingType3Code.mmExtraordinary, com.tools20022.repository.codeset.MeetingType3Code.mmGeneral, com.tools20022.repository.codeset.MeetingType3Code.mmMixed,
+						com.tools20022.repository.codeset.MeetingType3Code.mmSpecial, com.tools20022.repository.codeset.MeetingType3Code.mmBondHolderMeeting);
 				trace_lazy = () -> MeetingTypeCode.mmObject();
 			}
 		});

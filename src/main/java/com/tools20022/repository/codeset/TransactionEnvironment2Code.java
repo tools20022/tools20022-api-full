@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code#Private
- * TransactionEnvironment2Code.Private}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code#mmPrivate
+ * TransactionEnvironment2Code.mmPrivate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code#Public
- * TransactionEnvironment2Code.Public}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code#mmPublic
+ * TransactionEnvironment2Code.mmPublic}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
 	 * name} = "Private"</li>
 	 * </ul>
 	 */
-	public static final MMCode Private = new MMCode() {
+	public static final MMCode mmPrivate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Private";
@@ -98,7 +98,7 @@ public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
 	 * name} = "Public"</li>
 	 * </ul>
 	 */
-	public static final MMCode Public = new MMCode() {
+	public static final MMCode mmPublic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Public";
@@ -109,11 +109,11 @@ public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionEnvironment2Code";
 				definition = "Indicates the environment of the transaction location.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironment2Code.Private, com.tools20022.repository.codeset.TransactionEnvironment2Code.Public);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironment2Code.mmPrivate, com.tools20022.repository.codeset.TransactionEnvironment2Code.mmPublic);
 				trace_lazy = () -> TransactionEnvironmentCode.mmObject();
 			}
 		});

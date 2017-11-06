@@ -21,8 +21,10 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.FreightCharges1Code;
+import com.tools20022.repository.entity.Charges;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the different types of freight charges associated with goods.
@@ -33,9 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Charge13#Type Charge13.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge13#Charges
- * Charge13.Charges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge13#mmType
+ * Charge13.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge13#mmCharges
+ * Charge13.mmCharges}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Charge13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FreightCharges1Code type;
 	/**
 	 * Identifies whether the freight charges associated with the goods are
 	 * "prepaid" or "collect".
@@ -79,8 +83,8 @@ public class Charge13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#FreightChargesPrepaidOrCollect
-	 * Transport.FreightChargesPrepaidOrCollect}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmFreightChargesPrepaidOrCollect
+	 * Transport.mmFreightChargesPrepaidOrCollect}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Charge13
@@ -101,27 +105,28 @@ public class Charge13 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge25#Type
-	 * Charge25.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge25#mmType
+	 * Charge25.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmFreightChargesPrepaidOrCollect;
 			componentContext_lazy = () -> Charge13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.FreightChargesPrepaidOrCollect;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies whether the freight charges associated with the goods are \"prepaid\" or \"collect\".";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge25.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge25.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FreightCharges1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ChargesDetails2> charges;
 	/**
 	 * Amount of money associated with a service.
 	 * <p>
@@ -152,34 +157,34 @@ public class Charge13 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge25#Charges
-	 * Charge25.Charges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge25#mmCharges
+	 * Charge25.mmCharges}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Charges = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> Charge13.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
 			xmlTag = "Chrgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			definition = "Amount of money associated with a service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge25.Charges);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge25.mmCharges);
 			minOccurs = 0;
-			type_lazy = () -> ChargesDetails2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ChargesDetails2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge13.Type, com.tools20022.repository.msg.Charge13.Charges);
-				trace_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge13.mmType, com.tools20022.repository.msg.Charge13.mmCharges);
+				trace_lazy = () -> Charges.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Charge13";
 				definition = "Identifies the different types of freight charges associated with goods.";
@@ -187,5 +192,21 @@ public class Charge13 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FreightCharges1Code getType() {
+		return type;
+	}
+
+	public void setType(FreightCharges1Code type) {
+		this.type = type;
+	}
+
+	public List<ChargesDetails2> getCharges() {
+		return charges;
+	}
+
+	public void setCharges(List<com.tools20022.repository.msg.ChargesDetails2> charges) {
+		this.charges = charges;
 	}
 }

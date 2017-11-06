@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#DebitCredit
- * BatchTransactionTypeCode.DebitCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#mmDebitCredit
+ * BatchTransactionTypeCode.mmDebitCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#Cancellation
- * BatchTransactionTypeCode.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#mmCancellation
+ * BatchTransactionTypeCode.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#Failed
- * BatchTransactionTypeCode.Failed}</li>
+ * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#mmFailed
+ * BatchTransactionTypeCode.mmFailed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#Declined
- * BatchTransactionTypeCode.Declined}</li>
+ * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#mmDeclined
+ * BatchTransactionTypeCode.mmDeclined}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class BatchTransactionTypeCode {
 	 * definition} = "Debit and credit transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode DebitCredit = new MMCode() {
+	public static final MMCode mmDebitCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebitCredit";
@@ -125,7 +125,7 @@ public class BatchTransactionTypeCode {
 	 * definition} = "Cancellation of a previous transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Cancellation";
@@ -155,7 +155,7 @@ public class BatchTransactionTypeCode {
 	 * definition} = "Failed transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode Failed = new MMCode() {
+	public static final MMCode mmFailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Failed";
@@ -185,7 +185,7 @@ public class BatchTransactionTypeCode {
 	 * definition} = "Declined transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode Declined = new MMCode() {
+	public static final MMCode mmDeclined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Declined";
@@ -198,13 +198,13 @@ public class BatchTransactionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DTCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BatchTransactionTypeCode";
 				definition = "Type of transactions to include in a batch transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BatchTransactionTypeCode.DebitCredit, com.tools20022.repository.codeset.BatchTransactionTypeCode.Cancellation,
-						com.tools20022.repository.codeset.BatchTransactionTypeCode.Failed, com.tools20022.repository.codeset.BatchTransactionTypeCode.Declined);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BatchTransactionTypeCode.mmDebitCredit, com.tools20022.repository.codeset.BatchTransactionTypeCode.mmCancellation,
+						com.tools20022.repository.codeset.BatchTransactionTypeCode.mmFailed, com.tools20022.repository.codeset.BatchTransactionTypeCode.mmDeclined);
 				derivation_lazy = () -> Arrays.asList(BatchTransactionType1Code.mmObject());
 			}
 		});

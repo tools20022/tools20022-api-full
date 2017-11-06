@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BreakdownByParty2#Party
- * BreakdownByParty2.Party}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BreakdownByParty2#mmParty
+ * BreakdownByParty2.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByParty2#AdditionalParameters
- * BreakdownByParty2.AdditionalParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByParty2#mmAdditionalParameters
+ * BreakdownByParty2.mmAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BreakdownByParty2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification2Choice party;
 	/**
 	 * Party, eg, fund management company, for which the cash flow is being
 	 * reported.
@@ -92,7 +93,7 @@ public class BreakdownByParty2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Party = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BreakdownByParty2.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class BreakdownByParty2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party, eg, fund management company, for which the cash flow is being reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected AdditionalParameters1 additionalParameters;
 	/**
 	 * Additional parameter/s applied to the cash flow by party.
 	 * <p>
@@ -132,7 +134,7 @@ public class BreakdownByParty2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalParameters = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByParty2.mmObject();
 			isDerived = false;
@@ -140,23 +142,39 @@ public class BreakdownByParty2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParameters";
 			definition = "Additional parameter/s applied to the cash flow by party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalParameters1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty2.Party, com.tools20022.repository.msg.BreakdownByParty2.AdditionalParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty2.mmParty, com.tools20022.repository.msg.BreakdownByParty2.mmAdditionalParameters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BreakdownByParty2";
 				definition = "Specifies the party for which the cash-in and cash-out flows are to be reported.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification2Choice getParty() {
+		return party;
+	}
+
+	public void setParty(PartyIdentification2Choice party) {
+		this.party = party;
+	}
+
+	public AdditionalParameters1 getAdditionalParameters() {
+		return additionalParameters;
+	}
+
+	public void setAdditionalParameters(com.tools20022.repository.msg.AdditionalParameters1 additionalParameters) {
+		this.additionalParameters = additionalParameters;
 	}
 }

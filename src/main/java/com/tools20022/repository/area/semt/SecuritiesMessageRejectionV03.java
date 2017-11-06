@@ -73,21 +73,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#MessageIdentification
- * SecuritiesMessageRejectionV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#mmMessageIdentification
+ * SecuritiesMessageRejectionV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#RelatedReference
- * SecuritiesMessageRejectionV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#mmRelatedReference
+ * SecuritiesMessageRejectionV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#Reason
- * SecuritiesMessageRejectionV03.Reason}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#mmReason
+ * SecuritiesMessageRejectionV03.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#identifier
- * SecuritiesMessageRejectionV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.001.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesMessageRejectionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -134,22 +133,23 @@ public class SecuritiesMessageRejectionV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#MessageIdentification
-	 * SecuritiesMessageRejectionV02.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#mmMessageIdentification
+	 * SecuritiesMessageRejectionV02.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.MessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -175,22 +175,23 @@ public class SecuritiesMessageRejectionV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#RelatedReference
-	 * SecuritiesMessageRejectionV02.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#mmRelatedReference
+	 * SecuritiesMessageRejectionV02.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.RelatedReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmRelatedReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected RejectionReason23 reason;
 	/**
 	 * Reason to reject the message.
 	 * <p>
@@ -215,47 +216,20 @@ public class SecuritiesMessageRejectionV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#Reason
-	 * SecuritiesMessageRejectionV02.Reason}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#mmReason
+	 * SecuritiesMessageRejectionV02.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason to reject the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.Reason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason23.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "001";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -270,11 +244,42 @@ public class SecuritiesMessageRejectionV03 {
 				rootElement = "Document";
 				xmlTag = "SctiesMsgRjctn";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.MessageIdentification, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.RelatedReference,
-						com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.Reason);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.mmMessageIdentification,
+						com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.mmRelatedReference, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.mmReason);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "001";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference3 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public RejectionReason23 getReason() {
+		return reason;
+	}
+
+	public void setReason(RejectionReason23 reason) {
+		this.reason = reason;
 	}
 }

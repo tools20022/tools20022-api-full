@@ -36,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.CaseStatusCode CaseStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code#Closed
- * CaseStatus2Code.Closed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code#Assigned
- * CaseStatus2Code.Assigned}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code#mmClosed
+ * CaseStatus2Code.mmClosed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code#mmAssigned
+ * CaseStatus2Code.mmAssigned}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseStatus2Code#UnderInvestigation
- * CaseStatus2Code.UnderInvestigation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code#Unknown
- * CaseStatus2Code.Unknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code#Overdue
- * CaseStatus2Code.Overdue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseStatus2Code#mmUnderInvestigation
+ * CaseStatus2Code.mmUnderInvestigation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code#mmUnknown
+ * CaseStatus2Code.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code#mmOverdue
+ * CaseStatus2Code.mmOverdue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 * name} = "Closed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closed = new MMCode() {
+	public static final MMCode mmClosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
@@ -114,7 +114,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 * name} = "Assigned"</li>
 	 * </ul>
 	 */
-	public static final MMCode Assigned = new MMCode() {
+	public static final MMCode mmAssigned = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigned";
@@ -137,7 +137,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 * name} = "UnderInvestigation"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderInvestigation = new MMCode() {
+	public static final MMCode mmUnderInvestigation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderInvestigation";
@@ -160,7 +160,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -183,7 +183,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 * name} = "Overdue"</li>
 	 * </ul>
 	 */
-	public static final MMCode Overdue = new MMCode() {
+	public static final MMCode mmOverdue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Overdue";
@@ -194,13 +194,13 @@ public class CaseStatus2Code extends CaseStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLSD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CaseStatus2Code";
 				definition = "Specifies the status of an investigation case.\n\nNote: \nThe cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseStatus2Code.Closed, com.tools20022.repository.codeset.CaseStatus2Code.Assigned, com.tools20022.repository.codeset.CaseStatus2Code.UnderInvestigation,
-						com.tools20022.repository.codeset.CaseStatus2Code.Unknown, com.tools20022.repository.codeset.CaseStatus2Code.Overdue);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseStatus2Code.mmClosed, com.tools20022.repository.codeset.CaseStatus2Code.mmAssigned,
+						com.tools20022.repository.codeset.CaseStatus2Code.mmUnderInvestigation, com.tools20022.repository.codeset.CaseStatus2Code.mmUnknown, com.tools20022.repository.codeset.CaseStatus2Code.mmOverdue);
 				trace_lazy = () -> CaseStatusCode.mmObject();
 			}
 		});

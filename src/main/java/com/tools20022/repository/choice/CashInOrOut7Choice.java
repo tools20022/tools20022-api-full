@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut7Choice#CashInPaymentInstrument
- * CashInOrOut7Choice.CashInPaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut7Choice#mmCashInPaymentInstrument
+ * CashInOrOut7Choice.mmCashInPaymentInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut7Choice#CashOutPaymentInstrument
- * CashInOrOut7Choice.CashOutPaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut7Choice#mmCashOutPaymentInstrument
+ * CashInOrOut7Choice.mmCashOutPaymentInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashInOrOut7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentInstrument20Choice cashInPaymentInstrument;
 	/**
 	 * Payment instrument for the cash-in flow.
 	 * <p>
@@ -97,26 +98,27 @@ public class CashInOrOut7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CashInOrOut5Choice#CashInPaymentInstrument
-	 * CashInOrOut5Choice.CashInPaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.choice.CashInOrOut5Choice#mmCashInPaymentInstrument
+	 * CashInOrOut5Choice.mmCashInPaymentInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashInOrOut7Choice.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> CashInOrOut7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshInPmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInPaymentInstrument";
 			definition = "Payment instrument for the cash-in flow.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CashInOrOut5Choice.CashInPaymentInstrument;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CashInOrOut5Choice.mmCashInPaymentInstrument;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument20Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PaymentInstrument20Choice.mmObject();
 		}
 	};
+	protected PaymentInstrument21Choice cashOutPaymentInstrument;
 	/**
 	 * Payment instrument for the cash-out flow.
 	 * <p>
@@ -149,33 +151,33 @@ public class CashInOrOut7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CashInOrOut5Choice#CashOutPaymentInstrument
-	 * CashInOrOut5Choice.CashOutPaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.choice.CashInOrOut5Choice#mmCashOutPaymentInstrument
+	 * CashInOrOut5Choice.mmCashOutPaymentInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashOutPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashOutPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashInOrOut7Choice.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> CashInOrOut7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutPmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutPaymentInstrument";
 			definition = "Payment instrument for the cash-out flow.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CashInOrOut5Choice.CashOutPaymentInstrument;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CashInOrOut5Choice.mmCashOutPaymentInstrument;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument21Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PaymentInstrument21Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashInOrOut7Choice.CashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut7Choice.CashOutPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashInOrOut7Choice.mmCashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut7Choice.mmCashOutPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashInOrOut7Choice";
 				definition = "Choice of a payment instrument for the cash-in flow or cash-out flow.";
@@ -183,5 +185,21 @@ public class CashInOrOut7Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentInstrument20Choice getCashInPaymentInstrument() {
+		return cashInPaymentInstrument;
+	}
+
+	public void setCashInPaymentInstrument(com.tools20022.repository.choice.PaymentInstrument20Choice cashInPaymentInstrument) {
+		this.cashInPaymentInstrument = cashInPaymentInstrument;
+	}
+
+	public PaymentInstrument21Choice getCashOutPaymentInstrument() {
+		return cashOutPaymentInstrument;
+	}
+
+	public void setCashOutPaymentInstrument(com.tools20022.repository.choice.PaymentInstrument21Choice cashOutPaymentInstrument) {
+		this.cashOutPaymentInstrument = cashOutPaymentInstrument;
 	}
 }

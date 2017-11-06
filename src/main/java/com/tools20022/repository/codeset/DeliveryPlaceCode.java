@@ -29,17 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#Employer
- * DeliveryPlaceCode.Employer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#Individual
- * DeliveryPlaceCode.Individual}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#mmEmployer
+ * DeliveryPlaceCode.mmEmployer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#EntranceOfMeeting
- * DeliveryPlaceCode.EntranceOfMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#mmIndividual
+ * DeliveryPlaceCode.mmIndividual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#OtherAddress
- * DeliveryPlaceCode.OtherAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#mmEntranceOfMeeting
+ * DeliveryPlaceCode.mmEntranceOfMeeting}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#mmOtherAddress
+ * DeliveryPlaceCode.mmOtherAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +95,7 @@ public class DeliveryPlaceCode {
 	 * definition} = "Card needs to be mailed to employers address."</li>
 	 * </ul>
 	 */
-	public static final MMCode Employer = new MMCode() {
+	public static final MMCode mmEmployer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Employer";
@@ -125,7 +126,7 @@ public class DeliveryPlaceCode {
 	 * "Card needs to be mailed to individual specified in PersonDetail"</li>
 	 * </ul>
 	 */
-	public static final MMCode Individual = new MMCode() {
+	public static final MMCode mmIndividual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Individual";
@@ -156,7 +157,7 @@ public class DeliveryPlaceCode {
 	 * "Card needs to be available at the entrance of the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMCode EntranceOfMeeting = new MMCode() {
+	public static final MMCode mmEntranceOfMeeting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EntranceOfMeeting";
@@ -186,7 +187,7 @@ public class DeliveryPlaceCode {
 	 * definition} = "Cards needs to be send to other specified address."</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherAddress = new MMCode() {
+	public static final MMCode mmOtherAddress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OtherAddress";
@@ -199,13 +200,13 @@ public class DeliveryPlaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EMPL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveryPlaceCode";
 				definition = "Specifies the place of delivery.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryPlaceCode.Employer, com.tools20022.repository.codeset.DeliveryPlaceCode.Individual,
-						com.tools20022.repository.codeset.DeliveryPlaceCode.EntranceOfMeeting, com.tools20022.repository.codeset.DeliveryPlaceCode.OtherAddress);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryPlaceCode.mmEmployer, com.tools20022.repository.codeset.DeliveryPlaceCode.mmIndividual,
+						com.tools20022.repository.codeset.DeliveryPlaceCode.mmEntranceOfMeeting, com.tools20022.repository.codeset.DeliveryPlaceCode.mmOtherAddress);
 				derivation_lazy = () -> Arrays.asList(DeliveryPlace1Code.mmObject());
 			}
 		});

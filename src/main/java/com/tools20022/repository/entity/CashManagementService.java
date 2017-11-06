@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.CallInCode;
 import com.tools20022.repository.entity.CashAccountService;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of applications that provides services which facilitate the management of
@@ -40,20 +41,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashManagementService#RiskManagementLimit
- * CashManagementService.RiskManagementLimit}</li>
+ * {@linkplain com.tools20022.repository.entity.CashManagementService#mmRiskManagementLimit
+ * CashManagementService.mmRiskManagementLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashManagementService#StandingOrder
- * CashManagementService.StandingOrder}</li>
+ * {@linkplain com.tools20022.repository.entity.CashManagementService#mmStandingOrder
+ * CashManagementService.mmStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashManagementService#RelatedTransactionAdministrator
- * CashManagementService.RelatedTransactionAdministrator}</li>
+ * {@linkplain com.tools20022.repository.entity.CashManagementService#mmRelatedTransactionAdministrator
+ * CashManagementService.mmRelatedTransactionAdministrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashManagementService#LiquidityManagementLimit
- * CashManagementService.LiquidityManagementLimit}</li>
+ * {@linkplain com.tools20022.repository.entity.CashManagementService#mmLiquidityManagementLimit
+ * CashManagementService.mmLiquidityManagementLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashManagementService#CallInType
- * CashManagementService.CallInType}</li>
+ * {@linkplain com.tools20022.repository.entity.CashManagementService#mmCallInType
+ * CashManagementService.mmCallInType}</li>
  * </ul>
  * </li>
  * <li>
@@ -61,17 +62,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#CashManagementService
- * RiskManagementLimit.CashManagementService}</li>
+ * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCashManagementService
+ * RiskManagementLimit.mmCashManagementService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CashManagementService
- * TransactionAdministrator.CashManagementService}</li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashManagementService
+ * TransactionAdministrator.mmCashManagementService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashStandingOrder#RelatedCashServices
- * CashStandingOrder.RelatedCashServices}</li>
+ * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmRelatedCashServices
+ * CashStandingOrder.mmRelatedCashServices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#RelatedCashServices
- * LiquidityManagementLimit.RelatedCashServices}</li>
+ * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmRelatedCashServices
+ * LiquidityManagementLimit.mmRelatedCashServices}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -80,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashManagementService extends CashAccountService {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.RiskManagementLimit> riskManagementLimit;
 	/**
 	 * Maximum amount value applied to or by a party versus a specific
 	 * counterparty or a set of counterparts. The limit can be expressed as a
@@ -107,8 +109,8 @@ public class CashManagementService extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#CashManagementService
-	 * RiskManagementLimit.CashManagementService}</li>
+	 * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCashManagementService
+	 * RiskManagementLimit.mmCashManagementService}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -116,40 +118,40 @@ public class CashManagementService extends CashAccountService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RiskManagementLimit
 	 * RiskManagementLimit}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#CurrentMultilateralLimit
-	 * CashAccountDetails1.CurrentMultilateralLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#CurrentBilateralLimit
-	 * CashAccountDetails1.CurrentBilateralLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails3#CurrentMultilateralLimit
-	 * CashAccountDetails3.CurrentMultilateralLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails3#CurrentBilateralLimit
-	 * CashAccountDetails3.CurrentBilateralLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails4#CurrentMultilateralLimit
-	 * CashAccountDetails4.CurrentMultilateralLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails4#CurrentBilateralLimit
-	 * CashAccountDetails4.CurrentBilateralLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccount23#CurrentMultilateralLimit
-	 * CashAccount23.CurrentMultilateralLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccount23#CurrentBilateralLimit
-	 * CashAccount23.CurrentBilateralLimit}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashManagementService
 	 * CashManagementService}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#mmCurrentMultilateralLimit
+	 * CashAccountDetails1.mmCurrentMultilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#mmCurrentBilateralLimit
+	 * CashAccountDetails1.mmCurrentBilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails3#mmCurrentMultilateralLimit
+	 * CashAccountDetails3.mmCurrentMultilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails3#mmCurrentBilateralLimit
+	 * CashAccountDetails3.mmCurrentBilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails4#mmCurrentMultilateralLimit
+	 * CashAccountDetails4.mmCurrentMultilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails4#mmCurrentBilateralLimit
+	 * CashAccountDetails4.mmCurrentBilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount23#mmCurrentMultilateralLimit
+	 * CashAccount23.mmCurrentMultilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount23#mmCurrentBilateralLimit
+	 * CashAccount23.mmCurrentBilateralLimit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -163,23 +165,24 @@ public class CashManagementService extends CashAccountService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RiskManagementLimit = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRiskManagementLimit = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountDetails1.CurrentMultilateralLimit, com.tools20022.repository.msg.CashAccountDetails1.CurrentBilateralLimit,
-					com.tools20022.repository.msg.CashAccountDetails3.CurrentMultilateralLimit, com.tools20022.repository.msg.CashAccountDetails3.CurrentBilateralLimit,
-					com.tools20022.repository.msg.CashAccountDetails4.CurrentMultilateralLimit, com.tools20022.repository.msg.CashAccountDetails4.CurrentBilateralLimit, com.tools20022.repository.msg.CashAccount23.CurrentMultilateralLimit,
-					com.tools20022.repository.msg.CashAccount23.CurrentBilateralLimit);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountDetails1.mmCurrentMultilateralLimit, com.tools20022.repository.msg.CashAccountDetails1.mmCurrentBilateralLimit,
+					com.tools20022.repository.msg.CashAccountDetails3.mmCurrentMultilateralLimit, com.tools20022.repository.msg.CashAccountDetails3.mmCurrentBilateralLimit,
+					com.tools20022.repository.msg.CashAccountDetails4.mmCurrentMultilateralLimit, com.tools20022.repository.msg.CashAccountDetails4.mmCurrentBilateralLimit,
+					com.tools20022.repository.msg.CashAccount23.mmCurrentMultilateralLimit, com.tools20022.repository.msg.CashAccount23.mmCurrentBilateralLimit);
 			elementContext_lazy = () -> CashManagementService.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RiskManagementLimit";
 			definition = "Maximum amount value applied to or by a party versus a specific counterparty or a set of counterparts. The limit can be expressed as a debit limit or a credit limit.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.CashManagementService;
+			opposite_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmCashManagementService;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashStandingOrder> standingOrder;
 	/**
 	 * Specifies standing orders that must be executed in the context of cash
 	 * management. This service may be offered by a transaction administrator.
@@ -189,8 +192,8 @@ public class CashManagementService extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder#RelatedCashServices
-	 * CashStandingOrder.RelatedCashServices}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmRelatedCashServices
+	 * CashStandingOrder.mmRelatedCashServices}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -198,22 +201,22 @@ public class CashManagementService extends CashAccountService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashStandingOrder
 	 * CashStandingOrder}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#StandingOrder
-	 * CashAccountDetails1.StandingOrder}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccount23#StandingOrder
-	 * CashAccount23.StandingOrder}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashManagementService
 	 * CashManagementService}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#mmStandingOrder
+	 * CashAccountDetails1.mmStandingOrder}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount23#mmStandingOrder
+	 * CashAccount23.mmStandingOrder}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -227,20 +230,21 @@ public class CashManagementService extends CashAccountService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd StandingOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmStandingOrder = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountDetails1.StandingOrder, com.tools20022.repository.msg.CashAccount23.StandingOrder);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountDetails1.mmStandingOrder, com.tools20022.repository.msg.CashAccount23.mmStandingOrder);
 			elementContext_lazy = () -> CashManagementService.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StandingOrder";
 			definition = "Specifies standing orders that must be executed in the context of cash management. This service may be offered by a transaction administrator.";
 			minOccurs = 0;
-			type_lazy = () -> CashStandingOrder.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.RelatedCashServices;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmRelatedCashServices;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 		}
 	};
+	protected TransactionAdministrator relatedTransactionAdministrator;
 	/**
 	 * Transaction administrator of a cash management service.
 	 * <p>
@@ -249,8 +253,8 @@ public class CashManagementService extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CashManagementService
-	 * TransactionAdministrator.CashManagementService}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashManagementService
+	 * TransactionAdministrator.mmCashManagementService}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -275,20 +279,21 @@ public class CashManagementService extends CashAccountService {
 	 * definition} = "Transaction administrator of a cash management service."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedTransactionAdministrator = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedTransactionAdministrator = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashManagementService.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransactionAdministrator";
 			definition = "Transaction administrator of a cash management service.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionAdministrator.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.CashManagementService;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCashManagementService;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmObject();
 		}
 	};
+	protected LiquidityManagementLimit liquidityManagementLimit;
 	/**
 	 * Cash management feature limiting the amount of liquidity needed to
 	 * perform clearing and settlement operations. At any point in time during
@@ -301,8 +306,8 @@ public class CashManagementService extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#RelatedCashServices
-	 * LiquidityManagementLimit.RelatedCashServices}</li>
+	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmRelatedCashServices
+	 * LiquidityManagementLimit.mmRelatedCashServices}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -311,19 +316,19 @@ public class CashManagementService extends CashAccountService {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
 	 * LiquidityManagementLimit}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionType1#FloorLimit
-	 * TransactionType1.FloorLimit}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashManagementService
 	 * CashManagementService}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionType1#mmFloorLimit
+	 * TransactionType1.mmFloorLimit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -337,21 +342,22 @@ public class CashManagementService extends CashAccountService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd LiquidityManagementLimit = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLiquidityManagementLimit = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionType1.FloorLimit);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionType1.mmFloorLimit);
 			elementContext_lazy = () -> CashManagementService.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LiquidityManagementLimit";
 			definition = "Cash management feature limiting the amount of liquidity needed to perform clearing and settlement operations. At any point in time during the process, the limit imposes the maximum amount of liquidity available for operations concerning the system or other managed elements, eg, transaction amount or counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.RelatedCashServices;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmRelatedCashServices;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmObject();
 		}
 	};
+	protected CallInCode callInType;
 	/**
 	 * Type of call when additional funding from a settlement member is
 	 * requested by a central settlement system.
@@ -362,24 +368,24 @@ public class CashManagementService extends CashAccountService {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CallInCode
 	 * CallInCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order16#CallInType
-	 * Order16.CallInType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order14#CallInType
-	 * Order14.CallInType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order17#CallInType
-	 * Order17.CallInType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order18#CallInType
-	 * Order18.CallInType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashManagementService
 	 * CashManagementService}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order16#mmCallInType
+	 * Order16.mmCallInType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order14#mmCallInType
+	 * Order14.mmCallInType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order17#mmCallInType
+	 * Order17.mmCallInType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order18#mmCallInType
+	 * Order18.mmCallInType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -393,17 +399,17 @@ public class CashManagementService extends CashAccountService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CallInType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCallInType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order16.CallInType, com.tools20022.repository.msg.Order14.CallInType, com.tools20022.repository.msg.Order17.CallInType,
-					com.tools20022.repository.msg.Order18.CallInType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order16.mmCallInType, com.tools20022.repository.msg.Order14.mmCallInType, com.tools20022.repository.msg.Order17.mmCallInType,
+					com.tools20022.repository.msg.Order18.mmCallInType);
 			elementContext_lazy = () -> CashManagementService.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CallInType";
 			definition = "Type of call when additional funding from a settlement member is requested by a central settlement system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CallInCode.mmObject();
 		}
 	};
@@ -411,18 +417,58 @@ public class CashManagementService extends CashAccountService {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashManagementService";
 				definition = "Set of applications that provides services which facilitate the management of cash positions on an account.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RiskManagementLimit.CashManagementService, com.tools20022.repository.entity.TransactionAdministrator.CashManagementService,
-						com.tools20022.repository.entity.CashStandingOrder.RelatedCashServices, com.tools20022.repository.entity.LiquidityManagementLimit.RelatedCashServices);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RiskManagementLimit.mmCashManagementService, com.tools20022.repository.entity.TransactionAdministrator.mmCashManagementService,
+						com.tools20022.repository.entity.CashStandingOrder.mmRelatedCashServices, com.tools20022.repository.entity.LiquidityManagementLimit.mmRelatedCashServices);
 				superType_lazy = () -> CashAccountService.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashManagementService.RiskManagementLimit, com.tools20022.repository.entity.CashManagementService.StandingOrder,
-						com.tools20022.repository.entity.CashManagementService.RelatedTransactionAdministrator, com.tools20022.repository.entity.CashManagementService.LiquidityManagementLimit,
-						com.tools20022.repository.entity.CashManagementService.CallInType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashManagementService.mmRiskManagementLimit, com.tools20022.repository.entity.CashManagementService.mmStandingOrder,
+						com.tools20022.repository.entity.CashManagementService.mmRelatedTransactionAdministrator, com.tools20022.repository.entity.CashManagementService.mmLiquidityManagementLimit,
+						com.tools20022.repository.entity.CashManagementService.mmCallInType);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<RiskManagementLimit> getRiskManagementLimit() {
+		return riskManagementLimit;
+	}
+
+	public void setRiskManagementLimit(List<com.tools20022.repository.entity.RiskManagementLimit> riskManagementLimit) {
+		this.riskManagementLimit = riskManagementLimit;
+	}
+
+	public List<CashStandingOrder> getStandingOrder() {
+		return standingOrder;
+	}
+
+	public void setStandingOrder(List<com.tools20022.repository.entity.CashStandingOrder> standingOrder) {
+		this.standingOrder = standingOrder;
+	}
+
+	public TransactionAdministrator getRelatedTransactionAdministrator() {
+		return relatedTransactionAdministrator;
+	}
+
+	public void setRelatedTransactionAdministrator(com.tools20022.repository.entity.TransactionAdministrator relatedTransactionAdministrator) {
+		this.relatedTransactionAdministrator = relatedTransactionAdministrator;
+	}
+
+	public LiquidityManagementLimit getLiquidityManagementLimit() {
+		return liquidityManagementLimit;
+	}
+
+	public void setLiquidityManagementLimit(com.tools20022.repository.entity.LiquidityManagementLimit liquidityManagementLimit) {
+		this.liquidityManagementLimit = liquidityManagementLimit;
+	}
+
+	public CallInCode getCallInType() {
+		return callInType;
+	}
+
+	public void setCallInType(CallInCode callInType) {
+		this.callInType = callInType;
 	}
 }

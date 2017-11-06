@@ -36,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2#PlaceAndName
- * CorporateActionOptionSecuritiesMovementDetailsExtension2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2#mmPlaceAndName
+ * CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2#PayoutNumber
- * CorporateActionOptionSecuritiesMovementDetailsExtension2.PayoutNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2#mmPayoutNumber
+ * CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPayoutNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2#DTCPayMethod
- * CorporateActionOptionSecuritiesMovementDetailsExtension2.DTCPayMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2#mmDTCPayMethod
+ * CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2#DTCPayOrder
- * CorporateActionOptionSecuritiesMovementDetailsExtension2.DTCPayOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2#mmDTCPayOrder
+ * CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayOrder}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -96,7 +97,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -104,11 +105,12 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Exact3NumericText payoutNumber;
 	/**
 	 * Unique number associated with a payout within an option.
 	 * <p>
@@ -137,7 +139,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -145,11 +147,12 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected Max3Text dTCPayMethod;
 	/**
 	 * Indicates the type of payment. Used in Stock Dividends processing at DTC
 	 * (The Depository Trust Corporation). Values list is provided separately.
@@ -180,7 +183,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCPayMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -188,11 +191,12 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in Stock Dividends processing at DTC (The Depository Trust Corporation). Values list is provided separately. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	protected Max3Text dTCPayOrder;
 	/**
 	 * Indicates the payment order. Used in Stock Dividends processing at DTC
 	 * (The Depository Trust Corporation). Values list is provided separately.
@@ -223,7 +227,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCPayOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -231,8 +235,8 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in Stock Dividends processing at DTC (The Depository Trust Corporation). Values list is provided separately. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
@@ -240,15 +244,47 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.PlaceAndName,
-						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.PayoutNumber, com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.DTCPayMethod,
-						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.DTCPayOrder);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPayoutNumber, com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayMethod,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayOrder);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSecuritiesMovementDetailsExtension2";
 				definition = "Provides additional information regarding corporate action option securities movement details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Exact3NumericText getPayoutNumber() {
+		return payoutNumber;
+	}
+
+	public void setPayoutNumber(Exact3NumericText payoutNumber) {
+		this.payoutNumber = payoutNumber;
+	}
+
+	public Max3Text getDTCPayMethod() {
+		return dTCPayMethod;
+	}
+
+	public void setDTCPayMethod(Max3Text dTCPayMethod) {
+		this.dTCPayMethod = dTCPayMethod;
+	}
+
+	public Max3Text getDTCPayOrder() {
+		return dTCPayOrder;
+	}
+
+	public void setDTCPayOrder(Max3Text dTCPayOrder) {
+		this.dTCPayOrder = dTCPayOrder;
 	}
 }

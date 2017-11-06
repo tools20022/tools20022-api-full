@@ -19,6 +19,7 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.msg.OrganisationIdentification7;
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party10Choice#OrganisationIdentification
- * Party10Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party10Choice#mmOrganisationIdentification
+ * Party10Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party10Choice#PrivateIdentification
- * Party10Choice.PrivateIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party10Choice#mmPrivateIdentification
+ * Party10Choice.mmPrivateIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Party10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrganisationIdentification7 organisationIdentification;
 	/**
 	 * Unique and unambiguous way to identify an organisation.
 	 * <p>
@@ -97,21 +99,22 @@ public class Party10Choice {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> Party10Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way to identify an organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrganisationIdentification7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OrganisationIdentification7.mmObject();
 		}
 	};
+	protected PersonIdentification5 privateIdentification;
 	/**
 	 * Unique and unambiguous identification of a person, eg, passport.
 	 * <p>
@@ -144,33 +147,49 @@ public class Party10Choice {
 	 * "Unique and unambiguous identification of a person, eg, passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Party10Choice.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> Party10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateIdentification";
 			definition = "Unique and unambiguous identification of a person, eg, passport.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PersonIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PersonIdentification5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party10Choice.OrganisationIdentification, com.tools20022.repository.choice.Party10Choice.PrivateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party10Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party10Choice.mmPrivateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Party10Choice";
 				definition = "Nature or use of the account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrganisationIdentification7 getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(OrganisationIdentification7 organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
+	}
+
+	public PersonIdentification5 getPrivateIdentification() {
+		return privateIdentification;
+	}
+
+	public void setPrivateIdentification(PersonIdentification5 privateIdentification) {
+		this.privateIdentification = privateIdentification;
 	}
 }

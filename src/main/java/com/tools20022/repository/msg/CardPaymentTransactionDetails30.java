@@ -25,8 +25,10 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.TypeOfAmount1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.Instalment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the transaction to capture.
@@ -38,59 +40,59 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#Currency
- * CardPaymentTransactionDetails30.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmCurrency
+ * CardPaymentTransactionDetails30.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#TotalAmount
- * CardPaymentTransactionDetails30.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmTotalAmount
+ * CardPaymentTransactionDetails30.mmTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#AmountQualifier
- * CardPaymentTransactionDetails30.AmountQualifier}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmAmountQualifier
+ * CardPaymentTransactionDetails30.mmAmountQualifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#DetailedAmount
- * CardPaymentTransactionDetails30.DetailedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmDetailedAmount
+ * CardPaymentTransactionDetails30.mmDetailedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#RequestedAmount
- * CardPaymentTransactionDetails30.RequestedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmRequestedAmount
+ * CardPaymentTransactionDetails30.mmRequestedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#AuthorisedAmount
- * CardPaymentTransactionDetails30.AuthorisedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmAuthorisedAmount
+ * CardPaymentTransactionDetails30.mmAuthorisedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#InvoiceAmount
- * CardPaymentTransactionDetails30.InvoiceAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmInvoiceAmount
+ * CardPaymentTransactionDetails30.mmInvoiceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#ValidityDate
- * CardPaymentTransactionDetails30.ValidityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmValidityDate
+ * CardPaymentTransactionDetails30.mmValidityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#UnattendedLevelCategory
- * CardPaymentTransactionDetails30.UnattendedLevelCategory}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmUnattendedLevelCategory
+ * CardPaymentTransactionDetails30.mmUnattendedLevelCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#AccountType
- * CardPaymentTransactionDetails30.AccountType}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmAccountType
+ * CardPaymentTransactionDetails30.mmAccountType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#CurrencyConversionResult
- * CardPaymentTransactionDetails30.CurrencyConversionResult}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmCurrencyConversionResult
+ * CardPaymentTransactionDetails30.mmCurrencyConversionResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#Instalment
- * CardPaymentTransactionDetails30.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmInstalment
+ * CardPaymentTransactionDetails30.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#AggregationTransaction
- * CardPaymentTransactionDetails30.AggregationTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmAggregationTransaction
+ * CardPaymentTransactionDetails30.mmAggregationTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#ProductCodeSetIdentification
- * CardPaymentTransactionDetails30.ProductCodeSetIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmProductCodeSetIdentification
+ * CardPaymentTransactionDetails30.mmProductCodeSetIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#SaleItem
- * CardPaymentTransactionDetails30.SaleItem}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmSaleItem
+ * CardPaymentTransactionDetails30.mmSaleItem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#DeliveryLocation
- * CardPaymentTransactionDetails30.DeliveryLocation}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmDeliveryLocation
+ * CardPaymentTransactionDetails30.mmDeliveryLocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#CardPaymentInvoice
- * CardPaymentTransactionDetails30.CardPaymentInvoice}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmCardPaymentInvoice
+ * CardPaymentTransactionDetails30.mmCardPaymentInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#ICCRelatedData
- * CardPaymentTransactionDetails30.ICCRelatedData}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmICCRelatedData
+ * CardPaymentTransactionDetails30.mmICCRelatedData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -99,8 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,6 +128,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentTransactionDetails30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyCode currency;
 	/**
 	 * Currency associated with the transaction.
 	 * <p>
@@ -138,8 +141,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyOfTransfer
-	 * Payment.CurrencyOfTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
+	 * Payment.mmCurrencyOfTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,33 +163,34 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#Currency
-	 * CardPaymentTransactionDetails38.Currency}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmCurrency
+	 * CardPaymentTransactionDetails38.mmCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#Currency
-	 * CardPaymentTransactionDetails23.Currency}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmCurrency
+	 * CardPaymentTransactionDetails23.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyOfTransfer;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency associated with the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.Currency;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.Currency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmCurrency);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount totalAmount;
 	/**
 	 * Total amount of the transaction.
 	 * <p>
@@ -200,8 +204,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -222,33 +226,34 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#TotalAmount
-	 * CardPaymentTransactionDetails38.TotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmTotalAmount
+	 * CardPaymentTransactionDetails38.mmTotalAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#TotalAmount
-	 * CardPaymentTransactionDetails23.TotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmTotalAmount
+	 * CardPaymentTransactionDetails23.mmTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.TotalAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.TotalAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmTotalAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmTotalAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected TypeOfAmount1Code amountQualifier;
 	/**
 	 * Qualifies the amount associated with the transaction.
 	 * <p>
@@ -262,8 +267,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#AmountQualifier
-	 * CardPayment.AmountQualifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmAmountQualifier
+	 * CardPayment.mmAmountQualifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -284,33 +289,34 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#AmountQualifier
-	 * CardPaymentTransactionDetails38.AmountQualifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmAmountQualifier
+	 * CardPaymentTransactionDetails38.mmAmountQualifier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#AmountQualifier
-	 * CardPaymentTransactionDetails23.AmountQualifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmAmountQualifier
+	 * CardPaymentTransactionDetails23.mmAmountQualifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountQualifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountQualifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.AmountQualifier;
 			isDerived = false;
 			xmlTag = "AmtQlfr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountQualifier";
 			definition = "Qualifies the amount associated with the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.AmountQualifier;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.AmountQualifier);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmAmountQualifier);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmAmountQualifier;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfAmount1Code.mmObject();
 		}
 	};
+	protected DetailedAmount15 detailedAmount;
 	/**
 	 * Detailed amounts associated with the total amount of transaction.
 	 * <p>
@@ -322,8 +328,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#DetailedAmount
-	 * CardPayment.DetailedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmount
+	 * CardPayment.mmDetailedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -345,34 +351,35 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#DetailedAmount
-	 * CardPaymentTransactionDetails38.DetailedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmDetailedAmount
+	 * CardPaymentTransactionDetails38.mmDetailedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#DetailedAmount
-	 * CardPaymentTransactionDetails23.DetailedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmDetailedAmount
+	 * CardPaymentTransactionDetails23.mmDetailedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DetailedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDetailedAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmDetailedAmount;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.DetailedAmount;
 			isDerived = false;
 			xmlTag = "DtldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedAmount";
 			definition = "Detailed amounts associated with the total amount of transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.DetailedAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.DetailedAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmDetailedAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmDetailedAmount;
 			maxOccurs = 1;
-			type_lazy = () -> DetailedAmount15.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount15.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount requestedAmount;
 	/**
 	 * Amount requested to be authorised.
 	 * <p>
@@ -403,18 +410,18 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#RequestedAmount
-	 * CardPaymentTransactionDetails38.RequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmRequestedAmount
+	 * CardPaymentTransactionDetails38.mmRequestedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#RequestedAmount
-	 * CardPaymentTransactionDetails23.RequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmRequestedAmount
+	 * CardPaymentTransactionDetails23.mmRequestedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
 			isDerived = false;
@@ -422,13 +429,14 @@ public class CardPaymentTransactionDetails30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedAmount";
 			definition = "Amount requested to be authorised.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.RequestedAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.RequestedAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmRequestedAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmRequestedAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount authorisedAmount;
 	/**
 	 * Amount authorised for the transaction.
 	 * <p>
@@ -459,18 +467,18 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#AuthorisedAmount
-	 * CardPaymentTransactionDetails38.AuthorisedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmAuthorisedAmount
+	 * CardPaymentTransactionDetails38.mmAuthorisedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#AuthorisedAmount
-	 * CardPaymentTransactionDetails23.AuthorisedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmAuthorisedAmount
+	 * CardPaymentTransactionDetails23.mmAuthorisedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthorisedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthorisedAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
 			isDerived = false;
@@ -478,13 +486,14 @@ public class CardPaymentTransactionDetails30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedAmount";
 			definition = "Amount authorised for the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.AuthorisedAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.AuthorisedAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmAuthorisedAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmAuthorisedAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount invoiceAmount;
 	/**
 	 * Amount of the transaction that will be invoiced to the cardholder.
 	 * <p>
@@ -516,13 +525,13 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#InvoiceAmount
-	 * CardPaymentTransactionDetails38.InvoiceAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmInvoiceAmount
+	 * CardPaymentTransactionDetails38.mmInvoiceAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvoiceAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
 			isDerived = false;
@@ -530,12 +539,13 @@ public class CardPaymentTransactionDetails30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceAmount";
 			definition = "Amount of the transaction that will be invoiced to the cardholder.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.InvoiceAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmInvoiceAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate validityDate;
 	/**
 	 * Transaction authorisation deadline to complete the related payment.
 	 * <p>
@@ -548,8 +558,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#ValidityDate
-	 * CardPaymentValidation.ValidityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#mmValidityDate
+	 * CardPaymentValidation.mmValidityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -571,33 +581,34 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#ValidityDate
-	 * CardPaymentTransactionDetails38.ValidityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmValidityDate
+	 * CardPaymentTransactionDetails38.mmValidityDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#ValidityDate
-	 * CardPaymentTransactionDetails23.ValidityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmValidityDate
+	 * CardPaymentTransactionDetails23.mmValidityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmValidityDate;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.ValidityDate;
 			isDerived = false;
 			xmlTag = "VldtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityDate";
 			definition = "Transaction authorisation deadline to complete the related payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.ValidityDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.ValidityDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmValidityDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmValidityDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35NumericText unattendedLevelCategory;
 	/**
 	 * Transaction category level on an unattended POI (Point Of Interaction).
 	 * <p>
@@ -611,8 +622,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#UnattendedLevelCategory
-	 * CardPaymentAcquiring.UnattendedLevelCategory}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmUnattendedLevelCategory
+	 * CardPaymentAcquiring.mmUnattendedLevelCategory}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -635,33 +646,34 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#UnattendedLevelCategory
-	 * CardPaymentTransactionDetails38.UnattendedLevelCategory}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmUnattendedLevelCategory
+	 * CardPaymentTransactionDetails38.mmUnattendedLevelCategory}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#UnattendedLevelCategory
-	 * CardPaymentTransactionDetails23.UnattendedLevelCategory}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmUnattendedLevelCategory
+	 * CardPaymentTransactionDetails23.mmUnattendedLevelCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnattendedLevelCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnattendedLevelCategory = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmUnattendedLevelCategory;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.UnattendedLevelCategory;
 			isDerived = false;
 			xmlTag = "UattnddLvlCtgy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnattendedLevelCategory";
 			definition = "Transaction category level on an unattended POI (Point Of Interaction).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.UnattendedLevelCategory;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.UnattendedLevelCategory);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmUnattendedLevelCategory);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmUnattendedLevelCategory;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	protected CardAccountType3Code accountType;
 	/**
 	 * Type of cardholder account used for the transaction.
 	 * <p>
@@ -675,8 +687,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard#RelatedAccountType
-	 * PaymentCard.RelatedAccountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard#mmRelatedAccountType
+	 * PaymentCard.mmRelatedAccountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -697,33 +709,34 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#AccountType
-	 * CardPaymentTransactionDetails38.AccountType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmAccountType
+	 * CardPaymentTransactionDetails38.mmAccountType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#AccountType
-	 * CardPaymentTransactionDetails23.AccountType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmAccountType
+	 * CardPaymentTransactionDetails23.mmAccountType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmRelatedAccountType;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.RelatedAccountType;
 			isDerived = false;
 			xmlTag = "AcctTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountType";
 			definition = "Type of cardholder account used for the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.AccountType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.AccountType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmAccountType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmAccountType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
+	protected CurrencyConversion8 currencyConversionResult;
 	/**
 	 * Result of the currency conversion proposed to the cardholder.
 	 * <p>
@@ -735,8 +748,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyExchange
-	 * Payment.CurrencyExchange}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
+	 * Payment.mmCurrencyExchange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -758,34 +771,35 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#CurrencyConversionResult
-	 * CardPaymentTransactionDetails38.CurrencyConversionResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmCurrencyConversionResult
+	 * CardPaymentTransactionDetails38.mmCurrencyConversionResult}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#CurrencyConversion
-	 * CardPaymentTransactionDetails23.CurrencyConversion}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmCurrencyConversion
+	 * CardPaymentTransactionDetails23.mmCurrencyConversion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyConversionResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyConversionResult = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyExchange;
 			isDerived = false;
 			xmlTag = "CcyConvsRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionResult";
 			definition = "Result of the currency conversion proposed to the cardholder.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.CurrencyConversion;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.CurrencyConversionResult);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmCurrencyConversionResult);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmCurrencyConversion;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyConversion8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion8.mmObject();
 		}
 	};
+	protected RecurringTransaction2 instalment;
 	/**
 	 * Data related to a financial loan (instalment) or to a recurring
 	 * transaction.
@@ -821,34 +835,35 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#Instalment
-	 * CardPaymentTransactionDetails38.Instalment}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmInstalment
+	 * CardPaymentTransactionDetails38.mmInstalment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#Instalment
-	 * CardPaymentTransactionDetails23.Instalment}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmInstalment
+	 * CardPaymentTransactionDetails23.mmInstalment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Instalment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstalment = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Instalment.mmObject();
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmObject();
 			isDerived = false;
 			xmlTag = "Instlmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instalment";
 			definition = "Data related to a financial loan (instalment) or to a recurring transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.Instalment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.Instalment);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmInstalment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmInstalment;
 			maxOccurs = 1;
-			type_lazy = () -> RecurringTransaction2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RecurringTransaction2.mmObject();
 		}
 	};
+	protected AggregationTransaction2 aggregationTransaction;
 	/**
 	 * Payment transaction with an aggregated amount.
 	 * <p>
@@ -878,18 +893,18 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#AggregationTransaction
-	 * CardPaymentTransactionDetails38.AggregationTransaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmAggregationTransaction
+	 * CardPaymentTransactionDetails38.mmAggregationTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#AggregationTransaction
-	 * CardPaymentTransactionDetails23.AggregationTransaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmAggregationTransaction
+	 * CardPaymentTransactionDetails23.mmAggregationTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AggregationTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAggregationTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
 			isDerived = false;
@@ -897,14 +912,15 @@ public class CardPaymentTransactionDetails30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregationTransaction";
 			definition = "Payment transaction with an aggregated amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.AggregationTransaction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.AggregationTransaction);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmAggregationTransaction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmAggregationTransaction;
 			maxOccurs = 1;
-			type_lazy = () -> AggregationTransaction2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AggregationTransaction2.mmObject();
 		}
 	};
+	protected Max10Text productCodeSetIdentification;
 	/**
 	 * Identification of the product codes that are purchased.
 	 * <p>
@@ -934,13 +950,13 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#ProductCodeSetIdentification
-	 * CardPaymentTransactionDetails38.ProductCodeSetIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmProductCodeSetIdentification
+	 * CardPaymentTransactionDetails38.mmProductCodeSetIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProductCodeSetIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProductCodeSetIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
 			isDerived = false;
@@ -948,12 +964,13 @@ public class CardPaymentTransactionDetails30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCodeSetIdentification";
 			definition = "Identification of the product codes that are purchased.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.ProductCodeSetIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmProductCodeSetIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Product3> saleItem;
 	/**
 	 * Item purchased with the transaction.
 	 * <p>
@@ -964,8 +981,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#Product
-	 * CardPayment.Product}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmProduct
+	 * CardPayment.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -986,33 +1003,34 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#SaleItem
-	 * CardPaymentTransactionDetails38.SaleItem}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmSaleItem
+	 * CardPaymentTransactionDetails38.mmSaleItem}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#Product
-	 * CardPaymentTransactionDetails23.Product}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmProduct
+	 * CardPaymentTransactionDetails23.mmProduct}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SaleItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSaleItem = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmProduct;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.Product;
 			isDerived = false;
 			xmlTag = "SaleItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleItem";
 			definition = "Item purchased with the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.Product;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.SaleItem);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmSaleItem);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmProduct;
 			minOccurs = 0;
-			type_lazy = () -> Product3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Product3.mmObject();
 		}
 	};
+	protected Max10Text deliveryLocation;
 	/**
 	 * Location of the delivery, for instance pump number or parking bay.
 	 * <p>
@@ -1043,13 +1061,13 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#DeliveryLocation
-	 * CardPaymentTransactionDetails38.DeliveryLocation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmDeliveryLocation
+	 * CardPaymentTransactionDetails38.mmDeliveryLocation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveryLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveryLocation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
 			isDerived = false;
@@ -1057,12 +1075,13 @@ public class CardPaymentTransactionDetails30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryLocation";
 			definition = "Location of the delivery, for instance pump number or parking bay.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.DeliveryLocation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmDeliveryLocation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	protected CardPaymentInvoice2 cardPaymentInvoice;
 	/**
 	 * Detailed invoice data.
 	 * <p>
@@ -1091,18 +1110,18 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#CardPaymentInvoice
-	 * CardPaymentTransactionDetails38.CardPaymentInvoice}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmCardPaymentInvoice
+	 * CardPaymentTransactionDetails38.mmCardPaymentInvoice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#CardPaymentInvoice
-	 * CardPaymentTransactionDetails23.CardPaymentInvoice}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmCardPaymentInvoice
+	 * CardPaymentTransactionDetails23.mmCardPaymentInvoice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CardPaymentInvoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCardPaymentInvoice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
 			isDerived = false;
@@ -1110,14 +1129,15 @@ public class CardPaymentTransactionDetails30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardPaymentInvoice";
 			definition = "Detailed invoice data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.CardPaymentInvoice;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.CardPaymentInvoice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmCardPaymentInvoice);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmCardPaymentInvoice;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentInvoice2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice2.mmObject();
 		}
 	};
+	protected Max10000Binary iCCRelatedData;
 	/**
 	 * Data related to an integrated circuit card application.
 	 * <p>
@@ -1131,8 +1151,8 @@ public class CardPaymentTransactionDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#ICCRelatedData
-	 * CardPaymentAcquiring.ICCRelatedData}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmICCRelatedData
+	 * CardPaymentAcquiring.mmICCRelatedData}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1153,30 +1173,30 @@ public class CardPaymentTransactionDetails30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#ICCRelatedData
-	 * CardPaymentTransactionDetails38.ICCRelatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmICCRelatedData
+	 * CardPaymentTransactionDetails38.mmICCRelatedData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#ICCRelatedData
-	 * CardPaymentTransactionDetails23.ICCRelatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmICCRelatedData
+	 * CardPaymentTransactionDetails23.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmICCRelatedData;
 			componentContext_lazy = () -> CardPaymentTransactionDetails30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.ICCRelatedData;
 			isDerived = false;
 			xmlTag = "ICCRltdData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Data related to an integrated circuit card application.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.ICCRelatedData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.ICCRelatedData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmICCRelatedData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmICCRelatedData;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
@@ -1184,24 +1204,168 @@ public class CardPaymentTransactionDetails30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails30.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails30.TotalAmount,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails30.AmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails30.DetailedAmount,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails30.RequestedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails30.AuthorisedAmount,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails30.InvoiceAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails30.ValidityDate,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails30.UnattendedLevelCategory, com.tools20022.repository.msg.CardPaymentTransactionDetails30.AccountType,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails30.CurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransactionDetails30.Instalment,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails30.AggregationTransaction, com.tools20022.repository.msg.CardPaymentTransactionDetails30.ProductCodeSetIdentification,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails30.SaleItem, com.tools20022.repository.msg.CardPaymentTransactionDetails30.DeliveryLocation,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails30.CardPaymentInvoice, com.tools20022.repository.msg.CardPaymentTransactionDetails30.ICCRelatedData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmTotalAmount,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmDetailedAmount,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmRequestedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmAuthorisedAmount,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmInvoiceAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmValidityDate,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmUnattendedLevelCategory, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmAccountType,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmCurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmInstalment,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmAggregationTransaction, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmProductCodeSetIdentification,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmSaleItem, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmDeliveryLocation,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmCardPaymentInvoice, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmICCRelatedData);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransactionDetails30";
 				definition = "Details of the transaction to capture.";
-				previousVersion_lazy = () -> CardPaymentTransactionDetails23.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransactionDetails38.mmObject());
+				previousVersion_lazy = () -> CardPaymentTransactionDetails23.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public ImpliedCurrencyAndAmount getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(ImpliedCurrencyAndAmount totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public TypeOfAmount1Code getAmountQualifier() {
+		return amountQualifier;
+	}
+
+	public void setAmountQualifier(TypeOfAmount1Code amountQualifier) {
+		this.amountQualifier = amountQualifier;
+	}
+
+	public DetailedAmount15 getDetailedAmount() {
+		return detailedAmount;
+	}
+
+	public void setDetailedAmount(com.tools20022.repository.msg.DetailedAmount15 detailedAmount) {
+		this.detailedAmount = detailedAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getRequestedAmount() {
+		return requestedAmount;
+	}
+
+	public void setRequestedAmount(ImpliedCurrencyAndAmount requestedAmount) {
+		this.requestedAmount = requestedAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getAuthorisedAmount() {
+		return authorisedAmount;
+	}
+
+	public void setAuthorisedAmount(ImpliedCurrencyAndAmount authorisedAmount) {
+		this.authorisedAmount = authorisedAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getInvoiceAmount() {
+		return invoiceAmount;
+	}
+
+	public void setInvoiceAmount(ImpliedCurrencyAndAmount invoiceAmount) {
+		this.invoiceAmount = invoiceAmount;
+	}
+
+	public ISODate getValidityDate() {
+		return validityDate;
+	}
+
+	public void setValidityDate(ISODate validityDate) {
+		this.validityDate = validityDate;
+	}
+
+	public Max35NumericText getUnattendedLevelCategory() {
+		return unattendedLevelCategory;
+	}
+
+	public void setUnattendedLevelCategory(Max35NumericText unattendedLevelCategory) {
+		this.unattendedLevelCategory = unattendedLevelCategory;
+	}
+
+	public CardAccountType3Code getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(CardAccountType3Code accountType) {
+		this.accountType = accountType;
+	}
+
+	public CurrencyConversion8 getCurrencyConversionResult() {
+		return currencyConversionResult;
+	}
+
+	public void setCurrencyConversionResult(com.tools20022.repository.msg.CurrencyConversion8 currencyConversionResult) {
+		this.currencyConversionResult = currencyConversionResult;
+	}
+
+	public RecurringTransaction2 getInstalment() {
+		return instalment;
+	}
+
+	public void setInstalment(com.tools20022.repository.msg.RecurringTransaction2 instalment) {
+		this.instalment = instalment;
+	}
+
+	public AggregationTransaction2 getAggregationTransaction() {
+		return aggregationTransaction;
+	}
+
+	public void setAggregationTransaction(com.tools20022.repository.msg.AggregationTransaction2 aggregationTransaction) {
+		this.aggregationTransaction = aggregationTransaction;
+	}
+
+	public Max10Text getProductCodeSetIdentification() {
+		return productCodeSetIdentification;
+	}
+
+	public void setProductCodeSetIdentification(Max10Text productCodeSetIdentification) {
+		this.productCodeSetIdentification = productCodeSetIdentification;
+	}
+
+	public List<Product3> getSaleItem() {
+		return saleItem;
+	}
+
+	public void setSaleItem(List<com.tools20022.repository.msg.Product3> saleItem) {
+		this.saleItem = saleItem;
+	}
+
+	public Max10Text getDeliveryLocation() {
+		return deliveryLocation;
+	}
+
+	public void setDeliveryLocation(Max10Text deliveryLocation) {
+		this.deliveryLocation = deliveryLocation;
+	}
+
+	public CardPaymentInvoice2 getCardPaymentInvoice() {
+		return cardPaymentInvoice;
+	}
+
+	public void setCardPaymentInvoice(com.tools20022.repository.msg.CardPaymentInvoice2 cardPaymentInvoice) {
+		this.cardPaymentInvoice = cardPaymentInvoice;
+	}
+
+	public Max10000Binary getICCRelatedData() {
+		return iCCRelatedData;
+	}
+
+	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
+		this.iCCRelatedData = iCCRelatedData;
 	}
 }

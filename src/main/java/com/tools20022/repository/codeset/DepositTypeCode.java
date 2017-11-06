@@ -29,10 +29,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DepositTypeCode#FixedTerm
- * DepositTypeCode.FixedTerm}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DepositTypeCode#Call
- * DepositTypeCode.Call}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DepositTypeCode#mmFixedTerm
+ * DepositTypeCode.mmFixedTerm}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DepositTypeCode#mmCall
+ * DepositTypeCode.mmCall}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +88,7 @@ public class DepositTypeCode {
 	 * definition} = "Specifies that it is a fixed term deposit."</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedTerm = new MMCode() {
+	public static final MMCode mmFixedTerm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedTerm";
@@ -117,7 +118,7 @@ public class DepositTypeCode {
 	 * definition} = "Specifies that it is a call/notice deposit."</li>
 	 * </ul>
 	 */
-	public static final MMCode Call = new MMCode() {
+	public static final MMCode mmCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
@@ -130,12 +131,12 @@ public class DepositTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FITE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DepositTypeCode";
 				definition = "Specifies whether the deposit is fixed term or call/notice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DepositTypeCode.FixedTerm, com.tools20022.repository.codeset.DepositTypeCode.Call);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DepositTypeCode.mmFixedTerm, com.tools20022.repository.codeset.DepositTypeCode.mmCall);
 				derivation_lazy = () -> Arrays.asList(DepositType1Code.mmObject());
 			}
 		});

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarginRequirement1Choice#MarginRequirement
- * MarginRequirement1Choice.MarginRequirement}</li>
+ * {@linkplain com.tools20022.repository.choice.MarginRequirement1Choice#mmMarginRequirement
+ * MarginRequirement1Choice.mmMarginRequirement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarginRequirement1Choice#SegregatedIndependentAmountRequirement
- * MarginRequirement1Choice.SegregatedIndependentAmountRequirement}</li>
+ * {@linkplain com.tools20022.repository.choice.MarginRequirement1Choice#mmSegregatedIndependentAmountRequirement
+ * MarginRequirement1Choice.mmSegregatedIndependentAmountRequirement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,24 +51,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#RequirementDetailsDueToA
- * MarginCallRequestV03.RequirementDetailsDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmRequirementDetailsDueToA
+ * MarginCallRequestV03.mmRequirementDetailsDueToA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#RequirementDetailsDueToB
- * MarginCallRequestV03.RequirementDetailsDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmRequirementDetailsDueToB
+ * MarginCallRequestV03.mmRequirementDetailsDueToB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#RequirementDetailsDueToA
- * MarginCallRequestV04.RequirementDetailsDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmRequirementDetailsDueToA
+ * MarginCallRequestV04.mmRequirementDetailsDueToA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#RequirementDetailsDueToB
- * MarginCallRequestV04.RequirementDetailsDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmRequirementDetailsDueToB
+ * MarginCallRequestV04.mmRequirementDetailsDueToB}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginRequirement1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Requirement1 marginRequirement;
 	/**
 	 * Provides details about the margin requirements for the variation margin
 	 * and optionally the segregated independent amount.
@@ -96,8 +97,8 @@ public class MarginRequirement1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#VariationMarginAmountRequirement
-	 * ExposureCalculation.VariationMarginAmountRequirement}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmVariationMarginAmountRequirement
+	 * ExposureCalculation.mmVariationMarginAmountRequirement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,21 +119,22 @@ public class MarginRequirement1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarginRequirement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarginRequirement = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmVariationMarginAmountRequirement;
 			componentContext_lazy = () -> MarginRequirement1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.VariationMarginAmountRequirement;
 			isDerived = false;
 			xmlTag = "MrgnRqrmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginRequirement";
 			definition = "Provides details about the margin requirements for the variation margin and optionally the segregated independent amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Requirement1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Requirement1.mmObject();
 		}
 	};
+	protected MarginRequirement1 segregatedIndependentAmountRequirement;
 	/**
 	 * Provides details about the margin requirements for the segregated
 	 * independent amount only.
@@ -145,8 +147,8 @@ public class MarginRequirement1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#SegregatedAmountRequirement
-	 * ExposureCalculation.SegregatedAmountRequirement}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmSegregatedAmountRequirement
+	 * ExposureCalculation.mmSegregatedAmountRequirement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,35 +169,51 @@ public class MarginRequirement1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmountRequirement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountRequirement = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmSegregatedAmountRequirement;
 			componentContext_lazy = () -> MarginRequirement1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.SegregatedAmountRequirement;
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmtRqrmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmountRequirement";
 			definition = "Provides details about the margin requirements for the segregated independent amount only.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarginRequirement1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarginRequirement1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginRequirement1Choice.MarginRequirement, com.tools20022.repository.choice.MarginRequirement1Choice.SegregatedIndependentAmountRequirement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginRequirement1Choice.mmMarginRequirement, com.tools20022.repository.choice.MarginRequirement1Choice.mmSegregatedIndependentAmountRequirement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV03.mmRequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV03.mmRequirementDetailsDueToB,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmRequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.mmRequirementDetailsDueToB);
 				trace_lazy = () -> ExposureCalculation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV03.RequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV03.RequirementDetailsDueToB,
-						com.tools20022.repository.area.colr.MarginCallRequestV04.RequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.RequirementDetailsDueToB);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarginRequirement1Choice";
 				definition = "Provides the margin requirements for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Requirement1 getMarginRequirement() {
+		return marginRequirement;
+	}
+
+	public void setMarginRequirement(Requirement1 marginRequirement) {
+		this.marginRequirement = marginRequirement;
+	}
+
+	public MarginRequirement1 getSegregatedIndependentAmountRequirement() {
+		return segregatedIndependentAmountRequirement;
+	}
+
+	public void setSegregatedIndependentAmountRequirement(MarginRequirement1 segregatedIndependentAmountRequirement) {
+		this.segregatedIndependentAmountRequirement = segregatedIndependentAmountRequirement;
 	}
 }

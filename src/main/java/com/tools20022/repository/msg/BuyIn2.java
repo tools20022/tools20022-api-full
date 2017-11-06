@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BuyIn2#BuyInNotificationIdentification
- * BuyIn2.BuyInNotificationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn2#BuyInIdentification
- * BuyIn2.BuyInIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn2#Date BuyIn2.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn2#Price BuyIn2.Price}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn2#SecuritiesBuyIn
- * BuyIn2.SecuritiesBuyIn}</li>
+ * {@linkplain com.tools20022.repository.msg.BuyIn2#mmBuyInNotificationIdentification
+ * BuyIn2.mmBuyInNotificationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn2#mmBuyInIdentification
+ * BuyIn2.mmBuyInIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn2#mmDate BuyIn2.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn2#mmPrice BuyIn2.mmPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn2#mmSecuritiesBuyIn
+ * BuyIn2.mmSecuritiesBuyIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BuyIn2#RequiredCashCompensation
- * BuyIn2.RequiredCashCompensation}</li>
+ * {@linkplain com.tools20022.repository.msg.BuyIn2#mmRequiredCashCompensation
+ * BuyIn2.mmRequiredCashCompensation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,15 +57,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInConfirmationV03#BuyInDetails
- * BuyInConfirmationV03.BuyInDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInConfirmationV03#mmBuyInDetails
+ * BuyInConfirmationV03.mmBuyInDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BuyIn2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text buyInNotificationIdentification;
 	/**
 	 * Indicates the reference of the BuyInNotification message.
 	 * <p>
@@ -108,7 +109,7 @@ public class BuyIn2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BuyInNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBuyInNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn2.mmObject();
 			isDerived = false;
@@ -116,11 +117,12 @@ public class BuyIn2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInNotificationIdentification";
 			definition = "Indicates the reference of the BuyInNotification message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text buyInIdentification;
 	/**
 	 * Indicates the reference id of the buy in.
 	 * <p>
@@ -147,7 +149,7 @@ public class BuyIn2 {
 	 * definition} = "Indicates the reference id of the buy in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BuyInIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBuyInIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn2.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class BuyIn2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInIdentification";
 			definition = "Indicates the reference id of the buy in.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Provides the date at which the buy occured.
 	 * <p>
@@ -172,8 +175,8 @@ public class BuyIn2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#BuyinDate
-	 * BuyIn.BuyinDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmBuyinDate
+	 * BuyIn.mmBuyinDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn2
@@ -191,20 +194,21 @@ public class BuyIn2 {
 	 * definition} = "Provides the date at which the buy occured."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmBuyinDate;
 			componentContext_lazy = () -> BuyIn2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.BuyinDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Provides the date at which the buy occured.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Price4 price;
 	/**
 	 * Provides the price of the buy-in.
 	 * <p>
@@ -215,8 +219,8 @@ public class BuyIn2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#BuyInPrice
-	 * BuyIn.BuyInPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmBuyInPrice
+	 * BuyIn.mmBuyInPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn2
@@ -234,21 +238,22 @@ public class BuyIn2 {
 	 * definition} = "Provides the price of the buy-in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Price = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmBuyInPrice;
 			componentContext_lazy = () -> BuyIn2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.BuyInPrice;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Provides the price of the buy-in.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected SecuritiesCompensation1 securitiesBuyIn;
 	/**
 	 * Specifies the elements related to the securities that the central
 	 * counterparty had to buy in the context of the buy-in process.
@@ -262,8 +267,8 @@ public class BuyIn2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#SecuritiesCompensation
-	 * BuyIn.SecuritiesCompensation}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmSecuritiesCompensation
+	 * BuyIn.mmSecuritiesCompensation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn2
@@ -283,21 +288,22 @@ public class BuyIn2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesBuyIn = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesBuyIn = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmSecuritiesCompensation;
 			componentContext_lazy = () -> BuyIn2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.SecuritiesCompensation;
 			isDerived = false;
 			xmlTag = "SctiesBuyIn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBuyIn";
 			definition = "Specifies the elements related to the securities that the central counterparty had to buy in the context of the buy-in process.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesCompensation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCompensation1.mmObject();
 		}
 	};
+	protected CashCompensation1 requiredCashCompensation;
 	/**
 	 * Provides details about the cash compensation required, in case the
 	 * central counterparty could not buy the securities to cover the trade(s)
@@ -311,8 +317,8 @@ public class BuyIn2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#CashCompensation
-	 * BuyIn.CashCompensation}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmCashCompensation
+	 * BuyIn.mmCashCompensation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn2
@@ -332,35 +338,83 @@ public class BuyIn2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequiredCashCompensation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequiredCashCompensation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmCashCompensation;
 			componentContext_lazy = () -> BuyIn2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.CashCompensation;
 			isDerived = false;
 			xmlTag = "ReqrdCshCompstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredCashCompensation";
 			definition = "Provides details about the cash compensation required, in case the central counterparty could not buy the securities to cover the trade(s) that failed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashCompensation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashCompensation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn2.BuyInNotificationIdentification, com.tools20022.repository.msg.BuyIn2.BuyInIdentification, com.tools20022.repository.msg.BuyIn2.Date,
-						com.tools20022.repository.msg.BuyIn2.Price, com.tools20022.repository.msg.BuyIn2.SecuritiesBuyIn, com.tools20022.repository.msg.BuyIn2.RequiredCashCompensation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn2.mmBuyInNotificationIdentification, com.tools20022.repository.msg.BuyIn2.mmBuyInIdentification, com.tools20022.repository.msg.BuyIn2.mmDate,
+						com.tools20022.repository.msg.BuyIn2.mmPrice, com.tools20022.repository.msg.BuyIn2.mmSecuritiesBuyIn, com.tools20022.repository.msg.BuyIn2.mmRequiredCashCompensation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInConfirmationV03.mmBuyInDetails);
 				trace_lazy = () -> BuyIn.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInConfirmationV03.BuyInDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BuyIn2";
 				definition = "Specifies elements related to the confirmation sent by the central counterparty to the clearing member in the context of the buy in process.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getBuyInNotificationIdentification() {
+		return buyInNotificationIdentification;
+	}
+
+	public void setBuyInNotificationIdentification(Max35Text buyInNotificationIdentification) {
+		this.buyInNotificationIdentification = buyInNotificationIdentification;
+	}
+
+	public Max35Text getBuyInIdentification() {
+		return buyInIdentification;
+	}
+
+	public void setBuyInIdentification(Max35Text buyInIdentification) {
+		this.buyInIdentification = buyInIdentification;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public Price4 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price4 price) {
+		this.price = price;
+	}
+
+	public SecuritiesCompensation1 getSecuritiesBuyIn() {
+		return securitiesBuyIn;
+	}
+
+	public void setSecuritiesBuyIn(com.tools20022.repository.msg.SecuritiesCompensation1 securitiesBuyIn) {
+		this.securitiesBuyIn = securitiesBuyIn;
+	}
+
+	public CashCompensation1 getRequiredCashCompensation() {
+		return requiredCashCompensation;
+	}
+
+	public void setRequiredCashCompensation(com.tools20022.repository.msg.CashCompensation1 requiredCashCompensation) {
+		this.requiredCashCompensation = requiredCashCompensation;
 	}
 }

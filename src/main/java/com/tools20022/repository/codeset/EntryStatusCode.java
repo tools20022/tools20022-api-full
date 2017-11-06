@@ -29,15 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatusCode#Booked
- * EntryStatusCode.Booked}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatusCode#Pending
- * EntryStatusCode.Pending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatusCode#mmBooked
+ * EntryStatusCode.mmBooked}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatusCode#mmPending
+ * EntryStatusCode.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EntryStatusCode#Information
- * EntryStatusCode.Information}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatusCode#Future
- * EntryStatusCode.Future}</li>
+ * {@linkplain com.tools20022.repository.codeset.EntryStatusCode#mmInformation
+ * EntryStatusCode.mmInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatusCode#mmFuture
+ * EntryStatusCode.mmFuture}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class EntryStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Booked = new MMCode() {
+	public static final MMCode mmBooked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Booked";
@@ -144,7 +144,7 @@ public class EntryStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Pending";
@@ -177,7 +177,7 @@ public class EntryStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Information = new MMCode() {
+	public static final MMCode mmInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Information";
@@ -210,7 +210,7 @@ public class EntryStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Future = new MMCode() {
+	public static final MMCode mmFuture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Future";
@@ -223,13 +223,13 @@ public class EntryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOOK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EntryStatusCode";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatusCode.Booked, com.tools20022.repository.codeset.EntryStatusCode.Pending, com.tools20022.repository.codeset.EntryStatusCode.Information,
-						com.tools20022.repository.codeset.EntryStatusCode.Future);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatusCode.mmBooked, com.tools20022.repository.codeset.EntryStatusCode.mmPending, com.tools20022.repository.codeset.EntryStatusCode.mmInformation,
+						com.tools20022.repository.codeset.EntryStatusCode.mmFuture);
 				derivation_lazy = () -> Arrays.asList(EntryStatus2Code.mmObject(), EntryStatus4Code.mmObject(), EntryStatus3Code.mmObject());
 			}
 		});

@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#AccountSelected
- * AccountChoiceMethod1Code.AccountSelected}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#mmAccountSelected
+ * AccountChoiceMethod1Code.mmAccountSelected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#Entered
- * AccountChoiceMethod1Code.Entered}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#mmEntered
+ * AccountChoiceMethod1Code.mmEntered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#ImplicitAccount
- * AccountChoiceMethod1Code.ImplicitAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#mmImplicitAccount
+ * AccountChoiceMethod1Code.mmImplicitAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#ImplicitType
- * AccountChoiceMethod1Code.ImplicitType}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#mmImplicitType
+ * AccountChoiceMethod1Code.mmImplicitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#NoSelection
- * AccountChoiceMethod1Code.NoSelection}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#mmNoSelection
+ * AccountChoiceMethod1Code.mmNoSelection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#TypeSelected
- * AccountChoiceMethod1Code.TypeSelected}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code#mmTypeSelected
+ * AccountChoiceMethod1Code.mmTypeSelected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,7 +89,7 @@ public class AccountChoiceMethod1Code extends AccountChoiceMethodCode {
 	 * name} = "AccountSelected"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountSelected = new MMCode() {
+	public static final MMCode mmAccountSelected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSelected";
@@ -112,7 +112,7 @@ public class AccountChoiceMethod1Code extends AccountChoiceMethodCode {
 	 * name} = "Entered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Entered = new MMCode() {
+	public static final MMCode mmEntered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entered";
@@ -135,7 +135,7 @@ public class AccountChoiceMethod1Code extends AccountChoiceMethodCode {
 	 * name} = "ImplicitAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ImplicitAccount = new MMCode() {
+	public static final MMCode mmImplicitAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImplicitAccount";
@@ -158,7 +158,7 @@ public class AccountChoiceMethod1Code extends AccountChoiceMethodCode {
 	 * name} = "ImplicitType"</li>
 	 * </ul>
 	 */
-	public static final MMCode ImplicitType = new MMCode() {
+	public static final MMCode mmImplicitType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImplicitType";
@@ -181,7 +181,7 @@ public class AccountChoiceMethod1Code extends AccountChoiceMethodCode {
 	 * name} = "NoSelection"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoSelection = new MMCode() {
+	public static final MMCode mmNoSelection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSelection";
@@ -204,7 +204,7 @@ public class AccountChoiceMethod1Code extends AccountChoiceMethodCode {
 	 * name} = "TypeSelected"</li>
 	 * </ul>
 	 */
-	public static final MMCode TypeSelected = new MMCode() {
+	public static final MMCode mmTypeSelected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeSelected";
@@ -215,13 +215,13 @@ public class AccountChoiceMethod1Code extends AccountChoiceMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountChoiceMethod1Code";
 				definition = "Method used by the cardholder and the terminal for the choice of the account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountChoiceMethod1Code.AccountSelected, com.tools20022.repository.codeset.AccountChoiceMethod1Code.Entered,
-						com.tools20022.repository.codeset.AccountChoiceMethod1Code.ImplicitAccount, com.tools20022.repository.codeset.AccountChoiceMethod1Code.ImplicitType,
-						com.tools20022.repository.codeset.AccountChoiceMethod1Code.NoSelection, com.tools20022.repository.codeset.AccountChoiceMethod1Code.TypeSelected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountChoiceMethod1Code.mmAccountSelected, com.tools20022.repository.codeset.AccountChoiceMethod1Code.mmEntered,
+						com.tools20022.repository.codeset.AccountChoiceMethod1Code.mmImplicitAccount, com.tools20022.repository.codeset.AccountChoiceMethod1Code.mmImplicitType,
+						com.tools20022.repository.codeset.AccountChoiceMethod1Code.mmNoSelection, com.tools20022.repository.codeset.AccountChoiceMethod1Code.mmTypeSelected);
 				trace_lazy = () -> AccountChoiceMethodCode.mmObject();
 			}
 		});

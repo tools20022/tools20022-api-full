@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PointOfInteraction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Point of interaction (POI) performing the transaction.
@@ -36,18 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#Identification
- * PointOfInteraction1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction1#SystemName
- * PointOfInteraction1.SystemName}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#mmIdentification
+ * PointOfInteraction1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#GroupIdentification
- * PointOfInteraction1.GroupIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#mmSystemName
+ * PointOfInteraction1.mmSystemName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#Capabilities
- * PointOfInteraction1.Capabilities}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction1#Component
- * PointOfInteraction1.Component}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#mmGroupIdentification
+ * PointOfInteraction1.mmGroupIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#mmCapabilities
+ * PointOfInteraction1.mmCapabilities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#mmComponent
+ * PointOfInteraction1.mmComponent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PointOfInteraction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification32 identification;
 	/**
 	 * Identification of the POI (Point Of Interaction) for the acquirer or its
 	 * agent.
@@ -108,7 +112,7 @@ public class PointOfInteraction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			isDerived = false;
@@ -116,12 +120,13 @@ public class PointOfInteraction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI (Point Of Interaction) for the acquirer or its agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected Max70Text systemName;
 	/**
 	 * Common name assigned by the acquirer to the POI system.
 	 * <p>
@@ -134,8 +139,8 @@ public class PointOfInteraction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemName#Name
-	 * SystemName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemName#mmName
+	 * SystemName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +159,21 @@ public class PointOfInteraction1 {
 	 * definition} = "Common name assigned by the acquirer to the POI system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemName.mmName;
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemName.Name;
 			isDerived = false;
 			xmlTag = "SysNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemName";
 			definition = "Common name assigned by the acquirer to the POI system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max35Text groupIdentification;
 	/**
 	 * Identifier assigned by the merchant identifying a set of POI terminals
 	 * performing some categories of transactions.
@@ -198,7 +204,7 @@ public class PointOfInteraction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			isDerived = false;
@@ -206,11 +212,12 @@ public class PointOfInteraction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Identifier assigned by the merchant identifying a set of POI terminals performing some categories of transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PointOfInteractionCapabilities1 capabilities;
 	/**
 	 * Capabilities of the POI performing the transaction.
 	 * <p>
@@ -243,21 +250,22 @@ public class PointOfInteraction1 {
 	 * definition} = "Capabilities of the POI performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Capabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			businessComponentTrace_lazy = () -> PointOfInteraction.mmObject();
+			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the POI performing the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PointOfInteractionCapabilities1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PointOfInteractionComponent1> component;
 	/**
 	 * Data related to a component of the POI performing the transaction.
 	 * <p>
@@ -270,8 +278,8 @@ public class PointOfInteraction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#Component
-	 * PointOfInteraction.Component}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponent
+	 * PointOfInteraction.mmComponent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -291,28 +299,28 @@ public class PointOfInteraction1 {
 	 * "Data related to a component of the POI performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Component = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmComponent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.Component;
 			isDerived = false;
 			xmlTag = "Cmpnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Component";
 			definition = "Data related to a component of the POI performing the transaction.";
 			minOccurs = 0;
-			type_lazy = () -> PointOfInteractionComponent1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction1.Identification, com.tools20022.repository.msg.PointOfInteraction1.SystemName,
-						com.tools20022.repository.msg.PointOfInteraction1.GroupIdentification, com.tools20022.repository.msg.PointOfInteraction1.Capabilities, com.tools20022.repository.msg.PointOfInteraction1.Component);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction1.mmIdentification, com.tools20022.repository.msg.PointOfInteraction1.mmSystemName,
+						com.tools20022.repository.msg.PointOfInteraction1.mmGroupIdentification, com.tools20022.repository.msg.PointOfInteraction1.mmCapabilities, com.tools20022.repository.msg.PointOfInteraction1.mmComponent);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteraction1";
 				definition = "Point of interaction (POI) performing the transaction.";
@@ -320,5 +328,45 @@ public class PointOfInteraction1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification32 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = identification;
+	}
+
+	public Max70Text getSystemName() {
+		return systemName;
+	}
+
+	public void setSystemName(Max70Text systemName) {
+		this.systemName = systemName;
+	}
+
+	public Max35Text getGroupIdentification() {
+		return groupIdentification;
+	}
+
+	public void setGroupIdentification(Max35Text groupIdentification) {
+		this.groupIdentification = groupIdentification;
+	}
+
+	public PointOfInteractionCapabilities1 getCapabilities() {
+		return capabilities;
+	}
+
+	public void setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities1 capabilities) {
+		this.capabilities = capabilities;
+	}
+
+	public List<PointOfInteractionComponent1> getComponent() {
+		return component;
+	}
+
+	public void setComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent1> component) {
+		this.component = component;
 	}
 }

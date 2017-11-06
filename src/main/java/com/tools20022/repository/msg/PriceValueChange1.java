@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValueChange1#Amount
- * PriceValueChange1.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValueChange1#AmountSign
- * PriceValueChange1.AmountSign}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValueChange1#Rate
- * PriceValueChange1.Rate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValueChange1#mmAmount
+ * PriceValueChange1.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValueChange1#mmAmountSign
+ * PriceValueChange1.mmAmountSign}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValueChange1#mmRate
+ * PriceValueChange1.mmRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceValueChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Amount by which the price has changed.
 	 * <p>
@@ -76,7 +77,8 @@ public class PriceValueChange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Amount Price.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmAmount
+	 * Price.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +97,21 @@ public class PriceValueChange1 {
 	 * definition} = "Amount by which the price has changed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
 			componentContext_lazy = () -> PriceValueChange1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount by which the price has changed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected PlusOrMinusIndicator amountSign;
 	/**
 	 * Indicates a positive or negative amount change.
 	 * <p>
@@ -137,7 +140,7 @@ public class PriceValueChange1 {
 	 * definition} = "Indicates a positive or negative amount change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountSign = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriceValueChange1.mmObject();
 			isDerived = false;
@@ -145,11 +148,12 @@ public class PriceValueChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountSign";
 			definition = "Indicates a positive or negative amount change.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Rate by which the price has changed.
 	 * <p>
@@ -163,8 +167,8 @@ public class PriceValueChange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Rate
-	 * SecuritiesPricing.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+	 * SecuritiesPricing.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,17 +187,17 @@ public class PriceValueChange1 {
 	 * definition} = "Rate by which the price has changed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceValueChange1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Rate by which the price has changed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -201,14 +205,38 @@ public class PriceValueChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValueChange1.Amount, com.tools20022.repository.msg.PriceValueChange1.AmountSign, com.tools20022.repository.msg.PriceValueChange1.Rate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValueChange1.mmAmount, com.tools20022.repository.msg.PriceValueChange1.mmAmountSign, com.tools20022.repository.msg.PriceValueChange1.mmRate);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceValueChange1";
 				definition = "Value given to a positive or negative price change.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveOrHistoricCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public PlusOrMinusIndicator getAmountSign() {
+		return amountSign;
+	}
+
+	public void setAmountSign(PlusOrMinusIndicator amountSign) {
+		this.amountSign = amountSign;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
 	}
 }

@@ -37,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#ActionType
- * MerchantConfigurationParameters2.ActionType}</li>
+ * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#mmActionType
+ * MerchantConfigurationParameters2.mmActionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#MerchantIdentification
- * MerchantConfigurationParameters2.MerchantIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#mmMerchantIdentification
+ * MerchantConfigurationParameters2.mmMerchantIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#Version
- * MerchantConfigurationParameters2.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#mmVersion
+ * MerchantConfigurationParameters2.mmVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#Proxy
- * MerchantConfigurationParameters2.Proxy}</li>
+ * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#mmProxy
+ * MerchantConfigurationParameters2.mmProxy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#OtherParameters
- * MerchantConfigurationParameters2.OtherParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters2#mmOtherParameters
+ * MerchantConfigurationParameters2.mmOtherParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MerchantConfigurationParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TerminalManagementAction3Code actionType;
 	/**
 	 * Type of action for the configuration parameters.
 	 * <p>
@@ -113,13 +114,13 @@ public class MerchantConfigurationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#ActionType
-	 * MerchantConfigurationParameters3.ActionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#mmActionType
+	 * MerchantConfigurationParameters3.mmActionType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -127,12 +128,13 @@ public class MerchantConfigurationParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.ActionType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.mmActionType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
 	};
+	protected Max35Text merchantIdentification;
 	/**
 	 * Identification of the merchant for the MTM, if the POI manages several
 	 * merchants.
@@ -165,18 +167,18 @@ public class MerchantConfigurationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#MerchantIdentification
-	 * MerchantConfigurationParameters3.MerchantIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#mmMerchantIdentification
+	 * MerchantConfigurationParameters3.mmMerchantIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters1#MerchantIdentification
-	 * MerchantConfigurationParameters1.MerchantIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters1#mmMerchantIdentification
+	 * MerchantConfigurationParameters1.mmMerchantIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MerchantIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMerchantIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -184,13 +186,14 @@ public class MerchantConfigurationParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantIdentification";
 			definition = "Identification of the merchant for the MTM, if the POI manages several merchants.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters1.MerchantIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.MerchantIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.mmMerchantIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters1.mmMerchantIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max256Text version;
 	/**
 	 * Version of the merchant parameters.
 	 * <p>
@@ -220,18 +223,18 @@ public class MerchantConfigurationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#Version
-	 * MerchantConfigurationParameters3.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#mmVersion
+	 * MerchantConfigurationParameters3.mmVersion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters1#Version
-	 * MerchantConfigurationParameters1.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters1#mmVersion
+	 * MerchantConfigurationParameters1.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -239,13 +242,14 @@ public class MerchantConfigurationParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the merchant parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters1.Version;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.Version);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.mmVersion);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters1.mmVersion;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected NetworkParameters6 proxy;
 	/**
 	 * Local proxy configuration.
 	 * <p>
@@ -274,13 +278,13 @@ public class MerchantConfigurationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#Proxy
-	 * MerchantConfigurationParameters3.Proxy}</li>
+	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#mmProxy
+	 * MerchantConfigurationParameters3.mmProxy}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProxy = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -288,13 +292,14 @@ public class MerchantConfigurationParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proxy";
 			definition = "Local proxy configuration.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.Proxy);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.mmProxy);
 			maxOccurs = 1;
-			type_lazy = () -> NetworkParameters6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters6.mmObject();
 		}
 	};
+	protected Max10000Binary otherParameters;
 	/**
 	 * Other merchant parameters.
 	 * <p>
@@ -325,18 +330,18 @@ public class MerchantConfigurationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#OtherParameters
-	 * MerchantConfigurationParameters3.OtherParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters3#mmOtherParameters
+	 * MerchantConfigurationParameters3.mmOtherParameters}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters1#Parameters
-	 * MerchantConfigurationParameters1.Parameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.MerchantConfigurationParameters1#mmParameters
+	 * MerchantConfigurationParameters1.mmParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherParameters = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -344,10 +349,10 @@ public class MerchantConfigurationParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParameters";
 			definition = "Other merchant parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters1.Parameters;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.OtherParameters);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.mmOtherParameters);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters1.mmParameters;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
@@ -355,17 +360,57 @@ public class MerchantConfigurationParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters2.ActionType, com.tools20022.repository.msg.MerchantConfigurationParameters2.MerchantIdentification,
-						com.tools20022.repository.msg.MerchantConfigurationParameters2.Version, com.tools20022.repository.msg.MerchantConfigurationParameters2.Proxy,
-						com.tools20022.repository.msg.MerchantConfigurationParameters2.OtherParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters2.mmActionType, com.tools20022.repository.msg.MerchantConfigurationParameters2.mmMerchantIdentification,
+						com.tools20022.repository.msg.MerchantConfigurationParameters2.mmVersion, com.tools20022.repository.msg.MerchantConfigurationParameters2.mmProxy,
+						com.tools20022.repository.msg.MerchantConfigurationParameters2.mmOtherParameters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MerchantConfigurationParameters2";
 				definition = "Acceptor parameters dedicated to the merchant.";
-				previousVersion_lazy = () -> MerchantConfigurationParameters1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(MerchantConfigurationParameters3.mmObject());
+				previousVersion_lazy = () -> MerchantConfigurationParameters1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TerminalManagementAction3Code getActionType() {
+		return actionType;
+	}
+
+	public void setActionType(TerminalManagementAction3Code actionType) {
+		this.actionType = actionType;
+	}
+
+	public Max35Text getMerchantIdentification() {
+		return merchantIdentification;
+	}
+
+	public void setMerchantIdentification(Max35Text merchantIdentification) {
+		this.merchantIdentification = merchantIdentification;
+	}
+
+	public Max256Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max256Text version) {
+		this.version = version;
+	}
+
+	public NetworkParameters6 getProxy() {
+		return proxy;
+	}
+
+	public void setProxy(com.tools20022.repository.msg.NetworkParameters6 proxy) {
+		this.proxy = proxy;
+	}
+
+	public Max10000Binary getOtherParameters() {
+		return otherParameters;
+	}
+
+	public void setOtherParameters(Max10000Binary otherParameters) {
+		this.otherParameters = otherParameters;
 	}
 }

@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason3Code#AccountServicerDeadlineMissed
- * AcknowledgementReason3Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason3Code#mmAccountServicerDeadlineMissed
+ * AcknowledgementReason3Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason3Code#MarketPracticeRuleDiscrepency
- * AcknowledgementReason3Code.MarketPracticeRuleDiscrepency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason3Code#mmMarketPracticeRuleDiscrepency
+ * AcknowledgementReason3Code.mmMarketPracticeRuleDiscrepency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason3Code#Other
- * AcknowledgementReason3Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason3Code#mmOther
+ * AcknowledgementReason3Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class AcknowledgementReason3Code extends AcknowledgementReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -108,7 +108,7 @@ public class AcknowledgementReason3Code extends AcknowledgementReasonCode {
 	 * name} = "MarketPracticeRuleDiscrepency"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketPracticeRuleDiscrepency = new MMCode() {
+	public static final MMCode mmMarketPracticeRuleDiscrepency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeRuleDiscrepency";
@@ -131,7 +131,7 @@ public class AcknowledgementReason3Code extends AcknowledgementReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -142,13 +142,13 @@ public class AcknowledgementReason3Code extends AcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason3Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason3Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason3Code.MarketPracticeRuleDiscrepency,
-						com.tools20022.repository.codeset.AcknowledgementReason3Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason3Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason3Code.mmMarketPracticeRuleDiscrepency,
+						com.tools20022.repository.codeset.AcknowledgementReason3Code.mmOther);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
 			}
 		});

@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming4#StartTime
- * ProcessTiming4.StartTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming4#EndTime
- * ProcessTiming4.EndTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming4#Period
- * ProcessTiming4.Period}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming4#mmStartTime
+ * ProcessTiming4.mmStartTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming4#mmEndTime
+ * ProcessTiming4.mmEndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming4#mmPeriod
+ * ProcessTiming4.mmPeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessTiming4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime startTime;
 	/**
 	 * Date and time to start the action.
 	 * <p>
@@ -90,11 +91,11 @@ public class ProcessTiming4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProcessTiming3#StartTime
-	 * ProcessTiming3.StartTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProcessTiming3#mmStartTime
+	 * ProcessTiming3.mmStartTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessTiming4.mmObject();
 			isDerived = false;
@@ -102,12 +103,13 @@ public class ProcessTiming4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartTime";
 			definition = "Date and time to start the action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.StartTime;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmStartTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime endTime;
 	/**
 	 * Date and time after which the action cannot be processed.
 	 * <p>
@@ -136,11 +138,11 @@ public class ProcessTiming4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProcessTiming3#EndTime
-	 * ProcessTiming3.EndTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProcessTiming3#mmEndTime
+	 * ProcessTiming3.mmEndTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessTiming4.mmObject();
 			isDerived = false;
@@ -148,12 +150,13 @@ public class ProcessTiming4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndTime";
 			definition = "Date and time after which the action cannot be processed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.EndTime;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmEndTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max9NumericText period;
 	/**
 	 * Period delay between cyclic action activation in months, days, hours and
 	 * minutes, leading zeros could be omitted.
@@ -185,11 +188,11 @@ public class ProcessTiming4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProcessTiming3#Period
-	 * ProcessTiming3.Period}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProcessTiming3#mmPeriod
+	 * ProcessTiming3.mmPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Period = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessTiming4.mmObject();
 			isDerived = false;
@@ -197,9 +200,9 @@ public class ProcessTiming4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period delay between cyclic action activation in months, days, hours and minutes, leading zeros could be omitted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.Period;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmPeriod;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
@@ -207,8 +210,8 @@ public class ProcessTiming4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessTiming4.StartTime, com.tools20022.repository.msg.ProcessTiming4.EndTime, com.tools20022.repository.msg.ProcessTiming4.Period);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessTiming4.mmStartTime, com.tools20022.repository.msg.ProcessTiming4.mmEndTime, com.tools20022.repository.msg.ProcessTiming4.mmPeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessTiming4";
 				definition = "Parameters defining the timing conditions to process an action.";
@@ -216,5 +219,29 @@ public class ProcessTiming4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(ISODateTime startTime) {
+		this.startTime = startTime;
+	}
+
+	public ISODateTime getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(ISODateTime endTime) {
+		this.endTime = endTime;
+	}
+
+	public Max9NumericText getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(Max9NumericText period) {
+		this.period = period;
 	}
 }

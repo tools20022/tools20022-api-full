@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel3Choice#Code
- * ServiceLevel3Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel3Choice#mmCode
+ * ServiceLevel3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ServiceLevel3Choice#Proprietary
- * ServiceLevel3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ServiceLevel3Choice#mmProprietary
+ * ServiceLevel3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ServiceLevel3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ServiceLevel2Code code;
 	/**
 	 * Identification of a pre-agreed level of service between the parties in a
 	 * coded form.
@@ -76,8 +77,8 @@ public class ServiceLevel3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ServiceLevel#Code
-	 * ServiceLevel.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmCode
+	 * ServiceLevel.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class ServiceLevel3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmCode;
 			componentContext_lazy = () -> ServiceLevel3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ServiceLevel.Code;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Identification of a pre-agreed level of service between the parties in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ServiceLevel2Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Proprietary identification of a pre-agreed level of service between the
 	 * parties.
@@ -146,17 +148,17 @@ public class ServiceLevel3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ServiceLevel3Choice.mmObject();
 			businessComponentTrace_lazy = () -> ServiceLevel.mmObject();
+			componentContext_lazy = () -> ServiceLevel3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of a pre-agreed level of service between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class ServiceLevel3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ServiceLevel3Choice.Code, com.tools20022.repository.choice.ServiceLevel3Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ServiceLevel3Choice.mmCode, com.tools20022.repository.choice.ServiceLevel3Choice.mmProprietary);
 				trace_lazy = () -> ServiceLevel.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel3Choice";
 				definition = "Specifies the service level of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ServiceLevel2Code getCode() {
+		return code;
+	}
+
+	public void setCode(ServiceLevel2Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

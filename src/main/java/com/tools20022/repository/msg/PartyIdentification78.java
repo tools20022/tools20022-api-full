@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification78#PartySource
- * PartyIdentification78.PartySource}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification78#mmPartySource
+ * PartyIdentification78.mmPartySource}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification78#TradePartyIdentification
- * PartyIdentification78.TradePartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification78#mmTradePartyIdentification
+ * PartyIdentification78.mmTradePartyIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification78 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IdentificationType1Code partySource;
 	/**
 	 * Indicate the source of the party.
 	 * <p>
@@ -87,7 +88,7 @@ public class PartyIdentification78 {
 	 * definition} = "Indicate the source of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartySource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartySource = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentification78.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class PartyIdentification78 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartySource";
 			definition = "Indicate the source of the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> IdentificationType1Code.mmObject();
 		}
 	};
+	protected Max35Text tradePartyIdentification;
 	/**
 	 * Identification of the party.
 	 * <p>
@@ -127,7 +129,7 @@ public class PartyIdentification78 {
 	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradePartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentification78.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class PartyIdentification78 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradePartyIdentification";
 			definition = "Identification of the party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class PartyIdentification78 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification78.PartySource, com.tools20022.repository.msg.PartyIdentification78.TradePartyIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification78.mmPartySource, com.tools20022.repository.msg.PartyIdentification78.mmTradePartyIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification78";
 				definition = "Identification of an entity involved in an activity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IdentificationType1Code getPartySource() {
+		return partySource;
+	}
+
+	public void setPartySource(IdentificationType1Code partySource) {
+		this.partySource = partySource;
+	}
+
+	public Max35Text getTradePartyIdentification() {
+		return tradePartyIdentification;
+	}
+
+	public void setTradePartyIdentification(Max35Text tradePartyIdentification) {
+		this.tradePartyIdentification = tradePartyIdentification;
 	}
 }

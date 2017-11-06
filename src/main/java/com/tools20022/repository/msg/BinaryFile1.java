@@ -33,22 +33,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BinaryFile1#MIMEType
- * BinaryFile1.MIMEType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BinaryFile1#EncodingType
- * BinaryFile1.EncodingType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BinaryFile1#CharacterSet
- * BinaryFile1.CharacterSet}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BinaryFile1#mmMIMEType
+ * BinaryFile1.mmMIMEType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BinaryFile1#mmEncodingType
+ * BinaryFile1.mmEncodingType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BinaryFile1#mmCharacterSet
+ * BinaryFile1.mmCharacterSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BinaryFile1#IncludedBinaryObject
- * BinaryFile1.IncludedBinaryObject}</li>
+ * {@linkplain com.tools20022.repository.msg.BinaryFile1#mmIncludedBinaryObject
+ * BinaryFile1.mmIncludedBinaryObject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BinaryFile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text mIMEType;
 	/**
 	 * Code specifying the Multipurpose Internet Mail Extensions (MIME) type for
 	 * this attached binary file. Reference IANA (Internet Assigned Numbers
@@ -92,7 +93,7 @@ public class BinaryFile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MIMEType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMIMEType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BinaryFile1.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class BinaryFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MIMEType";
 			definition = "Code specifying the Multipurpose Internet Mail Extensions (MIME) type for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - MIME Media Types (www.iana.org/assignments/media-types).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text encodingType;
 	/**
 	 * Specifies the encoding algorithm used for this attached binary file.
 	 * Reference IANA (Internet Assigned Numbers Authority) - Transfer Encodings
@@ -135,7 +137,7 @@ public class BinaryFile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EncodingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEncodingType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BinaryFile1.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class BinaryFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncodingType";
 			definition = "Specifies the encoding algorithm used for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - Transfer Encodings (www.iana.org/assignments/transfer-encodings).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text characterSet;
 	/**
 	 * Specifies a code signifying the particular character set used for this
 	 * attached binary file. Reference IANA (Internet Assigned Numbers
@@ -178,7 +181,7 @@ public class BinaryFile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CharacterSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCharacterSet = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BinaryFile1.mmObject();
 			isDerived = false;
@@ -186,11 +189,12 @@ public class BinaryFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CharacterSet";
 			definition = "Specifies a code signifying the particular character set used for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - Character Sets (www.iana.org/assignments/character-sets).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max100KBinary includedBinaryObject;
 	/**
 	 * Binary object included in this attached binary file.
 	 * <p>
@@ -218,7 +222,7 @@ public class BinaryFile1 {
 	 * definition} = "Binary object included in this attached binary file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncludedBinaryObject = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncludedBinaryObject = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BinaryFile1.mmObject();
 			isDerived = false;
@@ -226,8 +230,8 @@ public class BinaryFile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedBinaryObject";
 			definition = "Binary object included in this attached binary file.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
 		}
 	};
@@ -235,14 +239,46 @@ public class BinaryFile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BinaryFile1.MIMEType, com.tools20022.repository.msg.BinaryFile1.EncodingType, com.tools20022.repository.msg.BinaryFile1.CharacterSet,
-						com.tools20022.repository.msg.BinaryFile1.IncludedBinaryObject);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BinaryFile1.mmMIMEType, com.tools20022.repository.msg.BinaryFile1.mmEncodingType, com.tools20022.repository.msg.BinaryFile1.mmCharacterSet,
+						com.tools20022.repository.msg.BinaryFile1.mmIncludedBinaryObject);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BinaryFile1";
 				definition = "Computer file stored in a binary format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMIMEType() {
+		return mIMEType;
+	}
+
+	public void setMIMEType(Max35Text mIMEType) {
+		this.mIMEType = mIMEType;
+	}
+
+	public Max35Text getEncodingType() {
+		return encodingType;
+	}
+
+	public void setEncodingType(Max35Text encodingType) {
+		this.encodingType = encodingType;
+	}
+
+	public Max35Text getCharacterSet() {
+		return characterSet;
+	}
+
+	public void setCharacterSet(Max35Text characterSet) {
+		this.characterSet = characterSet;
+	}
+
+	public Max100KBinary getIncludedBinaryObject() {
+		return includedBinaryObject;
+	}
+
+	public void setIncludedBinaryObject(Max100KBinary includedBinaryObject) {
+		this.includedBinaryObject = includedBinaryObject;
 	}
 }

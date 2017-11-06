@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.PersonIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Unique and unambiguous way to identify a person.
@@ -33,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification5#DateAndPlaceOfBirth
- * PersonIdentification5.DateAndPlaceOfBirth}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification5#Other
- * PersonIdentification5.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification5#mmDateAndPlaceOfBirth
+ * PersonIdentification5.mmDateAndPlaceOfBirth}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification5#mmOther
+ * PersonIdentification5.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PersonIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndPlaceOfBirth dateAndPlaceOfBirth;
 	/**
 	 * Date and place of birth of a person.
 	 * <p>
@@ -80,8 +82,8 @@ public class PersonIdentification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#Person
-	 * PersonIdentification.Person}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPerson
+	 * PersonIdentification.mmPerson}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,28 +104,29 @@ public class PersonIdentification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#DateAndPlaceOfBirth
-	 * PersonIdentification7.DateAndPlaceOfBirth}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmDateAndPlaceOfBirth
+	 * PersonIdentification7.mmDateAndPlaceOfBirth}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateAndPlaceOfBirth = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateAndPlaceOfBirth = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPerson;
 			componentContext_lazy = () -> PersonIdentification5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.Person;
 			isDerived = false;
 			xmlTag = "DtAndPlcOfBirth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndPlaceOfBirth";
 			definition = "Date and place of birth of a person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification7.DateAndPlaceOfBirth);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification7.mmDateAndPlaceOfBirth);
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.DateAndPlaceOfBirth.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DateAndPlaceOfBirth.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericPersonIdentification1> other;
 	/**
 	 * Unique identification of a person, as assigned by an institution, using
 	 * an identification scheme.
@@ -137,8 +140,8 @@ public class PersonIdentification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,37 +164,37 @@ public class PersonIdentification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#Other
-	 * PersonIdentification7.Other}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmOther
+	 * PersonIdentification7.mmOther}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#Other
-	 * PersonIdentification10.Other}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#mmOther
+	 * PersonIdentification10.mmOther}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PersonIdentification5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of a person, as assigned by an institution, using an identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification7.Other, com.tools20022.repository.msg.PersonIdentification10.Other);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification7.mmOther, com.tools20022.repository.msg.PersonIdentification10.mmOther);
 			minOccurs = 0;
-			type_lazy = () -> GenericPersonIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericPersonIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification5.DateAndPlaceOfBirth, com.tools20022.repository.msg.PersonIdentification5.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification5.mmDateAndPlaceOfBirth, com.tools20022.repository.msg.PersonIdentification5.mmOther);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentification5";
 				definition = "Unique and unambiguous way to identify a person.";
@@ -199,5 +202,21 @@ public class PersonIdentification5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndPlaceOfBirth getDateAndPlaceOfBirth() {
+		return dateAndPlaceOfBirth;
+	}
+
+	public void setDateAndPlaceOfBirth(com.tools20022.repository.msg.DateAndPlaceOfBirth dateAndPlaceOfBirth) {
+		this.dateAndPlaceOfBirth = dateAndPlaceOfBirth;
+	}
+
+	public List<GenericPersonIdentification1> getOther() {
+		return other;
+	}
+
+	public void setOther(List<com.tools20022.repository.msg.GenericPersonIdentification1> other) {
+		this.other = other;
 	}
 }

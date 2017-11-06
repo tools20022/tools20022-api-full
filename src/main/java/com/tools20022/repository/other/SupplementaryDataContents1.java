@@ -39,8 +39,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -61,7 +61,7 @@ public class SupplementaryDataContents1 {
 	final static public MMUserDefined mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMUserDefined() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -72,8 +72,8 @@ public class SupplementaryDataContents1 {
 				})).get();
 				name = "SupplementaryDataContents1";
 				definition = "Technical supplementary data structure that allows to specify any valid XML Structure (e.g. through an XML Schema). The property namespace is set to 'any'. \r\nThe content of the supplementary data MUST NOT be validated by the receiver (processContent=lax).";
-				processContents = com.tools20022.metamodel.MMProcessContent.LAX;
 				namespace = com.tools20022.metamodel.MMNamespace.any;
+				processContents = com.tools20022.metamodel.MMProcessContent.LAX;
 			}
 		});
 		return mmObject_lazy.get();

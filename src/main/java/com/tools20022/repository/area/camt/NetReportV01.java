@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The Net Report message is sent to a participant by a central system to
@@ -61,27 +62,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#NetReportData
- * NetReportV01.NetReportData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmNetReportData
+ * NetReportV01.mmNetReportData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#NetServiceParticipantIdentification
- * NetReportV01.NetServiceParticipantIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmNetServiceParticipantIdentification
+ * NetReportV01.mmNetServiceParticipantIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#NetServiceCounterpartyIdentification
- * NetReportV01.NetServiceCounterpartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmNetServiceCounterpartyIdentification
+ * NetReportV01.mmNetServiceCounterpartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#NetObligation
- * NetReportV01.NetObligation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmNetObligation
+ * NetReportV01.mmNetObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#SupplementaryData
- * NetReportV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmSupplementaryData
+ * NetReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#identifier
- * NetReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.088.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected NetReportData1 netReportData;
 	/**
 	 * Specifies the meta data associated with the net report.
 	 * <p>
@@ -119,17 +119,18 @@ public class NetReportV01 {
 	 * definition} = "Specifies the meta data associated with the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NetReportData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNetReportData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NetRptData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetReportData";
 			definition = "Specifies the meta data associated with the net report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NetReportData1.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice netServiceParticipantIdentification;
 	/**
 	 * Describes the participant receiving the net report.
 	 * <p>
@@ -153,17 +154,18 @@ public class NetReportV01 {
 	 * definition} = "Describes the participant receiving the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NetServiceParticipantIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNetServiceParticipantIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NetSvcPtcptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceParticipantIdentification";
 			definition = "Describes the participant receiving the net report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice netServiceCounterpartyIdentification;
 	/**
 	 * Describes the counterparty participant involved in (all of) the
 	 * obligations of the report.
@@ -190,17 +192,18 @@ public class NetReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NetServiceCounterpartyIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNetServiceCounterpartyIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NetSvcCtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceCounterpartyIdentification";
 			definition = "Describes the counterparty participant involved in (all of) the obligations of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected List<NetObligation1> netObligation;
 	/**
 	 * Provides the amount, direct parties or netting groups involved in the
 	 * obligation.
@@ -226,7 +229,7 @@ public class NetReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NetObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNetObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NetOblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,6 +239,7 @@ public class NetReportV01 {
 			complexType_lazy = () -> NetObligation1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -262,7 +266,7 @@ public class NetReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,33 +274,6 @@ public class NetReportV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "088"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "088";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -310,12 +287,59 @@ public class NetReportV01 {
 				rootElement = "Document";
 				xmlTag = "NetRpt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NetReportV01.NetReportData, com.tools20022.repository.area.camt.NetReportV01.NetServiceParticipantIdentification,
-						com.tools20022.repository.area.camt.NetReportV01.NetServiceCounterpartyIdentification, com.tools20022.repository.area.camt.NetReportV01.NetObligation,
-						com.tools20022.repository.area.camt.NetReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.NetReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NetReportV01.mmNetReportData, com.tools20022.repository.area.camt.NetReportV01.mmNetServiceParticipantIdentification,
+						com.tools20022.repository.area.camt.NetReportV01.mmNetServiceCounterpartyIdentification, com.tools20022.repository.area.camt.NetReportV01.mmNetObligation,
+						com.tools20022.repository.area.camt.NetReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "088";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NetReportData1 getNetReportData() {
+		return netReportData;
+	}
+
+	public void setNetReportData(NetReportData1 netReportData) {
+		this.netReportData = netReportData;
+	}
+
+	public PartyIdentification73Choice getNetServiceParticipantIdentification() {
+		return netServiceParticipantIdentification;
+	}
+
+	public void setNetServiceParticipantIdentification(PartyIdentification73Choice netServiceParticipantIdentification) {
+		this.netServiceParticipantIdentification = netServiceParticipantIdentification;
+	}
+
+	public PartyIdentification73Choice getNetServiceCounterpartyIdentification() {
+		return netServiceCounterpartyIdentification;
+	}
+
+	public void setNetServiceCounterpartyIdentification(PartyIdentification73Choice netServiceCounterpartyIdentification) {
+		this.netServiceCounterpartyIdentification = netServiceCounterpartyIdentification;
+	}
+
+	public List<NetObligation1> getNetObligation() {
+		return netObligation;
+	}
+
+	public void setNetObligation(List<NetObligation1> netObligation) {
+		this.netObligation = netObligation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

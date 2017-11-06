@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Margin1#VariationMargin
- * Margin1.VariationMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin1#mmVariationMargin
+ * Margin1.mmVariationMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Margin1#SegregatedIndependentAmountMargin
- * Margin1.SegregatedIndependentAmountMargin}</li>
+ * {@linkplain com.tools20022.repository.msg.Margin1#mmSegregatedIndependentAmountMargin
+ * Margin1.mmSegregatedIndependentAmountMargin}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Margin1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected VariationMargin1 variationMargin;
 	/**
 	 * Elements used to calculate the collateral margin call for the variation
 	 * margin.
@@ -98,21 +99,22 @@ public class Margin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VariationMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVariationMargin = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Margin1.mmObject();
 			businessComponentTrace_lazy = () -> VariationMarginTerm.mmObject();
+			componentContext_lazy = () -> Margin1.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Elements used to calculate the collateral margin call for the variation margin.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> VariationMargin1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
 		}
 	};
+	protected SegregatedIndependentAmountMargin1 segregatedIndependentAmountMargin;
 	/**
 	 * Elements used to calculate the collateral margin call for the segregated
 	 * independent amount.
@@ -147,33 +149,49 @@ public class Margin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmountMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountMargin = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Margin1.mmObject();
 			businessComponentTrace_lazy = () -> IndependentAmountTerm.mmObject();
+			componentContext_lazy = () -> Margin1.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmtMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmountMargin";
 			definition = "Elements used to calculate the collateral margin call for the segregated independent amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SegregatedIndependentAmountMargin1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin1.VariationMargin, com.tools20022.repository.msg.Margin1.SegregatedIndependentAmountMargin);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin1.mmVariationMargin, com.tools20022.repository.msg.Margin1.mmSegregatedIndependentAmountMargin);
 				trace_lazy = () -> ExposureTerm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Margin1";
 				definition = "Defines the elements used to calculate the collateral margin call for the variation margin and optionally the segregated independent amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public VariationMargin1 getVariationMargin() {
+		return variationMargin;
+	}
+
+	public void setVariationMargin(com.tools20022.repository.msg.VariationMargin1 variationMargin) {
+		this.variationMargin = variationMargin;
+	}
+
+	public SegregatedIndependentAmountMargin1 getSegregatedIndependentAmountMargin() {
+		return segregatedIndependentAmountMargin;
+	}
+
+	public void setSegregatedIndependentAmountMargin(com.tools20022.repository.msg.SegregatedIndependentAmountMargin1 segregatedIndependentAmountMargin) {
+		this.segregatedIndependentAmountMargin = segregatedIndependentAmountMargin;
 	}
 }

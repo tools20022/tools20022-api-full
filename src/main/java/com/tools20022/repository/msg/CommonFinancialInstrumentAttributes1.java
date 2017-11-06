@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Tangible items of value to a business.
@@ -42,161 +43,161 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#SecurityStatus
- * CommonFinancialInstrumentAttributes1.SecurityStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmSecurityStatus
+ * CommonFinancialInstrumentAttributes1.mmSecurityStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ISOSecurityLongName
- * CommonFinancialInstrumentAttributes1.ISOSecurityLongName}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmISOSecurityLongName
+ * CommonFinancialInstrumentAttributes1.mmISOSecurityLongName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ISOSecurityShortName
- * CommonFinancialInstrumentAttributes1.ISOSecurityShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmISOSecurityShortName
+ * CommonFinancialInstrumentAttributes1.mmISOSecurityShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#NameValidFrom
- * CommonFinancialInstrumentAttributes1.NameValidFrom}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmNameValidFrom
+ * CommonFinancialInstrumentAttributes1.mmNameValidFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#DenominationCurrency
- * CommonFinancialInstrumentAttributes1.DenominationCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmDenominationCurrency
+ * CommonFinancialInstrumentAttributes1.mmDenominationCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#CertificateNumber
- * CommonFinancialInstrumentAttributes1.CertificateNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmCertificateNumber
+ * CommonFinancialInstrumentAttributes1.mmCertificateNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ContractVersionNumber
- * CommonFinancialInstrumentAttributes1.ContractVersionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmContractVersionNumber
+ * CommonFinancialInstrumentAttributes1.mmContractVersionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#CouponAttachedNumber
- * CommonFinancialInstrumentAttributes1.CouponAttachedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmCouponAttachedNumber
+ * CommonFinancialInstrumentAttributes1.mmCouponAttachedNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#TaxLotNumber
- * CommonFinancialInstrumentAttributes1.TaxLotNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmTaxLotNumber
+ * CommonFinancialInstrumentAttributes1.mmTaxLotNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#PoolNumber
- * CommonFinancialInstrumentAttributes1.PoolNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPoolNumber
+ * CommonFinancialInstrumentAttributes1.mmPoolNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#CoveredIndicator
- * CommonFinancialInstrumentAttributes1.CoveredIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmCoveredIndicator
+ * CommonFinancialInstrumentAttributes1.mmCoveredIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#LegalRestrictions
- * CommonFinancialInstrumentAttributes1.LegalRestrictions}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmLegalRestrictions
+ * CommonFinancialInstrumentAttributes1.mmLegalRestrictions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#PositionLimit
- * CommonFinancialInstrumentAttributes1.PositionLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPositionLimit
+ * CommonFinancialInstrumentAttributes1.mmPositionLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#NearTermPositionLimit
- * CommonFinancialInstrumentAttributes1.NearTermPositionLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmNearTermPositionLimit
+ * CommonFinancialInstrumentAttributes1.mmNearTermPositionLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ListingDate
- * CommonFinancialInstrumentAttributes1.ListingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmListingDate
+ * CommonFinancialInstrumentAttributes1.mmListingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#RecordDate
- * CommonFinancialInstrumentAttributes1.RecordDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmRecordDate
+ * CommonFinancialInstrumentAttributes1.mmRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ExpiryDate
- * CommonFinancialInstrumentAttributes1.ExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmExpiryDate
+ * CommonFinancialInstrumentAttributes1.mmExpiryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#Purpose
- * CommonFinancialInstrumentAttributes1.Purpose}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPurpose
+ * CommonFinancialInstrumentAttributes1.mmPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ClassificationType
- * CommonFinancialInstrumentAttributes1.ClassificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmClassificationType
+ * CommonFinancialInstrumentAttributes1.mmClassificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#Issuance
- * CommonFinancialInstrumentAttributes1.Issuance}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmIssuance
+ * CommonFinancialInstrumentAttributes1.mmIssuance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#TradingMarket
- * CommonFinancialInstrumentAttributes1.TradingMarket}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmTradingMarket
+ * CommonFinancialInstrumentAttributes1.mmTradingMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#SpreadAndBenchmarkCurve
- * CommonFinancialInstrumentAttributes1.SpreadAndBenchmarkCurve}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmSpreadAndBenchmarkCurve
+ * CommonFinancialInstrumentAttributes1.mmSpreadAndBenchmarkCurve}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#PutType
- * CommonFinancialInstrumentAttributes1.PutType}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPutType
+ * CommonFinancialInstrumentAttributes1.mmPutType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#CallType
- * CommonFinancialInstrumentAttributes1.CallType}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmCallType
+ * CommonFinancialInstrumentAttributes1.mmCallType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#FungibleIndicator
- * CommonFinancialInstrumentAttributes1.FungibleIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmFungibleIndicator
+ * CommonFinancialInstrumentAttributes1.mmFungibleIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#Confidential
- * CommonFinancialInstrumentAttributes1.Confidential}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmConfidential
+ * CommonFinancialInstrumentAttributes1.mmConfidential}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#PrivatePlacement
- * CommonFinancialInstrumentAttributes1.PrivatePlacement}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPrivatePlacement
+ * CommonFinancialInstrumentAttributes1.mmPrivatePlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ConvertibleIndicator
- * CommonFinancialInstrumentAttributes1.ConvertibleIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmConvertibleIndicator
+ * CommonFinancialInstrumentAttributes1.mmConvertibleIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ConversionPeriod
- * CommonFinancialInstrumentAttributes1.ConversionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmConversionPeriod
+ * CommonFinancialInstrumentAttributes1.mmConversionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ConversionRatioNumerator
- * CommonFinancialInstrumentAttributes1.ConversionRatioNumerator}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmConversionRatioNumerator
+ * CommonFinancialInstrumentAttributes1.mmConversionRatioNumerator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ConversionRatioDenominator
- * CommonFinancialInstrumentAttributes1.ConversionRatioDenominator}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmConversionRatioDenominator
+ * CommonFinancialInstrumentAttributes1.mmConversionRatioDenominator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#PrimaryPlaceOfDeposit
- * CommonFinancialInstrumentAttributes1.PrimaryPlaceOfDeposit}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPrimaryPlaceOfDeposit
+ * CommonFinancialInstrumentAttributes1.mmPrimaryPlaceOfDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#TradingMethod
- * CommonFinancialInstrumentAttributes1.TradingMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmTradingMethod
+ * CommonFinancialInstrumentAttributes1.mmTradingMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#TEFRARule
- * CommonFinancialInstrumentAttributes1.TEFRARule}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmTEFRARule
+ * CommonFinancialInstrumentAttributes1.mmTEFRARule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#SerieNumber
- * CommonFinancialInstrumentAttributes1.SerieNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmSerieNumber
+ * CommonFinancialInstrumentAttributes1.mmSerieNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#Class
- * CommonFinancialInstrumentAttributes1.Class}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmClass_
+ * CommonFinancialInstrumentAttributes1.mmClass_}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#WithholdingTaxRegime
- * CommonFinancialInstrumentAttributes1.WithholdingTaxRegime}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmWithholdingTaxRegime
+ * CommonFinancialInstrumentAttributes1.mmWithholdingTaxRegime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#PaymentStatus
- * CommonFinancialInstrumentAttributes1.PaymentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPaymentStatus
+ * CommonFinancialInstrumentAttributes1.mmPaymentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#InitialPhysicalForm
- * CommonFinancialInstrumentAttributes1.InitialPhysicalForm}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmInitialPhysicalForm
+ * CommonFinancialInstrumentAttributes1.mmInitialPhysicalForm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#AfterExchangePhysicalForm
- * CommonFinancialInstrumentAttributes1.AfterExchangePhysicalForm}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmAfterExchangePhysicalForm
+ * CommonFinancialInstrumentAttributes1.mmAfterExchangePhysicalForm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#CommonSafekeeper
- * CommonFinancialInstrumentAttributes1.CommonSafekeeper}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmCommonSafekeeper
+ * CommonFinancialInstrumentAttributes1.mmCommonSafekeeper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#RedemptionType
- * CommonFinancialInstrumentAttributes1.RedemptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmRedemptionType
+ * CommonFinancialInstrumentAttributes1.mmRedemptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#RedemptionPaymentCurrency
- * CommonFinancialInstrumentAttributes1.RedemptionPaymentCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmRedemptionPaymentCurrency
+ * CommonFinancialInstrumentAttributes1.mmRedemptionPaymentCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#Restriction
- * CommonFinancialInstrumentAttributes1.Restriction}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmRestriction
+ * CommonFinancialInstrumentAttributes1.mmRestriction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#SettlementInformation
- * CommonFinancialInstrumentAttributes1.SettlementInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmSettlementInformation
+ * CommonFinancialInstrumentAttributes1.mmSettlementInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#FinancialInstrumentForm
- * CommonFinancialInstrumentAttributes1.FinancialInstrumentForm}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmFinancialInstrumentForm
+ * CommonFinancialInstrumentAttributes1.mmFinancialInstrumentForm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ContactName
- * CommonFinancialInstrumentAttributes1.ContactName}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmContactName
+ * CommonFinancialInstrumentAttributes1.mmContactName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#LeadManager
- * CommonFinancialInstrumentAttributes1.LeadManager}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmLeadManager
+ * CommonFinancialInstrumentAttributes1.mmLeadManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#PrincipalPayingAgent
- * CommonFinancialInstrumentAttributes1.PrincipalPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPrincipalPayingAgent
+ * CommonFinancialInstrumentAttributes1.mmPrincipalPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#PayingAgent
- * CommonFinancialInstrumentAttributes1.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmPayingAgent
+ * CommonFinancialInstrumentAttributes1.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#Depository
- * CommonFinancialInstrumentAttributes1.Depository}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmDepository
+ * CommonFinancialInstrumentAttributes1.mmDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#UnderlyingRisk
- * CommonFinancialInstrumentAttributes1.UnderlyingRisk}</li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmUnderlyingRisk
+ * CommonFinancialInstrumentAttributes1.mmUnderlyingRisk}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -204,8 +205,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -220,6 +221,7 @@ import java.util.function.Supplier;
 public class CommonFinancialInstrumentAttributes1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityStatus2Choice securityStatus;
 	/**
 	 * Specifies the status of the security within its lifecycle.
 	 * <p>
@@ -233,8 +235,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecurityStatus
-	 * Security.SecurityStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecurityStatus
+	 * Security.mmSecurityStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,20 +256,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * "Specifies the status of the security within its lifecycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecurityStatus;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecurityStatus;
 			isDerived = false;
 			xmlTag = "SctySts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecurityStatus2Choice.mmObject();
 		}
 	};
+	protected Max350Text iSOSecurityLongName;
 	/**
 	 * Name of the security.
 	 * <p>
@@ -280,8 +283,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#FullName
-	 * LocalName.FullName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+	 * LocalName.mmFullName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,20 +303,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Name of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISOSecurityLongName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISOSecurityLongName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.FullName;
 			isDerived = false;
 			xmlTag = "ISOSctyLngNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOSecurityLongName";
 			definition = "Name of the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text iSOSecurityShortName;
 	/**
 	 * Short name of the security expressed as ISO 18773/18774.
 	 * <p>
@@ -326,8 +330,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#ShortName
-	 * LocalName.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmShortName
+	 * LocalName.mmShortName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -346,20 +350,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Short name of the security expressed as ISO 18773/18774."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISOSecurityShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISOSecurityShortName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmShortName;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.ShortName;
 			isDerived = false;
 			xmlTag = "ISOSctyShrtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOSecurityShortName";
 			definition = "Short name of the security expressed as ISO 18773/18774.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice nameValidFrom;
 	/**
 	 * Defines the date since when the name of the security is valid.
 	 * <p>
@@ -373,8 +378,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -394,20 +399,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * "Defines the date since when the name of the security is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameValidFrom = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "NmVldFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameValidFrom";
 			definition = "Defines the date since when the name of the security is valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected CurrencyCode denominationCurrency;
 	/**
 	 * Currency in which a security is issued or redenominated.
 	 * <p>
@@ -420,8 +426,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#DenominationCurrency
-	 * Security.DenominationCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmDenominationCurrency
+	 * Security.mmDenominationCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -440,20 +446,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Currency in which a security is issued or redenominated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DenominationCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDenominationCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDenominationCurrency;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.DenominationCurrency;
 			isDerived = false;
 			xmlTag = "DnmtnCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected Max35Text certificateNumber;
 	/**
 	 * Unique and unambiguous identifier of a certificate assigned by the
 	 * issuer.
@@ -467,8 +474,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#Number
-	 * SecuritiesCertificate.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmNumber
+	 * SecuritiesCertificate.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -489,20 +496,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.Number;
 			isDerived = false;
 			xmlTag = "CertNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number contractVersionNumber;
 	/**
 	 * Version number assigned to the contract associated with the security.
 	 * <p>
@@ -531,7 +539,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * "Version number assigned to the contract associated with the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractVersionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractVersionNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -539,11 +547,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractVersionNumber";
 			definition = "Version number assigned to the contract associated with the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max3NumericText couponAttachedNumber;
 	/**
 	 * Number of the coupon attached to the physical security.
 	 * <p>
@@ -557,8 +566,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CouponAttached#Number
-	 * CouponAttached.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.CouponAttached#mmNumber
+	 * CouponAttached.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -577,20 +586,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Number of the coupon attached to the physical security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CouponAttachedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCouponAttachedNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmNumber;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.Number;
 			isDerived = false;
 			xmlTag = "CpnAttchdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponAttachedNumber";
 			definition = "Number of the coupon attached to the physical security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected Max15NumericText taxLotNumber;
 	/**
 	 * Identification, for tax purposes, of a lot of identical securities that
 	 * are bought at a certain date and at a certain price.
@@ -605,8 +615,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#LotNumber
-	 * LotBreakdown.LotNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotNumber
+	 * LotBreakdown.mmLotNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -627,20 +637,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxLotNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxLotNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.LotNumber;
 			isDerived = false;
 			xmlTag = "TaxLotNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxLotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected Max15NumericText poolNumber;
 	/**
 	 * Number identifying a group of underlying assets assigned by the issuer of
 	 * a factored security.
@@ -655,8 +666,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#PoolNumber
-	 * Debt.PoolNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmPoolNumber
+	 * Debt.mmPoolNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -677,20 +688,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PoolNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPoolNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPoolNumber;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.PoolNumber;
 			isDerived = false;
 			xmlTag = "PoolNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolNumber";
 			definition = "Number identifying a group of underlying assets assigned by the issuer of a factored security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected YesNoIndicator coveredIndicator;
 	/**
 	 * Indicates whether the derivative product is covered or not by an
 	 * underlying financial instrument position.
@@ -705,8 +717,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entitlement#CoveredIndicator
-	 * Entitlement.CoveredIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entitlement#mmCoveredIndicator
+	 * Entitlement.mmCoveredIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -727,20 +739,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CoveredIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCoveredIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entitlement.mmCoveredIndicator;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entitlement.CoveredIndicator;
 			isDerived = false;
 			xmlTag = "CvrdInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredIndicator";
 			definition = "Indicates whether the derivative product is covered or not by an underlying financial instrument position.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected LegalRestrictions3Choice legalRestrictions;
 	/**
 	 * Specifies the regulatory restrictions applicable to a security.
 	 * <p>
@@ -754,8 +767,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Restriction
-	 * Security.Restriction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRestriction
+	 * Security.mmRestriction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -775,20 +788,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * "Specifies the regulatory restrictions applicable to a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalRestrictions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalRestrictions = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRestriction;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Restriction;
 			isDerived = false;
 			xmlTag = "LglRstrctns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRestrictions";
 			definition = "Specifies the regulatory restrictions applicable to a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> LegalRestrictions3Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice positionLimit;
 	/**
 	 * Position limits are created for the purpose of maintaining stable and
 	 * fair markets. Contracts held by one individual investor with different
@@ -807,8 +821,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -829,20 +843,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PositionLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPositionLimit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "PosLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionLimit";
 			definition = "Position limits are created for the purpose of maintaining stable and fair markets. Contracts held by one individual investor with different brokers may be combined in order to gauge accurately the level of control held by one party. \n\nEach option and futures contract will have varying position limits.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice nearTermPositionLimit;
 	/**
 	 * Near-term position limit for the instrument.
 	 * <p>
@@ -856,8 +871,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#NearTermPositionLimit
-	 * Security.NearTermPositionLimit}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmNearTermPositionLimit
+	 * Security.mmNearTermPositionLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -876,20 +891,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Near-term position limit for the instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NearTermPositionLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNearTermPositionLimit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmNearTermPositionLimit;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.NearTermPositionLimit;
 			isDerived = false;
 			xmlTag = "NearTermPosLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NearTermPositionLimit";
 			definition = "Near-term position limit for the instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected ISODate listingDate;
 	/**
 	 * Original Date/time at which the security is listed at the specific
 	 * exchange or trading venue..
@@ -903,8 +919,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#ListingDate
-	 * TradingMarket.ListingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmListingDate
+	 * TradingMarket.mmListingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -925,20 +941,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ListingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmListingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmListingDate;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.ListingDate;
 			isDerived = false;
 			xmlTag = "ListgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListingDate";
 			definition = "Original Date/time at which the security is listed at the specific exchange or trading venue..";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime recordDate;
 	/**
 	 * Date/time at which positions are struck to note which parties are
 	 * entitled to receive the entitlement to a corporate event or vote at a
@@ -953,8 +970,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RecordDate
-	 * CorporateActionDeadline.RecordDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRecordDate
+	 * CorporateActionDeadline.mmRecordDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -975,20 +992,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.RecordDate;
 			isDerived = false;
 			xmlTag = "RcrdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck to note which parties are entitled to receive the entitlement to a corporate event or vote at a meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODate expiryDate;
 	/**
 	 * Date on which a privilege expires.
 	 * <p>
@@ -1001,8 +1019,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#ExpiryDate
-	 * Asset.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmExpiryDate
+	 * Asset.mmExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1021,20 +1039,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Date on which a privilege expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.ExpiryDate;
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which a privilege expires.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max256Text purpose;
 	/**
 	 * Reason for which money is raised through the issuance of a security.
 	 * <p>
@@ -1047,8 +1066,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#Purpose
-	 * Issuance.Purpose}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmPurpose
+	 * Issuance.mmPurpose}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1068,20 +1087,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * "Reason for which money is raised through the issuance of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Purpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmPurpose;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.Purpose;
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Reason for which money is raised through the issuance of a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected ClassificationType1 classificationType;
 	/**
 	 * Information allowing the classification of a financial instrument, for
 	 * example, with its ISO CFI (Classification of Financial Instrument) or
@@ -1097,8 +1117,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#AssetClassification
-	 * Asset.AssetClassification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmAssetClassification
+	 * Asset.mmAssetClassification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1119,20 +1139,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetClassification;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.AssetClassification;
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Information allowing the classification of a financial instrument, for example, with its ISO CFI (Classification of Financial Instrument) or product type.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ClassificationType1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ClassificationType1.mmObject();
 		}
 	};
+	protected Issuance1 issuance;
 	/**
 	 * Details regarding the issuance of an asset.
 	 * <p>
@@ -1143,8 +1164,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#Issuance
-	 * Asset.Issuance}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmIssuance
+	 * Asset.mmIssuance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1163,21 +1184,22 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Details regarding the issuance of an asset."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Issuance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmIssuance;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.Issuance;
 			isDerived = false;
 			xmlTag = "Issnc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuance";
 			definition = "Details regarding the issuance of an asset.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Issuance1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TradingParameters1> tradingMarket;
 	/**
 	 * Market(s) on which the security is traded.
 	 * <p>
@@ -1189,8 +1211,8 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#TradingMarket
-	 * Security.TradingMarket}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmTradingMarket
+	 * Security.mmTradingMarket}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1209,20 +1231,21 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Market(s) on which the security is traded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingMarket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingMarket = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTradingMarket;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.TradingMarket;
 			isDerived = false;
 			xmlTag = "TradgMkt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingMarket";
 			definition = "Market(s) on which the security is traded.";
 			minOccurs = 0;
-			type_lazy = () -> TradingParameters1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BenchmarkCurve2> spreadAndBenchmarkCurve;
 	/**
 	 * Indicates the spread to benchmark details of an indication of interest.
 	 * <p>
@@ -1251,7 +1274,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SpreadAndBenchmarkCurve = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSpreadAndBenchmarkCurve = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1260,10 +1283,11 @@ public class CommonFinancialInstrumentAttributes1 {
 			name = "SpreadAndBenchmarkCurve";
 			definition = "Indicates the spread to benchmark details of an indication of interest.";
 			minOccurs = 0;
-			type_lazy = () -> BenchmarkCurve2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve2.mmObject();
 		}
 	};
+	protected PutType2Choice putType;
 	/**
 	 * Represents the type of put.
 	 * <p>
@@ -1292,7 +1316,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Represents the type of put."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPutType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1300,11 +1324,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutType";
 			definition = "Represents the type of put.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PutType2Choice.mmObject();
 		}
 	};
+	protected CallType2Choice callType;
 	/**
 	 * Represents the type of call.
 	 * <p>
@@ -1333,7 +1358,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Represents the type of call."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CallType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCallType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1341,11 +1366,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallType";
 			definition = "Represents the type of call.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CallType2Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator fungibleIndicator;
 	/**
 	 * Indicates whether a security is interchangeable, ie, the security is
 	 * allowed to be replaced by another security, without loss of value.
@@ -1377,7 +1403,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FungibleIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFungibleIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1385,11 +1411,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FungibleIndicator";
 			definition = "Indicates whether a security is interchangeable, ie, the security is allowed to be replaced by another security, without loss of value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator confidential;
 	/**
 	 * Indicates wheter the details of the security are to be made available to
 	 * the market, or kept private between ICSDs and agency network.
@@ -1421,7 +1448,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Confidential = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfidential = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1429,11 +1456,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confidential";
 			definition = "Indicates wheter the details of the security are to be made available to the market, or kept private between ICSDs and agency network.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator privatePlacement;
 	/**
 	 * The sale of securities directly to private persons, institutional
 	 * investors, or both outside a public offering. Such non-public deals
@@ -1467,7 +1495,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrivatePlacement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrivatePlacement = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1475,11 +1503,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivatePlacement";
 			definition = "The sale of securities directly to private persons, institutional investors, or both outside a public offering. Such non-public deals (often without a publicly available prospectus) closing through the ICSDs are placed directly with investors.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator convertibleIndicator;
 	/**
 	 * Indicates whether the investor or the issuer has a conversion option.
 	 * <p>
@@ -1509,7 +1538,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * "Indicates whether the investor or the issuer has a conversion option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConvertibleIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConvertibleIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1517,11 +1546,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleIndicator";
 			definition = "Indicates whether the investor or the issuer has a conversion option.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected DateTimePeriodDetails conversionPeriod;
 	/**
 	 * Period during which a convertible security may be converted according to
 	 * the terms of the issue.
@@ -1553,7 +1583,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConversionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConversionPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1561,11 +1591,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionPeriod";
 			definition = "Period during which a convertible security may be converted according to the terms of the issue.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateTimePeriodDetails.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice conversionRatioNumerator;
 	/**
 	 * Number of target securities for the conversion.
 	 * <p>
@@ -1594,7 +1625,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Number of target securities for the conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConversionRatioNumerator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConversionRatioNumerator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1602,11 +1633,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionRatioNumerator";
 			definition = "Number of target securities for the conversion.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice conversionRatioDenominator;
 	/**
 	 * Number of held securities for the conversion.
 	 * <p>
@@ -1635,7 +1667,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Number of held securities for the conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConversionRatioDenominator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConversionRatioDenominator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1643,11 +1675,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionRatioDenominator";
 			definition = "Number of held securities for the conversion.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice primaryPlaceOfDeposit;
 	/**
 	 * Primary place of deposit.
 	 * <p>
@@ -1675,7 +1708,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Primary place of deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrimaryPlaceOfDeposit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrimaryPlaceOfDeposit = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1683,12 +1716,13 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryPlaceOfDeposit";
 			definition = "Primary place of deposit.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification71Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice tradingMethod;
 	/**
 	 * Indicates whether the notional amount value is to be traded in either an
 	 * amount or in units.
@@ -1720,7 +1754,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingMethod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1728,11 +1762,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingMethod";
 			definition = "Indicates whether the notional amount value is to be traded in either an amount or in units.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected TEFRARules2Choice tEFRARule;
 	/**
 	 * Indicates the TEFRA rule under which the security is issued.
 	 * <p>
@@ -1762,7 +1797,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * "Indicates the TEFRA rule under which the security is issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TEFRARule = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTEFRARule = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1770,11 +1805,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TEFRARule";
 			definition = "Indicates the TEFRA rule under which the security is issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TEFRARules2Choice.mmObject();
 		}
 	};
+	protected Max16Text serieNumber;
 	/**
 	 * Identifies the series number.
 	 * <p>
@@ -1802,7 +1838,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Identifies the series number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SerieNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSerieNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1810,11 +1846,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerieNumber";
 			definition = "Identifies the series number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max16Text class_;
 	/**
 	 * Identifier that links multiple security classes.
 	 * <p>
@@ -1842,7 +1879,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Identifier that links multiple security classes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Class = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClass_ = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1850,11 +1887,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Class";
 			definition = "Identifier that links multiple security classes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityWithHoldingTax1> withholdingTaxRegime;
 	/**
 	 * Amount or percentage of a cash distribution that will be withheld by a
 	 * tax authority.
@@ -1885,7 +1923,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd WithholdingTaxRegime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmWithholdingTaxRegime = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1894,10 +1932,11 @@ public class CommonFinancialInstrumentAttributes1 {
 			name = "WithholdingTaxRegime";
 			definition = "Amount or percentage of a cash distribution that will be withheld by a tax authority.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityWithHoldingTax1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityWithHoldingTax1.mmObject();
 		}
 	};
+	protected SecuritiesPaymentStatus4Choice paymentStatus;
 	/**
 	 * Status of payment of a security at a particular time.
 	 * <p>
@@ -1926,7 +1965,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Status of payment of a security at a particular time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1934,11 +1973,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentStatus";
 			definition = "Status of payment of a security at a particular time.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesPaymentStatus4Choice.mmObject();
 		}
 	};
+	protected InitialPhysicalForm2Choice initialPhysicalForm;
 	/**
 	 * Indicates the physical form of the securities on the closing date.
 	 * <p>
@@ -1968,7 +2008,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * "Indicates the physical form of the securities on the closing date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitialPhysicalForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitialPhysicalForm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -1976,11 +2016,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialPhysicalForm";
 			definition = "Indicates the physical form of the securities on the closing date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InitialPhysicalForm2Choice.mmObject();
 		}
 	};
+	protected InitialPhysicalForm1Choice afterExchangePhysicalForm;
 	/**
 	 * Indicates the physical form of the securities after the exchange of the
 	 * initial certificate issued on the closing date.
@@ -2012,7 +2053,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AfterExchangePhysicalForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAfterExchangePhysicalForm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2020,11 +2061,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterExchangePhysicalForm";
 			definition = "Indicates the physical form of the securities after the exchange of the initial certificate issued on the closing date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InitialPhysicalForm1Choice.mmObject();
 		}
 	};
+	protected AnyBICIdentifier commonSafekeeper;
 	/**
 	 * Entity appointed by the ICSDs to provide safekeeping for securities in
 	 * new global note (NGN) form.
@@ -2056,7 +2098,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonSafekeeper = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonSafekeeper = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2064,11 +2106,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonSafekeeper";
 			definition = "Entity appointed by the ICSDs to provide safekeeping for securities in new global note (NGN) form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected MaturityRedemptionType2Choice redemptionType;
 	/**
 	 * Indicates the type of redemption at maturity.
 	 * <p>
@@ -2097,7 +2140,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Indicates the type of redemption at maturity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2105,11 +2148,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionType";
 			definition = "Indicates the type of redemption at maturity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MaturityRedemptionType2Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode redemptionPaymentCurrency;
 	/**
 	 * ISO currency for the payment of the cash proceeds.
 	 * <p>
@@ -2138,7 +2182,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "ISO currency for the payment of the cash proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionPaymentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionPaymentCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2146,11 +2190,12 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPaymentCurrency";
 			definition = "ISO currency for the payment of the cash proceeds.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityRestriction1> restriction;
 	/**
 	 * Regulatory restriction(s) linked to the security.
 	 * <p>
@@ -2177,7 +2222,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Regulatory restriction(s) linked to the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Restriction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRestriction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2186,10 +2231,11 @@ public class CommonFinancialInstrumentAttributes1 {
 			name = "Restriction";
 			definition = "Regulatory restriction(s) linked to the security.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityRestriction1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityRestriction1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SettlementInformation4> settlementInformation;
 	/**
 	 * Settlement of the securities in a securities transaction, that is, the
 	 * instruction to deliver or receive securities, involving the payment of an
@@ -2220,7 +2266,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2229,10 +2275,11 @@ public class CommonFinancialInstrumentAttributes1 {
 			name = "SettlementInformation";
 			definition = "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.";
 			minOccurs = 0;
-			type_lazy = () -> SettlementInformation4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementInformation4.mmObject();
 		}
 	};
+	protected FinancialInstrumentForm1 financialInstrumentForm;
 	/**
 	 * Indicates the form of the financial Instrument
 	 * <p>
@@ -2260,7 +2307,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * definition} = "Indicates the form of the financial Instrument"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentForm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentForm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2268,12 +2315,13 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentForm";
 			definition = "Indicates the form of the financial Instrument";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentForm1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentForm1.mmObject();
 		}
 	};
+	protected Organisation2 contactName;
 	/**
 	 * Details (name, e-mail address and/or telephone number) of the person
 	 * requesting the allocation of the ISIN used as a point of reference in
@@ -2304,7 +2352,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactName = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2312,12 +2360,13 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactName";
 			definition = "Details (name, e-mail address and/or telephone number) of the person requesting the allocation of the ISIN used as a point of reference in case further clarifications are required.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
 		}
 	};
+	protected Organisation2 leadManager;
 	/**
 	 * Entity appointed by the issuer to structure and lead the placement of a
 	 * syndicated issue.
@@ -2347,7 +2396,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LeadManager = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLeadManager = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2355,12 +2404,13 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LeadManager";
 			definition = "Entity appointed by the issuer to structure and lead the placement of a syndicated issue.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
 		}
 	};
+	protected Organisation2 principalPayingAgent;
 	/**
 	 * Main party appointed to distribute payment or securities on behalf of the
 	 * issuer.
@@ -2390,7 +2440,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrincipalPayingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrincipalPayingAgent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2398,12 +2448,13 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalPayingAgent";
 			definition = "Main party appointed to distribute payment or securities on behalf of the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
 		}
 	};
+	protected Organisation2 payingAgent;
 	/**
 	 * Additional party appointed to distribute payment or securities on behalf
 	 * of the issuer.
@@ -2433,7 +2484,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PayingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayingAgent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2441,12 +2492,13 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
 			definition = "Additional party appointed to distribute payment or securities on behalf of the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
 		}
 	};
+	protected Organisation2 depository;
 	/**
 	 * Entity appointed by the relevant clearing system as a depository for
 	 * instruments issued in global or definitive form. The depository keeps the
@@ -2477,7 +2529,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Depository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2485,12 +2537,13 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "Entity appointed by the relevant clearing system as a depository for instruments issued in global or definitive form. The depository keeps the securities for safekeeping purposes on behalf of the clearing system(s).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
 		}
 	};
+	protected Organisation2 underlyingRisk;
 	/**
 	 * Entity(ies), asset(s) or security(ies) on which the credit responsibility
 	 * lies as identified in the documentation.
@@ -2520,7 +2573,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingRisk = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingRisk = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
@@ -2528,44 +2581,44 @@ public class CommonFinancialInstrumentAttributes1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingRisk";
 			definition = "Entity(ies), asset(s) or security(ies) on which the credit responsibility lies as identified in the documentation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.SecurityStatus, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ISOSecurityLongName,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ISOSecurityShortName, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.NameValidFrom,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.DenominationCurrency, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.CertificateNumber,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ContractVersionNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.CouponAttachedNumber,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.TaxLotNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.PoolNumber,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.CoveredIndicator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.LegalRestrictions,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.PositionLimit, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.NearTermPositionLimit,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ListingDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.RecordDate,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ExpiryDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.Purpose,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ClassificationType, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.Issuance,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.TradingMarket, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.SpreadAndBenchmarkCurve,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.PutType, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.CallType,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.FungibleIndicator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.Confidential,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.PrivatePlacement, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ConvertibleIndicator,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ConversionPeriod, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ConversionRatioNumerator,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ConversionRatioDenominator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.PrimaryPlaceOfDeposit,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.TradingMethod, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.TEFRARule,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.SerieNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.Class,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.WithholdingTaxRegime, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.PaymentStatus,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.InitialPhysicalForm, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.AfterExchangePhysicalForm,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.CommonSafekeeper, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.RedemptionType,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.RedemptionPaymentCurrency, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.Restriction,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.SettlementInformation, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.FinancialInstrumentForm,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ContactName, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.LeadManager,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.PrincipalPayingAgent, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.PayingAgent,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.Depository, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.UnderlyingRisk);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmSecurityStatus, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmISOSecurityLongName,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmISOSecurityShortName, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmNameValidFrom,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmDenominationCurrency, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCertificateNumber,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmContractVersionNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCouponAttachedNumber,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmTaxLotNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPoolNumber,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCoveredIndicator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmLegalRestrictions,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPositionLimit, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmNearTermPositionLimit,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmListingDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRecordDate,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmExpiryDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPurpose,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmClassificationType, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmIssuance,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmTradingMarket, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmSpreadAndBenchmarkCurve,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPutType, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCallType,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmFungibleIndicator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConfidential,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPrivatePlacement, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConvertibleIndicator,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConversionPeriod, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConversionRatioNumerator,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConversionRatioDenominator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPrimaryPlaceOfDeposit,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmTradingMethod, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmTEFRARule,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmSerieNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmClass_,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmWithholdingTaxRegime, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPaymentStatus,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmInitialPhysicalForm, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmAfterExchangePhysicalForm,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCommonSafekeeper, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRedemptionType,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRedemptionPaymentCurrency, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRestriction,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmSettlementInformation, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmFinancialInstrumentForm,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmContactName, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmLeadManager,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPrincipalPayingAgent, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPayingAgent,
+						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmDepository, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmUnderlyingRisk);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -2579,5 +2632,421 @@ public class CommonFinancialInstrumentAttributes1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityStatus2Choice getSecurityStatus() {
+		return securityStatus;
+	}
+
+	public void setSecurityStatus(SecurityStatus2Choice securityStatus) {
+		this.securityStatus = securityStatus;
+	}
+
+	public Max350Text getISOSecurityLongName() {
+		return iSOSecurityLongName;
+	}
+
+	public void setISOSecurityLongName(Max350Text iSOSecurityLongName) {
+		this.iSOSecurityLongName = iSOSecurityLongName;
+	}
+
+	public Max35Text getISOSecurityShortName() {
+		return iSOSecurityShortName;
+	}
+
+	public void setISOSecurityShortName(Max35Text iSOSecurityShortName) {
+		this.iSOSecurityShortName = iSOSecurityShortName;
+	}
+
+	public DateAndDateTimeChoice getNameValidFrom() {
+		return nameValidFrom;
+	}
+
+	public void setNameValidFrom(DateAndDateTimeChoice nameValidFrom) {
+		this.nameValidFrom = nameValidFrom;
+	}
+
+	public CurrencyCode getDenominationCurrency() {
+		return denominationCurrency;
+	}
+
+	public void setDenominationCurrency(CurrencyCode denominationCurrency) {
+		this.denominationCurrency = denominationCurrency;
+	}
+
+	public Max35Text getCertificateNumber() {
+		return certificateNumber;
+	}
+
+	public void setCertificateNumber(Max35Text certificateNumber) {
+		this.certificateNumber = certificateNumber;
+	}
+
+	public Number getContractVersionNumber() {
+		return contractVersionNumber;
+	}
+
+	public void setContractVersionNumber(Number contractVersionNumber) {
+		this.contractVersionNumber = contractVersionNumber;
+	}
+
+	public Max3NumericText getCouponAttachedNumber() {
+		return couponAttachedNumber;
+	}
+
+	public void setCouponAttachedNumber(Max3NumericText couponAttachedNumber) {
+		this.couponAttachedNumber = couponAttachedNumber;
+	}
+
+	public Max15NumericText getTaxLotNumber() {
+		return taxLotNumber;
+	}
+
+	public void setTaxLotNumber(Max15NumericText taxLotNumber) {
+		this.taxLotNumber = taxLotNumber;
+	}
+
+	public Max15NumericText getPoolNumber() {
+		return poolNumber;
+	}
+
+	public void setPoolNumber(Max15NumericText poolNumber) {
+		this.poolNumber = poolNumber;
+	}
+
+	public YesNoIndicator getCoveredIndicator() {
+		return coveredIndicator;
+	}
+
+	public void setCoveredIndicator(YesNoIndicator coveredIndicator) {
+		this.coveredIndicator = coveredIndicator;
+	}
+
+	public LegalRestrictions3Choice getLegalRestrictions() {
+		return legalRestrictions;
+	}
+
+	public void setLegalRestrictions(LegalRestrictions3Choice legalRestrictions) {
+		this.legalRestrictions = legalRestrictions;
+	}
+
+	public FinancialInstrumentQuantity1Choice getPositionLimit() {
+		return positionLimit;
+	}
+
+	public void setPositionLimit(FinancialInstrumentQuantity1Choice positionLimit) {
+		this.positionLimit = positionLimit;
+	}
+
+	public FinancialInstrumentQuantity1Choice getNearTermPositionLimit() {
+		return nearTermPositionLimit;
+	}
+
+	public void setNearTermPositionLimit(FinancialInstrumentQuantity1Choice nearTermPositionLimit) {
+		this.nearTermPositionLimit = nearTermPositionLimit;
+	}
+
+	public ISODate getListingDate() {
+		return listingDate;
+	}
+
+	public void setListingDate(ISODate listingDate) {
+		this.listingDate = listingDate;
+	}
+
+	public ISODateTime getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(ISODateTime recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public ISODate getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(ISODate expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public Max256Text getPurpose() {
+		return purpose;
+	}
+
+	public void setPurpose(Max256Text purpose) {
+		this.purpose = purpose;
+	}
+
+	public ClassificationType1 getClassificationType() {
+		return classificationType;
+	}
+
+	public void setClassificationType(com.tools20022.repository.msg.ClassificationType1 classificationType) {
+		this.classificationType = classificationType;
+	}
+
+	public Issuance1 getIssuance() {
+		return issuance;
+	}
+
+	public void setIssuance(com.tools20022.repository.msg.Issuance1 issuance) {
+		this.issuance = issuance;
+	}
+
+	public List<TradingParameters1> getTradingMarket() {
+		return tradingMarket;
+	}
+
+	public void setTradingMarket(List<com.tools20022.repository.msg.TradingParameters1> tradingMarket) {
+		this.tradingMarket = tradingMarket;
+	}
+
+	public List<BenchmarkCurve2> getSpreadAndBenchmarkCurve() {
+		return spreadAndBenchmarkCurve;
+	}
+
+	public void setSpreadAndBenchmarkCurve(List<com.tools20022.repository.msg.BenchmarkCurve2> spreadAndBenchmarkCurve) {
+		this.spreadAndBenchmarkCurve = spreadAndBenchmarkCurve;
+	}
+
+	public PutType2Choice getPutType() {
+		return putType;
+	}
+
+	public void setPutType(PutType2Choice putType) {
+		this.putType = putType;
+	}
+
+	public CallType2Choice getCallType() {
+		return callType;
+	}
+
+	public void setCallType(CallType2Choice callType) {
+		this.callType = callType;
+	}
+
+	public YesNoIndicator getFungibleIndicator() {
+		return fungibleIndicator;
+	}
+
+	public void setFungibleIndicator(YesNoIndicator fungibleIndicator) {
+		this.fungibleIndicator = fungibleIndicator;
+	}
+
+	public YesNoIndicator getConfidential() {
+		return confidential;
+	}
+
+	public void setConfidential(YesNoIndicator confidential) {
+		this.confidential = confidential;
+	}
+
+	public YesNoIndicator getPrivatePlacement() {
+		return privatePlacement;
+	}
+
+	public void setPrivatePlacement(YesNoIndicator privatePlacement) {
+		this.privatePlacement = privatePlacement;
+	}
+
+	public YesNoIndicator getConvertibleIndicator() {
+		return convertibleIndicator;
+	}
+
+	public void setConvertibleIndicator(YesNoIndicator convertibleIndicator) {
+		this.convertibleIndicator = convertibleIndicator;
+	}
+
+	public DateTimePeriodDetails getConversionPeriod() {
+		return conversionPeriod;
+	}
+
+	public void setConversionPeriod(com.tools20022.repository.msg.DateTimePeriodDetails conversionPeriod) {
+		this.conversionPeriod = conversionPeriod;
+	}
+
+	public FinancialInstrumentQuantity1Choice getConversionRatioNumerator() {
+		return conversionRatioNumerator;
+	}
+
+	public void setConversionRatioNumerator(FinancialInstrumentQuantity1Choice conversionRatioNumerator) {
+		this.conversionRatioNumerator = conversionRatioNumerator;
+	}
+
+	public FinancialInstrumentQuantity1Choice getConversionRatioDenominator() {
+		return conversionRatioDenominator;
+	}
+
+	public void setConversionRatioDenominator(FinancialInstrumentQuantity1Choice conversionRatioDenominator) {
+		this.conversionRatioDenominator = conversionRatioDenominator;
+	}
+
+	public PartyIdentification71Choice getPrimaryPlaceOfDeposit() {
+		return primaryPlaceOfDeposit;
+	}
+
+	public void setPrimaryPlaceOfDeposit(PartyIdentification71Choice primaryPlaceOfDeposit) {
+		this.primaryPlaceOfDeposit = primaryPlaceOfDeposit;
+	}
+
+	public UnitOrFaceAmount1Choice getTradingMethod() {
+		return tradingMethod;
+	}
+
+	public void setTradingMethod(UnitOrFaceAmount1Choice tradingMethod) {
+		this.tradingMethod = tradingMethod;
+	}
+
+	public TEFRARules2Choice getTEFRARule() {
+		return tEFRARule;
+	}
+
+	public void setTEFRARule(TEFRARules2Choice tEFRARule) {
+		this.tEFRARule = tEFRARule;
+	}
+
+	public Max16Text getSerieNumber() {
+		return serieNumber;
+	}
+
+	public void setSerieNumber(Max16Text serieNumber) {
+		this.serieNumber = serieNumber;
+	}
+
+	public Max16Text getClass_() {
+		return class_;
+	}
+
+	public void setClass_(Max16Text class_) {
+		this.class_ = class_;
+	}
+
+	public List<SecurityWithHoldingTax1> getWithholdingTaxRegime() {
+		return withholdingTaxRegime;
+	}
+
+	public void setWithholdingTaxRegime(List<com.tools20022.repository.msg.SecurityWithHoldingTax1> withholdingTaxRegime) {
+		this.withholdingTaxRegime = withholdingTaxRegime;
+	}
+
+	public SecuritiesPaymentStatus4Choice getPaymentStatus() {
+		return paymentStatus;
+	}
+
+	public void setPaymentStatus(SecuritiesPaymentStatus4Choice paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
+
+	public InitialPhysicalForm2Choice getInitialPhysicalForm() {
+		return initialPhysicalForm;
+	}
+
+	public void setInitialPhysicalForm(InitialPhysicalForm2Choice initialPhysicalForm) {
+		this.initialPhysicalForm = initialPhysicalForm;
+	}
+
+	public InitialPhysicalForm1Choice getAfterExchangePhysicalForm() {
+		return afterExchangePhysicalForm;
+	}
+
+	public void setAfterExchangePhysicalForm(InitialPhysicalForm1Choice afterExchangePhysicalForm) {
+		this.afterExchangePhysicalForm = afterExchangePhysicalForm;
+	}
+
+	public AnyBICIdentifier getCommonSafekeeper() {
+		return commonSafekeeper;
+	}
+
+	public void setCommonSafekeeper(AnyBICIdentifier commonSafekeeper) {
+		this.commonSafekeeper = commonSafekeeper;
+	}
+
+	public MaturityRedemptionType2Choice getRedemptionType() {
+		return redemptionType;
+	}
+
+	public void setRedemptionType(MaturityRedemptionType2Choice redemptionType) {
+		this.redemptionType = redemptionType;
+	}
+
+	public ActiveCurrencyCode getRedemptionPaymentCurrency() {
+		return redemptionPaymentCurrency;
+	}
+
+	public void setRedemptionPaymentCurrency(ActiveCurrencyCode redemptionPaymentCurrency) {
+		this.redemptionPaymentCurrency = redemptionPaymentCurrency;
+	}
+
+	public List<SecurityRestriction1> getRestriction() {
+		return restriction;
+	}
+
+	public void setRestriction(List<com.tools20022.repository.msg.SecurityRestriction1> restriction) {
+		this.restriction = restriction;
+	}
+
+	public List<SettlementInformation4> getSettlementInformation() {
+		return settlementInformation;
+	}
+
+	public void setSettlementInformation(List<com.tools20022.repository.msg.SettlementInformation4> settlementInformation) {
+		this.settlementInformation = settlementInformation;
+	}
+
+	public FinancialInstrumentForm1 getFinancialInstrumentForm() {
+		return financialInstrumentForm;
+	}
+
+	public void setFinancialInstrumentForm(com.tools20022.repository.msg.FinancialInstrumentForm1 financialInstrumentForm) {
+		this.financialInstrumentForm = financialInstrumentForm;
+	}
+
+	public Organisation2 getContactName() {
+		return contactName;
+	}
+
+	public void setContactName(com.tools20022.repository.msg.Organisation2 contactName) {
+		this.contactName = contactName;
+	}
+
+	public Organisation2 getLeadManager() {
+		return leadManager;
+	}
+
+	public void setLeadManager(com.tools20022.repository.msg.Organisation2 leadManager) {
+		this.leadManager = leadManager;
+	}
+
+	public Organisation2 getPrincipalPayingAgent() {
+		return principalPayingAgent;
+	}
+
+	public void setPrincipalPayingAgent(com.tools20022.repository.msg.Organisation2 principalPayingAgent) {
+		this.principalPayingAgent = principalPayingAgent;
+	}
+
+	public Organisation2 getPayingAgent() {
+		return payingAgent;
+	}
+
+	public void setPayingAgent(com.tools20022.repository.msg.Organisation2 payingAgent) {
+		this.payingAgent = payingAgent;
+	}
+
+	public Organisation2 getDepository() {
+		return depository;
+	}
+
+	public void setDepository(com.tools20022.repository.msg.Organisation2 depository) {
+		this.depository = depository;
+	}
+
+	public Organisation2 getUnderlyingRisk() {
+		return underlyingRisk;
+	}
+
+	public void setUnderlyingRisk(com.tools20022.repository.msg.Organisation2 underlyingRisk) {
+		this.underlyingRisk = underlyingRisk;
 	}
 }

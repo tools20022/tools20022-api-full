@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType5Code#Unknown
- * PriceValueType5Code.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType5Code#mmUnknown
+ * PriceValueType5Code.mmUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType5Code#OpenDated
- * PriceValueType5Code.OpenDated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType5Code#mmOpenDated
+ * PriceValueType5Code.mmOpenDated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class PriceValueType5Code extends PriceValueTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -104,7 +104,7 @@ public class PriceValueType5Code extends PriceValueTypeCode {
 	 * name} = "OpenDated"</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenDated = new MMCode() {
+	public static final MMCode mmOpenDated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenDated";
@@ -115,12 +115,12 @@ public class PriceValueType5Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType5Code";
 				definition = "Specifies  the value of a price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType5Code.Unknown, com.tools20022.repository.codeset.PriceValueType5Code.OpenDated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType5Code.mmUnknown, com.tools20022.repository.codeset.PriceValueType5Code.mmOpenDated);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

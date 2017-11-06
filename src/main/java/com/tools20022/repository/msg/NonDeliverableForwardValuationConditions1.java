@@ -38,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#SettlementCurrency
- * NonDeliverableForwardValuationConditions1.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#mmSettlementCurrency
+ * NonDeliverableForwardValuationConditions1.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#ValuationDate
- * NonDeliverableForwardValuationConditions1.ValuationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#mmValuationDate
+ * NonDeliverableForwardValuationConditions1.mmValuationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#AdditionalValuationInformation
- * NonDeliverableForwardValuationConditions1.AdditionalValuationInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#mmAdditionalValuationInformation
+ * NonDeliverableForwardValuationConditions1.mmAdditionalValuationInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#SettlementParty
- * NonDeliverableForwardValuationConditions1.SettlementParty}</li>
+ * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#mmSettlementParty
+ * NonDeliverableForwardValuationConditions1.mmSettlementParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NonDeliverableForwardValuationConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyCode settlementCurrency;
 	/**
 	 * Specifies the currency in which the non deliverable trade has to be
 	 * settled ie the deliverable currency.
@@ -88,8 +89,8 @@ public class NonDeliverableForwardValuationConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#SettlementCurrency
-	 * NonDeliverableTrade.SettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#mmSettlementCurrency
+	 * NonDeliverableTrade.mmSettlementCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class NonDeliverableForwardValuationConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmSettlementCurrency;
 			componentContext_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.SettlementCurrency;
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Specifies the currency in which the non deliverable trade has to be settled ie the deliverable currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ISODate valuationDate;
 	/**
 	 * Date at which the rate used for calculating the net amount to be settled
 	 * is observed.
@@ -137,8 +139,8 @@ public class NonDeliverableForwardValuationConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FixingCondition#FixingDateTime
-	 * FixingCondition.FixingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.FixingCondition#mmFixingDateTime
+	 * FixingCondition.mmFixingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +161,21 @@ public class NonDeliverableForwardValuationConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.FixingDateTime;
 			isDerived = false;
 			xmlTag = "ValtnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDate";
 			definition = "Date at which the rate used for calculating the net amount to be settled is observed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max140Text additionalValuationInformation;
 	/**
 	 * Free format text that may contain valuation information such as the
 	 * place, the time or the source of the rate.
@@ -203,7 +206,7 @@ public class NonDeliverableForwardValuationConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalValuationInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalValuationInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
 			isDerived = false;
@@ -211,11 +214,12 @@ public class NonDeliverableForwardValuationConditions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalValuationInformation";
 			definition = "Free format text that may contain valuation information such as the place, the time or the source of the rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PartyIdentification7Choice settlementParty;
 	/**
 	 * Party through which the settlement will take place. It may contain the
 	 * BIC of a central settlement system eg CLSBUS33.
@@ -230,8 +234,8 @@ public class NonDeliverableForwardValuationConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,17 +256,17 @@ public class NonDeliverableForwardValuationConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementParty = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "SttlmPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParty";
 			definition = "Party through which the settlement will take place. It may contain the BIC of a central settlement system eg CLSBUS33.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification7Choice.mmObject();
 		}
 	};
@@ -270,15 +274,48 @@ public class NonDeliverableForwardValuationConditions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.SettlementCurrency, com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.ValuationDate,
-						com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.AdditionalValuationInformation, com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.SettlementParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmSettlementCurrency,
+						com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmValuationDate, com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmAdditionalValuationInformation,
+						com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmSettlementParty);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NonDeliverableForwardValuationConditions1";
 				definition = "Set of parameters used to calculate the fixing rate to be applied to a non-deliverable agreement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyCode getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(ActiveOrHistoricCurrencyCode settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public ISODate getValuationDate() {
+		return valuationDate;
+	}
+
+	public void setValuationDate(ISODate valuationDate) {
+		this.valuationDate = valuationDate;
+	}
+
+	public Max140Text getAdditionalValuationInformation() {
+		return additionalValuationInformation;
+	}
+
+	public void setAdditionalValuationInformation(Max140Text additionalValuationInformation) {
+		this.additionalValuationInformation = additionalValuationInformation;
+	}
+
+	public PartyIdentification7Choice getSettlementParty() {
+		return settlementParty;
+	}
+
+	public void setSettlementParty(PartyIdentification7Choice settlementParty) {
+		this.settlementParty = settlementParty;
 	}
 }

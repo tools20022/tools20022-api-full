@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PendingActivity2#Type
- * PendingActivity2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PendingActivity2#Description
- * PendingActivity2.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingActivity2#mmType
+ * PendingActivity2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingActivity2#mmDescription
+ * PendingActivity2.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,102 +45,102 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#RequestForAction
- * AcknowledgementV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmRequestForAction
+ * AcknowledgementV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#RequestForAction
- * AmendmentAcceptanceNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#mmRequestForAction
+ * AmendmentAcceptanceNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#RequestForAction
- * AmendmentRejectionNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#mmRequestForAction
+ * AmendmentRejectionNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#RequestForAction
- * BaselineMatchReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmRequestForAction
+ * BaselineMatchReportV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#RequestForAction
- * BaselineReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmRequestForAction
+ * BaselineReportV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#RequestForAction
- * DataSetMatchReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmRequestForAction
+ * DataSetMatchReportV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#RequestForAction
- * DeltaReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmRequestForAction
+ * DeltaReportV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#RequestForAction
- * ErrorReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmRequestForAction
+ * ErrorReportV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#RequestForAction
- * ForwardDataSetSubmissionReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#mmRequestForAction
+ * ForwardDataSetSubmissionReportV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#RequestForAction
- * FullPushThroughReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#mmRequestForAction
+ * FullPushThroughReportV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#RequestForAction
- * MisMatchAcceptanceNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#mmRequestForAction
+ * MisMatchAcceptanceNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#RequestForAction
- * MisMatchRejectionNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#mmRequestForAction
+ * MisMatchRejectionNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#PendingRequestForAction
- * ActionReminderV03.PendingRequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmPendingRequestForAction
+ * ActionReminderV03.mmPendingRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#RequestForAction
- * StatusChangeNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#mmRequestForAction
+ * StatusChangeNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#RequestForAction
- * StatusChangeRequestNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmRequestForAction
+ * StatusChangeRequestNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#RequestForAction
- * StatusChangeRequestRejectionNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#mmRequestForAction
+ * StatusChangeRequestRejectionNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03#RequestForAction
- * StatusExtensionNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03#mmRequestForAction
+ * StatusExtensionNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#RequestForAction
- * StatusExtensionRejectionNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#mmRequestForAction
+ * StatusExtensionRejectionNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#RequestForAction
- * StatusExtensionRequestNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#mmRequestForAction
+ * StatusExtensionRequestNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#RequestForAction
- * TimeOutNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#mmRequestForAction
+ * TimeOutNotificationV03.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#RequestForAction
- * ForwardIntentToPayNotificationV01.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#mmRequestForAction
+ * ForwardIntentToPayNotificationV01.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#RequestForAction
- * SpecialNotificationV01.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#mmRequestForAction
+ * SpecialNotificationV01.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#RequestForAction
- * RoleAndBaselineAcceptanceNotificationV01.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#mmRequestForAction
+ * RoleAndBaselineAcceptanceNotificationV01.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#RequestForAction
- * RoleAndBaselineRejectionNotificationV01.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#mmRequestForAction
+ * RoleAndBaselineRejectionNotificationV01.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#RequestForAction
- * FullPushThroughReportV04.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#mmRequestForAction
+ * FullPushThroughReportV04.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#RequestForAction
- * ForwardDataSetSubmissionReportV04.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#mmRequestForAction
+ * ForwardDataSetSubmissionReportV04.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#RequestForAction
- * ForwardIntentToPayNotificationV02.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#mmRequestForAction
+ * ForwardIntentToPayNotificationV02.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#RequestForAction
- * BaselineReportV04.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmRequestForAction
+ * BaselineReportV04.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#RequestForAction
- * FullPushThroughReportV05.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#mmRequestForAction
+ * FullPushThroughReportV05.mmRequestForAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#RequestForAction
- * ForwardDataSetSubmissionReportV05.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#mmRequestForAction
+ * ForwardDataSetSubmissionReportV05.mmRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -156,6 +156,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingActivity2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Action2Code type;
 	/**
 	 * Code which specifies the next course of action that the receiver of the
 	 * message must take.
@@ -186,7 +187,7 @@ public class PendingActivity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PendingActivity2.mmObject();
 			isDerived = false;
@@ -194,11 +195,12 @@ public class PendingActivity2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Code which specifies the next course of action that the receiver of the message must take.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Action2Code.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Further information on the course of action that the receiver of the
 	 * message must take.
@@ -229,7 +231,7 @@ public class PendingActivity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PendingActivity2.mmObject();
 			isDerived = false;
@@ -237,8 +239,8 @@ public class PendingActivity2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Further information on the course of action that the receiver of the message must take.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -246,28 +248,44 @@ public class PendingActivity2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingActivity2.Type, com.tools20022.repository.msg.PendingActivity2.Description);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.RequestForAction, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.RequestForAction, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.BaselineReportV03.RequestForAction, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.RequestForAction, com.tools20022.repository.area.tsmt.ErrorReportV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.RequestForAction, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.RequestForAction, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.PendingRequestForAction, com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.RequestForAction, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.RequestForAction, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.RequestForAction, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.RequestForAction,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.RequestForAction, com.tools20022.repository.area.tsmt.SpecialNotificationV01.RequestForAction,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.RequestForAction, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.RequestForAction,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.RequestForAction, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.RequestForAction,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.RequestForAction, com.tools20022.repository.area.tsmt.BaselineReportV04.RequestForAction,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.RequestForAction, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.RequestForAction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingActivity2.mmType, com.tools20022.repository.msg.PendingActivity2.mmDescription);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmRequestForAction, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.BaselineReportV03.mmRequestForAction, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmRequestForAction, com.tools20022.repository.area.tsmt.ErrorReportV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmRequestForAction, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmPendingRequestForAction, com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmRequestForAction, com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmRequestForAction, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmRequestForAction, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmRequestForAction, com.tools20022.repository.area.tsmt.BaselineReportV04.mmRequestForAction,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmRequestForAction, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmRequestForAction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingActivity2";
 				definition = "Specifies the event that require an action from one of the parties to the trade transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Action2Code getType() {
+		return type;
+	}
+
+	public void setType(Action2Code type) {
+		this.type = type;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

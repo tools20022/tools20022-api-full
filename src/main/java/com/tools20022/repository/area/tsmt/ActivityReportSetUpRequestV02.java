@@ -67,18 +67,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#RequestIdentification
- * ActivityReportSetUpRequestV02.RequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#mmRequestIdentification
+ * ActivityReportSetUpRequestV02.mmRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#UTCOffset
- * ActivityReportSetUpRequestV02.UTCOffset}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#mmUTCOffset
+ * ActivityReportSetUpRequestV02.mmUTCOffset}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#identifier
- * ActivityReportSetUpRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.004.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ActivityReportSetUpRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 requestIdentification;
 	/**
 	 * Identifies the request message.
 	 * <p>
@@ -117,17 +116,18 @@ public class ActivityReportSetUpRequestV02 {
 	 * definition} = "Identifies the request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the request message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected UTCOffset1 uTCOffset;
 	/**
 	 * Specifies the parameters to calculate the local reporting time.
 	 * <p>
@@ -151,42 +151,15 @@ public class ActivityReportSetUpRequestV02 {
 	 * "Specifies the parameters to calculate the local reporting time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UTCOffset = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUTCOffset = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UTCOffset";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTCOffset";
 			definition = "Specifies the parameters to calculate the local reporting time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UTCOffset1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "004";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -200,10 +173,33 @@ public class ActivityReportSetUpRequestV02 {
 				rootElement = "Document";
 				xmlTag = "ActvtyRptSetUpReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.RequestIdentification, com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.UTCOffset);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.mmRequestIdentification, com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.mmUTCOffset);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "004";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getRequestIdentification() {
+		return requestIdentification;
+	}
+
+	public void setRequestIdentification(MessageIdentification1 requestIdentification) {
+		this.requestIdentification = requestIdentification;
+	}
+
+	public UTCOffset1 getUTCOffset() {
+		return uTCOffset;
+	}
+
+	public void setUTCOffset(UTCOffset1 uTCOffset) {
+		this.uTCOffset = uTCOffset;
 	}
 }

@@ -57,26 +57,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#Header
- * ATMWithdrawalCompletionAcknowledgementV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#mmHeader
+ * ATMWithdrawalCompletionAcknowledgementV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#ProtectedATMWithdrawalCompletionAcknowledgement
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#mmProtectedATMWithdrawalCompletionAcknowledgement
  * ATMWithdrawalCompletionAcknowledgementV02.
- * ProtectedATMWithdrawalCompletionAcknowledgement}</li>
+ * mmProtectedATMWithdrawalCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#ATMWithdrawalCompletionAcknowledgement
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#mmATMWithdrawalCompletionAcknowledgement
  * ATMWithdrawalCompletionAcknowledgementV02.
- * ATMWithdrawalCompletionAcknowledgement}</li>
+ * mmATMWithdrawalCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#SecurityTrailer
- * ATMWithdrawalCompletionAcknowledgementV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#mmSecurityTrailer
+ * ATMWithdrawalCompletionAcknowledgementV02.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#identifier
- * ATMWithdrawalCompletionAcknowledgementV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catp.004.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMWithdrawalCompletionAcknowledgementV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header32 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -121,17 +120,18 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header32.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMWithdrawalCompletionAcknowledgement;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -155,17 +155,18 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMWithdrawalCompletionAcknowledgement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMWithdrawalCompletionAcknowledgement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMWdrwlCmpltnAck";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMWithdrawalCompletionAcknowledgement";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMWithdrawalCompletionAcknowledgement2 aTMWithdrawalCompletionAcknowledgement;
 	/**
 	 * Information related to the acknowledgement of an ATM withdrawal
 	 * transaction from the ATM manager.
@@ -192,17 +193,18 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMWithdrawalCompletionAcknowledgement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMWithdrawalCompletionAcknowledgement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMWdrwlCmpltnAck";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalCompletionAcknowledgement";
 			definition = "Information related to the acknowledgement  of an ATM withdrawal transaction from the ATM manager.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMWithdrawalCompletionAcknowledgement2.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -226,42 +228,15 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catp";
-			messageFunctionality = "004";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -276,12 +251,53 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 				rootElement = "Document";
 				xmlTag = "ATMWdrwlCmpltnAck";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.Header,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.ProtectedATMWithdrawalCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.ATMWithdrawalCompletionAcknowledgement, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmHeader,
+								com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmProtectedATMWithdrawalCompletionAcknowledgement,
+								com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmATMWithdrawalCompletionAcknowledgement,
+								com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catp";
+						messageFunctionality = "004";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header32 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header32 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMWithdrawalCompletionAcknowledgement() {
+		return protectedATMWithdrawalCompletionAcknowledgement;
+	}
+
+	public void setProtectedATMWithdrawalCompletionAcknowledgement(ContentInformationType10 protectedATMWithdrawalCompletionAcknowledgement) {
+		this.protectedATMWithdrawalCompletionAcknowledgement = protectedATMWithdrawalCompletionAcknowledgement;
+	}
+
+	public ATMWithdrawalCompletionAcknowledgement2 getATMWithdrawalCompletionAcknowledgement() {
+		return aTMWithdrawalCompletionAcknowledgement;
+	}
+
+	public void setATMWithdrawalCompletionAcknowledgement(ATMWithdrawalCompletionAcknowledgement2 aTMWithdrawalCompletionAcknowledgement) {
+		this.aTMWithdrawalCompletionAcknowledgement = aTMWithdrawalCompletionAcknowledgement;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

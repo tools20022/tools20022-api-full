@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.UnrealisedCode UnrealisedCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Unrealised1Code#Gain
- * Unrealised1Code.Gain}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Unrealised1Code#Loss
- * Unrealised1Code.Loss}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Unrealised1Code#mmGain
+ * Unrealised1Code.mmGain}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Unrealised1Code#mmLoss
+ * Unrealised1Code.mmLoss}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class Unrealised1Code extends UnrealisedCode {
 	 * name} = "Gain"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gain = new MMCode() {
+	public static final MMCode mmGain = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gain";
@@ -101,7 +101,7 @@ public class Unrealised1Code extends UnrealisedCode {
 	 * name} = "Loss"</li>
 	 * </ul>
 	 */
-	public static final MMCode Loss = new MMCode() {
+	public static final MMCode mmLoss = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loss";
@@ -112,12 +112,12 @@ public class Unrealised1Code extends UnrealisedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GAIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Unrealised1Code";
 				definition = "Specifies unrealised gain and loss.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Unrealised1Code.Gain, com.tools20022.repository.codeset.Unrealised1Code.Loss);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Unrealised1Code.mmGain, com.tools20022.repository.codeset.Unrealised1Code.mmLoss);
 				trace_lazy = () -> UnrealisedCode.mmObject();
 			}
 		});

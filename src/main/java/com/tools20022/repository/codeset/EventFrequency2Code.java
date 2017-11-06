@@ -33,30 +33,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * EventFrequencyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency2Code#Annual
- * EventFrequency2Code.Annual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#SemiAnnual
- * EventFrequency2Code.SemiAnnual}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#mmAnnual
+ * EventFrequency2Code.mmAnnual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#Quarterly
- * EventFrequency2Code.Quarterly}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#mmSemiAnnual
+ * EventFrequency2Code.mmSemiAnnual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#Monthly
- * EventFrequency2Code.Monthly}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency2Code#Weekly
- * EventFrequency2Code.Weekly}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency2Code#Daily
- * EventFrequency2Code.Daily}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency2Code#Closed
- * EventFrequency2Code.Closed}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#mmQuarterly
+ * EventFrequency2Code.mmQuarterly}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#mmMonthly
+ * EventFrequency2Code.mmMonthly}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#mmWeekly
+ * EventFrequency2Code.mmWeekly}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#mmDaily
+ * EventFrequency2Code.mmDaily}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency2Code#mmClosed
+ * EventFrequency2Code.mmClosed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +96,7 @@ public class EventFrequency2Code extends EventFrequencyCode {
 	 * name} = "Annual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Annual = new MMCode() {
+	public static final MMCode mmAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
@@ -115,7 +119,7 @@ public class EventFrequency2Code extends EventFrequencyCode {
 	 * name} = "SemiAnnual"</li>
 	 * </ul>
 	 */
-	public static final MMCode SemiAnnual = new MMCode() {
+	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
@@ -138,7 +142,7 @@ public class EventFrequency2Code extends EventFrequencyCode {
 	 * name} = "Quarterly"</li>
 	 * </ul>
 	 */
-	public static final MMCode Quarterly = new MMCode() {
+	public static final MMCode mmQuarterly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quarterly";
@@ -161,7 +165,7 @@ public class EventFrequency2Code extends EventFrequencyCode {
 	 * name} = "Monthly"</li>
 	 * </ul>
 	 */
-	public static final MMCode Monthly = new MMCode() {
+	public static final MMCode mmMonthly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
@@ -184,7 +188,7 @@ public class EventFrequency2Code extends EventFrequencyCode {
 	 * name} = "Weekly"</li>
 	 * </ul>
 	 */
-	public static final MMCode Weekly = new MMCode() {
+	public static final MMCode mmWeekly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weekly";
@@ -207,7 +211,7 @@ public class EventFrequency2Code extends EventFrequencyCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode Daily = new MMCode() {
+	public static final MMCode mmDaily = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
@@ -230,7 +234,7 @@ public class EventFrequency2Code extends EventFrequencyCode {
 	 * name} = "Closed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closed = new MMCode() {
+	public static final MMCode mmClosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
@@ -241,14 +245,14 @@ public class EventFrequency2Code extends EventFrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("YEAR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency2Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency2Code.Annual, com.tools20022.repository.codeset.EventFrequency2Code.SemiAnnual,
-						com.tools20022.repository.codeset.EventFrequency2Code.Quarterly, com.tools20022.repository.codeset.EventFrequency2Code.Monthly, com.tools20022.repository.codeset.EventFrequency2Code.Weekly,
-						com.tools20022.repository.codeset.EventFrequency2Code.Daily, com.tools20022.repository.codeset.EventFrequency2Code.Closed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency2Code.mmAnnual, com.tools20022.repository.codeset.EventFrequency2Code.mmSemiAnnual,
+						com.tools20022.repository.codeset.EventFrequency2Code.mmQuarterly, com.tools20022.repository.codeset.EventFrequency2Code.mmMonthly, com.tools20022.repository.codeset.EventFrequency2Code.mmWeekly,
+						com.tools20022.repository.codeset.EventFrequency2Code.mmDaily, com.tools20022.repository.codeset.EventFrequency2Code.mmClosed);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
 			}
 		});

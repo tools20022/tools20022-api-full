@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalVariationMargin1#ShortLongIndicator
- * TotalVariationMargin1.ShortLongIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalVariationMargin1#mmShortLongIndicator
+ * TotalVariationMargin1.mmShortLongIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalVariationMargin1#AmountDetails
- * TotalVariationMargin1.AmountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalVariationMargin1#mmAmountDetails
+ * TotalVariationMargin1.mmAmountDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalVariationMargin1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShortLong1Code shortLongIndicator;
 	/**
 	 * Specifies whether the variation margin position is short or long, that
 	 * is, wether the balance is a negative or positive balance.
@@ -93,7 +94,7 @@ public class TotalVariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalVariationMargin1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class TotalVariationMargin1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongIndicator";
 			definition = "Specifies whether the variation margin position is short or long, that is, wether the balance is a negative or positive balance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	protected Amount2 amountDetails;
 	/**
 	 * Provides the variation margin amount in the reporting currency and
 	 * optionally in the original currency.
@@ -134,7 +136,7 @@ public class TotalVariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TotalVariationMargin1.mmObject();
 			isDerived = false;
@@ -142,23 +144,39 @@ public class TotalVariationMargin1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
 			definition = "Provides the variation margin amount in the reporting currency and optionally in the original currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amount2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalVariationMargin1.ShortLongIndicator, com.tools20022.repository.msg.TotalVariationMargin1.AmountDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalVariationMargin1.mmShortLongIndicator, com.tools20022.repository.msg.TotalVariationMargin1.mmAmountDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalVariationMargin1";
 				definition = "Margin required to cover the risk because of the price fluctuations occurred on the unsettled exposures towards the central counterparty.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShortLong1Code getShortLongIndicator() {
+		return shortLongIndicator;
+	}
+
+	public void setShortLongIndicator(ShortLong1Code shortLongIndicator) {
+		this.shortLongIndicator = shortLongIndicator;
+	}
+
+	public Amount2 getAmountDetails() {
+		return amountDetails;
+	}
+
+	public void setAmountDetails(com.tools20022.repository.msg.Amount2 amountDetails) {
+		this.amountDetails = amountDetails;
 	}
 }

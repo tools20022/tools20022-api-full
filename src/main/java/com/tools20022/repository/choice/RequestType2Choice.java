@@ -35,20 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RequestType2Choice#PaymentControl
- * RequestType2Choice.PaymentControl}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RequestType2Choice#Enquiry
- * RequestType2Choice.Enquiry}</li>
+ * {@linkplain com.tools20022.repository.choice.RequestType2Choice#mmPaymentControl
+ * RequestType2Choice.mmPaymentControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RequestType2Choice#Proprietary
- * RequestType2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RequestType2Choice#mmEnquiry
+ * RequestType2Choice.mmEnquiry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RequestType2Choice#mmProprietary
+ * RequestType2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestType1Code paymentControl;
 	/**
 	 * Request type is a control command on a set of transactions.
 	 * <p>
@@ -91,7 +93,7 @@ public class RequestType2Choice {
 	 * "Request type is a control command on a set of transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentControl = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentControl = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestType2Choice.mmObject();
 			isDerived = false;
@@ -99,11 +101,12 @@ public class RequestType2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentControl";
 			definition = "Request type is a control command on a set of transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestType1Code.mmObject();
 		}
 	};
+	protected RequestType2Code enquiry;
 	/**
 	 * Request type is an enquiry on a position or a transaction.
 	 * <p>
@@ -133,7 +136,7 @@ public class RequestType2Choice {
 	 * "Request type is an enquiry on a position or a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Enquiry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEnquiry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestType2Choice.mmObject();
 			isDerived = false;
@@ -141,11 +144,12 @@ public class RequestType2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enquiry";
 			definition = "Request type is an enquiry on a position or a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestType2Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Request type is in proprietary format.
 	 * <p>
@@ -174,7 +178,7 @@ public class RequestType2Choice {
 	 * definition} = "Request type is in proprietary format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestType2Choice.mmObject();
 			isDerived = false;
@@ -182,8 +186,8 @@ public class RequestType2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Request type is in proprietary format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
@@ -191,14 +195,38 @@ public class RequestType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RequestType2Choice.PaymentControl, com.tools20022.repository.choice.RequestType2Choice.Enquiry,
-						com.tools20022.repository.choice.RequestType2Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RequestType2Choice.mmPaymentControl, com.tools20022.repository.choice.RequestType2Choice.mmEnquiry,
+						com.tools20022.repository.choice.RequestType2Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestType2Choice";
 				definition = "Defines the type of action to be performed in the request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestType1Code getPaymentControl() {
+		return paymentControl;
+	}
+
+	public void setPaymentControl(RequestType1Code paymentControl) {
+		this.paymentControl = paymentControl;
+	}
+
+	public RequestType2Code getEnquiry() {
+		return enquiry;
+	}
+
+	public void setEnquiry(RequestType2Code enquiry) {
+		this.enquiry = enquiry;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

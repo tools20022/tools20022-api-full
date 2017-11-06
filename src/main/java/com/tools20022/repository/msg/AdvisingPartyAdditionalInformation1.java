@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.UndertakingAdvisingParty;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Additional information related to the advising party.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1#ReferenceNumber
- * AdvisingPartyAdditionalInformation1.ReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1#mmReferenceNumber
+ * AdvisingPartyAdditionalInformation1.mmReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1#BankToBeneficiaryInformation
- * AdvisingPartyAdditionalInformation1.BankToBeneficiaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1#mmBankToBeneficiaryInformation
+ * AdvisingPartyAdditionalInformation1.mmBankToBeneficiaryInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdvisingPartyAdditionalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text referenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned as a reference.
 	 * <p>
@@ -92,7 +94,7 @@ public class AdvisingPartyAdditionalInformation1 {
 	 * "Unique and unambiguous identifier assigned as a reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
 			isDerived = false;
@@ -100,11 +102,12 @@ public class AdvisingPartyAdditionalInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned as a reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max2000Text> bankToBeneficiaryInformation;
 	/**
 	 * Additional information specific to the bank-to-beneficiary communication.
 	 * <p>
@@ -134,7 +137,7 @@ public class AdvisingPartyAdditionalInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankToBeneficiaryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankToBeneficiaryInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
 			isDerived = false;
@@ -142,8 +145,8 @@ public class AdvisingPartyAdditionalInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankToBeneficiaryInformation";
 			definition = "Additional information specific to the bank-to-beneficiary communication.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -151,14 +154,31 @@ public class AdvisingPartyAdditionalInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.ReferenceNumber, com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.BankToBeneficiaryInformation);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmReferenceNumber, com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmBankToBeneficiaryInformation);
 				trace_lazy = () -> UndertakingAdvisingParty.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdvisingPartyAdditionalInformation1";
 				definition = "Additional information related to the advising party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReferenceNumber() {
+		return referenceNumber;
+	}
+
+	public void setReferenceNumber(Max35Text referenceNumber) {
+		this.referenceNumber = referenceNumber;
+	}
+
+	public List<Max2000Text> getBankToBeneficiaryInformation() {
+		return bankToBeneficiaryInformation;
+	}
+
+	public void setBankToBeneficiaryInformation(List<Max2000Text> bankToBeneficiaryInformation) {
+		this.bankToBeneficiaryInformation = bankToBeneficiaryInformation;
 	}
 }

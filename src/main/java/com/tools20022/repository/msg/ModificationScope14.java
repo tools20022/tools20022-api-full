@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope14#ModificationScopeIndication
- * ModificationScope14.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope14#mmModificationScopeIndication
+ * ModificationScope14.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope14#InvestorProfileValidation
- * ModificationScope14.InvestorProfileValidation}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope14#mmInvestorProfileValidation
+ * ModificationScope14.mmInvestorProfileValidation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -104,13 +105,13 @@ public class ModificationScope14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope19#ModificationScopeIndication
-	 * ModificationScope19.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope19#mmModificationScopeIndication
+	 * ModificationScope19.mmModificationScopeIndication}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope14.mmObject();
 			isDerived = false;
@@ -118,12 +119,13 @@ public class ModificationScope14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope19.ModificationScopeIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope19.mmModificationScopeIndication);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected PartyProfileInformation2 investorProfileValidation;
 	/**
 	 * Detailed information about the party profile information.
 	 * <p>
@@ -154,13 +156,13 @@ public class ModificationScope14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope19#InvestorProfileValidation
-	 * ModificationScope19.InvestorProfileValidation}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope19#mmInvestorProfileValidation
+	 * ModificationScope19.mmInvestorProfileValidation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestorProfileValidation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestorProfileValidation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope14.mmObject();
 			isDerived = false;
@@ -168,26 +170,42 @@ public class ModificationScope14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorProfileValidation";
 			definition = "Detailed information about the party profile information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope19.InvestorProfileValidation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope19.mmInvestorProfileValidation);
 			maxOccurs = 1;
-			type_lazy = () -> PartyProfileInformation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope14.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope14.InvestorProfileValidation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope14.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope14.mmInvestorProfileValidation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope14";
 				definition = "Scope of the modification to be applied on an identified set of information.";
-				previousVersion_lazy = () -> ModificationScope11.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ModificationScope19.mmObject());
+				previousVersion_lazy = () -> ModificationScope11.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public PartyProfileInformation2 getInvestorProfileValidation() {
+		return investorProfileValidation;
+	}
+
+	public void setInvestorProfileValidation(com.tools20022.repository.msg.PartyProfileInformation2 investorProfileValidation) {
+		this.investorProfileValidation = investorProfileValidation;
 	}
 }

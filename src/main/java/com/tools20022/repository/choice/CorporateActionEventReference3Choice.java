@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionEventReference3Choice#LinkedOfficialCorporateActionEventIdentification
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventReference3Choice#mmLinkedOfficialCorporateActionEventIdentification
  * CorporateActionEventReference3Choice.
- * LinkedOfficialCorporateActionEventIdentification}</li>
+ * mmLinkedOfficialCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionEventReference3Choice#LinkedCorporateActionIdentification
- * CorporateActionEventReference3Choice.LinkedCorporateActionIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventReference3Choice#mmLinkedCorporateActionIdentification
+ * CorporateActionEventReference3Choice.mmLinkedCorporateActionIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionEventReference3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text linkedOfficialCorporateActionEventIdentification;
 	/**
 	 * Official and unique reference assigned by the official central body/
 	 * entity within each market at the beginning of a corporate action event.
@@ -84,9 +85,9 @@ public class CorporateActionEventReference3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#OfficialCorporateActionEventIdentification
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialCorporateActionEventIdentification
 	 * CorporateActionEventRegistration.
-	 * OfficialCorporateActionEventIdentification}</li>
+	 * mmOfficialCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,26 +109,27 @@ public class CorporateActionEventReference3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventReference1Choice#LinkedOfficialCorporateActionEventIdentification
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventReference1Choice#mmLinkedOfficialCorporateActionEventIdentification
 	 * CorporateActionEventReference1Choice.
-	 * LinkedOfficialCorporateActionEventIdentification}</li>
+	 * mmLinkedOfficialCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionEventReference3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.OfficialCorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "LkdOffclCorpActnEvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedOfficialCorporateActionEventIdentification";
 			definition = "Official and unique reference assigned by the official central body/ entity within each market at the beginning of a corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference1Choice.LinkedOfficialCorporateActionEventIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference1Choice.mmLinkedOfficialCorporateActionEventIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text linkedCorporateActionIdentification;
 	/**
 	 * Reference assigned by the account servicer to unambiguously identify a
 	 * related corporate action event.
@@ -141,8 +143,8 @@ public class CorporateActionEventReference3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#CorporateActionEventIdentification
-	 * CorporateActionEventRegistration.CorporateActionEventIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEventIdentification
+	 * CorporateActionEventRegistration.mmCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,23 +166,23 @@ public class CorporateActionEventReference3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventReference1Choice#LinkedCorporateActionIdentification
-	 * CorporateActionEventReference1Choice.LinkedCorporateActionIdentification}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventReference1Choice#mmLinkedCorporateActionIdentification
+	 * CorporateActionEventReference1Choice.
+	 * mmLinkedCorporateActionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedCorporateActionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionEventReference3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.CorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "LkdCorpActnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedCorporateActionIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a related corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference1Choice.LinkedCorporateActionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference1Choice.mmLinkedCorporateActionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -188,10 +190,10 @@ public class CorporateActionEventReference3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventReference3Choice.LinkedOfficialCorporateActionEventIdentification,
-						com.tools20022.repository.choice.CorporateActionEventReference3Choice.LinkedCorporateActionIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventReference3Choice.mmLinkedOfficialCorporateActionEventIdentification,
+						com.tools20022.repository.choice.CorporateActionEventReference3Choice.mmLinkedCorporateActionIdentification);
 				trace_lazy = () -> CorporateActionEventRegistration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventReference3Choice";
 				definition = "Choice between a corporate action identification or a corporate action official identification.";
@@ -199,5 +201,21 @@ public class CorporateActionEventReference3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getLinkedOfficialCorporateActionEventIdentification() {
+		return linkedOfficialCorporateActionEventIdentification;
+	}
+
+	public void setLinkedOfficialCorporateActionEventIdentification(Max35Text linkedOfficialCorporateActionEventIdentification) {
+		this.linkedOfficialCorporateActionEventIdentification = linkedOfficialCorporateActionEventIdentification;
+	}
+
+	public Max35Text getLinkedCorporateActionIdentification() {
+		return linkedCorporateActionIdentification;
+	}
+
+	public void setLinkedCorporateActionIdentification(Max35Text linkedCorporateActionIdentification) {
+		this.linkedCorporateActionIdentification = linkedCorporateActionIdentification;
 	}
 }

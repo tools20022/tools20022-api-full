@@ -34,61 +34,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#Regular
- * SettlementDate2Code.Regular}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate2Code#Cash
- * SettlementDate2Code.Cash}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmRegular
+ * SettlementDate2Code.mmRegular}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmCash
+ * SettlementDate2Code.mmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#NextDay
- * SettlementDate2Code.NextDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmNextDay
+ * SettlementDate2Code.mmNextDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusOne
- * SettlementDate2Code.TPlusOne}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusOne
+ * SettlementDate2Code.mmTPlusOne}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusTwo
- * SettlementDate2Code.TPlusTwo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusTwo
+ * SettlementDate2Code.mmTPlusTwo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusThree
- * SettlementDate2Code.TPlusThree}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusThree
+ * SettlementDate2Code.mmTPlusThree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusFour
- * SettlementDate2Code.TPlusFour}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusFour
+ * SettlementDate2Code.mmTPlusFour}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusFive
- * SettlementDate2Code.TPlusFive}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusFive
+ * SettlementDate2Code.mmTPlusFive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#SellersOption
- * SettlementDate2Code.SellersOption}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate2Code#Future
- * SettlementDate2Code.Future}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmSellersOption
+ * SettlementDate2Code.mmSellersOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#AsSoonAsPossible
- * SettlementDate2Code.AsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmFuture
+ * SettlementDate2Code.mmFuture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#AtEndOfContract
- * SettlementDate2Code.AtEndOfContract}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmAsSoonAsPossible
+ * SettlementDate2Code.mmAsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#WhenAndIfIssued
- * SettlementDate2Code.WhenAndIfIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmAtEndOfContract
+ * SettlementDate2Code.mmAtEndOfContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#WhenDistributed
- * SettlementDate2Code.WhenDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmWhenAndIfIssued
+ * SettlementDate2Code.mmWhenAndIfIssued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#WhenIssuedOrDistributed
- * SettlementDate2Code.WhenIssuedOrDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmWhenDistributed
+ * SettlementDate2Code.mmWhenDistributed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#ToBeAnnouncedTrade
- * SettlementDate2Code.ToBeAnnouncedTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmWhenIssuedOrDistributed
+ * SettlementDate2Code.mmWhenIssuedOrDistributed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#EndOfMonth
- * SettlementDate2Code.EndOfMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmToBeAnnouncedTrade
+ * SettlementDate2Code.mmToBeAnnouncedTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmEndOfMonth
+ * SettlementDate2Code.mmEndOfMonth}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -124,7 +125,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "Regular"</li>
 	 * </ul>
 	 */
-	public static final MMCode Regular = new MMCode() {
+	public static final MMCode mmRegular = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
@@ -147,7 +148,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -170,7 +171,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "NextDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode NextDay = new MMCode() {
+	public static final MMCode mmNextDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextDay";
@@ -193,7 +194,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusOne"</li>
 	 * </ul>
 	 */
-	public static final MMCode TPlusOne = new MMCode() {
+	public static final MMCode mmTPlusOne = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusOne";
@@ -216,7 +217,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusTwo"</li>
 	 * </ul>
 	 */
-	public static final MMCode TPlusTwo = new MMCode() {
+	public static final MMCode mmTPlusTwo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusTwo";
@@ -239,7 +240,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusThree"</li>
 	 * </ul>
 	 */
-	public static final MMCode TPlusThree = new MMCode() {
+	public static final MMCode mmTPlusThree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusThree";
@@ -262,7 +263,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusFour"</li>
 	 * </ul>
 	 */
-	public static final MMCode TPlusFour = new MMCode() {
+	public static final MMCode mmTPlusFour = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusFour";
@@ -285,7 +286,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusFive"</li>
 	 * </ul>
 	 */
-	public static final MMCode TPlusFive = new MMCode() {
+	public static final MMCode mmTPlusFive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusFive";
@@ -308,7 +309,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "SellersOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellersOption = new MMCode() {
+	public static final MMCode mmSellersOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersOption";
@@ -331,7 +332,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "Future"</li>
 	 * </ul>
 	 */
-	public static final MMCode Future = new MMCode() {
+	public static final MMCode mmFuture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
@@ -354,7 +355,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "AsSoonAsPossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode AsSoonAsPossible = new MMCode() {
+	public static final MMCode mmAsSoonAsPossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsSoonAsPossible";
@@ -377,7 +378,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "AtEndOfContract"</li>
 	 * </ul>
 	 */
-	public static final MMCode AtEndOfContract = new MMCode() {
+	public static final MMCode mmAtEndOfContract = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtEndOfContract";
@@ -400,7 +401,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "WhenAndIfIssued"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhenAndIfIssued = new MMCode() {
+	public static final MMCode mmWhenAndIfIssued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenAndIfIssued";
@@ -423,7 +424,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "WhenDistributed"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhenDistributed = new MMCode() {
+	public static final MMCode mmWhenDistributed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenDistributed";
@@ -446,7 +447,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "WhenIssuedOrDistributed"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhenIssuedOrDistributed = new MMCode() {
+	public static final MMCode mmWhenIssuedOrDistributed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenIssuedOrDistributed";
@@ -469,7 +470,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "ToBeAnnouncedTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToBeAnnouncedTrade = new MMCode() {
+	public static final MMCode mmToBeAnnouncedTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeAnnouncedTrade";
@@ -492,7 +493,7 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "EndOfMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfMonth = new MMCode() {
+	public static final MMCode mmEndOfMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonth";
@@ -503,18 +504,18 @@ public class SettlementDate2Code extends SettlementDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REGU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate2Code";
 				definition = "Indicates the date of settlement in coded form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate2Code.Regular, com.tools20022.repository.codeset.SettlementDate2Code.Cash, com.tools20022.repository.codeset.SettlementDate2Code.NextDay,
-						com.tools20022.repository.codeset.SettlementDate2Code.TPlusOne, com.tools20022.repository.codeset.SettlementDate2Code.TPlusTwo, com.tools20022.repository.codeset.SettlementDate2Code.TPlusThree,
-						com.tools20022.repository.codeset.SettlementDate2Code.TPlusFour, com.tools20022.repository.codeset.SettlementDate2Code.TPlusFive, com.tools20022.repository.codeset.SettlementDate2Code.SellersOption,
-						com.tools20022.repository.codeset.SettlementDate2Code.Future, com.tools20022.repository.codeset.SettlementDate2Code.AsSoonAsPossible, com.tools20022.repository.codeset.SettlementDate2Code.AtEndOfContract,
-						com.tools20022.repository.codeset.SettlementDate2Code.WhenAndIfIssued, com.tools20022.repository.codeset.SettlementDate2Code.WhenDistributed,
-						com.tools20022.repository.codeset.SettlementDate2Code.WhenIssuedOrDistributed, com.tools20022.repository.codeset.SettlementDate2Code.ToBeAnnouncedTrade,
-						com.tools20022.repository.codeset.SettlementDate2Code.EndOfMonth);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate2Code.mmRegular, com.tools20022.repository.codeset.SettlementDate2Code.mmCash, com.tools20022.repository.codeset.SettlementDate2Code.mmNextDay,
+						com.tools20022.repository.codeset.SettlementDate2Code.mmTPlusOne, com.tools20022.repository.codeset.SettlementDate2Code.mmTPlusTwo, com.tools20022.repository.codeset.SettlementDate2Code.mmTPlusThree,
+						com.tools20022.repository.codeset.SettlementDate2Code.mmTPlusFour, com.tools20022.repository.codeset.SettlementDate2Code.mmTPlusFive, com.tools20022.repository.codeset.SettlementDate2Code.mmSellersOption,
+						com.tools20022.repository.codeset.SettlementDate2Code.mmFuture, com.tools20022.repository.codeset.SettlementDate2Code.mmAsSoonAsPossible, com.tools20022.repository.codeset.SettlementDate2Code.mmAtEndOfContract,
+						com.tools20022.repository.codeset.SettlementDate2Code.mmWhenAndIfIssued, com.tools20022.repository.codeset.SettlementDate2Code.mmWhenDistributed,
+						com.tools20022.repository.codeset.SettlementDate2Code.mmWhenIssuedOrDistributed, com.tools20022.repository.codeset.SettlementDate2Code.mmToBeAnnouncedTrade,
+						com.tools20022.repository.codeset.SettlementDate2Code.mmEndOfMonth);
 				trace_lazy = () -> SettlementDateCode.mmObject();
 			}
 		});

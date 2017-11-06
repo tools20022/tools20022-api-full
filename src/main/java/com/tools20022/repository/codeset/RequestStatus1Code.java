@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestStatus1Code#Financed
- * RequestStatus1Code.Financed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RequestStatus1Code#Pending
- * RequestStatus1Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestStatus1Code#mmFinanced
+ * RequestStatus1Code.mmFinanced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestStatus1Code#NotFinanced
- * RequestStatus1Code.NotFinanced}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestStatus1Code#mmPending
+ * RequestStatus1Code.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RequestStatus1Code#mmNotFinanced
+ * RequestStatus1Code.mmNotFinanced}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class RequestStatus1Code extends RequestStatusCode {
 	 * name} = "Financed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Financed = new MMCode() {
+	public static final MMCode mmFinanced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Financed";
@@ -106,7 +107,7 @@ public class RequestStatus1Code extends RequestStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -129,7 +130,7 @@ public class RequestStatus1Code extends RequestStatusCode {
 	 * name} = "NotFinanced"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotFinanced = new MMCode() {
+	public static final MMCode mmNotFinanced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFinanced";
@@ -140,12 +141,13 @@ public class RequestStatus1Code extends RequestStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FNCD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestStatus1Code";
 				definition = "Specifies the coded status of invoice financing request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestStatus1Code.Financed, com.tools20022.repository.codeset.RequestStatus1Code.Pending, com.tools20022.repository.codeset.RequestStatus1Code.NotFinanced);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestStatus1Code.mmFinanced, com.tools20022.repository.codeset.RequestStatus1Code.mmPending,
+						com.tools20022.repository.codeset.RequestStatus1Code.mmNotFinanced);
 				trace_lazy = () -> RequestStatusCode.mmObject();
 			}
 		});

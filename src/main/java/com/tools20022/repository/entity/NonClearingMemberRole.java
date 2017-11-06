@@ -37,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Report1#NonClearingMember
- * Report1.NonClearingMember}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report1#mmNonClearingMember
+ * Report1.mmNonClearingMember}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,11 +68,11 @@ public class NonClearingMemberRole extends ThirdPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NonClearingMemberRole";
 				definition = "Party that is involved in a trade but which must clear the trade through a member of an exchange's clearing corporation.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report1.NonClearingMember);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report1.mmNonClearingMember);
 				superType_lazy = () -> ThirdPartyRole.mmObject();
 			}
 		});

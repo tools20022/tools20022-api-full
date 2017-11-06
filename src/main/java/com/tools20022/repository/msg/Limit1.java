@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max3NumericText;
+import com.tools20022.repository.entity.Limit;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,8 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Limit1#Current Limit1.Current}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limit1#Limit Limit1.Limit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmCurrent
+ * Limit1.mmCurrent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmLimit Limit1.mmLimit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#BaselineEstablishmentTrials
- * BaselineMatchReportV03.BaselineEstablishmentTrials}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmBaselineEstablishmentTrials
+ * BaselineMatchReportV03.mmBaselineEstablishmentTrials}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Limit1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max3NumericText current;
 	/**
 	 * Number of occurrences of a particular event.
 	 * <p>
@@ -99,20 +102,21 @@ public class Limit1 {
 	 * definition} = "Number of occurrences of a particular event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Current = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrent = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> Limit.mmObject();
 			componentContext_lazy = () -> Limit1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
 			xmlTag = "Cur";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			definition = "Number of occurrences of a particular event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected Max3NumericText limit;
 	/**
 	 * Specifies the maximum number of times an event may occur.
 	 * <p>
@@ -145,17 +149,17 @@ public class Limit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Limit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimit = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> Limit.mmObject();
 			componentContext_lazy = () -> Limit1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Specifies the maximum number of times an event may occur.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
@@ -163,15 +167,31 @@ public class Limit1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limit1.Current, com.tools20022.repository.msg.Limit1.Limit);
-				trace_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.BaselineEstablishmentTrials);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limit1.mmCurrent, com.tools20022.repository.msg.Limit1.mmLimit);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBaselineEstablishmentTrials);
+				trace_lazy = () -> Limit.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Limit1";
 				definition = "Specifies the number of occurrences of a particular event and the maximum number of times this event may occur.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max3NumericText getCurrent() {
+		return current;
+	}
+
+	public void setCurrent(Max3NumericText current) {
+		this.current = current;
+	}
+
+	public Max3NumericText getLimit() {
+		return limit;
+	}
+
+	public void setLimit(Max3NumericText limit) {
+		this.limit = limit;
 	}
 }

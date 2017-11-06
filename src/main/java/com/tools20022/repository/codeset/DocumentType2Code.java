@@ -34,45 +34,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#MeteredServiceInvoice
- * DocumentType2Code.MeteredServiceInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmMeteredServiceInvoice
+ * DocumentType2Code.mmMeteredServiceInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#CreditNoteRelatedToFinancialAdjustment
- * DocumentType2Code.CreditNoteRelatedToFinancialAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmCreditNoteRelatedToFinancialAdjustment
+ * DocumentType2Code.mmCreditNoteRelatedToFinancialAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#DebitNoteRelatedToFinancialAdjustment
- * DocumentType2Code.DebitNoteRelatedToFinancialAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmDebitNoteRelatedToFinancialAdjustment
+ * DocumentType2Code.mmDebitNoteRelatedToFinancialAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#CommercialInvoice
- * DocumentType2Code.CommercialInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmCommercialInvoice
+ * DocumentType2Code.mmCommercialInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#CreditNote
- * DocumentType2Code.CreditNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmCreditNote
+ * DocumentType2Code.mmCreditNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#DebitNote
- * DocumentType2Code.DebitNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmDebitNote
+ * DocumentType2Code.mmDebitNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#HireInvoice
- * DocumentType2Code.HireInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmHireInvoice
+ * DocumentType2Code.mmHireInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#SelfBilledInvoice
- * DocumentType2Code.SelfBilledInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmSelfBilledInvoice
+ * DocumentType2Code.mmSelfBilledInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#CommercialContract
- * DocumentType2Code.CommercialContract}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmCommercialContract
+ * DocumentType2Code.mmCommercialContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#StatementOfAccount
- * DocumentType2Code.StatementOfAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmStatementOfAccount
+ * DocumentType2Code.mmStatementOfAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#DispatchAdvice
- * DocumentType2Code.DispatchAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType2Code#mmDispatchAdvice
+ * DocumentType2Code.mmDispatchAdvice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +108,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "MeteredServiceInvoice"</li>
 	 * </ul>
 	 */
-	public static final MMCode MeteredServiceInvoice = new MMCode() {
+	public static final MMCode mmMeteredServiceInvoice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeteredServiceInvoice";
@@ -131,7 +131,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "CreditNoteRelatedToFinancialAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditNoteRelatedToFinancialAdjustment = new MMCode() {
+	public static final MMCode mmCreditNoteRelatedToFinancialAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNoteRelatedToFinancialAdjustment";
@@ -154,7 +154,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "DebitNoteRelatedToFinancialAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DebitNoteRelatedToFinancialAdjustment = new MMCode() {
+	public static final MMCode mmDebitNoteRelatedToFinancialAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitNoteRelatedToFinancialAdjustment";
@@ -177,7 +177,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "CommercialInvoice"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialInvoice = new MMCode() {
+	public static final MMCode mmCommercialInvoice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialInvoice";
@@ -200,7 +200,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "CreditNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditNote = new MMCode() {
+	public static final MMCode mmCreditNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNote";
@@ -223,7 +223,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "DebitNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode DebitNote = new MMCode() {
+	public static final MMCode mmDebitNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitNote";
@@ -246,7 +246,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "HireInvoice"</li>
 	 * </ul>
 	 */
-	public static final MMCode HireInvoice = new MMCode() {
+	public static final MMCode mmHireInvoice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HireInvoice";
@@ -269,7 +269,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "SelfBilledInvoice"</li>
 	 * </ul>
 	 */
-	public static final MMCode SelfBilledInvoice = new MMCode() {
+	public static final MMCode mmSelfBilledInvoice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfBilledInvoice";
@@ -292,7 +292,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "CommercialContract"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialContract = new MMCode() {
+	public static final MMCode mmCommercialContract = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialContract";
@@ -315,7 +315,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "StatementOfAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode StatementOfAccount = new MMCode() {
+	public static final MMCode mmStatementOfAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementOfAccount";
@@ -338,7 +338,7 @@ public class DocumentType2Code extends DocumentTypeCode {
 	 * name} = "DispatchAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode DispatchAdvice = new MMCode() {
+	public static final MMCode mmDispatchAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DispatchAdvice";
@@ -349,16 +349,16 @@ public class DocumentType2Code extends DocumentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MSIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentType2Code";
 				definition = "Specifies a type of financial or commercial document.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DocumentType2Code.MeteredServiceInvoice, com.tools20022.repository.codeset.DocumentType2Code.CreditNoteRelatedToFinancialAdjustment,
-						com.tools20022.repository.codeset.DocumentType2Code.DebitNoteRelatedToFinancialAdjustment, com.tools20022.repository.codeset.DocumentType2Code.CommercialInvoice,
-						com.tools20022.repository.codeset.DocumentType2Code.CreditNote, com.tools20022.repository.codeset.DocumentType2Code.DebitNote, com.tools20022.repository.codeset.DocumentType2Code.HireInvoice,
-						com.tools20022.repository.codeset.DocumentType2Code.SelfBilledInvoice, com.tools20022.repository.codeset.DocumentType2Code.CommercialContract, com.tools20022.repository.codeset.DocumentType2Code.StatementOfAccount,
-						com.tools20022.repository.codeset.DocumentType2Code.DispatchAdvice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DocumentType2Code.mmMeteredServiceInvoice, com.tools20022.repository.codeset.DocumentType2Code.mmCreditNoteRelatedToFinancialAdjustment,
+						com.tools20022.repository.codeset.DocumentType2Code.mmDebitNoteRelatedToFinancialAdjustment, com.tools20022.repository.codeset.DocumentType2Code.mmCommercialInvoice,
+						com.tools20022.repository.codeset.DocumentType2Code.mmCreditNote, com.tools20022.repository.codeset.DocumentType2Code.mmDebitNote, com.tools20022.repository.codeset.DocumentType2Code.mmHireInvoice,
+						com.tools20022.repository.codeset.DocumentType2Code.mmSelfBilledInvoice, com.tools20022.repository.codeset.DocumentType2Code.mmCommercialContract,
+						com.tools20022.repository.codeset.DocumentType2Code.mmStatementOfAccount, com.tools20022.repository.codeset.DocumentType2Code.mmDispatchAdvice);
 				trace_lazy = () -> DocumentTypeCode.mmObject();
 			}
 		});

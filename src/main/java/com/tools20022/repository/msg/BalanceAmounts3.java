@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3#HoldingValue
- * BalanceAmounts3.HoldingValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmHoldingValue
+ * BalanceAmounts3.mmHoldingValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#PreviousHoldingValue
- * BalanceAmounts3.PreviousHoldingValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3#BookValue
- * BalanceAmounts3.BookValue}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmPreviousHoldingValue
+ * BalanceAmounts3.mmPreviousHoldingValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmBookValue
+ * BalanceAmounts3.mmBookValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#EligibleCollateralValue
- * BalanceAmounts3.EligibleCollateralValue}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmEligibleCollateralValue
+ * BalanceAmounts3.mmEligibleCollateralValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#AccruedInterestAmount
- * BalanceAmounts3.AccruedInterestAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmAccruedInterestAmount
+ * BalanceAmounts3.mmAccruedInterestAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BalanceAmounts3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection6 holdingValue;
 	/**
 	 * Value of an individual financial instrument holding within a safekeeping
 	 * account.
@@ -83,8 +84,8 @@ public class BalanceAmounts3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#HoldingValue
-	 * AssetHolding.HoldingValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHoldingValue
+	 * AssetHolding.mmHoldingValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class BalanceAmounts3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> BalanceAmounts3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.HoldingValue;
 			isDerived = false;
 			xmlTag = "HldgVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingValue";
 			definition = "Value of an individual financial instrument holding within a safekeeping account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	protected AmountAndDirection6 previousHoldingValue;
 	/**
 	 * Previous value of an individual financial instrument holding within a
 	 * safekeeping account.
@@ -133,8 +135,8 @@ public class BalanceAmounts3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#HoldingValue
-	 * AssetHolding.HoldingValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHoldingValue
+	 * AssetHolding.mmHoldingValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,20 +157,21 @@ public class BalanceAmounts3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousHoldingValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousHoldingValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> BalanceAmounts3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.HoldingValue;
 			isDerived = false;
 			xmlTag = "PrvsHldgVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousHoldingValue";
 			definition = "Previous value of an individual financial instrument holding within a safekeeping account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	protected AmountAndDirection6 bookValue;
 	/**
 	 * Value of a financial instrument, as booked/acquired in an account. It may
 	 * be used to establish capital gain tax liability.
@@ -183,8 +186,8 @@ public class BalanceAmounts3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#BookValue
-	 * AssetHolding.BookValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,20 +208,21 @@ public class BalanceAmounts3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBookValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
 			componentContext_lazy = () -> BalanceAmounts3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.BookValue;
 			isDerived = false;
 			xmlTag = "BookVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookValue";
 			definition = "Value of a financial instrument, as booked/acquired in an account. It may be used to establish capital gain tax liability.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	protected AmountAndDirection6 eligibleCollateralValue;
 	/**
 	 * Value of the position eligible for collateral purposes.
 	 * <p>
@@ -232,8 +236,8 @@ public class BalanceAmounts3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#EligibleCollateralValue
-	 * AssetHolding.EligibleCollateralValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmEligibleCollateralValue
+	 * AssetHolding.mmEligibleCollateralValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,20 +256,21 @@ public class BalanceAmounts3 {
 	 * definition} = "Value of the position eligible for collateral purposes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EligibleCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEligibleCollateralValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmEligibleCollateralValue;
 			componentContext_lazy = () -> BalanceAmounts3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.EligibleCollateralValue;
 			isDerived = false;
 			xmlTag = "ElgblCollVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleCollateralValue";
 			definition = "Value of the position eligible for collateral purposes.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	protected AmountAndDirection6 accruedInterestAmount;
 	/**
 	 * Interest amount that has accrued in between coupon payment periods.
 	 * <p>
@@ -279,8 +284,8 @@ public class BalanceAmounts3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,33 +305,73 @@ public class BalanceAmounts3 {
 	 * "Interest amount that has accrued in between coupon payment periods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> BalanceAmounts3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts3.HoldingValue, com.tools20022.repository.msg.BalanceAmounts3.PreviousHoldingValue,
-						com.tools20022.repository.msg.BalanceAmounts3.BookValue, com.tools20022.repository.msg.BalanceAmounts3.EligibleCollateralValue, com.tools20022.repository.msg.BalanceAmounts3.AccruedInterestAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts3.mmHoldingValue, com.tools20022.repository.msg.BalanceAmounts3.mmPreviousHoldingValue,
+						com.tools20022.repository.msg.BalanceAmounts3.mmBookValue, com.tools20022.repository.msg.BalanceAmounts3.mmEligibleCollateralValue, com.tools20022.repository.msg.BalanceAmounts3.mmAccruedInterestAmount);
 				trace_lazy = () -> AssetHolding.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceAmounts3";
 				definition = "Amounts linked to a securities balance, for example, holding value.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection6 getHoldingValue() {
+		return holdingValue;
+	}
+
+	public void setHoldingValue(com.tools20022.repository.msg.AmountAndDirection6 holdingValue) {
+		this.holdingValue = holdingValue;
+	}
+
+	public AmountAndDirection6 getPreviousHoldingValue() {
+		return previousHoldingValue;
+	}
+
+	public void setPreviousHoldingValue(com.tools20022.repository.msg.AmountAndDirection6 previousHoldingValue) {
+		this.previousHoldingValue = previousHoldingValue;
+	}
+
+	public AmountAndDirection6 getBookValue() {
+		return bookValue;
+	}
+
+	public void setBookValue(com.tools20022.repository.msg.AmountAndDirection6 bookValue) {
+		this.bookValue = bookValue;
+	}
+
+	public AmountAndDirection6 getEligibleCollateralValue() {
+		return eligibleCollateralValue;
+	}
+
+	public void setEligibleCollateralValue(com.tools20022.repository.msg.AmountAndDirection6 eligibleCollateralValue) {
+		this.eligibleCollateralValue = eligibleCollateralValue;
+	}
+
+	public AmountAndDirection6 getAccruedInterestAmount() {
+		return accruedInterestAmount;
+	}
+
+	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection6 accruedInterestAmount) {
+		this.accruedInterestAmount = accruedInterestAmount;
 	}
 }

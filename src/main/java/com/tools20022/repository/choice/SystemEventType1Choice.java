@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.SystemEventType1Choice#Code
- * SystemEventType1Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SystemEventType1Choice#ProprietaryEvent
- * SystemEventType1Choice.ProprietaryEvent}</li>
+ * {@linkplain com.tools20022.repository.choice.SystemEventType1Choice#mmCode
+ * SystemEventType1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SystemEventType1Choice#mmProprietaryEvent
+ * SystemEventType1Choice.mmProprietaryEvent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemEventType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemEventType2Code code;
 	/**
 	 * Nature of the event that has occurred.
 	 * <p>
@@ -71,8 +73,8 @@ public class SystemEventType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#Type
-	 * SystemEventInformation.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmType
+	 * SystemEventInformation.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -91,20 +93,21 @@ public class SystemEventType1Choice {
 	 * definition} = "Nature of the event that has occurred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmType;
 			componentContext_lazy = () -> SystemEventType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.Type;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Nature of the event that has occurred.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SystemEventType2Code.mmObject();
 		}
 	};
+	protected Max140Text proprietaryEvent;
 	/**
 	 * Type of event, expressed as free text or a bilaterally agreed code.
 	 * <p>
@@ -133,7 +136,7 @@ public class SystemEventType1Choice {
 	 * "Type of event, expressed as free text or a bilaterally agreed code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryEvent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryEvent = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemEventType1Choice.mmObject();
 			isDerived = false;
@@ -141,8 +144,8 @@ public class SystemEventType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryEvent";
 			definition = "Type of event, expressed as free text or a bilaterally agreed code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -150,13 +153,29 @@ public class SystemEventType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemEventType1Choice.Code, com.tools20022.repository.choice.SystemEventType1Choice.ProprietaryEvent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemEventType1Choice.mmCode, com.tools20022.repository.choice.SystemEventType1Choice.mmProprietaryEvent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemEventType1Choice";
 				definition = "Choice between a code and a free format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemEventType2Code getCode() {
+		return code;
+	}
+
+	public void setCode(SystemEventType2Code code) {
+		this.code = code;
+	}
+
+	public Max140Text getProprietaryEvent() {
+		return proprietaryEvent;
+	}
+
+	public void setProprietaryEvent(Max140Text proprietaryEvent) {
+		this.proprietaryEvent = proprietaryEvent;
 	}
 }

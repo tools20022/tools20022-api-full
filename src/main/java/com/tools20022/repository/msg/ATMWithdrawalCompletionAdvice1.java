@@ -32,14 +32,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1#Environment
- * ATMWithdrawalCompletionAdvice1.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1#mmEnvironment
+ * ATMWithdrawalCompletionAdvice1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1#Context
- * ATMWithdrawalCompletionAdvice1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1#mmContext
+ * ATMWithdrawalCompletionAdvice1.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1#Transaction
- * ATMWithdrawalCompletionAdvice1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1#mmTransaction
+ * ATMWithdrawalCompletionAdvice1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01#ATMWithdrawalCompletionAdvice
- * ATMWithdrawalCompletionAdviceV01.ATMWithdrawalCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01#mmATMWithdrawalCompletionAdvice
+ * ATMWithdrawalCompletionAdviceV01.mmATMWithdrawalCompletionAdvice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMWithdrawalCompletionAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment3 environment;
 	/**
 	 * Environment of the withdrawal transaction.
 	 * <p>
@@ -96,7 +97,7 @@ public class ATMWithdrawalCompletionAdvice1 {
 	 * definition} = "Environment of the withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMWithdrawalCompletionAdvice1.mmObject();
 			isDerived = false;
@@ -104,12 +105,13 @@ public class ATMWithdrawalCompletionAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the withdrawal transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment3.mmObject();
 		}
 	};
+	protected ATMContext2 context;
 	/**
 	 * Context in which the transaction is performed.
 	 * <p>
@@ -136,7 +138,7 @@ public class ATMWithdrawalCompletionAdvice1 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMWithdrawalCompletionAdvice1.mmObject();
 			isDerived = false;
@@ -144,12 +146,13 @@ public class ATMWithdrawalCompletionAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext2.mmObject();
 		}
 	};
+	protected ATMTransaction3 transaction;
 	/**
 	 * Withdrawal transaction for which the completion is sent.
 	 * <p>
@@ -176,7 +179,7 @@ public class ATMWithdrawalCompletionAdvice1 {
 	 * definition} = "Withdrawal transaction for which the completion is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMWithdrawalCompletionAdvice1.mmObject();
 			isDerived = false;
@@ -184,25 +187,49 @@ public class ATMWithdrawalCompletionAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Withdrawal transaction for which the completion is sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1.Environment, com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1.Context,
-						com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.ATMWithdrawalCompletionAdvice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1.mmEnvironment, com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1.mmContext,
+						com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmATMWithdrawalCompletionAdvice);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMWithdrawalCompletionAdvice1";
 				definition = "Information related to the completion of a withdrawal on the ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment3 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment3 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext2 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext2 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction3 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction3 transaction) {
+		this.transaction = transaction;
 	}
 }

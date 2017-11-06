@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#Diagnostic
- * ATMCommandReasonCode.Diagnostic}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmDiagnostic
+ * ATMCommandReasonCode.mmDiagnostic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#Monitoring
- * ATMCommandReasonCode.Monitoring}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmMonitoring
+ * ATMCommandReasonCode.mmMonitoring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#SecurityError
- * ATMCommandReasonCode.SecurityError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmSecurityError
+ * ATMCommandReasonCode.mmSecurityError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#Synchronisation
- * ATMCommandReasonCode.Synchronisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmSynchronisation
+ * ATMCommandReasonCode.mmSynchronisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#Update
- * ATMCommandReasonCode.Update}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmUpdate
+ * ATMCommandReasonCode.mmUpdate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,7 +93,7 @@ public class ATMCommandReasonCode {
 	 * "Request the status of or action from the ATM to perform a diagnostic."</li>
 	 * </ul>
 	 */
-	public static final MMCode Diagnostic = new MMCode() {
+	public static final MMCode mmDiagnostic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Diagnostic";
@@ -123,7 +123,7 @@ public class ATMCommandReasonCode {
 	 * definition} = "Supervise the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode Monitoring = new MMCode() {
+	public static final MMCode mmMonitoring = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monitoring";
@@ -153,7 +153,7 @@ public class ATMCommandReasonCode {
 	 * definition} = "Security error."</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityError = new MMCode() {
+	public static final MMCode mmSecurityError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityError";
@@ -183,7 +183,7 @@ public class ATMCommandReasonCode {
 	 * definition} = "Desynchronisation of dialogue between entities."</li>
 	 * </ul>
 	 */
-	public static final MMCode Synchronisation = new MMCode() {
+	public static final MMCode mmSynchronisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Synchronisation";
@@ -213,7 +213,7 @@ public class ATMCommandReasonCode {
 	 * definition} = "Update the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode Update = new MMCode() {
+	public static final MMCode mmUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
@@ -226,12 +226,12 @@ public class ATMCommandReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandReasonCode";
 				definition = "Reason for sending or requesting a maintenance command.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommandReasonCode.Diagnostic, com.tools20022.repository.codeset.ATMCommandReasonCode.Monitoring,
-						com.tools20022.repository.codeset.ATMCommandReasonCode.SecurityError, com.tools20022.repository.codeset.ATMCommandReasonCode.Synchronisation, com.tools20022.repository.codeset.ATMCommandReasonCode.Update);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommandReasonCode.mmDiagnostic, com.tools20022.repository.codeset.ATMCommandReasonCode.mmMonitoring,
+						com.tools20022.repository.codeset.ATMCommandReasonCode.mmSecurityError, com.tools20022.repository.codeset.ATMCommandReasonCode.mmSynchronisation, com.tools20022.repository.codeset.ATMCommandReasonCode.mmUpdate);
 				derivation_lazy = () -> Arrays.asList(ATMCommandReason1Code.mmObject());
 			}
 		});

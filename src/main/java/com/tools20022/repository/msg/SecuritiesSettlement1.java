@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
 import java.util.function.Supplier;
 
 /**
@@ -38,18 +39,20 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#Currency
- * SecuritiesSettlement1.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#Date
- * SecuritiesSettlement1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#DateCode
- * SecuritiesSettlement1.DateCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#PlaceOfSettlement
- * SecuritiesSettlement1.PlaceOfSettlement}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#mmCurrency
+ * SecuritiesSettlement1.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#mmDate
+ * SecuritiesSettlement1.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#SafekeepingAccountDetails
- * SecuritiesSettlement1.SafekeepingAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#mmDateCode
+ * SecuritiesSettlement1.mmDateCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#mmPlaceOfSettlement
+ * SecuritiesSettlement1.mmPlaceOfSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#mmSafekeepingAccountDetails
+ * SecuritiesSettlement1.mmSafekeepingAccountDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +61,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -74,6 +77,7 @@ import java.util.function.Supplier;
 public class SecuritiesSettlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyCode currency;
 	/**
 	 * Currency to be used for settlement of the settlement amount.
 	 * <p>
@@ -86,8 +90,8 @@ public class SecuritiesSettlement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#SettlementCurrency
-	 * SecuritiesOrder.SettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSettlementCurrency
+	 * SecuritiesOrder.mmSettlementCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +111,21 @@ public class SecuritiesSettlement1 {
 	 * "Currency to be used for settlement of the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSettlementCurrency;
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.SettlementCurrency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency to be used for settlement of the settlement amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Date and time at which the securities are to be delivered or received.
 	 * <p>
@@ -133,8 +138,8 @@ public class SecuritiesSettlement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +159,21 @@ public class SecuritiesSettlement1 {
 	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date and time at which the securities are to be delivered or received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DateType1Choice dateCode;
 	/**
 	 * Indicates the date of settlement in coded form or using a data source
 	 * scheme.
@@ -199,7 +205,7 @@ public class SecuritiesSettlement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
 			isDerived = false;
@@ -207,11 +213,12 @@ public class SecuritiesSettlement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Indicates the date of settlement in coded form or using a data source scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateType1Choice.mmObject();
 		}
 	};
+	protected PartyIdentification23 placeOfSettlement;
 	/**
 	 * Place where settlement of the securities takes place.
 	 * <p>
@@ -223,8 +230,8 @@ public class SecuritiesSettlement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -243,21 +250,22 @@ public class SecuritiesSettlement1 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlaceOfSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlaceOfSettlement = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "PlcOfSttlm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSettlement";
 			definition = "Place where settlement of the securities takes place.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification23.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
 		}
 	};
+	protected SecuritiesAccount2 safekeepingAccountDetails;
 	/**
 	 * A business relationship between two entities; one entity is the account
 	 * owner, the other entity is the account servicer.
@@ -270,8 +278,8 @@ public class SecuritiesSettlement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesAccount
-	 * Security.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesAccount
+	 * Security.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -292,31 +300,32 @@ public class SecuritiesSettlement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "SfkpgAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountDetails";
 			definition = "A business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlement1.Currency, com.tools20022.repository.msg.SecuritiesSettlement1.Date, com.tools20022.repository.msg.SecuritiesSettlement1.DateCode,
-						com.tools20022.repository.msg.SecuritiesSettlement1.PlaceOfSettlement, com.tools20022.repository.msg.SecuritiesSettlement1.SafekeepingAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlement1.mmCurrency, com.tools20022.repository.msg.SecuritiesSettlement1.mmDate,
+						com.tools20022.repository.msg.SecuritiesSettlement1.mmDateCode, com.tools20022.repository.msg.SecuritiesSettlement1.mmPlaceOfSettlement,
+						com.tools20022.repository.msg.SecuritiesSettlement1.mmSafekeepingAccountDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
-				removalDate = ((Supplier<java.util.Date>) (() -> {
+				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
 					} catch (Exception e) {
@@ -328,5 +337,45 @@ public class SecuritiesSettlement1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public DateType1Choice getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(DateType1Choice dateCode) {
+		this.dateCode = dateCode;
+	}
+
+	public PartyIdentification23 getPlaceOfSettlement() {
+		return placeOfSettlement;
+	}
+
+	public void setPlaceOfSettlement(com.tools20022.repository.msg.PartyIdentification23 placeOfSettlement) {
+		this.placeOfSettlement = placeOfSettlement;
+	}
+
+	public SecuritiesAccount2 getSafekeepingAccountDetails() {
+		return safekeepingAccountDetails;
+	}
+
+	public void setSafekeepingAccountDetails(com.tools20022.repository.msg.SecuritiesAccount2 safekeepingAccountDetails) {
+		this.safekeepingAccountDetails = safekeepingAccountDetails;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementFrequencyReason1Choice#Code
- * StatementFrequencyReason1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementFrequencyReason1Choice#mmCode
+ * StatementFrequencyReason1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementFrequencyReason1Choice#Proprietary
- * StatementFrequencyReason1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementFrequencyReason1Choice#mmProprietary
+ * StatementFrequencyReason1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementFrequencyReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected EventFrequency1Code code;
 	/**
 	 * Statement frequency expressed as a code.
 	 * <p>
@@ -102,13 +103,13 @@ public class StatementFrequencyReason1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.StatementFrequencyReason2Choice#Code
-	 * StatementFrequencyReason2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.StatementFrequencyReason2Choice#mmCode
+	 * StatementFrequencyReason2Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementFrequencyReason1Choice.mmObject();
 			isDerived = false;
@@ -116,12 +117,13 @@ public class StatementFrequencyReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Statement frequency expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason2Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason2Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Statement frequency expressed as a proprietary code.
 	 * <p>
@@ -152,13 +154,13 @@ public class StatementFrequencyReason1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.StatementFrequencyReason2Choice#Proprietary
-	 * StatementFrequencyReason2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.StatementFrequencyReason2Choice#mmProprietary
+	 * StatementFrequencyReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementFrequencyReason1Choice.mmObject();
 			isDerived = false;
@@ -166,9 +168,9 @@ public class StatementFrequencyReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Statement frequency expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason2Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason2Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -176,9 +178,9 @@ public class StatementFrequencyReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason1Choice.Code, com.tools20022.repository.choice.StatementFrequencyReason1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason1Choice.mmCode, com.tools20022.repository.choice.StatementFrequencyReason1Choice.mmProprietary);
 				trace_lazy = () -> ReportingService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementFrequencyReason1Choice";
 				definition = "Choice of formats for the specification of the statement frequency.";
@@ -186,5 +188,21 @@ public class StatementFrequencyReason1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EventFrequency1Code getCode() {
+		return code;
+	}
+
+	public void setCode(EventFrequency1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

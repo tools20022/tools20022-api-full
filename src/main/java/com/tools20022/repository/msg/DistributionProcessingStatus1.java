@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DistributionProcessingStatus1#Status
- * DistributionProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.DistributionProcessingStatus1#mmStatus
+ * DistributionProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DistributionProcessingStatus1#AdditionalInformation
- * DistributionProcessingStatus1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DistributionProcessingStatus1#mmAdditionalInformation
+ * DistributionProcessingStatus1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DistributionProcessingStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProcessedStatus3FormatChoice status;
 	/**
 	 * The processing status.
 	 * <p>
@@ -88,7 +89,7 @@ public class DistributionProcessingStatus1 {
 	 * definition} = "The processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DistributionProcessingStatus1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class DistributionProcessingStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "The processing status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProcessedStatus3FormatChoice.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the status.
 	 * <p>
@@ -128,7 +130,7 @@ public class DistributionProcessingStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DistributionProcessingStatus1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class DistributionProcessingStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class DistributionProcessingStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DistributionProcessingStatus1.Status, com.tools20022.repository.msg.DistributionProcessingStatus1.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DistributionProcessingStatus1.mmStatus, com.tools20022.repository.msg.DistributionProcessingStatus1.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DistributionProcessingStatus1";
 				definition = "Provides information about the processing status of a global movement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProcessedStatus3FormatChoice getStatus() {
+		return status;
+	}
+
+	public void setStatus(ProcessedStatus3FormatChoice status) {
+		this.status = status;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

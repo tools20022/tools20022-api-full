@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#NonEligibleCurrency
- * NonEligibleProceedsIndicator1Code.NonEligibleCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#mmNonEligibleCurrency
+ * NonEligibleProceedsIndicator1Code.mmNonEligibleCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#AccountLimitation
- * NonEligibleProceedsIndicator1Code.AccountLimitation}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#mmAccountLimitation
+ * NonEligibleProceedsIndicator1Code.mmAccountLimitation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#OtherNonEligibility
- * NonEligibleProceedsIndicator1Code.OtherNonEligibility}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#mmOtherNonEligibility
+ * NonEligibleProceedsIndicator1Code.mmOtherNonEligibility}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 * name} = "NonEligibleCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonEligibleCurrency = new MMCode() {
+	public static final MMCode mmNonEligibleCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleCurrency";
@@ -109,7 +109,7 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 * name} = "AccountLimitation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountLimitation = new MMCode() {
+	public static final MMCode mmAccountLimitation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountLimitation";
@@ -132,7 +132,7 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 * name} = "OtherNonEligibility"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherNonEligibility = new MMCode() {
+	public static final MMCode mmOtherNonEligibility = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonEligibility";
@@ -143,13 +143,13 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NELC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NonEligibleProceedsIndicator1Code";
 				definition = "Specifies information regarding the non eligibility of the outturn resources.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.NonEligibleCurrency, com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.AccountLimitation,
-						com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.OtherNonEligibility);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmNonEligibleCurrency, com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmAccountLimitation,
+						com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmOtherNonEligibility);
 				trace_lazy = () -> NonEligibleProceedsIndicatorCode.mmObject();
 			}
 		});

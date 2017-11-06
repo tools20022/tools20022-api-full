@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatus20Choice#Forwarded
- * PendingStatus20Choice.Forwarded}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatus20Choice#mmForwarded
+ * PendingStatus20Choice.mmForwarded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatus20Choice#UnderInvestigation
- * PendingStatus20Choice.UnderInvestigation}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatus20Choice#mmUnderInvestigation
+ * PendingStatus20Choice.mmUnderInvestigation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingStatus20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoSpecifiedReason1 forwarded;
 	/**
 	 * Allegement is forwarded.
 	 * <p>
@@ -94,21 +95,22 @@ public class PendingStatus20Choice {
 	 * definition} = "Allegement is forwarded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Forwarded = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForwarded = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PendingStatus20Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> PendingStatus20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fwdd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forwarded";
 			definition = "Allegement is forwarded.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NoSpecifiedReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
+	protected NoSpecifiedReason1 underInvestigation;
 	/**
 	 * Allegement is under investigation.
 	 * <p>
@@ -140,33 +142,49 @@ public class PendingStatus20Choice {
 	 * definition} = "Allegement is under investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderInvestigation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderInvestigation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PendingStatus20Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> PendingStatus20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UdrInvstgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderInvestigation";
 			definition = "Allegement is under investigation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NoSpecifiedReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus20Choice.Forwarded, com.tools20022.repository.choice.PendingStatus20Choice.UnderInvestigation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus20Choice.mmForwarded, com.tools20022.repository.choice.PendingStatus20Choice.mmUnderInvestigation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingStatus20Choice";
 				definition = "Choice of format for the matching status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoSpecifiedReason1 getForwarded() {
+		return forwarded;
+	}
+
+	public void setForwarded(NoSpecifiedReason1 forwarded) {
+		this.forwarded = forwarded;
+	}
+
+	public NoSpecifiedReason1 getUnderInvestigation() {
+		return underInvestigation;
+	}
+
+	public void setUnderInvestigation(NoSpecifiedReason1 underInvestigation) {
+		this.underInvestigation = underInvestigation;
 	}
 }

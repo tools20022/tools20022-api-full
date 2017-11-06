@@ -29,11 +29,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LevelOfControlCode#View
- * LevelOfControlCode.View}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LevelOfControlCode#mmView
+ * LevelOfControlCode.mmView}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LevelOfControlCode#Transactions
- * LevelOfControlCode.Transactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.LevelOfControlCode#mmTransactions
+ * LevelOfControlCode.mmTransactions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,7 +82,7 @@ public class LevelOfControlCode {
 	 * definition} = "Account may be viewed only."</li>
 	 * </ul>
 	 */
-	public static final MMCode View = new MMCode() {
+	public static final MMCode mmView = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "View";
@@ -112,7 +112,7 @@ public class LevelOfControlCode {
 	 * definition} = "Transactions are permitted on the account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Transactions = new MMCode() {
+	public static final MMCode mmTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transactions";
@@ -125,11 +125,11 @@ public class LevelOfControlCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LevelOfControlCode";
 				definition = "Specifies the level of control.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LevelOfControlCode.View, com.tools20022.repository.codeset.LevelOfControlCode.Transactions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LevelOfControlCode.mmView, com.tools20022.repository.codeset.LevelOfControlCode.mmTransactions);
 				derivation_lazy = () -> Arrays.asList(LevelOfControl1Code.mmObject());
 			}
 		});

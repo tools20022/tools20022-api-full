@@ -38,33 +38,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#ActualSenderIdentification
- * IsabelAdminHeader2.ActualSenderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#mmActualSenderIdentification
+ * IsabelAdminHeader2.mmActualSenderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#PayloadCreationDate
- * IsabelAdminHeader2.PayloadCreationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#mmPayloadCreationDate
+ * IsabelAdminHeader2.mmPayloadCreationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#MessageRequestType
- * IsabelAdminHeader2.MessageRequestType}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#mmMessageRequestType
+ * IsabelAdminHeader2.mmMessageRequestType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#MessageIdentification
- * IsabelAdminHeader2.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#mmMessageIdentification
+ * IsabelAdminHeader2.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#DestinationMailBoxIdentification
- * IsabelAdminHeader2.DestinationMailBoxIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#mmDestinationMailBoxIdentification
+ * IsabelAdminHeader2.mmDestinationMailBoxIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#ReferredMessage
- * IsabelAdminHeader2.ReferredMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#mmReferredMessage
+ * IsabelAdminHeader2.mmReferredMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#ReferredSendTimeStamp
- * IsabelAdminHeader2.ReferredSendTimeStamp}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelAdminHeader2#mmReferredSendTimeStamp
+ * IsabelAdminHeader2.mmReferredSendTimeStamp}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelAdminHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max13AlphaNumericText actualSenderIdentification;
 	/**
 	 * Unique identification of the actual sender of the file.
 	 * <p>
@@ -106,7 +107,7 @@ public class IsabelAdminHeader2 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualSenderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -114,11 +115,12 @@ public class IsabelAdminHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualSenderIdentification";
 			definition = "Unique identification of the actual sender of the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice payloadCreationDate;
 	/**
 	 * Date and time at which the file in the payload was actually created.
 	 * <p>
@@ -147,7 +149,7 @@ public class IsabelAdminHeader2 {
 	 * "Date and time at which the file in the payload was actually created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PayloadCreationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -155,12 +157,13 @@ public class IsabelAdminHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadCreationDate";
 			definition = "Date and time at which the file in the payload was actually created.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Max6Text messageRequestType;
 	/**
 	 * Unique identification of the request type of the message in the payload.
 	 * <p>
@@ -190,7 +193,7 @@ public class IsabelAdminHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageRequestType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -198,11 +201,12 @@ public class IsabelAdminHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRequestType";
 			definition = "Unique identification of the request type of the message in the payload.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	protected Max14Text messageIdentification;
 	/**
 	 * Unique identification as assigned by the bank to identify the
 	 * administrative instruction.
@@ -233,7 +237,7 @@ public class IsabelAdminHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -241,11 +245,12 @@ public class IsabelAdminHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique identification as assigned by the bank to identify the administrative instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max14Text.mmObject();
 		}
 	};
+	protected Max13AlphaNumericText destinationMailBoxIdentification;
 	/**
 	 * Unique identification of the destination mailbox.
 	 * <p>
@@ -274,7 +279,7 @@ public class IsabelAdminHeader2 {
 	 * definition} = "Unique identification of the destination mailbox."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DestinationMailBoxIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDestinationMailBoxIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -282,11 +287,12 @@ public class IsabelAdminHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DestinationMailBoxIdentification";
 			definition = "Unique identification of the destination mailbox.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	protected Max14Text referredMessage;
 	/**
 	 * Unique identification of the message to which the administration
 	 * instruction refers.
@@ -317,7 +323,7 @@ public class IsabelAdminHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferredMessage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferredMessage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -325,11 +331,12 @@ public class IsabelAdminHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredMessage";
 			definition = "Unique identification of the message to which the administration instruction refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max14Text.mmObject();
 		}
 	};
+	protected ISODateTime referredSendTimeStamp;
 	/**
 	 * Send time stamp of the message to which the administrative instruction
 	 * refers.
@@ -360,7 +367,7 @@ public class IsabelAdminHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferredSendTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferredSendTimeStamp = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -368,8 +375,8 @@ public class IsabelAdminHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredSendTimeStamp";
 			definition = "Send time stamp of the message to which the administrative instruction refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -377,16 +384,72 @@ public class IsabelAdminHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelAdminHeader2.ActualSenderIdentification, com.tools20022.repository.msg.IsabelAdminHeader2.PayloadCreationDate,
-						com.tools20022.repository.msg.IsabelAdminHeader2.MessageRequestType, com.tools20022.repository.msg.IsabelAdminHeader2.MessageIdentification,
-						com.tools20022.repository.msg.IsabelAdminHeader2.DestinationMailBoxIdentification, com.tools20022.repository.msg.IsabelAdminHeader2.ReferredMessage,
-						com.tools20022.repository.msg.IsabelAdminHeader2.ReferredSendTimeStamp);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelAdminHeader2.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelAdminHeader2.mmPayloadCreationDate,
+						com.tools20022.repository.msg.IsabelAdminHeader2.mmMessageRequestType, com.tools20022.repository.msg.IsabelAdminHeader2.mmMessageIdentification,
+						com.tools20022.repository.msg.IsabelAdminHeader2.mmDestinationMailBoxIdentification, com.tools20022.repository.msg.IsabelAdminHeader2.mmReferredMessage,
+						com.tools20022.repository.msg.IsabelAdminHeader2.mmReferredSendTimeStamp);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelAdminHeader2";
 				definition = "Specifies the header information for an administrative file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max13AlphaNumericText getActualSenderIdentification() {
+		return actualSenderIdentification;
+	}
+
+	public void setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
+		this.actualSenderIdentification = actualSenderIdentification;
+	}
+
+	public DateAndDateTimeChoice getPayloadCreationDate() {
+		return payloadCreationDate;
+	}
+
+	public void setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
+		this.payloadCreationDate = payloadCreationDate;
+	}
+
+	public Max6Text getMessageRequestType() {
+		return messageRequestType;
+	}
+
+	public void setMessageRequestType(Max6Text messageRequestType) {
+		this.messageRequestType = messageRequestType;
+	}
+
+	public Max14Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max14Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max13AlphaNumericText getDestinationMailBoxIdentification() {
+		return destinationMailBoxIdentification;
+	}
+
+	public void setDestinationMailBoxIdentification(Max13AlphaNumericText destinationMailBoxIdentification) {
+		this.destinationMailBoxIdentification = destinationMailBoxIdentification;
+	}
+
+	public Max14Text getReferredMessage() {
+		return referredMessage;
+	}
+
+	public void setReferredMessage(Max14Text referredMessage) {
+		this.referredMessage = referredMessage;
+	}
+
+	public ISODateTime getReferredSendTimeStamp() {
+		return referredSendTimeStamp;
+	}
+
+	public void setReferredSendTimeStamp(ISODateTime referredSendTimeStamp) {
+		this.referredSendTimeStamp = referredSendTimeStamp;
 	}
 }

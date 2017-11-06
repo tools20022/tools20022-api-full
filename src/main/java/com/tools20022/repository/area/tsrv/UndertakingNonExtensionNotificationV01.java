@@ -56,19 +56,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#UndertakingNonExtensionNotificationDetails
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#mmUndertakingNonExtensionNotificationDetails
  * UndertakingNonExtensionNotificationV01.
- * UndertakingNonExtensionNotificationDetails}</li>
+ * mmUndertakingNonExtensionNotificationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#DigitalSignature
- * UndertakingNonExtensionNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#mmDigitalSignature
+ * UndertakingNonExtensionNotificationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#identifier
- * UndertakingNonExtensionNotificationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingNonExtensionNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingNonExtensionStatusAdvice1 undertakingNonExtensionNotificationDetails;
 	/**
 	 * Details of the non-extension notification.
 	 * <p>
@@ -107,17 +106,18 @@ public class UndertakingNonExtensionNotificationV01 {
 	 * definition} = "Details of the non-extension notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UndertakingNonExtensionNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUndertakingNonExtensionNotificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgNonXtnsnNtfctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingNonExtensionNotificationDetails";
 			definition = "Details of the non-extension notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UndertakingNonExtensionStatusAdvice1.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the notification.
 	 * <p>
@@ -141,42 +141,15 @@ public class UndertakingNonExtensionNotificationV01 {
 	 * definition} = "Digital signature of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "011";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -190,11 +163,34 @@ public class UndertakingNonExtensionNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgNonXtnsnNtfctn";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.UndertakingNonExtensionNotificationDetails,
-						com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.mmUndertakingNonExtensionNotificationDetails,
+						com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "011";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingNonExtensionStatusAdvice1 getUndertakingNonExtensionNotificationDetails() {
+		return undertakingNonExtensionNotificationDetails;
+	}
+
+	public void setUndertakingNonExtensionNotificationDetails(UndertakingNonExtensionStatusAdvice1 undertakingNonExtensionNotificationDetails) {
+		this.undertakingNonExtensionNotificationDetails = undertakingNonExtensionNotificationDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

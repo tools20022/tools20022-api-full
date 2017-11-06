@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a payment.
@@ -43,55 +44,55 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#TransactionReference
- * PaymentSearch3.TransactionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmTransactionReference
+ * PaymentSearch3.mmTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#TransferValueDate
- * PaymentSearch3.TransferValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmTransferValueDate
+ * PaymentSearch3.mmTransferValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#InstructionReference
- * PaymentSearch3.InstructionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInstructionReference
+ * PaymentSearch3.mmInstructionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#InstructionStatus
- * PaymentSearch3.InstructionStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInstructionStatus
+ * PaymentSearch3.mmInstructionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#InstructedAmount
- * PaymentSearch3.InstructedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInstructedAmount
+ * PaymentSearch3.mmInstructedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#InstructedAmountCurrency
- * PaymentSearch3.InstructedAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInstructedAmountCurrency
+ * PaymentSearch3.mmInstructedAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#CreditDebitIndicator
- * PaymentSearch3.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmCreditDebitIndicator
+ * PaymentSearch3.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#InterbankSettlementAmount
- * PaymentSearch3.InterbankSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInterbankSettlementAmount
+ * PaymentSearch3.mmInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#InterbankSettlementAmountCurrency
- * PaymentSearch3.InterbankSettlementAmountCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#PaymentMethod
- * PaymentSearch3.PaymentMethod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#Priority
- * PaymentSearch3.Priority}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInterbankSettlementAmountCurrency
+ * PaymentSearch3.mmInterbankSettlementAmountCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#mmPaymentMethod
+ * PaymentSearch3.mmPaymentMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#mmPriority
+ * PaymentSearch3.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#ProcessingValidityTime
- * PaymentSearch3.ProcessingValidityTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#Instruction
- * PaymentSearch3.Instruction}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#PaymentType
- * PaymentSearch3.PaymentType}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmProcessingValidityTime
+ * PaymentSearch3.mmProcessingValidityTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInstruction
+ * PaymentSearch3.mmInstruction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#mmPaymentType
+ * PaymentSearch3.mmPaymentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#PaymentInstructionReference
- * PaymentSearch3.PaymentInstructionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmPaymentInstructionReference
+ * PaymentSearch3.mmPaymentInstructionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#InterbankValueDate
- * PaymentSearch3.InterbankValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInterbankValueDate
+ * PaymentSearch3.mmInterbankValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#RelatedReference
- * PaymentSearch3.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmRelatedReference
+ * PaymentSearch3.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentSearch3#PaymentTransactionParty
- * PaymentSearch3.PaymentTransactionParty}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmPaymentTransactionParty
+ * PaymentSearch3.mmPaymentTransactionParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -100,8 +101,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -116,6 +117,7 @@ import java.util.function.Supplier;
 public class PaymentSearch3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> transactionReference;
 	/**
 	 * Unique and unambiguous identifier for a payment transaction, as assigned
 	 * by the originator. The payment transaction reference is used for
@@ -130,8 +132,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#EndToEndIdentification
-	 * PaymentIdentification.EndToEndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
+	 * PaymentIdentification.mmEndToEndIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,10 +153,10 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.EndToEndIdentification;
 			isDerived = false;
 			xmlTag = "TxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,6 +166,7 @@ public class PaymentSearch3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<DateAndDateTimeSearchChoice> transferValueDate;
 	/**
 	 * Date and time at which the cash is at the disposal of the credit account
 	 * owner, or ceases to be at the disposal of the debit account owner.
@@ -194,7 +197,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferValueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			isDerived = false;
@@ -206,6 +209,7 @@ public class PaymentSearch3 {
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 		}
 	};
+	protected List<PaymentIdentification3Choice> instructionReference;
 	/**
 	 * Unique and unambiguous identifier for a payment instruction, as assigned
 	 * by the clearing agent or the initiating party.
@@ -219,8 +223,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -240,20 +244,21 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionReference = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "InstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionReference";
 			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.";
 			minOccurs = 0;
-			type_lazy = () -> PaymentIdentification3Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> PaymentIdentification3Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InstructionStatusSearch3> instructionStatus;
 	/**
 	 * Detailed information about the status of a transfer.
 	 * <p>
@@ -266,8 +271,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#Status
-	 * PaymentStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmStatus
+	 * PaymentStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -285,20 +290,21 @@ public class PaymentSearch3 {
 	 * definition} = "Detailed information about the status of a transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmStatus;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.Status;
 			isDerived = false;
 			xmlTag = "InstrSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionStatus";
 			definition = "Detailed information about the status of a transfer.";
 			minOccurs = 0;
-			type_lazy = () -> InstructionStatusSearch3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch3.mmObject();
 		}
 	};
+	protected List<AmountRangeChoice> instructedAmount;
 	/**
 	 * Specifies the instructed amount(s) on which the query is performed.
 	 * <p>
@@ -312,8 +318,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -332,10 +338,10 @@ public class PaymentSearch3 {
 	 * "Specifies the instructed amount(s) on which the query is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -345,6 +351,7 @@ public class PaymentSearch3 {
 			complexType_lazy = () -> AmountRangeChoice.mmObject();
 		}
 	};
+	protected List<CurrencyCode> instructedAmountCurrency;
 	/**
 	 * The Currency in which the instructed amount is expressed.
 	 * <p>
@@ -372,7 +379,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedAmountCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedAmountCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			isDerived = false;
@@ -384,6 +391,7 @@ public class PaymentSearch3 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the payment instruction is a debit or a credit.
 	 * <p>
@@ -397,8 +405,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreditDebitIndicator
-	 * PaymentExecution.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreditDebitIndicator
+	 * PaymentExecution.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -417,20 +425,21 @@ public class PaymentSearch3 {
 	 * "Indicates whether the payment instruction is a debit or a credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the payment instruction is a debit or a credit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected List<AmountRangeChoice> interbankSettlementAmount;
 	/**
 	 * Specifies the interbank settlement amount(s) on which the query is
 	 * performed.
@@ -445,8 +454,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -466,10 +475,10 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -479,6 +488,7 @@ public class PaymentSearch3 {
 			complexType_lazy = () -> AmountRangeChoice.mmObject();
 		}
 	};
+	protected List<CurrencyCode> interbankSettlementAmountCurrency;
 	/**
 	 * Currency in which the interbank settlement amount is expressed.
 	 * <p>
@@ -506,7 +516,7 @@ public class PaymentSearch3 {
 	 * "Currency in which the interbank settlement amount is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementAmountCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementAmountCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			isDerived = false;
@@ -518,6 +528,7 @@ public class PaymentSearch3 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected List<PaymentOrigin1Choice> paymentMethod;
 	/**
 	 * Indicates the message or event from which an instruction has been
 	 * initiated.
@@ -531,8 +542,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CreditMethod
-	 * Payment.CreditMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
+	 * Payment.mmCreditMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -552,20 +563,21 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCreditMethod;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CreditMethod;
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Indicates the message or event from which an instruction has been initiated.";
 			minOccurs = 0;
-			type_lazy = () -> PaymentOrigin1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> PaymentOrigin1Choice.mmObject();
 		}
 	};
+	protected List<PriorityCodeChoice> priority;
 	/**
 	 * Urgency or order of importance that the originator would like the
 	 * recipient of the payment instruction to apply to the processing of the
@@ -581,8 +593,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Priority
-	 * Payment.Priority}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPriority
+	 * Payment.mmPriority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -602,10 +614,10 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Priority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPriority;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Priority;
 			isDerived = false;
 			xmlTag = "Prty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -615,6 +627,7 @@ public class PaymentSearch3 {
 			complexType_lazy = () -> PriorityCodeChoice.mmObject();
 		}
 	};
+	protected List<DateTimePeriodChoice> processingValidityTime;
 	/**
 	 * Date and time range within which the payment instruction must be
 	 * processed.
@@ -629,8 +642,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#ProcessingValidityTime
-	 * PaymentInstruction.ProcessingValidityTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmProcessingValidityTime
+	 * PaymentInstruction.mmProcessingValidityTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -650,10 +663,10 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmProcessingValidityTime;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.ProcessingValidityTime;
 			isDerived = false;
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -663,6 +676,7 @@ public class PaymentSearch3 {
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	protected List<Instruction1Code> instruction;
 	/**
 	 * Further information related to the processing of the payment instruction.
 	 * The instruction can relate to a level of service between the bank and the
@@ -695,7 +709,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Instruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			isDerived = false;
@@ -707,6 +721,7 @@ public class PaymentSearch3 {
 			simpleType_lazy = () -> Instruction1Code.mmObject();
 		}
 	};
+	protected List<PaymentType2Choice> paymentType;
 	/**
 	 * Instruction to pay an amount of money to an ultimate beneficiary, on
 	 * behalf of an originator. This instruction may have to be forwarded
@@ -743,10 +758,10 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -756,6 +771,7 @@ public class PaymentSearch3 {
 			complexType_lazy = () -> PaymentType2Choice.mmObject();
 		}
 	};
+	protected List<Max35Text> paymentInstructionReference;
 	/**
 	 * Unique and unambiguous identifier for a payment instruction, as assigned
 	 * by the clearing agent or the initiating party.
@@ -769,8 +785,8 @@ public class PaymentSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -790,10 +806,10 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInstructionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInstructionReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "PmtInstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -803,6 +819,7 @@ public class PaymentSearch3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<ISODate> interbankValueDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -833,7 +850,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankValueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			isDerived = false;
@@ -845,6 +862,7 @@ public class PaymentSearch3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<Max35Text> relatedReference;
 	/**
 	 * The related reference as stipulated in the payment instruction.
 	 * <p>
@@ -872,7 +890,7 @@ public class PaymentSearch3 {
 	 * "The related reference as stipulated in the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			isDerived = false;
@@ -884,6 +902,7 @@ public class PaymentSearch3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PaymentTransactionParty paymentTransactionParty;
 	/**
 	 * Defines the party fields used to search for a payment.
 	 * <p>
@@ -910,7 +929,7 @@ public class PaymentSearch3 {
 	 * definition} = "Defines the party fields used to search for a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTransactionParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTransactionParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentSearch3.mmObject();
 			isDerived = false;
@@ -918,25 +937,25 @@ public class PaymentSearch3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTransactionParty";
 			definition = "Defines the party fields used to search for a payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch3.TransactionReference, com.tools20022.repository.msg.PaymentSearch3.TransferValueDate,
-						com.tools20022.repository.msg.PaymentSearch3.InstructionReference, com.tools20022.repository.msg.PaymentSearch3.InstructionStatus, com.tools20022.repository.msg.PaymentSearch3.InstructedAmount,
-						com.tools20022.repository.msg.PaymentSearch3.InstructedAmountCurrency, com.tools20022.repository.msg.PaymentSearch3.CreditDebitIndicator, com.tools20022.repository.msg.PaymentSearch3.InterbankSettlementAmount,
-						com.tools20022.repository.msg.PaymentSearch3.InterbankSettlementAmountCurrency, com.tools20022.repository.msg.PaymentSearch3.PaymentMethod, com.tools20022.repository.msg.PaymentSearch3.Priority,
-						com.tools20022.repository.msg.PaymentSearch3.ProcessingValidityTime, com.tools20022.repository.msg.PaymentSearch3.Instruction, com.tools20022.repository.msg.PaymentSearch3.PaymentType,
-						com.tools20022.repository.msg.PaymentSearch3.PaymentInstructionReference, com.tools20022.repository.msg.PaymentSearch3.InterbankValueDate, com.tools20022.repository.msg.PaymentSearch3.RelatedReference,
-						com.tools20022.repository.msg.PaymentSearch3.PaymentTransactionParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch3.mmTransactionReference, com.tools20022.repository.msg.PaymentSearch3.mmTransferValueDate,
+						com.tools20022.repository.msg.PaymentSearch3.mmInstructionReference, com.tools20022.repository.msg.PaymentSearch3.mmInstructionStatus, com.tools20022.repository.msg.PaymentSearch3.mmInstructedAmount,
+						com.tools20022.repository.msg.PaymentSearch3.mmInstructedAmountCurrency, com.tools20022.repository.msg.PaymentSearch3.mmCreditDebitIndicator, com.tools20022.repository.msg.PaymentSearch3.mmInterbankSettlementAmount,
+						com.tools20022.repository.msg.PaymentSearch3.mmInterbankSettlementAmountCurrency, com.tools20022.repository.msg.PaymentSearch3.mmPaymentMethod, com.tools20022.repository.msg.PaymentSearch3.mmPriority,
+						com.tools20022.repository.msg.PaymentSearch3.mmProcessingValidityTime, com.tools20022.repository.msg.PaymentSearch3.mmInstruction, com.tools20022.repository.msg.PaymentSearch3.mmPaymentType,
+						com.tools20022.repository.msg.PaymentSearch3.mmPaymentInstructionReference, com.tools20022.repository.msg.PaymentSearch3.mmInterbankValueDate, com.tools20022.repository.msg.PaymentSearch3.mmRelatedReference,
+						com.tools20022.repository.msg.PaymentSearch3.mmPaymentTransactionParty);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -950,5 +969,149 @@ public class PaymentSearch3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getTransactionReference() {
+		return transactionReference;
+	}
+
+	public void setTransactionReference(List<Max35Text> transactionReference) {
+		this.transactionReference = transactionReference;
+	}
+
+	public List<DateAndDateTimeSearchChoice> getTransferValueDate() {
+		return transferValueDate;
+	}
+
+	public void setTransferValueDate(List<DateAndDateTimeSearchChoice> transferValueDate) {
+		this.transferValueDate = transferValueDate;
+	}
+
+	public List<PaymentIdentification3Choice> getInstructionReference() {
+		return instructionReference;
+	}
+
+	public void setInstructionReference(List<PaymentIdentification3Choice> instructionReference) {
+		this.instructionReference = instructionReference;
+	}
+
+	public List<InstructionStatusSearch3> getInstructionStatus() {
+		return instructionStatus;
+	}
+
+	public void setInstructionStatus(List<com.tools20022.repository.msg.InstructionStatusSearch3> instructionStatus) {
+		this.instructionStatus = instructionStatus;
+	}
+
+	public List<AmountRangeChoice> getInstructedAmount() {
+		return instructedAmount;
+	}
+
+	public void setInstructedAmount(List<AmountRangeChoice> instructedAmount) {
+		this.instructedAmount = instructedAmount;
+	}
+
+	public List<CurrencyCode> getInstructedAmountCurrency() {
+		return instructedAmountCurrency;
+	}
+
+	public void setInstructedAmountCurrency(List<CurrencyCode> instructedAmountCurrency) {
+		this.instructedAmountCurrency = instructedAmountCurrency;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public List<AmountRangeChoice> getInterbankSettlementAmount() {
+		return interbankSettlementAmount;
+	}
+
+	public void setInterbankSettlementAmount(List<AmountRangeChoice> interbankSettlementAmount) {
+		this.interbankSettlementAmount = interbankSettlementAmount;
+	}
+
+	public List<CurrencyCode> getInterbankSettlementAmountCurrency() {
+		return interbankSettlementAmountCurrency;
+	}
+
+	public void setInterbankSettlementAmountCurrency(List<CurrencyCode> interbankSettlementAmountCurrency) {
+		this.interbankSettlementAmountCurrency = interbankSettlementAmountCurrency;
+	}
+
+	public List<PaymentOrigin1Choice> getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(List<PaymentOrigin1Choice> paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	public List<PriorityCodeChoice> getPriority() {
+		return priority;
+	}
+
+	public void setPriority(List<PriorityCodeChoice> priority) {
+		this.priority = priority;
+	}
+
+	public List<DateTimePeriodChoice> getProcessingValidityTime() {
+		return processingValidityTime;
+	}
+
+	public void setProcessingValidityTime(List<DateTimePeriodChoice> processingValidityTime) {
+		this.processingValidityTime = processingValidityTime;
+	}
+
+	public List<Instruction1Code> getInstruction() {
+		return instruction;
+	}
+
+	public void setInstruction(List<Instruction1Code> instruction) {
+		this.instruction = instruction;
+	}
+
+	public List<PaymentType2Choice> getPaymentType() {
+		return paymentType;
+	}
+
+	public void setPaymentType(List<PaymentType2Choice> paymentType) {
+		this.paymentType = paymentType;
+	}
+
+	public List<Max35Text> getPaymentInstructionReference() {
+		return paymentInstructionReference;
+	}
+
+	public void setPaymentInstructionReference(List<Max35Text> paymentInstructionReference) {
+		this.paymentInstructionReference = paymentInstructionReference;
+	}
+
+	public List<ISODate> getInterbankValueDate() {
+		return interbankValueDate;
+	}
+
+	public void setInterbankValueDate(List<ISODate> interbankValueDate) {
+		this.interbankValueDate = interbankValueDate;
+	}
+
+	public List<Max35Text> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<Max35Text> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public PaymentTransactionParty getPaymentTransactionParty() {
+		return paymentTransactionParty;
+	}
+
+	public void setPaymentTransactionParty(com.tools20022.repository.msg.PaymentTransactionParty paymentTransactionParty) {
+		this.paymentTransactionParty = paymentTransactionParty;
 	}
 }

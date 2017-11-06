@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RiskLevel2Choice#Code
- * RiskLevel2Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RiskLevel2Choice#mmCode
+ * RiskLevel2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RiskLevel2Choice#Proprietary
- * RiskLevel2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RiskLevel2Choice#mmProprietary
+ * RiskLevel2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RiskLevel2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RiskLevel1Code code;
 	/**
 	 * Risk level expressed as code.
 	 * <p>
@@ -91,11 +92,11 @@ public class RiskLevel2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RiskLevel1Choice#Code
-	 * RiskLevel1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RiskLevel1Choice#mmCode
+	 * RiskLevel1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RiskLevel2Choice.mmObject();
 			isDerived = false;
@@ -103,12 +104,13 @@ public class RiskLevel2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Risk level expressed as code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RiskLevel1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RiskLevel1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RiskLevel1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Risk level expressed as a proprietary code.
 	 * <p>
@@ -138,11 +140,11 @@ public class RiskLevel2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RiskLevel1Choice#Proprietary
-	 * RiskLevel1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RiskLevel1Choice#mmProprietary
+	 * RiskLevel1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RiskLevel2Choice.mmObject();
 			isDerived = false;
@@ -150,9 +152,9 @@ public class RiskLevel2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Risk level expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RiskLevel1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RiskLevel1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -160,8 +162,8 @@ public class RiskLevel2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RiskLevel2Choice.Code, com.tools20022.repository.choice.RiskLevel2Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RiskLevel2Choice.mmCode, com.tools20022.repository.choice.RiskLevel2Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RiskLevel2Choice";
 				definition = "Choice of formats for the specification of the risk level.";
@@ -169,5 +171,21 @@ public class RiskLevel2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RiskLevel1Code getCode() {
+		return code;
+	}
+
+	public void setCode(RiskLevel1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

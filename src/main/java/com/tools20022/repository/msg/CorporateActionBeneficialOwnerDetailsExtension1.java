@@ -36,19 +36,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1#PlaceAndName
- * CorporateActionBeneficialOwnerDetailsExtension1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1#mmPlaceAndName
+ * CorporateActionBeneficialOwnerDetailsExtension1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1#BeneficialOwnerExemptionReason
+ * {@linkplain com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1#mmBeneficialOwnerExemptionReason
  * CorporateActionBeneficialOwnerDetailsExtension1.
- * BeneficialOwnerExemptionReason}</li>
+ * mmBeneficialOwnerExemptionReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionBeneficialOwnerDetailsExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -91,7 +92,7 @@ public class CorporateActionBeneficialOwnerDetailsExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionBeneficialOwnerDetailsExtension1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class CorporateActionBeneficialOwnerDetailsExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected BeneficialOwnerExemptionStatus1Choice beneficialOwnerExemptionReason;
 	/**
 	 * Exemption reason for the beneficial owner.
 	 * <p>
@@ -131,7 +133,7 @@ public class CorporateActionBeneficialOwnerDetailsExtension1 {
 	 * definition} = "Exemption reason for the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BeneficialOwnerExemptionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficialOwnerExemptionReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionBeneficialOwnerDetailsExtension1.mmObject();
 			isDerived = false;
@@ -139,24 +141,40 @@ public class CorporateActionBeneficialOwnerDetailsExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerExemptionReason";
 			definition = "Exemption reason for the beneficial owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1.PlaceAndName,
-						com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1.BeneficialOwnerExemptionReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1.mmBeneficialOwnerExemptionReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionBeneficialOwnerDetailsExtension1";
 				definition = "Provides additional information regarding corporate action beneficial owner details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public BeneficialOwnerExemptionStatus1Choice getBeneficialOwnerExemptionReason() {
+		return beneficialOwnerExemptionReason;
+	}
+
+	public void setBeneficialOwnerExemptionReason(BeneficialOwnerExemptionStatus1Choice beneficialOwnerExemptionReason) {
+		this.beneficialOwnerExemptionReason = beneficialOwnerExemptionReason;
 	}
 }
